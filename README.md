@@ -14,7 +14,7 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching CurseForge clien
 | Server mod downloads | 257 |
 | Manual quests | 106 across 25 chapters |
 
-Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, removes Polymorph because it hard-depends on JEI, and removes Ad Astra, AmbientSounds, and The Aether. Existing quest IDs and earlier compatibility fixes are preserved.
+Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, removes Polymorph because it hard-depends on JEI, and removes Ad Astra, AmbientSounds, and The Aether. Existing quest IDs and earlier compatibility fixes are preserved. Just Dire Things and DecoCraft remain in the pack.
 
 ## Repository layout
 
@@ -24,6 +24,9 @@ Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, re
 - `scripts/` — repeatable validation and packaging helpers.
 - `GOAL-MAP.md` — ordered project goals and acceptance gates.
 - `GOALS.md` — live goal status and next-action list.
+- `WORKLOAD.md` — prioritized technical workload and validation matrix.
+- `CHECKLIST.md` — evidence-based completion checklist.
+- `FUTURE_AGENT_PROMPT.md` — copy-ready handoff prompt for future agents.
 - `WORK-ONBOARDING.md` — starting instructions for future ChatGPT Work sessions.
 - `CURRENT_STATE.md` — what is known, tested, and still unverified.
 - `PROJECT_STATE.md` — release history and active work queue.
@@ -54,4 +57,4 @@ Static validation checks structure, JSON, client/server quest parity, required R
 
 ## Known investigation
 
-The highest-priority work is reproducing and isolating the recipe/tag reload errors and the red-X/incompatible-server indicator while client connections still succeed. See `GOAL-MAP.md` for the test matrix and stop conditions.
+The highest-priority work is reproducing and isolating the recipe/tag reload errors and the red-X/incompatible-server indicator while client connections still succeed. Follow `WORKLOAD.md` and update `CHECKLIST.md` with actual test evidence.
