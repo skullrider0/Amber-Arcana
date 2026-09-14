@@ -1,59 +1,59 @@
 # Amber & Arcana Checklist
 
-## Source recovery
+## Port and requested changes
 
-- [ ] Add the authoritative `Amber-and-Arcana-0.1.0-alpha-CurseForge.zip`.
-- [ ] Verify the archive hash and preserve an untouched source copy.
-- [ ] Confirm manifest, overrides, configs, scripts, quests, and server files.
-- [ ] Confirm no secrets, worlds, player data, or access tokens are included.
+- [x] Port project into `skullrider0/Amber-Arcana`.
+- [x] Confirm Minecraft 1.20.1, Forge 47.4.10, and Java 17.
+- [x] Preserve Just Dire Things.
+- [x] Preserve DecoCraft.
+- [x] Replace JEI with client-only REI 12.1.785.
+- [x] Remove Polymorph because it hard-depends on JEI.
+- [x] Remove Ad Astra.
+- [x] Remove AmbientSounds.
+- [x] Remove The Aether.
+- [x] Create CurseForge client ZIP.
+- [x] Create Crafty 4 server ZIP.
+- [x] Add validation/build scripts and checksums.
+- [x] Preserve the existing quest IDs and compatibility fixes.
+- [x] Add workload guide and future-agent prompt.
 
-## Baseline
+## Static verification
 
-- [ ] Confirm Minecraft 1.20.1.
-- [ ] Confirm Forge 47.4.10.
-- [ ] Confirm Java 17.
-- [ ] Generate client and server mod inventories.
-- [ ] Record a clean baseline startup and join attempt.
+- [ ] Run `bash scripts/validate.sh` against the latest main branch.
+- [ ] Run `bash scripts/build.sh` in a clean checkout and compare generated checksums.
+- [ ] Confirm every manifest project/file ID resolves.
+- [ ] Confirm every declared server download resolves.
+- [ ] Confirm no removed project IDs or mod IDs remain.
+- [ ] Confirm no secrets, worlds, player data, or private addresses are tracked.
 
 ## Recipe/tag investigation
 
-- [ ] Compare client and server JAR filenames and versions.
-- [ ] Compare mod IDs and dependencies.
-- [ ] Compare `config/` and `defaultconfigs/`.
-- [ ] Compare KubeJS scripts and generated data.
-- [ ] Compare datapacks, recipes, and tags.
-- [ ] Locate the first relevant error, not only cascading errors.
-- [ ] Identify the source of the red-X/incompatible-version status.
-- [ ] Test `/reload` and representative broken recipes on a test copy.
+- [ ] Import the client ZIP into a fresh CurseForge profile.
+- [ ] Import the server ZIP into a fresh Crafty 4 server.
+- [ ] Capture client and server logs from the same attempt.
+- [ ] Compare JAR names, mod IDs, versions, sides, and dependencies.
+- [ ] Compare `config/`, `defaultconfigs/`, KubeJS, datapacks, recipes, and tags.
+- [ ] Locate the first relevant recipe/tag error before cascading errors.
+- [ ] Identify the actual source of the red-X/incompatible-server status.
+- [ ] Test datapack reload.
+- [ ] Test representative previously broken recipes through REI and crafting.
+- [ ] Record findings under `docs/`.
 
-## Requested changes
+## Runtime quality gates
 
-- [ ] Keep Just Dire Things.
-- [ ] Keep DecoCraft.
-- [ ] Verify REI availability and integrations for Forge 1.20.1.
-- [ ] Replace JEI only after dependency checks.
-- [ ] Remove Ad Astra and unused exclusive dependencies.
-- [ ] Remove AmbientSounds and unused exclusive dependencies.
-- [ ] Remove The Aether and unused exclusive dependencies.
-- [ ] Remove stale quest/config/script/tag/recipe/worldgen references.
-
-## Quality gates
-
-- [ ] Client launches.
-- [ ] Dedicated server launches.
-- [ ] Client joins server.
-- [ ] No fatal registry/network mismatch.
-- [ ] No recipe/tag validation failures attributable to pack files.
-- [ ] Existing-world copy loads after backup.
+- [ ] Client launches from a fresh import.
+- [ ] Dedicated Crafty server launches from a fresh import.
+- [ ] Client joins the server.
+- [ ] No fatal registry or network mismatch.
+- [ ] Recipe/tag errors are fixed or isolated with a documented reproducer.
 - [ ] New world generates correctly.
+- [ ] Backed-up existing-world copy loads.
 - [ ] Core magic, exploration, building, creature, and progression loops work.
-- [ ] Quest dependencies are valid.
+- [ ] Representative quests contain no missing item/task references.
 
-## Distribution
+## Next content milestone
 
-- [ ] Produce valid CurseForge client manifest.
-- [ ] Produce Crafty 4 server import.
-- [ ] Generate mod/version inventory and checksums.
-- [ ] Write changelog and known issues.
-- [ ] Tag the tested alpha release.
-- [ ] Start the next quest-line milestone.
+- [ ] Define the next quest-line scope and acceptance criteria.
+- [ ] Implement quests without masking unresolved runtime issues.
+- [ ] Validate quest dependencies on both client and server.
+- [ ] Update changelog, known issues, hashes, and release tag.
