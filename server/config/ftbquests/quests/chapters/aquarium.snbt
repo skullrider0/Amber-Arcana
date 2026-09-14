@@ -1,0 +1,83 @@
+{
+  "id": "6596524E182D7451",
+  "filename": "aquarium",
+  "title": "Aquarium and Wildlife Park",
+  "order_index": 21,
+  "group": "",
+  "quests": [
+    {
+      "id": "6985109C2AE6C175",
+      "title": "Plan the habitats",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Build a zoo layout with separate habitats, visitor paths, and staff access. Use the animal guides to learn feeding and taming requirements.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "731647F5A2A4F53D",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "4FA3828856020273",
+      "title": "An aquarium gallery",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build freshwater and marine exhibits. Use Aquaculture, Alexs Mobs, and Upgrade Aquatic to stock displays with species appropriate to the water and enclosure.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "6E64E0B6E472793A",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "6985109C2AE6C175"
+      ]
+    },
+    {
+      "id": "4C8A851B4EA29B66",
+      "title": "Companions",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Meet creatures from Critters and Companions and Companions. Use their supported care or taming mechanics.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7DE602B2F18EFC2E",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "4FA3828856020273"
+      ]
+    },
+    {
+      "id": "227601982DAC80C1",
+      "title": "Care and transport",
+      "x": 9.0,
+      "y": 0.0,
+      "description": [
+        "Establish safe breeding, transport, and feeding routines. Use Rats and Domestication Innovation where their supported mechanics help your park.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "33F64B3316A75CEB",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "4C8A851B4EA29B66"
+      ]
+    }
+  ],
+  "quest_links": []
+}

@@ -1,0 +1,19 @@
+AMBER & ARCANA 0.1.9-11 — RECIPE CLEANUP
+
+Removed:
+- Every Compat 1.20-2.9.26 (everycomp-1.20-2.9.26-forge.jar) from both client and server.
+
+Why:
+The 0.1.9-10 server log showed a large number of invalid generated everycomp:fd/... cutting and salvaging recipes. Removing Every Compat eliminates that whole generated compatibility layer instead of patching hundreds of recipes individually.
+
+Kept:
+- Moonlight/Selene. It is a shared library used by other mods and is not being removed.
+- JEI 15.57.0.207.
+- All quest fixes and starter rewards.
+- Packet Fixer, NeoAuth client support, Just Dire Things, DecoCraft, optimization settings, and Java 17 launcher preference.
+
+Existing installs:
+- Crafty server: the launcher will automatically delete everycomp-1.20-2.9.26-forge.jar before starting.
+- Existing client profile: manually delete everycomp-1.20-2.9.26-forge.jar from the instance mods folder, or import 0.1.9-11 as a fresh profile.
+
+This does not yet fix unrelated invalid recipes from Forbidden & Arcanus, Create/Biomes We've Gone compatibility, Create Things & Misc, or Create Aquatic Ambitions. Those can be addressed separately after confirming how much recipe noise disappears without Every Compat.

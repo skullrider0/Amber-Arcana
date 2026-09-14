@@ -1,0 +1,169 @@
+{
+  "id": "7A75E60D69EFBD95",
+  "filename": "getting_started",
+  "title": "Welcome to Amber \& Arcana",
+  "icon": {
+    Count: 1
+    id: "ftbquests:custom_icon"
+    tag: {
+      Icon: "amber_arcana:textures/gui/amber_arcana.png"
+    }
+  },
+  "order_index": 9,
+  "group": "",
+  "default_quest_shape": "hexagon",
+  "images": [
+    {
+      "height": 3.0d,
+      "image": "amber_arcana:textures/gui/amber_arcana.png",
+      "order": -1,
+      "rotation": 0.0d,
+      "width": 3.0d,
+      "x": 3.0d,
+      "y": -3.0d
+    }
+  ],
+  "quests": [
+    {
+      "id": "5DF2CA9EF5F2B2D4",
+      "title": "Make a home",
+      "icon": "minecraft:crafting_table",
+      "shape": "hexagon",
+      "size": 1.25d,
+      "x": 0.0d,
+      "y": 0.0d,
+      "description": [
+        "&6Welcome to Amber \& Arcana!&r",
+        "",
+        "Gather wood, stone, food, and a bed. Build a safe shelter and use REI to look up recipes.",
+        "",
+        "&bUseful commands:&r /sethome base, /home base, and /delhome base. FTB Essentials provides these commands; the default limit is one home.",
+        "",
+        "When your first shelter is ready, tick the checkmark below and claim your starter supplies."
+      ],
+      "tasks": [
+        {
+          "id": "2F41ECE28F26D89D",
+          "title": "I have a safe first home",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "A019000000000101",
+          "type": "item",
+          "item": { "count": 1, "id": "minecraft:torch" },
+          "count": 16
+        },
+        {
+          "id": "A019000000000102",
+          "type": "item",
+          "item": { "count": 1, "id": "minecraft:bread" },
+          "count": 8
+        },
+        {
+          "id": "A019000000000103",
+          "type": "xp",
+          "xp": 100
+        }
+      ]
+    },
+    {
+      "id": "3FEA10D47DFED5ED",
+      "title": "Claim your workshop",
+      "icon": {
+        Count: 1
+        id: "ftbquests:custom_icon"
+        tag: {
+          Icon: "ftbchunks:textures/waypoint_home.png"
+        }
+      },
+      "shape": "hexagon",
+      "size": 1.25d,
+      "x": 3.0d,
+      "y": 0.0d,
+      "description": [
+        "Create an FTB Team and claim the chunks around your home with the FTB Chunks map.",
+        "",
+        "Claims protect your base and make it much easier to organize a multiplayer settlement. Coordinate claims with friends before building shared factories.",
+        "",
+        "Tick the checkmark once your workshop area is claimed."
+      ],
+      "tasks": [
+        {
+          "id": "5B6E6989BFA3A123",
+          "title": "My workshop is claimed",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "A019000000000201",
+          "type": "item",
+          "item": { "count": 1, "id": "minecraft:iron_ingot" },
+          "count": 8
+        },
+        {
+          "id": "A019000000000202",
+          "type": "item",
+          "item": { "count": 1, "id": "minecraft:compass" },
+          "count": 1
+        },
+        {
+          "id": "A019000000000203",
+          "type": "xp",
+          "xp": 150
+        }
+      ],
+      "dependencies": [
+        "5DF2CA9EF5F2B2D4"
+      ]
+    },
+    {
+      "id": "5DF5A47BBDCD9172",
+      "title": "Tools for the journey",
+      "icon": "sophisticatedbackpacks:backpack",
+      "shape": "hexagon",
+      "size": 1.25d,
+      "x": 6.0d,
+      "y": 0.0d,
+      "description": [
+        "Build a Sophisticated Backpack, prepare a good food supply, and place a Waystone at home.",
+        "",
+        "This is the point where your starter camp becomes a real base. Plan separate areas for industry, livestock, magic, storage, and your future colony.",
+        "",
+        "Tick the checkmark when your travel kit is ready, then claim the final starter reward."
+      ],
+      "tasks": [
+        {
+          "id": "17942A0FF8BF986E",
+          "title": "My travel kit is ready",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "A019000000000301",
+          "type": "item",
+          "item": { "count": 1, "id": "minecraft:diamond" },
+          "count": 2
+        },
+        {
+          "id": "A019000000000302",
+          "type": "item",
+          "item": { "count": 1, "id": "minecraft:golden_carrot" },
+          "count": 8
+        },
+        {
+          "id": "A019000000000303",
+          "type": "xp",
+          "xp": 250
+        }
+      ],
+      "dependencies": [
+        "3FEA10D47DFED5ED"
+      ]
+    }
+  ],
+  "quest_links": []
+}

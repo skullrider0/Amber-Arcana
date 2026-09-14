@@ -1,0 +1,64 @@
+{
+  "id": "74EBC0E1247808F5",
+  "filename": "ae2",
+  "title": "AE2 and MEGA Cells",
+  "order_index": 14,
+  "group": "",
+  "quests": [
+    {
+      "id": "4FED0F46376BBAFB",
+      "title": "ME foundations",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Start Applied Energistics 2 using its guide. Obtain the materials needed for a powered ME network and terminal.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7AD8380CAA2B9E71",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "2B5CC0DDAF0E909D",
+      "title": "Patterns and channels",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build an autocrafting system and learn how your chosen AE2 network handles channels, power, and subnetworks.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "739981E691DCCC97",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "4FED0F46376BBAFB"
+      ]
+    },
+    {
+      "id": "0B542AC7B25BACFF",
+      "title": "MEGA storage",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Craft a MEGA Cells component and install a compatible cell. Use AE2 and Refined Storage as independent systems wherever that suits your base.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "43F02561FC34C5F8",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "2B5CC0DDAF0E909D"
+      ]
+    }
+  ],
+  "quest_links": []
+}

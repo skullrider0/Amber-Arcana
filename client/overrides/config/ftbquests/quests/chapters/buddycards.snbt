@@ -1,0 +1,121 @@
+{
+  "id": "7BDEAC7129B97A9A",
+  "filename": "buddycards",
+  "title": "The Collectors Club",
+  "order_index": 4,
+  "group": "",
+  "quests": [
+    {
+      "id": "7FCDE8795B31F33B",
+      "title": "Your first collection",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Find and open a Buddycards pack. Keep new cards and duplicates in separate storage; use a binder or displays for the cards you want to keep.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "766C0A85C5EA16F7",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "74D1135963FC93B7",
+      "title": "Mechanical recycling",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Use Create Buddycards recipes to recycle duplicate cards into Create set packs. Make a small line first and confirm it never consumes your display collection.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "779C948FDCD3BEED",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7FCDE8795B31F33B"
+      ]
+    },
+    {
+      "id": "76E508B4DA1156E6",
+      "title": "The farmers collection",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Grow Buddybeans and use Delightful Buddycards recipes to make a pack. Expand the food factory to supply the ingredients.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7E9DAEFD163D05C2",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "74D1135963FC93B7"
+      ]
+    },
+    {
+      "id": "7213DF73BF55B790",
+      "title": "Cards from the water",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Fit a Buddysteel Hook to an Aquaculture rod and fish for Aquaculture Buddycards packs or Cardfish. Build a display beside your aquarium.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "79D85F3EF6C6D1DA",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "76E508B4DA1156E6"
+      ]
+    },
+    {
+      "id": "7683E53A2478761A",
+      "title": "Singularity collector",
+      "x": 3.0,
+      "y": 3.0,
+      "description": [
+        "Use AE2 Buddycards to make its collection components and Singularity set packs. Teach the processing recipes to AE2 and keep a buffer of the ingredients.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "78DAECC7107F0E9C",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7213DF73BF55B790"
+      ]
+    },
+    {
+      "id": "762E20CA5C1E2D39",
+      "title": "A museum of friendships",
+      "x": 6.0,
+      "y": 3.0,
+      "description": [
+        "Complete a card set and display it in a public museum. Trade duplicates with friends and equip an earned medal using Curios.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7A2496FB2BB7AC22",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7683E53A2478761A"
+      ]
+    }
+  ],
+  "quest_links": []
+}

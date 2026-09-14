@@ -1,0 +1,102 @@
+{
+  "id": "4373E7571823BE97",
+  "filename": "dimensions",
+  "title": "Beyond the Overworld",
+  "order_index": 22,
+  "group": "",
+  "quests": [
+    {
+      "id": "43F76D74D0E60C18",
+      "title": "The Twilight Forest",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Prepare equipment, food, and a return route, then enter the Twilight Forest and follow its intended boss progression.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "47D95EDD5AD2C70B",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "36F1DC4DCF854967",
+      "title": "The Otherside",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Use Deeper and Darker progression to reach the Otherside. Establish a marked return route before carrying rare materials home.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "683263707147F782",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "43F76D74D0E60C18"
+      ]
+    },
+    {
+      "id": "7A6715D16FCD5049",
+      "title": "Blue Skies expedition",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Enter a Blue Skies dimension and progress using its own materials and equipment rules.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "2D7654F93D5C72B3",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "36F1DC4DCF854967"
+      ]
+    },
+    {
+      "id": "645820C5A20557B2",
+      "title": "The Bumblezone",
+      "x": 9.0,
+      "y": 0.0,
+      "description": [
+        "Explore the Bumblezone, learn how its inhabitants react, and bring back useful resources.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "500DA27CFA92A411",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7A6715D16FCD5049"
+      ]
+    },
+    {
+      "id": "703E1B74FC15549F",
+      "title": "Cataclysm expeditions",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Locate and challenge a structure from L_Ender's Cataclysm. Prepare an escape route and test your equipment on lesser enemies before confronting its boss.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "29AEC6A4ABD39343",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "645820C5A20557B2"
+      ]
+    }
+  ],
+  "quest_links": []
+}

@@ -1,0 +1,102 @@
+{
+  "id": "7BA39355491F9AE9",
+  "filename": "create_city",
+  "title": "The Mechanical City",
+  "order_index": 2,
+  "group": "",
+  "quests": [
+    {
+      "id": "761378307EDFBEE1",
+      "title": "A station with character",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Build a rail stop using Bells and Whistles details. Leave safe paths between passenger platforms and moving trains.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "71EF7E8D0047F01F",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "70339CEBB0BD2F57",
+      "title": "Smoke on the skyline",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Add Chimneys to a train or industrial build. Ride past the station and check that smoke remains readable with your chosen shader settings.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7BA1FD97821F2362",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "761378307EDFBEE1"
+      ]
+    },
+    {
+      "id": "7841A29AC08B5763",
+      "title": "Going up",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Build a powered Escalated escalator that connects two public floors. Test walking onto and off both ends.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7314FB107F241EB6",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "70339CEBB0BD2F57"
+      ]
+    },
+    {
+      "id": "79E392E17A92926E",
+      "title": "Music hall",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Construct a Sound of Steam pipe organ. Arrange a short musical phrase and provide a listening area for friends.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "75EA04746E2F75E3",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7841A29AC08B5763"
+      ]
+    },
+    {
+      "id": "721E611D8E8141A3",
+      "title": "The finished district",
+      "x": 3.0,
+      "y": 3.0,
+      "description": [
+        "Connect the station, factory, colony, and zoo with clear paths and signs. Use FindMe to retrieve a building material from nearby storage.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "776572F5EC85E6E7",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "79E392E17A92926E"
+      ]
+    }
+  ],
+  "quest_links": []
+}

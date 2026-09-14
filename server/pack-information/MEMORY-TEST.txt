@@ -1,0 +1,68 @@
+Amber & Arcana 0.1.5 — memory optimization test
+
+CHANGE
+Enabled ModernFix dynamic resources, which loads block/item models on demand.
+The exact bundled ModernFix 5.27.83 implements this setting and defaults it off.
+This targets model memory in a pack with many building variants. Savings have
+not been measured on this pack. Startup/rendering compatibility needs testing.
+No mods, recipes, registered blocks, or world settings changed in this revision.
+Every Compat is removed in 0.1.9-11; the other crash fixes are retained.
+
+APPLY TO YOUR WORKING INSTANCE (no re-import needed)
+1. Close Minecraft. Open the instance's Minecraft folder through the launcher.
+2. Back up config/modernfix-mixins.properties if it exists.
+3. Open that file. Add the following line, or change the existing active line
+   to the value below. Keep other settings; do not leave duplicate active keys.
+
+   mixin.perf.dynamic_resources=true
+
+   If the file does not exist, copy overrides/config/modernfix-mixins.properties
+   from this ZIP into the instance's config folder.
+4. Restart Minecraft. This is a client test; no server change is required.
+
+ROLLBACK
+If loading fails or models/textures are missing or wrong, close the game, set
+mixin.perf.dynamic_resources=false in that file, and restart. Send latest.log
+and a screenshot of any visual problem. No mod removal or world reset needed.
+
+COMPARE MEMORY
+Keep the same Java 17 runtime, heap settings, shaders, resource packs, render
+distance, and world for the first comparison. Keep maximum heap at 10240 MiB
+(10 GiB). This import ZIP does not set launcher memory limits. Leave the minimum
+heap unchanged for the comparison; do not set it equal to the maximum.
+
+Before and after the change, use the same location, allow loading to settle,
+then play for about ten minutes including opening REI and moving around.
+Record the F3 Mem USED amount just after it drops, and its peak before dropping.
+Also note any freezes. Allocated heap is not the same as live used heap, and
+the OS process total includes memory outside the Java heap. A process total
+near or above 10 GiB does not by itself mean the 10 GiB Java heap is exhausted.
+
+Spark is already installed. For client garbage collection observations, use:
+  /sparkc gcmonitor
+Play for a few minutes and capture the messages; repeat the command to stop.
+  /sparkc gc
+shows collection history. Send this output, the F3 screenshot, and latest.log.
+Also say whether this is singleplayer or a server, and where the 10 GB reading
+comes from (F3 Mem, launcher, or system monitor).
+
+Check Create moving contraptions, connected textures, Refined Storage/AE2
+screens, and a selection of REI pages while testing dynamic resources. Faster
+startup alone does not establish that all models render correctly.
+
+NEXT ADJUSTMENT IF MEMORY STILL STAYS HIGH
+After the one-setting comparison, try render distance 10 and simulation
+distance 6 as a separate test if yours are higher. These are suggested values,
+not enforced defaults. Do not replace options.txt and lose key bindings.
+On a remote server its simulation/view-distance settings also matter.
+Keep forced chunks limited to machines that need to run while you are away.
+
+VERIFICATION LIMITS
+The config key and disabled default were checked against the pinned JAR;
+the rebuilt archive preserves the previous manifest's mod files and every
+existing gameplay config. No local Minecraft launch or RAM benchmark was run.
+The user reports the preceding revision runs, but uses up to the heap limit.
+
+Official references:
+https://github.com/embeddedt/ModernFix/wiki/Dynamic-Resources-FAQ
+https://spark.lucko.me/docs/Command-Usage

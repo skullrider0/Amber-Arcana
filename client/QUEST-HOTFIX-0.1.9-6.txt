@@ -1,0 +1,8 @@
+Amber & Arcana 0.1.9-6 — FTB Quests Hotfix
+
+- Escaped literal ampersands in quest text so FTB Library does not parse "Amber & Arcana" as a broken formatting code.
+- Corrected the six item rewards in the Getting Started line to FTB Quests 1.20.1 item-stack SNBT format.
+- XP rewards, quest IDs, dependencies, artwork, mods, optimization settings, Packet Fixer and NeoAuth are unchanged.
+
+After updating an existing server, run /ftbquests reload.
+If those quests were already completed before the reward fix, reset the individual quest progress before retesting rewards.

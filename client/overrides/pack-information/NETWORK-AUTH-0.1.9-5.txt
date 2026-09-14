@@ -1,0 +1,16 @@
+AMBER & ARCANA 0.1.9-5 — PACKET / SESSION FIX
+
+Minecraft 1.20.1 / Forge 47.4.10
+
+Added Packet Fixer 2.0.0 (CurseForge 689467:6195870).
+- Required on BOTH client and dedicated server.
+- Intended to address oversized/invalid packet failures including "Unable to fit X into 3", packet/NBT size limits, and related timeouts.
+
+Added NeoAuth 1.20.1-1.0.3 (CurseForge 1140741:6003074) to the CLIENT only.
+- NeoAuth is the Forge 1.20.1 replacement for the old ReAuth workflow.
+- Allows the client to authenticate/re-validate an expired Minecraft session in-game.
+- It is intentionally NOT installed on the dedicated server because the mod is client-side only.
+
+The old ReAuth mod was not used because its Forge releases stop before Minecraft 1.20.1 and it is client-side only.
+
+Existing 0.1.9 optimization, quest, artwork, Just Dire Things, DecoCraft, Java 17, and 10240 MB memory settings are preserved.

@@ -1,0 +1,68 @@
+{
+  "mod_files": 277,
+  "shader_files": 1,
+  "chapters": 25,
+  "manual_quests": 106,
+  "curseforge_schema_checked": true,
+  "jars_readable": true,
+  "missing_declared_required_mods": [],
+  "duplicate_project_ids": [],
+  "apotheosis_present": false,
+  "version_check": "Static screening of declared ranges; not a substitute for Forge startup",
+  "curseforge_import_tested": false,
+  "minecraft_launch_tested": false,
+  "gameplay_tested": false,
+  "memory_test": {
+    "modernfix_dynamic_resources": true,
+    "pinned_jar_option_verified": true,
+    "runtime_tested": false,
+    "measured_savings_mib": null
+  },
+  "added_r2": [
+    "Just Dire Things [Forge] 1.1.7",
+    "DecoCraft 3.0.4 (Forge 1.20.1)"
+  ],
+  "pack_version": "0.1.9-13",
+  "packet_session_fix_0_1_9_5": {
+    "packet_fixer_server": true,
+    "packet_fixer_file_id": 6195870,
+    "neoauth_server": false,
+    "reason_neoauth_server_omitted": "client-side only"
+  },
+  "every_compat_0_1_9_11": {
+    "removed": true,
+    "project_id": 628539,
+    "file_id": 8833350,
+    "filename": "everycomp-1.20-2.9.26-forge.jar",
+    "reason": "Generated compatibility recipes were a major source of invalid recipe JSON during server datapack loading.",
+    "moonlight_selene_retained": true
+  },
+  "quest_pass_0_1_9_12": {
+    "chapter": "Create Engineering / create_engineering",
+    "existing_quest_ids_preserved": 4,
+    "new_quests": 2,
+    "quest_icons": 6,
+    "reward_entries": 12,
+    "local_looks_objective_replaced": true
+  },
+  "optimization_0_1_9": {
+    "gameplay_manifest_entries_unchanged": false
+  },
+  "recipe_viewer_0_1_9_13": {
+    "selected": "Roughly Enough Items 12.1.785 Forge",
+    "project_id": 310111,
+    "file_id": 5846923,
+    "client_only": true,
+    "architectury_present": true,
+    "cloth_config_present": true,
+    "jei_removed": true,
+    "polymorph_removed": true,
+    "runtime_tested": false
+  },
+  "content_removal_0_1_9_13": {
+    "ad_astra": true,
+    "ambient_sounds": true,
+    "the_aether": true,
+    "quest_references_replaced": true
+  }
+}

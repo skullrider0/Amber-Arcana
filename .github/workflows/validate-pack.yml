@@ -1,0 +1,19 @@
+name: Validate pack
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  static-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install validation tools
+        run: sudo apt-get update && sudo apt-get install -y jq ripgrep unzip
+      - name: Validate sources and release archives
+        run: bash scripts/validate.sh

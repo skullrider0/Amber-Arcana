@@ -1,0 +1,64 @@
+{
+  "id": "49F444D8188D9792",
+  "filename": "refined_storage",
+  "title": "Refined Storage",
+  "order_index": 13,
+  "group": "",
+  "quests": [
+    {
+      "id": "4AFB3BC1D5AEA04F",
+      "title": "Digital storage",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Build a powered Controller, Grid, Disk Drive, and storage disk. Keep important supplies accessible while you work on the network.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "38ADF6D51852CF9C",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "1453151A6BAA50DA",
+      "title": "Connected production",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Connect importers, exporters, and external storage to one production line. Avoid import/export loops.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "782D7B9D7887D255",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "4AFB3BC1D5AEA04F"
+      ]
+    },
+    {
+      "id": "6F10E04E6E520C5C",
+      "title": "Automatic crafting",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Create patterns and automate one useful component, then expand with the installed Refined Storage addons.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "28E331A629F63940",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "1453151A6BAA50DA"
+      ]
+    }
+  ],
+  "quest_links": []
+}

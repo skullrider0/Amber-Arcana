@@ -1,0 +1,102 @@
+{
+  "id": "71D49BFF3C2684F7",
+  "filename": "food_factory",
+  "title": "Food and Seasons",
+  "order_index": 3,
+  "group": "",
+  "quests": [
+    {
+      "id": "7E251CBA1509E973",
+      "title": "A seasonal farm",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Check Serene Seasons crop information and grow a Farmer's Delight crop during a suitable season. Reserve protected growing space for your staple crops.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7BBBCF712D81F50A",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "7A7B1E2BC56BBFAC",
+      "title": "Cheese on the belt",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build a Cheese Factory production line and store its output separately from Rats cheese until REI confirms any shared recipes or tags.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7BD65495A395981E",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7E251CBA1509E973"
+      ]
+    },
+    {
+      "id": "7E926CB17B6B198E",
+      "title": "Cola for the crew",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Automate a Cola Factory drink from its raw ingredients through bottling. Provide storage overflow handling.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7E3D110C05675993",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7A7B1E2BC56BBFAC"
+      ]
+    },
+    {
+      "id": "7480F7554AF497FF",
+      "title": "A fried feast",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Use Deepfried and its Bitterballen dependency to prepare a meal. Connect compatible cutting and processing steps with Slice and Dice or Central Kitchen.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7C39BAF6D4E02950",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7E926CB17B6B198E"
+      ]
+    },
+    {
+      "id": "7D0F5EFE4719D539",
+      "title": "A dependable pantry",
+      "x": 3.0,
+      "y": 3.0,
+      "description": [
+        "Keep a buffer of at least two usable meal types through a season change. Eat Andesite is a novelty option; keep a proper kitchen for colony meals.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7B31EF1D4DC46818",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7480F7554AF497FF"
+      ]
+    }
+  ],
+  "quest_links": []
+}

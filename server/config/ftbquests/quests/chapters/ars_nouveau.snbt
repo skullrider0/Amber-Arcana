@@ -1,0 +1,64 @@
+{
+  "id": "6793D8E11BBDE16A",
+  "filename": "ars_nouveau",
+  "title": "Ars Nouveau",
+  "order_index": 17,
+  "group": "",
+  "quests": [
+    {
+      "id": "5E46C1A7EB1FF9DB",
+      "title": "First spells",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Craft a spellbook and use early glyphs to create a useful spell.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7E4889B8BC4F95CA",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "4B6DB13056E0CBC2",
+      "title": "Source and crafting",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build a Source supply and Enchanting Apparatus workshop. Create a magical tool or upgrade.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "1D1750A413234B32",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "5E46C1A7EB1FF9DB"
+      ]
+    },
+    {
+      "id": "11538580D4752A8A",
+      "title": "A magical factory",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Use an Ars automation method, then explore Ars Elemental and the installed Create or spell integrations.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "496300BA3947926A",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "4B6DB13056E0CBC2"
+      ]
+    }
+  ],
+  "quest_links": []
+}

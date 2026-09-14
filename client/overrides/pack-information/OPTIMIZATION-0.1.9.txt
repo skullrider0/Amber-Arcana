@@ -1,0 +1,63 @@
+Amber & Arcana 0.1.9-alpha — Low-Risk Optimization Pass
+Minecraft 1.20.1 / Forge 47.4.10
+
+GOAL
+Keep the 0.1.8 gameplay/mod set intact while reducing routine client CPU usage, server tick load, chunk simulation pressure, and future Untamed Wilds ocean population pressure.
+
+ACTIVE CHANGES
+1) Spark background profiling disabled on both client and server.
+   - Spark stays installed and manual /spark profiling still works.
+   - backgroundProfiler=false prevents continuous sampling during normal play.
+   - backgroundProfilerEngine=java remains set as a safe fallback for background use.
+
+2) Dedicated-server distances:
+   - view-distance: 10 -> 8
+   - simulation-distance: 8 -> 6
+   This is the largest low-risk TPS change in this pass. Players can still raise either value later in server.properties.
+
+3) Untamed Wilds ocean generation tuning:
+   - gencontrol.freqocean: 64 -> 96 (original mod default is 16)
+   - This is a 1-in-N world-generation rarity control, NOT a live entity cap.
+   - It affects newly generated ocean areas only and does not delete existing animals.
+   - All Untamed Wilds species, breeding, freshwater/land content, and the mod itself remain enabled.
+
+4) Existing optimizers retained unchanged:
+   - Embeddium
+   - Oculus
+   - ModernFix with dynamic_resources=true
+   - FerriteCore
+   - ImmediatelyFast
+   - Entity Culling
+   - Clumps
+
+NOT CHANGED
+- No existing gameplay mod was removed for this optimization pass.
+- No experimental Lithium/Canary-style server mixin mod was added; with a pack this large that would raise compatibility risk.
+- No recipes, quests, dimensions, machines, magic systems, or worldgen mods were intentionally removed.
+- Graphics quality is not forcibly lowered; the client pack does not overwrite your video settings.
+
+IMPORTANT FOR AN EXISTING WORLD
+The Untamed Wilds change does not remove fish that already exist. Existing loaded fish can still consume server-thread time. The distance changes take effect after a server restart.
+
+RECOMMENDED MEMORY
+Client: start around 8 GiB maximum heap; raise toward 10 GiB only if the instance actually needs it.
+Server: 8-10 GiB maximum heap is a sensible starting range for this pack. More heap is not automatically faster.
+Use Java 17 for Minecraft 1.20.1 / Forge 47.4.10.
+
+DIAGNOSTICS
+Keep Spark idle during normal play. When the server is slow, profile only long enough to capture the problem, then stop it.
+Useful checks:
+  /spark healthreport
+  /spark profiler start --timeout 120
+For allocation investigation, use the appropriate Spark allocation profiler command supported by the installed build.
+
+ROLLBACK
+- Spark: set backgroundProfiler back to true if you explicitly want continuous profiling.
+- Server: set view-distance=10 and simulation-distance=8.
+- Untamed Wilds: set freqocean=64 to return to the previous Amber & Arcana tuning, or 16 for the mod default.
+
+PACK SOURCE NOTE
+This build is based on the exact 0.1.8 CurseForge client manifest and Crafty server package produced in this chat. It intentionally does not add unrelated content during the optimization pass.
+
+0.1.9-5 MEMORY PRESET
+- CurseForge manifest recommendedRam is set to 10240 MB (10 GiB), so CurseForge can apply the pack author memory recommendation instead of its 4096 MB default.

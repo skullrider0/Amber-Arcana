@@ -1,0 +1,102 @@
+{
+  "id": "748801A59E39015D",
+  "filename": "create_workshops",
+  "title": "Create Workshops",
+  "order_index": 1,
+  "group": "",
+  "quests": [
+    {
+      "id": "7F5A949E389973B0",
+      "title": "A shared workshop",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Build a powered Create work area. Keep access to shafts, belts, and stress controls clear so friends can maintain the machines.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "72F994E8D03140E2",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "790286CC030F3B89",
+      "title": "Casings and conveniences",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Use Encased and Misc and Things components in a working machine. Decorate the workshop with Interiors and Stuff N Additions blocks or equipment.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7B64F1285275762A",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7F5A949E389973B0"
+      ]
+    },
+    {
+      "id": "7D97DFC1BF45C254",
+      "title": "A renewable supply",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Construct a Sifting line and sort its outputs. Follow the installed mesh recipes in REI; avoid assuming every modded ore appears in every sieve.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "74531B35CA15CF9C",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "790286CC030F3B89"
+      ]
+    },
+    {
+      "id": "73AF015A40ECDE9A",
+      "title": "Bulk work with care",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Use FTB Ultimine and Create Ultimine on a small owned test structure. Check the selection preview and verify that another team cannot remove your claimed machinery.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "76940FC01BDE1559",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7D97DFC1BF45C254"
+      ]
+    },
+    {
+      "id": "7B876F79028477C7",
+      "title": "Power at scale",
+      "x": 3.0,
+      "y": 3.0,
+      "description": [
+        "Build a CROWNS power setup using its guide and installed recipes. Add a way to stop production and monitor stress before connecting it to your main factory.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7691C76512BC1A0A",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "73AF015A40ECDE9A"
+      ]
+    }
+  ],
+  "quest_links": []
+}

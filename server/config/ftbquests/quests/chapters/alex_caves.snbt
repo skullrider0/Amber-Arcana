@@ -1,0 +1,121 @@
+{
+  "id": "76CF3A2F1DBFB5BE",
+  "filename": "alex_caves",
+  "title": "Caves, Relics and Spells",
+  "order_index": 6,
+  "group": "",
+  "quests": [
+    {
+      "id": "7461A4C60A86DB74",
+      "title": "An expedition begins",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Prepare supplies and investigate Alex's Caves using its in-game research progression. Establish a return route before bringing rare materials home.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "77647D4E76E6C0B5",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "7FE48558E795564B",
+      "title": "The deep aquarium",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build an Aquatic Ambitions processing setup and investigate an Alex's Caves aquatic area. Keep expedition equipment distinct from the public aquarium display.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "76D3B71F42DF8131",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7461A4C60A86DB74"
+      ]
+    },
+    {
+      "id": "75BB6ABE317E1135",
+      "title": "Cave resources in motion",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Use a recipe supplied by Create: Alex's Caves Compat. Check the recipe category in REI and automate a small batch without bypassing the expedition that provides the first ingredients.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "76B939818C4FB9BE",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7FE48558E795564B"
+      ]
+    },
+    {
+      "id": "7B9BA95C7DE84FD2",
+      "title": "A relic with a history",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Obtain a Relics item from an Alex's Mobs or Alex's Caves compatibility addon. Equip it in the correct Curios slot and inspect its upgrade information.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7DD12AD612E997DE",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "75BB6ABE317E1135"
+      ]
+    },
+    {
+      "id": "7A3C820F73672F99",
+      "title": "Spells from the depths",
+      "x": 3.0,
+      "y": 3.0,
+      "description": [
+        "Craft gear or learn a spell from Alex's Caves: Spellbooks. Test it in a controlled combat area and compare it with your Iron's Spells equipment.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7680D630671E0BC0",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7B9BA95C7DE84FD2"
+      ]
+    },
+    {
+      "id": "784A85F81BAE7DB3",
+      "title": "The arcane workshop",
+      "x": 6.0,
+      "y": 3.0,
+      "description": [
+        "Use Create Wizardry to automate an Iron's Spells ingredient. Finish an expedition with that supply line supporting your spellcasting.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "75331B1E7C731E92",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7A3C820F73672F99"
+      ]
+    }
+  ],
+  "quest_links": []
+}

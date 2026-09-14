@@ -1,0 +1,7 @@
+# Settings identified in the pinned Butchery 5.2 Forge configuration class.
+# Forge fills the remaining options with mod defaults on first start.
+["Farmers Delight Compatibility"]
+"Farmers Delight" = true
+
+["Vampirism Compatibility"]
+"Vampirism Heart" = true

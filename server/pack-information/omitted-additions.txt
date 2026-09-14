@@ -1,0 +1,37 @@
+Proposed additions not resolved into this import build (not a claim that no compatible release exists):
+- Ars Arsenal: No compatible Forge 1.20.1 release found in the checked project history.
+- Ars Omega: No compatible Forge 1.20.1 release found in the checked project history.
+- Tome of Blood: No compatible Forge 1.20.1 release found in the checked project history.
+- Animal Feeding Trough: A verified CurseForge file was not resolved for this alpha; omitted rather than inserting an unverified reference.
+- End's Delight: Removed after confirmed Fossils food-mapping crash: this End's Delight release lacks the ItemRegistry and BlockRegistry classes referenced by Fossils 9.3.4.0.
+- Immersive Armors: A verified CurseForge file was not resolved for this alpha; omitted rather than inserting an unverified reference.
+- Memory Leak Fix: No compatible Forge 1.20.1 release found in the checked project history.
+- Falling Leaves: A verified CurseForge file was not resolved for this alpha; omitted rather than inserting an unverified reference.
+- 3D Skin Layers: A verified CurseForge file was not resolved for this alpha; omitted rather than inserting an unverified reference.
+- Create: Eat Andesite: Removed after confirmed fatal EdibleItemUseMixin failure in the user launch log; referenced mixin.refmap.json is absent from this JAR.
+- alexs caves Delight ( Farmer's Delight & alexs caves Add-on): Removed at user request after a confirmed missing Farmer's Delight ShepherdsPieBlock class error.
+
+Previously held or optional additions:
+- Distant Horizons: Long-distance terrain rendering
+- Entity Model Features: Custom entity models
+- Entity Texture Features: Custom and emissive entity textures
+- Create Interactive: Held until contraption compatibility testing
+- AdvancedAE: Held until AE2 stack version testing
+- Unusual Fish Mod: Held until spawn-density test
+- Deep Aether: Held until Aether release matrix test
+- Ars Technica: Promising Create and Ars extension needing balance test
+- Iron's Arms 'n Artifice: No Forge 1.20.1 release
+- Antarchy: Requires Minecraft 1.21.1 Fabric or NeoForge
+- Create: Addictives: Only 1.21.1 NeoForge; author says no 1.20.1 port planned
+- Create: Integrated Farming: Only 1.21.1 NeoForge
+- Create: Heat: Only 1.21.1 NeoForge
+- Create: Meat Blocks: Only 1.21.1 NeoForge
+- Create Colonies: Located integration is 1.21.1 NeoForge; similarly named 1.20.1 entries are entire modpacks
+- Create Furniture: Exact project unresolved; Create Interiors selected for furniture while retaining this request
+- Create Iron's Spells Recipe: Only 1.21.1 NeoForge; Create Wizardry selected as the Forge 1.20.1 bridge
+- Reliquified Ars Nouveau: Only 1.21.1 NeoForge; cannot use in this branch
+- Buddycards Expansions: Combined addon is 1.18.x; use the four separate 1.20.1 integrations
+- Just Dire Things: No official Forge 1.20.1 release; publisher lists NeoForge builds for other Minecraft versions.
+
+Substitutions: Create Interiors supplies furniture; Create Wizardry supplies the selected Create/Iron spells integration. Buddycards uses four separate 1.20.1 addons instead of the older combined Expansions mod.
+No Apotheosis-family mod is included.

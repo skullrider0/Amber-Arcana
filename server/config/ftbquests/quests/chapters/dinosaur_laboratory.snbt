@@ -1,0 +1,83 @@
+{
+  "id": "39A27A2CEB307EA7",
+  "filename": "dinosaur_laboratory",
+  "title": "Jurassic Laboratory",
+  "order_index": 20,
+  "group": "",
+  "quests": [
+    {
+      "id": "538C111A2F15C97F",
+      "title": "Collect evidence",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Explore for fossils and unusual amber. Keep Prehistoric Legacy specimens separate from Fossils and Archeology specimens because they use different processing systems.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "587749F49F7AA4A3",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "63C450EF80054073",
+      "title": "The amber laboratory",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Follow Prehistoric Legacys guide to process unusual amber through its extraction and revival stages. Supply each machine with the resources it actually requires.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "538350F3FAB012DE",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "538C111A2F15C97F"
+      ]
+    },
+    {
+      "id": "3B1E3F88AAA755B8",
+      "title": "Fossils and revival",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Use the Fossils and Archeology guide to analyze a fossil, obtain DNA, and complete a revival sequence.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "157730A15BDF66BE",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "63C450EF80054073"
+      ]
+    },
+    {
+      "id": "7D39BB362CB3149A",
+      "title": "A secure habitat",
+      "x": 9.0,
+      "y": 0.0,
+      "description": [
+        "Build a species-appropriate enclosure before releasing your first dinosaur. Provide food and secure visitor paths, then document its care needs.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "458BB826320DA071",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "3B1E3F88AAA755B8"
+      ]
+    }
+  ],
+  "quest_links": []
+}

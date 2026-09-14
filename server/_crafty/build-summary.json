@@ -1,0 +1,94 @@
+{
+  "pack_name": "Amber & Arcana",
+  "pack_version": "0.1.9-13",
+  "minecraft": "1.20.1",
+  "loader": "forge-47.4.10",
+  "manifest_entries": 278,
+  "mod_metadata_entries": 277,
+  "server_mod_downloads": 257,
+  "excluded_mod_jars": 20,
+  "excluded_shader_entries": 1,
+  "compatibility_fix": "More Hitboxes retained; Colorwheel excluded because it requires Oculus on dedicated server.",
+  "runtime_fix": "Prefer Java 17 automatically; force Spark background profiler engine to built-in Java sampler to avoid native async-profiler crashes.",
+  "compatibility_fix_v3": "Wiki Zoomer 1.3.0 restored to dedicated-server mod list so its registered content remains present after registry sync; fixes client NPE wikizoomer:item_zoomer.",
+  "server_mod_count": 257,
+  "optimization_0_1_9": {
+    "spark_background_profiler": false,
+    "view_distance": 8,
+    "simulation_distance": 6,
+    "untamedwilds_freqocean": 96,
+    "new_performance_mods_added": 0,
+    "gameplay_mod_set_changed": true
+  },
+  "content_sync_r2": {
+    "just_dire_things_forge": "1.1.7 / CurseForge 1533501:8733229",
+    "decocraft": "3.0.4 / CurseForge 79616:7092533",
+    "client_and_server": true
+  },
+  "quest_finish_r3": {
+    "chapter": "Welcome to Amber & Arcana / getting_started",
+    "quest_icons_added": 3,
+    "reward_entries_added": 9,
+    "decorative_pack_art_added": true,
+    "profile_art": "user-supplied amber crystal image",
+    "server_icon_added": true
+  },
+  "memory_preset_0_1_9_4": {
+    "forge_xms_mb": 4096,
+    "forge_xmx_mb": 10240,
+    "behavior": "Forge child heap is explicitly set by bootstrap and does not inherit Crafty import default heap."
+  },
+  "packet_session_fix_0_1_9_5": {
+    "packet_fixer": "2.0.0 / CurseForge 689467:6195870 / client+server",
+    "neoauth": "1.0.3 / CurseForge 1140741:6003074 / client only",
+    "old_reauth": "not used; no Forge 1.20.1 release"
+  },
+  "quest_fix_0_1_9_6": {
+    "escaped_literal_ampersands": true,
+    "getting_started_item_reward_serialization_fixed": true,
+    "item_rewards_fixed": 6,
+    "reason": "FTB Quests 1.20.1 expects item rewards as an item object, not a raw item-id string."
+  },
+  "jei_rollback_0_1_9_8": {
+    "from": "15.59.0.210 beta / CurseForge 238222:8851009",
+    "to": "15.57.0.207 beta / CurseForge 238222:8807823",
+    "applies_to": "client + server",
+    "reason": "isolate server-side recipe-load cascade / broken recipe display issue"
+  },
+  "jei_compat_0_1_9_9": {
+    "previous_test": "15.57.0.207 beta / CurseForge 238222:8807823",
+    "problem": "Polymorph 0.49.11 hard-requires JEI >= 15.57.0.207, preventing server startup",
+    "selected": "15.57.0.207 beta / CurseForge 238222:8807823",
+    "sha1": "5ed273301ee2364b19fbc4cd73f76e61cb95d84e",
+    "reason": "Use the minimum JEI version accepted by Polymorph to isolate later JEI recipe-regression behavior."
+  },
+  "every_compat_0_1_9_11": {
+    "removed": true,
+    "removed_server_file": "everycomp-1.20-2.9.26-forge.jar",
+    "cleanup_on_existing_server": true,
+    "moonlight_selene_retained": true
+  },
+  "quest_pass_0_1_9_12": {
+    "chapter": "Create Engineering / create_engineering",
+    "existing_quest_ids_preserved": 4,
+    "new_quests": 2,
+    "quest_icons": 6,
+    "reward_entries": 12,
+    "local_looks_objective_replaced": true,
+    "client_server_quest_files_identical": true
+  },
+  "recipe_viewer_0_1_9_13": {
+    "selected": "Roughly Enough Items 12.1.785 Forge / CurseForge 310111:5846923",
+    "client_only": true,
+    "jei_removed": true,
+    "polymorph_removed": true,
+    "launcher_jei_enforcement_removed": true,
+    "server_recipe_viewers_removed": true
+  },
+  "content_removal_0_1_9_13": {
+    "ad_astra": "removed client + server",
+    "ambient_sounds": "removed client",
+    "the_aether": "removed client + server",
+    "dimension_quests_repurposed": 2
+  }
+}

@@ -1,0 +1,24 @@
+AMBER & ARCANA 0.1.9-12 — PACKAGE AUDIT + CREATE ENGINEERING
+
+CLIENT / SERVER PACKAGE AUDIT
+- Client manifest: 282 entries (281 mod/library JARs and 1 shader).
+- Dedicated server: 261 mod/library downloads.
+- Every server CurseForge file ID exists in the client manifest at the same pinned file version.
+- No duplicate client project IDs, client file IDs, metadata filenames, or declared mod IDs were found.
+- The 20 active client-only JARs and the shader are intentionally absent from the dedicated server.
+- Shared config files and all 25 FTB Quests chapter files are byte-identical between the client and server packages.
+- Neither package supplies custom recipe JSON or item/block tag JSON. Recipe and tag parse errors therefore originate in mod JAR data or stale runtime JARs, not these overrides.
+- Every Compat and Immersive Weapons are absent from both active package definitions.
+- The Crafty launcher runs stale-mod cleanup before downloading/verifying the pinned server set. It removes everycomp-1.20-2.9.26-forge.jar and conflicting JEI 1.20.1 jars before Forge starts.
+- Forge determines mod construction order from dependency metadata; the order of rows in server-mods.tsv and the order of files in the ZIP do not control mod load order.
+
+LIMIT OF THIS AUDIT
+This is a complete static audit of the distributable packages. The thin client manifest and Crafty installer do not contain the 281 mod JARs, so a real client/server boot was not performed here. Compare the running instance mods folder or a fresh latest.log to these pins to confirm Crafty is actually using this revision.
+
+CREATE ENGINEERING QUEST PASS
+- Preserved the four existing quest IDs and task IDs so prior progress is not discarded.
+- Expanded the chapter from four to six milestones.
+- Added a chapter icon, six quest icons, named checkmarks, and twelve balanced item/XP rewards.
+- Added guidance for Ponder, stress capacity, overflow protection, safe steam power, scheduled trains, and a full-buffer factory test.
+- Replaced the obsolete Local Looks quest objective with a vanilla banner objective because Local Looks is no longer in the client manifest.
+- Client and server now contain the same updated quest files.

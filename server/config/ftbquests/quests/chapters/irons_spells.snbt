@@ -1,0 +1,64 @@
+{
+  "id": "303C0D3F1478FB5C",
+  "filename": "irons_spells",
+  "title": "Iron Spells and Wizardry",
+  "order_index": 18,
+  "group": "",
+  "quests": [
+    {
+      "id": "2F90A5A4DB0404F1",
+      "title": "Choose a school",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Find or craft a spellbook and learn a spell. Read its mana cost and cooldown before entering combat.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "22E46B8AF87F85E6",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "017F83F1867628E2",
+      "title": "The inscription workshop",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build the spell-crafting stations supported by this version and improve your book and equipment.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "21B3DD407A70E254",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "2F90A5A4DB0404F1"
+      ]
+    },
+    {
+      "id": "00C1FF44E8C395ED",
+      "title": "Spells beyond the surface",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Explore the installed Alexs Caves spell addon and Create Wizardry. Use REI to find the recipes that connect the systems.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "4363C052082E3CE1",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "017F83F1867628E2"
+      ]
+    }
+  ],
+  "quest_links": []
+}

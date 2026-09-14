@@ -1,0 +1,33 @@
+AMBER & ARCANA 0.1.9-13 — REI + CONTENT CLEANUP
+
+RECIPE VIEWER
+- Removed Just Enough Items 15.57.0.207 from client and server.
+- Removed Polymorph 0.49.11 because that build requires JEI.
+- Added Roughly Enough Items 12.1.785 for Forge 1.20.1 to the client.
+- REI is intentionally client-only; the dedicated server does not need a recipe-viewer jar.
+- Architectury API 9.2.14 and Cloth Config 11.1.136 were already present and are retained.
+- Updated active quest text from JEI to REI.
+
+CONTENT REMOVALS
+- Removed Ad Astra 1.15.21 from client and server.
+- Removed The Aether 1.5.2 from client and server.
+- Removed AmbientSounds 6.3.8 from the client.
+- Repurposed the Aether and Ad Astra quest objectives for Deeper and Darker and L_Ender's Cataclysm while preserving their quest and task IDs.
+
+CRAFTY CLEANUP
+- The rebuilt launcher no longer reinstalls or verifies JEI.
+- Before server preparation, it removes stale JEI, Polymorph, and REI jars.
+- The removal list also deletes the exact retired Ad Astra, Aether, and AmbientSounds jars from reused Crafty directories.
+- The dedicated-server list now contains 257 pinned downloads.
+
+CLIENT UPGRADE
+Import 0.1.9-13 as a fresh CurseForge profile. If reusing an old profile instead, close Minecraft and manually remove the JEI, Polymorph, Ad Astra, Aether, and AmbientSounds jars before installing REI. Do not leave two recipe viewers in the same profile.
+
+EXISTING WORLDS
+Back up the world before upgrading. Items, blocks, entities, planets, dimensions, or player data owned by Ad Astra or The Aether will no longer exist. Do not enter the removed dimensions before shutting down the old server and making the backup.
+
+PRESERVED
+- Minecraft 1.20.1 and Forge 47.4.10.
+- Every Compat removal and Moonlight/Selene retention.
+- Create Engineering quest pass and existing quest progress IDs.
+- Packet Fixer, NeoAuth client support, Just Dire Things, DecoCraft, optimization settings, Java 17 preference, and the 4096/10240 MiB server heap preset.

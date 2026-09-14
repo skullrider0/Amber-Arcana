@@ -1,0 +1,64 @@
+{
+  "id": "6EC1474C2D86A12B",
+  "filename": "tinkers",
+  "title": "Tinkers Construct",
+  "order_index": 16,
+  "group": "",
+  "quests": [
+    {
+      "id": "51C15EB45468ED7A",
+      "title": "Tool maker",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Read Materials and You and make your first customizable Tinkers tool.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "73D66BA8BD33A4D7",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "4C6BE38139D72DC8",
+      "title": "Melting and casting",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build the melting and casting equipment described in the installed guide. Produce an alloy and cast a tool part.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "4B462AD204C472EE",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "51C15EB45468ED7A"
+      ]
+    },
+    {
+      "id": "1516BE85C9F46A4B",
+      "title": "A personal tool set",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Build and modify a set of tools suited to mining, building, and adventuring. Compare materials in the guide before spending rare resources.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "234B6A6692C458CB",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "4C6BE38139D72DC8"
+      ]
+    }
+  ],
+  "quest_links": []
+}

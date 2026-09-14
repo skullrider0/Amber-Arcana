@@ -1,0 +1,102 @@
+{
+  "id": "043ED5D2BC9679C5",
+  "filename": "ritual_magic",
+  "title": "Rituals and Witchcraft",
+  "order_index": 19,
+  "group": "",
+  "quests": [
+    {
+      "id": "15DAE3CE842B7E3D",
+      "title": "Occultism rituals",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Follow the Dictionary of Spirits to summon a spirit and establish one useful ritual or storage system.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "2FA0318A6C2D239A",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "200753C8EB83311D",
+      "title": "Botania garden",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Create a mana-generating garden, transfer mana, and craft a functional botanical item.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "1DAA63A175F07860",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "15DAE3CE842B7E3D"
+      ]
+    },
+    {
+      "id": "03AFE303E07AA846",
+      "title": "Blood Magic altar",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Build a Blood Altar and progress through the early slate and orb recipes in the installed guide.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "60BA837180BE3D77",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "200753C8EB83311D"
+      ]
+    },
+    {
+      "id": "785DBD084E3E054F",
+      "title": "Hexerei workshop",
+      "x": 9.0,
+      "y": 0.0,
+      "description": [
+        "Build a witchs workshop and use Hexerei crafting to make a useful item. Keep its blood and fluid systems separate unless REI shows a supported conversion.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "28875F58E69B9BE8",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "03AFE303E07AA846"
+      ]
+    },
+    {
+      "id": "0529657A7D4C8721",
+      "title": "Vampire or hunter",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Choose your Vampirism faction if desired. Establish the supplies and equipment needed for its progression.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "3F9ADA59C3D8A11C",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "785DBD084E3E054F"
+      ]
+    }
+  ],
+  "quest_links": []
+}

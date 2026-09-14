@@ -23,6 +23,8 @@ Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, re
 - `dist/` — ready-to-import client and server ZIPs plus checksums.
 - `scripts/` — repeatable validation and packaging helpers.
 - `GOAL-MAP.md` — ordered project goals and acceptance gates.
+- `GOALS.md` — live goal status and next-action list.
+- `WORK-ONBOARDING.md` — starting instructions for future ChatGPT Work sessions.
 - `CURRENT_STATE.md` — what is known, tested, and still unverified.
 - `PROJECT_STATE.md` — release history and active work queue.
 - `AUTOMATION_RULES.md` — safe rules for future automated changes.

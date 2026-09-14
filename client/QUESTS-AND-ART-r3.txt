@@ -1,0 +1,29 @@
+Amber & Arcana 0.1.9-alpha-r3 — Starter Quest + Artwork Pass
+
+FIRST QUEST LINE FINISHED
+Chapter: Welcome to Amber & Arcana
+
+1) Make a home
+   Icon: Crafting Table
+   Rewards: 16 Torches, 8 Bread, 100 XP
+
+2) Claim your workshop
+   Icon: FTB Chunks home/waypoint graphic
+   Rewards: 8 Iron Ingots, 1 Compass, 150 XP
+
+3) Tools for the journey
+   Icon: Sophisticated Backpack
+   Rewards: 2 Diamonds, 8 Golden Carrots, 250 XP
+
+ARTWORK
+The supplied amber-crystal artwork is bundled as:
+- icon.png (ZIP root)
+- PROFILE-ICON.png (ZIP root)
+- overrides/icon.png
+- overrides/amber-and-arcana-icon.png
+- KubeJS texture used on the first FTB Quests chapter
+- server-icon.png (64x64, server pack only)
+
+IMPORTANT CURSEFORGE APP NOTE
+CurseForge's profile ZIP import does not reliably import a custom profile-card avatar.
+The image is bundled in the pack so it is available immediately, but if CurseForge shows its generic/default profile image after import, open the profile options and choose PROFILE-ICON.png / icon.png as the custom image. This is a CurseForge app limitation rather than a missing file in this pack.

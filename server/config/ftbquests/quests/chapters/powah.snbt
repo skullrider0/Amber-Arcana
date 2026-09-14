@@ -1,0 +1,64 @@
+{
+  "id": "04E2847BE2F7547E",
+  "filename": "powah",
+  "title": "Powah Energy",
+  "order_index": 12,
+  "group": "",
+  "quests": [
+    {
+      "id": "30532555D30762EA",
+      "title": "Your first generator",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Craft a starter Powah generator and keep a connected machine powered.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "234CDFD407C6F43D",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "41D6A5B567823C5F",
+      "title": "Energizing station",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build an Energizing Orb setup and produce the next tier of energized materials.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "0C342597921AC9C5",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "30532555D30762EA"
+      ]
+    },
+    {
+      "id": "3B900127ED58D474",
+      "title": "A dependable grid",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Upgrade your generation and energy storage. Connect your factory and dinosaur laboratory through an organized distribution system.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7FFB455D6A69F884",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "41D6A5B567823C5F"
+      ]
+    }
+  ],
+  "quest_links": []
+}

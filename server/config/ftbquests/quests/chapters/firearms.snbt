@@ -1,0 +1,64 @@
+{
+  "id": "01DA3803DBA7D386",
+  "filename": "firearms",
+  "title": "Firearms and Artillery",
+  "order_index": 23,
+  "group": "",
+  "quests": [
+    {
+      "id": "3099F106AB3C6A98",
+      "title": "A gunsmiths bench",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Craft a Create Gunsmithing weapon and compatible ammunition using the installed recipes.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "4A68B00F3F848441",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "75559872A530EDA9",
+      "title": "An ammunition line",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Automate a repeatable ammunition ingredient or assembly step using the available Create recipes.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7D821979133C71F7",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "3099F106AB3C6A98"
+      ]
+    },
+    {
+      "id": "2129796B99A6F9F3",
+      "title": "Big Cannons",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Construct and load a Create Big Cannons installation using its guide. Test it in a clear area away from your colony and habitats.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "3C257F9B27733B68",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "75559872A530EDA9"
+      ]
+    }
+  ],
+  "quest_links": []
+}

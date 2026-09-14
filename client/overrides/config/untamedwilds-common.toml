@@ -1,0 +1,7 @@
+# Amber & Arcana 0.1.9: conservative ocean-population optimization.
+# This is a 1-in-N world-generation rarity setting, not a live mob cap.
+# Original Untamed Wilds default: 16. Previous A&A value: 64.
+# 96 lowers new ocean feature placement opportunities another 33% vs 0.1.8.
+# Existing animals, breeding and already-generated chunks are unaffected.
+[gencontrol]
+freqocean = 96

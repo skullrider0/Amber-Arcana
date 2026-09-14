@@ -1,0 +1,102 @@
+{
+  "id": "75A9B231B7FDAB26",
+  "filename": "settlement",
+  "title": "Claims and Colonies",
+  "order_index": 0,
+  "group": "",
+  "quests": [
+    {
+      "id": "70C7ABF21CA802F5",
+      "title": "A place to call home",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Choose a settlement site with room for farms, factory buildings, and animal enclosures. Use the MineColonies build preview before committing to the first buildings.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7F146D00AC77A7E1",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "7AF3658FEB97583B",
+      "title": "Claim together",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Create your FTB team, invite your friends, and claim the settlement with FTB Chunks. Colony permissions and FTB team membership are separate; give builders access in both systems.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7C8519FE0C13B968",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "70C7ABF21CA802F5"
+      ]
+    },
+    {
+      "id": "7B1372B7801FD7F7",
+      "title": "The first builders",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Establish the Town Hall and a Builder. Supply the requested materials and let the Builder finish a hut. If work stalls, check the worker request list, then check claim permissions.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "77AA6ED8327B14AB",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7AF3658FEB97583B"
+      ]
+    },
+    {
+      "id": "7FDBD04CDCC2AC42",
+      "title": "From warehouse to workshop",
+      "x": 0.0,
+      "y": 3.0,
+      "description": [
+        "Add a Warehouse and Courier, then deliver one batch of Create-produced building materials to the colony. Watch a delivery reach the requesting worker.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7498071E867FCE38",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7B1372B7801FD7F7"
+      ]
+    },
+    {
+      "id": "7E43AF9888FA9F2E",
+      "title": "A town that feeds itself",
+      "x": 3.0,
+      "y": 3.0,
+      "description": [
+        "Establish food production and a kitchen. Supply a Farmer's Delight meal from your factory to the settlement and confirm the colony can use that food before scaling up.",
+        "Complete this project, then tick the checkmark. This is a manual build milestone."
+      ],
+      "tasks": [
+        {
+          "id": "7D3327E0FE57F29E",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "7FDBD04CDCC2AC42"
+      ]
+    }
+  ],
+  "quest_links": []
+}

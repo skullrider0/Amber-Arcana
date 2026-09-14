@@ -1,0 +1,22 @@
+Excluded from dedicated server build:
+- AppleSkin (appleskin) :: appleskin-forge-mc1.20.1-2.5.1.jar :: client-only / rendering / UI
+- Colorwheel (colorwheel) :: colorwheel-forge-1.2.9+mc1.20.1.jar :: client-only dependency chain (requires Oculus)
+- Complementary Reimagined r5.6.1 :: shader pack from manifest only :: client shader
+- Controlling (controlling) :: Controlling-forge-1.20.1-12.0.2.jar :: client-only / rendering / UI
+- Eating Animation (eating-animation-forge) :: eatinganimation-1.20.1-5.1.0.jar :: client-only / rendering / UI
+- Embeddium (embeddium) :: embeddium-0.3.31+mc1.20.1.jar :: client-only / rendering / UI
+- Enchantment Descriptions (enchantment-descriptions) :: EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar :: client-only / rendering / UI
+- Entity Culling (entityculling) :: entityculling-forge-1.9.0-mc1.20.1.jar :: client-only / rendering / UI
+- ImmediatelyFast (immediatelyfast) :: ImmediatelyFast-Forge-1.5.5+1.20.4.jar :: client-only / rendering / UI
+- Legendary Tooltips (legendary-tooltips) :: LegendaryTooltips-1.20.1-forge-1.4.5.jar :: client-only / rendering / UI
+- NeoAuth (neoauth) :: NeoAuth-1.20.1-1.0.3.jar :: client-only session re-authentication
+- Mouse Tweaks (mouse-tweaks) :: MouseTweaks-forge-mc1.20.1-2.25.1.jar :: client-only / rendering / UI
+- Not Enough Animations (not-enough-animations) :: notenoughanimations-forge-1.10.2-mc1.20.1.jar :: client-only / rendering / UI
+- Oculus (oculus) :: oculus-mc1.20.1-1.8.0.jar :: client-only / rendering / UI
+- Retro Damage Indicators (retro-damage-indicators) :: retrodamageindicators-1.0.1.jar :: client-only / rendering / UI
+- Roughly Enough Items (roughly-enough-items) :: RoughlyEnoughItems-12.1.785-forge.jar :: client-side recipe viewer
+- ShulkerBoxTooltip (shulkerboxtooltip) :: shulkerboxtooltip-forge-4.0.4+1.20.1.jar :: client-only / rendering / UI
+- Simply Tooltips (simply-tooltips) :: SimplyTooltips-forge-0.1.5-1.20.1.jar :: client-only / rendering / UI
+- Sound Physics Remastered (sound-physics-remastered) :: sound-physics-remastered-forge-1.20.1-1.5.1.jar :: client-only / rendering / UI
+- Xaero's Minimap (xaeros-minimap) :: xaerominimap-forge-1.20.1-26.5.0.jar :: client-only / rendering / UI
+- Xaero's World Map (xaeros-world-map) :: xaeroworldmap-forge-1.20.1-1.46.0.jar :: client-only / rendering / UI

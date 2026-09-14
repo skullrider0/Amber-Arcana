@@ -1,0 +1,83 @@
+{
+  "id": "151A507B6002E7CB",
+  "filename": "mekanism",
+  "title": "Mekanism Industry",
+  "order_index": 11,
+  "group": "",
+  "quests": [
+    {
+      "id": "6562879F7F787283",
+      "title": "A powered machine room",
+      "x": 0.0,
+      "y": 0.0,
+      "description": [
+        "Generate energy, connect cables, and run a Metallurgic Infuser and Enrichment Chamber. Leave room for upgrades.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "4CF8AA93280B9A5D",
+          "type": "checkmark"
+        }
+      ]
+    },
+    {
+      "id": "0C7A1308769A74B9",
+      "title": "Ore processing",
+      "x": 3.0,
+      "y": 0.0,
+      "description": [
+        "Build a reliable processing line and automate its inputs and outputs. Expand chemical processing only after checking the installed recipes.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "4CE67B43815401BD",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "6562879F7F787283"
+      ]
+    },
+    {
+      "id": "6E3143B357129102",
+      "title": "Power with safeguards",
+      "x": 6.0,
+      "y": 0.0,
+      "description": [
+        "Build a larger energy system. Read the reactor guide before operation and provide a reliable shutdown and waste-handling plan for any fission installation.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "2107AF1EEF77061E",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "0C7A1308769A74B9"
+      ]
+    },
+    {
+      "id": "27F120E99FCF093B",
+      "title": "The MekaSuit",
+      "x": 9.0,
+      "y": 0.0,
+      "description": [
+        "Craft and charge the MekaSuit pieces, then install modules appropriate to your exploration plans.",
+        "Complete this objective, then tick the checkmark. This is a manual milestone."
+      ],
+      "tasks": [
+        {
+          "id": "29050B08F0F81008",
+          "type": "checkmark"
+        }
+      ],
+      "dependencies": [
+        "6E3143B357129102"
+      ]
+    }
+  ],
+  "quest_links": []
+}
