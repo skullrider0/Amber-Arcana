@@ -1,80 +1,80 @@
 # Amber & Arcana Workload Guide
 
+## Current baseline
+
+- Release: `0.1.9-13`
+- Minecraft: 1.20.1
+- Forge: 47.4.10
+- Java: 17
+- Client manifest entries: 278
+- Server mod downloads: 257
+- Manual quests: 106 across 25 chapters
+- Distribution files:
+  - `dist/Amber-and-Arcana-0.1.9-13-Client.zip`
+  - `dist/Amber-and-Arcana-0.1.9-13-Server.zip`
+
+The pack has already been ported. Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, removes Polymorph because it hard-depends on JEI, and removes Ad Astra, AmbientSounds, and The Aether. Just Dire Things and DecoCraft remain required.
+
 ## Priority order
 
-1. Recover and inventory the authoritative alpha pack.
-2. Establish a clean baseline on Minecraft 1.20.1, Forge 47.4.10, and Java 17.
-3. Diff client and server mods by filename, mod ID, version, side, and dependency.
-4. Diff `config/`, `defaultconfigs/`, `kubejs/`, datapacks, recipes, and tags.
-5. Reproduce recipe/tag failures from fresh client and server logs.
-6. Make requested mod changes in dependency-safe groups.
-7. Validate single-player, dedicated-server startup, login, recipes, tags, quests, and world generation.
-8. Export both CurseForge client and Crafty 4 server packages.
-9. Publish an alpha release with hashes and known issues.
-10. Resume quest-line work.
-
-## Requested mod changes
-
-- Keep: Just Dire Things, DecoCraft.
-- Replace: JEI → Roughly Enough Items, subject to Forge 1.20.1 compatibility and required integrations.
-- Remove: Ad Astra, AmbientSounds, The Aether.
-- Remove only dependencies proven unused after those removals.
-- Search KubeJS, quests, configs, recipes, tags, loot tables, advancements, and worldgen for removed mod IDs.
+1. Preserve the current artifacts and their checksums.
+2. Import the client ZIP into a clean CurseForge profile.
+3. Import the server ZIP into a fresh Crafty 4 test server.
+4. Capture fresh client and server logs from the same test run.
+5. Reproduce the recipe/tag reload errors and red-X/incompatible-server indicator.
+6. Diff client/server mod IDs, versions, configs, KubeJS data, tags, recipes, and network channels.
+7. Fix one verified root cause per commit and repeat the test matrix.
+8. Test a new world, then a backed-up copy of an existing world.
+9. Publish a tested release with changelog, known issues, and hashes.
+10. Continue the next quest-line milestone.
 
 ## Diagnostic method
 
-Create normalized inventories for client and server containing:
+Generate normalized client/server inventories containing JAR filename, SHA-256, mod ID, version, side, and dependencies. Then compare:
 
-- JAR filename and SHA-256
-- mod ID, display name, and version
-- client/server/both side classification
-- required and optional dependencies
-- duplicate mod IDs or multiple versions
-
-Then compare:
-
-- Forge registry and missing-mapping warnings
-- datapack validation failures
-- recipe serializer/type failures
+- duplicate or mismatched mod IDs and versions
+- client-only mods accidentally shipped server-side
+- Forge missing mappings and registry warnings
+- datapack validation and recipe serializer failures
 - unresolved or empty tags
 - KubeJS startup/server/data errors
 - network-channel and incompatible-version warnings
-- quest references to deleted items
-- worldgen references to deleted dimensions or biomes
+- quest references to removed content
+- worldgen references to removed dimensions or biomes
 
-Treat the red-X/incompatible-version indicator as evidence to investigate, not proof of the root cause.
+Treat the red X as evidence to investigate, not proof of the root cause. Find the earliest relevant error before analyzing cascading errors.
 
 ## Change-control rules
 
 - One logical change per commit.
-- Record removed files and why.
-- Never delete configs blindly; archive or document migrations.
-- Keep client-only mods out of the server package.
-- Do not bundle third-party mod JARs in Git unless their licenses permit redistribution.
-- Do not claim a fix until a new world and a representative existing-world copy both pass.
-- Back up worlds before testing removals involving dimensions or world generation.
+- Update `CHECKLIST.md` with evidence, not assumptions.
+- Keep Just Dire Things and DecoCraft.
+- Keep JEI, Polymorph, Ad Astra, AmbientSounds, and The Aether removed unless a documented design decision reverses that.
+- Do not commit access tokens, credentials, private server addresses, worlds, player data, or third-party mod JARs without redistribution permission.
+- Keep client-only mods out of the Crafty package.
+- Back up worlds before testing content or world-generation removals.
+- Do not claim a fix until both a fresh import and an in-game join test pass.
 
 ## Validation matrix
 
 | Test | Client | Server | Required result |
 | --- | --- | --- | --- |
-| Clean launch | Yes | Yes | No fatal mod/dependency errors |
+| Static validation | Yes | Yes | `scripts/validate.sh` passes |
+| Clean import/launch | Yes | Yes | No fatal dependency errors |
 | Datapack reload | Yes | Yes | No recipe/tag validation failures |
 | Join | Yes | Yes | No registry/network mismatch |
-| Recipe browsing | Yes | N/A | Requested recipe viewer works |
-| Crafting sample | Yes | Yes | Recipes agree on both sides |
+| REI recipe browsing | Yes | N/A | Recipes display correctly |
+| Representative crafting | Yes | Yes | Client and server agree |
 | Quest sample | Yes | Yes | No missing item/task references |
-| Existing world copy | Yes | Yes | Loads after explicit backup |
+| Existing-world copy | Yes | Yes | Loads after explicit backup |
 | New world | Yes | Yes | Normal generation and progression |
 
-## Release artifacts
+## Release deliverables
 
-Each release should contain:
-
-- CurseForge-compatible client export with a valid manifest
-- Crafty 4 import package or documented server installation archive
-- exact mod/version inventory
-- configuration and script overrides
-- changelog
-- known issues
+- CurseForge-compatible client export with valid manifest
+- Crafty 4 server import
+- exact mod/version inventories
+- configuration, KubeJS, and quest overrides
+- changelog and known issues
 - SHA-256 checksums
+- recorded validation evidence under `docs/`
