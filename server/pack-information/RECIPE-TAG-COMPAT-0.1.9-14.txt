@@ -1,0 +1,32 @@
+AMBER & ARCANA 0.1.9-14 — RECIPE AND TAG COMPATIBILITY PATCH
+
+The fresh 0.1.9-13 Crafty log confirmed that Every Compat's generated recipe
+errors were eliminated. It also isolated 36 invalid recipe resources and four
+broken tag files shipped by the remaining mods.
+
+This release adds a matching high-priority KubeJS data pack to the client and
+server packages. It disables only the 36 recipes that Forge already rejected,
+so no previously working recipe is removed. The affected namespaces are Create
+and its BWG compatibility recipes, Create Aquatic Ambitions, Create Misc and
+Things, Forbidden & Arcanus, Alex's Delight, Rustic Delight, and Create
+Gunsmithing.
+
+Tag repairs:
+- Reborn Storage item-part and item-disk parent tags now reference only the four
+  item storage tiers that actually exist. Fluid tiers remain untouched.
+- I Wanna Skate uses the valid minecraft:stairs and minecraft:slabs block tags.
+- Just Dire Things keeps all valid paradox deny-list entries while dropping its
+  nonexistent paradox_machine block reference.
+
+Preserved:
+- Just Dire Things and DecoCraft.
+- REI, Create, Forbidden & Arcanus, Create Aquatic Ambitions, Create Misc and
+  Things, Refined Storage, ExtraStorage, Reborn Storage, and I Wanna Skate.
+- Minecraft 1.20.1, Forge 47.4.10, Java 17, quests, and prior removals.
+
+Validation status:
+- Client/server compatibility data is byte-identical.
+- All compatibility JSON parses successfully.
+- Both distribution archives and checksums are rebuilt by scripts/build.sh.
+- A fresh runtime startup/reload test is still required to prove that the log
+  contains no matching recipe or tag errors.

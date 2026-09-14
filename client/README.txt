@@ -1,6 +1,6 @@
-AMBER & ARCANA 0.1.9-13 — REI + CONTENT CLEANUP
+AMBER & ARCANA 0.1.9-14 — REI + CONTENT CLEANUP
 
-0.1.9-13 RECIPE VIEWER AND CONTENT CHANGE
+0.1.9-14 RECIPE VIEWER AND CONTENT CHANGE
 Replaced JEI 15.57.0.207 with Roughly Enough Items (REI) 12.1.785 for Forge 1.20.1. Polymorph was removed because this installed build requires JEI. Ad Astra, AmbientSounds, and The Aether were removed at the pack owner's request. Existing Create Engineering quest work and all other pack fixes are preserved.
 
 0.1.9-12 QUEST UPDATE
@@ -18,7 +18,7 @@ Minecraft 1.20.1 / Forge 47.4.10 / Create 6.0.8
 
 INSTALL
 1. Open CurseForge, choose Minecraft, and choose Import.
-2. Select Amber-and-Arcana-0.1.9-13-Client.zip without extracting it.
+2. Select Amber-and-Arcana-0.1.9-14-Client.zip without extracting it.
 3. Let CurseForge download the pinned mods. The small ZIP contains a download manifest, not the mod JARs.
 4. Keep the bundled override files when importing: they contain the pack settings and quests.
 5. Launch the new profile. Use a new world for this alpha.

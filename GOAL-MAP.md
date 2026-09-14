@@ -1,7 +1,7 @@
 # Amber & Arcana Goal Map
 
 Updated: 2026-09-14
-Baseline: 0.1.9-13 / Minecraft 1.20.1 / Forge 47.4.10
+Baseline: 0.1.9-14 / Minecraft 1.20.1 / Forge 47.4.10
 
 Status: `[done]`, `[active]`, `[next]`, `[later]`, `[blocked]`.
 
@@ -11,7 +11,7 @@ Ship a stable, reproducible client/server modpack where a fresh CurseForge clien
 
 ## G1 — Reproducible baseline `[active]`
 
-Goal: prove that the repository can reproduce the exact 0.1.9-13 packages.
+Goal: prove that the repository can reproduce the exact 0.1.9-14 packages.
 
 - `[done]` Keep matching client and server sources in one repository.
 - `[done]` Preserve release ZIPs and SHA-256 checksums.
@@ -52,7 +52,7 @@ Acceptance gate: no unresolved tag entries, no invalid recipe cascade, `/reload`
 
 ## G4 — Content cleanup and world safety `[next]`
 
-Goal: make the 0.1.9-13 removals explicit and safe to deploy.
+Goal: make the 0.1.9-14 removals explicit and safe to deploy.
 
 - `[done]` Remove Ad Astra from client and server.
 - `[done]` Remove The Aether from client and server.

@@ -2,7 +2,7 @@
 
 ## Active release
 
-`0.1.9-13` is the active diagnostic release. It narrows recipe-viewer variables by removing JEI and Polymorph, installs client-only REI, and removes three requested content/ambient mods.
+`0.1.9-14` is the active diagnostic release. It layers a targeted recipe/tag compatibility data pack over the 0.1.9-13 REI and content-cleanup baseline.
 
 ## Active work queue
 
@@ -23,3 +23,4 @@
 - `0.1.9-11`: Every Compat removal and recipe cleanup.
 - `0.1.9-12`: Create Engineering quest expansion.
 - `0.1.9-13`: REI migration and requested content removals.
+- `0.1.9-14`: 36 invalid recipe overrides and four tag repairs, pending a fresh runtime retest.

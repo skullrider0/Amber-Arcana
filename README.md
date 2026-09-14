@@ -6,7 +6,7 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching CurseForge clien
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-13 |
+| Pack | 0.1.9-14 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -14,7 +14,7 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching CurseForge clien
 | Server mod downloads | 257 |
 | Manual quests | 106 across 25 chapters |
 
-Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, removes Polymorph because it hard-depends on JEI, and removes Ad Astra, AmbientSounds, and The Aether. Existing quest IDs and earlier compatibility fixes are preserved. Just Dire Things and DecoCraft remain in the pack.
+Release 0.1.9-14 adds matching client/server data overrides for 36 invalid recipes and repairs four broken tag files identified in a fresh 0.1.9-13 Crafty run. It preserves the earlier REI migration, requested content removals, quest IDs, Just Dire Things, and DecoCraft.
 
 ## Repository layout
 
@@ -36,11 +36,11 @@ Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, re
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-13-Client.zip` into CurseForge. Allocate about 10 GB RAM and use Java 17.
+Import `dist/Amber-and-Arcana-0.1.9-14-Client.zip` into CurseForge. Allocate about 10 GB RAM and use Java 17.
 
 ### Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-13-Server.zip`. The included launcher downloads the declared server mods, removes known stale client-only/content jars, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-14-Server.zip`. The included launcher downloads the declared server mods, removes known stale client-only/content jars, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 

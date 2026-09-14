@@ -2,7 +2,7 @@
 
 ## Current baseline
 
-- Release: `0.1.9-13`
+- Release: `0.1.9-14`
 - Minecraft: 1.20.1
 - Forge: 47.4.10
 - Java: 17
@@ -10,10 +10,10 @@
 - Server mod downloads: 257
 - Manual quests: 106 across 25 chapters
 - Distribution files:
-  - `dist/Amber-and-Arcana-0.1.9-13-Client.zip`
-  - `dist/Amber-and-Arcana-0.1.9-13-Server.zip`
+  - `dist/Amber-and-Arcana-0.1.9-14-Client.zip`
+  - `dist/Amber-and-Arcana-0.1.9-14-Server.zip`
 
-The pack has already been ported. Release 0.1.9-13 replaces JEI with client-only Roughly Enough Items 12.1.785, removes Polymorph because it hard-depends on JEI, and removes Ad Astra, AmbientSounds, and The Aether. Just Dire Things and DecoCraft remain required.
+The pack has already been ported. Release 0.1.9-14 adds the targeted recipe/tag compatibility layer over the 0.1.9-13 REI and requested content-removal baseline. Just Dire Things and DecoCraft remain required.
 
 ## Priority order
 

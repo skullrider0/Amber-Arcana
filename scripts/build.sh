@@ -5,6 +5,8 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 dist_dir="$repo_dir/dist"
 
+"$repo_dir/scripts/generate-recipe-compat.sh"
+
 mkdir -p "$dist_dir"
 
 (

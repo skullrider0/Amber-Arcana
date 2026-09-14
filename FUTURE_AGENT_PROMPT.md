@@ -8,15 +8,15 @@ Continue development of **Amber & Arcana** in **skullrider0/Amber-Arcana**.
 
 Current repository baseline:
 
-- Release: **0.1.9-13**
+- Release: **0.1.9-14**
 - Minecraft: **1.20.1**
 - Forge: **47.4.10**
 - Java: **17**
 - Client manifest entries: **278**
 - Server mod downloads: **257**
 - Manual quests: **106 across 25 chapters**
-- Client artifact: `dist/Amber-and-Arcana-0.1.9-13-Client.zip`
-- Crafty artifact: `dist/Amber-and-Arcana-0.1.9-13-Server.zip`
+- Client artifact: `dist/Amber-and-Arcana-0.1.9-14-Client.zip`
+- Crafty artifact: `dist/Amber-and-Arcana-0.1.9-14-Server.zip`
 
 Read `README.md`, `CURRENT_STATE.md`, `PROJECT_STATE.md`, `GOAL-MAP.md`, `GOALS.md`, `WORK-ONBOARDING.md`, `AUTOMATION_RULES.md`, `WORKLOAD.md`, and `CHECKLIST.md` before editing. Inspect the current main branch, recent commits, open issues, releases, and test evidence. Do not assume unchecked work is complete.
 
@@ -24,6 +24,7 @@ Hard requirements:
 
 - Preserve **Just Dire Things** and **DecoCraft**.
 - Keep the established 0.1.9-13 migration: client-only **REI 12.1.785** replaces JEI; **Polymorph** is removed because it hard-depends on JEI; **Ad Astra**, **AmbientSounds**, and **The Aether** are removed.
+- Preserve the 0.1.9-14 compatibility layer unless runtime evidence proves an individual override should be repaired or removed.
 - Do not silently reintroduce removed mods or delete dependencies without proving whether they are still used.
 - Diagnose persistent recipe/item-tag errors by comparing client and server mod IDs, versions, sides, configs, KubeJS data, datapacks, tags, recipes, and load/network behavior.
 - Investigate the red-X/incompatible-server indicator as a symptom without assuming it is the root cause.

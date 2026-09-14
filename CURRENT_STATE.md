@@ -2,7 +2,7 @@
 
 ## Source of truth
 
-- Release: Amber & Arcana 0.1.9-13
+- Release: Amber & Arcana 0.1.9-14
 - Minecraft: 1.20.1
 - Forge: 47.4.10
 - Runtime: Java 17
@@ -10,6 +10,8 @@
 
 ## Completed in this release
 
+- Matching client/server overrides disable 36 recipe resources that Forge 47.4.10 rejected before registration.
+- Reborn Storage item-tier parents, I Wanna Skate block tags, and the Just Dire Things paradox deny list are repaired.
 - REI 12.1.785 is the client-only recipe viewer.
 - JEI and server-side recipe viewers are absent.
 - Polymorph is absent because the selected build hard-requires JEI.
@@ -22,6 +24,7 @@
 
 ## Static validation result
 
+- All 80 compatibility JSON files parse successfully and client/server data is identical.
 - No duplicate CurseForge project IDs.
 - No declared required dependency is missing from the client manifest.
 - Client ZIP and server ZIP are readable.
@@ -30,10 +33,10 @@
 ## Not yet proven at runtime
 
 - Clean CurseForge import and Minecraft launch.
-- Clean Crafty import and full Forge startup.
+- Clean 0.1.9-14 Crafty import and full Forge startup.
 - In-game connection without the red-X compatibility indicator.
-- Recipe/tag reload behavior after the 0.1.9-13 changes.
+- Recipe/tag reload behavior after the 0.1.9-14 changes.
 - REI display and representative crafting recipes.
 - Existing-world safety after content removals.
 
-The next evidence needed is a paired client/server log from the same clean test session.
+The next evidence needed is a fresh 0.1.9-14 Crafty log, followed by a paired client log from the same connection session.

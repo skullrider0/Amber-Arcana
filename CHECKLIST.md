@@ -16,11 +16,14 @@
 - [x] Add validation/build scripts and checksums.
 - [x] Preserve the existing quest IDs and compatibility fixes.
 - [x] Add workload guide and future-agent prompt.
+- [x] Reproduce the remaining errors on a fresh 0.1.9-13 Crafty server.
+- [x] Identify all 36 rejected recipe IDs and four broken tag files.
+- [x] Add identical 0.1.9-14 client/server compatibility data.
 
 ## Static verification
 
-- [ ] Run `bash scripts/validate.sh` against the latest main branch.
-- [ ] Run `bash scripts/build.sh` in a clean checkout and compare generated checksums.
+- [x] Run `bash scripts/validate.sh` against the 0.1.9-14 source.
+- [x] Run `bash scripts/build.sh` and generate new checksums.
 - [ ] Confirm every manifest project/file ID resolves.
 - [ ] Confirm every declared server download resolves.
 - [ ] Confirm no removed project IDs or mod IDs remain.
@@ -29,15 +32,15 @@
 ## Recipe/tag investigation
 
 - [ ] Import the client ZIP into a fresh CurseForge profile.
-- [ ] Import the server ZIP into a fresh Crafty 4 server.
+- [x] Import the 0.1.9-13 server ZIP into a fresh Crafty 4 server.
 - [ ] Capture client and server logs from the same attempt.
 - [ ] Compare JAR names, mod IDs, versions, sides, and dependencies.
 - [ ] Compare `config/`, `defaultconfigs/`, KubeJS, datapacks, recipes, and tags.
-- [ ] Locate the first relevant recipe/tag error before cascading errors.
+- [x] Locate and enumerate the remaining recipe/tag errors after Every Compat removal.
 - [ ] Identify the actual source of the red-X/incompatible-server status.
 - [ ] Test datapack reload.
 - [ ] Test representative previously broken recipes through REI and crafting.
-- [ ] Record findings under `docs/`.
+- [x] Record findings under `docs/`.
 
 ## Runtime quality gates
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.9-14 — 2026-09-14
+
+- Added identical client/server KubeJS data overrides for 36 recipes that Forge
+  rejected in a fresh 0.1.9-13 Crafty startup.
+- Repaired Reborn Storage's invalid item-tier parent tags without changing its
+  valid fluid tiers.
+- Corrected I Wanna Skate's stale vanilla stair/slab tag references.
+- Removed only the nonexistent Just Dire Things `paradox_machine` entry while
+  preserving the rest of its paradox deny list.
+- Preserved all requested content mods, including Just Dire Things and
+  DecoCraft.
+- Extended static validation to enforce compatibility-data parity and JSON
+  validity.
+
 ## 0.1.9-13 — 2026-09-14
 
 ### Changed

@@ -13,7 +13,7 @@ Updated: 2026-09-14
 
 ## Completed
 
-- `[x]` Create matching Amber & Arcana 0.1.9-13 client and Crafty server packages.
+- `[x]` Create matching Amber & Arcana 0.1.9-14 client and Crafty server packages.
 - `[x]` Replace JEI with client-only REI 12.1.785.
 - `[x]` Remove Polymorph because it hard-requires JEI.
 - `[x]` Remove Ad Astra, AmbientSounds, and The Aether as requested.
@@ -21,10 +21,12 @@ Updated: 2026-09-14
 - `[x]` Preserve Just Dire Things, DecoCraft, Moonlight/Selene, and earlier confirmed fixes.
 - `[x]` Add static validation, reproducible build scripts, checksums, and GitHub Actions.
 - `[x]` Add repository state, automation, contribution, onboarding, and goal documents.
+- `[x]` Reproduce and classify the remaining 0.1.9-13 recipe/tag failures.
+- `[x]` Build matching 0.1.9-14 compatibility overrides for all confirmed failures.
 
 ## Active
 
-- `[~]` Reproduce the recipe and item-tag errors on a fresh 0.1.9-13 Crafty server.
+- `[~]` Retest recipe and item-tag loading on a fresh 0.1.9-14 Crafty server.
 - `[~]` Identify why the multiplayer list shows a red X/incompatible version while joining still works.
 - `[~]` Compare loaded client/server mod versions, network channels, registries, configs, and tags from the same session.
 - `[~]` Reproduce or clear the login packet failure: `unable to fit 2202990 into 3`.

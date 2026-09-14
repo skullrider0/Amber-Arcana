@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-13",
+  "pack_version": "0.1.9-14",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 278,
@@ -24,6 +24,13 @@
     "just_dire_things_forge": "1.1.7 / CurseForge 1533501:8733229",
     "decocraft": "3.0.4 / CurseForge 79616:7092533",
     "client_and_server": true
+  },
+  "recipe_tag_compat_0_1_9_14": {
+    "source_log": "fresh 0.1.9-13 Crafty startup on Java 17 / Forge 47.4.10",
+    "disabled_invalid_recipe_ids": 36,
+    "repaired_tag_files": 4,
+    "client_server_data_identical": true,
+    "required_mods_preserved": ["Just Dire Things", "DecoCraft"]
   },
   "quest_finish_r3": {
     "chapter": "Welcome to Amber & Arcana / getting_started",

@@ -1,0 +1,17 @@
+{
+  "replace": true,
+  "values": [
+    "#minecraft:wooden_stairs",
+    "#minecraft:wooden_slabs",
+    "#minecraft:planks",
+    "#minecraft:stone_bricks",
+    "#minecraft:stairs",
+    "#minecraft:slabs",
+    "#minecraft:ice",
+    "minecraft:stone",
+    "minecraft:blackstone",
+    "minecraft:blackstone_slab",
+    "minecraft:blackstone_stairs",
+    "minecraft:calcite"
+  ]
+}

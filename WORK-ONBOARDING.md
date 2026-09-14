@@ -6,7 +6,7 @@ Use this file as the entry point for every future Amber & Arcana work session.
 
 - Repository: `skullrider0/Amber-Arcana`
 - Pack: Amber & Arcana
-- Active baseline: 0.1.9-13
+- Active baseline: 0.1.9-14
 - Minecraft: 1.20.1
 - Forge: 47.4.10
 - Java: 17

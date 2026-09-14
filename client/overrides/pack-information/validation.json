@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-13",
+  "pack_version": "0.1.9-14",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -66,5 +66,12 @@
     "ambient_sounds": true,
     "the_aether": true,
     "quest_references_replaced": true
+  },
+  "recipe_tag_compat_0_1_9_14": {
+    "disabled_recipe_ids": 36,
+    "repaired_tag_files": 4,
+    "every_compat_errors_remaining": 0,
+    "client_server_data_identical": true,
+    "runtime_retest_required": true
   }
 }

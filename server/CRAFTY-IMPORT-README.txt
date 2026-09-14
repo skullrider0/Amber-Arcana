@@ -1,6 +1,6 @@
-AMBER & ARCANA 0.1.9-13 — REI + CONTENT CLEANUP
+AMBER & ARCANA 0.1.9-14 — REI + CONTENT CLEANUP
 
-0.1.9-13 RECIPE VIEWER AND CONTENT CHANGE
+0.1.9-14 RECIPE VIEWER AND CONTENT CHANGE
 JEI and Polymorph were removed from the server. REI 12.1.785 is installed by the matching client manifest only. Ad Astra and The Aether were removed from both sides; AmbientSounds was removed from the client. The launcher now removes stale JEI, Polymorph, REI, Ad Astra, Aether, and AmbientSounds jars before checking the dedicated-server set.
 
 0.1.9-12 QUEST UPDATE
@@ -43,7 +43,7 @@ The launcher downloads the exact CurseForge files pinned by the original pack, v
 
 CRAFTY EXECUTION COMMAND
 Crafty may initially show its normal 4096 MB import default. That is safe for the tiny bootstrap only.
-Amber & Arcana 0.1.9-13 explicitly launches the real Forge child with -Xms4096M -Xmx10240M, so the modded server is not limited to Crafty's 4 GB import default.
+Amber & Arcana 0.1.9-14 explicitly launches the real Forge child with -Xms4096M -Xmx10240M, so the modded server is not limited to Crafty's 4 GB import default.
 If you enter a manual command, this is still fine:
 java -Xms4G -Xmx10G -jar AmberArcana-Crafty-Launcher.jar nogui
 
