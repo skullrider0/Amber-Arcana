@@ -40,6 +40,11 @@ jobs:
       - name: Validate sources and release archives
         run: bash scripts/validate.sh
 
+      - name: Validate quest items and random reward tables
+        run: |
+          python3 -m pip install -r scripts/requirements-quests.txt
+          python3 scripts/validate-quests.py
+
       - name: Publish rebuilt distributions to main
         shell: bash
         run: |

@@ -1,0 +1,39 @@
+{
+  "id": "6AA0060000000003",
+  "title": "Create workshop supplies",
+  "icon": "create:andesite_alloy",
+  "loot_size": 1,
+  "use_title": true,
+  "rewards": [
+    {
+      "type": "item",
+      "item": "create:andesite_alloy",
+      "count": 8,
+      "weight": 35
+    },
+    {
+      "type": "item",
+      "item": "create:shaft",
+      "count": 8,
+      "weight": 25
+    },
+    {
+      "type": "item",
+      "item": "create:cogwheel",
+      "count": 8,
+      "weight": 20
+    },
+    {
+      "type": "item",
+      "item": "create:andesite_casing",
+      "count": 4,
+      "weight": 15
+    },
+    {
+      "type": "item",
+      "item": "create:large_cogwheel",
+      "count": 4,
+      "weight": 5
+    }
+  ]
+}

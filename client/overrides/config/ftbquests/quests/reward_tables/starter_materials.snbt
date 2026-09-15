@@ -1,0 +1,39 @@
+{
+  "id": "6AA0060000000002",
+  "title": "Starter workshop materials",
+  "icon": "minecraft:iron_ingot",
+  "loot_size": 1,
+  "use_title": true,
+  "rewards": [
+    {
+      "type": "item",
+      "item": "minecraft:iron_ingot",
+      "count": 8,
+      "weight": 35
+    },
+    {
+      "type": "item",
+      "item": "minecraft:copper_ingot",
+      "count": 12,
+      "weight": 30
+    },
+    {
+      "type": "item",
+      "item": "minecraft:coal",
+      "count": 12,
+      "weight": 20
+    },
+    {
+      "type": "item",
+      "item": "minecraft:redstone",
+      "count": 8,
+      "weight": 10
+    },
+    {
+      "type": "item",
+      "item": "minecraft:gold_ingot",
+      "count": 4,
+      "weight": 5
+    }
+  ]
+}
