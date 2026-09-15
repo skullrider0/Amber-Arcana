@@ -51,13 +51,17 @@ jobs:
       - name: Apply 0.1.9-23 live FTB Quests sync
         run: python3 scripts/hotfix-quest-sync-0.1.9-23.py
 
-      - name: Normalize 0.1.9-23 validation version
+      - name: Assemble 0.1.9-24 quest hotfix
+        shell: bash
+        run: cat scripts/quest24-parts/*.part > scripts/hotfix-quest-requirements-0.1.9-24.py
+
+      - name: Apply 0.1.9-24 completed quest progression
+        run: python3 scripts/hotfix-quest-requirements-0.1.9-24.py
+
+      - name: Normalize 0.1.9-24 validation version
         shell: bash
         run: |
-          sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-23/g' scripts/validate.sh
-          # The hotfix's Python triple-quoted shell snippet strips the quote escapes
-          # around $item. The hotfix already validates exact item syntax, so keep
-          # the archive validator as a simple item-id presence check.
+          sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-24/g' scripts/validate.sh
           sed -i 's/rg -F "item: "$item""/rg -F "$item"/' scripts/validate.sh
 
       - name: Build client and server distributions

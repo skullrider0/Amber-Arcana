@@ -1,0 +1,120 @@
+        [("minecraft:emerald_block", 4, "Grand-opening reserve")],
+    ],
+    "firearms": [
+        [("minecraft:iron_ingot", 16, "Gunsmithing metal")],
+        [("minecraft:gunpowder", 16, "Ammunition ingredients")],
+        [("minecraft:obsidian", 16, "Cannon test-site reinforcement")],
+    ],
+    "food_factory": [
+        [("minecraft:wheat", 32, "Seasonal staple crop")],
+        [("minecraft:milk_bucket", 2, "Cheese production input")],
+        [("minecraft:sugar", 16, "Drink production input")],
+        [("minecraft:cooked_beef", 8, "Prepared feast")],
+        [("minecraft:bread", 32, "Pantry reserve")],
+    ],
+    "getting_started": [
+        [("minecraft:crafting_table", 1, "Crafting Table"), ("minecraft:white_bed", 1, "Bed")],
+        [("minecraft:map", 1, "Claim-planning map")],
+        [("sophisticatedbackpacks:backpack", 1, "Sophisticated Backpack")],
+    ],
+    "irons_spells": [
+        [("irons_spellbooks:iron_spell_book", 1, "Iron Spell Book")],
+        [("irons_spellbooks:inscription_table", 1, "Inscription Table")],
+        [("minecraft:amethyst_shard", 16, "Cross-mod spell materials")],
+    ],
+    "mekanism": [
+        [("mekanism:metallurgic_infuser", 1, "Metallurgic Infuser"), ("mekanism:enrichment_chamber", 1, "Enrichment Chamber")],
+        [("mekanism:purification_chamber", 1, "Advanced ore-processing machine")],
+        [("mekanism:ultimate_energy_cube", 1, "High-capacity energy buffer")],
+        [("mekanism:mekasuit_helmet", 1, "MekaSuit Helmet")],
+    ],
+    "powah": [
+        [("powah:thermo_generator_starter", 1, "Starter Thermo Generator")],
+        [("powah:energizing_orb", 1, "Energizing Orb")],
+        [("powah:energy_cell_basic", 1, "Basic Energy Cell")],
+    ],
+    "refined_storage": [
+        [("refinedstorage:controller", 1, "RS Controller"), ("refinedstorage:grid", 1, "RS Grid"), ("refinedstorage:disk_drive", 1, "Disk Drive")],
+        [("refinedstorage:importer", 1, "Importer"), ("refinedstorage:exporter", 1, "Exporter")],
+        [("refinedstorage:crafting_grid", 1, "Crafting Grid")],
+    ],
+    "ritual_magic": [
+        [("minecraft:book", 1, "Ritual reference book")],
+        [("botania:mana_pool", 1, "Mana Pool")],
+        [("bloodmagic:altar", 1, "Blood Altar")],
+        [("minecraft:cauldron", 1, "Witch workshop cauldron")],
+        [("minecraft:golden_apple", 1, "Faction progression supplies")],
+    ],
+    "settlement": [
+        [("minecraft:oak_planks", 64, "Settlement building stock")],
+        [("minecraft:map", 1, "Settlement claim map")],
+        [("minecraft:crafting_table", 4, "Builder work supplies")],
+        [("minecraft:chest", 8, "Warehouse and delivery buffers")],
+        [("minecraft:bread", 32, "Colony food supply")],
+    ],
+    "tinkers": [
+        [("tconstruct:crafting_station", 1, "Tinkers Crafting Station")],
+        [("tconstruct:seared_melter", 1, "Seared Melter")],
+        [("tconstruct:tinkers_anvil", 1, "Tinkers Anvil")],
+    ],
+}
+
+TECH = {"ae2", "create_workshops", "ender_io", "firearms", "mekanism", "powah", "refined_storage", "tinkers"}
+MAGIC = {"ars_nouveau", "irons_spells", "ritual_magic"}
+EXPLORE = {"alex_caves", "alex_utilities", "alex_wildlife", "aquarium", "buddycards", "dimensions", "dinosaur_laboratory"}
+
+
+def hexid(seed: str) -> str:
+    return hashlib.sha256(seed.encode()).hexdigest()[:16].upper()
+
+
+def find_balanced(text: str, start: int, opench: str, closech: str) -> int:
+    depth = 0
+    in_string = False
+    escaped = False
+    for i in range(start, len(text)):
+        c = text[i]
+        if in_string:
+            if escaped:
+                escaped = False
+            elif c == "\\":
+                escaped = True
+            elif c == '"':
+                in_string = False
+        else:
+            if c == '"':
+                in_string = True
+            elif c == opench:
+                depth += 1
+            elif c == closech:
+                depth -= 1
+                if depth == 0:
+                    return i
+    raise RuntimeError("Unbalanced SNBT structure")
+
+
+def quest_positions(text: str) -> list[tuple[int, int]]:
+    qidx = text.find("\n\tquests:")
+    if qidx < 0:
+        raise RuntimeError("Chapter has no quests array")
+    arr = text.find("[", qidx)
+    arr_end = find_balanced(text, arr, "[", "]")
+    positions: list[tuple[int, int]] = []
+    i = arr + 1
+    depth = 0
+    in_string = False
+    escaped = False
+    start = None
+    while i < arr_end:
+        c = text[i]
+        if in_string:
+            if escaped:
+                escaped = False
+            elif c == "\\":
+                escaped = True
+            elif c == '"':
+                in_string = False
+        else:
+            if c == '"':
+                in_string = True
+            elif c == "{":

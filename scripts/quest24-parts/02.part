@@ -1,0 +1,120 @@
+                if depth == 0:
+                    start = i
+                depth += 1
+            elif c == "}":
+                depth -= 1
+                if depth == 0 and start is not None:
+                    positions.append((start, i + 1))
+                    start = None
+        i += 1
+    return positions
+
+
+def quest_title(q: str) -> str:
+    m = re.search(r'\n\t\t\ttitle:\s*"((?:\\.|[^"\\])*)"', q)
+    return m.group(1) if m else "Quest milestone"
+
+
+def replace_tasks(q: str, chapter: str, index: int, reqs: list[tuple[str, int, str]]) -> str:
+    m = re.search(r"\n\t\t\ttasks:\s*\[", q)
+    if not m:
+        raise RuntimeError(f"Missing tasks array in {chapter} quest {index}")
+    start = q.find("[", m.start())
+    end = find_balanced(q, start, "[", "]")
+    old = q[start:end + 1]
+    check = re.search(r'id:\s*"([0-9A-F]{16})"(?:(?!\n\s*\}).)*?type:\s*"checkmark"', old, re.S)
+    check_id = check.group(1) if check else hexid(f"{chapter}:{index}:manual")
+    title = quest_title(q)
+    blocks: list[str] = []
+    for req_index, (item, count, label) in enumerate(reqs, 1):
+        task_id = hexid(f"{chapter}:{index}:requirement:{req_index}:{item}")
+        lines = [
+            "\t\t\t\t{",
+            f'\t\t\t\t\tid: "{task_id}"',
+            f'\t\t\t\t\titem: {{ count: 1, id: "{item}" }}',
+        ]
+        if count != 1:
+            lines.append(f"\t\t\t\t\tcount: {count}L")
+        lines.extend([
+            "\t\t\t\t\tconsume_items: false",
+            f'\t\t\t\t\ttitle: "Obtain: {label}"',
+            '\t\t\t\t\ttype: "item"',
+            "\t\t\t\t}",
+        ])
+        blocks.append("\n".join(lines))
+    blocks.append("\n".join([
+        "\t\t\t\t{",
+        f'\t\t\t\t\tid: "{check_id}"',
+        f'\t\t\t\t\ttitle: "Completed milestone: {title}"',
+        '\t\t\t\t\ttype: "checkmark"',
+        "\t\t\t\t}",
+    ]))
+    new = "[\n" + "\n".join(blocks) + "\n\t\t\t]"
+    return q[:start] + new + q[end + 1:]
+
+
+def add_icon(q: str, item: str) -> str:
+    if re.search(r"\n\t\t\ticon:", q):
+        return q
+    pos = q.find("\n\t\t\tid:")
+    if pos < 0:
+        raise RuntimeError("Quest has no id field")
+    return q[:pos] + f'\n\t\t\ticon: "{item}"' + q[pos:]
+
+
+def add_subtitle(q: str, reqs: list[tuple[str, int, str]]) -> str:
+    if re.search(r"\n\t\t\tsubtitle:", q):
+        return q
+    labels = " + ".join(label for _, _, label in reqs)
+    subtitle = f"Requires {labels}; then confirm the milestone."
+    if len(subtitle) > 140:
+        subtitle = "Obtain the listed requirement item(s), then confirm the milestone."
+    pos = q.find("\n\t\t\ttitle:")
+    if pos < 0:
+        raise RuntimeError("Quest has no title field")
+    return q[:pos] + f'\n\t\t\tsubtitle: "{subtitle}"' + q[pos:]
+
+
+def reward_for(chapter: str, index: int, total: int) -> tuple[str, int, int]:
+    if index == total:
+        return "minecraft:diamond", (1 if total <= 3 else 2), 250 + 50 * (index - 1)
+    if chapter in TECH:
+        cycle = [("minecraft:redstone", 8), ("minecraft:quartz", 8), ("minecraft:gold_ingot", 4)]
+    elif chapter in MAGIC:
+        cycle = [("minecraft:lapis_lazuli", 8), ("minecraft:amethyst_shard", 8), ("minecraft:glowstone_dust", 8)]
+    elif chapter in EXPLORE:
+        cycle = [("minecraft:golden_carrot", 4), ("minecraft:emerald", 4), ("minecraft:ender_pearl", 2)]
+    else:
+        cycle = [("minecraft:iron_ingot", 4), ("minecraft:lantern", 4), ("minecraft:emerald", 4)]
+    item, count = cycle[(index - 1) % len(cycle)]
+    return item, count, 100 + 50 * (index - 1)
+
+
+def add_rewards(q: str, chapter: str, index: int, total: int) -> str:
+    if re.search(r"\n\t\t\trewards:\s*\[", q):
+        return q
+    item, count, xp = reward_for(chapter, index, total)
+    reward_item = hexid(f"{chapter}:{index}:reward:item")
+    reward_xp = hexid(f"{chapter}:{index}:reward:xp")
+    block = (
+        "\n\t\t\trewards: [\n"
+        "\t\t\t\t{\n"
+        f"\t\t\t\t\tcount: {count}\n"
+        f'\t\t\t\t\tid: "{reward_item}"\n'
+        f'\t\t\t\t\titem: "{item}"\n'
+        '\t\t\t\t\ttype: "item"\n'
+        "\t\t\t\t}\n"
+        "\t\t\t\t{\n"
+        f'\t\t\t\t\tid: "{reward_xp}"\n'
+        '\t\t\t\t\ttype: "xp"\n'
+        f"\t\t\t\t\txp: {xp}\n"
+        "\t\t\t\t}\n"
+        "\t\t\t]"
+    )
+    pos = q.find("\n\t\t\ttasks:")
+    if pos < 0:
+        raise RuntimeError("Quest has no tasks field")
+    return q[:pos] + block + q[pos:]
+
+
+def revise_manual_description(q: str) -> str:

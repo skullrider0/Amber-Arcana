@@ -1,0 +1,120 @@
+            "quests_with_item_requirements": 106,
+            "quests_with_manual_confirmation": 106,
+            "quests_with_rewards": 106,
+            "chapter_icons_completed": 25,
+            "cross_chapter_progression_gates": True,
+            "twilight_forest_stale_quest_replaced": True,
+            "replacement": "Nether expedition",
+            "client_server_quest_files_identical": True,
+        }
+    update_json(SUMMARY, summary_mut)
+
+    def validation_mut(d):
+        d["pack_version"] = VERSION
+        d["chapters"] = 25
+        d["manual_quests"] = 106
+        d["quest_completion_0_1_9_24"] = {
+            "quests_checked": 106,
+            "item_requirements_present": 106,
+            "manual_confirmation_tasks_present": 106,
+            "reward_sets_present": 106,
+            "subtitles_present": 106,
+            "stale_twilight_references": 0,
+            "client_server_quest_files_identical": True,
+        }
+    update_json(VALIDATION, validation_mut)
+
+    readme = ROOT / "README.md"
+    text = readme.read_text().replace("0.1.9-23", VERSION)
+    text = re.sub(
+        r"## Quest runtime status — 2026-09-15.*?(?=\n## Validate and rebuild)",
+        '''## Quest runtime status — 2026-09-15\n\nRelease 0.1.9-24 finishes the full 25-chapter / 106-quest progression pass. Every quest now has at least one automatically detected item requirement, a named manual completion check for build/behavior objectives, a subtitle, an icon, and a reward. Requirements do not consume the player's items.\n\nAll progression branches unlock after `Tools for the journey`. `The Mechanical City` additionally requires the Create Engineering and Settlement finales. The Endgame chapter requires the Create Engineering, Mekanism, Ritual Magic, Settlement, and Dinosaur Laboratory finales.\n\nThe stale Twilight Forest objective is removed because Twilight Forest is no longer in the pack; that quest ID is preserved and repurposed as a Nether expedition so existing dependency links remain stable.\n''',
+        text,
+        flags=re.S,
+    )
+    readme.write_text(text)
+
+    changelog = ROOT / "CHANGELOG.md"
+    text = changelog.read_text()
+    heading = "## 0.1.9-24 — Complete quest requirements and rewards"
+    if heading not in text:
+        block = '''# Changelog\n\n## 0.1.9-24 — Complete quest requirements and rewards\n\n- Finish the full 25-chapter / 106-quest pass.\n- Give every quest at least one non-consuming item requirement plus a named manual confirmation task.\n- Add rewards, subtitles, and quest/chapter icons across the unfinished chapters while preserving all existing quest IDs and dependency chains.\n- Gate normal progression branches behind `Tools for the journey`; gate Create City behind the Create Engineering and Settlement finales.\n- Gate Endgame behind the Create Engineering, Mekanism, Ritual Magic, Settlement, and Dinosaur Laboratory finales.\n- Replace the impossible Twilight Forest quest with a Nether expedition while preserving its quest ID.\n- Preserve the client-safe More Hitboxes 1.9.2.1 patch and the 0.1.9-23 live quest save synchronization.\n\n'''
+        text = block + text.removeprefix("# Changelog\n\n")
+    changelog.write_text(text)
+
+    validate = ROOT / "scripts/validate.sh"
+    text = re.sub(r"0\.1\.9-\d+", VERSION, validate.read_text())
+    marker = "# 0.1.9-24 completed quest progression checks"
+    if marker not in text:
+        anchor = 'client_compat="$repo_dir/client/overrides/kubejs/data"'
+        checks = f'''\n{marker}\npython3 "$repo_dir/scripts/hotfix-quest-requirements-0.1.9-24.py" --check-only\njq -e '.quest_completion_0_1_9_24.quests_checked == 106 and .quest_completion_0_1_9_24.item_requirements_present == 106' "$validation" >/dev/null\n'''
+        text = text.replace(anchor, checks + "\n" + anchor)
+    validate.write_text(text)
+
+
+def validate_completed_quests() -> None:
+    chapters = sorted((CLIENT_QUESTS / "chapters").glob("*.snbt"))
+    if len(chapters) != 25:
+        raise RuntimeError(f"Expected 25 chapters, found {len(chapters)}")
+    total = 0
+    all_ids: set[str] = set()
+    for path in chapters:
+        text = path.read_text()
+        qidx = text.find("\n\tquests:")
+        if "\n\ticon:" not in text[:qidx]:
+            raise RuntimeError(f"Chapter icon missing: {path.name}")
+        for start, end in quest_positions(text):
+            total += 1
+            q = text[start:end]
+            title = quest_title(q)
+            m = re.search(r"\n\t\t\ttasks:\s*\[", q)
+            if not m:
+                raise RuntimeError(f"Tasks missing: {path.name} / {title}")
+            a = q.find("[", m.start())
+            b = find_balanced(q, a, "[", "]")
+            tasks = q[a:b + 1]
+            if 'type: "item"' not in tasks:
+                raise RuntimeError(f"Item requirement missing: {path.name} / {title}")
+            if 'type: "checkmark"' not in tasks:
+                raise RuntimeError(f"Manual confirmation missing: {path.name} / {title}")
+            if "\n\t\t\trewards:" not in q:
+                raise RuntimeError(f"Rewards missing: {path.name} / {title}")
+            if "\n\t\t\tsubtitle:" not in q:
+                raise RuntimeError(f"Subtitle missing: {path.name} / {title}")
+            for quest_id in re.findall(r'\bid:\s*"([0-9A-F]{16})"', q):
+                if quest_id in all_ids:
+                    raise RuntimeError(f"Duplicate quest/task/reward id: {quest_id}")
+                all_ids.add(quest_id)
+    if total != 106:
+        raise RuntimeError(f"Expected 106 quests, found {total}")
+    all_text = "\n".join(p.read_text().lower() for p in chapters)
+    for stale in ("twilight forest", "twilightforest:", "the aether", "ad_astra:"):
+        if stale in all_text:
+            raise RuntimeError(f"Removed-content quest reference remains: {stale}")
+    server_chapters = sorted((SERVER_QUESTS / "chapters").glob("*.snbt"))
+    if len(server_chapters) != 25:
+        raise RuntimeError("Server quest chapter count differs")
+    for client in chapters:
+        server = SERVER_QUESTS / "chapters" / client.name
+        if not server.exists() or client.read_bytes() != server.read_bytes():
+            raise RuntimeError(f"Client/server quest mismatch: {client.name}")
+
+
+def main() -> None:
+    check_only = "--check-only" in sys.argv
+    if check_only:
+        validate_completed_quests()
+        print("Amber & Arcana 0.1.9-24 quest validation passed")
+        return
+
+    summary = json.loads(SUMMARY.read_text())
+    already_applied = bool(summary.get("quest_completion_0_1_9_24", {}).get("enabled"))
+    if not already_applied:
+        transform_chapters()
+    sync_server_tree()
+    update_metadata()
+    validate_completed_quests()
+    print("Applied Amber & Arcana 0.1.9-24 completed quest progression")
+
+
+if __name__ == "__main__":
