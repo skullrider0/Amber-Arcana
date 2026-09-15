@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -64,10 +64,80 @@ jobs:
           mkdir -p ../out
           find forge/build/libs -maxdepth 1 -type f -name '*.jar' \
             ! -name '*sources*' ! -name '*javadoc*' -print -exec cp {} ../out/ \;
-          test -n "$(find ../out -maxdepth 1 -type f -name '*.jar' -print -quit)"
+          test -f ../out/morehitboxes-forge-1.20.1-1.9.2.1.jar
           sha256sum ../out/*.jar | tee ../out/SHA256SUMS.txt
 
-      - name: Upload patched jar
+      - name: Pin Crafty to the patched MoreHitboxes jar
+        shell: bash
+        run: |
+          set -euo pipefail
+          JAR='out/morehitboxes-forge-1.20.1-1.9.2.1.jar'
+          SHA512="$(sha512sum "$JAR" | awk '{print $1}')"
+          python3 - "$SHA512" <<'PY'
+          from pathlib import Path
+          import sys
+
+          sha512 = sys.argv[1]
+          tsv = Path('server/_crafty/server-mods.tsv')
+          lines = tsv.read_text(encoding='utf-8').splitlines()
+          out = []
+          found = 0
+          for line in lines:
+              if not line or line.startswith('#'):
+                  out.append(line)
+                  continue
+              fields = line.split('\t')
+              if len(fields) == 5 and (fields[3] == 'more-hitboxes' or fields[1].startswith('morehitboxes-forge-1.20.1-')):
+                  out.append('\t'.join([
+                      '0',
+                      'morehitboxes-forge-1.20.1-1.9.2.1.jar',
+                      sha512,
+                      'more-hitboxes',
+                      'More Hitboxes (Amber performance beta)'
+                  ]))
+                  found += 1
+              else:
+                  out.append(line)
+          if found != 1:
+              raise SystemExit(f'Expected exactly one More Hitboxes row, found {found}')
+          tsv.write_text('\n'.join(out) + '\n', encoding='utf-8')
+
+          remove = Path('server/_crafty/remove-mods.txt')
+          old = 'morehitboxes-forge-1.20.1-1.9.2.jar'
+          text = remove.read_text(encoding='utf-8')
+          if old not in text.splitlines():
+              text = text.rstrip() + '\n\n# Replaced by Amber MoreHitboxes 1.9.2.1 performance beta.\n' + old + '\n'
+              remove.write_text(text, encoding='utf-8')
+          PY
+
+          grep -F $'0\tmorehitboxes-forge-1.20.1-1.9.2.1.jar\t' server/_crafty/server-mods.tsv
+          ! grep -Fq $'6942239\tmorehitboxes-forge-1.20.1-1.9.2.jar\t' server/_crafty/server-mods.tsv
+          grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' server/_crafty/remove-mods.txt
+
+      - name: Build Crafty beta overlay
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf crafty-overlay
+          mkdir -p crafty-overlay/_crafty crafty-overlay/mods
+          cp server/_crafty/server-mods.tsv crafty-overlay/_crafty/server-mods.tsv
+          cp server/_crafty/remove-mods.txt crafty-overlay/_crafty/remove-mods.txt
+          cp out/morehitboxes-forge-1.20.1-1.9.2.1.jar crafty-overlay/mods/
+          (cd crafty-overlay && zip -qr ../out/Amber-and-Arcana-MoreHitboxes-1.9.2.1-Crafty-Overlay.zip .)
+
+      - name: Commit Crafty pin back to experiment branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add server/_crafty/server-mods.tsv server/_crafty/remove-mods.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'Pin Crafty to MoreHitboxes 1.9.2.1 beta [skip ci]'
+            git push origin HEAD:experiment/morehitboxes-perf-v1
+          fi
+
+      - name: Upload patched jar and Crafty overlay
         uses: actions/upload-artifact@v4
         with:
           name: morehitboxes-1.9.2.1-amber-perf-v1
