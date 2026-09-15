@@ -25,6 +25,9 @@ jobs:
       - name: Apply 0.1.9-17 content cleanup
         run: python3 scripts/hotfix-content-cleanup-0.1.9-17.py
 
+      - name: Apply 0.1.9-18 JEI dependency compatibility fix
+        run: python3 scripts/hotfix-jei-required-minimum-0.1.9-18.py
+
       - name: Build client and server distributions
         run: bash scripts/build.sh
 
