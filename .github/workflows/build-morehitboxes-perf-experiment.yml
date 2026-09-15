@@ -56,7 +56,11 @@ jobs:
           set -euo pipefail
           cd upstream-morehitboxes
           chmod +x gradlew
-          ./gradlew :forge:build --no-daemon
+          ./gradlew :forge:build --no-daemon \
+            -PMODRINTH_TOKEN=ci-placeholder \
+            -PCURSEFORGE_TOKEN=ci-placeholder \
+            -Pcloudsmith_username=ci-placeholder \
+            -Pcloudsmith_token=ci-placeholder
           mkdir -p ../out
           find forge/build/libs -maxdepth 1 -type f -name '*.jar' \
             ! -name '*sources*' ! -name '*javadoc*' -print -exec cp {} ../out/ \;
