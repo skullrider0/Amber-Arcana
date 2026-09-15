@@ -7,7 +7,7 @@ import zipfile
 root = Path(__file__).resolve().parents[1]
 manifest = json.loads((root / "client/manifest.json").read_text())
 version = manifest["version"]
-expected = (238222, 4712868)
+expected = (238222, 6075247)
 files = manifest["files"]
 assert len({f["projectID"] for f in files}) == len(files), "Duplicate projects"
 assert [(f["projectID"], f["fileID"]) for f in files if f["projectID"] == 238222] == [expected], "Client JEI pin differs"
@@ -25,4 +25,4 @@ for side, prefix in [("Client", "client"), ("Server", "server")]:
             if p.is_file():
                 name = p.relative_to(source).as_posix()
                 assert archive.read(name) == p.read_bytes(), f"Stale archive file: {name}"
-print("Mekanism-compatible JEI pin, server viewer cleanup, archive CRCs, and source parity passed")
+print("JEI dependency-compatible client pin, server viewer cleanup, archive CRCs, and source parity passed")

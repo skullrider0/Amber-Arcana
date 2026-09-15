@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-17",
+  "pack_version": "0.1.9-18",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 277,
@@ -119,5 +119,12 @@
     "eternal_steak_removed_from_chest_loot": true,
     "eternal_steak_item_id": "artifacts:eternal_steak",
     "glitchy_mantle_action": "none; item is not present in this Minecraft 1.20.1 pack"
+  },
+  "jei_dependency_fix_0_1_9_18": {
+    "client": "JEI 15.20.0.106 / CurseForge file 6075247",
+    "server_jei_removed": true,
+    "reason": "Satisfy hard JEI minimums declared by Create, Sophisticated Core, ModernFix, Chipped, and Tinkers' Construct",
+    "strictest_minimum": "15.20.0.106",
+    "mekanism_machine_recipe_retest_required": true
   }
 }

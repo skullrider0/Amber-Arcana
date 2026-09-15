@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9-18 — JEI dependency compatibility
+
+- Raise client JEI from 15.2.0.27 to 15.20.0.106 (CurseForge 238222:6075247).
+- Fix Forge startup failures from Create, Sophisticated Core, ModernFix, Chipped, and Tinkers' Construct requiring newer JEI APIs.
+- Keep JEI client-only on the dedicated-server package.
+- Preserve the 0.1.9-17 Twilight Forest removal and Eternal Steak chest-loot filter.
+- Retest Mekanism machine recipe categories in-game after launch.
+
 ## 0.1.9-17 — Content cleanup
 
 - Remove The Twilight Forest (CurseForge 227639:5468648) from client and server packaging.

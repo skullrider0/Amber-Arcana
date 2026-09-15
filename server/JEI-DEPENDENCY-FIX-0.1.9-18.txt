@@ -1,0 +1,17 @@
+Amber & Arcana 0.1.9-18 — JEI dependency compatibility hotfix
+
+Client JEI: 15.20.0.106
+CurseForge: project 238222, file 6075247
+Jar: jei-1.20.1-forge-15.20.0.106.jar
+Dedicated server: JEI intentionally omitted.
+
+Why:
+- 15.2.0.27 is below hard minimums declared by several installed mods.
+- The strictest startup requirement observed is JEI 15.20.0.106 or newer.
+- This release pins exactly 15.20.0.106 instead of jumping to the later 15.57/15.59 line.
+
+Acceptance checks:
+1. Fresh CurseForge import launches past mod dependency validation.
+2. Join the matching 0.1.9-18 server.
+3. Verify Create/Tinkers/Chipped JEI pages open.
+4. Verify Mekanism Metallurgic Infuser, Crusher, Enrichment Chamber, and Energized Smelter categories still display.
