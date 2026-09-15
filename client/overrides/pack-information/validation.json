@@ -1,5 +1,5 @@
 {
-  "mod_files": 277,
+  "mod_files": 276,
   "shader_files": 1,
   "chapters": 25,
   "manual_quests": 106,
@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-16",
+  "pack_version": "0.1.9-17",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -89,5 +89,12 @@
     "server_jei_removed": true,
     "reason": "Mekanism 10.4.16 machine-category compatibility",
     "atomic_alloy_test": "Metallurgic Infuser category should be visible after fresh client import"
+  },
+  "content_cleanup_0_1_9_17": {
+    "twilight_forest_removed": true,
+    "twilight_forest_project_id": 227639,
+    "eternal_steak_chest_loot_blocked": true,
+    "lootjs_filter": "artifacts:eternal_steak",
+    "glitchy_mantle_present": false
   }
 }

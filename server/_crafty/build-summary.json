@@ -1,11 +1,11 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-16",
+  "pack_version": "0.1.9-17",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 278,
+  "manifest_entries": 277,
   "mod_metadata_entries": 277,
-  "server_mod_downloads": 257,
+  "server_mod_downloads": 256,
   "excluded_mod_jars": 19,
   "excluded_shader_entries": 1,
   "compatibility_fix": "More Hitboxes retained; Colorwheel excluded because it requires Oculus on dedicated server.",
@@ -110,5 +110,14 @@
     "polymorph_removed": true,
     "reason": "REI 12.1.785 aborts its default display plugin at a null armor repair ingredient; JEI provides native machine integrations.",
     "runtime_tested": false
+  },
+  "content_cleanup_0_1_9_17": {
+    "twilight_forest_removed": true,
+    "twilight_forest_project_id": 227639,
+    "twilight_forest_file_id": 5468648,
+    "existing_server_jar_cleanup": true,
+    "eternal_steak_removed_from_chest_loot": true,
+    "eternal_steak_item_id": "artifacts:eternal_steak",
+    "glitchy_mantle_action": "none; item is not present in this Minecraft 1.20.1 pack"
   }
 }

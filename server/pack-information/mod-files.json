@@ -4553,22 +4553,6 @@
     ]
   },
   {
-    "slug": "the-twilight-forest",
-    "name": "The Twilight Forest",
-    "projectID": 227639,
-    "fileID": 5468648,
-    "filename": "twilightforest-1.20.1-4.3.2508-universal.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest/files/5468648",
-    "sha512": "340b42ca27cac8c011a97eff5999b675e5f7e13f9d5b035ca94767ce3868d2168dd3ad81448a2d5e7bdf06cf08ed6b4bcf90edf8df68e452d222448868aa6a7c",
-    "mods": [
-      {
-        "id": "twilightforest",
-        "version": "4.3.2508"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
     "slug": "tinkers-construct",
     "name": "Tinkers' Construct",
     "projectID": 74072,

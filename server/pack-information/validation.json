@@ -1,5 +1,5 @@
 {
-  "mod_files": 277,
+  "mod_files": 275,
   "shader_files": 1,
   "chapters": 25,
   "manual_quests": 106,
@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-16",
+  "pack_version": "0.1.9-17",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -87,5 +87,12 @@
     "server_jei_removed": true,
     "reason": "Mekanism 10.4.16 machine-category compatibility",
     "atomic_alloy_test": "Metallurgic Infuser category should be visible after fresh client import"
+  },
+  "content_cleanup_0_1_9_17": {
+    "twilight_forest_removed": true,
+    "twilight_forest_project_id": 227639,
+    "eternal_steak_chest_loot_blocked": true,
+    "lootjs_filter": "artifacts:eternal_steak",
+    "glitchy_mantle_present": false
   }
 }

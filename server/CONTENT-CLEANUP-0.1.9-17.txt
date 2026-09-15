@@ -1,0 +1,13 @@
+Amber & Arcana 0.1.9-17 — content cleanup
+
+Removed mod:
+- The Twilight Forest (project 227639, file 5468648)
+- Existing Crafty installs remove stale twilightforest-1.20.1-4.3.2508-universal.jar automatically on next bootstrap.
+
+Loot adjustment:
+- artifacts:eternal_steak is filtered from CHEST loot through LootJS.
+- Artifacts itself remains installed.
+- This does not intentionally remove Eternal Steak from non-chest sources.
+
+Glitchy Mantle:
+- No action. The pack uses Relics 1.20.1 and does not contain Glitchy Mantle, which belongs to the later Relics 1.21.1 line.

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9-17 — Content cleanup
+
+- Remove The Twilight Forest (CurseForge 227639:5468648) from client and server packaging.
+- Add `twilightforest-1.20.1-4.3.2508-universal.jar` to Crafty stale-mod cleanup for existing server installs.
+- Block `artifacts:eternal_steak` from CHEST loot only using the pack's existing LootJS integration.
+- Leave Artifacts installed and leave non-chest Eternal Steak acquisition untouched.
+- No Glitchy Mantle removal was necessary; that relic is not present in this Forge 1.20.1 pack.
+- Preserve the Mekanism-compatible JEI 15.2.0.27 client pin from 0.1.9-16.
+
 ## 0.1.9-16 — Mekanism machine-recipe JEI compatibility
 
 - Pin client JEI to 15.2.0.27 (CurseForge file 4712868), matching Mekanism 10.4.16's 1.20.x JEI baseline.

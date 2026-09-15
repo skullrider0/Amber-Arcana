@@ -11,23 +11,30 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-16" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-16" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4' "$validation" >/dev/null
+jq -e '.version == "0.1.9-17" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-17" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
 test "$manifest_count" = "$recorded_count" || { echo "Manifest count differs from build summary" >&2; exit 1; }
 
-test "$(jq '[.files[] | select(.projectID == 238222 and .fileID == 4712868)] | length' "$manifest")" = "1" || { echo "Expected exactly one pinned JEI entry" >&2; exit 1; }
-
-for removed_project in 310111 521393 388800 628539 544031 430127 255717; do
+test "$(jq '[.files[] | select(.projectID == 238222 and .fileID == 4712868)] | length' "$manifest")" = "1" || { echo "Expected Mekanism-compatible JEI client pin" >&2; exit 1; }
+for removed_project in 310111 521393 388800 628539 544031 430127 255717 227639; do
   test "$(jq --argjson id "$removed_project" '[.files[] | select(.projectID == $id)] | length' "$manifest")" = "0" || { echo "Removed project still present: $removed_project" >&2; exit 1; }
 done
 
-if rg -i 'polymorph|roughlyenoughitems|roughly_enough_items|reiplugincompatibilities' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null; then
-  echo "Removed REI or Polymorph found in server mod list" >&2
+if rg -i 'polymorph|roughlyenoughitems|roughly_enough_items|reiplugincompatibilities|twilightforest|the-twilight-forest' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null; then
+  echo "Removed viewer or Twilight Forest found in server mod list" >&2
   exit 1
 fi
+grep -Fxq 'twilightforest-1.20.1-4.3.2508-universal.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Twilight Forest stale-jar cleanup missing" >&2; exit 1; }
+
+client_loot="$repo_dir/client/overrides/kubejs/server_scripts/amber_arcana_loot_blacklist.js"
+server_loot="$repo_dir/server/kubejs/server_scripts/amber_arcana_loot_blacklist.js"
+test -f "$client_loot" && test -f "$server_loot" || { echo "Loot blacklist missing" >&2; exit 1; }
+cmp -s "$client_loot" "$server_loot" || { echo "Client/server loot blacklist differs" >&2; exit 1; }
+grep -Fq 'LootType.CHEST' "$server_loot" || { echo "Eternal Steak filter is not chest-scoped" >&2; exit 1; }
+grep -Fq "removeLoot('artifacts:eternal_steak')" "$server_loot" || { echo "Eternal Steak loot removal missing" >&2; exit 1; }
 
 client_quests="$repo_dir/client/overrides/config/ftbquests/quests"
 server_quests="$repo_dir/server/config/ftbquests/quests"
@@ -38,18 +45,11 @@ server_compat="$repo_dir/server/kubejs/data"
 diff -qr "$client_compat" "$server_compat" >/dev/null || { echo "Client/server compatibility data differs" >&2; exit 1; }
 test "$(find "$client_compat" -path '*/recipes/*.json' -type f | wc -l)" = "36" || { echo "Expected 36 disabled recipe overrides" >&2; exit 1; }
 test "$(find "$client_compat" -path '*/tags/*.json' -type f | wc -l)" = "4" || { echo "Expected 4 repaired tag files" >&2; exit 1; }
-if ! find "$client_compat" -name '*.json' -type f -print0 | xargs -0 -n1 jq -e . >/dev/null; then
-  echo "Invalid compatibility JSON" >&2
-  exit 1
-fi
+find "$client_compat" -name '*.json' -type f -print0 | xargs -0 -n1 jq -e . >/dev/null
 
 unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Client.zip"
 unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
-(
-  cd "$repo_dir/dist"
-  sha256sum -c SHA256SUMS.txt
-)
-
+( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana static validation passed"
+echo "Amber & Arcana 0.1.9-17 static validation passed"
