@@ -1,0 +1,66 @@
+name: Build MoreHitboxes performance experiment
+
+on:
+  push:
+    branches:
+      - experiment/morehitboxes-perf-v1
+    paths:
+      - patches/morehitboxes-1.9.2-performance-v1.patch
+      - .github/workflows/build-morehitboxes-perf-experiment.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Amber & Arcana experiment
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Checkout exact MoreHitboxes 1.9.2 source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone https://github.com/DarkPred/MoreHitboxes.git upstream-morehitboxes
+          cd upstream-morehitboxes
+          git checkout bbe929da2bb5480e83ba266bf3138e431f196d3f
+          test "$(git rev-parse HEAD)" = "bbe929da2bb5480e83ba266bf3138e431f196d3f"
+          grep -Fxq 'mod_version=1.9.2' gradle.properties
+
+      - name: Apply performance patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd upstream-morehitboxes
+          git apply --check ../patches/morehitboxes-1.9.2-performance-v1.patch
+          git apply ../patches/morehitboxes-1.9.2-performance-v1.patch
+          sed -i 's/^mod_version=.*/mod_version=1.9.2.1/' gradle.properties
+          git diff --check
+          git diff
+
+      - name: Build Forge jar
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd upstream-morehitboxes
+          chmod +x gradlew
+          ./gradlew :forge:build --no-daemon
+          mkdir -p ../out
+          find forge/build/libs -maxdepth 1 -type f -name '*.jar' \
+            ! -name '*sources*' ! -name '*javadoc*' -print -exec cp {} ../out/ \;
+          test -n "$(find ../out -maxdepth 1 -type f -name '*.jar' -print -quit)"
+
+      - name: Upload patched jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: morehitboxes-1.9.2.1-amber-perf-v1
+          path: out/*.jar
+          if-no-files-found: error
