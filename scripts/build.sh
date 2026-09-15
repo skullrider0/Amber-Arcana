@@ -24,4 +24,11 @@ mkdir -p "$dist_dir"
   sha256sum "Amber-and-Arcana-${version}-Client.zip" "Amber-and-Arcana-${version}-Server.zip" > SHA256SUMS.txt
 )
 
+# Small overlay for an existing Crafty server: extract at the server root.
+rm -f "$dist_dir/Amber-and-Arcana-${version}-Crafty-JEI-Overlay.zip"
+(
+  cd "$repo_dir/server"
+  zip -q "$dist_dir/Amber-and-Arcana-${version}-Crafty-JEI-Overlay.zip" _crafty/server-mods.tsv
+)
+
 echo "Built Amber & Arcana ${version}"

@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching CurseForge clien
 
 ## Direct downloads
 
-[⬇️ Download Client 0.1.9-18](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-18-Client.zip) · [⬇️ Download Crafty Server 0.1.9-18](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-18-Server.zip)
+[⬇️ Download Client 0.1.9-19](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-19-Client.zip) · [⬇️ Download Crafty Server 0.1.9-19](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-19-Server.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-18 |
+| Pack | 0.1.9-19 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -18,7 +18,7 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching CurseForge clien
 | Server mod downloads | 258 |
 | Manual quests | 106 across 25 chapters |
 
-Release 0.1.9-18 pins the **client** to JEI 15.20.0.106 (CurseForge file 6075247). This is the lowest release that satisfies the strictest JEI minimum shown by the current mod set, including Sophisticated Core and Tinkers' Construct, while staying below the later 15.57/15.59 builds previously tested. JEI remains omitted from the dedicated server. Mekanism machine recipe display still requires an in-game retest.
+Release 0.1.9-19 pins the **client** to JEI 15.20.0.106 (CurseForge file 6075247). This is the lowest release that satisfies the strictest JEI minimum shown by the current mod set, including Sophisticated Core and Tinkers' Construct, while staying below the later 15.57/15.59 builds previously tested. The matching JEI 15.20.0.106 build is now also managed on the dedicated server for recipe transfer/autofill support. Mekanism machine recipe display still requires an in-game retest.
 
 ## Repository layout
 
@@ -40,11 +40,11 @@ Release 0.1.9-18 pins the **client** to JEI 15.20.0.106 (CurseForge file 6075247
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-18-Client.zip` into CurseForge. Allocate about 10 GB RAM and use Java 17.
+Import `dist/Amber-and-Arcana-0.1.9-19-Client.zip` into CurseForge. Allocate about 10 GB RAM and use Java 17.
 
 ### Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-18-Server.zip`. The included launcher downloads the declared server mods, removes known stale client-only/content jars, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-19-Server.zip`. The included launcher downloads the declared server mods, removes known stale client-only/content jars, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 
@@ -70,3 +70,7 @@ The highest-priority work is reproducing and isolating the recipe/tag reload err
 - `Eternal Steak` (`artifacts:eternal_steak`) is removed from chest-generated loot with LootJS while Artifacts remains installed.
 - Glitchy Mantle is not included in this Minecraft 1.20.1 pack, so no unrelated Relics/GlitchCore content was removed.
 
+
+## Crafty JEI overlay
+
+For an existing server, download `dist/Amber-and-Arcana-0.1.9-19-Crafty-JEI-Overlay.zip`, stop the server, and extract it into the Crafty server root (the folder containing `AmberArcana-Crafty-Launcher.jar`) with overwrite enabled. The overlay contains only `_crafty/server-mods.tsv`; on the next start the launcher downloads `jei-1.20.1-forge-15.20.0.106.jar` into `mods/`. It does not contain or overwrite the world.

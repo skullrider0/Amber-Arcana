@@ -4921,5 +4921,20 @@
         "displayTest": "IGNORE_SERVER_VERSION"
       }
     ]
+  },
+  {
+    "slug": "jei",
+    "name": "Just Enough Items (JEI)",
+    "projectID": 238222,
+    "fileID": 6075247,
+    "filename": "jei-1.20.1-forge-15.20.0.106.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/jei/files/6075247",
+    "mods": [
+      {
+        "id": "jei",
+        "version": "15.20.0.106"
+      }
+    ],
+    "bundled_mods": []
   }
 ]

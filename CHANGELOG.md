@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.9-19 — Server JEI / Crafty overlay
+
+- Add JEI 15.20.0.106 (CurseForge 238222:6075247) to the Crafty dedicated-server managed mod list.
+- Keep client and server on the exact same JEI build.
+- Add a tiny Crafty-root overlay ZIP containing only `_crafty/server-mods.tsv` for existing servers.
+- Preserve Twilight Forest removal and the Eternal Steak chest-loot filter.
+
 ## 0.1.9-18 — JEI dependency compatibility
 
 - Raise client JEI from 15.2.0.27 to 15.20.0.106 (CurseForge 238222:6075247).
