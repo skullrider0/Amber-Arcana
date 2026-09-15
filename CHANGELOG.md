@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.9-22 — Client-safe More Hitboxes performance patch
+
+- Replace the stock More Hitboxes 1.9.2 runtime with Amber's `1.9.2.1` performance patch while retaining the `morehitboxes` mod ID required by Fossils and Archeology Revival 9.3.4.0.
+- Patch only the global `Level` entity-query path and multipart position update path; preserve the official 1.9.2 client `MinecraftMixin` and Mixin refmap.
+- Verify the runtime-critical class/refmap fingerprints against the client-safe beta that successfully booted on Forge 47.4.10.
+- Bundle the patched JAR directly in both client and dedicated-server packages and remove the official CurseForge More Hitboxes entry from the client manifest to avoid duplicate mod IDs.
+- Pin Crafty to the local patched JAR by exact filename and SHA-512; remove the old stock `morehitboxes-forge-1.20.1-1.9.2.jar` on existing servers.
+- Replace the old one-file Crafty JEI overlay with a world-safe Crafty update overlay containing `_crafty/server-mods.tsv`, `_crafty/remove-mods.txt`, and the patched More Hitboxes JAR.
+- Record the 2026-09-15 quest editor screenshot as a live-data sync issue: `Make a home` renders, but the live editor shows `[No Subtitle]` and a reward resolving to `minecraft:air`, while the repository copy still defines 16 torches, 8 bread, and 100 XP. The live quest file must be captured before quest data is synchronized.
+- Runtime Spark profiling is still required to measure the actual server-thread improvement.
+
 ## 0.1.9-21 — Restore More Hitboxes dependency
 
 - Restore More Hitboxes 1.9.2 (CurseForge 1115989:6942239) on client and dedicated server.
