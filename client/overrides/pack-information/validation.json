@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-21",
+  "pack_version": "0.1.9-22",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -134,5 +134,16 @@
     "fossils_only_config_available": false,
     "upstream_behavior": "More Hitboxes 1.9.2 has no per-mod/entity whitelist; Forge Level entity-query mixins remain global",
     "runtime_retest_required": true
+  },
+  "more_hitboxes_perf_patch_0_1_9_22": {
+    "enabled": true,
+    "filename": "morehitboxes-forge-1.20.1-1.9.2.1.jar",
+    "sha256": "4e2d4494e4767c35fb977b3024e80f8b3c50d876ba9832199fdaa1161b0c197a",
+    "sha512": "d7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5",
+    "official_manifest_entry_removed": true,
+    "client_override_jar": true,
+    "server_bundled_jar": true,
+    "crafty_local_file_id": 0,
+    "known_good_entry_fingerprints_verified": true
   }
 }

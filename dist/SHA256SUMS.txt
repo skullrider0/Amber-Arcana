@@ -1,2 +1,4 @@
-cadb921d9d0a023fd4cdb20cfb3bb80df8ffb98e49f1f64ab78b2bc8f18b9709  Amber-and-Arcana-0.1.9-21-Client.zip
-e03f5c1631d9c50d4075e8278ace3de12d5bbcb0c4fce8805be70114f34d0f35  Amber-and-Arcana-0.1.9-21-Server.zip
+b92a9b87d65fa7d23526049375d4c2323f2b0b4bb57df95fabdfcb761d0a9924  Amber-and-Arcana-0.1.9-22-Client.zip
+019e09d13ed22ac1cdf00e8d194114c6bc10c694a0ee27e106ae678f166ec318  Amber-and-Arcana-0.1.9-22-Server.zip
+2edbb8aeea675f7490b5caddeddc67a830449ccccd74a830b97b3d640fd7cb16  Amber-and-Arcana-0.1.9-22-Crafty-Update-Overlay.zip
+2edbb8aeea675f7490b5caddeddc67a830449ccccd74a830b97b3d640fd7cb16  Amber-and-Arcana-0.1.9-22-Crafty-JEI-Overlay.zip

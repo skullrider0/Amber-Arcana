@@ -3391,16 +3391,16 @@
   },
   {
     "slug": "more-hitboxes",
-    "name": "More Hitboxes",
-    "projectID": 1115989,
-    "fileID": 6942239,
-    "filename": "morehitboxes-forge-1.20.1-1.9.2.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/more-hitboxes/files/6942239",
-    "sha512": "4540869971009de3cc2c895a61fa1b84a715245202788df7124b6f5a31b82ca9854a2f1a8f14e8033d24669557cf31469d7ce61a0a4c68e90f3cfb83acc007f9",
+    "name": "More Hitboxes (Amber performance patch)",
+    "projectID": 0,
+    "fileID": 0,
+    "filename": "morehitboxes-forge-1.20.1-1.9.2.1.jar",
+    "source": "vendor/morehitboxes/1.9.2.1/morehitboxes-forge-1.20.1-1.9.2.1.jar",
+    "sha512": "d7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5",
     "mods": [
       {
         "id": "morehitboxes",
-        "version": "1.9.2"
+        "version": "1.9.2.1"
       }
     ],
     "bundled_mods": [

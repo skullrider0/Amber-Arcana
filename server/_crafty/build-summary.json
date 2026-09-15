@@ -1,9 +1,9 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-21",
+  "pack_version": "0.1.9-22",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 277,
+  "manifest_entries": 276,
   "mod_metadata_entries": 276,
   "server_mod_downloads": 257,
   "excluded_mod_jars": 19,
@@ -156,6 +156,38 @@
     "required_by": "Fossils and Archeology Revival 9.3.4.0",
     "fossils_only_config_available": false,
     "upstream_behavior": "More Hitboxes 1.9.2 has no per-mod/entity whitelist; Forge Level entity-query mixins remain global",
-    "runtime_retest_required": true
+    "runtime_retest_required": true,
+    "superseded_by": "0.1.9-22"
+  },
+  "more_hitboxes_perf_patch_0_1_9_22": {
+    "enabled": true,
+    "base_version": "1.9.2",
+    "patched_version": "1.9.2.1",
+    "filename": "morehitboxes-forge-1.20.1-1.9.2.1.jar",
+    "sha256": "4e2d4494e4767c35fb977b3024e80f8b3c50d876ba9832199fdaa1161b0c197a",
+    "sha512": "d7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5",
+    "client_and_server": true,
+    "required_by": "Fossils and Archeology Revival 9.3.4.0",
+    "patched_classes": [
+      "com.github.darkpred.morehitboxes.mixin.LevelMixin",
+      "com.github.darkpred.morehitboxes.api.MultiPart"
+    ],
+    "official_client_mixin_and_refmap_preserved": true,
+    "known_good_entry_fingerprints_verified": true,
+    "client_boot_tested": true,
+    "spark_retest_required": true
+  },
+  "quest_runtime_status_2026_09_15": {
+    "screenshot_received": true,
+    "getting_started_quest_rendered": true,
+    "observed_no_subtitle_in_editor": true,
+    "observed_air_reward_slot": true,
+    "repo_runtime_reward_mismatch": true,
+    "repo_make_a_home_rewards": [
+      "16 torches",
+      "8 bread",
+      "100 XP"
+    ],
+    "action": "Capture the live getting_started.snbt before syncing quest changes."
   }
 }
