@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9-16 — Mekanism machine-recipe JEI compatibility
+
+- Pin client JEI to 15.2.0.27 (CurseForge file 4712868), matching Mekanism 10.4.16's 1.20.x JEI baseline.
+- Remove JEI from the dedicated-server mod download list; the viewer is not required server-side.
+- Target missing Mekanism machine categories, including Metallurgic Infuser recipes such as Atomic Alloy.
+- Preserve the 0.1.9-14 recipe/tag fixes, quests, and all non-viewer content.
+- Rebuild client/server archives and validate archive/source parity.
+
 ## 0.1.9-15 — Native JEI display diagnostic
 
 - Replace REI 12.1.785 with JEI 15.59.0.211 Forge (beta), matching client/server pins.

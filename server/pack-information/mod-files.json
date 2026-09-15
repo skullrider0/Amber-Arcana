@@ -4103,22 +4103,6 @@
     "bundled_mods": []
   },
   {
-    "slug": "jei",
-    "name": "Just Enough Items (JEI)",
-    "projectID": 238222,
-    "fileID": 8879628,
-    "filename": "jei-1.20.1-forge-15.59.0.211.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/jei/files/8879628",
-    "sha512": "d7d9563473afc395a4fae90b43d1f16511a4516702c38465c8fa5834a8492ed12b30d81720ab3e698b6ba49df095378f929f27504a2b875b6f246eb6664b746e",
-    "mods": [
-      {
-        "id": "jei",
-        "version": "15.59.0.211"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
     "slug": "rs-requestify",
     "name": "RS Requestify",
     "projectID": 307788,

@@ -1,0 +1,15 @@
+Amber & Arcana 0.1.9-16 — Mekanism / JEI compatibility hotfix
+
+Client recipe viewer: JEI 15.2.0.27 (CurseForge project 238222, file 4712868)
+Dedicated server: JEI intentionally omitted.
+
+Why: Mekanism 10.4.16's Minecraft 1.20.x build uses JEI 15.2.0.27 as its dependency baseline. Newer JEI builds can leave Mekanism items visible while its machine recipe categories do not register.
+
+Acceptance check after a FRESH CurseForge import:
+1. Launch and join the matching server.
+2. Search JEI for Atomic Alloy.
+3. Press R / view recipe.
+4. A Mekanism Metallurgic Infuser recipe category should appear.
+5. Check at least one Crusher, Enrichment Chamber, and Energized Smelter recipe too.
+
+Atomic Alloy is a Mekanism machine recipe made by infusing Reinforced Alloy with the Refined Obsidian infusion type in a Metallurgic Infuser.

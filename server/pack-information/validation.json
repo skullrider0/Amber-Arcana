@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-15",
+  "pack_version": "0.1.9-16",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -81,5 +81,11 @@
     "polymorph_removed": true,
     "reason": "REI 12.1.785 aborts its default display plugin at a null armor repair ingredient; JEI provides native machine integrations.",
     "runtime_tested": false
+  },
+  "recipe_viewer_0_1_9_16": {
+    "client": "JEI 15.2.0.27 / CurseForge file 4712868",
+    "server_jei_removed": true,
+    "reason": "Mekanism 10.4.16 machine-category compatibility",
+    "atomic_alloy_test": "Metallurgic Infuser category should be visible after fresh client import"
   }
 }
