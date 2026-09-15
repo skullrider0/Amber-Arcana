@@ -1,8 +1,7 @@
 diff --git a/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java b/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
-index be50a7f..0000000 100644
 --- a/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
 +++ b/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
-@@ -53,11 +53,16 @@ public abstract class LevelMixin implements IForgeLevel {
+@@ -53,11 +53,18 @@ public abstract class LevelMixin implements IForgeLevel {
      @Inject(method = "getEntities(Lnet/minecraft/world/level/entity/EntityTypeTest;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;", at = @At(value = "RETURN"))
      public <T extends Entity> void addMultiPartsToEntityQuery(EntityTypeTest<Entity, T> entityTypeTest, AABB area, Predicate<? super T> predicate, CallbackInfoReturnable<List<T>> cir, @Local List<Entity> list) {
          for (PartEntity<?> partEntity : getPartEntities()) {
@@ -28,7 +27,6 @@ index be50a7f..0000000 100644
          }
      }
 diff --git a/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java b/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
-index fba747a..0000000 100644
 --- a/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
 +++ b/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
 @@ -54,7 +54,11 @@ public interface MultiPart<T extends Mob & MultiPartEntity<T>> {
