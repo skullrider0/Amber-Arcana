@@ -1,0 +1,46 @@
+diff --git a/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java b/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
+index be50a7f..0000000 100644
+--- a/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
++++ b/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
+@@ -53,11 +53,16 @@ public abstract class LevelMixin implements IForgeLevel {
+     @Inject(method = "getEntities(Lnet/minecraft/world/level/entity/EntityTypeTest;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;", at = @At(value = "RETURN"))
+     public <T extends Entity> void addMultiPartsToEntityQuery(EntityTypeTest<Entity, T> entityTypeTest, AABB area, Predicate<? super T> predicate, CallbackInfoReturnable<List<T>> cir, @Local List<Entity> list) {
+         for (PartEntity<?> partEntity : getPartEntities()) {
+-            if (partEntity instanceof MultiPart<?>) {
+-                T parent = entityTypeTest.tryCast(partEntity.getParent());
+-                //No check for the MultiPart entity itself since that doesn't make much sense
+-                if (parent != null && !list.contains(parent) && partEntity.getBoundingBox().intersects(area) && predicate.test(parent)) {
+-                    list.add(parent);
+-                }
++            if (!(partEntity instanceof MultiPart<?>)) {
++                continue;
++            }
++            // Most entity queries use a small AABB. Reject distant parts before doing
++            // type casts, linear list.contains checks, or user/mod predicates.
++            if (!partEntity.getBoundingBox().intersects(area)) {
++                continue;
++            }
++            T parent = entityTypeTest.tryCast(partEntity.getParent());
++            //No check for the MultiPart entity itself since that doesn't make much sense
++            if (parent != null && !list.contains(parent) && predicate.test(parent)) {
++                list.add(parent);
+             }
+         }
+     }
+diff --git a/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java b/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
+index fba747a..0000000 100644
+--- a/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
++++ b/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
+@@ -54,7 +54,11 @@ public interface MultiPart<T extends Mob & MultiPartEntity<T>> {
+             Vec3 offset = getOffset();
+             newPos = getParent().position().add(new Vec3(offset.x, offset.y, offset.z).yRot(-getParent().yBodyRot * Mth.DEG_TO_RAD).scale(getParent().getScale()));
+         }
+-        entity.setPos(newPos);
++        // setPos recalculates entity bounds and Forge PartEntity bookkeeping. Avoid
++        // doing that work when the calculated hitbox position is exactly unchanged.
++        if (entity.getX() != newPos.x || entity.getY() != newPos.y || entity.getZ() != newPos.z) {
++            entity.setPos(newPos);
++        }
+         //entity.level.getProfiler().pop();
+     }
+ 
