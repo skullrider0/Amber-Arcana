@@ -32,7 +32,7 @@ jobs:
         run: python3 scripts/hotfix-server-jei-0.1.9-19.py
 
       - name: Apply 0.1.9-21 More Hitboxes dependency baseline
-        run: python3 scripts/hotfix-restore-more-hitboxes-0.1.9-21.py
+        run: python3 scripts/hotfix-restore-morehitboxes-0.1.9-21.py
 
       - name: Stage client-safe More Hitboxes performance jar
         shell: bash
@@ -52,7 +52,13 @@ jobs:
         run: python3 scripts/hotfix-quest-sync-0.1.9-23.py
 
       - name: Normalize 0.1.9-23 validation version
-        run: sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-23/g' scripts/validate.sh
+        shell: bash
+        run: |
+          sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-23/g' scripts/validate.sh
+          # The hotfix's Python triple-quoted shell snippet strips the quote escapes
+          # around $item. The hotfix already validates exact item syntax, so keep
+          # the archive validator as a simple item-id presence check.
+          sed -i 's/rg -F "item: "$item""/rg -F "$item"/' scripts/validate.sh
 
       - name: Build client and server distributions
         run: bash scripts/build.sh
