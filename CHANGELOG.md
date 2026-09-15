@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9-20 — More Hitboxes performance removal
+
+- Remove More Hitboxes 1.9.2 from both client and dedicated server.
+- Remove CurseForge project 1115989 / file 6942239 from the client manifest and pack inventories.
+- Remove `morehitboxes-forge-1.20.1-1.9.2.jar` from Crafty's managed server mod list.
+- Add `morehitboxes-forge-1.20.1-1.9.2.jar` to `_crafty/remove-mods.txt` so an updated Crafty server deletes the stale jar automatically.
+- Preserve JEI 15.20.0.106 on both client and server, Twilight Forest removal, and the Eternal Steak chest-loot filter.
+
 ## 0.1.9-19 — Server JEI / Crafty overlay
 
 - Add JEI 15.20.0.106 (CurseForge 238222:6075247) to the Crafty dedicated-server managed mod list.

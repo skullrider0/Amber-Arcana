@@ -1,5 +1,5 @@
 {
-  "mod_files": 276,
+  "mod_files": 275,
   "shader_files": 1,
   "chapters": 25,
   "manual_quests": 106,
@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-19",
+  "pack_version": "0.1.9-20",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -110,5 +110,14 @@
     "version": "15.20.0.106",
     "client_server_same_version": true,
     "runtime_tested": false
+  },
+  "performance_fix_0_1_9_20": {
+    "more_hitboxes_removed": true,
+    "project_id": 1115989,
+    "file_id": 6942239,
+    "filename": "morehitboxes-forge-1.20.1-1.9.2.jar",
+    "client_and_server": true,
+    "stale_jar_cleanup": true,
+    "runtime_retest_required": true
   }
 }

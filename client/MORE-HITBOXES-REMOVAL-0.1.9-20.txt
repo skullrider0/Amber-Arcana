@@ -1,0 +1,16 @@
+Amber & Arcana 0.1.9-20 — More Hitboxes performance removal
+
+Removed mod: More Hitboxes 1.9.2
+CurseForge project: 1115989
+CurseForge file: 6942239
+Old jar: morehitboxes-forge-1.20.1-1.9.2.jar
+Sides: client + dedicated server
+
+Reason:
+Spark slow-tick profiling showed More Hitboxes' injected entity-query path taking a disproportionate amount of the main server thread.
+
+Existing Crafty server:
+1. Stop the server.
+2. Delete mods/morehitboxes-forge-1.20.1-1.9.2.jar.
+3. Update to the matching 0.1.9-20 server metadata/package when convenient.
+4. Start the server and run another 60-second slow-tick Spark profile.

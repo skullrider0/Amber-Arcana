@@ -3374,32 +3374,6 @@
     "bundled_mods": []
   },
   {
-    "slug": "more-hitboxes",
-    "name": "More Hitboxes",
-    "projectID": 1115989,
-    "fileID": 6942239,
-    "filename": "morehitboxes-forge-1.20.1-1.9.2.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/more-hitboxes/files/6942239",
-    "sha512": "4540869971009de3cc2c895a61fa1b84a715245202788df7124b6f5a31b82ca9854a2f1a8f14e8033d24669557cf31469d7ce61a0a4c68e90f3cfb83acc007f9",
-    "mods": [
-      {
-        "id": "morehitboxes",
-        "version": "1.9.2"
-      }
-    ],
-    "bundled_mods": [
-      {
-        "modId": "mixinextras",
-        "version": "0.4.1",
-        "displayName": "MixinExtras",
-        "description": "Companion library to Mixin with lots of features to improve the compatibility and concision of your mixins!\n",
-        "authors": "LlamaLad7",
-        "displayURL": "https://github.com/LlamaLad7/MixinExtras",
-        "displayTest": "IGNORE_SERVER_VERSION"
-      }
-    ]
-  },
-  {
     "slug": "mouse-tweaks",
     "name": "Mouse Tweaks",
     "projectID": 60089,
