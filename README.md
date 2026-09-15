@@ -1,80 +1,79 @@
 # Amber & Arcana
 
-Amber & Arcana is a Forge 1.20.1 modpack maintained as matching CurseForge client and Crafty 4 dedicated-server packages.
+Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Crafty 4 dedicated-server packages.
 
 ## Direct downloads
 
-[⬇️ Download Client 0.1.9-20](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-20-Client.zip) · [⬇️ Download Crafty Server 0.1.9-20](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-20-Server.zip)
+[⬇️ Download Client 0.1.9-22](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-22-Client.zip) · [⬇️ Download Crafty Server 0.1.9-22](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-22-Server.zip) · [⬇️ Update an existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-22-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-20 |
+| Pack | 0.1.9-22 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
-| Client manifest entries | 278 |
-| Server mod downloads | 258 |
+| Client manifest entries | 276 + 1 local patched JAR |
+| Server managed mod entries | 257 |
 | Manual quests | 106 across 25 chapters |
 
-Release 0.1.9-20 pins the **client** to JEI 15.20.0.106 (CurseForge file 6075247). This is the lowest release that satisfies the strictest JEI minimum shown by the current mod set, including Sophisticated Core and Tinkers' Construct, while staying below the later 15.57/15.59 builds previously tested. The matching JEI 15.20.0.106 build is now also managed on the dedicated server for recipe transfer/autofill support. Mekanism machine recipe display still requires an in-game retest.
+Release 0.1.9-22 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
+
+The More Hitboxes patch changes only the expensive global `Level` entity-query behavior and multipart position update path. The official 1.9.2 client `MinecraftMixin` and Mixin refmap are preserved, which fixes the client crash seen in the first beta rebuild. The release validates the runtime-critical class/refmap fingerprints against the client-safe beta that successfully booted on Forge 47.4.10. The patched JAR is bundled directly instead of being declared as the stock CurseForge file, preventing duplicate `morehitboxes` mod IDs.
 
 ## Repository layout
 
-- `client/` — CurseForge manifest and client overrides.
+- `client/` — CurseForge-compatible manifest and client overrides.
 - `server/` — Crafty-ready server package source, launcher, config, quests, and validation records.
-- `dist/` — ready-to-import client and server ZIPs plus checksums.
+- `dist/` — ready-to-import client/server ZIPs, Crafty update overlay, and checksums.
+- `vendor/morehitboxes/` — the client-safe local More Hitboxes patch plus upstream MIT license and checksums.
+- `patches/` — source-level More Hitboxes performance changes used to build the patched classes.
 - `scripts/` — repeatable validation and packaging helpers.
-- `GOAL-MAP.md` — ordered project goals and acceptance gates.
-- `GOALS.md` — live goal status and next-action list.
-- `WORKLOAD.md` — prioritized technical workload and validation matrix.
-- `CHECKLIST.md` — evidence-based completion checklist.
-- `FUTURE_AGENT_PROMPT.md` — copy-ready handoff prompt for future agents.
-- `WORK-ONBOARDING.md` — starting instructions for future ChatGPT Work sessions.
-- `CURRENT_STATE.md` — what is known, tested, and still unverified.
-- `PROJECT_STATE.md` — release history and active work queue.
-- `AUTOMATION_RULES.md` — safe rules for future automated changes.
+- `docs/` — investigation notes and runtime findings.
+- `GOAL-MAP.md`, `GOALS.md`, `WORKLOAD.md`, and `CHECKLIST.md` — project goals, queue, and validation gates.
 
 ## Install
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-20-Client.zip` into CurseForge. Allocate about 10 GB RAM and use Java 17.
+Import `dist/Amber-and-Arcana-0.1.9-22-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
 
-### Crafty server
+### Fresh Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-20-Server.zip`. The included launcher downloads the declared server mods, removes known stale client-only/content jars, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-22-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
 
-Back up an existing world before replacing a server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
+Back up an existing world before replacing a complete server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
+
+### Existing Crafty server
+
+Stop the server and extract `dist/Amber-and-Arcana-0.1.9-22-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The overlay contains only:
+
+- `_crafty/server-mods.tsv`
+- `_crafty/remove-mods.txt`
+- `mods/morehitboxes-forge-1.20.1-1.9.2.1.jar`
+
+It does **not** contain or overwrite the world. On the next start Crafty removes the old stock `morehitboxes-forge-1.20.1-1.9.2.jar` and validates the patched JAR instead of redownloading the original.
+
+The historical `Crafty-JEI-Overlay.zip` filename is also rebuilt as a compatibility alias to the same 0.1.9-22 update overlay.
+
+## Quest runtime status — 2026-09-15
+
+The latest in-game editor screenshot confirms the `Make a home` quest renders, but it also shows `[No Subtitle]` in editor view and one reward resolving to `minecraft:air`.
+
+The repository copy does **not** currently match those live rewards: `getting_started.snbt` still defines 16 torches, 8 bread, and 100 XP for `Make a home`. Because the live server quest data has diverged, 0.1.9-22 records the discrepancy but does not overwrite the quest file. The next quest-sync pass should capture the live `config/ftbquests/quests/chapters/getting_started.snbt` first, then fix the Air reward and subtitle without losing current live edits.
 
 ## Validate and rebuild
 
-Requirements: Bash, Java 17, `jq`, `zip`, `unzip`, and `sha256sum`, and Python 3. Rebuild the launcher after Java-source edits with `bash scripts/build-launcher.sh` (requires a Java 17+ JDK).
+Requirements: Bash, Java 17, `jq`, `zip`, `unzip`, `sha256sum`, `sha512sum`, and Python 3. Rebuild the launcher after Java-source edits with `bash scripts/build-launcher.sh`.
 
 ```bash
 bash scripts/validate.sh
 bash scripts/build.sh
 ```
 
-Static validation checks structure, JSON, client/server quest parity, pinned JEI metadata and archive/source parity, removed-project exclusions, archives, and checksums. It does not replace a fresh CurseForge import, Forge boot, dedicated-server connection, or in-game recipe/tag test.
+Static validation checks client/server quest parity, recipe/tag compatibility data, JEI pins, the local More Hitboxes JAR and class fingerprints, Crafty mod-management state, archive layouts, and checksums. It does not replace an in-game multiplayer test or a Spark profile.
 
-## Known investigation
+## More Hitboxes performance investigation
 
-The highest-priority work is reproducing and isolating the recipe/tag reload errors and the red-X/incompatible-server indicator while client connections still succeed. Follow `WORKLOAD.md` and update `CHECKLIST.md` with actual test evidence.
-
-## 0.1.9-17 content cleanup
-
-- The Twilight Forest has been removed from the client and dedicated server package.
-- Existing Crafty installs automatically delete `twilightforest-1.20.1-4.3.2508-universal.jar` during bootstrap.
-- `Eternal Steak` (`artifacts:eternal_steak`) is removed from chest-generated loot with LootJS while Artifacts remains installed.
-- Glitchy Mantle is not included in this Minecraft 1.20.1 pack, so no unrelated Relics/GlitchCore content was removed.
-
-
-## Crafty JEI overlay
-
-For an existing server, download `dist/Amber-and-Arcana-0.1.9-20-Crafty-JEI-Overlay.zip`, stop the server, and extract it into the Crafty server root (the folder containing `AmberArcana-Crafty-Launcher.jar`) with overwrite enabled. The overlay contains only `_crafty/server-mods.tsv`; on the next start the launcher downloads `jei-1.20.1-forge-15.20.0.106.jar` into `mods/`. It does not contain or overwrite the world.
-
-Performance note: 0.1.9-20 removes **More Hitboxes** from both client and dedicated server after Spark profiling showed its multipart entity-query mixin consuming a disproportionate share of server-thread time. Existing Crafty servers should remove `morehitboxes-forge-1.20.1-1.9.2.jar` from `mods/` before restarting.
-
-More Hitboxes note (0.1.9-21): **More Hitboxes 1.9.2** is restored on both client and dedicated server because Fossils and Archeology Revival 9.3.4.0 requires it. Upstream More Hitboxes 1.9.2 does not provide a per-mod or per-entity whitelist/config, so there is no valid `fossils_only` setting to enable; its Forge entity-query mixins remain global and should be re-profiled with Spark.
+More Hitboxes 1.9.2 has no per-mod or per-entity whitelist and no valid `fossils_only` option. Its Forge `Level` entity-query hooks are global. The 1.9.2.1 patch reduces unnecessary work without removing multipart Fossils support, but a fresh 60-second Spark profile is still required to quantify the improvement under the same laggy workload.
