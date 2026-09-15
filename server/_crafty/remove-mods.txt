@@ -37,3 +37,6 @@ aether-1.20.1-1.5.2-neoforge.jar
 # Removed in Amber & Arcana 0.1.9-11: generated compatibility recipes were invalid.
 everycomp-1.20-2.9.26-forge.jar
 twilightforest-1.20.1-4.3.2508-universal.jar
+
+# Replaced by Amber MoreHitboxes 1.9.2.1 performance beta.
+morehitboxes-forge-1.20.1-1.9.2.jar
