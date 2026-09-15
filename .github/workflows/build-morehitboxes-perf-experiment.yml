@@ -50,7 +50,7 @@ jobs:
           git diff --check
           git diff --stat
 
-      - name: Build Forge jar
+      - name: Build patched classes
         shell: bash
         run: |
           set -euo pipefail
@@ -61,11 +61,56 @@ jobs:
             -PCURSEFORGE_TOKEN=ci-placeholder \
             -Pcloudsmith_username=ci-placeholder \
             -Pcloudsmith_token=ci-placeholder
-          mkdir -p ../out
-          find forge/build/libs -maxdepth 1 -type f -name '*.jar' \
-            ! -name '*sources*' ! -name '*javadoc*' -print -exec cp {} ../out/ \;
-          test -f ../out/morehitboxes-forge-1.20.1-1.9.2.1.jar
-          sha256sum ../out/*.jar | tee ../out/SHA256SUMS.txt
+          test -f forge/build/libs/morehitboxes-forge-1.20.1-1.9.2.1.jar
+
+      - name: Preserve official 1.9.2 client mixins and transplant performance classes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out transplant/com/github/darkpred/morehitboxes/mixin transplant/com/github/darkpred/morehitboxes/api
+
+          OFFICIAL='out/morehitboxes-official-1.20.1-1.9.2.jar'
+          FINAL='out/morehitboxes-forge-1.20.1-1.9.2.1.jar'
+          REBUILT='upstream-morehitboxes/forge/build/libs/morehitboxes-forge-1.20.1-1.9.2.1.jar'
+          EXPECTED_SHA512='4540869971009de3cc2c895a61fa1b84a715245202788df7124b6f5a31b82ca9854a2f1a8f14e8033d24669557cf31469d7ce61a0a4c68e90f3cfb83acc007f9'
+
+          curl --fail --location --retry 3 \
+            'https://www.cursemaven.com/curse/maven/more-hitboxes-1115989/6942239/more-hitboxes-1115989-6942239.jar' \
+            --output "$OFFICIAL"
+
+          printf '%s  %s\n' "$EXPECTED_SHA512" "$OFFICIAL" | sha512sum --check -
+          cp "$OFFICIAL" "$FINAL"
+
+          unzip -p "$REBUILT" 'com/github/darkpred/morehitboxes/mixin/LevelMixin.class' \
+            > transplant/com/github/darkpred/morehitboxes/mixin/LevelMixin.class
+          unzip -p "$REBUILT" 'com/github/darkpred/morehitboxes/api/MultiPart.class' \
+            > transplant/com/github/darkpred/morehitboxes/api/MultiPart.class
+
+          test -s transplant/com/github/darkpred/morehitboxes/mixin/LevelMixin.class
+          test -s transplant/com/github/darkpred/morehitboxes/api/MultiPart.class
+
+          # Keep every untouched class and the original Mixin refmap exactly as shipped by More Hitboxes 1.9.2.
+          OFFICIAL_MINECRAFT_MIXIN_SHA="$(unzip -p "$OFFICIAL" 'com/github/darkpred/morehitboxes/mixin/MinecraftMixin.class' | sha256sum | awk '{print $1}')"
+          OFFICIAL_REFMAP_SHA="$(unzip -p "$OFFICIAL" 'mixins.morehitboxes.refmap.json' | sha256sum | awk '{print $1}')"
+
+          (cd transplant && zip -q -u "../$FINAL" \
+            com/github/darkpred/morehitboxes/mixin/LevelMixin.class \
+            com/github/darkpred/morehitboxes/api/MultiPart.class)
+
+          FINAL_MINECRAFT_MIXIN_SHA="$(unzip -p "$FINAL" 'com/github/darkpred/morehitboxes/mixin/MinecraftMixin.class' | sha256sum | awk '{print $1}')"
+          FINAL_REFMAP_SHA="$(unzip -p "$FINAL" 'mixins.morehitboxes.refmap.json' | sha256sum | awk '{print $1}')"
+          test "$OFFICIAL_MINECRAFT_MIXIN_SHA" = "$FINAL_MINECRAFT_MIXIN_SHA"
+          test "$OFFICIAL_REFMAP_SHA" = "$FINAL_REFMAP_SHA"
+
+          # Verify the two intended classes actually differ from the official release.
+          test "$(unzip -p "$OFFICIAL" 'com/github/darkpred/morehitboxes/mixin/LevelMixin.class' | sha256sum | awk '{print $1}')" != \
+               "$(unzip -p "$FINAL" 'com/github/darkpred/morehitboxes/mixin/LevelMixin.class' | sha256sum | awk '{print $1}')"
+          test "$(unzip -p "$OFFICIAL" 'com/github/darkpred/morehitboxes/api/MultiPart.class' | sha256sum | awk '{print $1}')" != \
+               "$(unzip -p "$FINAL" 'com/github/darkpred/morehitboxes/api/MultiPart.class' | sha256sum | awk '{print $1}')"
+
+          rm -f "$OFFICIAL"
+          sha256sum "$FINAL" | tee out/SHA256SUMS.txt
+          sha512sum "$FINAL" | tee out/SHA512SUMS.txt
 
       - name: Pin Crafty to the patched MoreHitboxes jar
         shell: bash
@@ -133,7 +178,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add server/_crafty/server-mods.tsv server/_crafty/remove-mods.txt
           if ! git diff --cached --quiet; then
-            git commit -m 'Pin Crafty to MoreHitboxes 1.9.2.1 beta [skip ci]'
+            git commit -m 'Pin Crafty to client-safe MoreHitboxes beta [skip ci]'
             git push origin HEAD:experiment/morehitboxes-perf-v1
           fi
 
