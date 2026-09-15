@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.9-15 — Native JEI display diagnostic
+
+- Replace REI 12.1.785 with JEI 15.59.0.211 Forge (beta), matching client/server pins.
+- Avoid REI's null armor repair ingredient display-loading failure.
+- Restore native JEI plugin discovery for machine recipes without REIPC.
+- Retain the selected JEI during launcher cleanup; remove obsolete viewer jars.
+- Preserve all previous recipe/tag overrides and quest IDs; update viewer wording.
+- Validate archive/source parity so truncated or stale distributions fail clearly.
+- Runtime browsing/crafting acceptance remains pending; see docs/jei-display-0.1.9-15.md.
+
+
 ## 0.1.9-14 — 2026-09-14
 
 - Added identical client/server KubeJS data overrides for 36 recipes that Forge

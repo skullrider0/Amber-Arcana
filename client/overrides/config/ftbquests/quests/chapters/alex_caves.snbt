@@ -46,7 +46,7 @@
       "x": 6.0,
       "y": 0.0,
       "description": [
-        "Use a recipe supplied by Create: Alex's Caves Compat. Check the recipe category in REI and automate a small batch without bypassing the expedition that provides the first ingredients.",
+        "Use a recipe supplied by Create: Alex's Caves Compat. Check the recipe category in JEI and automate a small batch without bypassing the expedition that provides the first ingredients.",
         "Complete this project, then tick the checkmark. This is a manual build milestone."
       ],
       "tasks": [

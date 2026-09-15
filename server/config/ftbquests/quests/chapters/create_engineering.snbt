@@ -95,7 +95,7 @@
       "description": [
         "Build a sequenced assembly line for Precision Mechanisms and power a Deployer from the same workshop.",
         "",
-        "Use REI to confirm every assembly step. Give the incomplete mechanism a return path, but stop the belt when its output storage is full.",
+        "Use JEI to confirm every assembly step. Give the incomplete mechanism a return path, but stop the belt when its output storage is full.",
         "",
         "Successfully produce several mechanisms before claiming the reward."
       ],

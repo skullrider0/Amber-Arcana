@@ -46,7 +46,7 @@
       "x": 6.0,
       "y": 0.0,
       "description": [
-        "Construct a Sifting line and sort its outputs. Follow the installed mesh recipes in REI; avoid assuming every modded ore appears in every sieve.",
+        "Construct a Sifting line and sort its outputs. Follow the installed mesh recipes in JEI; avoid assuming every modded ore appears in every sieve.",
         "Complete this project, then tick the checkmark. This is a manual build milestone."
       ],
       "tasks": [

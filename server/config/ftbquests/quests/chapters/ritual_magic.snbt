@@ -65,7 +65,7 @@
       "x": 9.0,
       "y": 0.0,
       "description": [
-        "Build a witchs workshop and use Hexerei crafting to make a useful item. Keep its blood and fluid systems separate unless REI shows a supported conversion.",
+        "Build a witchs workshop and use Hexerei crafting to make a useful item. Keep its blood and fluid systems separate unless JEI shows a supported conversion.",
         "Complete this objective, then tick the checkmark. This is a manual milestone."
       ],
       "tasks": [

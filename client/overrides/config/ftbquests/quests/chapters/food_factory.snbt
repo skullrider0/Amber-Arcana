@@ -27,7 +27,7 @@
       "x": 3.0,
       "y": 0.0,
       "description": [
-        "Build a Cheese Factory production line and store its output separately from Rats cheese until REI confirms any shared recipes or tags.",
+        "Build a Cheese Factory production line and store its output separately from Rats cheese until JEI confirms any shared recipes or tags.",
         "Complete this project, then tick the checkmark. This is a manual build milestone."
       ],
       "tasks": [

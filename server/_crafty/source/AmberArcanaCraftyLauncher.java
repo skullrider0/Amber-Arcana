@@ -51,9 +51,12 @@ public class AmberArcanaCraftyLauncher {
 
     static void cleanupReplacedRecipeViewers() throws IOException {
         Path modsDir = ROOT.resolve("mods");
-        for (String pattern : List.of("jei-*.jar", "polymorph-*.jar", "RoughlyEnoughItems-*.jar")) {
+        Set<String> pinned = new HashSet<>();
+        for (Mod mod : readMods(ROOT.resolve("_crafty/server-mods.tsv"))) pinned.add(mod.filename());
+        for (String pattern : List.of("jei-*.jar", "polymorph-*.jar", "RoughlyEnoughItems-*.jar", "REIPluginCompatibilities-*.jar")) {
             try (DirectoryStream<Path> stream = Files.newDirectoryStream(modsDir, pattern)) {
                 for (Path jar : stream) {
+                    if (pinned.contains(jar.getFileName().toString())) continue;
                     Files.deleteIfExists(jar);
                     System.out.println("[Amber & Arcana] Removed replaced/server-side recipe viewer: " + jar.getFileName());
                 }

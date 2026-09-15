@@ -12,7 +12,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Amber & Arcana 0.1.9-14",
-  "version": "0.1.9-14",
+  "version": "0.1.9-15",
   "author": "Custom pack for Chris",
   "files": [
     {
@@ -306,8 +306,8 @@
       "required": true
     },
     {
-      "projectID": 310111,
-      "fileID": 5846923,
+      "projectID": 238222,
+      "fileID": 8879628,
       "required": true
     },
     {

@@ -27,7 +27,7 @@
       "x": 3.0,
       "y": 0.0,
       "description": [
-        "Produce a Farmer's Delight meat cut from the Butchery setup, then use it in a cooked meal. Confirm the recipe in REI before connecting it to a Create cooking line.",
+        "Produce a Farmer's Delight meat cut from the Butchery setup, then use it in a cooked meal. Confirm the recipe in JEI before connecting it to a Create cooking line.",
         "Complete this build, then tick the checkmark. This milestone is manual."
       ],
       "tasks": [

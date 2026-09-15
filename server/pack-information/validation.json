@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-14",
+  "pack_version": "0.1.9-15",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -71,5 +71,15 @@
     "every_compat_errors_remaining": 0,
     "client_server_data_identical": true,
     "runtime_retest_required": true
+  },
+  "recipe_viewer_0_1_9_15": {
+    "selected": "Just Enough Items 15.59.0.211 Forge (beta)",
+    "project_id": 238222,
+    "file_id": 8879628,
+    "client_and_server": true,
+    "rei_removed": true,
+    "polymorph_removed": true,
+    "reason": "REI 12.1.785 aborts its default display plugin at a null armor repair ingredient; JEI provides native machine integrations.",
+    "runtime_tested": false
   }
 }

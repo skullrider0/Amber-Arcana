@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-14",
+  "pack_version": "0.1.9-15",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -73,5 +73,15 @@
     "every_compat_errors_remaining": 0,
     "client_server_data_identical": true,
     "runtime_retest_required": true
+  },
+  "recipe_viewer_0_1_9_15": {
+    "selected": "Just Enough Items 15.59.0.211 Forge (beta)",
+    "project_id": 238222,
+    "file_id": 8879628,
+    "client_and_server": true,
+    "rei_removed": true,
+    "polymorph_removed": true,
+    "reason": "REI 12.1.785 aborts its default display plugin at a null armor repair ingredient; JEI provides native machine integrations.",
+    "runtime_tested": false
   }
 }

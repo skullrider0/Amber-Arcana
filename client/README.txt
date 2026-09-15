@@ -1,3 +1,33 @@
+AMBER & ARCANA 0.1.9-15 — JEI DISPLAY DIAGNOSTIC
+
+Replaces REI 12.1.785 with JEI 15.59.0.211 Forge (beta), pinned on client and server.
+The client log shows REI crashing while reading an armor repair ingredient.
+JEI's vanilla anvil recipe maker uses explicit vanilla repair materials instead
+of REI's scan of every modded armor material. Native JEI plugins can now load.
+This avoids the observed REI code path; an in-game machine recipe test is pending.
+
+Preserves all 36 recipe overrides, four tag fixes, quest IDs, Just Dire Things,
+DecoCraft, performance settings, and prior content removals. Polymorph stays absent.
+No additional recipes or gameplay mods were removed in this revision.
+
+CLIENT: Import Amber-and-Arcana-0.1.9-15-Client.zip as a fresh profile.
+Do not install REI or REI Plugin Compatibilities alongside this profile.
+Use Java 17 and about 10 GB maximum RAM.
+SERVER: Stop and back up the existing server, then import the matching Server.zip
+into a test instance. The launcher retains the pinned JEI and removes older
+JEI versions and REI jars. Do not replace or delete your production world.
+
+TEST: Join, press R on iron sheets and precision mechanisms (Create), check
+Mekanism enrichment/crushing recipes, and complete one actual machine operation.
+Also test Farmer's Delight cooking and a magic recipe category. Send client
+latest.log and server latest.log if any category is absent or errors remain.
+/recipe give is not required for JEI display plugins to register.
+
+KNOWN ISSUES: marine_snow malformed JSON, unrelated loot tables and NTGL
+equipment errors remain from the previous server log. They are not fixed here.
+
+--- HISTORICAL RELEASE NOTES (superseded where noted above) ---
+
 AMBER & ARCANA 0.1.9-14 — REI + CONTENT CLEANUP
 
 0.1.9-14 RECIPE VIEWER AND CONTENT CHANGE

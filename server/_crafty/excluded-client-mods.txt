@@ -14,7 +14,6 @@ Excluded from dedicated server build:
 - Not Enough Animations (not-enough-animations) :: notenoughanimations-forge-1.10.2-mc1.20.1.jar :: client-only / rendering / UI
 - Oculus (oculus) :: oculus-mc1.20.1-1.8.0.jar :: client-only / rendering / UI
 - Retro Damage Indicators (retro-damage-indicators) :: retrodamageindicators-1.0.1.jar :: client-only / rendering / UI
-- Roughly Enough Items (roughly-enough-items) :: RoughlyEnoughItems-12.1.785-forge.jar :: client-side recipe viewer
 - ShulkerBoxTooltip (shulkerboxtooltip) :: shulkerboxtooltip-forge-4.0.4+1.20.1.jar :: client-only / rendering / UI
 - Simply Tooltips (simply-tooltips) :: SimplyTooltips-forge-0.1.5-1.20.1.jar :: client-only / rendering / UI
 - Sound Physics Remastered (sound-physics-remastered) :: sound-physics-remastered-forge-1.20.1-1.5.1.jar :: client-only / rendering / UI
