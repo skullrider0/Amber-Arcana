@@ -68,6 +68,22 @@ def hexid(seed: str) -> str:
     return hashlib.sha256(seed.encode()).hexdigest()[:16].upper()
 
 
+def canonicalize_chapter(text: str) -> str:
+    """Normalize editor-saved JSON-style SNBT to the tabbed key layout used by the pack.
+
+    FTB Quests accepts both styles. The live editor save contains both, so normalize
+    whitespace and simple quoted object keys before applying text-preserving patches.
+    """
+    out: list[str] = []
+    for line in text.splitlines():
+        spaces = len(line) - len(line.lstrip(" "))
+        if spaces and spaces % 2 == 0:
+            line = "\t" * (spaces // 2) + line[spaces:]
+        line = re.sub(r'^(\t*)"([A-Za-z_][A-Za-z0-9_]*)"\s*:', r'\1\2:', line)
+        out.append(line)
+    return "\n".join(out) + ("\n" if text.endswith("\n") else "")
+
+
 def find_balanced(text: str, start: int, opench: str, closech: str) -> int:
     depth = 0
     in_string = False
