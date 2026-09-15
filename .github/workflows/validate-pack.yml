@@ -32,7 +32,7 @@ jobs:
         run: python3 scripts/hotfix-server-jei-0.1.9-19.py
 
       - name: Apply 0.1.9-21 More Hitboxes dependency baseline
-        run: python3 scripts/hotfix-restore-morehitboxes-0.1.9-21.py
+        run: python3 scripts/hotfix-restore-more-hitboxes-0.1.9-21.py
 
       - name: Stage client-safe More Hitboxes performance jar
         shell: bash
