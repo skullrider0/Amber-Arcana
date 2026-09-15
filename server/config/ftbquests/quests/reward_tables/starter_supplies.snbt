@@ -1,0 +1,15 @@
+{
+	icon: "minecraft:bread"
+	id: "6AA0060000000001"
+	loot_size: 1
+	order_index: 4
+	rewards: [
+		{ count: 8, item: "minecraft:bread", weight: 35.0f }
+		{ count: 16, item: "minecraft:torch", weight: 30.0f }
+		{ count: 8, item: "minecraft:cooked_salmon", weight: 20.0f }
+		{ count: 4, item: "minecraft:golden_carrot", weight: 10.0f }
+		{ item: "minecraft:golden_apple", weight: 5.0f }
+	]
+	title: "Starter provisions"
+	use_title: true
+}

@@ -1,102 +1,86 @@
 {
-  "id": "7C03952947D653FD",
-  "filename": "butchery",
-  "title": "Butchery and Bloodcraft",
-  "order_index": 8,
-  "group": "",
-  "quests": [
-    {
-      "id": "721D62786F52052B",
-      "title": "A working butchery",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Craft the Butchery tools and set up a hook and processing area. Follow the guide to process a vanilla carcass.",
-        "Complete this build, then tick the checkmark. This milestone is manual."
-      ],
-      "tasks": [
-        {
-          "id": "737E3307996BA38E",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "71390971389C67F4",
-      "title": "From cuts to cooking",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Produce a Farmer's Delight meat cut from the Butchery setup, then use it in a cooked meal. Confirm the recipe in JEI before connecting it to a Create cooking line.",
-        "Complete this build, then tick the checkmark. This milestone is manual."
-      ],
-      "tasks": [
-        {
-          "id": "764178120077C7EF",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "721D62786F52052B"
-      ]
-    },
-    {
-      "id": "7E7522394BC0CA28",
-      "title": "The blood workshop",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Inspect the Butchery blood-handling options with Blood Magic and Hexerei installed. Build one supported connection shown by the installed guide or recipes; keep the different fluid systems distinct until you verify a conversion.",
-        "Complete this build, then tick the checkmark. This milestone is manual."
-      ],
-      "tasks": [
-        {
-          "id": "76745B8AE21274A6",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "71390971389C67F4"
-      ]
-    },
-    {
-      "id": "71462C1C525987DD",
-      "title": "Vampire provisions",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Explore Vampirism as a vampire or hunter at your choice. Inspect Butchery blood values and heart integration; build a supply station appropriate to your faction.",
-        "Complete this build, then tick the checkmark. This milestone is manual."
-      ],
-      "tasks": [
-        {
-          "id": "7544A71A88324106",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7E7522394BC0CA28"
-      ]
-    },
-    {
-      "id": "78F216007C4453E8",
-      "title": "Expanded processing",
-      "x": 3.0,
-      "y": 3.0,
-      "description": [
-        "Use the Butchery Alex's Mobs addon on one of its supported animals. Its beta list covers six species, so check support before planning a larger processing line.",
-        "Complete this build, then tick the checkmark. This milestone is manual."
-      ],
-      "tasks": [
-        {
-          "id": "74D4EF1817614C0A",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "71462C1C525987DD"
-      ]
-    }
-  ],
-  "quest_links": []
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "butchery"
+	group: ""
+	id: "7C03952947D653FD"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Craft the Butchery tools and set up a hook and processing area. Follow the guide to process a vanilla carcass."
+				"Complete this build, then tick the checkmark. This milestone is manual."
+			]
+			id: "721D62786F52052B"
+			tasks: [{
+				id: "737E3307996BA38E"
+				type: "checkmark"
+			}]
+			title: "A working butchery"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["721D62786F52052B"]
+			description: [
+				"Produce a Farmer's Delight meat cut from the Butchery setup, then use it in a cooked meal. Confirm the recipe in JEI before connecting it to a Create cooking line."
+				"Complete this build, then tick the checkmark. This milestone is manual."
+			]
+			id: "71390971389C67F4"
+			tasks: [{
+				id: "764178120077C7EF"
+				type: "checkmark"
+			}]
+			title: "From cuts to cooking"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["71390971389C67F4"]
+			description: [
+				"Inspect the Butchery blood-handling options with Blood Magic and Hexerei installed. Build one supported connection shown by the installed guide or recipes; keep the different fluid systems distinct until you verify a conversion."
+				"Complete this build, then tick the checkmark. This milestone is manual."
+			]
+			id: "7E7522394BC0CA28"
+			tasks: [{
+				id: "76745B8AE21274A6"
+				type: "checkmark"
+			}]
+			title: "The blood workshop"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E7522394BC0CA28"]
+			description: [
+				"Explore Vampirism as a vampire or hunter at your choice. Inspect Butchery blood values and heart integration; build a supply station appropriate to your faction."
+				"Complete this build, then tick the checkmark. This milestone is manual."
+			]
+			id: "71462C1C525987DD"
+			tasks: [{
+				id: "7544A71A88324106"
+				type: "checkmark"
+			}]
+			title: "Vampire provisions"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["71462C1C525987DD"]
+			description: [
+				"Use the Butchery Alex's Mobs addon on one of its supported animals. Its beta list covers six species, so check support before planning a larger processing line."
+				"Complete this build, then tick the checkmark. This milestone is manual."
+			]
+			id: "78F216007C4453E8"
+			tasks: [{
+				id: "74D4EF1817614C0A"
+				type: "checkmark"
+			}]
+			title: "Expanded processing"
+			x: 3.0d
+			y: 3.0d
+		}
+	]
+	title: "Butchery and Bloodcraft"
 }

@@ -1,0 +1,15 @@
+{
+	icon: "create:track"
+	id: "6AA0060000000005"
+	loot_size: 1
+	order_index: 3
+	rewards: [
+		{ count: 16, item: "create:track", weight: 35.0f }
+		{ count: 12, item: "create:fluid_pipe", weight: 25.0f }
+		{ count: 4, item: "create:brass_funnel", weight: 20.0f }
+		{ count: 2, item: "create:brass_tunnel", weight: 15.0f }
+		{ count: 4, item: "create:sturdy_sheet", weight: 5.0f }
+	]
+	title: "Create factory and railway supplies"
+	use_title: true
+}

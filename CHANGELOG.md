@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9-23 — Live FTB Quests sync and reward repair
+
+- Import the complete client editor save `2026-09-15-12-17-14` as the quest-book source of truth.
+- Synchronize all 25 chapters, `chapter_groups.snbt`, `data.snbt`, and 5 reward tables to both client and dedicated server.
+- Repair 12 item rewards saved without an `item` value, which rendered as `minecraft:air`.
+- Preserve editor-generated quest/task/reward IDs and progression.
+- Add a subtitle to `Make a home` and preserve the literal Amber & Arcana ampersand with raw JSON text.
+- Preserve the tested More Hitboxes 1.9.2.1 performance patch from 0.1.9-22.
+
 ## 0.1.9-22 — Client-safe More Hitboxes performance patch
 
 - Replace the stock More Hitboxes 1.9.2 runtime with Amber's `1.9.2.1` performance patch while retaining the `morehitboxes` mod ID required by Fossils and Archeology Revival 9.3.4.0.

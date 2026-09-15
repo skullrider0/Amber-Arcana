@@ -1,103 +1,87 @@
 {
-  "id": "799BD5EE27E6BA03",
-  "filename": "alex_utilities",
-  "title": "Exhibits and Everyday Tools",
-  "order_index": 7,
-  "group": "",
-  "quests": [
-    {
-      "id": "705C75CC0EB0777B",
-      "title": "Cloud deliveries",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Use Cloud Storage to make a small remote storage arrangement. Document which containers are linked before placing valuable items in the network.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "77293597F4F62747",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "7FE445198F2DF5FA",
-      "title": "A second bed",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Sleep in a home bed and then an expedition bed using Back Up Beds. Learn how the fallback spawn works and keep the destination beds accessible.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7E99D94B51C375BD",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "705C75CC0EB0777B"
-      ]
-    },
-    {
-      "id": "75DC91845E9ED3AA",
-      "title": "A personal banner",
-      "icon": "minecraft:white_banner",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Design a banner for your home, team, or park district and display it at the main entrance. Reuse the same colors or pattern on waypoints so visitors can recognize your builds.",
-        "Complete the display, then tick the checkmark. This replaces the removed Local Looks objective."
-      ],
-      "tasks": [
-        {
-          "id": "7212A527BEB11248",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7FE445198F2DF5FA"
-      ]
-    },
-    {
-      "id": "7A9CC6DDD312FFA2",
-      "title": "Skate through town",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Make an I Wanna Skate route through a safe district. Keep the skate path separate from colony worker bottlenecks.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7F9499103FDD31E3",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "75DC91845E9ED3AA"
-      ]
-    },
-    {
-      "id": "7946F6B43F6E0E44",
-      "title": "The illustrated museum",
-      "x": 3.0,
-      "y": 3.0,
-      "description": [
-        "Use Wiki Zoomer displays for an exhibit of a creature or item. Adjust Retro Damage Indicators to keep the HUD readable. Mediumcore is an optional world difficulty, not a required quest or pack progression gate.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7AC13051BFFA8FE0",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7A9CC6DDD312FFA2"
-      ]
-    }
-  ],
-  "quest_links": []
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "alex_utilities"
+	group: ""
+	id: "799BD5EE27E6BA03"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Use Cloud Storage to make a small remote storage arrangement. Document which containers are linked before placing valuable items in the network."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "705C75CC0EB0777B"
+			tasks: [{
+				id: "77293597F4F62747"
+				type: "checkmark"
+			}]
+			title: "Cloud deliveries"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["705C75CC0EB0777B"]
+			description: [
+				"Sleep in a home bed and then an expedition bed using Back Up Beds. Learn how the fallback spawn works and keep the destination beds accessible."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "7FE445198F2DF5FA"
+			tasks: [{
+				id: "7E99D94B51C375BD"
+				type: "checkmark"
+			}]
+			title: "A second bed"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7FE445198F2DF5FA"]
+			description: [
+				"Design a banner for your home, team, or park district and display it at the main entrance. Reuse the same colors or pattern on waypoints so visitors can recognize your builds."
+				"Complete the display, then tick the checkmark. This replaces the removed Local Looks objective."
+			]
+			icon: "minecraft:white_banner"
+			id: "75DC91845E9ED3AA"
+			tasks: [{
+				id: "7212A527BEB11248"
+				type: "checkmark"
+			}]
+			title: "A personal banner"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["75DC91845E9ED3AA"]
+			description: [
+				"Make an I Wanna Skate route through a safe district. Keep the skate path separate from colony worker bottlenecks."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "7A9CC6DDD312FFA2"
+			tasks: [{
+				id: "7F9499103FDD31E3"
+				type: "checkmark"
+			}]
+			title: "Skate through town"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7A9CC6DDD312FFA2"]
+			description: [
+				"Use Wiki Zoomer displays for an exhibit of a creature or item. Adjust Retro Damage Indicators to keep the HUD readable. Mediumcore is an optional world difficulty, not a required quest or pack progression gate."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "7946F6B43F6E0E44"
+			tasks: [{
+				id: "7AC13051BFFA8FE0"
+				type: "checkmark"
+			}]
+			title: "The illustrated museum"
+			x: 3.0d
+			y: 3.0d
+		}
+	]
+	title: "Exhibits and Everyday Tools"
 }

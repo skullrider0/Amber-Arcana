@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-22",
+  "pack_version": "0.1.9-23",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -189,5 +189,14 @@
       "100 XP"
     ],
     "action": "Capture the live getting_started.snbt before syncing quest changes."
+  },
+  "quest_live_sync_0_1_9_23": {
+    "source": "client editor save 2026-09-15-12-17-14",
+    "chapters": 25,
+    "reward_tables": 5,
+    "item_rewards_repaired": 12,
+    "make_a_home_subtitle_added": true,
+    "literal_ampersand_repaired": true,
+    "client_server_quest_files_identical": true
   }
 }

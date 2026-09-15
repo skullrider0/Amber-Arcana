@@ -1,102 +1,86 @@
 {
-  "id": "7DDC313A58540776",
-  "filename": "alex_wildlife",
-  "title": "Wildlife and Companions",
-  "order_index": 5,
-  "group": "",
-  "quests": [
-    {
-      "id": "72C5275F6EA620EB",
-      "title": "Observe before collecting",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Read Alex's Mobs information for three animals. Build enclosures suited to their behavior, with staff access and space to separate animals when needed.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7C0F98E0F27DC7B4",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "76C534C1F9B94490",
-      "title": "Friends of different kinds",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Tame one Companions! creature and one eligible animal supported by Domestication Innovation. Check their individual feeding, healing, and movement behavior.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7DC8A8551AD2BDEA",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "72C5275F6EA620EB"
-      ]
-    },
-    {
-      "id": "7516A701A4929E8F",
-      "title": "A working rat team",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Tame a rat and give it a supported job. Test its pickup and deposit behavior with a small supply before connecting it to valuable storage.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "73C6222A2E3D1D83",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "76C534C1F9B94490"
-      ]
-    },
-    {
-      "id": "7A142D1190A1BE80",
-      "title": "A home for dragons",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Use Ice and Fire progression to work toward a tame dragon and a separate habitat. Site the habitat away from the public colony until its behavior is understood.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "71C7DE4560FC5622",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7516A701A4929E8F"
-      ]
-    },
-    {
-      "id": "7BC237CFDD76939F",
-      "title": "The park after dark",
-      "x": 3.0,
-      "y": 3.0,
-      "description": [
-        "Walk the park with a friend at night. Check paths, lighting, animal escape routes, and interactions added by Alex's Mobs Interaction.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "770961348BBC8843",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7A142D1190A1BE80"
-      ]
-    }
-  ],
-  "quest_links": []
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "alex_wildlife"
+	group: ""
+	id: "7DDC313A58540776"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Read Alex's Mobs information for three animals. Build enclosures suited to their behavior, with staff access and space to separate animals when needed."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "72C5275F6EA620EB"
+			tasks: [{
+				id: "7C0F98E0F27DC7B4"
+				type: "checkmark"
+			}]
+			title: "Observe before collecting"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["72C5275F6EA620EB"]
+			description: [
+				"Tame one Companions! creature and one eligible animal supported by Domestication Innovation. Check their individual feeding, healing, and movement behavior."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "76C534C1F9B94490"
+			tasks: [{
+				id: "7DC8A8551AD2BDEA"
+				type: "checkmark"
+			}]
+			title: "Friends of different kinds"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["76C534C1F9B94490"]
+			description: [
+				"Tame a rat and give it a supported job. Test its pickup and deposit behavior with a small supply before connecting it to valuable storage."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "7516A701A4929E8F"
+			tasks: [{
+				id: "73C6222A2E3D1D83"
+				type: "checkmark"
+			}]
+			title: "A working rat team"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7516A701A4929E8F"]
+			description: [
+				"Use Ice and Fire progression to work toward a tame dragon and a separate habitat. Site the habitat away from the public colony until its behavior is understood."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "7A142D1190A1BE80"
+			tasks: [{
+				id: "71C7DE4560FC5622"
+				type: "checkmark"
+			}]
+			title: "A home for dragons"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7A142D1190A1BE80"]
+			description: [
+				"Walk the park with a friend at night. Check paths, lighting, animal escape routes, and interactions added by Alex's Mobs Interaction."
+				"Complete this project, then tick the checkmark. This is a manual build milestone."
+			]
+			id: "7BC237CFDD76939F"
+			tasks: [{
+				id: "770961348BBC8843"
+				type: "checkmark"
+			}]
+			title: "The park after dark"
+			x: 3.0d
+			y: 3.0d
+		}
+	]
+	title: "Wildlife and Companions"
 }

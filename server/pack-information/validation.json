@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-22",
+  "pack_version": "0.1.9-23",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -143,5 +143,12 @@
     "server_bundled_jar": true,
     "crafty_local_file_id": 0,
     "known_good_entry_fingerprints_verified": true
+  },
+  "quest_live_sync_0_1_9_23": {
+    "source_save": "2026-09-15-12-17-14",
+    "reward_tables": 5,
+    "broken_item_rewards_found": 12,
+    "broken_item_rewards_fixed": 12,
+    "client_server_quest_files_identical": true
   }
 }

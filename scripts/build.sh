@@ -28,7 +28,7 @@ rm -f "$update_overlay" "$legacy_overlay"
 (
   cd "$repo_dir/server"
   test -f "mods/$patch_jar" || { echo "Missing patched More Hitboxes jar: server/mods/$patch_jar" >&2; exit 1; }
-  zip -q "$update_overlay" _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar"
+  zip -qr "$update_overlay" _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests
 )
 # Keep the old overlay filename as a compatibility alias for anyone following an
 # older README/bookmark, but its contents are now the full 0.1.9-22 update overlay.
