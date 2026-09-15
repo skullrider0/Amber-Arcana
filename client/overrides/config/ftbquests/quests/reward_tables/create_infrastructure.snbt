@@ -1,0 +1,39 @@
+{
+  "id": "6AA0060000000005",
+  "title": "Create factory and railway supplies",
+  "icon": "create:track",
+  "loot_size": 1,
+  "use_title": true,
+  "rewards": [
+    {
+      "type": "item",
+      "item": "create:track",
+      "count": 16,
+      "weight": 35
+    },
+    {
+      "type": "item",
+      "item": "create:fluid_pipe",
+      "count": 12,
+      "weight": 25
+    },
+    {
+      "type": "item",
+      "item": "create:brass_funnel",
+      "count": 4,
+      "weight": 20
+    },
+    {
+      "type": "item",
+      "item": "create:brass_tunnel",
+      "count": 2,
+      "weight": 15
+    },
+    {
+      "type": "item",
+      "item": "create:sturdy_sheet",
+      "count": 4,
+      "weight": 5
+    }
+  ]
+}

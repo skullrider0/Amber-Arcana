@@ -12,9 +12,9 @@
       "title": "First rotation",
       "icon": "create:water_wheel",
       "shape": "hexagon",
-      "size": 1.15d,
-      "x": 0.0d,
-      "y": 0.0d,
+      "size": 1.15,
+      "x": 0.0,
+      "y": 0.0,
       "description": [
         "&6Turn motion into useful work.&r",
         "",
@@ -22,21 +22,37 @@
         "",
         "Use Create's Ponder scenes to inspect unfamiliar blocks. Wear Engineer's Goggles and watch the stress readout before adding more machines.",
         "",
-        "Tick the checkmark after the press completes its first operation."
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random Create supply bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "17597223D8AA140A",
-          "title": "My first powered press works",
-          "type": "checkmark"
+          "type": "item",
+          "item": "create:iron_sheet",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "28F53CBDA374C654",
+          "type": "item",
+          "item": "create:goggles",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019120000000101",
-          "type": "item",
-          "item": { "count": 1, "id": "create:andesite_alloy" },
-          "count": 8
+          "type": "random",
+          "table_id": 7683147561363832835L
         },
         {
           "id": "A019120000000102",
@@ -50,29 +66,54 @@
       "title": "A processing line",
       "icon": "create:belt_connector",
       "shape": "hexagon",
-      "size": 1.15d,
-      "x": 3.0d,
-      "y": 0.0d,
+      "size": 1.15,
+      "x": 3.0,
+      "y": 0.0,
       "description": [
         "Connect a belt-fed line that performs at least two operations: washing, pressing, mixing, compacting, or bulk smelting.",
         "",
         "Place an input chest and an output buffer. Add funnels or filters so unfinished materials cannot loop back into the wrong machine.",
         "",
-        "Run a full stack through the line, then tick the checkmark."
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random Create supply bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "0DFA213F45F74EFE",
-          "title": "A full stack processed correctly",
-          "type": "checkmark"
+          "type": "item",
+          "item": "create:iron_sheet",
+          "count": 64,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "54CE1630E3032615",
+          "type": "item",
+          "item": "create:mechanical_mixer",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "12EB3CB88B4F5D79",
+          "type": "item",
+          "item": "create:encased_fan",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019120000000201",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:iron_ingot" },
-          "count": 12
+          "type": "random",
+          "table_id": 7683147561363832835L
         },
         {
           "id": "A019120000000202",
@@ -89,29 +130,36 @@
       "title": "Precision mechanisms",
       "icon": "create:precision_mechanism",
       "shape": "hexagon",
-      "size": 1.15d,
-      "x": 6.0d,
-      "y": 0.0d,
+      "size": 1.15,
+      "x": 6.0,
+      "y": 0.0,
       "description": [
         "Build a sequenced assembly line for Precision Mechanisms and power a Deployer from the same workshop.",
         "",
         "Use JEI to confirm every assembly step. Give the incomplete mechanism a return path, but stop the belt when its output storage is full.",
         "",
-        "Successfully produce several mechanisms before claiming the reward."
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random Create supply bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "5330479A28BDAE3F",
-          "title": "My sequenced assembly is reliable",
-          "type": "checkmark"
+          "type": "item",
+          "item": "create:precision_mechanism",
+          "count": 4,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019120000000301",
-          "type": "item",
-          "item": { "count": 1, "id": "create:brass_ingot" },
-          "count": 6
+          "type": "random",
+          "table_id": 7683147561363832836L
         },
         {
           "id": "A019120000000302",
@@ -128,29 +176,55 @@
       "title": "Steam under control",
       "icon": "create:steam_engine",
       "shape": "hexagon",
-      "size": 1.15d,
-      "x": 6.0d,
-      "y": 3.0d,
+      "size": 1.15,
+      "x": 6.0,
+      "y": 3.0,
       "description": [
         "Build a small Steam Engine installation with a dependable water supply. Keep heat sources accessible and protect nearby wood, animals, and colony buildings.",
         "",
         "Add a clutch, gearshift, or another deliberate shutdown control before connecting the engine to your main network.",
         "",
-        "Run it under load and confirm the water supply remains stable."
+        "Run it under load and confirm the water supply remains stable.",
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random Create supply bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "6A19120000000402",
-          "title": "The engine runs safely under load",
-          "type": "checkmark"
+          "type": "item",
+          "item": "create:steam_engine",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "55AE1A04614BA334",
+          "type": "item",
+          "item": "create:mechanical_pump",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "5B9206DF2EF07D86",
+          "type": "item",
+          "item": "create:clutch",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019120000000401",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:copper_block" },
-          "count": 4
+          "type": "random",
+          "table_id": 7683147561363832836L
         },
         {
           "id": "A019120000000402",
@@ -167,29 +241,46 @@
       "title": "Rails and schedules",
       "icon": "create:track_station",
       "shape": "hexagon",
-      "size": 1.15d,
-      "x": 3.0d,
-      "y": 3.0d,
+      "size": 1.15,
+      "x": 3.0,
+      "y": 3.0,
       "description": [
         "Build a railway between your base and a useful outpost. Place stations at both ends and give the train a working schedule.",
         "",
         "Use Steam 'n' Rails where it improves the route, but test signals and junctions with an empty train before carrying players or valuable cargo.",
         "",
-        "Complete one automatic round trip, then tick the checkmark."
+        "Complete an automatic round trip as a practical test of your route.",
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random Create supply bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "266DB38DB0AF235D",
-          "title": "My train completed a scheduled trip",
-          "type": "checkmark"
+          "type": "item",
+          "item": "create:track_station",
+          "count": 2,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "6ACBCEC6E843B703",
+          "type": "item",
+          "item": "create:schedule",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019120000000501",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:powered_rail" },
-          "count": 16
+          "type": "random",
+          "table_id": 7683147561363832837L
         },
         {
           "id": "A019120000000502",
@@ -206,9 +297,9 @@
       "title": "A reliable factory",
       "icon": "create:brass_casing",
       "shape": "hexagon",
-      "size": 1.25d,
-      "x": 0.0d,
-      "y": 3.0d,
+      "size": 1.25,
+      "x": 0.0,
+      "y": 3.0,
       "description": [
         "&6Bring the workshop together.&r",
         "",
@@ -216,21 +307,37 @@
         "",
         "Let the factory run long enough to fill an output buffer. Confirm that full storage stops or diverts production without spilling items into the world.",
         "",
-        "Tick the final checkmark when another player could understand and safely operate the system."
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random Create supply bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "6A19120000000602",
-          "title": "The factory survives a full-buffer test",
-          "type": "checkmark"
+          "type": "item",
+          "item": "create:smart_chute",
+          "count": 2,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "1036727FBFE3B47E",
+          "type": "item",
+          "item": "create:stockpile_switch",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019120000000601",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:diamond" },
-          "count": 2
+          "type": "random",
+          "table_id": 7683147561363832837L
         },
         {
           "id": "A019120000000602",

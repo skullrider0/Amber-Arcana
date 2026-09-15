@@ -1,12 +1,12 @@
 {
   "id": "7A75E60D69EFBD95",
   "filename": "getting_started",
-  "title": "Welcome to Amber \& Arcana",
+  "title": "Welcome to Amber & Arcana",
   "icon": {
-    Count: 1
-    id: "ftbquests:custom_icon"
-    tag: {
-      Icon: "amber_arcana:textures/gui/amber_arcana.png"
+    "Count": 1,
+    "id": "ftbquests:custom_icon",
+    "tag": {
+      "Icon": "amber_arcana:textures/gui/amber_arcana.png"
     }
   },
   "order_index": 9,
@@ -14,13 +14,13 @@
   "default_quest_shape": "hexagon",
   "images": [
     {
-      "height": 3.0d,
+      "height": 3.0,
       "image": "amber_arcana:textures/gui/amber_arcana.png",
       "order": -1,
-      "rotation": 0.0d,
-      "width": 3.0d,
-      "x": 3.0d,
-      "y": -3.0d
+      "rotation": 0.0,
+      "width": 3.0,
+      "x": 3.0,
+      "y": -3.0
     }
   ],
   "quests": [
@@ -29,37 +29,52 @@
       "title": "Make a home",
       "icon": "minecraft:crafting_table",
       "shape": "hexagon",
-      "size": 1.25d,
-      "x": 0.0d,
-      "y": 0.0d,
+      "size": 1.25,
+      "x": 0.0,
+      "y": 0.0,
       "description": [
-        "&6Welcome to Amber \& Arcana!&r",
+        "&6Welcome to Amber & Arcana!&r",
         "",
         "Gather wood, stone, food, and a bed. Build a safe shelter and use JEI to look up recipes.",
         "",
         "&bUseful commands:&r /sethome base, /home base, and /delhome base. FTB Essentials provides these commands; the default limit is one home.",
         "",
-        "When your first shelter is ready, tick the checkmark below and claim your starter supplies."
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random material bundle and one random provision bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "2F41ECE28F26D89D",
-          "title": "I have a safe first home",
-          "type": "checkmark"
+          "type": "item",
+          "item": "minecraft:crafting_table",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "5F5CAA0974975ECA",
+          "type": "item",
+          "item": "minecraft:furnace",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019000000000101",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:torch" },
-          "count": 16
+          "type": "random",
+          "table_id": 7683147561363832834L
         },
         {
           "id": "A019000000000102",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:bread" },
-          "count": 8
+          "type": "random",
+          "table_id": 7683147561363832833L
         },
         {
           "id": "A019000000000103",
@@ -72,42 +87,48 @@
       "id": "3FEA10D47DFED5ED",
       "title": "Claim your workshop",
       "icon": {
-        Count: 1
-        id: "ftbquests:custom_icon"
-        tag: {
-          Icon: "ftbchunks:textures/waypoint_home.png"
+        "Count": 1,
+        "id": "ftbquests:custom_icon",
+        "tag": {
+          "Icon": "ftbchunks:textures/waypoint_home.png"
         }
       },
       "shape": "hexagon",
-      "size": 1.25d,
-      "x": 3.0d,
-      "y": 0.0d,
+      "size": 1.25,
+      "x": 3.0,
+      "y": 0.0,
       "description": [
         "Create an FTB Team and claim the chunks around your home with the FTB Chunks map.",
         "",
         "Claims protect your base and make it much easier to organize a multiplayer settlement. Coordinate claims with friends before building shared factories.",
         "",
-        "Tick the checkmark once your workshop area is claimed."
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random material bundle and one random provision bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "5B6E6989BFA3A123",
-          "title": "My workshop is claimed",
-          "type": "checkmark"
+          "type": "item",
+          "item": "minecraft:chest",
+          "count": 2,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019000000000201",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:iron_ingot" },
-          "count": 8
+          "type": "random",
+          "table_id": 7683147561363832834L
         },
         {
           "id": "A019000000000202",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:compass" },
-          "count": 1
+          "type": "random",
+          "table_id": 7683147561363832833L
         },
         {
           "id": "A019000000000203",
@@ -124,35 +145,50 @@
       "title": "Tools for the journey",
       "icon": "sophisticatedbackpacks:backpack",
       "shape": "hexagon",
-      "size": 1.25d,
-      "x": 6.0d,
-      "y": 0.0d,
+      "size": 1.25,
+      "x": 6.0,
+      "y": 0.0,
       "description": [
         "Build a Sophisticated Backpack, prepare a good food supply, and place a Waystone at home.",
         "",
         "This is the point where your starter camp becomes a real base. Plan separate areas for industry, livestock, magic, storage, and your future colony.",
         "",
-        "Tick the checkmark when your travel kit is ready, then claim the final starter reward."
+        "",
+        "&eItem requirement:&r Carry the listed items in your inventory while this quest is unlocked. Items are detected and kept; placed blocks must be picked up for detection.",
+        "The build instructions above are practical goals; inventory detection does not verify a shelter, chunk claim, running machine, or train schedule.",
+        "",
+        "Rewards: one random material bundle and one random provision bundle, plus the listed XP. Common supplies have higher odds; each reward can be claimed once."
       ],
       "tasks": [
         {
           "id": "17942A0FF8BF986E",
-          "title": "My travel kit is ready",
-          "type": "checkmark"
+          "type": "item",
+          "item": "sophisticatedbackpacks:backpack",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
+        },
+        {
+          "id": "76499379352C8F2F",
+          "type": "item",
+          "item": "waystones:waystone",
+          "count": 1,
+          "consume_items": false,
+          "only_from_crafting": false,
+          "match_nbt": false
         }
       ],
       "rewards": [
         {
           "id": "A019000000000301",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:diamond" },
-          "count": 2
+          "type": "random",
+          "table_id": 7683147561363832834L
         },
         {
           "id": "A019000000000302",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:golden_carrot" },
-          "count": 8
+          "type": "random",
+          "table_id": 7683147561363832833L
         },
         {
           "id": "A019000000000303",

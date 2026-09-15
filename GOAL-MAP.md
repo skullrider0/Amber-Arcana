@@ -1,5 +1,18 @@
 # Amber & Arcana Goal Map
 
+## Session 2026-09-15 — AA-006 quest repair
+
+- Priority: user confirms recipe/tag fixes and requests quest work next.
+- Baseline: current main 0ddd809, pack 0.1.9-20; earlier 0.1.9-15 notes below are historical.
+- Changes: repaired nine quests in Welcome/Create Engineering, replaced twelve broken
+  item rewards with five themed weighted tables, and added non-consuming item tasks.
+- Preserved: existing IDs, dependencies, XP, mod set and recipe/tag fixes.
+- Validation: quest parser/reference checks and repository build/validation pass.
+- Runtime evidence: pending paired client/server in-game testing; do not claim runtime completion.
+- Result: reviewable quest-repair candidate; remaining 23 chapters are not finished.
+- Exact next action: apply quest overlay and test item detection, random claims and progress persistence.
+- Details: [quest requirements, reward odds, evidence and installation](docs/quest-repair-AA-006.md).
+
 ## Active update — 2026-09-15 / AA-004
 
 Current diagnostic release: **0.1.9-15**, Minecraft 1.20.1 / Forge 47.4.10 / Java 17.
