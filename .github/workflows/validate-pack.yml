@@ -31,11 +31,25 @@ jobs:
       - name: Apply 0.1.9-19 server JEI and Crafty overlay
         run: python3 scripts/hotfix-server-jei-0.1.9-19.py
 
-      - name: Apply 0.1.9-21 More Hitboxes dependency restore
+      - name: Apply 0.1.9-21 More Hitboxes dependency baseline
         run: python3 scripts/hotfix-restore-more-hitboxes-0.1.9-21.py
 
-      - name: Normalize 0.1.9-21 validation version
-        run: sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-21/g' scripts/validate.sh
+      - name: Stage client-safe More Hitboxes performance jar
+        shell: bash
+        run: |
+          set -euo pipefail
+          jar='morehitboxes-forge-1.20.1-1.9.2.1.jar'
+          source="vendor/morehitboxes/1.9.2.1/$jar"
+          test -f "$source"
+          mkdir -p client/overrides/mods server/mods
+          cp "$source" "client/overrides/mods/$jar"
+          cp "$source" "server/mods/$jar"
+
+      - name: Apply 0.1.9-22 More Hitboxes performance release
+        run: python3 scripts/hotfix-morehitboxes-perf-0.1.9-22.py
+
+      - name: Normalize 0.1.9-22 validation version
+        run: sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-22/g' scripts/validate.sh
 
       - name: Build client and server distributions
         run: bash scripts/build.sh
