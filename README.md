@@ -2,6 +2,10 @@
 
 Amber & Arcana is a Forge 1.20.1 modpack maintained as matching CurseForge client and Crafty 4 dedicated-server packages.
 
+## Direct downloads
+
+[⬇️ Download Client 0.1.9-14](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-14-Client.zip) · [⬇️ Download Crafty Server 0.1.9-14](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-14-Server.zip)
+
 ## Current release
 
 | Component | Version |
