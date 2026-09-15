@@ -77,3 +77,5 @@ Static validation checks client/server quest parity, recipe/tag compatibility da
 ## More Hitboxes performance investigation
 
 More Hitboxes 1.9.2 has no per-mod or per-entity whitelist and no valid `fossils_only` option. Its Forge `Level` entity-query hooks are global. The 1.9.2.1 patch reduces unnecessary work without removing multipart Fossils support, but a fresh 60-second Spark profile is still required to quantify the improvement under the same laggy workload.
+
+Historical More Hitboxes note (0.1.9-21): stock 1.9.2 was temporarily restored only to satisfy the Fossils dependency; it is superseded by the client-safe 1.9.2.1 performance patch in 0.1.9-22.
