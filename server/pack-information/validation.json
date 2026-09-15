@@ -1,5 +1,5 @@
 {
-  "mod_files": 275,
+  "mod_files": 276,
   "shader_files": 1,
   "chapters": 25,
   "manual_quests": 106,
@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-20",
+  "pack_version": "0.1.9-21",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -118,6 +118,19 @@
     "filename": "morehitboxes-forge-1.20.1-1.9.2.jar",
     "client_and_server": true,
     "stale_jar_cleanup": true,
+    "runtime_retest_required": true,
+    "superseded_by": "0.1.9-21"
+  },
+  "more_hitboxes_restore_0_1_9_21": {
+    "restored": true,
+    "project_id": 1115989,
+    "file_id": 6942239,
+    "version": "1.9.2",
+    "filename": "morehitboxes-forge-1.20.1-1.9.2.jar",
+    "client_and_server": true,
+    "required_by": "Fossils and Archeology Revival 9.3.4.0",
+    "fossils_only_config_available": false,
+    "upstream_behavior": "More Hitboxes 1.9.2 has no per-mod/entity whitelist; Forge Level entity-query mixins remain global",
     "runtime_retest_required": true
   }
 }

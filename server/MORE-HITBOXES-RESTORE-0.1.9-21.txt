@@ -1,0 +1,14 @@
+Amber & Arcana 0.1.9-21 — More Hitboxes restored
+
+Restored mod: More Hitboxes 1.9.2
+CurseForge project: 1115989
+CurseForge file: 6942239
+Jar: morehitboxes-forge-1.20.1-1.9.2.jar
+Sides: client + dedicated server
+Required by: Fossils and Archeology Revival 9.3.4.0
+
+Configuration check:
+More Hitboxes 1.9.2 does not expose a per-mod or per-entity whitelist and has no valid `fossils_only` option. The Forge Level entity-query mixins are global, so limiting their performance cost to only Fossils mobs cannot be done through configuration.
+
+Recommended verification after deployment:
+Run a fresh 60-second Spark slow-tick profile and compare the More Hitboxes Level mixin/entity-query cost to the 0.1.9-20 baseline.

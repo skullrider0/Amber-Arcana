@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9-21 — Restore More Hitboxes dependency
+
+- Restore More Hitboxes 1.9.2 (CurseForge 1115989:6942239) on client and dedicated server.
+- Remove `morehitboxes-forge-1.20.1-1.9.2.jar` from Crafty's stale-mod deletion list.
+- Restore the exact pre-0.1.9-20 download metadata and checksum.
+- Confirm upstream More Hitboxes 1.9.2 has no per-mod/entity whitelist or `fossils_only` config option; no nonfunctional config is added.
+- Fossils and Archeology Revival 9.3.4.0 remains the dependency requiring More Hitboxes.
+- Runtime Spark re-profile is still required because the upstream Forge Level entity-query mixins are global.
+
 ## 0.1.9-20 — More Hitboxes performance removal
 
 - Remove More Hitboxes 1.9.2 from both client and dedicated server.

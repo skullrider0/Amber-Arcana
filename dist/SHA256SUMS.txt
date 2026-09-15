@@ -1,2 +1,2 @@
-3c764489075d154385362598e5be7ebc655b8b5b17c59b3d7458c9c4d133cb2d  Amber-and-Arcana-0.1.9-20-Client.zip
-9c8074e652610693141cfbfa5e56008f759ceeb806ec35981215a5e06dcc9523  Amber-and-Arcana-0.1.9-20-Server.zip
+7b2fe9f65171f54dc1a02ac4974dc275a5fd4a01dd0952c2c21e8c237e9c4d5c  Amber-and-Arcana-0.1.9-21-Client.zip
+30262b5790e35b747ad9fc1ce774b99470ad1eaaffec04f93716998e38e0c90b  Amber-and-Arcana-0.1.9-21-Server.zip

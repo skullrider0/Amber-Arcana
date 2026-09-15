@@ -11,15 +11,15 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-20" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-20" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247 and .performance_fix_0_1_9_20.more_hitboxes_removed == true' "$validation" >/dev/null
+jq -e '.version == "0.1.9-21" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-21" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
 test "$manifest_count" = "$recorded_count" || { echo "Manifest count differs from build summary" >&2; exit 1; }
 
 test "$(jq '[.files[] | select(.projectID == 238222 and .fileID == 6075247)] | length' "$manifest")" = "1" || { echo "Expected JEI 15.20.0.106 client pin" >&2; exit 1; }
-for removed_project in 310111 521393 388800 628539 544031 430127 255717 227639 1115989; do
+for removed_project in 310111 521393 388800 628539 544031 430127 255717 227639; do
   test "$(jq --argjson id "$removed_project" '[.files[] | select(.projectID == $id)] | length' "$manifest")" = "0" || { echo "Removed project still present: $removed_project" >&2; exit 1; }
 done
 
@@ -29,11 +29,12 @@ if rg -i 'polymorph|roughlyenoughitems|roughly_enough_items|reiplugincompatibili
 fi
 test "$(awk -F '\t' '$4 == "jei" && $1 == "6075247" && $2 == "jei-1.20.1-forge-15.20.0.106.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected matching JEI 15.20.0.106 on server" >&2; exit 1; }
 
-if rg -i 'morehitboxes|more-hitboxes' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null; then
-  echo "More Hitboxes still present in server mod list" >&2
+test "$(jq '[.files[] | select(.projectID == 1115989 and .fileID == 6942239)] | length' "$manifest")" = "1" || { echo "Expected More Hitboxes 1.9.2 client pin" >&2; exit 1; }
+test "$(awk -F '\t' '$4 == "more-hitboxes" && $1 == "6942239" && $2 == "morehitboxes-forge-1.20.1-1.9.2.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected More Hitboxes 1.9.2 on server" >&2; exit 1; }
+if grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' "$repo_dir/server/_crafty/remove-mods.txt"; then
+  echo "More Hitboxes is still scheduled for Crafty deletion" >&2
   exit 1
 fi
-grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "More Hitboxes stale-jar cleanup missing" >&2; exit 1; }
 
 grep -Fxq 'twilightforest-1.20.1-4.3.2508-universal.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Twilight Forest stale-jar cleanup missing" >&2; exit 1; }
 
@@ -65,4 +66,4 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-20 static validation passed"
+echo "Amber & Arcana 0.1.9-21 static validation passed"

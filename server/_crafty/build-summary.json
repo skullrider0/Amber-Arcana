@@ -1,17 +1,17 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-20",
+  "pack_version": "0.1.9-21",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 276,
-  "mod_metadata_entries": 277,
-  "server_mod_downloads": 256,
+  "manifest_entries": 277,
+  "mod_metadata_entries": 276,
+  "server_mod_downloads": 257,
   "excluded_mod_jars": 19,
   "excluded_shader_entries": 1,
   "compatibility_fix": "More Hitboxes retained; Colorwheel excluded because it requires Oculus on dedicated server.",
   "runtime_fix": "Prefer Java 17 automatically; force Spark background profiler engine to built-in Java sampler to avoid native async-profiler crashes.",
   "compatibility_fix_v3": "Wiki Zoomer 1.3.0 restored to dedicated-server mod list so its registered content remains present after registry sync; fixes client NPE wikizoomer:item_zoomer.",
-  "server_mod_count": 256,
+  "server_mod_count": 257,
   "optimization_0_1_9": {
     "spark_background_profiler": false,
     "view_distance": 8,
@@ -143,6 +143,19 @@
     "filename": "morehitboxes-forge-1.20.1-1.9.2.jar",
     "reason": "Spark slow-tick profile showed More Hitboxes entity-query mixin dominating server-thread time",
     "client_and_server": true,
-    "crafty_stale_jar_cleanup": true
+    "crafty_stale_jar_cleanup": true,
+    "superseded_by": "0.1.9-21"
+  },
+  "more_hitboxes_restore_0_1_9_21": {
+    "restored": true,
+    "project_id": 1115989,
+    "file_id": 6942239,
+    "version": "1.9.2",
+    "filename": "morehitboxes-forge-1.20.1-1.9.2.jar",
+    "client_and_server": true,
+    "required_by": "Fossils and Archeology Revival 9.3.4.0",
+    "fossils_only_config_available": false,
+    "upstream_behavior": "More Hitboxes 1.9.2 has no per-mod/entity whitelist; Forge Level entity-query mixins remain global",
+    "runtime_retest_required": true
   }
 }
