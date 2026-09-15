@@ -1,247 +1,226 @@
 {
-  "id": "0C5565DC7663F603",
-  "filename": "create_engineering",
-  "title": "Create Engineering",
-  "icon": "create:mechanical_press",
-  "order_index": 10,
-  "group": "",
-  "default_quest_shape": "hexagon",
-  "quests": [
-    {
-      "id": "1ED63F4805934997",
-      "title": "First rotation",
-      "icon": "create:water_wheel",
-      "shape": "hexagon",
-      "size": 1.15d,
-      "x": 0.0d,
-      "y": 0.0d,
-      "description": [
-        "&6Turn motion into useful work.&r",
-        "",
-        "Build a Water Wheel or Windmill Bearing, then carry its rotation through shafts and cogwheels to a Mechanical Press.",
-        "",
-        "Use Create's Ponder scenes to inspect unfamiliar blocks. Wear Engineer's Goggles and watch the stress readout before adding more machines.",
-        "",
-        "Tick the checkmark after the press completes its first operation."
-      ],
-      "tasks": [
-        {
-          "id": "17597223D8AA140A",
-          "title": "My first powered press works",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019120000000101",
-          "type": "item",
-          "item": { "count": 1, "id": "create:andesite_alloy" },
-          "count": 8
-        },
-        {
-          "id": "A019120000000102",
-          "type": "xp",
-          "xp": 100
-        }
-      ]
-    },
-    {
-      "id": "49A0DF8BF8B13288",
-      "title": "A processing line",
-      "icon": "create:belt_connector",
-      "shape": "hexagon",
-      "size": 1.15d,
-      "x": 3.0d,
-      "y": 0.0d,
-      "description": [
-        "Connect a belt-fed line that performs at least two operations: washing, pressing, mixing, compacting, or bulk smelting.",
-        "",
-        "Place an input chest and an output buffer. Add funnels or filters so unfinished materials cannot loop back into the wrong machine.",
-        "",
-        "Run a full stack through the line, then tick the checkmark."
-      ],
-      "tasks": [
-        {
-          "id": "0DFA213F45F74EFE",
-          "title": "A full stack processed correctly",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019120000000201",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:iron_ingot" },
-          "count": 12
-        },
-        {
-          "id": "A019120000000202",
-          "type": "xp",
-          "xp": 150
-        }
-      ],
-      "dependencies": [
-        "1ED63F4805934997"
-      ]
-    },
-    {
-      "id": "2B415B8CDDC3ACFF",
-      "title": "Precision mechanisms",
-      "icon": "create:precision_mechanism",
-      "shape": "hexagon",
-      "size": 1.15d,
-      "x": 6.0d,
-      "y": 0.0d,
-      "description": [
-        "Build a sequenced assembly line for Precision Mechanisms and power a Deployer from the same workshop.",
-        "",
-        "Use JEI to confirm every assembly step. Give the incomplete mechanism a return path, but stop the belt when its output storage is full.",
-        "",
-        "Successfully produce several mechanisms before claiming the reward."
-      ],
-      "tasks": [
-        {
-          "id": "5330479A28BDAE3F",
-          "title": "My sequenced assembly is reliable",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019120000000301",
-          "type": "item",
-          "item": { "count": 1, "id": "create:brass_ingot" },
-          "count": 6
-        },
-        {
-          "id": "A019120000000302",
-          "type": "xp",
-          "xp": 200
-        }
-      ],
-      "dependencies": [
-        "49A0DF8BF8B13288"
-      ]
-    },
-    {
-      "id": "6A19120000000401",
-      "title": "Steam under control",
-      "icon": "create:steam_engine",
-      "shape": "hexagon",
-      "size": 1.15d,
-      "x": 6.0d,
-      "y": 3.0d,
-      "description": [
-        "Build a small Steam Engine installation with a dependable water supply. Keep heat sources accessible and protect nearby wood, animals, and colony buildings.",
-        "",
-        "Add a clutch, gearshift, or another deliberate shutdown control before connecting the engine to your main network.",
-        "",
-        "Run it under load and confirm the water supply remains stable."
-      ],
-      "tasks": [
-        {
-          "id": "6A19120000000402",
-          "title": "The engine runs safely under load",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019120000000401",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:copper_block" },
-          "count": 4
-        },
-        {
-          "id": "A019120000000402",
-          "type": "xp",
-          "xp": 250
-        }
-      ],
-      "dependencies": [
-        "2B415B8CDDC3ACFF"
-      ]
-    },
-    {
-      "id": "42BD2E092F753492",
-      "title": "Rails and schedules",
-      "icon": "create:track_station",
-      "shape": "hexagon",
-      "size": 1.15d,
-      "x": 3.0d,
-      "y": 3.0d,
-      "description": [
-        "Build a railway between your base and a useful outpost. Place stations at both ends and give the train a working schedule.",
-        "",
-        "Use Steam 'n' Rails where it improves the route, but test signals and junctions with an empty train before carrying players or valuable cargo.",
-        "",
-        "Complete one automatic round trip, then tick the checkmark."
-      ],
-      "tasks": [
-        {
-          "id": "266DB38DB0AF235D",
-          "title": "My train completed a scheduled trip",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019120000000501",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:powered_rail" },
-          "count": 16
-        },
-        {
-          "id": "A019120000000502",
-          "type": "xp",
-          "xp": 300
-        }
-      ],
-      "dependencies": [
-        "6A19120000000401"
-      ]
-    },
-    {
-      "id": "6A19120000000601",
-      "title": "A reliable factory",
-      "icon": "create:brass_casing",
-      "shape": "hexagon",
-      "size": 1.25d,
-      "x": 0.0d,
-      "y": 3.0d,
-      "description": [
-        "&6Bring the workshop together.&r",
-        "",
-        "Connect one renewable input, a multi-step processing line, safe power, and organized output storage. Label emergency stops and leave maintenance access around moving parts.",
-        "",
-        "Let the factory run long enough to fill an output buffer. Confirm that full storage stops or diverts production without spilling items into the world.",
-        "",
-        "Tick the final checkmark when another player could understand and safely operate the system."
-      ],
-      "tasks": [
-        {
-          "id": "6A19120000000602",
-          "title": "The factory survives a full-buffer test",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019120000000601",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:diamond" },
-          "count": 2
-        },
-        {
-          "id": "A019120000000602",
-          "type": "xp",
-          "xp": 400
-        }
-      ],
-      "dependencies": [
-        "42BD2E092F753492"
-      ]
-    }
-  ],
-  "quest_links": []
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "create_engineering"
+	group: ""
+	icon: "create:mechanical_press"
+	id: "0C5565DC7663F603"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&6Turn motion into useful work.&r"
+				""
+				"Build a Water Wheel or Windmill Bearing, then carry its rotation through shafts and cogwheels to a Mechanical Press."
+				""
+				"Use Create's Ponder scenes to inspect unfamiliar blocks. Wear Engineer's Goggles and watch the stress readout before adding more machines."
+				""
+				"Tick the checkmark after the press completes its first operation."
+			]
+			icon: "create:water_wheel"
+			id: "1ED63F4805934997"
+			rewards: [
+				{
+					count: 8
+					id: "4CF5E9DE1697B136"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+				{
+					id: "46F12E8E436F654A"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "17597223D8AA140A"
+				title: "My first powered press works"
+				type: "checkmark"
+			}]
+			title: "First rotation"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1ED63F4805934997"]
+			description: [
+				"Connect a belt-fed line that performs at least two operations: washing, pressing, mixing, compacting, or bulk smelting."
+				""
+				"Place an input chest and an output buffer. Add funnels or filters so unfinished materials cannot loop back into the wrong machine."
+				""
+				"Run a full stack through the line, then tick the checkmark."
+			]
+			icon: "create:belt_connector"
+			id: "49A0DF8BF8B13288"
+			rewards: [
+				{
+					count: 12
+					id: "09EE1EC0A7BD54FA"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "3D5BF33CC799EF27"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "0DFA213F45F74EFE"
+				title: "A full stack processed correctly"
+				type: "checkmark"
+			}]
+			title: "A processing line"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["49A0DF8BF8B13288"]
+			description: [
+				"Build a sequenced assembly line for Precision Mechanisms and power a Deployer from the same workshop."
+				""
+				"Use JEI to confirm every assembly step. Give the incomplete mechanism a return path, but stop the belt when its output storage is full."
+				""
+				"Successfully produce several mechanisms before claiming the reward."
+			]
+			icon: "create:precision_mechanism"
+			id: "2B415B8CDDC3ACFF"
+			rewards: [
+				{
+					count: 6
+					id: "7F94B72F2CF7FCC2"
+					item: "create:brass_ingot"
+					type: "item"
+				}
+				{
+					id: "02B62428010B71D8"
+					type: "xp"
+					xp: 200
+				}
+			]
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "5330479A28BDAE3F"
+				title: "My sequenced assembly is reliable"
+				type: "checkmark"
+			}]
+			title: "Precision mechanisms"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2B415B8CDDC3ACFF"]
+			description: [
+				"Build a small Steam Engine installation with a dependable water supply. Keep heat sources accessible and protect nearby wood, animals, and colony buildings."
+				""
+				"Add a clutch, gearshift, or another deliberate shutdown control before connecting the engine to your main network."
+				""
+				"Run it under load and confirm the water supply remains stable."
+			]
+			icon: "create:steam_engine"
+			id: "6A19120000000401"
+			rewards: [
+				{
+					count: 4
+					id: "682E10436449AE71"
+					item: "minecraft:copper_block"
+					type: "item"
+				}
+				{
+					id: "66FEA6BC6A22BF7D"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "6A19120000000402"
+				title: "The engine runs safely under load"
+				type: "checkmark"
+			}]
+			title: "Steam under control"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6A19120000000401"]
+			description: [
+				"Build a railway between your base and a useful outpost. Place stations at both ends and give the train a working schedule."
+				""
+				"Use Steam 'n' Rails where it improves the route, but test signals and junctions with an empty train before carrying players or valuable cargo."
+				""
+				"Complete one automatic round trip, then tick the checkmark."
+			]
+			icon: "create:track_station"
+			id: "42BD2E092F753492"
+			rewards: [
+				{
+					count: 16
+					id: "65EA8FA9B022DFAF"
+					item: "minecraft:powered_rail"
+					type: "item"
+				}
+				{
+					id: "4BFDAFBF94A53AD6"
+					type: "xp"
+					xp: 300
+				}
+			]
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "266DB38DB0AF235D"
+				title: "My train completed a scheduled trip"
+				type: "checkmark"
+			}]
+			title: "Rails and schedules"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["42BD2E092F753492"]
+			description: [
+				"&6Bring the workshop together.&r"
+				""
+				"Connect one renewable input, a multi-step processing line, safe power, and organized output storage. Label emergency stops and leave maintenance access around moving parts."
+				""
+				"Let the factory run long enough to fill an output buffer. Confirm that full storage stops or diverts production without spilling items into the world."
+				""
+				"Tick the final checkmark when another player could understand and safely operate the system."
+			]
+			icon: "create:brass_casing"
+			id: "6A19120000000601"
+			rewards: [
+				{
+					count: 2
+					id: "0F84366908588733"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "38C4AF77A33A2944"
+					type: "xp"
+					xp: 400
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [{
+				id: "6A19120000000602"
+				title: "The factory survives a full-buffer test"
+				type: "checkmark"
+			}]
+			title: "A reliable factory"
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	title: "Create Engineering"
 }

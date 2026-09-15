@@ -1,169 +1,158 @@
 {
-  "id": "7A75E60D69EFBD95",
-  "filename": "getting_started",
-  "title": "Welcome to Amber \& Arcana",
-  "icon": {
-    Count: 1
-    id: "ftbquests:custom_icon"
-    tag: {
-      Icon: "amber_arcana:textures/gui/amber_arcana.png"
-    }
-  },
-  "order_index": 9,
-  "group": "",
-  "default_quest_shape": "hexagon",
-  "images": [
-    {
-      "height": 3.0d,
-      "image": "amber_arcana:textures/gui/amber_arcana.png",
-      "order": -1,
-      "rotation": 0.0d,
-      "width": 3.0d,
-      "x": 3.0d,
-      "y": -3.0d
-    }
-  ],
-  "quests": [
-    {
-      "id": "5DF2CA9EF5F2B2D4",
-      "title": "Make a home",
-      "icon": "minecraft:crafting_table",
-      "shape": "hexagon",
-      "size": 1.25d,
-      "x": 0.0d,
-      "y": 0.0d,
-      "description": [
-        "&6Welcome to Amber \& Arcana!&r",
-        "",
-        "Gather wood, stone, food, and a bed. Build a safe shelter and use JEI to look up recipes.",
-        "",
-        "&bUseful commands:&r /sethome base, /home base, and /delhome base. FTB Essentials provides these commands; the default limit is one home.",
-        "",
-        "When your first shelter is ready, tick the checkmark below and claim your starter supplies."
-      ],
-      "tasks": [
-        {
-          "id": "2F41ECE28F26D89D",
-          "title": "I have a safe first home",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019000000000101",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:torch" },
-          "count": 16
-        },
-        {
-          "id": "A019000000000102",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:bread" },
-          "count": 8
-        },
-        {
-          "id": "A019000000000103",
-          "type": "xp",
-          "xp": 100
-        }
-      ]
-    },
-    {
-      "id": "3FEA10D47DFED5ED",
-      "title": "Claim your workshop",
-      "icon": {
-        Count: 1
-        id: "ftbquests:custom_icon"
-        tag: {
-          Icon: "ftbchunks:textures/waypoint_home.png"
-        }
-      },
-      "shape": "hexagon",
-      "size": 1.25d,
-      "x": 3.0d,
-      "y": 0.0d,
-      "description": [
-        "Create an FTB Team and claim the chunks around your home with the FTB Chunks map.",
-        "",
-        "Claims protect your base and make it much easier to organize a multiplayer settlement. Coordinate claims with friends before building shared factories.",
-        "",
-        "Tick the checkmark once your workshop area is claimed."
-      ],
-      "tasks": [
-        {
-          "id": "5B6E6989BFA3A123",
-          "title": "My workshop is claimed",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019000000000201",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:iron_ingot" },
-          "count": 8
-        },
-        {
-          "id": "A019000000000202",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:compass" },
-          "count": 1
-        },
-        {
-          "id": "A019000000000203",
-          "type": "xp",
-          "xp": 150
-        }
-      ],
-      "dependencies": [
-        "5DF2CA9EF5F2B2D4"
-      ]
-    },
-    {
-      "id": "5DF5A47BBDCD9172",
-      "title": "Tools for the journey",
-      "icon": "sophisticatedbackpacks:backpack",
-      "shape": "hexagon",
-      "size": 1.25d,
-      "x": 6.0d,
-      "y": 0.0d,
-      "description": [
-        "Build a Sophisticated Backpack, prepare a good food supply, and place a Waystone at home.",
-        "",
-        "This is the point where your starter camp becomes a real base. Plan separate areas for industry, livestock, magic, storage, and your future colony.",
-        "",
-        "Tick the checkmark when your travel kit is ready, then claim the final starter reward."
-      ],
-      "tasks": [
-        {
-          "id": "17942A0FF8BF986E",
-          "title": "My travel kit is ready",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "A019000000000301",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:diamond" },
-          "count": 2
-        },
-        {
-          "id": "A019000000000302",
-          "type": "item",
-          "item": { "count": 1, "id": "minecraft:golden_carrot" },
-          "count": 8
-        },
-        {
-          "id": "A019000000000303",
-          "type": "xp",
-          "xp": 250
-        }
-      ],
-      "dependencies": [
-        "3FEA10D47DFED5ED"
-      ]
-    }
-  ],
-  "quest_links": []
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "getting_started"
+	group: ""
+	icon: {
+		Count: 1
+		id: "ftbquests:custom_icon"
+		tag: {
+			Icon: "amber_arcana:textures/gui/amber_arcana.png"
+		}
+	}
+	id: "7A75E60D69EFBD95"
+	images: [{
+		height: 3.0d
+		image: "amber_arcana:textures/gui/amber_arcana.png"
+		order: -1
+		rotation: 0.0d
+		width: 3.0d
+		x: 3.0d
+		y: -3.0d
+	}]
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{\"text\":\"Welcome to Amber & Arcana!\",\"color\":\"gold\"}"
+				""
+				"Gather wood, stone, food, and a bed. Build a safe shelter and use JEI to look up recipes."
+				""
+				"&bUseful commands:&r /sethome base, /home base, and /delhome base. FTB Essentials provides these commands; the default limit is one home."
+				""
+				"When your first shelter is ready, tick the checkmark below and claim your starter supplies."
+			]
+			icon: "minecraft:crafting_table"
+			id: "5DF2CA9EF5F2B2D4"
+			rewards: [
+				{
+					count: 16
+					id: "2FF2D4D2D22AD02C"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "2C1CB2ECC61A552D"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					id: "1B38D08E81E3421C"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [{
+				id: "2F41ECE28F26D89D"
+				title: "I have a safe first home"
+				type: "checkmark"
+			}]
+			subtitle: "Build your first safe shelter and claim starter supplies."
+			title: "Make a home"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5DF2CA9EF5F2B2D4"]
+			description: [
+				"Create an FTB Team and claim the chunks around your home with the FTB Chunks map."
+				""
+				"Claims protect your base and make it much easier to organize a multiplayer settlement. Coordinate claims with friends before building shared factories."
+				""
+				"Tick the checkmark once your workshop area is claimed."
+			]
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "ftbchunks:textures/waypoint_home.png"
+				}
+			}
+			id: "3FEA10D47DFED5ED"
+			rewards: [
+				{
+					count: 8
+					id: "209257B7895B39A7"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "29E85E4C0B45F181"
+					item: "minecraft:compass"
+					type: "item"
+				}
+				{
+					id: "49A6A0F4F9AF98FF"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [{
+				id: "5B6E6989BFA3A123"
+				title: "My workshop is claimed"
+				type: "checkmark"
+			}]
+			title: "Claim your workshop"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3FEA10D47DFED5ED"]
+			description: [
+				"Build a Sophisticated Backpack, prepare a good food supply, and place a Waystone at home."
+				""
+				"This is the point where your starter camp becomes a real base. Plan separate areas for industry, livestock, magic, storage, and your future colony."
+				""
+				"Tick the checkmark when your travel kit is ready, then claim the final starter reward."
+			]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "5DF5A47BBDCD9172"
+			rewards: [
+				{
+					count: 2
+					id: "08A5C71845022AF8"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "7EB3152EAE3383D1"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "3A004943184A469D"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [{
+				id: "17942A0FF8BF986E"
+				title: "My travel kit is ready"
+				type: "checkmark"
+			}]
+			title: "Tools for the journey"
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+	title: "{\"text\":\"Welcome to Amber & Arcana\"}"
 }

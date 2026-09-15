@@ -1,0 +1,15 @@
+{
+	icon: "minecraft:iron_ingot"
+	id: "6AA0060000000002"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{ count: 8, item: "minecraft:iron_ingot", weight: 35.0f }
+		{ count: 12, item: "minecraft:copper_ingot", weight: 30.0f }
+		{ count: 12, item: "minecraft:coal", weight: 20.0f }
+		{ count: 8, item: "minecraft:redstone", weight: 10.0f }
+		{ count: 4, item: "minecraft:gold_ingot", weight: 5.0f }
+	]
+	title: "Starter workshop materials"
+	use_title: true
+}

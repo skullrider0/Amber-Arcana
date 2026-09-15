@@ -1,0 +1,15 @@
+{
+	icon: "create:brass_ingot"
+	id: "6AA0060000000004"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ count: 8, item: "create:brass_ingot", weight: 35.0f }
+		{ count: 4, item: "create:electron_tube", weight: 25.0f }
+		{ count: 4, item: "create:brass_casing", weight: 20.0f }
+		{ count: 2, item: "create:brass_funnel", weight: 15.0f }
+		{ count: 2, item: "create:sturdy_sheet", weight: 5.0f }
+	]
+	title: "Create precision supplies"
+	use_title: true
+}
