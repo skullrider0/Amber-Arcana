@@ -1,19 +1,44 @@
-name: Validate pack
+name: Build and validate pack
 
 on:
   push:
     branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  static-validation:
+  build-and-validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install validation tools
-        run: sudo apt-get update && sudo apt-get install -y jq ripgrep unzip
+        with:
+          fetch-depth: 0
+
+      - name: Install build and validation tools
+        run: sudo apt-get update && sudo apt-get install -y jq ripgrep unzip zip
+
+      - name: Apply idempotent Mekanism JEI compatibility hotfix
+        run: python3 scripts/hotfix-jei-mekanism-compat.py
+
+      - name: Build client and server distributions
+        run: bash scripts/build.sh
+
       - name: Validate sources and release archives
         run: bash scripts/validate.sh
+
+      - name: Publish rebuilt distributions to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Release files already current."
+            exit 0
+          fi
+          version="$(jq -r '.version' client/manifest.json)"
+          git commit -m "Publish Amber & Arcana ${version} [skip ci]"
+          git push origin HEAD:main
