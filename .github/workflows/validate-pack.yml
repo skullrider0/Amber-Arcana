@@ -41,7 +41,7 @@ jobs:
         run: bash scripts/build.sh
 
       - name: Validate sources and release archives
-        run: bash -x scripts/validate.sh
+        run: bash scripts/validate.sh
 
       - name: Publish rebuilt distributions to main
         shell: bash
