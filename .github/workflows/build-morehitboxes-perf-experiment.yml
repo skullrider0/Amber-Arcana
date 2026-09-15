@@ -5,7 +5,7 @@ on:
     branches:
       - experiment/morehitboxes-perf-v1
     paths:
-      - patches/morehitboxes-1.9.2-performance-v1.patch
+      - patches/morehitboxes-1.9.2-performance-v1/**
       - .github/workflows/build-morehitboxes-perf-experiment.yml
   workflow_dispatch:
 
@@ -35,16 +35,20 @@ jobs:
           test "$(git rev-parse HEAD)" = "bbe929da2bb5480e83ba266bf3138e431f196d3f"
           grep -Fxq 'mod_version=1.9.2' gradle.properties
 
-      - name: Apply performance patch
+      - name: Install performance source overrides
         shell: bash
         run: |
           set -euo pipefail
+          cp patches/morehitboxes-1.9.2-performance-v1/LevelMixin.java \
+            upstream-morehitboxes/forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
+          cp patches/morehitboxes-1.9.2-performance-v1/MultiPart.java \
+            upstream-morehitboxes/common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
           cd upstream-morehitboxes
-          git apply --check ../patches/morehitboxes-1.9.2-performance-v1.patch
-          git apply ../patches/morehitboxes-1.9.2-performance-v1.patch
           sed -i 's/^mod_version=.*/mod_version=1.9.2.1/' gradle.properties
+          grep -Fq 'Reject distant parts before doing' forge/src/main/java/com/github/darkpred/morehitboxes/mixin/LevelMixin.java
+          grep -Fq 'calculated hitbox position is exactly unchanged' common/src/main/java/com/github/darkpred/morehitboxes/api/MultiPart.java
           git diff --check
-          git diff
+          git diff --stat
 
       - name: Build Forge jar
         shell: bash
@@ -57,10 +61,11 @@ jobs:
           find forge/build/libs -maxdepth 1 -type f -name '*.jar' \
             ! -name '*sources*' ! -name '*javadoc*' -print -exec cp {} ../out/ \;
           test -n "$(find ../out -maxdepth 1 -type f -name '*.jar' -print -quit)"
+          sha256sum ../out/*.jar | tee ../out/SHA256SUMS.txt
 
       - name: Upload patched jar
         uses: actions/upload-artifact@v4
         with:
           name: morehitboxes-1.9.2.1-amber-perf-v1
-          path: out/*.jar
+          path: out/*
           if-no-files-found: error
