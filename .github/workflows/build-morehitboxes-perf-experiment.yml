@@ -159,6 +159,17 @@ jobs:
           ! grep -Fq $'6942239\tmorehitboxes-forge-1.20.1-1.9.2.jar\t' server/_crafty/server-mods.tsv
           grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' server/_crafty/remove-mods.txt
 
+      - name: Persist tested client-safe jar for pack releases
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST='vendor/morehitboxes/1.9.2.1'
+          mkdir -p "$DEST"
+          cp out/morehitboxes-forge-1.20.1-1.9.2.1.jar "$DEST/"
+          cp upstream-morehitboxes/LICENSE vendor/morehitboxes/LICENSE-DarkPred-MoreHitboxes.txt
+          sha256sum "$DEST/morehitboxes-forge-1.20.1-1.9.2.1.jar" > "$DEST/SHA256SUMS.txt"
+          sha512sum "$DEST/morehitboxes-forge-1.20.1-1.9.2.1.jar" > "$DEST/SHA512SUMS.txt"
+
       - name: Build Crafty beta overlay
         shell: bash
         run: |
@@ -170,15 +181,15 @@ jobs:
           cp out/morehitboxes-forge-1.20.1-1.9.2.1.jar crafty-overlay/mods/
           (cd crafty-overlay && zip -qr ../out/Amber-and-Arcana-MoreHitboxes-1.9.2.1-Crafty-Overlay.zip .)
 
-      - name: Commit Crafty pin back to experiment branch
+      - name: Commit tested beta inputs back to experiment branch
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add server/_crafty/server-mods.tsv server/_crafty/remove-mods.txt
+          git add server/_crafty/server-mods.tsv server/_crafty/remove-mods.txt vendor/morehitboxes
           if ! git diff --cached --quiet; then
-            git commit -m 'Pin Crafty to client-safe MoreHitboxes beta [skip ci]'
+            git commit -m 'Persist client-safe MoreHitboxes beta for pack release [skip ci]'
             git push origin HEAD:experiment/morehitboxes-perf-v1
           fi
 
