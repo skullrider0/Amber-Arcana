@@ -152,11 +152,11 @@ def patch_validate_sh() -> None:
 def patch_build() -> None:
     path = ROOT / "scripts/build.sh"
     text = path.read_text(encoding="utf-8")
-    marker = '''(\n  cd "$repo_dir/dist"\n  sha256sum "Amber-and-Arcana-${version}-Client.zip" "Amber-and-Arcana-${version}-Server.zip" > SHA256SUMS.txt\n)'''
     overlay = '''# Small overlay for an existing Crafty server: extract at the server root.\nrm -f "$dist_dir/Amber-and-Arcana-${version}-Crafty-JEI-Overlay.zip"\n(\n  cd "$repo_dir/server"\n  zip -q "$dist_dir/Amber-and-Arcana-${version}-Crafty-JEI-Overlay.zip" _crafty/server-mods.tsv\n)\n\n'''
     if "Crafty-JEI-Overlay.zip" not in text:
+        marker = 'echo "Built Amber & Arcana ${version}"'
         if marker not in text:
-            raise SystemExit("Could not locate checksum block in build.sh")
+            raise SystemExit("Could not locate final build message in build.sh")
         text = text.replace(marker, overlay + marker)
     path.write_text(text, encoding="utf-8")
 
