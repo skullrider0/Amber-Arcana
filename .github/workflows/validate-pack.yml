@@ -22,6 +22,9 @@ jobs:
       - name: Apply idempotent Mekanism JEI compatibility hotfix
         run: python3 scripts/hotfix-jei-mekanism-compat.py
 
+      - name: Apply 0.1.9-17 content cleanup
+        run: python3 scripts/hotfix-content-cleanup-0.1.9-17.py
+
       - name: Build client and server distributions
         run: bash scripts/build.sh
 
