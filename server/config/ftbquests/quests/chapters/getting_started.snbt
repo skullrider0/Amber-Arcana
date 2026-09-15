@@ -56,11 +56,27 @@
 			]
 			shape: "hexagon"
 			size: 1.25d
-			tasks: [{
-				id: "2F41ECE28F26D89D"
-				title: "I have a safe first home"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "C64FBED6194FFC41"
+					item: { count: 1, id: "minecraft:crafting_table" }
+					consume_items: false
+					title: "Obtain: Crafting Table"
+					type: "item"
+				}
+				{
+					id: "37653D5E43D4B7BA"
+					item: { count: 1, id: "minecraft:white_bed" }
+					consume_items: false
+					title: "Obtain: Bed"
+					type: "item"
+				}
+				{
+					id: "2F41ECE28F26D89D"
+					title: "Completed milestone: Make a home"
+					type: "checkmark"
+				}
+			]
 			subtitle: "Build your first safe shelter and claim starter supplies."
 			title: "Make a home"
 			x: 0.0d
@@ -103,11 +119,21 @@
 			]
 			shape: "hexagon"
 			size: 1.25d
-			tasks: [{
-				id: "5B6E6989BFA3A123"
-				title: "My workshop is claimed"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "F0DF27EA8BDE1E35"
+					item: { count: 1, id: "minecraft:map" }
+					consume_items: false
+					title: "Obtain: Claim-planning map"
+					type: "item"
+				}
+				{
+					id: "5B6E6989BFA3A123"
+					title: "Completed milestone: Claim your workshop"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Claim-planning map; then confirm the milestone."
 			title: "Claim your workshop"
 			x: 3.0d
 			y: 0.0d
@@ -144,11 +170,21 @@
 			]
 			shape: "hexagon"
 			size: 1.25d
-			tasks: [{
-				id: "17942A0FF8BF986E"
-				title: "My travel kit is ready"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "E644804A582024C6"
+					item: { count: 1, id: "sophisticatedbackpacks:backpack" }
+					consume_items: false
+					title: "Obtain: Sophisticated Backpack"
+					type: "item"
+				}
+				{
+					id: "17942A0FF8BF986E"
+					title: "Completed milestone: Tools for the journey"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Sophisticated Backpack; then confirm the milestone."
 			title: "Tools for the journey"
 			x: 6.0d
 			y: 0.0d

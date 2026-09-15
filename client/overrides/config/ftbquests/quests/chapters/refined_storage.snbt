@@ -1,64 +1,156 @@
 {
-  "id": "49F444D8188D9792",
-  "filename": "refined_storage",
-  "title": "Refined Storage",
-  "order_index": 13,
-  "group": "",
-  "quests": [
-    {
-      "id": "4AFB3BC1D5AEA04F",
-      "title": "Digital storage",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Build a powered Controller, Grid, Disk Drive, and storage disk. Keep important supplies accessible while you work on the network.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "38ADF6D51852CF9C",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "1453151A6BAA50DA",
-      "title": "Connected production",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Connect importers, exporters, and external storage to one production line. Avoid import/export loops.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "782D7B9D7887D255",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "4AFB3BC1D5AEA04F"
-      ]
-    },
-    {
-      "id": "6F10E04E6E520C5C",
-      "title": "Automatic crafting",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Create patterns and automate one useful component, then expand with the installed Refined Storage addons.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "28E331A629F63940",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "1453151A6BAA50DA"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "refinedstorage:controller"
+	id: "49F444D8188D9792",
+	filename: "refined_storage",
+	title: "Refined Storage",
+	order_index: 13,
+	group: "",
+	quests: [
+		{
+			icon: "refinedstorage:controller"
+			id: "4AFB3BC1D5AEA04F",
+			subtitle: "Requires RS Controller + RS Grid + Disk Drive; then confirm the milestone."
+			title: "Digital storage",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Build a powered Controller, Grid, Disk Drive, and storage disk. Keep important supplies accessible while you work on the network.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "87DEFA9668203004"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "C8192479E08BF0ED"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "77A8ADF59E2DF572"
+					item: { count: 1, id: "refinedstorage:controller" }
+					consume_items: false
+					title: "Obtain: RS Controller"
+					type: "item"
+				}
+				{
+					id: "70F9507BAC38FBCD"
+					item: { count: 1, id: "refinedstorage:grid" }
+					consume_items: false
+					title: "Obtain: RS Grid"
+					type: "item"
+				}
+				{
+					id: "2180B7178BCA638B"
+					item: { count: 1, id: "refinedstorage:disk_drive" }
+					consume_items: false
+					title: "Obtain: Disk Drive"
+					type: "item"
+				}
+				{
+					id: "38ADF6D51852CF9C"
+					title: "Completed milestone: Digital storage"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "refinedstorage:importer"
+			id: "1453151A6BAA50DA",
+			subtitle: "Requires Importer + Exporter; then confirm the milestone."
+			title: "Connected production",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Connect importers, exporters, and external storage to one production line. Avoid import/export loops.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "694E3541E7734AA0"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "5EBECD7BBBA72881"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "53990B91542C32B3"
+					item: { count: 1, id: "refinedstorage:importer" }
+					consume_items: false
+					title: "Obtain: Importer"
+					type: "item"
+				}
+				{
+					id: "004E20E49D97748E"
+					item: { count: 1, id: "refinedstorage:exporter" }
+					consume_items: false
+					title: "Obtain: Exporter"
+					type: "item"
+				}
+				{
+					id: "782D7B9D7887D255"
+					title: "Completed milestone: Connected production"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"4AFB3BC1D5AEA04F"
+			]
+		},
+		{
+			icon: "refinedstorage:crafting_grid"
+			id: "6F10E04E6E520C5C",
+			subtitle: "Requires Crafting Grid; then confirm the milestone."
+			title: "Automatic crafting",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Create patterns and automate one useful component, then expand with the installed Refined Storage addons.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 1
+					id: "CC40A4BE2034C47D"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "51BB0B627ADA4FCE"
+					type: "xp"
+					xp: 350
+				}
+			]
+			tasks: [
+				{
+					id: "1F07791A02F13C6C"
+					item: { count: 1, id: "refinedstorage:crafting_grid" }
+					consume_items: false
+					title: "Obtain: Crafting Grid"
+					type: "item"
+				}
+				{
+					id: "28E331A629F63940"
+					title: "Completed milestone: Automatic crafting"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"1453151A6BAA50DA"
+			]
+		}
+	],
+	quest_links: []
 }

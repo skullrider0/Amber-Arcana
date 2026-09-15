@@ -1,64 +1,135 @@
 {
-  "id": "6EC1474C2D86A12B",
-  "filename": "tinkers",
-  "title": "Tinkers Construct",
-  "order_index": 16,
-  "group": "",
-  "quests": [
-    {
-      "id": "51C15EB45468ED7A",
-      "title": "Tool maker",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Read Materials and You and make your first customizable Tinkers tool.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "73D66BA8BD33A4D7",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "4C6BE38139D72DC8",
-      "title": "Melting and casting",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Build the melting and casting equipment described in the installed guide. Produce an alloy and cast a tool part.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "4B462AD204C472EE",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "51C15EB45468ED7A"
-      ]
-    },
-    {
-      "id": "1516BE85C9F46A4B",
-      "title": "A personal tool set",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Build and modify a set of tools suited to mining, building, and adventuring. Compare materials in the guide before spending rare resources.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "234B6A6692C458CB",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "4C6BE38139D72DC8"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "tconstruct:crafting_station"
+	id: "6EC1474C2D86A12B",
+	filename: "tinkers",
+	title: "Tinkers Construct",
+	order_index: 16,
+	group: "",
+	quests: [
+		{
+			icon: "tconstruct:crafting_station"
+			id: "51C15EB45468ED7A",
+			subtitle: "Requires Tinkers Crafting Station; then confirm the milestone."
+			title: "Tool maker",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Read Materials and You and make your first customizable Tinkers tool.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "4EE7FB5F961C748B"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "36AAE622AA477B27"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "1301E2332A5B5B26"
+					item: { count: 1, id: "tconstruct:crafting_station" }
+					consume_items: false
+					title: "Obtain: Tinkers Crafting Station"
+					type: "item"
+				}
+				{
+					id: "73D66BA8BD33A4D7"
+					title: "Completed milestone: Tool maker"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "tconstruct:seared_melter"
+			id: "4C6BE38139D72DC8",
+			subtitle: "Requires Seared Melter; then confirm the milestone."
+			title: "Melting and casting",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Build the melting and casting equipment described in the installed guide. Produce an alloy and cast a tool part.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "7750FBDA77F51D08"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "6F89B8649CF11FDC"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "2F5A99FF051B5284"
+					item: { count: 1, id: "tconstruct:seared_melter" }
+					consume_items: false
+					title: "Obtain: Seared Melter"
+					type: "item"
+				}
+				{
+					id: "4B462AD204C472EE"
+					title: "Completed milestone: Melting and casting"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"51C15EB45468ED7A"
+			]
+		},
+		{
+			icon: "tconstruct:tinkers_anvil"
+			id: "1516BE85C9F46A4B",
+			subtitle: "Requires Tinkers Anvil; then confirm the milestone."
+			title: "A personal tool set",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Build and modify a set of tools suited to mining, building, and adventuring. Compare materials in the guide before spending rare resources.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 1
+					id: "73BB14231B78AA51"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "04EF02492C556AAD"
+					type: "xp"
+					xp: 350
+				}
+			]
+			tasks: [
+				{
+					id: "12099F84813E5EDC"
+					item: { count: 1, id: "tconstruct:tinkers_anvil" }
+					consume_items: false
+					title: "Obtain: Tinkers Anvil"
+					type: "item"
+				}
+				{
+					id: "234B6A6692C458CB"
+					title: "Completed milestone: A personal tool set"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"4C6BE38139D72DC8"
+			]
+		}
+	],
+	quest_links: []
 }

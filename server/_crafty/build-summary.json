@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-23",
+  "pack_version": "0.1.9-24",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -197,6 +197,19 @@
     "item_rewards_repaired": 12,
     "make_a_home_subtitle_added": true,
     "literal_ampersand_repaired": true,
+    "client_server_quest_files_identical": true
+  },
+  "quest_completion_0_1_9_24": {
+    "enabled": true,
+    "quests": 106,
+    "chapters": 25,
+    "quests_with_item_requirements": 106,
+    "quests_with_manual_confirmation": 106,
+    "quests_with_rewards": 106,
+    "chapter_icons_completed": 25,
+    "cross_chapter_progression_gates": true,
+    "twilight_forest_stale_quest_replaced": true,
+    "replacement": "Nether expedition",
     "client_server_quest_files_identical": true
   }
 }

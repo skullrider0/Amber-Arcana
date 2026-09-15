@@ -3,20 +3,47 @@
 	default_quest_shape: ""
 	filename: "alex_caves"
 	group: ""
+	icon: "minecraft:spyglass"
 	id: "76CF3A2F1DBFB5BE"
 	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Prepare supplies and investigate Alex's Caves using its in-game research progression. Establish a return route before bringing rare materials home."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:spyglass"
 			id: "7461A4C60A86DB74"
-			tasks: [{
-				id: "77647D4E76E6C0B5"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "4A67B16546E65AF7"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "C558E4265BCD1F91"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "7DB77220D9925E16"
+					item: { count: 1, id: "minecraft:spyglass" }
+					consume_items: false
+					title: "Obtain: Expedition spyglass"
+					type: "item"
+				}
+				{
+					id: "77647D4E76E6C0B5"
+					title: "Completed milestone: An expedition begins"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Expedition spyglass; then confirm the milestone."
 			title: "An expedition begins"
 			x: 0.0d
 			y: 0.0d
@@ -25,13 +52,46 @@
 			dependencies: ["7461A4C60A86DB74"]
 			description: [
 				"Build an Aquatic Ambitions processing setup and investigate an Alex's Caves aquatic area. Keep expedition equipment distinct from the public aquarium display."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:water_bucket"
 			id: "7FE48558E795564B"
-			tasks: [{
-				id: "76D3B71F42DF8131"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "78BFF98E477A8F33"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "7D3733E0FA2146D6"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "033AF7CFB6B5CEBE"
+					item: { count: 1, id: "minecraft:water_bucket" }
+					consume_items: false
+					title: "Obtain: Aquarium water supply"
+					type: "item"
+				}
+				{
+					id: "9EB6871EA368354E"
+					item: { count: 1, id: "minecraft:glass" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Aquarium glass"
+					type: "item"
+				}
+				{
+					id: "76D3B71F42DF8131"
+					title: "Completed milestone: The deep aquarium"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Aquarium water supply + Aquarium glass; then confirm the milestone."
 			title: "The deep aquarium"
 			x: 3.0d
 			y: 0.0d
@@ -40,13 +100,38 @@
 			dependencies: ["7FE48558E795564B"]
 			description: [
 				"Use a recipe supplied by Create: Alex's Caves Compat. Check the recipe category in JEI and automate a small batch without bypassing the expedition that provides the first ingredients."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:minecart"
 			id: "75BB6ABE317E1135"
-			tasks: [{
-				id: "76B939818C4FB9BE"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "2AE5CFE3F11B5CDE"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					id: "1233655CD3525043"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "76CA155320CC905D"
+					item: { count: 1, id: "minecraft:minecart" }
+					consume_items: false
+					title: "Obtain: Cave transport cart"
+					type: "item"
+				}
+				{
+					id: "76B939818C4FB9BE"
+					title: "Completed milestone: Cave resources in motion"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Cave transport cart; then confirm the milestone."
 			title: "Cave resources in motion"
 			x: 6.0d
 			y: 0.0d
@@ -55,13 +140,38 @@
 			dependencies: ["75BB6ABE317E1135"]
 			description: [
 				"Obtain a Relics item from an Alex's Mobs or Alex's Caves compatibility addon. Equip it in the correct Curios slot and inspect its upgrade information."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:brush"
 			id: "7B9BA95C7DE84FD2"
-			tasks: [{
-				id: "7DD12AD612E997DE"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "6521FE47F294AD41"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "32C815E84956C2D0"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "DC0097EB8B1D1141"
+					item: { count: 1, id: "minecraft:brush" }
+					consume_items: false
+					title: "Obtain: Relic excavation brush"
+					type: "item"
+				}
+				{
+					id: "7DD12AD612E997DE"
+					title: "Completed milestone: A relic with a history"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Relic excavation brush; then confirm the milestone."
 			title: "A relic with a history"
 			x: 0.0d
 			y: 3.0d
@@ -70,13 +180,39 @@
 			dependencies: ["7B9BA95C7DE84FD2"]
 			description: [
 				"Craft gear or learn a spell from Alex's Caves: Spellbooks. Test it in a controlled combat area and compare it with your Iron's Spells equipment."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:amethyst_shard"
 			id: "7A3C820F73672F99"
-			tasks: [{
-				id: "7680D630671E0BC0"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "A119F3B1D64B934C"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "F0CEED86E3D7E04D"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [
+				{
+					id: "FFC6A10287DE5A24"
+					item: { count: 1, id: "minecraft:amethyst_shard" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: Arcane cave crystals"
+					type: "item"
+				}
+				{
+					id: "7680D630671E0BC0"
+					title: "Completed milestone: Spells from the depths"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Arcane cave crystals; then confirm the milestone."
 			title: "Spells from the depths"
 			x: 3.0d
 			y: 3.0d
@@ -85,13 +221,39 @@
 			dependencies: ["7A3C820F73672F99"]
 			description: [
 				"Use Create Wizardry to automate an Iron's Spells ingredient. Finish an expedition with that supply line supporting your spellcasting."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:redstone"
 			id: "784A85F81BAE7DB3"
-			tasks: [{
-				id: "75331B1E7C731E92"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "1E3D57D91FC9B3D8"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "F636F691B8660CFA"
+					type: "xp"
+					xp: 500
+				}
+			]
+			tasks: [
+				{
+					id: "F459367C3AE4C383"
+					item: { count: 1, id: "minecraft:redstone" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Automation supplies"
+					type: "item"
+				}
+				{
+					id: "75331B1E7C731E92"
+					title: "Completed milestone: The arcane workshop"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Automation supplies; then confirm the milestone."
 			title: "The arcane workshop"
 			x: 6.0d
 			y: 3.0d

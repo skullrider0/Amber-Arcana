@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.9-24 — Complete quest requirements and rewards
+
+- Finish the full 25-chapter / 106-quest pass.
+- Give every quest at least one non-consuming item requirement plus a named manual confirmation task.
+- Add rewards, subtitles, and quest/chapter icons across the unfinished chapters while preserving all existing quest IDs and dependency chains.
+- Gate normal progression branches behind `Tools for the journey`; gate Create City behind the Create Engineering and Settlement finales.
+- Gate Endgame behind the Create Engineering, Mekanism, Ritual Magic, Settlement, and Dinosaur Laboratory finales.
+- Replace the impossible Twilight Forest quest with a Nether expedition while preserving its quest ID.
+- Preserve the client-safe More Hitboxes 1.9.2.1 patch and the 0.1.9-23 live quest save synchronization.
+
 ## 0.1.9-23 — Live FTB Quests sync and reward repair
 
 - Import the complete client editor save `2026-09-15-12-17-14` as the quest-book source of truth.

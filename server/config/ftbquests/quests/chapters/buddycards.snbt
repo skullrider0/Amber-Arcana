@@ -3,20 +3,48 @@
 	default_quest_shape: ""
 	filename: "buddycards"
 	group: ""
+	icon: "minecraft:paper"
 	id: "7BDEAC7129B97A9A"
 	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Find and open a Buddycards pack. Keep new cards and duplicates in separate storage; use a binder or displays for the cards you want to keep."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:paper"
 			id: "7FCDE8795B31F33B"
-			tasks: [{
-				id: "766C0A85C5EA16F7"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "928F1E02495487E1"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "AC82C09D4221BD55"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "BB1E0404FBE0211F"
+					item: { count: 1, id: "minecraft:paper" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Card-sorting supplies"
+					type: "item"
+				}
+				{
+					id: "766C0A85C5EA16F7"
+					title: "Completed milestone: Your first collection"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Card-sorting supplies; then confirm the milestone."
 			title: "Your first collection"
 			x: 0.0d
 			y: 0.0d
@@ -25,13 +53,39 @@
 			dependencies: ["7FCDE8795B31F33B"]
 			description: [
 				"Use Create Buddycards recipes to recycle duplicate cards into Create set packs. Make a small line first and confirm it never consumes your display collection."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:copper_ingot"
 			id: "74D1135963FC93B7"
-			tasks: [{
-				id: "779C948FDCD3BEED"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "C6C81F907282017F"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "1B81DAAA5454C225"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "DE050DBE6107406A"
+					item: { count: 1, id: "minecraft:copper_ingot" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: Mechanical recycling materials"
+					type: "item"
+				}
+				{
+					id: "779C948FDCD3BEED"
+					title: "Completed milestone: Mechanical recycling"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Mechanical recycling materials; then confirm the milestone."
 			title: "Mechanical recycling"
 			x: 3.0d
 			y: 0.0d
@@ -40,13 +94,39 @@
 			dependencies: ["74D1135963FC93B7"]
 			description: [
 				"Grow Buddybeans and use Delightful Buddycards recipes to make a pack. Expand the food factory to supply the ingredients."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:wheat"
 			id: "76E508B4DA1156E6"
-			tasks: [{
-				id: "7E9DAEFD163D05C2"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "32393BB9553DFDDC"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					id: "D0700728E749B25C"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "978FBEB1B371B760"
+					item: { count: 1, id: "minecraft:wheat" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Farm collection supplies"
+					type: "item"
+				}
+				{
+					id: "7E9DAEFD163D05C2"
+					title: "Completed milestone: The farmers collection"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Farm collection supplies; then confirm the milestone."
 			title: "The farmers collection"
 			x: 6.0d
 			y: 0.0d
@@ -55,13 +135,38 @@
 			dependencies: ["76E508B4DA1156E6"]
 			description: [
 				"Fit a Buddysteel Hook to an Aquaculture rod and fish for Aquaculture Buddycards packs or Cardfish. Build a display beside your aquarium."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:fishing_rod"
 			id: "7213DF73BF55B790"
-			tasks: [{
-				id: "79D85F3EF6C6D1DA"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "EE7F0733F686AFDB"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "3BAADBC5DB005F88"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "0CD6466D81CABF14"
+					item: { count: 1, id: "minecraft:fishing_rod" }
+					consume_items: false
+					title: "Obtain: Fishing setup"
+					type: "item"
+				}
+				{
+					id: "79D85F3EF6C6D1DA"
+					title: "Completed milestone: Cards from the water"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Fishing setup; then confirm the milestone."
 			title: "Cards from the water"
 			x: 0.0d
 			y: 3.0d
@@ -70,13 +175,39 @@
 			dependencies: ["7213DF73BF55B790"]
 			description: [
 				"Use AE2 Buddycards to make its collection components and Singularity set packs. Teach the processing recipes to AE2 and keep a buffer of the ingredients."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:quartz"
 			id: "7683E53A2478761A"
-			tasks: [{
-				id: "78DAECC7107F0E9C"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "648E1E1921EE0C00"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "A9C73AC61B065F15"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [
+				{
+					id: "AFC6973A29A5167B"
+					item: { count: 1, id: "minecraft:quartz" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: AE2 collection materials"
+					type: "item"
+				}
+				{
+					id: "78DAECC7107F0E9C"
+					title: "Completed milestone: Singularity collector"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires AE2 collection materials; then confirm the milestone."
 			title: "Singularity collector"
 			x: 3.0d
 			y: 3.0d
@@ -85,13 +216,39 @@
 			dependencies: ["7683E53A2478761A"]
 			description: [
 				"Complete a card set and display it in a public museum. Trade duplicates with friends and equip an earned medal using Curios."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:item_frame"
 			id: "762E20CA5C1E2D39"
-			tasks: [{
-				id: "7A2496FB2BB7AC22"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "BD92F0FEDC7CE35C"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "BCD35D5CA0873EE3"
+					type: "xp"
+					xp: 500
+				}
+			]
+			tasks: [
+				{
+					id: "174310B39DAE3A07"
+					item: { count: 1, id: "minecraft:item_frame" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: Museum displays"
+					type: "item"
+				}
+				{
+					id: "7A2496FB2BB7AC22"
+					title: "Completed milestone: A museum of friendships"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Museum displays; then confirm the milestone."
 			title: "A museum of friendships"
 			x: 6.0d
 			y: 3.0d

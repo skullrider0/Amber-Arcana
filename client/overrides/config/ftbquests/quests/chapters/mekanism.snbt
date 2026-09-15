@@ -1,83 +1,184 @@
 {
-  "id": "151A507B6002E7CB",
-  "filename": "mekanism",
-  "title": "Mekanism Industry",
-  "order_index": 11,
-  "group": "",
-  "quests": [
-    {
-      "id": "6562879F7F787283",
-      "title": "A powered machine room",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Generate energy, connect cables, and run a Metallurgic Infuser and Enrichment Chamber. Leave room for upgrades.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "4CF8AA93280B9A5D",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "0C7A1308769A74B9",
-      "title": "Ore processing",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Build a reliable processing line and automate its inputs and outputs. Expand chemical processing only after checking the installed recipes.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "4CE67B43815401BD",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "6562879F7F787283"
-      ]
-    },
-    {
-      "id": "6E3143B357129102",
-      "title": "Power with safeguards",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Build a larger energy system. Read the reactor guide before operation and provide a reliable shutdown and waste-handling plan for any fission installation.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "2107AF1EEF77061E",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "0C7A1308769A74B9"
-      ]
-    },
-    {
-      "id": "27F120E99FCF093B",
-      "title": "The MekaSuit",
-      "x": 9.0,
-      "y": 0.0,
-      "description": [
-        "Craft and charge the MekaSuit pieces, then install modules appropriate to your exploration plans.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "29050B08F0F81008",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "6E3143B357129102"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "mekanism:metallurgic_infuser"
+	id: "151A507B6002E7CB",
+	filename: "mekanism",
+	title: "Mekanism Industry",
+	order_index: 11,
+	group: "",
+	quests: [
+		{
+			icon: "mekanism:metallurgic_infuser"
+			id: "6562879F7F787283",
+			subtitle: "Requires Metallurgic Infuser + Enrichment Chamber; then confirm the milestone."
+			title: "A powered machine room",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Generate energy, connect cables, and run a Metallurgic Infuser and Enrichment Chamber. Leave room for upgrades.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "E784906E5E9663A7"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "45D2D3A69A95A384"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "4696A8476A8A273F"
+					item: { count: 1, id: "mekanism:metallurgic_infuser" }
+					consume_items: false
+					title: "Obtain: Metallurgic Infuser"
+					type: "item"
+				}
+				{
+					id: "65374FE5A893613E"
+					item: { count: 1, id: "mekanism:enrichment_chamber" }
+					consume_items: false
+					title: "Obtain: Enrichment Chamber"
+					type: "item"
+				}
+				{
+					id: "4CF8AA93280B9A5D"
+					title: "Completed milestone: A powered machine room"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "mekanism:purification_chamber"
+			id: "0C7A1308769A74B9",
+			subtitle: "Requires Advanced ore-processing machine; then confirm the milestone."
+			title: "Ore processing",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Build a reliable processing line and automate its inputs and outputs. Expand chemical processing only after checking the installed recipes.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "E9352DCC64E81B5A"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "AD4C9DAC73A9C17E"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "5F3F36F05E636517"
+					item: { count: 1, id: "mekanism:purification_chamber" }
+					consume_items: false
+					title: "Obtain: Advanced ore-processing machine"
+					type: "item"
+				}
+				{
+					id: "4CE67B43815401BD"
+					title: "Completed milestone: Ore processing"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"6562879F7F787283"
+			]
+		},
+		{
+			icon: "mekanism:ultimate_energy_cube"
+			id: "6E3143B357129102",
+			subtitle: "Requires High-capacity energy buffer; then confirm the milestone."
+			title: "Power with safeguards",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Build a larger energy system. Read the reactor guide before operation and provide a reliable shutdown and waste-handling plan for any fission installation.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "22B3CEC5EFC942A0"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "86EA4FA68B78611F"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "CB85B165CAFC4D3C"
+					item: { count: 1, id: "mekanism:ultimate_energy_cube" }
+					consume_items: false
+					title: "Obtain: High-capacity energy buffer"
+					type: "item"
+				}
+				{
+					id: "2107AF1EEF77061E"
+					title: "Completed milestone: Power with safeguards"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"0C7A1308769A74B9"
+			]
+		},
+		{
+			icon: "mekanism:mekasuit_helmet"
+			id: "27F120E99FCF093B",
+			subtitle: "Requires MekaSuit Helmet; then confirm the milestone."
+			title: "The MekaSuit",
+			x: 9.0,
+			y: 0.0,
+			description: [
+				"Craft and charge the MekaSuit pieces, then install modules appropriate to your exploration plans.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "E0EA773CF8268E71"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "6702318ADC479DA3"
+					type: "xp"
+					xp: 400
+				}
+			]
+			tasks: [
+				{
+					id: "65B2B499EFE2EE35"
+					item: { count: 1, id: "mekanism:mekasuit_helmet" }
+					consume_items: false
+					title: "Obtain: MekaSuit Helmet"
+					type: "item"
+				}
+				{
+					id: "29050B08F0F81008"
+					title: "Completed milestone: The MekaSuit"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"6E3143B357129102"
+			]
+		}
+	],
+	quest_links: []
 }

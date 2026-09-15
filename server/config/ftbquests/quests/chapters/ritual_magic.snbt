@@ -1,102 +1,219 @@
 {
-  "id": "043ED5D2BC9679C5",
-  "filename": "ritual_magic",
-  "title": "Rituals and Witchcraft",
-  "order_index": 19,
-  "group": "",
-  "quests": [
-    {
-      "id": "15DAE3CE842B7E3D",
-      "title": "Occultism rituals",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Follow the Dictionary of Spirits to summon a spirit and establish one useful ritual or storage system.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "2FA0318A6C2D239A",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "200753C8EB83311D",
-      "title": "Botania garden",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Create a mana-generating garden, transfer mana, and craft a functional botanical item.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "1DAA63A175F07860",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "15DAE3CE842B7E3D"
-      ]
-    },
-    {
-      "id": "03AFE303E07AA846",
-      "title": "Blood Magic altar",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Build a Blood Altar and progress through the early slate and orb recipes in the installed guide.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "60BA837180BE3D77",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "200753C8EB83311D"
-      ]
-    },
-    {
-      "id": "785DBD084E3E054F",
-      "title": "Hexerei workshop",
-      "x": 9.0,
-      "y": 0.0,
-      "description": [
-        "Build a witchs workshop and use Hexerei crafting to make a useful item. Keep its blood and fluid systems separate unless JEI shows a supported conversion.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "28875F58E69B9BE8",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "03AFE303E07AA846"
-      ]
-    },
-    {
-      "id": "0529657A7D4C8721",
-      "title": "Vampire or hunter",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Choose your Vampirism faction if desired. Establish the supplies and equipment needed for its progression.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "3F9ADA59C3D8A11C",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "785DBD084E3E054F"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:book"
+	id: "043ED5D2BC9679C5",
+	filename: "ritual_magic",
+	title: "Rituals and Witchcraft",
+	order_index: 19,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:book"
+			id: "15DAE3CE842B7E3D",
+			subtitle: "Requires Ritual reference book; then confirm the milestone."
+			title: "Occultism rituals",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Follow the Dictionary of Spirits to summon a spirit and establish one useful ritual or storage system.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "127551E474A249D0"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					id: "184F1FD5E8B1A2FF"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "EB367B49C1B60C33"
+					item: { count: 1, id: "minecraft:book" }
+					consume_items: false
+					title: "Obtain: Ritual reference book"
+					type: "item"
+				}
+				{
+					id: "2FA0318A6C2D239A"
+					title: "Completed milestone: Occultism rituals"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "botania:mana_pool"
+			id: "200753C8EB83311D",
+			subtitle: "Requires Mana Pool; then confirm the milestone."
+			title: "Botania garden",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Create a mana-generating garden, transfer mana, and craft a functional botanical item.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "F911E146845499E2"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					id: "66529EA6A59E551D"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "E6675AA5880DD632"
+					item: { count: 1, id: "botania:mana_pool" }
+					consume_items: false
+					title: "Obtain: Mana Pool"
+					type: "item"
+				}
+				{
+					id: "1DAA63A175F07860"
+					title: "Completed milestone: Botania garden"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"15DAE3CE842B7E3D"
+			]
+		},
+		{
+			icon: "bloodmagic:altar"
+			id: "03AFE303E07AA846",
+			subtitle: "Requires Blood Altar; then confirm the milestone."
+			title: "Blood Magic altar",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Build a Blood Altar and progress through the early slate and orb recipes in the installed guide.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "97F71F63D48FCFF0"
+					item: "minecraft:glowstone_dust"
+					type: "item"
+				}
+				{
+					id: "7BF782991C0A8A89"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "17B31582B1191642"
+					item: { count: 1, id: "bloodmagic:altar" }
+					consume_items: false
+					title: "Obtain: Blood Altar"
+					type: "item"
+				}
+				{
+					id: "60BA837180BE3D77"
+					title: "Completed milestone: Blood Magic altar"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"200753C8EB83311D"
+			]
+		},
+		{
+			icon: "minecraft:cauldron"
+			id: "785DBD084E3E054F",
+			subtitle: "Requires Witch workshop cauldron; then confirm the milestone."
+			title: "Hexerei workshop",
+			x: 9.0,
+			y: 0.0,
+			description: [
+				"Build a witchs workshop and use Hexerei crafting to make a useful item. Keep its blood and fluid systems separate unless JEI shows a supported conversion.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "28E7277BDE016CB5"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					id: "AA0C524AFD3C58CC"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "2E59B221504AB81A"
+					item: { count: 1, id: "minecraft:cauldron" }
+					consume_items: false
+					title: "Obtain: Witch workshop cauldron"
+					type: "item"
+				}
+				{
+					id: "28875F58E69B9BE8"
+					title: "Completed milestone: Hexerei workshop"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"03AFE303E07AA846"
+			]
+		},
+		{
+			icon: "minecraft:golden_apple"
+			id: "0529657A7D4C8721",
+			subtitle: "Requires Faction progression supplies; then confirm the milestone."
+			title: "Vampire or hunter",
+			x: 0.0,
+			y: 3.0,
+			description: [
+				"Choose your Vampirism faction if desired. Establish the supplies and equipment needed for its progression.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "F2441BCD4090B5F2"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "5086B21A1C4F7FB1"
+					type: "xp"
+					xp: 450
+				}
+			]
+			tasks: [
+				{
+					id: "A86F22A3C010FFC7"
+					item: { count: 1, id: "minecraft:golden_apple" }
+					consume_items: false
+					title: "Obtain: Faction progression supplies"
+					type: "item"
+				}
+				{
+					id: "3F9ADA59C3D8A11C"
+					title: "Completed milestone: Vampire or hunter"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"785DBD084E3E054F"
+			]
+		}
+	],
+	quest_links: []
 }

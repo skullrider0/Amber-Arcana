@@ -1,83 +1,181 @@
 {
-  "id": "39A27A2CEB307EA7",
-  "filename": "dinosaur_laboratory",
-  "title": "Jurassic Laboratory",
-  "order_index": 20,
-  "group": "",
-  "quests": [
-    {
-      "id": "538C111A2F15C97F",
-      "title": "Collect evidence",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Explore for fossils and unusual amber. Keep Prehistoric Legacy specimens separate from Fossils and Archeology specimens because they use different processing systems.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "587749F49F7AA4A3",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "63C450EF80054073",
-      "title": "The amber laboratory",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Follow Prehistoric Legacys guide to process unusual amber through its extraction and revival stages. Supply each machine with the resources it actually requires.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "538350F3FAB012DE",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "538C111A2F15C97F"
-      ]
-    },
-    {
-      "id": "3B1E3F88AAA755B8",
-      "title": "Fossils and revival",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Use the Fossils and Archeology guide to analyze a fossil, obtain DNA, and complete a revival sequence.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "157730A15BDF66BE",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "63C450EF80054073"
-      ]
-    },
-    {
-      "id": "7D39BB362CB3149A",
-      "title": "A secure habitat",
-      "x": 9.0,
-      "y": 0.0,
-      "description": [
-        "Build a species-appropriate enclosure before releasing your first dinosaur. Provide food and secure visitor paths, then document its care needs.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "458BB826320DA071",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "3B1E3F88AAA755B8"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:bone"
+	id: "39A27A2CEB307EA7",
+	filename: "dinosaur_laboratory",
+	title: "Jurassic Laboratory",
+	order_index: 20,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:bone"
+			id: "538C111A2F15C97F",
+			subtitle: "Requires Fossil evidence; then confirm the milestone."
+			title: "Collect evidence",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Explore for fossils and unusual amber. Keep Prehistoric Legacy specimens separate from Fossils and Archeology specimens because they use different processing systems.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "179CF6B3087B121E"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "32250CAA2887B464"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "603AF8E52A7922C1"
+					item: { count: 1, id: "minecraft:bone" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Fossil evidence"
+					type: "item"
+				}
+				{
+					id: "587749F49F7AA4A3"
+					title: "Completed milestone: Collect evidence"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "minecraft:glass"
+			id: "63C450EF80054073",
+			subtitle: "Requires Laboratory glassware and containment; then confirm the milestone."
+			title: "The amber laboratory",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Follow Prehistoric Legacys guide to process unusual amber through its extraction and revival stages. Supply each machine with the resources it actually requires.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "DA906239E6EB2702"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "EFA821828D2E2561"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "A5E013AFA9FB8F5B"
+					item: { count: 1, id: "minecraft:glass" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Laboratory glassware and containment"
+					type: "item"
+				}
+				{
+					id: "538350F3FAB012DE"
+					title: "Completed milestone: The amber laboratory"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"538C111A2F15C97F"
+			]
+		},
+		{
+			icon: "minecraft:egg"
+			id: "3B1E3F88AAA755B8",
+			subtitle: "Requires Revival/incubation supplies; then confirm the milestone."
+			title: "Fossils and revival",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Use the Fossils and Archeology guide to analyze a fossil, obtain DNA, and complete a revival sequence.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "245AB51DABC2E8BD"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					id: "29A8F73FC4D8B60B"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "8B5A943A02C4C93A"
+					item: { count: 1, id: "minecraft:egg" }
+					count: 4L
+					consume_items: false
+					title: "Obtain: Revival/incubation supplies"
+					type: "item"
+				}
+				{
+					id: "157730A15BDF66BE"
+					title: "Completed milestone: Fossils and revival"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"63C450EF80054073"
+			]
+		},
+		{
+			icon: "minecraft:iron_bars"
+			id: "7D39BB362CB3149A",
+			subtitle: "Requires Secure habitat barriers; then confirm the milestone."
+			title: "A secure habitat",
+			x: 9.0,
+			y: 0.0,
+			description: [
+				"Build a species-appropriate enclosure before releasing your first dinosaur. Provide food and secure visitor paths, then document its care needs.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "9F3CAE6B206705A5"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "AE1C32916F269055"
+					type: "xp"
+					xp: 400
+				}
+			]
+			tasks: [
+				{
+					id: "49B310D0D1EF9104"
+					item: { count: 1, id: "minecraft:iron_bars" }
+					count: 32L
+					consume_items: false
+					title: "Obtain: Secure habitat barriers"
+					type: "item"
+				}
+				{
+					id: "458BB826320DA071"
+					title: "Completed milestone: A secure habitat"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"3B1E3F88AAA755B8"
+			]
+		}
+	],
+	quest_links: []
 }

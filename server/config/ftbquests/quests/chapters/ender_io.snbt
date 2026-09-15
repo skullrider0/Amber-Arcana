@@ -1,64 +1,138 @@
 {
-  "id": "23A7E1B745DDC088",
-  "filename": "ender_io",
-  "title": "Ender IO Connections",
-  "order_index": 15,
-  "group": "",
-  "quests": [
-    {
-      "id": "3358221532325ED1",
-      "title": "Conduit workshop",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Craft Ender IO conduits and use them to connect one item, fluid, or energy route.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7C1D4DD583EA5F50",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "0EBE8506C43A0D98",
-      "title": "Machine integration",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Build an Ender IO processing station. Add filters and redstone control where needed.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "104B80DEF5C864F5",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "3358221532325ED1"
-      ]
-    },
-    {
-      "id": "67881CF73E1F3602",
-      "title": "A tidy factory",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Replace a messy section of factory routing with a serviceable conduit run. Label buffers and make maintenance access easy.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "5373F5363F56903D",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "0EBE8506C43A0D98"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:redstone"
+	id: "23A7E1B745DDC088",
+	filename: "ender_io",
+	title: "Ender IO Connections",
+	order_index: 15,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:redstone"
+			id: "3358221532325ED1",
+			subtitle: "Requires Conduit control materials; then confirm the milestone."
+			title: "Conduit workshop",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Craft Ender IO conduits and use them to connect one item, fluid, or energy route.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "8C1F38379B8826F7"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "02E630C41790BF26"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "4B0A84227C7502D1"
+					item: { count: 1, id: "minecraft:redstone" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Conduit control materials"
+					type: "item"
+				}
+				{
+					id: "7C1D4DD583EA5F50"
+					title: "Completed milestone: Conduit workshop"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "minecraft:furnace"
+			id: "0EBE8506C43A0D98",
+			subtitle: "Requires Processing station machines; then confirm the milestone."
+			title: "Machine integration",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Build an Ender IO processing station. Add filters and redstone control where needed.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "F89B9B292EB25C33"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "59C3845F99217379"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "733B4B7084A02E0B"
+					item: { count: 1, id: "minecraft:furnace" }
+					count: 2L
+					consume_items: false
+					title: "Obtain: Processing station machines"
+					type: "item"
+				}
+				{
+					id: "104B80DEF5C864F5"
+					title: "Completed milestone: Machine integration"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"3358221532325ED1"
+			]
+		},
+		{
+			icon: "minecraft:chest"
+			id: "67881CF73E1F3602",
+			subtitle: "Requires Factory routing buffers; then confirm the milestone."
+			title: "A tidy factory",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Replace a messy section of factory routing with a serviceable conduit run. Label buffers and make maintenance access easy.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 1
+					id: "D878055661B07849"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "97C7F7F302917BB8"
+					type: "xp"
+					xp: 350
+				}
+			]
+			tasks: [
+				{
+					id: "764F25ADE6E71A67"
+					item: { count: 1, id: "minecraft:chest" }
+					count: 4L
+					consume_items: false
+					title: "Obtain: Factory routing buffers"
+					type: "item"
+				}
+				{
+					id: "5373F5363F56903D"
+					title: "Completed milestone: A tidy factory"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"0EBE8506C43A0D98"
+			]
+		}
+	],
+	quest_links: []
 }

@@ -1,102 +1,227 @@
 {
-  "id": "7BA39355491F9AE9",
-  "filename": "create_city",
-  "title": "The Mechanical City",
-  "order_index": 2,
-  "group": "",
-  "quests": [
-    {
-      "id": "761378307EDFBEE1",
-      "title": "A station with character",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Build a rail stop using Bells and Whistles details. Leave safe paths between passenger platforms and moving trains.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "71EF7E8D0047F01F",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "70339CEBB0BD2F57",
-      "title": "Smoke on the skyline",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Add Chimneys to a train or industrial build. Ride past the station and check that smoke remains readable with your chosen shader settings.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7BA1FD97821F2362",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "761378307EDFBEE1"
-      ]
-    },
-    {
-      "id": "7841A29AC08B5763",
-      "title": "Going up",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Build a powered Escalated escalator that connects two public floors. Test walking onto and off both ends.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7314FB107F241EB6",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "70339CEBB0BD2F57"
-      ]
-    },
-    {
-      "id": "79E392E17A92926E",
-      "title": "Music hall",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Construct a Sound of Steam pipe organ. Arrange a short musical phrase and provide a listening area for friends.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "75EA04746E2F75E3",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7841A29AC08B5763"
-      ]
-    },
-    {
-      "id": "721E611D8E8141A3",
-      "title": "The finished district",
-      "x": 3.0,
-      "y": 3.0,
-      "description": [
-        "Connect the station, factory, colony, and zoo with clear paths and signs. Use FindMe to retrieve a building material from nearby storage.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "776572F5EC85E6E7",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "79E392E17A92926E"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:rail"
+	id: "7BA39355491F9AE9",
+	filename: "create_city",
+	title: "The Mechanical City",
+	order_index: 2,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:rail"
+			id: "761378307EDFBEE1",
+			subtitle: "Requires Station rails; then confirm the milestone."
+			title: "A station with character",
+			x: 0.0,
+			y: 0.0,
+			dependencies: [
+				"6A19120000000601"
+				"7E43AF9888FA9F2E"
+			]
+			description: [
+				"Build a rail stop using Bells and Whistles details. Leave safe paths between passenger platforms and moving trains.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "07D157FC7BC1073C"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "46FB7F832DE253FD"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "B5B361CC5C4F9AA5"
+					item: { count: 1, id: "minecraft:rail" }
+					count: 32L
+					consume_items: false
+					title: "Obtain: Station rails"
+					type: "item"
+				}
+				{
+					id: "71EF7E8D0047F01F"
+					title: "Completed milestone: A station with character"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "minecraft:bricks"
+			id: "70339CEBB0BD2F57",
+			subtitle: "Requires Industrial chimney materials; then confirm the milestone."
+			title: "Smoke on the skyline",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Add Chimneys to a train or industrial build. Ride past the station and check that smoke remains readable with your chosen shader settings.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "D6BF397D516F00D2"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					id: "A79EF2C1210D9914"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "B89938874CA9E0FD"
+					item: { count: 1, id: "minecraft:bricks" }
+					count: 32L
+					consume_items: false
+					title: "Obtain: Industrial chimney materials"
+					type: "item"
+				}
+				{
+					id: "7BA1FD97821F2362"
+					title: "Completed milestone: Smoke on the skyline"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"761378307EDFBEE1"
+			]
+		},
+		{
+			icon: "minecraft:iron_ingot"
+			id: "7841A29AC08B5763",
+			subtitle: "Requires Escalator construction metal; then confirm the milestone."
+			title: "Going up",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Build a powered Escalated escalator that connects two public floors. Test walking onto and off both ends.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "CAF2F44F1FE81D50"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "8F7202C4206ED5BE"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "5A0CE5B424E8451B"
+					item: { count: 1, id: "minecraft:iron_ingot" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Escalator construction metal"
+					type: "item"
+				}
+				{
+					id: "7314FB107F241EB6"
+					title: "Completed milestone: Going up"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"70339CEBB0BD2F57"
+			]
+		},
+		{
+			icon: "minecraft:note_block"
+			id: "79E392E17A92926E",
+			subtitle: "Requires Music hall instruments; then confirm the milestone."
+			title: "Music hall",
+			x: 0.0,
+			y: 3.0,
+			description: [
+				"Construct a Sound of Steam pipe organ. Arrange a short musical phrase and provide a listening area for friends.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "4AB7FC50742D4142"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "BF66C1B56C64A3DC"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "0052A51EFCDF6E91"
+					item: { count: 1, id: "minecraft:note_block" }
+					count: 4L
+					consume_items: false
+					title: "Obtain: Music hall instruments"
+					type: "item"
+				}
+				{
+					id: "75EA04746E2F75E3"
+					title: "Completed milestone: Music hall"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"7841A29AC08B5763"
+			]
+		},
+		{
+			icon: "minecraft:oak_sign"
+			id: "721E611D8E8141A3",
+			subtitle: "Requires District signs; then confirm the milestone."
+			title: "The finished district",
+			x: 3.0,
+			y: 3.0,
+			description: [
+				"Connect the station, factory, colony, and zoo with clear paths and signs. Use FindMe to retrieve a building material from nearby storage.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "E03D8D39DCE99A00"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "2AE5486CD3A639E8"
+					type: "xp"
+					xp: 450
+				}
+			]
+			tasks: [
+				{
+					id: "40C3C9E6F996C09A"
+					item: { count: 1, id: "minecraft:oak_sign" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: District signs"
+					type: "item"
+				}
+				{
+					id: "776572F5EC85E6E7"
+					title: "Completed milestone: The finished district"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"79E392E17A92926E"
+			]
+		}
+	],
+	quest_links: []
 }

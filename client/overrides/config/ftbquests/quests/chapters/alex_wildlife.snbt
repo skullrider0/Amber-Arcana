@@ -3,20 +3,47 @@
 	default_quest_shape: ""
 	filename: "alex_wildlife"
 	group: ""
+	icon: "minecraft:spyglass"
 	id: "7DDC313A58540776"
 	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Read Alex's Mobs information for three animals. Build enclosures suited to their behavior, with staff access and space to separate animals when needed."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:spyglass"
 			id: "72C5275F6EA620EB"
-			tasks: [{
-				id: "7C0F98E0F27DC7B4"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "ACBFF362C5897F70"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "8CECB836A6136B44"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "06BDD608E987C4FE"
+					item: { count: 1, id: "minecraft:spyglass" }
+					consume_items: false
+					title: "Obtain: Wildlife observation tool"
+					type: "item"
+				}
+				{
+					id: "7C0F98E0F27DC7B4"
+					title: "Completed milestone: Observe before collecting"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Wildlife observation tool; then confirm the milestone."
 			title: "Observe before collecting"
 			x: 0.0d
 			y: 0.0d
@@ -25,13 +52,39 @@
 			dependencies: ["72C5275F6EA620EB"]
 			description: [
 				"Tame one Companions! creature and one eligible animal supported by Domestication Innovation. Check their individual feeding, healing, and movement behavior."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:lead"
 			id: "76C534C1F9B94490"
-			tasks: [{
-				id: "7DC8A8551AD2BDEA"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "74552B99B30A6584"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "BDAE2737D62ABCFA"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "17458586B7B5DA9F"
+					item: { count: 1, id: "minecraft:lead" }
+					count: 2L
+					consume_items: false
+					title: "Obtain: Companion leads"
+					type: "item"
+				}
+				{
+					id: "7DC8A8551AD2BDEA"
+					title: "Completed milestone: Friends of different kinds"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Companion leads; then confirm the milestone."
 			title: "Friends of different kinds"
 			x: 3.0d
 			y: 0.0d
@@ -40,13 +93,39 @@
 			dependencies: ["76C534C1F9B94490"]
 			description: [
 				"Tame a rat and give it a supported job. Test its pickup and deposit behavior with a small supply before connecting it to valuable storage."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:chest"
 			id: "7516A701A4929E8F"
-			tasks: [{
-				id: "73C6222A2E3D1D83"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "271E9A965ED570F4"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					id: "529B431E5C8A32A5"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "572C69F3027833BC"
+					item: { count: 1, id: "minecraft:chest" }
+					count: 2L
+					consume_items: false
+					title: "Obtain: Rat pickup/deposit test containers"
+					type: "item"
+				}
+				{
+					id: "73C6222A2E3D1D83"
+					title: "Completed milestone: A working rat team"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Rat pickup/deposit test containers; then confirm the milestone."
 			title: "A working rat team"
 			x: 6.0d
 			y: 0.0d
@@ -55,13 +134,38 @@
 			dependencies: ["7516A701A4929E8F"]
 			description: [
 				"Use Ice and Fire progression to work toward a tame dragon and a separate habitat. Site the habitat away from the public colony until its behavior is understood."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:dragon_breath"
 			id: "7A142D1190A1BE80"
-			tasks: [{
-				id: "71C7DE4560FC5622"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "845ADD085A770AA1"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "0E7BAD57D36728F2"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "40636C474E4958FF"
+					item: { count: 1, id: "minecraft:dragon_breath" }
+					consume_items: false
+					title: "Obtain: Dragon progression proof"
+					type: "item"
+				}
+				{
+					id: "71C7DE4560FC5622"
+					title: "Completed milestone: A home for dragons"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Dragon progression proof; then confirm the milestone."
 			title: "A home for dragons"
 			x: 0.0d
 			y: 3.0d
@@ -70,13 +174,39 @@
 			dependencies: ["7A142D1190A1BE80"]
 			description: [
 				"Walk the park with a friend at night. Check paths, lighting, animal escape routes, and interactions added by Alex's Mobs Interaction."
-				"Complete this project, then tick the checkmark. This is a manual build milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:lantern"
 			id: "7BC237CFDD76939F"
-			tasks: [{
-				id: "770961348BBC8843"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "ABA31B233A754579"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "98F8510CED2B9CFB"
+					type: "xp"
+					xp: 450
+				}
+			]
+			tasks: [
+				{
+					id: "F70840B2BE1563CA"
+					item: { count: 1, id: "minecraft:lantern" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Night park lighting"
+					type: "item"
+				}
+				{
+					id: "770961348BBC8843"
+					title: "Completed milestone: The park after dark"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Night park lighting; then confirm the milestone."
 			title: "The park after dark"
 			x: 3.0d
 			y: 3.0d

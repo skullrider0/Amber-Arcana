@@ -3,20 +3,48 @@
 	default_quest_shape: ""
 	filename: "aquarium"
 	group: ""
+	icon: "minecraft:glass"
 	id: "6596524E182D7451"
 	order_index: 21
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Build a zoo layout with separate habitats, visitor paths, and staff access. Use the animal guides to learn feeding and taming requirements."
-				"Complete this objective, then tick the checkmark. This is a manual milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:glass"
 			id: "6985109C2AE6C175"
-			tasks: [{
-				id: "731647F5A2A4F53D"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "591684361870E87C"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "966EC79C75D6CCE5"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "DC997FDF8A0AAD69"
+					item: { count: 1, id: "minecraft:glass" }
+					count: 32L
+					consume_items: false
+					title: "Obtain: Habitat glass"
+					type: "item"
+				}
+				{
+					id: "731647F5A2A4F53D"
+					title: "Completed milestone: Plan the habitats"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Habitat glass; then confirm the milestone."
 			title: "Plan the habitats"
 			x: 0.0d
 			y: 0.0d
@@ -25,13 +53,46 @@
 			dependencies: ["6985109C2AE6C175"]
 			description: [
 				"Build freshwater and marine exhibits. Use Aquaculture, Alexs Mobs, and Upgrade Aquatic to stock displays with species appropriate to the water and enclosure."
-				"Complete this objective, then tick the checkmark. This is a manual milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:water_bucket"
 			id: "4FA3828856020273"
-			tasks: [{
-				id: "6E64E0B6E472793A"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "721F112522BCB8D1"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "080FE0578F23AA47"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "35FB580086EEFE45"
+					item: { count: 1, id: "minecraft:water_bucket" }
+					count: 2L
+					consume_items: false
+					title: "Obtain: Freshwater and marine water"
+					type: "item"
+				}
+				{
+					id: "B8B8F113FE54464E"
+					item: { count: 1, id: "minecraft:cod_bucket" }
+					consume_items: false
+					title: "Obtain: Display fish"
+					type: "item"
+				}
+				{
+					id: "6E64E0B6E472793A"
+					title: "Completed milestone: An aquarium gallery"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Freshwater and marine water + Display fish; then confirm the milestone."
 			title: "An aquarium gallery"
 			x: 3.0d
 			y: 0.0d
@@ -40,13 +101,39 @@
 			dependencies: ["4FA3828856020273"]
 			description: [
 				"Meet creatures from Critters and Companions and Companions. Use their supported care or taming mechanics."
-				"Complete this objective, then tick the checkmark. This is a manual milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:lead"
 			id: "4C8A851B4EA29B66"
-			tasks: [{
-				id: "7DE602B2F18EFC2E"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "B876CD07FACFFD5A"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					id: "D2B059A3F16D85EE"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "29C8018423599327"
+					item: { count: 1, id: "minecraft:lead" }
+					count: 2L
+					consume_items: false
+					title: "Obtain: Companion handling supplies"
+					type: "item"
+				}
+				{
+					id: "7DE602B2F18EFC2E"
+					title: "Completed milestone: Companions"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Companion handling supplies; then confirm the milestone."
 			title: "Companions"
 			x: 6.0d
 			y: 0.0d
@@ -55,13 +142,39 @@
 			dependencies: ["4C8A851B4EA29B66"]
 			description: [
 				"Establish safe breeding, transport, and feeding routines. Use Rats and Domestication Innovation where their supported mechanics help your park."
-				"Complete this objective, then tick the checkmark. This is a manual milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:wheat"
 			id: "227601982DAC80C1"
-			tasks: [{
-				id: "33F64B3316A75CEB"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "ABCEE4F3C629BF83"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "8AE55685067FDBBC"
+					type: "xp"
+					xp: 400
+				}
+			]
+			tasks: [
+				{
+					id: "3F53B8E92AB71623"
+					item: { count: 1, id: "minecraft:wheat" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Animal care supplies"
+					type: "item"
+				}
+				{
+					id: "33F64B3316A75CEB"
+					title: "Completed milestone: Care and transport"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Animal care supplies; then confirm the milestone."
 			title: "Care and transport"
 			x: 9.0d
 			y: 0.0d

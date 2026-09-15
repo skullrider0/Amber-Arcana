@@ -1,64 +1,136 @@
 {
-  "id": "303C0D3F1478FB5C",
-  "filename": "irons_spells",
-  "title": "Iron Spells and Wizardry",
-  "order_index": 18,
-  "group": "",
-  "quests": [
-    {
-      "id": "2F90A5A4DB0404F1",
-      "title": "Choose a school",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Find or craft a spellbook and learn a spell. Read its mana cost and cooldown before entering combat.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "22E46B8AF87F85E6",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "017F83F1867628E2",
-      "title": "The inscription workshop",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Build the spell-crafting stations supported by this version and improve your book and equipment.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "21B3DD407A70E254",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "2F90A5A4DB0404F1"
-      ]
-    },
-    {
-      "id": "00C1FF44E8C395ED",
-      "title": "Spells beyond the surface",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Explore the installed Alexs Caves spell addon and Create Wizardry. Use JEI to find the recipes that connect the systems.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "4363C052082E3CE1",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "017F83F1867628E2"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "irons_spellbooks:iron_spell_book"
+	id: "303C0D3F1478FB5C",
+	filename: "irons_spells",
+	title: "Iron Spells and Wizardry",
+	order_index: 18,
+	group: "",
+	quests: [
+		{
+			icon: "irons_spellbooks:iron_spell_book"
+			id: "2F90A5A4DB0404F1",
+			subtitle: "Requires Iron Spell Book; then confirm the milestone."
+			title: "Choose a school",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Find or craft a spellbook and learn a spell. Read its mana cost and cooldown before entering combat.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "8449FFAE17AA2C46"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					id: "26FBFF038DF49208"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "87251E1D62264BF3"
+					item: { count: 1, id: "irons_spellbooks:iron_spell_book" }
+					consume_items: false
+					title: "Obtain: Iron Spell Book"
+					type: "item"
+				}
+				{
+					id: "22E46B8AF87F85E6"
+					title: "Completed milestone: Choose a school"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "irons_spellbooks:inscription_table"
+			id: "017F83F1867628E2",
+			subtitle: "Requires Inscription Table; then confirm the milestone."
+			title: "The inscription workshop",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Build the spell-crafting stations supported by this version and improve your book and equipment.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "77884CAB3B3A75DA"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					id: "DC97FAB8BC74E47C"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "138483EBD91DA738"
+					item: { count: 1, id: "irons_spellbooks:inscription_table" }
+					consume_items: false
+					title: "Obtain: Inscription Table"
+					type: "item"
+				}
+				{
+					id: "21B3DD407A70E254"
+					title: "Completed milestone: The inscription workshop"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"2F90A5A4DB0404F1"
+			]
+		},
+		{
+			icon: "minecraft:amethyst_shard"
+			id: "00C1FF44E8C395ED",
+			subtitle: "Requires Cross-mod spell materials; then confirm the milestone."
+			title: "Spells beyond the surface",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Explore the installed Alexs Caves spell addon and Create Wizardry. Use JEI to find the recipes that connect the systems.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 1
+					id: "F030614B4A69FF2C"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "CB45882F419365E2"
+					type: "xp"
+					xp: 350
+				}
+			]
+			tasks: [
+				{
+					id: "BE5C81C2F8252446"
+					item: { count: 1, id: "minecraft:amethyst_shard" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Cross-mod spell materials"
+					type: "item"
+				}
+				{
+					id: "4363C052082E3CE1"
+					title: "Completed milestone: Spells beyond the surface"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"017F83F1867628E2"
+			]
+		}
+	],
+	quest_links: []
 }

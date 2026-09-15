@@ -1,64 +1,138 @@
 {
-  "id": "01DA3803DBA7D386",
-  "filename": "firearms",
-  "title": "Firearms and Artillery",
-  "order_index": 23,
-  "group": "",
-  "quests": [
-    {
-      "id": "3099F106AB3C6A98",
-      "title": "A gunsmiths bench",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Craft a Create Gunsmithing weapon and compatible ammunition using the installed recipes.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "4A68B00F3F848441",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "75559872A530EDA9",
-      "title": "An ammunition line",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Automate a repeatable ammunition ingredient or assembly step using the available Create recipes.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7D821979133C71F7",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "3099F106AB3C6A98"
-      ]
-    },
-    {
-      "id": "2129796B99A6F9F3",
-      "title": "Big Cannons",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Construct and load a Create Big Cannons installation using its guide. Test it in a clear area away from your colony and habitats.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "3C257F9B27733B68",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "75559872A530EDA9"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:iron_ingot"
+	id: "01DA3803DBA7D386",
+	filename: "firearms",
+	title: "Firearms and Artillery",
+	order_index: 23,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:iron_ingot"
+			id: "3099F106AB3C6A98",
+			subtitle: "Requires Gunsmithing metal; then confirm the milestone."
+			title: "A gunsmiths bench",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Craft a Create Gunsmithing weapon and compatible ammunition using the installed recipes.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "B53B8C072FCC8E13"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "2964A0BA52A48D2A"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "298013AF1E80E359"
+					item: { count: 1, id: "minecraft:iron_ingot" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Gunsmithing metal"
+					type: "item"
+				}
+				{
+					id: "4A68B00F3F848441"
+					title: "Completed milestone: A gunsmiths bench"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "minecraft:gunpowder"
+			id: "75559872A530EDA9",
+			subtitle: "Requires Ammunition ingredients; then confirm the milestone."
+			title: "An ammunition line",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Automate a repeatable ammunition ingredient or assembly step using the available Create recipes.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "804511EF8A966F68"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "E79046D70F18293E"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "736359CEDBABC29D"
+					item: { count: 1, id: "minecraft:gunpowder" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Ammunition ingredients"
+					type: "item"
+				}
+				{
+					id: "7D821979133C71F7"
+					title: "Completed milestone: An ammunition line"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"3099F106AB3C6A98"
+			]
+		},
+		{
+			icon: "minecraft:obsidian"
+			id: "2129796B99A6F9F3",
+			subtitle: "Requires Cannon test-site reinforcement; then confirm the milestone."
+			title: "Big Cannons",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Construct and load a Create Big Cannons installation using its guide. Test it in a clear area away from your colony and habitats.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 1
+					id: "B126F54554011AF5"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "7781225F05FC40F3"
+					type: "xp"
+					xp: 350
+				}
+			]
+			tasks: [
+				{
+					id: "E6D32DC3FF38D857"
+					item: { count: 1, id: "minecraft:obsidian" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Cannon test-site reinforcement"
+					type: "item"
+				}
+				{
+					id: "3C257F9B27733B68"
+					title: "Completed milestone: Big Cannons"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"75559872A530EDA9"
+			]
+		}
+	],
+	quest_links: []
 }

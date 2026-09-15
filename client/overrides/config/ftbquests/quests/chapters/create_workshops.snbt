@@ -1,102 +1,222 @@
 {
-  "id": "748801A59E39015D",
-  "filename": "create_workshops",
-  "title": "Create Workshops",
-  "order_index": 1,
-  "group": "",
-  "quests": [
-    {
-      "id": "7F5A949E389973B0",
-      "title": "A shared workshop",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Build a powered Create work area. Keep access to shafts, belts, and stress controls clear so friends can maintain the machines.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "72F994E8D03140E2",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "790286CC030F3B89",
-      "title": "Casings and conveniences",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Use Encased and Misc and Things components in a working machine. Decorate the workshop with Interiors and Stuff N Additions blocks or equipment.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7B64F1285275762A",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7F5A949E389973B0"
-      ]
-    },
-    {
-      "id": "7D97DFC1BF45C254",
-      "title": "A renewable supply",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Construct a Sifting line and sort its outputs. Follow the installed mesh recipes in JEI; avoid assuming every modded ore appears in every sieve.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "74531B35CA15CF9C",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "790286CC030F3B89"
-      ]
-    },
-    {
-      "id": "73AF015A40ECDE9A",
-      "title": "Bulk work with care",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Use FTB Ultimine and Create Ultimine on a small owned test structure. Check the selection preview and verify that another team cannot remove your claimed machinery.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "76940FC01BDE1559",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7D97DFC1BF45C254"
-      ]
-    },
-    {
-      "id": "7B876F79028477C7",
-      "title": "Power at scale",
-      "x": 3.0,
-      "y": 3.0,
-      "description": [
-        "Build a CROWNS power setup using its guide and installed recipes. Add a way to stop production and monitor stress before connecting it to your main factory.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7691C76512BC1A0A",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "73AF015A40ECDE9A"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "create:wrench"
+	id: "748801A59E39015D",
+	filename: "create_workshops",
+	title: "Create Workshops",
+	order_index: 1,
+	group: "",
+	quests: [
+		{
+			icon: "create:wrench"
+			id: "7F5A949E389973B0",
+			subtitle: "Requires Create Wrench; then confirm the milestone."
+			title: "A shared workshop",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Build a powered Create work area. Keep access to shafts, belts, and stress controls clear so friends can maintain the machines.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "EA73FE34FCC78FB5"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "2B0BFD6E59CA6417"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "2544B8EF432FCBE9"
+					item: { count: 1, id: "create:wrench" }
+					consume_items: false
+					title: "Obtain: Create Wrench"
+					type: "item"
+				}
+				{
+					id: "72F994E8D03140E2"
+					title: "Completed milestone: A shared workshop"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "create:andesite_casing"
+			id: "790286CC030F3B89",
+			subtitle: "Requires Workshop casings; then confirm the milestone."
+			title: "Casings and conveniences",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Use Encased and Misc and Things components in a working machine. Decorate the workshop with Interiors and Stuff N Additions blocks or equipment.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "D4B63AD2A7148C76"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "F2F611C50CE3C518"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "7592FF57067AAB2A"
+					item: { count: 1, id: "create:andesite_casing" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: Workshop casings"
+					type: "item"
+				}
+				{
+					id: "7B64F1285275762A"
+					title: "Completed milestone: Casings and conveniences"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"7F5A949E389973B0"
+			]
+		},
+		{
+			icon: "minecraft:string"
+			id: "7D97DFC1BF45C254",
+			subtitle: "Requires Sifting mesh supplies; then confirm the milestone."
+			title: "A renewable supply",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Construct a Sifting line and sort its outputs. Follow the installed mesh recipes in JEI; avoid assuming every modded ore appears in every sieve.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "4F3A067D2AAD6D7B"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "4F7D194F835EF9B8"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "5DC14B765B78FD62"
+					item: { count: 1, id: "minecraft:string" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Sifting mesh supplies"
+					type: "item"
+				}
+				{
+					id: "74531B35CA15CF9C"
+					title: "Completed milestone: A renewable supply"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"790286CC030F3B89"
+			]
+		},
+		{
+			icon: "minecraft:diamond_pickaxe"
+			id: "73AF015A40ECDE9A",
+			subtitle: "Requires Careful bulk-mining tool; then confirm the milestone."
+			title: "Bulk work with care",
+			x: 0.0,
+			y: 3.0,
+			description: [
+				"Use FTB Ultimine and Create Ultimine on a small owned test structure. Check the selection preview and verify that another team cannot remove your claimed machinery.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 8
+					id: "ECFDF9075C5826E1"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "9404080F996A2F9C"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "FE639BEF4E585144"
+					item: { count: 1, id: "minecraft:diamond_pickaxe" }
+					consume_items: false
+					title: "Obtain: Careful bulk-mining tool"
+					type: "item"
+				}
+				{
+					id: "76940FC01BDE1559"
+					title: "Completed milestone: Bulk work with care"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"7D97DFC1BF45C254"
+			]
+		},
+		{
+			icon: "create:brass_casing"
+			id: "7B876F79028477C7",
+			subtitle: "Requires Large-scale Create components; then confirm the milestone."
+			title: "Power at scale",
+			x: 3.0,
+			y: 3.0,
+			description: [
+				"Build a CROWNS power setup using its guide and installed recipes. Add a way to stop production and monitor stress before connecting it to your main factory.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "50CBE0DCAF5F67C3"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "299305ECD5518239"
+					type: "xp"
+					xp: 450
+				}
+			]
+			tasks: [
+				{
+					id: "7C85D18812131EB8"
+					item: { count: 1, id: "create:brass_casing" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: Large-scale Create components"
+					type: "item"
+				}
+				{
+					id: "7691C76512BC1A0A"
+					title: "Completed milestone: Power at scale"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"73AF015A40ECDE9A"
+			]
+		}
+	],
+	quest_links: []
 }

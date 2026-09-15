@@ -1,102 +1,223 @@
 {
-  "id": "75A9B231B7FDAB26",
-  "filename": "settlement",
-  "title": "Claims and Colonies",
-  "order_index": 0,
-  "group": "",
-  "quests": [
-    {
-      "id": "70C7ABF21CA802F5",
-      "title": "A place to call home",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Choose a settlement site with room for farms, factory buildings, and animal enclosures. Use the MineColonies build preview before committing to the first buildings.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7F146D00AC77A7E1",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "7AF3658FEB97583B",
-      "title": "Claim together",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Create your FTB team, invite your friends, and claim the settlement with FTB Chunks. Colony permissions and FTB team membership are separate; give builders access in both systems.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7C8519FE0C13B968",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "70C7ABF21CA802F5"
-      ]
-    },
-    {
-      "id": "7B1372B7801FD7F7",
-      "title": "The first builders",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Establish the Town Hall and a Builder. Supply the requested materials and let the Builder finish a hut. If work stalls, check the worker request list, then check claim permissions.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "77AA6ED8327B14AB",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7AF3658FEB97583B"
-      ]
-    },
-    {
-      "id": "7FDBD04CDCC2AC42",
-      "title": "From warehouse to workshop",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Add a Warehouse and Courier, then deliver one batch of Create-produced building materials to the colony. Watch a delivery reach the requesting worker.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7498071E867FCE38",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7B1372B7801FD7F7"
-      ]
-    },
-    {
-      "id": "7E43AF9888FA9F2E",
-      "title": "A town that feeds itself",
-      "x": 3.0,
-      "y": 3.0,
-      "description": [
-        "Establish food production and a kitchen. Supply a Farmer's Delight meal from your factory to the settlement and confirm the colony can use that food before scaling up.",
-        "Complete this project, then tick the checkmark. This is a manual build milestone."
-      ],
-      "tasks": [
-        {
-          "id": "7D3327E0FE57F29E",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7FDBD04CDCC2AC42"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:oak_planks"
+	id: "75A9B231B7FDAB26",
+	filename: "settlement",
+	title: "Claims and Colonies",
+	order_index: 0,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:oak_planks"
+			id: "70C7ABF21CA802F5",
+			subtitle: "Requires Settlement building stock; then confirm the milestone."
+			title: "A place to call home",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Choose a settlement site with room for farms, factory buildings, and animal enclosures. Use the MineColonies build preview before committing to the first buildings.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "E64F5A4E486B13A2"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "A2192C1B173D5FA7"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "076B560AD1B6264F"
+					item: { count: 1, id: "minecraft:oak_planks" }
+					count: 64L
+					consume_items: false
+					title: "Obtain: Settlement building stock"
+					type: "item"
+				}
+				{
+					id: "7F146D00AC77A7E1"
+					title: "Completed milestone: A place to call home"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "minecraft:map"
+			id: "7AF3658FEB97583B",
+			subtitle: "Requires Settlement claim map; then confirm the milestone."
+			title: "Claim together",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Create your FTB team, invite your friends, and claim the settlement with FTB Chunks. Colony permissions and FTB team membership are separate; give builders access in both systems.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "D05D47F711D6E5FD"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					id: "D0E071E651E3F459"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "1BE83228A22C0849"
+					item: { count: 1, id: "minecraft:map" }
+					consume_items: false
+					title: "Obtain: Settlement claim map"
+					type: "item"
+				}
+				{
+					id: "7C8519FE0C13B968"
+					title: "Completed milestone: Claim together"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"70C7ABF21CA802F5"
+			]
+		},
+		{
+			icon: "minecraft:crafting_table"
+			id: "7B1372B7801FD7F7",
+			subtitle: "Requires Builder work supplies; then confirm the milestone."
+			title: "The first builders",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Establish the Town Hall and a Builder. Supply the requested materials and let the Builder finish a hut. If work stalls, check the worker request list, then check claim permissions.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "5105CC797EC75F81"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "FC41035166A666AF"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "E8B48BF1C1111E45"
+					item: { count: 1, id: "minecraft:crafting_table" }
+					count: 4L
+					consume_items: false
+					title: "Obtain: Builder work supplies"
+					type: "item"
+				}
+				{
+					id: "77AA6ED8327B14AB"
+					title: "Completed milestone: The first builders"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"7AF3658FEB97583B"
+			]
+		},
+		{
+			icon: "minecraft:chest"
+			id: "7FDBD04CDCC2AC42",
+			subtitle: "Requires Warehouse and delivery buffers; then confirm the milestone."
+			title: "From warehouse to workshop",
+			x: 0.0,
+			y: 3.0,
+			description: [
+				"Add a Warehouse and Courier, then deliver one batch of Create-produced building materials to the colony. Watch a delivery reach the requesting worker.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "5E20CB5CAFC9F90A"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "37AB774EBAEADD9D"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "645F12330B2FF482"
+					item: { count: 1, id: "minecraft:chest" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: Warehouse and delivery buffers"
+					type: "item"
+				}
+				{
+					id: "7498071E867FCE38"
+					title: "Completed milestone: From warehouse to workshop"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"7B1372B7801FD7F7"
+			]
+		},
+		{
+			icon: "minecraft:bread"
+			id: "7E43AF9888FA9F2E",
+			subtitle: "Requires Colony food supply; then confirm the milestone."
+			title: "A town that feeds itself",
+			x: 3.0,
+			y: 3.0,
+			description: [
+				"Establish food production and a kitchen. Supply a Farmer's Delight meal from your factory to the settlement and confirm the colony can use that food before scaling up.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "F3BF6DAB624E0A0E"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "498BAE0C0B5F712C"
+					type: "xp"
+					xp: 450
+				}
+			]
+			tasks: [
+				{
+					id: "AD563F7042D6FA21"
+					item: { count: 1, id: "minecraft:bread" }
+					count: 32L
+					consume_items: false
+					title: "Obtain: Colony food supply"
+					type: "item"
+				}
+				{
+					id: "7D3327E0FE57F29E"
+					title: "Completed milestone: A town that feeds itself"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"7FDBD04CDCC2AC42"
+			]
+		}
+	],
+	quest_links: []
 }

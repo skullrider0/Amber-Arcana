@@ -3,20 +3,47 @@
 	default_quest_shape: ""
 	filename: "ae2"
 	group: ""
+	icon: "ae2:controller"
 	id: "74EBC0E1247808F5"
 	order_index: 14
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Start Applied Energistics 2 using its guide. Obtain the materials needed for a powered ME network and terminal."
-				"Complete this objective, then tick the checkmark. This is a manual milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "ae2:controller"
 			id: "4FED0F46376BBAFB"
-			tasks: [{
-				id: "7AD8380CAA2B9E71"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 8
+					id: "5A5C20B9DA7AA84F"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "A431271D52A67CAF"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "EF85DBCF98F285AD"
+					item: { count: 1, id: "ae2:controller" }
+					consume_items: false
+					title: "Obtain: ME Controller"
+					type: "item"
+				}
+				{
+					id: "7AD8380CAA2B9E71"
+					title: "Completed milestone: ME foundations"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires ME Controller; then confirm the milestone."
 			title: "ME foundations"
 			x: 0.0d
 			y: 0.0d
@@ -25,13 +52,45 @@
 			dependencies: ["4FED0F46376BBAFB"]
 			description: [
 				"Build an autocrafting system and learn how your chosen AE2 network handles channels, power, and subnetworks."
-				"Complete this objective, then tick the checkmark. This is a manual milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "ae2:pattern_provider"
 			id: "2B5CC0DDAF0E909D"
-			tasks: [{
-				id: "739981E691DCCC97"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 8
+					id: "F0E6820F5FE1DED8"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "F0F020A81A8EB565"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "5FC73318A354FB37"
+					item: { count: 1, id: "ae2:pattern_provider" }
+					consume_items: false
+					title: "Obtain: Pattern Provider"
+					type: "item"
+				}
+				{
+					id: "0FAEDDAAF0BC3716"
+					item: { count: 1, id: "ae2:molecular_assembler" }
+					consume_items: false
+					title: "Obtain: Molecular Assembler"
+					type: "item"
+				}
+				{
+					id: "739981E691DCCC97"
+					title: "Completed milestone: Patterns and channels"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Pattern Provider + Molecular Assembler; then confirm the milestone."
 			title: "Patterns and channels"
 			x: 3.0d
 			y: 0.0d
@@ -40,13 +99,38 @@
 			dependencies: ["2B5CC0DDAF0E909D"]
 			description: [
 				"Craft a MEGA Cells component and install a compatible cell. Use AE2 and Refined Storage as independent systems wherever that suits your base."
-				"Complete this objective, then tick the checkmark. This is a manual milestone."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "ae2:item_storage_cell_64k"
 			id: "0B542AC7B25BACFF"
-			tasks: [{
-				id: "43F02561FC34C5F8"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 1
+					id: "E0B05B43D31D42FF"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "913EA8ED4CCCDFE8"
+					type: "xp"
+					xp: 350
+				}
+			]
+			tasks: [
+				{
+					id: "B8FFDE874900FA39"
+					item: { count: 1, id: "ae2:item_storage_cell_64k" }
+					consume_items: false
+					title: "Obtain: 64k ME Storage Cell"
+					type: "item"
+				}
+				{
+					id: "43F02561FC34C5F8"
+					title: "Completed milestone: MEGA storage"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires 64k ME Storage Cell; then confirm the milestone."
 			title: "MEGA storage"
 			x: 6.0d
 			y: 0.0d

@@ -1,102 +1,221 @@
 {
-  "id": "4373E7571823BE97",
-  "filename": "dimensions",
-  "title": "Beyond the Overworld",
-  "order_index": 22,
-  "group": "",
-  "quests": [
-    {
-      "id": "43F76D74D0E60C18",
-      "title": "The Twilight Forest",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Prepare equipment, food, and a return route, then enter the Twilight Forest and follow its intended boss progression.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "47D95EDD5AD2C70B",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "36F1DC4DCF854967",
-      "title": "The Otherside",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Use Deeper and Darker progression to reach the Otherside. Establish a marked return route before carrying rare materials home.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "683263707147F782",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "43F76D74D0E60C18"
-      ]
-    },
-    {
-      "id": "7A6715D16FCD5049",
-      "title": "Blue Skies expedition",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Enter a Blue Skies dimension and progress using its own materials and equipment rules.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "2D7654F93D5C72B3",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "36F1DC4DCF854967"
-      ]
-    },
-    {
-      "id": "645820C5A20557B2",
-      "title": "The Bumblezone",
-      "x": 9.0,
-      "y": 0.0,
-      "description": [
-        "Explore the Bumblezone, learn how its inhabitants react, and bring back useful resources.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "500DA27CFA92A411",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "7A6715D16FCD5049"
-      ]
-    },
-    {
-      "id": "703E1B74FC15549F",
-      "title": "Cataclysm expeditions",
-      "x": 0.0,
-      "y": 3.0,
-      "description": [
-        "Locate and challenge a structure from L_Ender's Cataclysm. Prepare an escape route and test your equipment on lesser enemies before confronting its boss.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "29AEC6A4ABD39343",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "645820C5A20557B2"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:blaze_rod"
+	id: "4373E7571823BE97",
+	filename: "dimensions",
+	title: "Beyond the Overworld",
+	order_index: 22,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:blaze_rod"
+			id: "43F76D74D0E60C18",
+			subtitle: "Requires Nether expedition trophy; then confirm the milestone."
+			title: "Nether expedition",
+			x: 0.0,
+			y: 0.0,
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Build a Nether portal, prepare food and a marked return route, and establish a safe foothold on the other side."
+				"Bring back a Blaze Rod, then use the manual checkmark once your return route is tested."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "3704EEFAE3CB742C"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "781A61240F81C462"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "58E42E06D63294B4"
+					item: { count: 1, id: "minecraft:blaze_rod" }
+					consume_items: false
+					title: "Obtain: Nether expedition trophy"
+					type: "item"
+				}
+				{
+					id: "47D95EDD5AD2C70B"
+					title: "Completed milestone: Nether expedition"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "minecraft:echo_shard"
+			id: "36F1DC4DCF854967",
+			subtitle: "Requires Deep-dark expedition proof; then confirm the milestone."
+			title: "The Otherside",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Use Deeper and Darker progression to reach the Otherside. Establish a marked return route before carrying rare materials home.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "B7B151F69CABA710"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "D70478B2EBCAC258"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "AFB41A935B9B6045"
+					item: { count: 1, id: "minecraft:echo_shard" }
+					consume_items: false
+					title: "Obtain: Deep-dark expedition proof"
+					type: "item"
+				}
+				{
+					id: "683263707147F782"
+					title: "Completed milestone: The Otherside"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"43F76D74D0E60C18"
+			]
+		},
+		{
+			icon: "minecraft:diamond"
+			id: "7A6715D16FCD5049",
+			subtitle: "Requires Blue Skies expedition supplies; then confirm the milestone."
+			title: "Blue Skies expedition",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Enter a Blue Skies dimension and progress using its own materials and equipment rules.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "706A7750FD2B4F50"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					id: "11781B285346018E"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "2E47A4D4D6D60386"
+					item: { count: 1, id: "minecraft:diamond" }
+					count: 2L
+					consume_items: false
+					title: "Obtain: Blue Skies expedition supplies"
+					type: "item"
+				}
+				{
+					id: "2D7654F93D5C72B3"
+					title: "Completed milestone: Blue Skies expedition"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"36F1DC4DCF854967"
+			]
+		},
+		{
+			icon: "minecraft:honeycomb"
+			id: "645820C5A20557B2",
+			subtitle: "Requires Bumblezone resources; then confirm the milestone."
+			title: "The Bumblezone",
+			x: 9.0,
+			y: 0.0,
+			description: [
+				"Explore the Bumblezone, learn how its inhabitants react, and bring back useful resources.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "01298AD23C87D212"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					id: "ADFE409A793AD20A"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "EC29050B86080804"
+					item: { count: 1, id: "minecraft:honeycomb" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Bumblezone resources"
+					type: "item"
+				}
+				{
+					id: "500DA27CFA92A411"
+					title: "Completed milestone: The Bumblezone"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"7A6715D16FCD5049"
+			]
+		},
+		{
+			icon: "minecraft:netherite_ingot"
+			id: "703E1B74FC15549F",
+			subtitle: "Requires Cataclysm-ready material; then confirm the milestone."
+			title: "Cataclysm expeditions",
+			x: 0.0,
+			y: 3.0,
+			description: [
+				"Locate and challenge a structure from L_Ender's Cataclysm. Prepare an escape route and test your equipment on lesser enemies before confronting its boss.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "531D024B22F5BC51"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "CB4AA3EBE16D5795"
+					type: "xp"
+					xp: 450
+				}
+			]
+			tasks: [
+				{
+					id: "C425D7D07657ACC6"
+					item: { count: 1, id: "minecraft:netherite_ingot" }
+					consume_items: false
+					title: "Obtain: Cataclysm-ready material"
+					type: "item"
+				}
+				{
+					id: "29AEC6A4ABD39343"
+					title: "Completed milestone: Cataclysm expeditions"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"645820C5A20557B2"
+			]
+		}
+	],
+	quest_links: []
 }

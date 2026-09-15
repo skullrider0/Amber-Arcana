@@ -3,20 +3,47 @@
 	default_quest_shape: ""
 	filename: "butchery"
 	group: ""
+	icon: "minecraft:iron_sword"
 	id: "7C03952947D653FD"
 	order_index: 8
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft the Butchery tools and set up a hook and processing area. Follow the guide to process a vanilla carcass."
-				"Complete this build, then tick the checkmark. This milestone is manual."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:iron_sword"
 			id: "721D62786F52052B"
-			tasks: [{
-				id: "737E3307996BA38E"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "1C9E7D3CA97329EF"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "5840CACE84623F26"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "8F92BB1D170FF088"
+					item: { count: 1, id: "minecraft:iron_sword" }
+					consume_items: false
+					title: "Obtain: Butchery cutting tool"
+					type: "item"
+				}
+				{
+					id: "737E3307996BA38E"
+					title: "Completed milestone: A working butchery"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Butchery cutting tool; then confirm the milestone."
 			title: "A working butchery"
 			x: 0.0d
 			y: 0.0d
@@ -25,13 +52,39 @@
 			dependencies: ["721D62786F52052B"]
 			description: [
 				"Produce a Farmer's Delight meat cut from the Butchery setup, then use it in a cooked meal. Confirm the recipe in JEI before connecting it to a Create cooking line."
-				"Complete this build, then tick the checkmark. This milestone is manual."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:cooked_beef"
 			id: "71390971389C67F4"
-			tasks: [{
-				id: "764178120077C7EF"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "A0A194B2E91BE679"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					id: "5A69F7B1226725EB"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "AECF1EC7C7D1FE03"
+					item: { count: 1, id: "minecraft:cooked_beef" }
+					count: 4L
+					consume_items: false
+					title: "Obtain: Prepared meat"
+					type: "item"
+				}
+				{
+					id: "764178120077C7EF"
+					title: "Completed milestone: From cuts to cooking"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Prepared meat; then confirm the milestone."
 			title: "From cuts to cooking"
 			x: 3.0d
 			y: 0.0d
@@ -40,13 +93,39 @@
 			dependencies: ["71390971389C67F4"]
 			description: [
 				"Inspect the Butchery blood-handling options with Blood Magic and Hexerei installed. Build one supported connection shown by the installed guide or recipes; keep the different fluid systems distinct until you verify a conversion."
-				"Complete this build, then tick the checkmark. This milestone is manual."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:glass_bottle"
 			id: "7E7522394BC0CA28"
-			tasks: [{
-				id: "76745B8AE21274A6"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "95257F1DD9E7E543"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "19DCC7769A415978"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "1236786C2E3A62E2"
+					item: { count: 1, id: "minecraft:glass_bottle" }
+					count: 8L
+					consume_items: false
+					title: "Obtain: Blood-handling containers"
+					type: "item"
+				}
+				{
+					id: "76745B8AE21274A6"
+					title: "Completed milestone: The blood workshop"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Blood-handling containers; then confirm the milestone."
 			title: "The blood workshop"
 			x: 6.0d
 			y: 0.0d
@@ -55,13 +134,38 @@
 			dependencies: ["7E7522394BC0CA28"]
 			description: [
 				"Explore Vampirism as a vampire or hunter at your choice. Inspect Butchery blood values and heart integration; build a supply station appropriate to your faction."
-				"Complete this build, then tick the checkmark. This milestone is manual."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:golden_apple"
 			id: "71462C1C525987DD"
-			tasks: [{
-				id: "7544A71A88324106"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "C01EC30DF3AF77AE"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "2309A978A0827E75"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "25BDAF535D74F670"
+					item: { count: 1, id: "minecraft:golden_apple" }
+					consume_items: false
+					title: "Obtain: Faction provisions"
+					type: "item"
+				}
+				{
+					id: "7544A71A88324106"
+					title: "Completed milestone: Vampire provisions"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Faction provisions; then confirm the milestone."
 			title: "Vampire provisions"
 			x: 0.0d
 			y: 3.0d
@@ -70,13 +174,39 @@
 			dependencies: ["71462C1C525987DD"]
 			description: [
 				"Use the Butchery Alex's Mobs addon on one of its supported animals. Its beta list covers six species, so check support before planning a larger processing line."
-				"Complete this build, then tick the checkmark. This milestone is manual."
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			]
+			icon: "minecraft:lead"
 			id: "78F216007C4453E8"
-			tasks: [{
-				id: "74D4EF1817614C0A"
-				type: "checkmark"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "78E78936C3E4CAEA"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "86D440F4FF62F9CA"
+					type: "xp"
+					xp: 450
+				}
+			]
+			tasks: [
+				{
+					id: "FC8A76718B0B8F82"
+					item: { count: 1, id: "minecraft:lead" }
+					count: 2L
+					consume_items: false
+					title: "Obtain: Animal handling supplies"
+					type: "item"
+				}
+				{
+					id: "74D4EF1817614C0A"
+					title: "Completed milestone: Expanded processing"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Requires Animal handling supplies; then confirm the milestone."
 			title: "Expanded processing"
 			x: 3.0d
 			y: 3.0d

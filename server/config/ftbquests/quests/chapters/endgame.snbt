@@ -1,83 +1,186 @@
 {
-  "id": "76EC4F6922B5CFF9",
-  "filename": "endgame",
-  "title": "A World Worth Building",
-  "order_index": 24,
-  "group": "",
-  "quests": [
-    {
-      "id": "4422161D0412164C",
-      "title": "Seasonal estate",
-      "x": 0.0,
-      "y": 0.0,
-      "description": [
-        "Build a Serene Seasons farm and food store that can support your settlement throughout the year.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "52F51D2E1C8DF69D",
-          "type": "checkmark"
-        }
-      ]
-    },
-    {
-      "id": "5112E3596ADFFB90",
-      "title": "Connected civilization",
-      "x": 3.0,
-      "y": 0.0,
-      "description": [
-        "Link your colony, factories, magical workshops, zoo, aquarium, and dinosaur park with transport routes.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "73EA2B87FF307F05",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "4422161D0412164C"
-      ]
-    },
-    {
-      "id": "2632742BFA82EB75",
-      "title": "Adventure ready",
-      "x": 6.0,
-      "y": 0.0,
-      "description": [
-        "Prepare powerful equipment through Mekanism, Tinkers, magic, and exploration rewards. Apotheosis is excluded from this pack.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "33FC1D574A5035BD",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "5112E3596ADFFB90"
-      ]
-    },
-    {
-      "id": "1C5E1BCE0A87E013",
-      "title": "The grand opening",
-      "x": 9.0,
-      "y": 0.0,
-      "description": [
-        "Complete a visitor route through the park and a tour of your factories and magical builds. Invite friends to add their own districts.",
-        "Complete this objective, then tick the checkmark. This is a manual milestone."
-      ],
-      "tasks": [
-        {
-          "id": "2604A291C3755397",
-          "type": "checkmark"
-        }
-      ],
-      "dependencies": [
-        "2632742BFA82EB75"
-      ]
-    }
-  ],
-  "quest_links": []
+	icon: "minecraft:hay_block"
+	id: "76EC4F6922B5CFF9",
+	filename: "endgame",
+	title: "A World Worth Building",
+	order_index: 24,
+	group: "",
+	quests: [
+		{
+			icon: "minecraft:hay_block"
+			id: "4422161D0412164C",
+			subtitle: "Requires Seasonal food reserve; then confirm the milestone."
+			title: "Seasonal estate",
+			x: 0.0,
+			y: 0.0,
+			dependencies: [
+				"6A19120000000601"
+				"27F120E99FCF093B"
+				"0529657A7D4C8721"
+				"7E43AF9888FA9F2E"
+				"7D39BB362CB3149A"
+			]
+			description: [
+				"Build a Serene Seasons farm and food store that can support your settlement throughout the year.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "6A72797A8708121E"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "A95A60A057F65876"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "463AEABA546CA4F4"
+					item: { count: 1, id: "minecraft:hay_block" }
+					count: 16L
+					consume_items: false
+					title: "Obtain: Seasonal food reserve"
+					type: "item"
+				}
+				{
+					id: "52F51D2E1C8DF69D"
+					title: "Completed milestone: Seasonal estate"
+					type: "checkmark"
+				}
+			]
+		},
+		{
+			icon: "minecraft:powered_rail"
+			id: "5112E3596ADFFB90",
+			subtitle: "Requires Civilization transport link; then confirm the milestone."
+			title: "Connected civilization",
+			x: 3.0,
+			y: 0.0,
+			description: [
+				"Link your colony, factories, magical workshops, zoo, aquarium, and dinosaur park with transport routes.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "866F94E0F0DB907D"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					id: "65AA6FE56BB640DF"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "0B6BFB424F25683F"
+					item: { count: 1, id: "minecraft:powered_rail" }
+					count: 32L
+					consume_items: false
+					title: "Obtain: Civilization transport link"
+					type: "item"
+				}
+				{
+					id: "73EA2B87FF307F05"
+					title: "Completed milestone: Connected civilization"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"4422161D0412164C"
+			]
+		},
+		{
+			icon: "minecraft:netherite_chestplate"
+			id: "2632742BFA82EB75",
+			subtitle: "Requires Adventure-ready armor; then confirm the milestone."
+			title: "Adventure ready",
+			x: 6.0,
+			y: 0.0,
+			description: [
+				"Prepare powerful equipment through Mekanism, Tinkers, magic, and exploration rewards. Apotheosis is excluded from this pack.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 4
+					id: "FACACAAFD4A12BDF"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "1B49F12EBBCBFCDA"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "FE821364C0F52ADE"
+					item: { count: 1, id: "minecraft:netherite_chestplate" }
+					consume_items: false
+					title: "Obtain: Adventure-ready armor"
+					type: "item"
+				}
+				{
+					id: "33FC1D574A5035BD"
+					title: "Completed milestone: Adventure ready"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"5112E3596ADFFB90"
+			]
+		},
+		{
+			icon: "minecraft:emerald_block"
+			id: "1C5E1BCE0A87E013",
+			subtitle: "Requires Grand-opening reserve; then confirm the milestone."
+			title: "The grand opening",
+			x: 9.0,
+			y: 0.0,
+			description: [
+				"Complete a visitor route through the park and a tour of your factories and magical builds. Invite friends to add their own districts.",
+				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+			],
+			rewards: [
+				{
+					count: 2
+					id: "BF0CF1125F02E623"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "C3ED7C3D37D93E2F"
+					type: "xp"
+					xp: 400
+				}
+			]
+			tasks: [
+				{
+					id: "B56E021C02C79AC6"
+					item: { count: 1, id: "minecraft:emerald_block" }
+					count: 4L
+					consume_items: false
+					title: "Obtain: Grand-opening reserve"
+					type: "item"
+				}
+				{
+					id: "2604A291C3755397"
+					title: "Completed milestone: The grand opening"
+					type: "checkmark"
+				}
+			],
+			dependencies: [
+				"2632742BFA82EB75"
+			]
+		}
+	],
+	quest_links: []
 }
