@@ -28,6 +28,9 @@ jobs:
       - name: Apply 0.1.9-18 JEI dependency compatibility fix
         run: python3 scripts/hotfix-jei-required-minimum-0.1.9-18.py
 
+      - name: Apply 0.1.9-19 server JEI and Crafty overlay
+        run: python3 scripts/hotfix-server-jei-0.1.9-19.py
+
       - name: Build client and server distributions
         run: bash scripts/build.sh
 
