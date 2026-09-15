@@ -31,6 +31,9 @@ jobs:
       - name: Apply 0.1.9-19 server JEI and Crafty overlay
         run: python3 scripts/hotfix-server-jei-0.1.9-19.py
 
+      - name: Apply 0.1.9-20 More Hitboxes performance removal
+        run: python3 scripts/hotfix-remove-more-hitboxes-0.1.9-20.py
+
       - name: Build client and server distributions
         run: bash scripts/build.sh
 
