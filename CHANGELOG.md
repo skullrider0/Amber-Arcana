@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.9-31 — Productive Bees cage task labels
+
+- Give all 26 species-specific Bee Cage tasks explicit species labels in FTB Quests.
+- Preserve the existing `match_nbt: true` + weak-NBT species filters; only the task presentation changes.
+- Keep quest/task/reward IDs and existing player progression intact.
+
 ## 0.1.9-30 — Quest UX, tiered rewards, and automatic bee verification
 
 - Replace literal ampersands in player-facing FTB Quests labels with parser-safe wording, fixing red `Invalid formatting` group headers.

@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-30",
+  "pack_version": "0.1.9-31",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -285,6 +285,14 @@
     "bee_comb_tasks": 40,
     "bee_cage_tasks": 26,
     "bee_manual_species_tasks_remaining": 0,
+    "historical_ids_preserved": true,
+    "client_server_quest_files_identical": true
+  },
+  "bee_cage_ui_0_1_9_31": {
+    "cage_tasks_labeled": 26,
+    "species_filters_verified": 26,
+    "task_label_format": "Capture <exact quest bee species>",
+    "matching_behavior_changed": false,
     "historical_ids_preserved": true,
     "client_server_quest_files_identical": true
   }

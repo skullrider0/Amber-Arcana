@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-30" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-30" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-31" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-31" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -98,7 +98,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-30 static validation passed"
+echo "Amber & Arcana 0.1.9-31 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -187,3 +187,8 @@ test "$loot_count" -ge "$covered" || { echo "Quest loot reward count is below re
 
 quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
 test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/reward_tables/depth_tier_4.snbt')" = "1" || { echo "Depth-tier tables missing from quest overlay" >&2; exit 1; }
+
+
+# 0.1.9-31 Productive Bees cage-label checks
+jq -e '.bee_cage_ui_0_1_9_31.cage_tasks_labeled == 26 and .bee_cage_ui_0_1_9_31.species_filters_verified == 26 and .bee_cage_ui_0_1_9_31.matching_behavior_changed == false and .bee_cage_ui_0_1_9_31.client_server_quest_files_identical == true' "$validation" >/dev/null
+test "$(grep -Ec '^\s*title: "Capture .*Bee"' "$client_quests/chapters/productive_bees.snbt")" -ge "26" || { echo "Productive Bees cage task species labels missing" >&2; exit 1; }

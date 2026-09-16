@@ -208,6 +208,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Ashy Mining Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -251,6 +252,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Blue Banded Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -294,6 +296,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Chocolate Mining Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -375,6 +378,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Digger Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -450,6 +454,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Ghostly Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -531,6 +536,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Green Carpenter Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -567,6 +573,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Honey Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -603,6 +610,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Leafcutter Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -677,6 +685,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Mason Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -720,6 +729,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Neon Cuckoo Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -756,6 +766,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Nomad Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -792,6 +803,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Reed Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -828,6 +840,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Resin Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -948,6 +961,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Sugarbag Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -984,6 +998,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Sweat Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -1020,6 +1035,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Yellow Black Carpenter Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -1155,6 +1171,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Collector Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -1198,6 +1215,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Creeper Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -1287,6 +1305,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Lumber Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -1378,6 +1397,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Pepto Bismol Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -1422,6 +1442,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Quarry Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -2011,6 +2032,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Hoarder Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -2055,6 +2077,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Rancher Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -2274,6 +2297,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Dye Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -2318,6 +2342,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Farmer Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
@@ -2491,6 +2516,7 @@
 						}
 					}
 					match_nbt: true
+					title: "Capture Cupid Bee"
 					type: "item"
 					weak_nbt_match: true
 				}
