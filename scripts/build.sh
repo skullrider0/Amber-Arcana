@@ -38,6 +38,13 @@ python3 "$repo_dir/scripts/fix-current-validator-0.1.9-38.py"
 # It intentionally does not change the dedicated-server mod list.
 python3 "$repo_dir/scripts/hotfix-no-recipe-book-reborn-0.1.9-39.py"
 
+# 0.1.9-40 repairs Crafty's server-mod downloader for CurseForge's July 2026
+# direct-CDN API-key requirement. Project IDs are embedded in server-mods.tsv,
+# the launcher gains validated web/CurseMaven fallbacks and optional API-key CDN
+# support, and the update overlay now ships the current launcher itself.
+python3 "$repo_dir/scripts/hotfix-curseforge-downloads-0.1.9-40.py"
+bash "$repo_dir/scripts/build-launcher.sh"
+
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
 "$repo_dir/scripts/generate-recipe-compat.sh"
@@ -54,8 +61,9 @@ mkdir -p "$dist_dir"
   zip -qr -FS "$dist_dir/Amber-and-Arcana-${version}-Server.zip" .
 )
 
-# Existing Crafty-server update overlay. This is intentionally world-safe: it
-# contains only the mod-management files plus the locally patched More Hitboxes jar.
+# World-safe Crafty update overlay. It updates only pack/bootstrap/mod-management
+# data, the locally patched More Hitboxes jar, and synchronized quests. World save
+# directories are never included.
 update_overlay="$dist_dir/Amber-and-Arcana-${version}-Crafty-Update-Overlay.zip"
 legacy_overlay="$dist_dir/Amber-and-Arcana-${version}-Crafty-JEI-Overlay.zip"
 quest_overlay="$dist_dir/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
@@ -64,7 +72,8 @@ rm -f "$update_overlay" "$legacy_overlay" "$quest_overlay" "$quest_spawn_overlay
 (
   cd "$repo_dir/server"
   test -f "mods/$patch_jar" || { echo "Missing patched More Hitboxes jar: server/mods/$patch_jar" >&2; exit 1; }
-  zip -qr "$update_overlay" _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests
+  test -f "AmberArcana-Crafty-Launcher.jar" || { echo "Missing rebuilt Crafty launcher" >&2; exit 1; }
+  zip -qr "$update_overlay" AmberArcana-Crafty-Launcher.jar _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests
 )
 cp "$update_overlay" "$legacy_overlay"
 
