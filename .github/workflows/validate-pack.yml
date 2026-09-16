@@ -58,10 +58,13 @@ jobs:
       - name: Apply 0.1.9-24 completed quest progression
         run: python3 scripts/hotfix-quest-requirements-0.1.9-24.py
 
-      - name: Normalize 0.1.9-24 validation version
+      - name: Finalize 0.1.9-25 quest runtime format and progression
+        run: python3 scripts/hotfix-quest-finalize-0.1.9-25.py
+
+      - name: Normalize 0.1.9-25 validation version
         shell: bash
         run: |
-          sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-24/g' scripts/validate.sh
+          sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-25/g' scripts/validate.sh
           sed -i 's/rg -F "item: "$item""/rg -F "$item"/' scripts/validate.sh
 
       - name: Build client and server distributions
