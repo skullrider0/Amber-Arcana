@@ -1,0 +1,186 @@
+def quest_title(block: str) -> str:
+    matches = re.findall(r'(?m)^\s*title:\s*"([^"]*)"\s*,?\s*$', block)
+    return matches[-1] if matches else quest_id(block)
+
+
+def quest_dependencies(block: str) -> list[str]:
+    arr = named_array(block, "dependencies")
+    if not arr:
+        return []
+    raw = block[arr[0] + 1:arr[1]]
+    return re.findall(r'"([0-9A-F]{16})"', raw)
+
+
+def quest_has_loot(block: str) -> bool:
+    return any(block_type(reward) == "loot" for reward in child_blocks(block, "rewards"))
+
+
+def coord(block: str, axis: str) -> float:
+    m = re.search(rf'(?m)^\s*{axis}:\s*(-?\d+(?:\.\d+)?)(?:[dDfF])?\s*,?\s*$', block)
+    return float(m.group(1)) if m else 0.0
+
+
+def set_coord(block: str, axis: str, value: float) -> str:
+    pattern = rf'(?m)^(\s*){axis}:\s*-?\d+(?:\.\d+)?(?:[dDfF])?\s*(,?)\s*$'
+    m = re.search(pattern, block)
+    line = None
+    if m:
+        indent, comma = m.group(1), m.group(2)
+        line = f"{indent}{axis}: {value:.1f}d{comma}"
+        return re.sub(pattern, line, block, count=1)
+
+    # Historical blocks normally have coordinates, but tolerate a missing field.
+    close = block.rfind("}")
+    if close < 0:
+        raise RuntimeError("Malformed quest block while setting coordinates")
+    return block[:close] + f"\n\t\t\t{axis}: {value:.1f}d\n\t\t" + block[close:]
+
+
+def replace_array(block: str, name: str, object_texts: list[str]) -> str:
+    arr = named_array(block, name)
+    if not arr:
+        raise RuntimeError(f"Quest {quest_id(block)} has no {name} array")
+    line = re.search(rf'(?m)^(\s*){re.escape(name)}:\s*\[', block)
+    base = line.group(1) if line else "\t\t\t"
+    body = "\n".join(object_texts)
+    replacement = "[\n" + body + "\n" + base + "]"
+    return block[:arr[0]] + replacement + block[arr[1] + 1:]
+
+
+def add_reward(block: str, reward_text: str) -> str:
+    arr = named_array(block, "rewards")
+    if not arr:
+        raise RuntimeError(f"Quest {quest_id(block)} has no rewards array")
+    line = re.search(r'(?m)^(\s*)rewards:\s*\[', block)
+    base = line.group(1) if line else "\t\t\t"
+    insertion = "\n" + reward_text + "\n" + base
+    return block[:arr[1]] + insertion + block[arr[1]:]
+
+
+def sanitize_literal_ampersands(text: str) -> str:
+    # FTB Library treats '&' as a formatting introducer. Human-readable labels like
+    # "Machines & Production" therefore render as a red formatting error. Avoid that
+    # parser ambiguity by spelling out plain-text conjunctions. Formatting codes such
+    # as &6 and &r are left untouched.
+    return text.replace(" & ", " and ")
+
+
+def rewrite_group_titles() -> None:
+    lines = ["{", "\tchapter_groups: ["]
+    for gid, title in SAFE_GROUPS:
+        lines.append(f'\t\t{{ id: "{gid}", title: "{title}" }}')
+    lines += ["\t]", "}", ""]
+    GROUPS_FILE.write_text("\n".join(lines))
+
+
+def source_bee_metadata() -> tuple[set[str], dict[str, bool]]:
+    print("Downloading Productive Bees source metadata for automatic species verification...", flush=True)
+    with urllib.request.urlopen(PB_ARCHIVE, timeout=120) as response:
+        data = response.read()
+    with zipfile.ZipFile(io.BytesIO(data)) as z:
+        roots = {Path(n).parts[0] for n in z.namelist() if n}
+        if len(roots) != 1:
+            raise RuntimeError("Unexpected Productive Bees source archive layout")
+        root_name = next(iter(roots))
+        tmp = ROOT / ".tmp-productive-bees-ux"
+        if tmp.exists():
+            shutil.rmtree(tmp)
+        z.extractall(tmp)
+    src = tmp / root_name
+
+    defs: dict[str, bool] = {}
+    definition_root = src / "src/generated/resources/data/productivebees/productivebees"
+    for path in sorted(definition_root.rglob("*.json")):
+        bee = f"productivebees:{path.stem}"
+        payload = json.loads(path.read_text())
+        defs[bee] = bool(payload.get("createComb", True))
+
+    bees = set(defs)
+
+    def outputs(value) -> list[str]:
+        if isinstance(value, str):
+            return [value]
+        if isinstance(value, dict):
+            for key in ("bee", "id"):
+                if isinstance(value.get(key), str):
+                    return [value[key]]
+            return []
+        if isinstance(value, list):
+            out: list[str] = []
+            for v in value:
+                out.extend(outputs(v))
+            return out
+        return []
+
+    breeding = src / "src/main/resources/data/productivebees/recipes/bee_breeding"
+    for path in sorted(breeding.rglob("*.json")):
+        payload = json.loads(path.read_text())
+        for key in ("parent1", "parent2"):
+            if isinstance(payload.get(key), str):
+                bees.add(payload[key])
+        bees.update(outputs(payload.get("offspring")))
+
+    conversion = src / "src/main/resources/data/productivebees/recipes/bee_conversion"
+    for path in sorted(conversion.rglob("*.json")):
+        payload = json.loads(path.read_text())
+        if isinstance(payload.get("source"), str):
+            bees.add(payload["source"])
+        bees.update(outputs(payload.get("result")))
+
+    return bees, defs
+
+
+def render_bee_task(task_id: str, bee: str, configurable: bool, produces_comb: bool) -> tuple[str, str]:
+    inner = "\t\t\t\t"
+    prop = inner + "\t"
+    sub = prop + "\t"
+    sub2 = sub + "\t"
+
+    if configurable and produces_comb:
+        text = [
+            f"{inner}{{",
+            f'{prop}id: "{task_id}"',
+            f"{prop}item: {{",
+            f"{sub}Count: 1b",
+            f'{sub}id: "productivebees:configurable_honeycomb"',
+            f"{sub}tag: {{",
+            f"{sub2}EntityTag: {{",
+            f'{sub2}\ttype: "{bee}"',
+            f"{sub2}}}",
+            f"{sub}}}",
+            f"{prop}}}",
+            f"{prop}match_nbt: true",
+            f'{prop}type: "item"',
+            f"{prop}weak_nbt_match: true",
+            f"{inner}}}",
+        ]
+        return "\n".join(text), "comb"
+
+    cage_tag = [f'{sub}entity: "productivebees:configurable_bee"', f'{sub}type: "{bee}"'] if configurable else [f'{sub}entity: "{bee}"']
+    text = [
+        f"{inner}{{",
+        f'{prop}id: "{task_id}"',
+        f"{prop}item: {{",
+        f"{sub}Count: 1b",
+        f'{sub}id: "productivebees:bee_cage"',
+        f"{sub}tag: {{",
+        *cage_tag,
+        f"{sub}}}",
+        f"{prop}}}",
+        f"{prop}match_nbt: true",
+        f'{prop}type: "item"',
+        f"{prop}weak_nbt_match: true",
+        f"{inner}}}",
+    ]
+    return "\n".join(text), "cage"
+
+
+def patch_bee_species(text: str, all_bees: set[str], definitions: dict[str, bool]) -> tuple[str, int, int, int]:
+    qid_to_bee = {hid(f"productive-bees-bee:{bee}"): bee for bee in all_bees}
+    expected = int(json.loads(VALIDATION.read_text()).get("productive_bees_0_1_9_27", {}).get("bee_quests", 0))
+    matched = comb_tasks = cage_tasks = 0
+
+    blocks = quest_positions(text)
+    for start, end in reversed(blocks):
+        block = text[start:end]
+        qid = quest_id(block)
