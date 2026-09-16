@@ -6,10 +6,13 @@ dist_dir="$repo_dir/dist"
 patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
 validation="$repo_dir/server/pack-information/validation.json"
 
-# The repository stores the canonical current pack source. Only replay older
-# transforms when their canonical marker is absent.
+# The repository stores the canonical current pack source. Only replay the old
+# 0.1.9-35 deepening transform on genuinely pre-deepening sources. The 0.1.9-38
+# ATM10-inspired rebuild intentionally replaces the old AA35 marker text, so its
+# validation marker is also a canonical "already deepened" signal.
 if ! grep -Fq 'AA35 deep progression milestone' \
-  "$repo_dir/client/overrides/config/ftbquests/quests/chapters/ae2.snbt"; then
+     "$repo_dir/client/overrides/config/ftbquests/quests/chapters/ae2.snbt" && \
+   ! grep -Fq '"atm10_major_progression_0_1_9_38"' "$validation"; then
   python3 "$repo_dir/scripts/run-hotfix-deep-short-progression-0.1.9-35.py"
 fi
 
