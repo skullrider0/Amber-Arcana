@@ -1,17 +1,17 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-35",
+  "pack_version": "0.1.9-36",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 276,
-  "mod_metadata_entries": 276,
-  "server_mod_downloads": 257,
+  "manifest_entries": 285,
+  "mod_metadata_entries": 285,
+  "server_mod_downloads": 266,
   "excluded_mod_jars": 19,
   "excluded_shader_entries": 1,
   "compatibility_fix": "More Hitboxes retained; Colorwheel excluded because it requires Oculus on dedicated server.",
   "runtime_fix": "Prefer Java 17 automatically; force Spark background profiler engine to built-in Java sampler to avoid native async-profiler crashes.",
   "compatibility_fix_v3": "Wiki Zoomer 1.3.0 restored to dedicated-server mod list so its registered content remains present after registry sync; fixes client NPE wikizoomer:item_zoomer.",
-  "server_mod_count": 257,
+  "server_mod_count": 266,
   "optimization_0_1_9": {
     "spark_background_profiler": false,
     "view_distance": 8,
@@ -1039,5 +1039,34 @@
         "wheel_moved_to_mastery": true
       }
     ]
+  },
+  "tech_expansion_0_1_9_36": {
+    "requested_mods_added": [
+      "Mining Gadgets",
+      "Iron Jetpacks",
+      "Mekanism Lasers",
+      "Draconic Evolution",
+      "Hostile Neural Networks",
+      "Infernos Otter Taming"
+    ],
+    "dependencies_added": [
+      "Brandon's Core",
+      "CodeChicken Lib",
+      "Placebo"
+    ],
+    "already_present_dependencies_reused": [
+      "Cucumber Library",
+      "Mekanism",
+      "Critters and Companions",
+      "GeckoLib"
+    ],
+    "mekanism_request_interpretation": "Mekanism Lasers 1.0.10 for the requested Mekanism mining/laser expansion; Mining Gadgets supplies the dedicated mining laser tool.",
+    "curseforge_entries_added": 9,
+    "client_manifest_entries": 285,
+    "server_mod_downloads": 266,
+    "requires_client_update": true,
+    "world_data_touched": false,
+    "crafty_update_overlay_world_safe": true,
+    "server_downloads_on_next_start": true
   }
 }

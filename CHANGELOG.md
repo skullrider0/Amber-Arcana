@@ -1,3 +1,13 @@
+## 0.1.9-36
+
+- Added Mining Gadgets 1.15.6.
+- Added Iron Jetpacks 7.0.9, reusing the pack's existing Cucumber Library.
+- Added Mekanism Lasers 1.0.10, using the existing Mekanism installation.
+- Added Draconic Evolution 3.1.2.621 with Brandon's Core and CodeChicken Lib.
+- Added Hostile Neural Networks 5.3.3 with Placebo.
+- Added Infernos Otter Taming 1.0.2, reusing Critters and Companions and GeckoLib.
+- Crafty update remains world-safe: the update overlay changes pack/mod metadata and quests only; world saves are not included.
+
 # Changelog
 
 ## 0.1.9-35 — Deep progression for compact chapters

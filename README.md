@@ -127,3 +127,7 @@ Compact quest chapters now use a compressed but much richer reward curve. Every 
 ## 0.1.9-35 deep progression pass
 
 The 24 formerly compact quest chapters now use real multi-step progression trees instead of three-to-ten broad milestones. Historical item-acquisition quests are preserved, but every local dependency is gated through required hands-on mechanics milestones such as commissioning machines, routing storage, automating production, performing rituals, exploring safely, or scaling a system. The pass adds 215 hands-on quests, raises the compact chapters to 339 total quests, keeps tiered mod-specific loot on 100% of those quests, moves each Wheel of Fortune reward to a true chapter-mastery finale, removes remaining fixed diamond/emerald rewards from the expanded chapters, and preserves the existing historical quest IDs. Create Engineering and Productive Bees retain their dedicated custom trees.
+
+
+### 0.1.9-36 tech expansion
+Adds Mining Gadgets, Iron Jetpacks, Mekanism Lasers, Draconic Evolution, Hostile Neural Networks, Infernos Otter Taming, and required missing libraries. The Crafty update overlay never contains world data.

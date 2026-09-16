@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-35",
+  "pack_version": "0.1.9-36",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -985,5 +985,34 @@
         "wheel_moved_to_mastery": true
       }
     ]
+  },
+  "tech_expansion_0_1_9_36": {
+    "requested_mods_added": [
+      "Mining Gadgets",
+      "Iron Jetpacks",
+      "Mekanism Lasers",
+      "Draconic Evolution",
+      "Hostile Neural Networks",
+      "Infernos Otter Taming"
+    ],
+    "dependencies_added": [
+      "Brandon's Core",
+      "CodeChicken Lib",
+      "Placebo"
+    ],
+    "already_present_dependencies_reused": [
+      "Cucumber Library",
+      "Mekanism",
+      "Critters and Companions",
+      "GeckoLib"
+    ],
+    "mekanism_request_interpretation": "Mekanism Lasers 1.0.10 for the requested Mekanism mining/laser expansion; Mining Gadgets supplies the dedicated mining laser tool.",
+    "curseforge_entries_added": 9,
+    "client_manifest_entries": 285,
+    "server_mod_downloads": 266,
+    "requires_client_update": true,
+    "world_data_touched": false,
+    "crafty_update_overlay_world_safe": true,
+    "server_downloads_on_next_start": true
   }
 }
