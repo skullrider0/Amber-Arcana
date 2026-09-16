@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9-27 — Productive Bees progression tree
+
+- Add a Productive Bees quest chapter generated from the exact 1.20.1-12.6.0 upstream breeding and conversion data.
+- Start with Bee Cage, Advanced Beehive, Expansion Box, Feeder, Centrifuge, and Breeding Chamber setup.
+- Lay out wild/base bees and their descendants as visual branches with actual parent dependencies and integration-specific lanes.
+- Filter configurable bees by installed-mod conditions so removed or unavailable integrations do not become required progression.
+- Add branch completion milestones and a Master Apiarist finale with a Productive Bees weighted Wheel of Fortune table.
+- Keep client/server quest trees identical and preserve all pre-existing quest IDs.
+
 ## 0.1.9-26 — Weighted Wheel of Fortune finale rewards
 
 - Add a server-authoritative weighted `loot` reward to every chapter finale using FTB Quests 2001.4.14's native reward-table system.

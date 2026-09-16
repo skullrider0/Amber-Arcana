@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-26",
+  "pack_version": "0.1.9-27",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -236,6 +236,19 @@
     "full_screen_reveal": true,
     "server_authoritative_roll": true,
     "existing_fixed_rewards_preserved": true,
+    "client_server_quest_files_identical": true
+  },
+  "productive_bees_0_1_9_27": {
+    "enabled": true,
+    "productive_bees_version": "1.20.1-12.6.0",
+    "upstream_commit": "2190d6b4c0f4a35acc26415759c3be731d1eac22",
+    "setup_quests": 6,
+    "bee_quests": 66,
+    "root_bees": 22,
+    "generated_branches": 14,
+    "active_routes_screened": 52,
+    "active_configurable_bee_definitions": 93,
+    "master_apiarist_wheel": true,
     "client_server_quest_files_identical": true
   }
 }

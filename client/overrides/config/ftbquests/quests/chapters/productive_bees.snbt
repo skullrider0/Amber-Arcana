@@ -1,0 +1,2411 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "productive_bees"
+	group: "6AA0010000000001"
+	icon: "productivebees:bee_cage"
+	id: "6AA002BEE00000000"
+	order_index: 25
+	quest_links: []
+	quests: [
+		{
+			description: [
+				"Craft a Bee Cage so you can safely capture and move bees."
+				"Concrete equipment tasks complete automatically when the item is in your inventory."
+			]
+			id: "177F72880C5107F2"
+			rewards: [
+			{
+				id: "0BA21C6FB2E10463"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Beekeeping setup"
+			tasks: [
+			{
+				id: "597585C73DD555A3"
+				item: "productivebees:bee_cage"
+				type: "item"
+			}
+			]
+			title: "Bee Cage"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"177F72880C5107F2"
+			]
+			description: [
+				"Build an Advanced Beehive. This is the core home for productive bees and accepts upgrades."
+				"Concrete equipment tasks complete automatically when the item is in your inventory."
+			]
+			id: "7D5007A61260310D"
+			rewards: [
+			{
+				id: "1842B9A4D247D84B"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Beekeeping setup"
+			tasks: [
+			{
+				id: "0DA57FBEE4DD9E9F"
+				item: "productivebees:advanced_oak_beehive"
+				type: "item"
+			}
+			]
+			title: "Advanced Beehive"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7D5007A61260310D"
+			]
+			description: [
+				"Add an Expansion Box to increase your Advanced Beehive capacity and unlock upgrade slots."
+				"Concrete equipment tasks complete automatically when the item is in your inventory."
+			]
+			id: "7A36EC5466FE7041"
+			rewards: [
+			{
+				id: "0D0185EDCC716E60"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Beekeeping setup"
+			tasks: [
+			{
+				id: "5FBAAF8DF35EBF67"
+				item: "productivebees:expansion_box_oak"
+				type: "item"
+			}
+			]
+			title: "Expansion Box"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"7A36EC5466FE7041"
+			]
+			description: [
+				"Craft a Feeder so enclosed bees can reach the flowering block or item they need."
+				"Concrete equipment tasks complete automatically when the item is in your inventory."
+			]
+			id: "2DA0552EBC0005C5"
+			rewards: [
+			{
+				id: "4CF1348E37516ABE"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Beekeeping setup"
+			tasks: [
+			{
+				id: "65C621B8F2F131E1"
+				item: "productivebees:feeder"
+				type: "item"
+			}
+			]
+			title: "Feeder"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"2DA0552EBC0005C5"
+			]
+			description: [
+				"Craft a Centrifuge to process combs into their useful resources."
+				"Concrete equipment tasks complete automatically when the item is in your inventory."
+			]
+			id: "65998F28033FF463"
+			rewards: [
+			{
+				id: "6C99B7292DAAAA7F"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Beekeeping setup"
+			tasks: [
+			{
+				id: "5F9148442F2DCF7C"
+				item: "productivebees:centrifuge"
+				type: "item"
+			}
+			]
+			title: "Centrifuge"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"65998F28033FF463"
+			]
+			description: [
+				"Craft a Breeding Chamber for controlled bee breeding. The family tree below follows Productive Bees' real 12.6.0 recipes."
+				"Concrete equipment tasks complete automatically when the item is in your inventory."
+			]
+			id: "7FBA14E9A2FB1F75"
+			rewards: [
+			{
+				id: "3AB007EF7ED5D114"
+				type: "xp"
+				xp: 50
+			}
+			]
+			subtitle: "Unlocks the bee family tree below"
+			tasks: [
+			{
+				id: "2735ADFC06588E64"
+				item: "productivebees:breeding_chamber"
+				type: "item"
+			}
+			]
+			title: "Breeding Chamber"
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "7CA5218E42FB8DAC"
+			rewards: [
+			{
+				id: "330225092E0EC842"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "2E864098B99CDA87"
+				type: "checkmark"
+			}
+			]
+			title: "Ashy Mining Bee"
+			x: -127.4d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "79202CE48FE50A0F"
+			rewards: [
+			{
+				id: "4BEAC611C28CD524"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "2C003F92644A6D90"
+				type: "checkmark"
+			}
+			]
+			title: "Blue Banded Bee"
+			x: -124.6d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "42D92091C18D2331"
+			rewards: [
+			{
+				id: "1A7AC40EE2956418"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "7D53A38DD06420FE"
+				type: "checkmark"
+			}
+			]
+			title: "Chocolate Mining Bee"
+			x: -121.8d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "3F92C3512B5F97C9"
+			rewards: [
+			{
+				id: "70065AE49F13DE19"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "5F638AF08501E51D"
+				type: "checkmark"
+			}
+			]
+			title: "Crystalline Bee"
+			x: -119.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "43C95F5483367362"
+			rewards: [
+			{
+				id: "044B56FF11007BCF"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "5B43F84A490CB8AE"
+				type: "checkmark"
+			}
+			]
+			title: "Digger Bee"
+			x: -116.2d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "6B4B00FC275F861A"
+			rewards: [
+			{
+				id: "1EC7101B62B03EC5"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "71F419F702E2C5BB"
+				type: "checkmark"
+			}
+			]
+			title: "Ender Bee"
+			x: -113.4d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "7D87C5B260AED842"
+			rewards: [
+			{
+				id: "60D48B108944FD85"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "429BA409F83F5227"
+				type: "checkmark"
+			}
+			]
+			title: "Ghostly Bee"
+			x: -110.6d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "1152510412441866"
+			rewards: [
+			{
+				id: "722C125FFA9FDB33"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "226572D8057DCFE7"
+				type: "checkmark"
+			}
+			]
+			title: "Glowing Bee"
+			x: -107.8d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "5EAFBDDE7721A637"
+			rewards: [
+			{
+				id: "1FEDA613EBA35832"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "3D577F18E5E07EB4"
+				type: "checkmark"
+			}
+			]
+			title: "Green Carpenter Bee"
+			x: -105.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "2026DA9C41DA710B"
+			rewards: [
+			{
+				id: "7755052A6659F0F6"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "588DC0EAD19E83BC"
+				type: "checkmark"
+			}
+			]
+			title: "Honey Bee"
+			x: -102.2d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "2F1424762A8F0C36"
+			rewards: [
+			{
+				id: "700D4C436E92C977"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "3E207BD3901F7F03"
+				type: "checkmark"
+			}
+			]
+			title: "Leafcutter Bee"
+			x: -99.4d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "4B65854B2BD10531"
+			rewards: [
+			{
+				id: "3AF06B828477517C"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "092508AC99561D31"
+				type: "checkmark"
+			}
+			]
+			title: "Magmatic Bee"
+			x: -96.6d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "4EBCEFE4F7B23BEB"
+			rewards: [
+			{
+				id: "0DF6AC1C3C5F3AD3"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "260C4E9A32594A29"
+				type: "checkmark"
+			}
+			]
+			title: "Mason Bee"
+			x: -93.8d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "619BAE9DB0A556B7"
+			rewards: [
+			{
+				id: "3190B749D0192CD1"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "42877EABFD1D9360"
+				type: "checkmark"
+			}
+			]
+			title: "Neon Cuckoo Bee"
+			x: -91.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "342FFAE8F9B9FA3C"
+			rewards: [
+			{
+				id: "56CC4FEA5BF4FB54"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "5F0014D5FC96B480"
+				type: "checkmark"
+			}
+			]
+			title: "Nomad Bee"
+			x: -88.2d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "0C1F68F3B6546B65"
+			rewards: [
+			{
+				id: "18A1EDE0340FE261"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "0B265B9D2FEF51BA"
+				type: "checkmark"
+			}
+			]
+			title: "Reed Bee"
+			x: -85.4d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "57E2378B69F198BD"
+			rewards: [
+			{
+				id: "03D881E4184A13F5"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "1E824813394B0EB9"
+				type: "checkmark"
+			}
+			]
+			title: "Resin Bee"
+			x: -82.6d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "7DACCF0A2D1DD744"
+			rewards: [
+			{
+				id: "3BFC1B0EA3926E2E"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "641B725CCDB8D885"
+				type: "checkmark"
+			}
+			]
+			title: "Skeletal Bee"
+			x: -79.8d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "6FA41BD276303A81"
+			rewards: [
+			{
+				id: "6672401734FA30AC"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "7FCE3444D688D848"
+				type: "checkmark"
+			}
+			]
+			title: "Slimy Bee"
+			x: -77.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "4CF19695DD0E4EC7"
+			rewards: [
+			{
+				id: "5BE35892A244A0F0"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "06E0FB0ABF9A8FD1"
+				type: "checkmark"
+			}
+			]
+			title: "Sugarbag Bee"
+			x: -74.2d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "526C5450E8F4AE8D"
+			rewards: [
+			{
+				id: "1071BB4BBF859DC6"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "6F16D66B2CCB40F2"
+				type: "checkmark"
+			}
+			]
+			title: "Sweat Bee"
+			x: -71.4d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7FBA14E9A2FB1F75"
+			]
+			description: [
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "056ECF6A08C8E603"
+			rewards: [
+			{
+				id: "318591F85B1B3FF6"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Wild & Base Bees — source bee"
+			tasks: [
+			{
+				id: "1596D6C8FAFDEC2C"
+				type: "checkmark"
+			}
+			]
+			title: "Yellow Black Carpenter Bee"
+			x: -68.6d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"3F92C3512B5F97C9"
+				"6B4B00FC275F861A"
+			]
+			description: [
+				"Breed Crystalline Bee + Ender Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "2F7CCBFCEADB3B24"
+			rewards: [
+			{
+				id: "1BF9056EC4FE0DFD"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Applied Energistics 2 Bees — depth 1"
+			tasks: [
+			{
+				id: "5DF551DD95140B86"
+				type: "checkmark"
+			}
+			]
+			title: "Spacial Bee"
+			x: -84.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"4B65854B2BD10531"
+				"2F1424762A8F0C36"
+			]
+			description: [
+				"Breed Magmatic Bee + Leafcutter Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "6EABC7F1250D5E58"
+			rewards: [
+			{
+				id: "287C0A6B80760DBA"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "50ECD789201AC720"
+				type: "checkmark"
+			}
+			]
+			title: "Coal Bee"
+			x: -70.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"2026DA9C41DA710B"
+			]
+			description: [
+				"Convert Honey Bee using minecraft:hopper."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "46276164CC949922"
+			rewards: [
+			{
+				id: "63B7BC9D0A4CBD6D"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "7374BB0048D9C15A"
+				type: "checkmark"
+			}
+			]
+			title: "Collector Bee"
+			x: -67.2d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"2026DA9C41DA710B"
+			]
+			description: [
+				"Convert Honey Bee using minecraft:tnt."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "73CEFBEB7DE11263"
+			rewards: [
+			{
+				id: "586E73E158AFF34A"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "7320A24908438D54"
+				type: "checkmark"
+			}
+			]
+			title: "Creeper Bee"
+			x: -64.4d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"526C5450E8F4AE8D"
+			]
+			description: [
+				"Convert Sweat Bee using #productivebees:flowers/frozen."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "598838C461F36E3C"
+			rewards: [
+			{
+				id: "5F28ABE3C775F81E"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "7FA01A99D5F0A8C7"
+				type: "checkmark"
+			}
+			]
+			title: "Frosty Bee"
+			x: -61.6d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"056ECF6A08C8E603"
+				"5EAFBDDE7721A637"
+			]
+			description: [
+				"Breed Yellow Black Carpenter Bee + Green Carpenter Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "61D328AAF1784864"
+			rewards: [
+			{
+				id: "3877C0C92B3199D6"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "21BF237F2CA5E9D1"
+				type: "checkmark"
+			}
+			]
+			title: "Lumber Bee"
+			x: -58.8d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"4B65854B2BD10531"
+				"526C5450E8F4AE8D"
+			]
+			description: [
+				"Breed Magmatic Bee + Sweat Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "5C4F94615076E2BE"
+			rewards: [
+			{
+				id: "23F2FCA070175325"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "7948840B7CBF03C6"
+				type: "checkmark"
+			}
+			]
+			title: "Obsidian Bee"
+			x: -56.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"4CF19695DD0E4EC7"
+				"619BAE9DB0A556B7"
+			]
+			description: [
+				"Breed Sugarbag Bee + Neon Cuckoo Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "5835CABC8B4D9350"
+			rewards: [
+			{
+				id: "53CFD0E4C873B17D"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "7743A3C569A53224"
+				type: "checkmark"
+			}
+			]
+			title: "Pepto Bismol Bee"
+			x: -53.2d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"42D92091C18D2331"
+				"43C95F5483367362"
+			]
+			description: [
+				"Breed Chocolate Mining Bee + Digger Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "2AA140944E68B69E"
+			rewards: [
+			{
+				id: "0811A0E1937B633F"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "424BE94A96BD5D21"
+				type: "checkmark"
+			}
+			]
+			title: "Quarry Bee"
+			x: -50.4d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"43C95F5483367362"
+			]
+			description: [
+				"Convert Digger Bee using minecraft:sculk."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "32E8B8380F6A69A4"
+			rewards: [
+			{
+				id: "002041D4FC58FFC4"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "52C7DADA01C0C953"
+				type: "checkmark"
+			}
+			]
+			title: "Sculk Bee"
+			x: -47.6d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"0C1F68F3B6546B65"
+				"57E2378B69F198BD"
+			]
+			description: [
+				"Breed Reed Bee + Resin Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "4B7E7A6AB520F1E9"
+			rewards: [
+			{
+				id: "4884723CB056A07A"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "1EB67D54CA8E8B59"
+				type: "checkmark"
+			}
+			]
+			title: "Silky Bee"
+			x: -44.8d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"7DACCF0A2D1DD744"
+			]
+			description: [
+				"Convert Skeletal Bee using minecraft:wither_rose."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "32CC500F17E90473"
+			rewards: [
+			{
+				id: "590609E63EB58DA0"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 1"
+			tasks: [
+			{
+				id: "4D3ADE9B89E177C9"
+				type: "checkmark"
+			}
+			]
+			title: "Withered Bee"
+			x: -42.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"4B65854B2BD10531"
+				"342FFAE8F9B9FA3C"
+			]
+			description: [
+				"Breed Magmatic Bee + Nomad Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "166F1D90A3E1E911"
+			rewards: [
+			{
+				id: "7E7854F15CC51150"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Dust Bees — depth 1"
+			tasks: [
+			{
+				id: "22ABED019F605F8D"
+				type: "checkmark"
+			}
+			]
+			title: "Blazing Bee"
+			x: -29.4d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"1152510412441866"
+				"42D92091C18D2331"
+			]
+			description: [
+				"Breed Glowing Bee + Chocolate Mining Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "6A4DBBE176DFF28D"
+			rewards: [
+			{
+				id: "4F08CE2393154656"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Dust Bees — depth 1"
+			tasks: [
+			{
+				id: "24ED37BE60E218F8"
+				type: "checkmark"
+			}
+			]
+			title: "Redstone Bee"
+			x: -26.6d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"2F1424762A8F0C36"
+			]
+			description: [
+				"Convert Leafcutter Bee using minecraft:water_bucket."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "242DC0DA7AABB905"
+			rewards: [
+			{
+				id: "2F87AD21C4E7C4D6"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Fluids — depth 1"
+			tasks: [
+			{
+				id: "2708DA5BC6FFA2B4"
+				type: "checkmark"
+			}
+			]
+			title: "Tea Bee"
+			x: -14.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"3F92C3512B5F97C9"
+			]
+			description: [
+				"Convert Crystalline Bee using mysticalagriculture:prosperity_block."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "7E48BBB3F52FDFF6"
+			rewards: [
+			{
+				id: "197F89B75AF1DEC3"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Mysticalagriculture — depth 1"
+			tasks: [
+			{
+				id: "27C27789B85E8F7D"
+				type: "checkmark"
+			}
+			]
+			title: "Prosperity Bee"
+			x: 40.6d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"7D87C5B260AED842"
+			]
+			description: [
+				"Convert Ghostly Bee using mysticalagriculture:soulium_dagger."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "0EF7F9A2AF075CEF"
+			rewards: [
+			{
+				id: "3EEFE3CF251E52E8"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Mysticalagriculture — depth 1"
+			tasks: [
+			{
+				id: "16F9BB55F120EB70"
+				type: "checkmark"
+			}
+			]
+			title: "Soulium Bee"
+			x: 43.4d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"3F92C3512B5F97C9"
+				"7CA5218E42FB8DAC"
+			]
+			description: [
+				"Breed Crystalline Bee + Ashy Mining Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "3EAAD348EE5C2975"
+			rewards: [
+			{
+				id: "4DBC46D5B79230A6"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Raw Materials — depth 1"
+			tasks: [
+			{
+				id: "5FEA6D17C4BADABE"
+				type: "checkmark"
+			}
+			]
+			title: "Copper Bee"
+			x: 53.2d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"3F92C3512B5F97C9"
+				"4EBCEFE4F7B23BEB"
+			]
+			description: [
+				"Breed Crystalline Bee + Mason Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "5BBC7594632E8376"
+			rewards: [
+			{
+				id: "5A1BDEC903DDB5B0"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Raw Materials — depth 1"
+			tasks: [
+			{
+				id: "773866CFF673D919"
+				type: "checkmark"
+			}
+			]
+			title: "Gold Bee"
+			x: 56.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"3F92C3512B5F97C9"
+				"7CA5218E42FB8DAC"
+			]
+			description: [
+				"Breed Crystalline Bee + Ashy Mining Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "5B25A50D02B325FB"
+			rewards: [
+			{
+				id: "7DAE6E09FA15D8EA"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Raw Materials — depth 1"
+			tasks: [
+			{
+				id: "730817F99A665D22"
+				type: "checkmark"
+			}
+			]
+			title: "Iron Bee"
+			x: 58.8d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"2F7CCBFCEADB3B24"
+			]
+			description: [
+				"Convert Spacial Bee using ae2:fluix_pearl."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "4C1A01600E6D076E"
+			rewards: [
+			{
+				id: "726014AA6AAFC706"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Applied Energistics 2 Bees — depth 2"
+			tasks: [
+			{
+				id: "3DC85287FC7164A4"
+				type: "checkmark"
+			}
+			]
+			title: "Fluix Bee"
+			x: -84.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"46276164CC949922"
+			]
+			description: [
+				"Convert Collector Bee using minecraft:shulker_shell."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "17E3628FA4A7579C"
+			rewards: [
+			{
+				id: "156DB65B6F98D189"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 2"
+			tasks: [
+			{
+				id: "7C1A00EAA1F6E597"
+				type: "checkmark"
+			}
+			]
+			title: "Hoarder Bee"
+			x: -57.4d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"61D328AAF1784864"
+				"526C5450E8F4AE8D"
+			]
+			description: [
+				"Breed Lumber Bee + Sweat Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "20FD547357EEC025"
+			rewards: [
+			{
+				id: "0AC17A3E935BE3D7"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 2"
+			tasks: [
+			{
+				id: "67B6468B6767D159"
+				type: "checkmark"
+			}
+			]
+			title: "Rancher Bee"
+			x: -54.6d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"6A4DBBE176DFF28D"
+				"79202CE48FE50A0F"
+			]
+			description: [
+				"Breed Redstone Bee + Blue Banded Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "0ADDABA00FCB2397"
+			rewards: [
+			{
+				id: "59380B1B9730912B"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Gem Bees — depth 2"
+			tasks: [
+			{
+				id: "36D2FF1BAEB43257"
+				type: "checkmark"
+			}
+			]
+			title: "Lapis Bee"
+			x: 14.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"6EABC7F1250D5E58"
+			]
+			description: [
+				"Convert Coal Bee using #forge:storage_blocks/graphite."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "2745BE8D68940BD5"
+			rewards: [
+			{
+				id: "762EF234A3EBE8AB"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Reactors — depth 2"
+			tasks: [
+			{
+				id: "3B76538043ABAACA"
+				type: "checkmark"
+			}
+			]
+			title: "Graphite Bee"
+			x: 70.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"3F92C3512B5F97C9"
+				"5B25A50D02B325FB"
+			]
+			description: [
+				"Breed Crystalline Bee + Iron Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "107CBC2547D8C777"
+			rewards: [
+			{
+				id: "789E95707171EDB8"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Refinedstorage — depth 2"
+			tasks: [
+			{
+				id: "6F2436DA656A79C2"
+				type: "checkmark"
+			}
+			]
+			title: "Quartz Enriched Iron Bee"
+			x: 84.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"6005351D64A165C3"
+			]
+			description: [
+				"Convert Brown Shroom Bee using minecraft:crimson_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "7A50D797B79D88A3"
+			rewards: [
+			{
+				id: "66963CA72A1793F8"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Shroom — depth 2"
+			tasks: [
+			{
+				id: "696743F1DE87461E"
+				type: "checkmark"
+			}
+			]
+			title: "Crimson Bee"
+			x: 98.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"0ADDABA00FCB2397"
+				"7DACCF0A2D1DD744"
+			]
+			description: [
+				"Breed Lapis Bee + Skeletal Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "33C0B0E43C5157AD"
+			rewards: [
+			{
+				id: "71E13F49F418D5FD"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 3"
+			tasks: [
+			{
+				id: "1B5EFE09E1A7A1D2"
+				type: "checkmark"
+			}
+			]
+			title: "Dye Bee"
+			x: -57.4d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"61D328AAF1784864"
+				"20FD547357EEC025"
+			]
+			description: [
+				"Breed Lumber Bee + Rancher Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "10BB1EC86492BD2C"
+			rewards: [
+			{
+				id: "7F86B375F2C29C66"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 3"
+			tasks: [
+			{
+				id: "10A90B5A8569B5BE"
+				type: "checkmark"
+			}
+			]
+			title: "Farmer Bee"
+			x: -54.6d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"6B4B00FC275F861A"
+				"0ADDABA00FCB2397"
+			]
+			description: [
+				"Breed Ender Bee + Lapis Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "10417A69C94B12D1"
+			rewards: [
+			{
+				id: "19BB80BC26060B47"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Gem Bees — depth 3"
+			tasks: [
+			{
+				id: "1EFEE3558B0F7B5A"
+				type: "checkmark"
+			}
+			]
+			title: "Diamond Bee"
+			x: 14.0d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"7A50D797B79D88A3"
+			]
+			description: [
+				"Convert Crimson Bee using minecraft:brown_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "6005351D64A165C3"
+			rewards: [
+			{
+				id: "085782D16F9DB1FD"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Shroom — depth 3"
+			tasks: [
+			{
+				id: "7499D8099C4E67BE"
+				type: "checkmark"
+			}
+			]
+			title: "Brown Shroom Bee"
+			x: 98.0d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"10417A69C94B12D1"
+			]
+			description: [
+				"Convert Diamond Bee using byg:emeraldite_shards."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "385F958EB4D439D5"
+			rewards: [
+			{
+				id: "42F51333072EB31C"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Biome Integration Bees — depth 4"
+			tasks: [
+			{
+				id: "7E6E880A713CDF45"
+				type: "checkmark"
+			}
+			]
+			title: "Emeraldite Bee"
+			x: -70.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"10BB1EC86492BD2C"
+				"20FD547357EEC025"
+			]
+			description: [
+				"Breed Farmer Bee + Rancher Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "68DF5E1FE7D5D74E"
+			rewards: [
+			{
+				id: "2752479CCD6DF399"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 4"
+			tasks: [
+			{
+				id: "3CC7AF3B57D270F9"
+				type: "checkmark"
+			}
+			]
+			title: "Cupid Bee"
+			x: -56.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"10417A69C94B12D1"
+			]
+			description: [
+				"Convert Diamond Bee using forbidden_arcanus:arcane_crystal_block."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "422B95C6EEDD698F"
+			rewards: [
+			{
+				id: "5D9C5C34383322B7"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Forbidden Arcanus — depth 4"
+			tasks: [
+			{
+				id: "53194D89D5162EEE"
+				type: "checkmark"
+			}
+			]
+			title: "Arcane Crystal Bee"
+			x: 0.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"10417A69C94B12D1"
+			]
+			description: [
+				"Convert Diamond Bee using #productivebees:flowers/amethyst."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "6F69F3F342134A25"
+			rewards: [
+			{
+				id: "77858F6769CEB2EC"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Gem Bees — depth 4"
+			tasks: [
+			{
+				id: "4E58F1067097D83D"
+				type: "checkmark"
+			}
+			]
+			title: "Amethyst Bee"
+			x: 12.6d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"10417A69C94B12D1"
+				"6FA41BD276303A81"
+			]
+			description: [
+				"Breed Diamond Bee + Slimy Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "0F0AD7FA64DE14FD"
+			rewards: [
+			{
+				id: "140D2F14EF57E477"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Gem Bees — depth 4"
+			tasks: [
+			{
+				id: "6A36AE4A6EC6DF0A"
+				type: "checkmark"
+			}
+			]
+			title: "Emerald Bee"
+			x: 15.4d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"10417A69C94B12D1"
+			]
+			description: [
+				"Convert Diamond Bee using minecraft:netherite_block."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "3DA90B121030AB0B"
+			rewards: [
+			{
+				id: "786E94B5E992FCFC"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Raw Materials — depth 4"
+			tasks: [
+			{
+				id: "5C617A4683E049AE"
+				type: "checkmark"
+			}
+			]
+			title: "Netherite Bee"
+			x: 56.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"6005351D64A165C3"
+			]
+			description: [
+				"Convert Brown Shroom Bee using minecraft:red_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "2A90A750D426D213"
+			rewards: [
+			{
+				id: "40A13C9143AA0DB9"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Shroom — depth 4"
+			tasks: [
+			{
+				id: "2F32F218D75F26C9"
+				type: "checkmark"
+			}
+			]
+			title: "Red Shroom Bee"
+			x: 96.6d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"6005351D64A165C3"
+			]
+			description: [
+				"Convert Brown Shroom Bee using minecraft:warped_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "3916A827D38BB1F7"
+			rewards: [
+			{
+				id: "7B63954138AE3540"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Shroom — depth 4"
+			tasks: [
+			{
+				id: "0DEC8D369B1CFD38"
+				type: "checkmark"
+			}
+			]
+			title: "Warped Bee"
+			x: 99.4d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"10417A69C94B12D1"
+				"385F958EB4D439D5"
+			]
+			description: [
+				"Breed Diamond Bee + Emeraldite Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "53DA80858B647296"
+			rewards: [
+			{
+				id: "6CBFE96E9D4F111C"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Biome Integration Bees — depth 5"
+			tasks: [
+			{
+				id: "4BE6ABD994CBD958"
+				type: "checkmark"
+			}
+			]
+			title: "Pendorite Bee"
+			x: -70.0d
+			y: 32.0d
+		}
+		{
+			dependencies: [
+				"0F0AD7FA64DE14FD"
+				"0ADDABA00FCB2397"
+			]
+			description: [
+				"Breed Emerald Bee + Lapis Bee."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "0B72FC5108C640D1"
+			rewards: [
+			{
+				id: "762E653AE6C75FC1"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Core Resource Bees — depth 5"
+			tasks: [
+			{
+				id: "60F91810E99E5EBD"
+				type: "checkmark"
+			}
+			]
+			title: "Experience Bee"
+			x: -56.0d
+			y: 32.0d
+		}
+		{
+			dependencies: [
+				"422B95C6EEDD698F"
+			]
+			description: [
+				"Convert Arcane Crystal Bee using forbidden_arcanus:rune_block."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "454BFDDE6E5E9090"
+			rewards: [
+			{
+				id: "6B73B30DD8AC6EB4"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Forbidden Arcanus — depth 5"
+			tasks: [
+			{
+				id: "0147A9A67DB20D8D"
+				type: "checkmark"
+			}
+			]
+			title: "Rune Bee"
+			x: 0.0d
+			y: 32.0d
+		}
+		{
+			dependencies: [
+				"3DA90B121030AB0B"
+			]
+			description: [
+				"Convert Netherite Bee using irons_spellbooks:arcane_debris."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "495688E68D4EBCB5"
+			rewards: [
+			{
+				id: "2B1E3AC50C69D91E"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Irons Spellbooks — depth 5"
+			tasks: [
+			{
+				id: "2E71FA459AF2A3E0"
+				type: "checkmark"
+			}
+			]
+			title: "Arcane Debris Bee"
+			x: 28.0d
+			y: 32.0d
+		}
+		{
+			dependencies: [
+				"0B72FC5108C640D1"
+			]
+			description: [
+				"Convert Experience Bee using create_enchantment_industry:hyper_experience_bottle."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "70DBBB3F39EB6189"
+			rewards: [
+			{
+				id: "74DD2C6158F399FB"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Create Enchantment Industry Bees — depth 6"
+			tasks: [
+			{
+				id: "0BD25864D4D7E7DB"
+				type: "checkmark"
+			}
+			]
+			title: "Hyper Experience Bee"
+			x: -42.0d
+			y: 36.0d
+		}
+		{
+			dependencies: [
+				"4C1A01600E6D076E"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "1CD9850780E859D2"
+			rewards: [
+			{
+				id: "1248A19DC1A9ADEE"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Applied Energistics 2 Bees branch"
+			tasks: [
+			{
+				id: "1D30F1E3A956932D"
+				type: "checkmark"
+			}
+			]
+			title: "Applied Energistics 2 Bees Complete"
+			x: -84.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"53DA80858B647296"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "03D67F8CC8B4F889"
+			rewards: [
+			{
+				id: "57316758C4DEF769"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Biome Integration Bees branch"
+			tasks: [
+			{
+				id: "40EA6D6B8724EFFC"
+				type: "checkmark"
+			}
+			]
+			title: "Biome Integration Bees Complete"
+			x: -70.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"6EABC7F1250D5E58"
+				"73CEFBEB7DE11263"
+				"68DF5E1FE7D5D74E"
+				"33C0B0E43C5157AD"
+				"0B72FC5108C640D1"
+				"598838C461F36E3C"
+				"17E3628FA4A7579C"
+				"5C4F94615076E2BE"
+				"5835CABC8B4D9350"
+				"2AA140944E68B69E"
+				"32E8B8380F6A69A4"
+				"4B7E7A6AB520F1E9"
+				"32CC500F17E90473"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "521728AFA7EB9216"
+			rewards: [
+			{
+				id: "2507B59E4906562C"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Core Resource Bees branch"
+			tasks: [
+			{
+				id: "2A16381DFD67174D"
+				type: "checkmark"
+			}
+			]
+			title: "Core Resource Bees Complete"
+			x: -56.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"70DBBB3F39EB6189"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "159211CC66567AF8"
+			rewards: [
+			{
+				id: "2177913E6A9C54B3"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Create Enchantment Industry Bees branch"
+			tasks: [
+			{
+				id: "1DF78EF46DB95676"
+				type: "checkmark"
+			}
+			]
+			title: "Create Enchantment Industry Bees Complete"
+			x: -42.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"166F1D90A3E1E911"
+				"6A4DBBE176DFF28D"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "4BA61A7C921610DB"
+			rewards: [
+			{
+				id: "03A3845B1D3ACB13"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Dust Bees branch"
+			tasks: [
+			{
+				id: "34A5B2126413EA28"
+				type: "checkmark"
+			}
+			]
+			title: "Dust Bees Complete"
+			x: -28.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"242DC0DA7AABB905"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "1943C9A98641A97B"
+			rewards: [
+			{
+				id: "530FE9542AE162C4"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Fluids branch"
+			tasks: [
+			{
+				id: "499634F92A4CE2B8"
+				type: "checkmark"
+			}
+			]
+			title: "Fluids Complete"
+			x: -14.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"454BFDDE6E5E9090"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "3886604EB0795A78"
+			rewards: [
+			{
+				id: "1112BB70F28FA220"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Forbidden Arcanus branch"
+			tasks: [
+			{
+				id: "6D8480047A4BCAF2"
+				type: "checkmark"
+			}
+			]
+			title: "Forbidden Arcanus Complete"
+			x: 0.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"6F69F3F342134A25"
+				"0F0AD7FA64DE14FD"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "1D2D7FBF10821713"
+			rewards: [
+			{
+				id: "142A9A2DE1F39D34"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Gem Bees branch"
+			tasks: [
+			{
+				id: "421785DE68DA27B6"
+				type: "checkmark"
+			}
+			]
+			title: "Gem Bees Complete"
+			x: 14.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"495688E68D4EBCB5"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "1DB4154922943330"
+			rewards: [
+			{
+				id: "41F4249E411C4A07"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Irons Spellbooks branch"
+			tasks: [
+			{
+				id: "22BBEDF91B1C96B0"
+				type: "checkmark"
+			}
+			]
+			title: "Irons Spellbooks Complete"
+			x: 28.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"7E48BBB3F52FDFF6"
+				"0EF7F9A2AF075CEF"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "0BDCE8132846C188"
+			rewards: [
+			{
+				id: "629A034DD16520A9"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Mysticalagriculture branch"
+			tasks: [
+			{
+				id: "3E69352EA9F786EA"
+				type: "checkmark"
+			}
+			]
+			title: "Mysticalagriculture Complete"
+			x: 42.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"3EAAD348EE5C2975"
+				"5BBC7594632E8376"
+				"5B25A50D02B325FB"
+				"3DA90B121030AB0B"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "31921B707200EE76"
+			rewards: [
+			{
+				id: "40EC03C5086987DE"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Raw Materials branch"
+			tasks: [
+			{
+				id: "280832650E0CD5B1"
+				type: "checkmark"
+			}
+			]
+			title: "Raw Materials Complete"
+			x: 56.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"2745BE8D68940BD5"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "5EED8C3E56DB4622"
+			rewards: [
+			{
+				id: "5DED2979B230B89A"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Reactors branch"
+			tasks: [
+			{
+				id: "4768A43603233164"
+				type: "checkmark"
+			}
+			]
+			title: "Reactors Complete"
+			x: 70.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"107CBC2547D8C777"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "66F5756DD0AAB009"
+			rewards: [
+			{
+				id: "080DCB7F725B9A12"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Refinedstorage branch"
+			tasks: [
+			{
+				id: "7D565BEF9AF5CB4E"
+				type: "checkmark"
+			}
+			]
+			title: "Refinedstorage Complete"
+			x: 84.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"2A90A750D426D213"
+				"3916A827D38BB1F7"
+			]
+			description: [
+				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
+			]
+			id: "04F30F3834A0ED83"
+			rewards: [
+			{
+				id: "0FD2F3F1CD158006"
+				type: "xp"
+				xp: 100
+			}
+			]
+			subtitle: "Finish the Shroom branch"
+			tasks: [
+			{
+				id: "4101CA57577C495A"
+				type: "checkmark"
+			}
+			]
+			title: "Shroom Complete"
+			x: 98.0d
+			y: 44.0d
+		}
+		{
+			dependencies: [
+				"1CD9850780E859D2"
+				"03D67F8CC8B4F889"
+				"521728AFA7EB9216"
+				"159211CC66567AF8"
+				"4BA61A7C921610DB"
+				"1943C9A98641A97B"
+				"3886604EB0795A78"
+				"1D2D7FBF10821713"
+				"1DB4154922943330"
+				"0BDCE8132846C188"
+				"31921B707200EE76"
+				"5EED8C3E56DB4622"
+				"66F5756DD0AAB009"
+				"04F30F3834A0ED83"
+			]
+			description: [
+				"Finish every generated bee branch and confirm this milestone."
+				"Your finale includes a server-authoritative weighted Wheel of Fortune bonus roll."
+			]
+			id: "79922877DC8FBC1A"
+			rewards: [
+			{
+				id: "50ECD02A2BA500D9"
+				type: "xp"
+				xp: 1000
+			}
+			{
+				id: "6B5F6A51857A5C1F"
+				table_id: 8008142068530888302L
+				title: "Spin the Wheel of Fortune"
+				type: "loot"
+			}
+			]
+			subtitle: "Complete the Productive Bees family tree"
+			tasks: [
+			{
+				id: "306BF283D7AB7D47"
+				type: "checkmark"
+			}
+			]
+			title: "Master Apiarist"
+			x: 0.0d
+			y: 49.0d
+		}
+	]
+	title: "Productive Bees"
+}
