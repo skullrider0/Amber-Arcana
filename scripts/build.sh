@@ -14,9 +14,18 @@ if ! grep -Fq 'AA35 deep progression milestone' \
   python3 "$repo_dir/scripts/run-hotfix-deep-short-progression-0.1.9-35.py"
 fi
 
-# 0.1.9-36 adds the requested technology/content mods and missing libraries to
-# both the CurseForge client manifest and the Crafty server download manifest.
-python3 "$repo_dir/scripts/hotfix-tech-expansion-0.1.9-36.py"
+# 0.1.9-36 added the requested technology/content mods. Only replay it when the
+# canonical source is missing those pins; this avoids rewriting later release
+# metadata on every build.
+if ! grep -Fq $'\tmining-gadgets\tMining Gadgets' "$repo_dir/server/_crafty/server-mods.tsv" || \
+   ! grep -Fq $'\tdraconic-evolution\tDraconic Evolution' "$repo_dir/server/_crafty/server-mods.tsv"; then
+  python3 "$repo_dir/scripts/hotfix-tech-expansion-0.1.9-36.py"
+fi
+
+# 0.1.9-37 applies an idempotent ATM10-inspired compact layout to the current
+# Amber & Arcana quest graph. It never copies ATM10 prose/rewards and preserves
+# all existing quest IDs, tasks, tier-roll rewards, and Wheel of Fortune tables.
+python3 "$repo_dir/scripts/hotfix-atm10-compact-layout-0.1.9-37.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
