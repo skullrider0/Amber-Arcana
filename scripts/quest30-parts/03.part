@@ -1,0 +1,186 @@
+            tiers[tier] += 1
+            added += 1
+        chapter_texts[path] = text
+
+    covered = existing + added
+    if covered / max(total, 1) < 0.70:
+        raise RuntimeError(f"Tiered loot coverage below 70%: {covered}/{total}")
+    return chapter_texts, total, covered, added, dict(tiers)
+
+
+def render_tier_table(tier: int) -> str:
+    table_id = deterministic_long(f"amber-arcana-depth-tier-table:{tier}")
+    icon = {1: "minecraft:iron_ingot", 2: "minecraft:gold_ingot", 3: "minecraft:diamond", 4: "minecraft:netherite_scrap"}[tier]
+    lines = [
+        "{",
+        f'\ticon: "{icon}"',
+        f'\tid: "{table_id:016X}"',
+        "\tloot_size: 1",
+        f"\torder_index: {200 + tier}",
+        "\trewards: [",
+    ]
+    for count, item, weight in TIER_POOLS[tier]:
+        count_part = f"count: {count}, " if count != 1 else ""
+        lines.append(f'\t\t{{ {count_part}item: "{item}", weight: {weight:.1f}f }}')
+    lines += [
+        "\t]",
+        f'\ttitle: "Depth Tier {tier} Supply Roll"',
+        "\tuse_title: true",
+        "}",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def write_tier_tables() -> None:
+    REWARD_TABLES.mkdir(parents=True, exist_ok=True)
+    for old in REWARD_TABLES.glob("depth_tier_*.snbt"):
+        old.unlink()
+    for tier in sorted(TIER_POOLS):
+        (REWARD_TABLES / f"depth_tier_{tier}.snbt").write_text(render_tier_table(tier))
+
+
+def sync_server() -> None:
+    if SERVER_QUESTS.exists():
+        shutil.rmtree(SERVER_QUESTS)
+    shutil.copytree(CLIENT_QUESTS, SERVER_QUESTS)
+
+
+def update_json(path: Path, mutate) -> None:
+    data = json.loads(path.read_text())
+    mutate(data)
+    path.write_text(json.dumps(data, indent=2) + "\n")
+
+
+def update_docs(stats: dict) -> None:
+    text = README.read_text()
+    text = text.replace("Amber-and-Arcana-0.1.9-29-", "Amber-and-Arcana-0.1.9-30-")
+    text = text.replace("Download Client 0.1.9-29", "Download Client 0.1.9-30")
+    text = text.replace("Download Crafty Server 0.1.9-29", "Download Crafty Server 0.1.9-30")
+    text = text.replace("| Pack | 0.1.9-29 |", "| Pack | 0.1.9-30 |")
+    marker = "## Quest runtime status — 2026-09-15\n"
+    note = (
+        f"\nRelease 0.1.9-30 repairs FTB quest-group labels so literal ampersands no longer trigger formatting errors, "
+        f"re-lays out all {stats['chapters_relaid_out']} quest chapters as compact dependency layers, and adds depth-tiered supply rolls to "
+        f"{stats['loot_covered_quests']} of {stats['total_quests']} quests ({stats['loot_coverage_percent']:.1f}%). "
+        f"Productive Bees species milestones now complete from exact NBT-matched evidence: {stats['bee_comb_tasks']} species use their typed honeycomb and "
+        f"{stats['bee_cage_tasks']} species use a filled Bee Cage when a comb is not appropriate. Historical quest/task IDs are preserved.\n"
+    )
+    if marker in text and "Release 0.1.9-30 repairs FTB quest-group labels" not in text:
+        text = text.replace(marker, marker + note, 1)
+    README.write_text(text)
+
+    changelog = CHANGELOG.read_text()
+    if "## 0.1.9-30" not in changelog:
+        entry = (
+            "## 0.1.9-30 — Quest UX, tiered rewards, and automatic bee verification\n\n"
+            "- Replace literal ampersands in player-facing FTB Quests labels with parser-safe wording, fixing red `Invalid formatting` group headers.\n"
+            "- Re-layout every chapter into compact left-to-right dependency layers to reduce giant empty gaps and long crossing lines.\n"
+            f"- Give at least 70% of quests a loot roll, counting existing chapter finales; new rolls use four depth tiers and never replace fixed rewards.\n"
+            "- Make Productive Bees species milestones inventory-detected: comb-producing configurable bees require their exact typed honeycomb, while non-comb or non-configurable bees require the exact species in a filled Bee Cage.\n"
+            "- Use `match_nbt: true` plus weak NBT matching so cage metadata can contain normal extra bee state without defeating species detection.\n"
+            "- Preserve existing quest, task, reward, chapter, and group IDs; client/server quest trees remain identical.\n\n"
+        )
+        if changelog.startswith("# Changelog\n\n"):
+            changelog = "# Changelog\n\n" + entry + changelog[len("# Changelog\n\n"):]
+        else:
+            changelog = entry + changelog
+        CHANGELOG.write_text(changelog)
+
+
+def main() -> None:
+    chapters = sorted(CHAPTERS.glob("*.snbt"))
+    if len(chapters) != 26:
+        raise RuntimeError(f"Expected 26 quest chapters before 0.1.9-30, found {len(chapters)}")
+
+    rewrite_group_titles()
+    all_bees, definitions = source_bee_metadata()
+
+    chapter_texts: dict[Path, str] = {}
+    depth_maps: dict[Path, dict[str, int]] = {}
+    max_width = max_height = 0.0
+    bee_species = bee_comb = bee_cage = 0
+
+    try:
+        for path in chapters:
+            text = sanitize_literal_ampersands(path.read_text())
+            if path == PB_CHAPTER:
+                text, bee_species, bee_comb, bee_cage = patch_bee_species(text, all_bees, definitions)
+            text, width, height, depths = relayout_chapter(text)
+            chapter_texts[path] = text
+            depth_maps[path] = depths
+            max_width = max(max_width, width)
+            max_height = max(max_height, height)
+
+        # Sanitize historical reward-table titles too (some inherit chapter titles).
+        for table in sorted(REWARD_TABLES.glob("*.snbt")):
+            table.write_text(sanitize_literal_ampersands(table.read_text()))
+
+        chapter_texts, total_quests, covered, added, tier_counts = add_depth_rewards(chapter_texts, depth_maps)
+        for path, text in chapter_texts.items():
+            path.write_text(text)
+        write_tier_tables()
+        sync_server()
+
+        if any(" & " in p.read_text() for p in CLIENT_QUESTS.rglob("*.snbt")):
+            raise RuntimeError("Unescaped literal ampersand text remains in FTB Quests SNBT")
+
+        coverage = covered * 100.0 / total_quests
+        reward_table_count = len(list(REWARD_TABLES.glob("*.snbt")))
+        stats = {
+            "group_labels_fixed": True,
+            "chapters_relaid_out": len(chapters),
+            "max_chapter_width": round(max_width, 1),
+            "max_chapter_height": round(max_height, 1),
+            "total_quests": total_quests,
+            "loot_covered_quests": covered,
+            "loot_coverage_percent": round(coverage, 1),
+            "tier_loot_rewards_added": added,
+            "tier_tables": 4,
+            "tier_reward_counts": {str(k): int(v) for k, v in sorted(tier_counts.items())},
+            "total_reward_tables": reward_table_count,
+            "bee_species_item_detection": bee_species,
+            "bee_comb_tasks": bee_comb,
+            "bee_cage_tasks": bee_cage,
+            "bee_manual_species_tasks_remaining": 0,
+            "historical_ids_preserved": True,
+            "client_server_quest_files_identical": True,
+        }
+
+        def mutate_manifest(data):
+            data["version"] = VERSION
+            data["name"] = f"Amber & Arcana {VERSION}"
+        update_json(MANIFEST, mutate_manifest)
+
+        def mutate_summary(data):
+            data["pack_version"] = VERSION
+            data["quest_ux_0_1_9_30"] = stats
+        update_json(SUMMARY, mutate_summary)
+
+        def mutate_validation(data):
+            data["pack_version"] = VERSION
+            data["quest_ux_0_1_9_30"] = stats
+        update_json(VALIDATION, mutate_validation)
+
+        update_docs(stats)
+
+        for client_file in CLIENT_QUESTS.rglob("*"):
+            if client_file.is_file():
+                server_file = SERVER_QUESTS / client_file.relative_to(CLIENT_QUESTS)
+                if not server_file.exists() or client_file.read_bytes() != server_file.read_bytes():
+                    raise RuntimeError(f"Client/server quest mismatch after 0.1.9-30: {client_file.name}")
+
+        print(
+            f"Applied Amber & Arcana {VERSION}: {len(chapters)} chapters relaid, "
+            f"loot on {covered}/{total_quests} quests ({coverage:.1f}%), "
+            f"{bee_species} bee species auto-detected ({bee_comb} comb / {bee_cage} cage)",
+            flush=True,
+        )
+    finally:
+        tmp = ROOT / ".tmp-productive-bees-ux"
+        if tmp.exists():
+            shutil.rmtree(tmp)
+
+
+if __name__ == "__main__":
+    main()
