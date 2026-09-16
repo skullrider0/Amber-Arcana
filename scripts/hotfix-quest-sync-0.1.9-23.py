@@ -25,12 +25,10 @@ def validate_live_client_tree() -> None:
     if len(list(chapters.glob("*.snbt"))) != 25:
         raise RuntimeError("Expected 25 live quest chapters")
 
-    # This is a historical replay gate for the five original reward tables.
-    # Later releases deliberately leave generated depth_tier_* files in the source
-    # tree, while wheel_* files are removed immediately before this replay. Ignore
-    # those later generated tables here instead of making future releases break the
-    # 0.1.9-23 baseline check, then remove them so 0.1.9-26 can rebuild from a clean
-    # five-table baseline. 0.1.9-30 regenerates the depth tables during the build.
+    # Historical replay cleanup: later releases add generated depth reward tables
+    # and Tier N Depth Roll reward blocks. Ignore/remove those here so the 0.1.9-23
+    # baseline still has its original five tables and 0.1.9-26 can replay its 25
+    # finale wheels deterministically. 0.1.9-30 regenerates all depth rewards later.
     baseline_rewards = [
         p for p in rewards.glob("*.snbt")
         if not p.name.startswith("wheel_") and not p.name.startswith("depth_tier_")
@@ -39,6 +37,19 @@ def validate_live_client_tree() -> None:
         raise RuntimeError(f"Expected 5 baseline live reward tables, found {len(baseline_rewards)}")
     for generated in rewards.glob("depth_tier_*.snbt"):
         generated.unlink()
+
+    depth_reward = re.compile(
+        r'\n\s*\{\s*\n\s*id:\s*"[0-9A-F]{16}"\s*\n'
+        r'\s*table_id:\s*\d+L\s*\n'
+        r'\s*title:\s*"Tier [1-4] Depth Roll"\s*\n'
+        r'\s*type:\s*"loot"\s*\n\s*\}',
+        flags=re.MULTILINE,
+    )
+    for chapter in chapters.glob("*.snbt"):
+        text = chapter.read_text()
+        cleaned = depth_reward.sub("", text)
+        if cleaned != text:
+            chapter.write_text(cleaned)
 
     gs = (chapters / "getting_started.snbt").read_text()
     ce = (chapters / "create_engineering.snbt").read_text()
