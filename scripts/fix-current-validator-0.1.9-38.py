@@ -19,5 +19,9 @@ text = text.replace(
     '= "104" || { echo "Mod-specific tier table count mismatch"',
     '= "112" || { echo "Mod-specific tier table count mismatch"',
 )
+text = text.replace(
+    '= "24" || { echo "Deep progression marker missing from one or more expanded chapters"',
+    '= "17" || { echo "Expected AA35 marker in the 17 untouched expanded chapters"',
+)
 path.write_text(text)
-print("Updated live 0.1.9-38 validation for 28 chapters, 28 Fortune Wheels, and 112 tier tables")
+print("Updated live 0.1.9-38 validation for 28 chapters, 28 Fortune Wheels, 112 tier tables, and seven rebuilt AA35 chapters")
