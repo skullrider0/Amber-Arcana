@@ -48,6 +48,14 @@ jobs:
       - name: Apply 0.1.9-22 More Hitboxes performance release
         run: python3 scripts/hotfix-morehitboxes-perf-0.1.9-22.py
 
+      - name: Reset generated quest release files before 0.1.9-23 replay
+        shell: bash
+        run: |
+          rm -f client/overrides/config/ftbquests/quests/chapters/productive_bees.snbt
+          rm -f server/config/ftbquests/quests/chapters/productive_bees.snbt
+          rm -f client/overrides/config/ftbquests/quests/reward_tables/wheel_*.snbt
+          rm -f server/config/ftbquests/quests/reward_tables/wheel_*.snbt
+
       - name: Apply 0.1.9-23 live FTB Quests sync
         run: python3 scripts/hotfix-quest-sync-0.1.9-23.py
 
