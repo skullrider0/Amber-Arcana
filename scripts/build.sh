@@ -25,7 +25,8 @@ mkdir -p "$dist_dir"
 update_overlay="$dist_dir/Amber-and-Arcana-${version}-Crafty-Update-Overlay.zip"
 legacy_overlay="$dist_dir/Amber-and-Arcana-${version}-Crafty-JEI-Overlay.zip"
 quest_overlay="$dist_dir/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
-rm -f "$update_overlay" "$legacy_overlay" "$quest_overlay"
+quest_spawn_overlay="$dist_dir/Amber-and-Arcana-${version}-Crafty-Quest-Spawn-Balance-Overlay.zip"
+rm -f "$update_overlay" "$legacy_overlay" "$quest_overlay" "$quest_spawn_overlay"
 (
   cd "$repo_dir/server"
   test -f "mods/$patch_jar" || { echo "Missing patched More Hitboxes jar: server/mods/$patch_jar" >&2; exit 1; }
@@ -42,6 +43,24 @@ cp "$update_overlay" "$legacy_overlay"
   zip -qr "$quest_overlay" config/ftbquests/quests
 )
 
+# Combined quest + spawn-balance overlay requested for the active Crafty server.
+# It contains only the synchronized quest tree, the server-side KubeJS spawn
+# balance script, and its README. It does not contain or modify any world data.
+tmp_overlay_dir="$(mktemp -d)"
+trap 'rm -rf "$tmp_overlay_dir"' EXIT
+mkdir -p "$tmp_overlay_dir/config/ftbquests" "$tmp_overlay_dir/kubejs/server_scripts"
+cp -a "$repo_dir/server/config/ftbquests/quests" "$tmp_overlay_dir/config/ftbquests/"
+cp "$repo_dir/overlays/spawn-balance/kubejs/server_scripts/amber_arcana_spawn_balance.js" \
+   "$tmp_overlay_dir/kubejs/server_scripts/amber_arcana_spawn_balance.js"
+cp "$repo_dir/overlays/spawn-balance/README-SPAWN-BALANCE.txt" \
+   "$tmp_overlay_dir/README-SPAWN-BALANCE.txt"
+(
+  cd "$tmp_overlay_dir"
+  zip -qr "$quest_spawn_overlay" README-SPAWN-BALANCE.txt config/ftbquests/quests kubejs/server_scripts/amber_arcana_spawn_balance.js
+)
+rm -rf "$tmp_overlay_dir"
+trap - EXIT
+
 (
   cd "$dist_dir"
   sha256sum \
@@ -50,6 +69,7 @@ cp "$update_overlay" "$legacy_overlay"
     "Amber-and-Arcana-${version}-Crafty-Update-Overlay.zip" \
     "Amber-and-Arcana-${version}-Crafty-JEI-Overlay.zip" \
     "Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip" \
+    "Amber-and-Arcana-${version}-Crafty-Quest-Spawn-Balance-Overlay.zip" \
     > SHA256SUMS.txt
 )
 
