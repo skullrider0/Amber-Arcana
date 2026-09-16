@@ -19,7 +19,7 @@ python3 "$repo_dir/scripts/hotfix-bee-cage-labels-0.1.9-31.py"
 # 0.1.9-32 replaces the four global vanilla-heavy depth pools with four
 # chapter/mod-specific tiers, rethemes finale wheels, and keeps top-tier machines
 # as genuinely rare jackpots even though high-tier rolls return multiple items.
-python3 "$repo_dir/scripts/hotfix-mod-tier-loot-0.1.9-32.py"
+python3 "$repo_dir/scripts/run-hotfix-mod-tier-loot-0.1.9-32.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
