@@ -19,25 +19,14 @@ jobs:
       - name: Install build and validation tools
         run: sudo apt-get update && sudo apt-get install -y jq ripgrep unzip zip
 
-      - name: Apply idempotent Mekanism JEI compatibility hotfix
-        run: python3 scripts/hotfix-jei-mekanism-compat.py
-
-      - name: Apply 0.1.9-17 content cleanup
-        run: python3 scripts/hotfix-content-cleanup-0.1.9-17.py
-
-      - name: Apply 0.1.9-18 JEI dependency compatibility fix
-        run: python3 scripts/hotfix-jei-required-minimum-0.1.9-18.py
-
-      - name: Apply 0.1.9-19 server JEI and Crafty overlay
-        run: python3 scripts/hotfix-server-jei-0.1.9-19.py
-
-      - name: Apply 0.1.9-21 More Hitboxes dependency baseline
-        run: python3 scripts/hotfix-restore-more-hitboxes-0.1.9-21.py
-
-      - name: Stage client-safe More Hitboxes performance jar
+      - name: Verify canonical current source
         shell: bash
         run: |
           set -euo pipefail
+          test -d client/overrides/config/ftbquests/quests/chapters
+          test -d server/config/ftbquests/quests/chapters
+          test "$(find client/overrides/config/ftbquests/quests/chapters -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "26"
+          test "$(find server/config/ftbquests/quests/chapters -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "26"
           jar='morehitboxes-forge-1.20.1-1.9.2.1.jar'
           source="vendor/morehitboxes/1.9.2.1/$jar"
           test -f "$source"
@@ -45,158 +34,11 @@ jobs:
           cp "$source" "client/overrides/mods/$jar"
           cp "$source" "server/mods/$jar"
 
-      - name: Apply 0.1.9-22 More Hitboxes performance release
-        run: python3 scripts/hotfix-morehitboxes-perf-0.1.9-22.py
-
-      - name: Reset generated quest release files before 0.1.9-23 replay
-        shell: bash
-        run: |
-          rm -f client/overrides/config/ftbquests/quests/chapters/productive_bees.snbt
-          rm -f server/config/ftbquests/quests/chapters/productive_bees.snbt
-          rm -f client/overrides/config/ftbquests/quests/reward_tables/wheel_*.snbt
-          rm -f server/config/ftbquests/quests/reward_tables/wheel_*.snbt
-
-      - name: Apply 0.1.9-23 live FTB Quests sync
-        run: python3 scripts/hotfix-quest-sync-0.1.9-23.py
-
-      - name: Assemble 0.1.9-24 quest hotfix
-        shell: bash
-        run: cat scripts/quest24-parts/*.part > scripts/hotfix-quest-requirements-0.1.9-24.py
-
-      - name: Apply 0.1.9-24 completed quest progression
-        run: python3 scripts/hotfix-quest-requirements-0.1.9-24.py
-
-      - name: Finalize 0.1.9-25 quest runtime format and progression
-        run: python3 scripts/hotfix-quest-finalize-0.1.9-25.py
-
-      - name: Reset generated Productive Bees quest files before 0.1.9-26 replay
-        shell: bash
-        run: |
-          rm -f \
-            client/overrides/config/ftbquests/quests/chapters/productive_bees.snbt \
-            server/config/ftbquests/quests/chapters/productive_bees.snbt \
-            client/overrides/config/ftbquests/quests/reward_tables/wheel_productive_bees.snbt \
-            server/config/ftbquests/quests/reward_tables/wheel_productive_bees.snbt
-
-      - name: Add 0.1.9-26 weighted Wheel of Fortune rewards
-        run: python3 scripts/hotfix-weighted-wheel-0.1.9-26.py
-
-      - name: Add 0.1.9-27 Productive Bees family tree
-        run: python3 scripts/hotfix-productive-bees-0.1.9-27.py
-
-      - name: Add 0.1.9-28 Create progression tree
-        run: python3 scripts/hotfix-create-progression-0.1.9-28.py
-
-      - name: Add 0.1.9-29 mechanics-based quest groups
-        run: python3 scripts/hotfix-quest-groups-0.1.9-29.py
-
-      - name: Normalize 0.1.9-29 validation gates
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-
-          path = Path('scripts/validate.sh')
-          text = path.read_text()
-
-          for marker in (
-              '# 0.1.9-26 weighted Wheel of Fortune checks',
-              '# 0.1.9-27 Productive Bees family-tree checks',
-              '# 0.1.9-28 Create progression checks',
-              '# 0.1.9-29 mechanics-based quest grouping checks',
-          ):
-              if marker in text:
-                  text = text.split(marker, 1)[0].rstrip() + '\n'
-
-          text = '\n'.join(
-              line for line in text.splitlines()
-              if not ('hotfix-quest-requirements-0.1.9-' in line and '--check-only' in line)
-          ) + '\n'
-
-          # Historical release transformers can reset validator version strings.
-          text = re.sub(r'(?<!hotfix-quest-requirements-)0\.1\.9-[0-9]+', '0.1.9-29', text)
-          text = text.replace('rg -F "item: "$item""', 'rg -F "$item"')
-
-          # Productive Bees adds one chapter and one wheel table. Create and the
-          # mechanics grouping reorganize existing chapters in place.
-          for old in ('25',):
-              text = text.replace(
-                  f'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "{old}" || {{ echo "Expected {old} live quest chapters"',
-                  'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "26" || { echo "Expected 26 live quest chapters"',
-              )
-          for old in ('5', '30'):
-              text = text.replace(
-                  f'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "{old}" || {{ echo "Expected {old} live reward tables"',
-                  'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "31" || { echo "Expected 31 live reward tables"',
-              )
-          path.write_text(text)
-          PY
-
-          cat >> scripts/validate.sh <<'EOF'
-
-          # 0.1.9-26 weighted Wheel of Fortune checks
-          jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
-          grep -Fq '"ftbquests.rewards": "Wheel of Fortune"' "$repo_dir/client/overrides/kubejs/assets/ftbquests/lang/en_us.json" || { echo "Wheel of Fortune client heading override missing" >&2; exit 1; }
-
-          # 0.1.9-27 Productive Bees family-tree checks
-          jq -e '.productive_bees_0_1_9_27.productive_bees_version == "1.20.1-12.6.0" and .productive_bees_0_1_9_27.upstream_commit == "2190d6b4c0f4a35acc26415759c3be731d1eac22" and .productive_bees_0_1_9_27.setup_quests == 6 and .productive_bees_0_1_9_27.bee_quests >= 40 and .productive_bees_0_1_9_27.root_bees >= 2 and .productive_bees_0_1_9_27.generated_branches >= 3 and .productive_bees_0_1_9_27.total_chapters == 26 and .productive_bees_0_1_9_27.total_reward_tables == 31 and .productive_bees_0_1_9_27.total_finale_loot_rewards == 26 and .productive_bees_0_1_9_27.client_server_quest_files_identical == true' "$validation" >/dev/null
-          pb_chapter="$client_quests/chapters/productive_bees.snbt"
-          test -f "$pb_chapter" || { echo "Productive Bees chapter missing" >&2; exit 1; }
-          for item in productivebees:bee_cage productivebees:advanced_oak_beehive productivebees:expansion_box_oak productivebees:feeder productivebees:centrifuge productivebees:breeding_chamber; do
-            grep -Fq "$item" "$pb_chapter" || { echo "Productive Bees setup item missing: $item" >&2; exit 1; }
-          done
-          grep -Fq 'title: "Master Apiarist"' "$pb_chapter" || { echo "Master Apiarist finale missing" >&2; exit 1; }
-          grep -Fq 'Wheel of Fortune — Productive Bees' "$client_quests/reward_tables/wheel_productive_bees.snbt" || { echo "Productive Bees wheel table missing" >&2; exit 1; }
-
-          # 0.1.9-28 Create progression checks
-          jq -e '.create_progression_0_1_9_28.create_version == "1.20.1-6.0.8" and .create_progression_0_1_9_28.upstream_commit == "1a1a9a2819b4f89f78caec41b55ed8cb222fa24b" and .create_progression_0_1_9_28.quests == 41 and .create_progression_0_1_9_28.new_quests == 35 and .create_progression_0_1_9_28.preserved_anchor_quests == 6 and .create_progression_0_1_9_28.milestone_item_tasks >= 50 and .create_progression_0_1_9_28.required_dependency_edges >= 45 and .create_progression_0_1_9_28.validated_create_item_ids >= 50 and .create_progression_0_1_9_28.historical_create_quest_ids_preserved == true and .create_progression_0_1_9_28.client_server_quest_files_identical == true' "$validation" >/dev/null
-          create_chapter="$client_quests/chapters/create_engineering.snbt"
-          test -f "$create_chapter" || { echo "Create Engineering chapter missing" >&2; exit 1; }
-          for item in create:andesite_alloy create:mechanical_press create:mechanical_mixer create:blaze_burner create:brass_ingot create:deployer create:precision_mechanism create:mechanical_crafter create:crushing_wheel create:packager create:stock_ticker create:steam_engine create:track_station create:schedule; do
-            grep -Fq "$item" "$create_chapter" || { echo "Create milestone missing: $item" >&2; exit 1; }
-          done
-          for qid in 1ED63F4805934997 49A0DF8BF8B13288 2B415B8CDDC3ACFF 6A19120000000401 42BD2E092F753492 6A19120000000601; do
-            grep -Fq "id: \"$qid\"" "$create_chapter" || { echo "Historical Create quest ID missing: $qid" >&2; exit 1; }
-          done
-          grep -Fq 'title: "A Reliable Factory"' "$create_chapter" || { echo "Create finale missing" >&2; exit 1; }
-          grep -Fq 'Wheel of Fortune — Create Engineering' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel table missing" >&2; exit 1; }
-          grep -Fq 'create:stock_ticker' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel was not refreshed" >&2; exit 1; }
-
-          # 0.1.9-29 mechanics-based quest grouping checks
-          jq -e '.quest_organization_0_1_9_29.chapter_groups == 9 and .quest_organization_0_1_9_29.chapters_grouped == 26 and .quest_organization_0_1_9_29.all_chapters_explicitly_assigned == true and .quest_organization_0_1_9_29.historical_ids_preserved == true and .quest_organization_0_1_9_29.client_server_quest_files_identical == true' "$validation" >/dev/null
-          groups="$client_quests/chapter_groups.snbt"
-          test -f "$groups" || { echo "chapter_groups.snbt missing" >&2; exit 1; }
-          for pair in \
-            '5A29000000000001|Start Here' \
-            '5A29000000000002|Machines & Production' \
-            '5A29000000000003|Storage & Networks' \
-            '5A29000000000004|Resources & Farming' \
-            '5A29000000000005|Magic & Rituals' \
-            '5A29000000000006|Exploration & Creatures' \
-            '5A29000000000007|Building & Settlements' \
-            '5A29000000000008|Tools, Combat & Equipment' \
-            '5A29000000000009|Collections & Endgame'; do
-            gid="${pair%%|*}"; title="${pair#*|}"
-            grep -Fq "{ id: \"$gid\", title: \"$title\" }" "$groups" || { echo "Quest group missing: $title" >&2; exit 1; }
-          done
-          test "$(rg -n '^\s*group: "5A2900000000000[1-9]"\s*$' "$client_quests/chapters" | wc -l)" = "26" || { echo "Not all 26 chapters are assigned to mechanics groups" >&2; exit 1; }
-          grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/create_engineering.snbt" || { echo "Create Engineering is not under Machines & Production" >&2; exit 1; }
-          grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/mekanism.snbt" || { echo "Mekanism is not under Machines & Production" >&2; exit 1; }
-          grep -Fq 'group: "5A29000000000004"' "$client_quests/chapters/productive_bees.snbt" || { echo "Productive Bees is not under Resources & Farming" >&2; exit 1; }
-          cmp "$client_quests/chapter_groups.snbt" "$server_quests/chapter_groups.snbt" >/dev/null || { echo "Client/server chapter groups differ" >&2; exit 1; }
-
-          test "$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)" = "26" || { echo "Expected 26 finale loot rewards" >&2; exit 1; }
-          test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated client wheel tables" >&2; exit 1; }
-          test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated server wheel tables" >&2; exit 1; }
-          quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
-          test -f "$quest_overlay" || { echo "Quest-only Crafty overlay missing" >&2; exit 1; }
-          test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapter_groups.snbt')" = "1" || { echo "chapter_groups.snbt missing from quest overlay" >&2; exit 1; }
-          test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/productive_bees.snbt')" = "1" || { echo "Productive Bees chapter missing from quest overlay" >&2; exit 1; }
-          test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/create_engineering.snbt')" = "1" || { echo "Create chapter missing from quest overlay" >&2; exit 1; }
-          EOF
-
+      # The repository now stores the canonical current pack source. Historical
+      # release transformers are intentionally not replayed here: newer quest
+      # releases substantially deepen the old chapters, and re-running 0.1.9-24
+      # over those current files can destroy the modern quest graph. build.sh
+      # contains the idempotent current release passes (0.1.9-30 onward).
       - name: Build client and server distributions
         run: bash scripts/build.sh
 
