@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[⬇️ Download Client 0.1.9-25](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-25-Client.zip) · [⬇️ Download Crafty Server 0.1.9-25](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-25-Server.zip) · [⬇️ Update an existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-25-Crafty-Update-Overlay.zip)
+[⬇️ Download Client 0.1.9-26](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-26-Client.zip) · [⬇️ Download Crafty Server 0.1.9-26](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-26-Server.zip) · [⬇️ Update an existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-26-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-25 |
+| Pack | 0.1.9-26 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -38,17 +38,17 @@ The More Hitboxes patch changes only the expensive global `Level` entity-query b
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-25-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
+Import `dist/Amber-and-Arcana-0.1.9-26-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
 
 ### Fresh Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-25-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-26-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a complete server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 
 ### Existing Crafty server
 
-Stop the server and extract `dist/Amber-and-Arcana-0.1.9-25-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The overlay contains only:
+Stop the server and extract `dist/Amber-and-Arcana-0.1.9-26-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The overlay contains only:
 
 - `_crafty/server-mods.tsv`
 - `_crafty/remove-mods.txt`
@@ -61,6 +61,8 @@ The historical `Crafty-JEI-Overlay.zip` filename is also rebuilt as a compatibil
 
 ## Quest runtime status — 2026-09-15
 
+Release 0.1.9-26 adds a weighted Wheel of Fortune bonus to every chapter finale. The build generates 30 chapter-themed wheel tables from already-validated quest rewards and requirement items, including 35 modded-item entries. The wheel uses FTB Quests' native `loot` reward path, which requires a deliberate click, rolls server-side, and opens the full-screen reward reveal. Existing fixed rewards and all historical quest/task/reward IDs remain intact.
+
 Release 0.1.9-25 finalizes the FTB Quests 1.20.1 runtime format. Simple item filters are now stored as canonical item-id strings instead of malformed compound stacks with a lowercase inner `count`. Concrete mod-item milestones in the core technology and magic chapters complete automatically; their historical checkmark task IDs remain present as optional verification tasks. Build, claim, habitat, routing, and other behavior-based objectives keep required manual confirmations.
 
 Release 0.1.9-24 finishes the full 25-chapter / 106-quest progression pass. Every quest now has at least one automatically detected item requirement, a named manual completion check for build/behavior objectives, a subtitle, an icon, and a reward. Requirements do not consume the player's items.
@@ -71,7 +73,7 @@ The stale Twilight Forest objective is removed because Twilight Forest is no lon
 
 ### Quest-only Crafty update
 
-For an existing Crafty server that already has the correct mods, use `dist/Amber-and-Arcana-0.1.9-25-Crafty-Quest-Overlay.zip`. Stop the server, back up the world, extract the ZIP into the server root with overwrite enabled, and start the server again. If you copy the quest files while the server is already running, run `/ftbquests reload` from the server console or with sufficient in-game permission. The quest-only overlay contains only `config/ftbquests/quests/`; it does not contain a world, mods, or Crafty launcher files.
+For an existing Crafty server that already has the correct mods, use `dist/Amber-and-Arcana-0.1.9-26-Crafty-Quest-Overlay.zip`. Stop the server, back up the world, extract the ZIP into the server root with overwrite enabled, and start the server again. If you copy the quest files while the server is already running, run `/ftbquests reload` from the server console or with sufficient in-game permission. The quest-only overlay contains only `config/ftbquests/quests/`; it does not contain a world, mods, or Crafty launcher files.
 
 ## Validate and rebuild
 

@@ -1,0 +1,18 @@
+{
+	icon: "refinedstorage:controller"
+	id: "1BD7FAE2FA144F2A"
+	loot_size: 1
+	order_index: 121
+	rewards: [
+		{ count: 8, item: "minecraft:redstone", weight: 18.0f }
+		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
+		{ item: "minecraft:diamond", weight: 18.0f }
+		{ item: "refinedstorage:controller", weight: 7.0f }
+		{ item: "refinedstorage:grid", weight: 7.0f }
+		{ item: "refinedstorage:disk_drive", weight: 7.0f }
+		{ item: "refinedstorage:importer", weight: 7.0f }
+		{ item: "refinedstorage:exporter", weight: 7.0f }
+	]
+	title: "Wheel of Fortune — Refined Storage"
+	use_title: true
+}

@@ -1,0 +1,18 @@
+{
+	icon: "minecraft:iron_ingot"
+	id: "33B0B7ADED2FD8F1"
+	loot_size: 1
+	order_index: 123
+	rewards: [
+		{ count: 4, item: "minecraft:iron_ingot", weight: 36.0f }
+		{ count: 4, item: "minecraft:lantern", weight: 18.0f }
+		{ count: 4, item: "minecraft:emerald", weight: 18.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
+		{ item: "minecraft:oak_planks", weight: 2.0f }
+		{ item: "minecraft:map", weight: 2.0f }
+		{ item: "minecraft:crafting_table", weight: 2.0f }
+		{ item: "minecraft:chest", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Claims and Colonies"
+	use_title: true
+}

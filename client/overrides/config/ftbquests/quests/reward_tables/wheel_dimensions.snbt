@@ -1,0 +1,18 @@
+{
+	icon: "minecraft:golden_carrot"
+	id: "03A01E9768BE7EB1"
+	loot_size: 1
+	order_index: 111
+	rewards: [
+		{ count: 4, item: "minecraft:golden_carrot", weight: 36.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 20.0f }
+		{ count: 4, item: "minecraft:emerald", weight: 18.0f }
+		{ count: 2, item: "minecraft:ender_pearl", weight: 18.0f }
+		{ item: "minecraft:blaze_rod", weight: 2.0f }
+		{ item: "minecraft:echo_shard", weight: 2.0f }
+		{ item: "minecraft:honeycomb", weight: 2.0f }
+		{ item: "minecraft:netherite_ingot", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Beyond the Overworld"
+	use_title: true
+}

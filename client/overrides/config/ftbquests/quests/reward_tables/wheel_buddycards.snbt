@@ -1,0 +1,18 @@
+{
+	icon: "minecraft:golden_carrot"
+	id: "2ED7B1BBC62836DD"
+	loot_size: 1
+	order_index: 106
+	rewards: [
+		{ count: 4, item: "minecraft:golden_carrot", weight: 36.0f }
+		{ count: 4, item: "minecraft:emerald", weight: 36.0f }
+		{ count: 2, item: "minecraft:ender_pearl", weight: 18.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
+		{ item: "minecraft:paper", weight: 2.0f }
+		{ item: "minecraft:copper_ingot", weight: 2.0f }
+		{ item: "minecraft:wheat", weight: 2.0f }
+		{ item: "minecraft:fishing_rod", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Buddycards"
+	use_title: true
+}

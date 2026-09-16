@@ -1,0 +1,18 @@
+{
+	icon: "create:andesite_alloy"
+	id: "0AEF6EE8CFC512AB"
+	loot_size: 1
+	order_index: 109
+	rewards: [
+		{ count: 8, item: "create:andesite_alloy", weight: 18.0f }
+		{ count: 6, item: "create:brass_ingot", weight: 18.0f }
+		{ count: 12, item: "minecraft:iron_ingot", weight: 18.0f }
+		{ count: 4, item: "minecraft:copper_block", weight: 18.0f }
+		{ count: 16, item: "minecraft:powered_rail", weight: 18.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
+		{ item: "create:water_wheel", weight: 7.0f }
+		{ item: "create:mechanical_press", weight: 7.0f }
+	]
+	title: "Wheel of Fortune — Create Engineering"
+	use_title: true
+}

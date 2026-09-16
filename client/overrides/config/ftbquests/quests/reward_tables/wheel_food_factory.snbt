@@ -1,0 +1,18 @@
+{
+	icon: "minecraft:iron_ingot"
+	id: "487759990A87C02B"
+	loot_size: 1
+	order_index: 116
+	rewards: [
+		{ count: 4, item: "minecraft:iron_ingot", weight: 36.0f }
+		{ count: 4, item: "minecraft:lantern", weight: 18.0f }
+		{ count: 4, item: "minecraft:emerald", weight: 18.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
+		{ item: "minecraft:wheat", weight: 2.0f }
+		{ item: "minecraft:milk_bucket", weight: 2.0f }
+		{ item: "minecraft:sugar", weight: 2.0f }
+		{ item: "minecraft:cooked_beef", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Food and Seasons"
+	use_title: true
+}

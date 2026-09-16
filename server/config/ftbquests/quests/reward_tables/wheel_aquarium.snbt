@@ -1,0 +1,18 @@
+{
+	icon: "minecraft:golden_carrot"
+	id: "648800D9CCCB9A57"
+	loot_size: 1
+	order_index: 104
+	rewards: [
+		{ count: 4, item: "minecraft:golden_carrot", weight: 18.0f }
+		{ count: 4, item: "minecraft:emerald", weight: 18.0f }
+		{ count: 2, item: "minecraft:ender_pearl", weight: 18.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
+		{ item: "minecraft:glass", weight: 2.0f }
+		{ item: "minecraft:water_bucket", weight: 2.0f }
+		{ item: "minecraft:cod_bucket", weight: 2.0f }
+		{ item: "minecraft:lead", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Aquarium"
+	use_title: true
+}

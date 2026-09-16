@@ -1,0 +1,18 @@
+{
+	icon: "minecraft:iron_ingot"
+	id: "52D08A247A3A1097"
+	loot_size: 1
+	order_index: 114
+	rewards: [
+		{ count: 4, item: "minecraft:iron_ingot", weight: 18.0f }
+		{ count: 4, item: "minecraft:lantern", weight: 18.0f }
+		{ count: 4, item: "minecraft:emerald", weight: 18.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
+		{ item: "minecraft:hay_block", weight: 2.0f }
+		{ item: "minecraft:powered_rail", weight: 2.0f }
+		{ item: "minecraft:netherite_chestplate", weight: 2.0f }
+		{ item: "minecraft:emerald_block", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — A World Worth Building"
+	use_title: true
+}

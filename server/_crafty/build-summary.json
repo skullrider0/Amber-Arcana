@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-25",
+  "pack_version": "0.1.9-26",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -223,5 +223,19 @@
     "ids_preserved": true,
     "client_server_quest_files_identical": true,
     "quest_only_crafty_overlay": "Amber-and-Arcana-0.1.9-25-Crafty-Quest-Overlay.zip"
+  },
+  "wheel_of_fortune_0_1_9_26": {
+    "enabled": true,
+    "chapter_finale_wheels": 25,
+    "generated_wheel_tables": 25,
+    "historical_reward_tables_retained": 5,
+    "total_reward_tables": 30,
+    "weighted_entries": 186,
+    "modded_item_entries": 35,
+    "reward_type": "ftbquests:loot",
+    "full_screen_reveal": true,
+    "server_authoritative_roll": true,
+    "existing_fixed_rewards_preserved": true,
+    "client_server_quest_files_identical": true
   }
 }

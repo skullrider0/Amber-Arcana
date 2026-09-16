@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9-26 — Weighted Wheel of Fortune finale rewards
+
+- Add a server-authoritative weighted `loot` reward to every chapter finale using FTB Quests 2001.4.14's native reward-table system.
+- Generate chapter-themed weighted tables from existing validated rewards and item requirements, with modded requirement items used as rarer jackpot results.
+- Preserve all existing fixed rewards and historical quest/task/reward IDs; wheel rewards are additive.
+- Brand the native full-screen reward reveal as `Wheel of Fortune` on updated clients.
+- Keep client and dedicated-server quest trees byte-identical after generation.
+
 ## 0.1.9-25 — Finalize quest runtime format and automatic milestones
 
 - Repair all malformed FTB Quests simple item stacks by serializing item filters in the canonical 1.20.1 format.

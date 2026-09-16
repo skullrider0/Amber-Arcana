@@ -1,0 +1,16 @@
+{
+	icon: "minecraft:redstone"
+	id: "17AD78BB42E843A1"
+	loot_size: 1
+	order_index: 115
+	rewards: [
+		{ count: 8, item: "minecraft:redstone", weight: 18.0f }
+		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
+		{ item: "minecraft:diamond", weight: 18.0f }
+		{ item: "minecraft:iron_ingot", weight: 2.0f }
+		{ item: "minecraft:gunpowder", weight: 2.0f }
+		{ item: "minecraft:obsidian", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Firearms and Artillery"
+	use_title: true
+}

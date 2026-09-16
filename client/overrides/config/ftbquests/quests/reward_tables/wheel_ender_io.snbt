@@ -1,0 +1,15 @@
+{
+	icon: "minecraft:redstone"
+	id: "6BEAC1672FDA272F"
+	loot_size: 1
+	order_index: 113
+	rewards: [
+		{ count: 8, item: "minecraft:redstone", weight: 18.0f }
+		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
+		{ item: "minecraft:diamond", weight: 18.0f }
+		{ item: "minecraft:furnace", weight: 2.0f }
+		{ item: "minecraft:chest", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Ender IO Connections"
+	use_title: true
+}

@@ -1,0 +1,18 @@
+{
+	icon: "botania:mana_pool"
+	id: "05A3D1EE7C7AC23B"
+	loot_size: 1
+	order_index: 122
+	rewards: [
+		{ count: 8, item: "minecraft:lapis_lazuli", weight: 36.0f }
+		{ count: 8, item: "minecraft:amethyst_shard", weight: 18.0f }
+		{ count: 8, item: "minecraft:glowstone_dust", weight: 18.0f }
+		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
+		{ item: "botania:mana_pool", weight: 7.0f }
+		{ item: "bloodmagic:altar", weight: 7.0f }
+		{ item: "minecraft:book", weight: 2.0f }
+		{ item: "minecraft:cauldron", weight: 2.0f }
+	]
+	title: "Wheel of Fortune — Rituals and Witchcraft"
+	use_title: true
+}

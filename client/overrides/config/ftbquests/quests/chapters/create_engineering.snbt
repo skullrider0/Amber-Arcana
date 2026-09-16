@@ -272,6 +272,13 @@
 					type: "xp"
 					xp: 400
 				}
+			
+				{
+					id: "3955EED61E5751FB"
+					table_id: 787970406010393259L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.25d

@@ -1,0 +1,16 @@
+{
+	icon: "powah:thermo_generator_starter"
+	id: "4182860FC24D93C2"
+	loot_size: 1
+	order_index: 120
+	rewards: [
+		{ count: 8, item: "minecraft:redstone", weight: 18.0f }
+		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
+		{ item: "minecraft:diamond", weight: 18.0f }
+		{ item: "powah:thermo_generator_starter", weight: 7.0f }
+		{ item: "powah:energizing_orb", weight: 7.0f }
+		{ item: "powah:energy_cell_basic", weight: 7.0f }
+	]
+	title: "Wheel of Fortune — Powah Energy"
+	use_title: true
+}

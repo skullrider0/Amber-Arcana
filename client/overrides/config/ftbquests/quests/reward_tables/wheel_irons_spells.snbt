@@ -1,0 +1,15 @@
+{
+	icon: "irons_spellbooks:iron_spell_book"
+	id: "403A6720640F4BBF"
+	loot_size: 1
+	order_index: 118
+	rewards: [
+		{ count: 8, item: "minecraft:lapis_lazuli", weight: 18.0f }
+		{ count: 8, item: "minecraft:amethyst_shard", weight: 18.0f }
+		{ item: "minecraft:diamond", weight: 18.0f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 7.0f }
+		{ item: "irons_spellbooks:inscription_table", weight: 7.0f }
+	]
+	title: "Wheel of Fortune — Iron Spells and Wizardry"
+	use_title: true
+}

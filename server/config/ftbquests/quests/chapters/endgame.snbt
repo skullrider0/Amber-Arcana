@@ -161,6 +161,13 @@
 					type: "xp"
 					xp: 400
 				}
+			
+				{
+					id: "5289AD830FE95666"
+					table_id: 5967421395539988631L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
