@@ -1,22 +1,33 @@
 {
-	icon: "minecraft:redstone"
+	icon: "create:goggles"
 	id: "6BEAC1672FDA272F"
-	loot_size: 2
+	loot_size: 5
 	order_index: 113
 	rewards: [
-		{ item: "create:speedometer", weight: 16.00f }
-		{ item: "create:stressometer", weight: 16.00f }
-		{ item: "create:water_wheel", weight: 16.00f }
-		{ item: "create:basin", weight: 5.00f }
-		{ item: "create:encased_fan", weight: 5.00f }
-		{ item: "create:mechanical_mixer", weight: 1.00f }
-		{ item: "create:millstone", weight: 1.00f }
-		{ item: "create:belt_connector", weight: 5.00f }
-		{ item: "create:depot", weight: 5.00f }
-		{ item: "create:basin", weight: 5.00f }
-		{ item: "create:encased_fan", weight: 5.00f }
-		{ item: "create:mechanical_mixer", weight: 1.00f }
-		{ item: "create:millstone", weight: 1.00f }
+		{ item: "create:goggles", weight: 6.00f }
+		{ item: "create:large_cogwheel", weight: 6.00f }
+		{ item: "create:shaft", weight: 6.00f }
+		{ item: "create:wrench", weight: 6.00f }
+		{ item: "create:andesite_alloy", weight: 9.00f }
+		{ item: "create:clutch", weight: 6.00f }
+		{ item: "create:gearbox", weight: 9.00f }
+		{ item: "create:gearshift", weight: 9.00f }
+		{ item: "create:mechanical_press", weight: 6.00f }
+		{ item: "create:speedometer", weight: 6.00f }
+		{ item: "create:stressometer", weight: 6.00f }
+		{ item: "create:water_wheel", weight: 6.00f }
+		{ item: "create:basin", weight: 5.25f }
+		{ item: "create:encased_fan", weight: 5.25f }
+		{ item: "create:mechanical_mixer", weight: 5.25f }
+		{ item: "create:millstone", weight: 5.25f }
+		{ item: "create:belt_connector", weight: 5.25f }
+		{ item: "create:depot", weight: 5.25f }
+		{ count: 8, item: "create:gearshift", weight: 9.00f }
+		{ count: 16, item: "create:gearshift", weight: 9.00f }
+		{ count: 2, item: "create:mechanical_press", weight: 3.34f }
+		{ count: 2, item: "create:goggles", weight: 0.80f }
+		{ count: 2, item: "create:large_cogwheel", weight: 0.80f }
+		{ count: 2, item: "create:shaft", weight: 0.80f }
 	]
 	title: "Wheel of Fortune — Ender IO Connections"
 	use_title: true

@@ -4,9 +4,18 @@
 	loot_size: 1
 	order_index: 401
 	rewards: [
-		{ item: "tconstruct:crafting_station", weight: 9.00f }
-		{ item: "tconstruct:seared_melter", weight: 9.00f }
-		{ item: "tconstruct:tinkers_anvil", weight: 9.00f }
+		{ item: "tconstruct:crafting_station", weight: 16.00f }
+		{ item: "tconstruct:seared_melter", weight: 16.00f }
+		{ item: "tconstruct:tinkers_anvil", weight: 16.00f }
+		{ item: "tconstruct:crafting_station", weight: 5.00f }
+		{ item: "tconstruct:seared_melter", weight: 5.00f }
+		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
+		{ item: "tconstruct:crafting_station", weight: 4.45f }
+		{ item: "tconstruct:seared_melter", weight: 4.45f }
+		{ item: "tconstruct:tinkers_anvil", weight: 4.45f }
+		{ item: "tconstruct:crafting_station", weight: 3.90f }
+		{ item: "tconstruct:seared_melter", weight: 3.90f }
+		{ item: "tconstruct:tinkers_anvil", weight: 3.90f }
 	]
 	title: "Tinkers Construct — Tier 1 Roll"
 	use_title: true

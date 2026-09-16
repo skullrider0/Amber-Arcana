@@ -4,14 +4,22 @@
 	loot_size: 2
 	order_index: 322
 	rewards: [
-		{ item: "ars_nouveau:novice_spell_book", weight: 9.00f }
-		{ item: "ars_nouveau:enchanting_apparatus", weight: 9.00f }
-		{ item: "ars_nouveau:source_jar", weight: 9.00f }
-		{ item: "ars_nouveau:spell_turret", weight: 9.00f }
-		{ item: "ars_nouveau:enchanting_apparatus", weight: 9.00f }
-		{ item: "ars_nouveau:source_jar", weight: 9.00f }
-		{ item: "ars_nouveau:novice_spell_book", weight: 9.00f }
-		{ item: "ars_nouveau:spell_turret", weight: 9.00f }
+		{ item: "ars_nouveau:novice_spell_book", weight: 16.00f }
+		{ item: "ars_nouveau:enchanting_apparatus", weight: 16.00f }
+		{ item: "ars_nouveau:source_jar", weight: 16.00f }
+		{ item: "ars_nouveau:spell_turret", weight: 16.00f }
+		{ item: "ars_nouveau:novice_spell_book", weight: 5.00f }
+		{ item: "ars_nouveau:enchanting_apparatus", weight: 5.00f }
+		{ item: "ars_nouveau:source_jar", weight: 5.00f }
+		{ item: "ars_nouveau:spell_turret", weight: 5.00f }
+		{ count: 2, item: "ars_nouveau:novice_spell_book", weight: 4.45f }
+		{ count: 2, item: "ars_nouveau:enchanting_apparatus", weight: 4.45f }
+		{ count: 2, item: "ars_nouveau:source_jar", weight: 4.45f }
+		{ count: 2, item: "ars_nouveau:spell_turret", weight: 4.45f }
+		{ count: 2, item: "ars_nouveau:novice_spell_book", weight: 3.90f }
+		{ count: 2, item: "ars_nouveau:enchanting_apparatus", weight: 3.90f }
+		{ count: 2, item: "ars_nouveau:source_jar", weight: 3.90f }
+		{ count: 2, item: "ars_nouveau:spell_turret", weight: 3.90f }
 	]
 	title: "Ars Nouveau — Tier 2 Roll"
 	use_title: true

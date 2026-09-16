@@ -31,12 +31,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "4967BCF8BC525462"
+					id: "77064EC812E8BB17"
 					table_id: 5407133748720011400L
 					title: "Tinkers Construct Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -78,12 +81,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "3F69CC9D0F77606C"
-					table_id: 5407133748720011400L
-					title: "Tinkers Construct Tier 1 Roll"
+					id: "12D064F69F805FFF"
+					table_id: 4582805361297255133L
+					title: "Tinkers Construct Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -134,6 +140,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "3EC70454467A22D7"
+					table_id: 255317257987253958L
+					title: "Tinkers Construct Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

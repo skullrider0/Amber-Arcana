@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-33",
+  "pack_version": "0.1.9-34",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -342,5 +342,146 @@
     "generic_vanilla_items_in_new_bee_tables": 0,
     "historical_table_ids_preserved": true,
     "client_server_quest_files_identical": true
+  },
+  "short_chain_rewards_0_1_9_34": {
+    "short_chain_max_quests": 10,
+    "short_chapters_rebalanced": 24,
+    "short_quests_rebalanced": 100,
+    "short_quest_roll_coverage_percent": 100.0,
+    "tier_weighted_entries_generated": 1728,
+    "finale_weighted_entries_generated": 512,
+    "tier_loot_sizes": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4
+    },
+    "finale_loot_size": 5,
+    "generic_vanilla_items_added": 0,
+    "historical_quest_ids_preserved": true,
+    "historical_reward_table_ids_preserved": true,
+    "client_server_quest_files_identical": true,
+    "chapters": [
+      {
+        "chapter": "ae2",
+        "title": "Ae2",
+        "quests": 3
+      },
+      {
+        "chapter": "alex_caves",
+        "title": "Alex Caves",
+        "quests": 6
+      },
+      {
+        "chapter": "alex_utilities",
+        "title": "Alex Utilities",
+        "quests": 5
+      },
+      {
+        "chapter": "alex_wildlife",
+        "title": "Alex Wildlife",
+        "quests": 5
+      },
+      {
+        "chapter": "aquarium",
+        "title": "Aquarium",
+        "quests": 4
+      },
+      {
+        "chapter": "ars_nouveau",
+        "title": "Ars Nouveau",
+        "quests": 3
+      },
+      {
+        "chapter": "buddycards",
+        "title": "Buddycards",
+        "quests": 6
+      },
+      {
+        "chapter": "butchery",
+        "title": "Butchery",
+        "quests": 5
+      },
+      {
+        "chapter": "create_city",
+        "title": "The Mechanical City",
+        "quests": 5
+      },
+      {
+        "chapter": "create_workshops",
+        "title": "Create Workshops",
+        "quests": 5
+      },
+      {
+        "chapter": "dimensions",
+        "title": "Beyond the Overworld",
+        "quests": 5
+      },
+      {
+        "chapter": "dinosaur_laboratory",
+        "title": "Jurassic Laboratory",
+        "quests": 4
+      },
+      {
+        "chapter": "ender_io",
+        "title": "Ender IO Connections",
+        "quests": 3
+      },
+      {
+        "chapter": "endgame",
+        "title": "A World Worth Building",
+        "quests": 4
+      },
+      {
+        "chapter": "firearms",
+        "title": "Firearms and Artillery",
+        "quests": 3
+      },
+      {
+        "chapter": "food_factory",
+        "title": "Food and Seasons",
+        "quests": 5
+      },
+      {
+        "chapter": "getting_started",
+        "title": "Getting Started",
+        "quests": 3
+      },
+      {
+        "chapter": "irons_spells",
+        "title": "Iron Spells and Wizardry",
+        "quests": 3
+      },
+      {
+        "chapter": "mekanism",
+        "title": "Mekanism Industry",
+        "quests": 4
+      },
+      {
+        "chapter": "powah",
+        "title": "Powah Energy",
+        "quests": 3
+      },
+      {
+        "chapter": "refined_storage",
+        "title": "Refined Storage",
+        "quests": 3
+      },
+      {
+        "chapter": "ritual_magic",
+        "title": "Rituals and Witchcraft",
+        "quests": 5
+      },
+      {
+        "chapter": "settlement",
+        "title": "Claims and Colonies",
+        "quests": 5
+      },
+      {
+        "chapter": "tinkers",
+        "title": "Tinkers Construct",
+        "quests": 3
+      }
+    ]
   }
 }

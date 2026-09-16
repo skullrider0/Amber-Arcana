@@ -1,17 +1,29 @@
 {
-	icon: "ae2:molecular_assembler"
+	icon: "ae2:controller"
 	id: "060757B6490F9BDC"
-	loot_size: 2
+	loot_size: 3
 	order_index: 303
 	rewards: [
+		{ item: "ae2:controller", weight: 14.00f }
+		{ item: "ae2:molecular_assembler", weight: 14.00f }
+		{ item: "ae2:pattern_provider", weight: 14.00f }
+		{ item: "ae2:item_storage_cell_64k", weight: 14.00f }
+		{ item: "ae2:controller", weight: 5.00f }
 		{ item: "ae2:molecular_assembler", weight: 5.00f }
 		{ item: "ae2:pattern_provider", weight: 5.00f }
-		{ item: "ae2:controller", weight: 5.00f }
 		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ item: "ae2:molecular_assembler", weight: 5.00f }
-		{ item: "ae2:pattern_provider", weight: 5.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ item: "ae2:controller", weight: 5.00f }
+		{ count: 2, item: "ae2:controller", weight: 4.45f }
+		{ count: 2, item: "ae2:molecular_assembler", weight: 4.45f }
+		{ count: 2, item: "ae2:pattern_provider", weight: 4.45f }
+		{ count: 2, item: "ae2:item_storage_cell_64k", weight: 4.45f }
+		{ count: 3, item: "ae2:controller", weight: 3.90f }
+		{ count: 3, item: "ae2:molecular_assembler", weight: 3.90f }
+		{ count: 3, item: "ae2:pattern_provider", weight: 3.90f }
+		{ count: 3, item: "ae2:item_storage_cell_64k", weight: 3.90f }
+		{ count: 3, item: "ae2:controller", weight: 3.35f }
+		{ count: 3, item: "ae2:molecular_assembler", weight: 3.35f }
+		{ count: 3, item: "ae2:pattern_provider", weight: 3.35f }
+		{ count: 3, item: "ae2:item_storage_cell_64k", weight: 3.35f }
 	]
 	title: "Ae2 — Tier 3 Roll"
 	use_title: true

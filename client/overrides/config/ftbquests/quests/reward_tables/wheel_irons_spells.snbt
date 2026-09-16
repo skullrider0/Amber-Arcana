@@ -1,15 +1,17 @@
 {
 	icon: "irons_spellbooks:iron_spell_book"
 	id: "403A6720640F4BBF"
-	loot_size: 2
+	loot_size: 5
 	order_index: 118
 	rewards: [
-		{ item: "irons_spellbooks:iron_spell_book", weight: 1.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 1.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 1.00f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 6.00f }
+		{ item: "irons_spellbooks:inscription_table", weight: 6.00f }
+		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 3.34f }
+		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 3.34f }
+		{ count: 3, item: "irons_spellbooks:iron_spell_book", weight: 2.92f }
+		{ count: 3, item: "irons_spellbooks:inscription_table", weight: 2.92f }
+		{ count: 4, item: "irons_spellbooks:iron_spell_book", weight: 0.80f }
+		{ count: 4, item: "irons_spellbooks:inscription_table", weight: 0.80f }
 	]
 	title: "Wheel of Fortune — Iron Spells and Wizardry"
 	use_title: true

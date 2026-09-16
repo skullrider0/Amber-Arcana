@@ -1,15 +1,17 @@
 {
 	icon: "botania:mana_pool"
 	id: "05A3D1EE7C7AC23B"
-	loot_size: 2
+	loot_size: 5
 	order_index: 122
 	rewards: [
-		{ item: "botania:mana_pool", weight: 1.00f }
-		{ item: "bloodmagic:altar", weight: 5.00f }
-		{ item: "botania:mana_pool", weight: 1.00f }
-		{ item: "bloodmagic:altar", weight: 5.00f }
-		{ item: "bloodmagic:altar", weight: 5.00f }
-		{ item: "botania:mana_pool", weight: 1.00f }
+		{ item: "botania:mana_pool", weight: 6.00f }
+		{ item: "bloodmagic:altar", weight: 6.00f }
+		{ count: 2, item: "botania:mana_pool", weight: 3.34f }
+		{ count: 2, item: "bloodmagic:altar", weight: 3.34f }
+		{ count: 3, item: "botania:mana_pool", weight: 2.92f }
+		{ count: 3, item: "bloodmagic:altar", weight: 2.92f }
+		{ count: 4, item: "botania:mana_pool", weight: 0.80f }
+		{ count: 4, item: "bloodmagic:altar", weight: 0.80f }
 	]
 	title: "Wheel of Fortune — Rituals and Witchcraft"
 	use_title: true

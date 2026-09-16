@@ -54,12 +54,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "19276653003F21D7"
+					id: "684EF3660B22254A"
 					table_id: 1728851355489678624L
 					title: "Getting Started Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			shape: "hexagon"
 			size: 1.25d
@@ -124,12 +127,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "753DAE4986F7F61E"
-					table_id: 1728851355489678624L
-					title: "Getting Started Tier 1 Roll"
+					id: "75EFBAF5AAF214C4"
+					table_id: 4990266738195959726L
+					title: "Getting Started Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			shape: "hexagon"
 			size: 1.25d
@@ -188,6 +194,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "015021A3CC9E987C"
+					table_id: 6105266698705282770L
+					title: "Getting Started Tier 4 Roll"
+					type: "loot"
+				
 			]
 			shape: "hexagon"
 			size: 1.25d

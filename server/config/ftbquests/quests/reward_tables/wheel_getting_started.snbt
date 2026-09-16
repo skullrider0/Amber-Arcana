@@ -1,24 +1,33 @@
 {
-	icon: "sophisticatedbackpacks:backpack"
+	icon: "create:cogwheel"
 	id: "566FD3D8B6FD706C"
-	loot_size: 2
+	loot_size: 5
 	order_index: 117
 	rewards: [
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 1.00f }
-		{ item: "create:shaft", weight: 1.00f }
-		{ item: "sophisticatedbackpacks:backpack", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 1.00f }
-		{ item: "create:shaft", weight: 1.00f }
-		{ item: "sophisticatedbackpacks:backpack", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 1.00f }
-		{ item: "create:shaft", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 6.00f }
+		{ item: "create:goggles", weight: 6.00f }
+		{ item: "create:large_cogwheel", weight: 6.00f }
+		{ item: "create:shaft", weight: 6.00f }
+		{ item: "sophisticatedbackpacks:backpack", weight: 6.00f }
+		{ item: "create:andesite_casing", weight: 6.00f }
+		{ count: 2, item: "create:cogwheel", weight: 3.34f }
+		{ count: 2, item: "create:goggles", weight: 3.34f }
+		{ count: 2, item: "create:large_cogwheel", weight: 3.34f }
+		{ count: 2, item: "create:shaft", weight: 3.34f }
+		{ count: 2, item: "sophisticatedbackpacks:backpack", weight: 3.34f }
+		{ count: 2, item: "create:andesite_casing", weight: 3.34f }
+		{ count: 3, item: "create:cogwheel", weight: 2.92f }
+		{ count: 3, item: "create:goggles", weight: 2.92f }
+		{ count: 3, item: "create:andesite_casing", weight: 2.92f }
+		{ count: 3, item: "create:large_cogwheel", weight: 2.92f }
+		{ count: 3, item: "create:shaft", weight: 2.92f }
+		{ count: 3, item: "sophisticatedbackpacks:backpack", weight: 2.92f }
+		{ count: 4, item: "create:cogwheel", weight: 0.80f }
+		{ count: 4, item: "create:goggles", weight: 0.80f }
+		{ count: 4, item: "create:large_cogwheel", weight: 0.80f }
+		{ count: 4, item: "create:shaft", weight: 0.80f }
+		{ count: 4, item: "sophisticatedbackpacks:backpack", weight: 0.80f }
+		{ count: 4, item: "create:andesite_casing", weight: 0.80f }
 	]
 	title: "Wheel of Fortune — Getting Started"
 	use_title: true

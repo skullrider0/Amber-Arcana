@@ -4,8 +4,18 @@
 	loot_size: 1
 	order_index: 373
 	rewards: [
-		{ item: "irons_spellbooks:iron_spell_book", weight: 9.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 9.00f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 16.00f }
+		{ item: "irons_spellbooks:inscription_table", weight: 16.00f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 5.00f }
+		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 4.45f }
+		{ item: "irons_spellbooks:inscription_table", weight: 4.45f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 3.90f }
+		{ item: "irons_spellbooks:inscription_table", weight: 3.90f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 3.35f }
+		{ item: "irons_spellbooks:inscription_table", weight: 3.35f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 2.80f }
+		{ item: "irons_spellbooks:inscription_table", weight: 2.80f }
 	]
 	title: "Iron Spells and Wizardry — Tier 1 Roll"
 	use_title: true

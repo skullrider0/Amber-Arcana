@@ -31,12 +31,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "4FECE1DDAE2B36BA"
+					id: "6373C21B65916BC4"
 					table_id: 1615019638250334031L
 					title: "Powah Energy Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -78,12 +81,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "08E4238A736F2DE3"
-					table_id: 1615019638250334031L
-					title: "Powah Energy Tier 1 Roll"
+					id: "4F2C2962E5B74CCB"
+					table_id: 7019145743264263493L
+					title: "Powah Energy Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -134,6 +140,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "670D20E476093BEB"
+					table_id: 8147253890862149015L
+					title: "Powah Energy Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

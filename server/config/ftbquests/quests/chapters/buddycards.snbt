@@ -28,6 +28,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "0EA83D970ED8DE70"
+					table_id: 7679472932105695936L
+					title: "Buddycards Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -70,12 +78,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "1741566E542E4C7A"
+					id: "029A2E3D857CCCBD"
 					table_id: 7679472932105695936L
 					title: "Buddycards Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -118,12 +129,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "12AB5D69B4410191"
+					id: "524684550A6B87B4"
 					table_id: 7476996288365007586L
 					title: "Buddycards Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -166,12 +180,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "14656A796E7BFD97"
-					table_id: 7476996288365007586L
-					title: "Buddycards Tier 2 Roll"
+					id: "5E7CB979F405C354"
+					table_id: 7285622350947601090L
+					title: "Buddycards Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -213,12 +230,15 @@
 					xp: 300
 				}
 			
+				
+			
+
 				{
-					id: "6FEDF55C7DF16916"
+					id: "595742BFDF2C4129"
 					table_id: 7285622350947601090L
 					title: "Buddycards Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -267,6 +287,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "471EB6212D9592FA"
+					table_id: 7676865499021914423L
+					title: "Buddycards Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

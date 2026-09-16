@@ -30,6 +30,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "63A0F4C2D44A292B"
+					table_id: 2411341189262328692L
+					title: "Beyond the Overworld Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -70,12 +78,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "41FDB1DB577FF812"
-					table_id: 2411341189262328692L
-					title: "Beyond the Overworld Tier 1 Roll"
+					id: "237DAE261BD0BC15"
+					table_id: 6198371505029133212L
+					title: "Beyond the Overworld Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -119,12 +130,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "28062CB1CD11081F"
+					id: "2F7B4E619E30CAF0"
 					table_id: 6198371505029133212L
 					title: "Beyond the Overworld Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -169,12 +183,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "13848562AC770AFB"
-					table_id: 6198371505029133212L
-					title: "Beyond the Overworld Tier 2 Roll"
+					id: "798F620CA0020F8F"
+					table_id: 5932388669675509111L
+					title: "Beyond the Overworld Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -225,6 +242,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "5168A42BDC6EC397"
+					table_id: 2948667954704824210L
+					title: "Beyond the Overworld Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

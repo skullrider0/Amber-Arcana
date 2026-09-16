@@ -1,18 +1,21 @@
 {
 	icon: "tconstruct:crafting_station"
 	id: "17BFEE4444BC2E10"
-	loot_size: 2
+	loot_size: 5
 	order_index: 124
 	rewards: [
-		{ item: "tconstruct:seared_melter", weight: 5.00f }
-		{ item: "tconstruct:crafting_station", weight: 1.00f }
-		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
-		{ item: "tconstruct:seared_melter", weight: 5.00f }
-		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
-		{ item: "tconstruct:crafting_station", weight: 1.00f }
-		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
-		{ item: "tconstruct:seared_melter", weight: 5.00f }
-		{ item: "tconstruct:crafting_station", weight: 1.00f }
+		{ item: "tconstruct:crafting_station", weight: 6.00f }
+		{ item: "tconstruct:seared_melter", weight: 6.00f }
+		{ item: "tconstruct:tinkers_anvil", weight: 6.00f }
+		{ count: 2, item: "tconstruct:crafting_station", weight: 3.34f }
+		{ count: 2, item: "tconstruct:seared_melter", weight: 3.34f }
+		{ count: 2, item: "tconstruct:tinkers_anvil", weight: 3.34f }
+		{ count: 3, item: "tconstruct:crafting_station", weight: 2.92f }
+		{ count: 3, item: "tconstruct:seared_melter", weight: 2.92f }
+		{ count: 3, item: "tconstruct:tinkers_anvil", weight: 2.92f }
+		{ count: 4, item: "tconstruct:crafting_station", weight: 0.80f }
+		{ count: 4, item: "tconstruct:seared_melter", weight: 0.80f }
+		{ count: 4, item: "tconstruct:tinkers_anvil", weight: 0.80f }
 	]
 	title: "Wheel of Fortune — Tinkers Construct"
 	use_title: true

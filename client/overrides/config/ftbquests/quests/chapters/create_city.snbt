@@ -33,6 +33,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "715EAF9E82AD2661"
+					table_id: 5225078345886391365L
+					title: "The Mechanical City Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -74,12 +82,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "3F2AAA1AF802CC55"
-					table_id: 5225078345886391365L
-					title: "The Mechanical City Tier 1 Roll"
+					id: "07755AA8D9C3E424"
+					table_id: 1827004927183153090L
+					title: "The Mechanical City Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -124,12 +135,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "36443EF27FF027A9"
+					id: "225556802ABA97FE"
 					table_id: 1827004927183153090L
 					title: "The Mechanical City Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -174,12 +188,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "1445C067214D179C"
-					table_id: 1827004927183153090L
-					title: "The Mechanical City Tier 2 Roll"
+					id: "666E7DEA1186AA43"
+					table_id: 7376566359862761005L
+					title: "The Mechanical City Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -230,6 +247,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "43E804F9822CC018"
+					table_id: 1985230044277951708L
+					title: "The Mechanical City Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

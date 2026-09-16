@@ -29,12 +29,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "2D15DE8B7DAFF4FF"
+					id: "46D6795B6B5066B5"
 					table_id: 6421184882677979736L
 					title: "Ars Nouveau Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -77,12 +80,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "180B0E9723DE5775"
-					table_id: 6421184882677979736L
-					title: "Ars Nouveau Tier 1 Roll"
+					id: "0EFB1B988677B541"
+					table_id: 723896153243885020L
+					title: "Ars Nouveau Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -138,6 +144,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "583B04509DC628D8"
+					table_id: 5965291529919979376L
+					title: "Ars Nouveau Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

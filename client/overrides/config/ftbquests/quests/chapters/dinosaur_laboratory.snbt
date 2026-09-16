@@ -30,6 +30,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "3131FF7EC2AA9056"
+					table_id: 5306158820336966195L
+					title: "Jurassic Laboratory Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -71,12 +79,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "403AB8F28F2FD008"
-					table_id: 5306158820336966195L
-					title: "Jurassic Laboratory Tier 1 Roll"
+					id: "169073B079FFBD9B"
+					table_id: 6388233646105654668L
+					title: "Jurassic Laboratory Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -121,12 +132,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "74539EFD8C67CEBF"
-					table_id: 6388233646105654668L
-					title: "Jurassic Laboratory Tier 2 Roll"
+					id: "5FD5C129A09FCB45"
+					table_id: 6184376737876792336L
+					title: "Jurassic Laboratory Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -177,6 +191,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "31810C7E42D7261E"
+					table_id: 2513025998819792296L
+					title: "Jurassic Laboratory Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

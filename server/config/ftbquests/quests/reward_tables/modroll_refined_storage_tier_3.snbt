@@ -1,20 +1,29 @@
 {
-	icon: "refinedstorage:importer"
+	icon: "refinedstorage:controller"
 	id: "2A957D581A275C18"
-	loot_size: 2
+	loot_size: 3
 	order_index: 391
 	rewards: [
-		{ item: "refinedstorage:importer", weight: 5.00f }
+		{ item: "refinedstorage:controller", weight: 14.00f }
+		{ item: "refinedstorage:disk_drive", weight: 14.00f }
+		{ item: "refinedstorage:grid", weight: 14.00f }
+		{ item: "refinedstorage:exporter", weight: 14.00f }
+		{ item: "refinedstorage:importer", weight: 14.00f }
+		{ item: "refinedstorage:crafting_grid", weight: 14.00f }
 		{ item: "refinedstorage:controller", weight: 5.00f }
 		{ item: "refinedstorage:disk_drive", weight: 5.00f }
 		{ item: "refinedstorage:grid", weight: 5.00f }
-		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
 		{ item: "refinedstorage:exporter", weight: 5.00f }
 		{ item: "refinedstorage:importer", weight: 5.00f }
 		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
-		{ item: "refinedstorage:controller", weight: 5.00f }
-		{ item: "refinedstorage:disk_drive", weight: 5.00f }
-		{ item: "refinedstorage:grid", weight: 5.00f }
+		{ count: 2, item: "refinedstorage:controller", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:disk_drive", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:grid", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:exporter", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:importer", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:crafting_grid", weight: 4.45f }
+		{ count: 3, item: "refinedstorage:controller", weight: 3.90f }
+		{ count: 3, item: "refinedstorage:disk_drive", weight: 3.90f }
 	]
 	title: "Refined Storage — Tier 3 Roll"
 	use_title: true

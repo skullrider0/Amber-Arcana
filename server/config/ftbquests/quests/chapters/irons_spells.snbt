@@ -31,12 +31,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "07780EB6FAC5E825"
+					id: "02D2314163DFAEAB"
 					table_id: 3870714476569221173L
 					title: "Iron Spells and Wizardry Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -78,12 +81,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "7B73A7F9597F608D"
-					table_id: 3870714476569221173L
-					title: "Iron Spells and Wizardry Tier 1 Roll"
+					id: "0A9ED78FA07295FD"
+					table_id: 3398924762288486032L
+					title: "Iron Spells and Wizardry Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -134,6 +140,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "1ADA128F2ACC6C45"
+					table_id: 5158442644180175083L
+					title: "Iron Spells and Wizardry Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

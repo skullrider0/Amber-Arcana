@@ -1,25 +1,29 @@
 {
-	icon: "create:threshold_switch"
+	icon: "create:fluid_tank"
 	id: "5B1CF26E78410253"
-	loot_size: 2
+	loot_size: 3
 	order_index: 343
 	rewards: [
-		{ item: "create:threshold_switch", weight: 16.00f }
-		{ item: "create:brass_ingot", weight: 16.00f }
-		{ item: "create:package_frogport", weight: 16.00f }
-		{ item: "create:packager", weight: 16.00f }
-		{ item: "create:precision_mechanism", weight: 16.00f }
-		{ item: "create:mechanical_arm", weight: 5.00f }
-		{ item: "create:mechanical_crafter", weight: 5.00f }
-		{ item: "create:repackager", weight: 5.00f }
-		{ item: "create:schematic_and_quill", weight: 5.00f }
-		{ item: "create:schematicannon", weight: 5.00f }
-		{ item: "create:crushing_wheel", weight: 5.00f }
-		{ item: "create:factory_gauge", weight: 5.00f }
-		{ item: "create:stock_link", weight: 5.00f }
-		{ item: "create:stock_ticker", weight: 5.00f }
-		{ item: "create:sturdy_sheet", weight: 5.00f }
-		{ item: "create:railway_casing", weight: 5.00f }
+		{ item: "create:fluid_tank", weight: 14.00f }
+		{ item: "create:mechanical_bearing", weight: 14.00f }
+		{ item: "create:mechanical_piston", weight: 14.00f }
+		{ item: "create:super_glue", weight: 14.00f }
+		{ item: "create:gantry_carriage", weight: 14.00f }
+		{ item: "create:gantry_shaft", weight: 14.00f }
+		{ item: "create:hose_pulley", weight: 14.00f }
+		{ item: "create:item_drain", weight: 14.00f }
+		{ item: "create:rope_pulley", weight: 14.00f }
+		{ item: "create:spout", weight: 14.00f }
+		{ item: "create:contraption_controls", weight: 14.00f }
+		{ item: "create:portable_storage_interface", weight: 14.00f }
+		{ item: "create:redstone_contact", weight: 14.00f }
+		{ item: "create:brass_funnel", weight: 14.00f }
+		{ item: "create:threshold_switch", weight: 7.00f }
+		{ item: "create:brass_ingot", weight: 7.00f }
+		{ item: "create:package_frogport", weight: 7.00f }
+		{ item: "create:packager", weight: 7.00f }
+		{ item: "create:precision_mechanism", weight: 7.00f }
+		{ item: "create:mechanical_arm", weight: 7.00f }
 	]
 	title: "Create Workshops — Tier 3 Roll"
 	use_title: true

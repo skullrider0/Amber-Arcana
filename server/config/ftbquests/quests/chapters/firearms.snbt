@@ -31,12 +31,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "3F4A980A3C6946FC"
+					id: "6678B339067E471E"
 					table_id: 4636241790363593019L
 					title: "Firearms and Artillery Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -78,12 +81,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "5D03F59738EDE62C"
-					table_id: 4636241790363593019L
-					title: "Firearms and Artillery Tier 1 Roll"
+					id: "53D4CCD0DF161519"
+					table_id: 7052582788099293422L
+					title: "Firearms and Artillery Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -134,6 +140,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "0263E8719AA0326E"
+					table_id: 7383814185449608606L
+					title: "Firearms and Artillery Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

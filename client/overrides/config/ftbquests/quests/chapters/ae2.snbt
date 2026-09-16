@@ -29,12 +29,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "0C1ADF1E430E489D"
+					id: "7061D3315F75EAF8"
 					table_id: 1071851966108093733L
 					title: "Ae2 Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -77,12 +80,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "3C40AE1BDAC7A7F9"
-					table_id: 1071851966108093733L
-					title: "Ae2 Tier 1 Roll"
+					id: "691C3BF05CEAF42A"
+					table_id: 2866491850263192602L
+					title: "Ae2 Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -138,6 +144,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "4E7DC97C3AEF607A"
+					table_id: 6929581866957786509L
+					title: "Ae2 Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

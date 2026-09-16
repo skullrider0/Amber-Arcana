@@ -30,6 +30,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "6D1618E6378F8CA1"
+					table_id: 2140302369873473984L
+					title: "Food and Seasons Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -71,12 +79,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "30BC6FC0C1A7A5B9"
-					table_id: 2140302369873473984L
-					title: "Food and Seasons Tier 1 Roll"
+					id: "73EFDC2299AA9E87"
+					table_id: 5797659329762223513L
+					title: "Food and Seasons Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -121,12 +132,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "453C21570F64D80D"
+					id: "6191D1F1260F21D9"
 					table_id: 5797659329762223513L
 					title: "Food and Seasons Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -171,12 +185,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "12C275B535402C57"
-					table_id: 5797659329762223513L
-					title: "Food and Seasons Tier 2 Roll"
+					id: "1A08D658C8128864"
+					table_id: 8652775081272156602L
+					title: "Food and Seasons Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -227,6 +244,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "6B4B0D10BB9F52D7"
+					table_id: 6021695586514683820L
+					title: "Food and Seasons Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

@@ -1,23 +1,25 @@
 {
-	icon: "create:fluid_tank"
+	icon: "create:andesite_casing"
 	id: "50A307E64B795D93"
 	loot_size: 2
 	order_index: 342
 	rewards: [
-		{ item: "create:fluid_tank", weight: 16.00f }
-		{ item: "create:mechanical_bearing", weight: 16.00f }
-		{ item: "create:mechanical_piston", weight: 16.00f }
-		{ item: "create:super_glue", weight: 16.00f }
-		{ item: "create:gantry_carriage", weight: 9.00f }
-		{ item: "create:gantry_shaft", weight: 9.00f }
-		{ item: "create:hose_pulley", weight: 9.00f }
-		{ item: "create:item_drain", weight: 9.00f }
-		{ item: "create:rope_pulley", weight: 9.00f }
-		{ item: "create:spout", weight: 9.00f }
-		{ item: "create:contraption_controls", weight: 9.00f }
-		{ item: "create:portable_storage_interface", weight: 9.00f }
-		{ item: "create:redstone_contact", weight: 9.00f }
-		{ item: "create:brass_funnel", weight: 9.00f }
+		{ item: "create:andesite_casing", weight: 16.00f }
+		{ item: "create:cogwheel", weight: 16.00f }
+		{ item: "create:goggles", weight: 16.00f }
+		{ item: "create:large_cogwheel", weight: 16.00f }
+		{ item: "create:shaft", weight: 16.00f }
+		{ item: "create:wrench", weight: 16.00f }
+		{ item: "create:andesite_alloy", weight: 16.00f }
+		{ item: "create:clutch", weight: 16.00f }
+		{ item: "create:gearbox", weight: 16.00f }
+		{ item: "create:gearshift", weight: 16.00f }
+		{ item: "create:mechanical_press", weight: 16.00f }
+		{ item: "create:speedometer", weight: 16.00f }
+		{ item: "create:fluid_tank", weight: 9.00f }
+		{ item: "create:mechanical_bearing", weight: 9.00f }
+		{ item: "create:mechanical_piston", weight: 9.00f }
+		{ item: "create:super_glue", weight: 9.00f }
 	]
 	title: "Create Workshops — Tier 2 Roll"
 	use_title: true

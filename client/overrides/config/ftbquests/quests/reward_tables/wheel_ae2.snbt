@@ -1,20 +1,25 @@
 {
 	icon: "ae2:controller"
 	id: "628A58BBB84E88AE"
-	loot_size: 2
+	loot_size: 5
 	order_index: 100
 	rewards: [
-		{ item: "ae2:pattern_provider", weight: 5.00f }
-		{ item: "ae2:controller", weight: 1.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ item: "ae2:molecular_assembler", weight: 5.00f }
-		{ item: "ae2:pattern_provider", weight: 5.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ item: "ae2:controller", weight: 1.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ item: "ae2:molecular_assembler", weight: 5.00f }
-		{ item: "ae2:pattern_provider", weight: 5.00f }
-		{ item: "ae2:controller", weight: 1.00f }
+		{ item: "ae2:controller", weight: 6.00f }
+		{ item: "ae2:molecular_assembler", weight: 6.00f }
+		{ item: "ae2:pattern_provider", weight: 6.00f }
+		{ item: "ae2:item_storage_cell_64k", weight: 6.00f }
+		{ count: 2, item: "ae2:controller", weight: 3.34f }
+		{ count: 2, item: "ae2:molecular_assembler", weight: 3.34f }
+		{ count: 2, item: "ae2:pattern_provider", weight: 3.34f }
+		{ count: 2, item: "ae2:item_storage_cell_64k", weight: 3.34f }
+		{ count: 3, item: "ae2:controller", weight: 2.92f }
+		{ count: 3, item: "ae2:molecular_assembler", weight: 2.92f }
+		{ count: 3, item: "ae2:pattern_provider", weight: 2.92f }
+		{ count: 3, item: "ae2:item_storage_cell_64k", weight: 2.92f }
+		{ count: 4, item: "ae2:controller", weight: 0.80f }
+		{ count: 4, item: "ae2:molecular_assembler", weight: 0.80f }
+		{ count: 4, item: "ae2:pattern_provider", weight: 0.80f }
+		{ count: 4, item: "ae2:item_storage_cell_64k", weight: 0.80f }
 	]
 	title: "Wheel of Fortune — Ae2"
 	use_title: true

@@ -117,3 +117,8 @@ Historical More Hitboxes note (0.1.9-21): stock 1.9.2 was temporarily restored o
 ## Crafty JEI overlay
 
 For an existing server, download `dist/Amber-and-Arcana-0.1.9-19-Crafty-JEI-Overlay.zip`, stop the server, and extract it into the Crafty server root (the folder containing `AmberArcana-Crafty-Launcher.jar`) with overwrite enabled. The overlay contains only `_crafty/server-mods.tsv`; on the next start the launcher downloads `jei-1.20.1-forge-15.20.0.106.jar` into `mods/`. It does not contain or overwrite the world.
+
+
+## 0.1.9-34 short-chain reward progression
+
+Compact quest chapters now use a compressed but much richer reward curve. Every quest in chapters with at most 10 quests receives a mod-specific tier roll, tiers 3/4 use 3/4 draws, and chapter finales use five draws. Reward tables are expanded with weighted quantity variants and rare deep-progression outcomes using only modded item IDs already validated by the preceding reward pass. Productive Bees and Create Engineering retain their dedicated deeper reward systems.

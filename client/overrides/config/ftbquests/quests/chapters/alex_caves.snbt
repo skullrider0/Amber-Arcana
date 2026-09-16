@@ -28,6 +28,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "075C239C4D89127E"
+					table_id: 4954719110179601135L
+					title: "Alex Caves Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -69,12 +77,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "0F211F706EC1EC4A"
+					id: "48A5EF3E0940D7E7"
 					table_id: 4954719110179601135L
 					title: "Alex Caves Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -124,12 +135,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "3FC777DFA8D65590"
+					id: "3C150AD7979481C7"
 					table_id: 9086790777740076044L
 					title: "Alex Caves Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -171,12 +185,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "2FC83FF35E3F4898"
-					table_id: 9086790777740076044L
-					title: "Alex Caves Tier 2 Roll"
+					id: "55D30E80310996EF"
+					table_id: 691650327864054008L
+					title: "Alex Caves Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -218,12 +235,15 @@
 					xp: 300
 				}
 			
+				
+			
+
 				{
-					id: "047C204F3A905E48"
+					id: "25B70F5E2B3D5FAA"
 					table_id: 691650327864054008L
 					title: "Alex Caves Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -272,6 +292,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "60A327817F6D8AAA"
+					table_id: 8615607550808823151L
+					title: "Alex Caves Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

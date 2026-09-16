@@ -1,24 +1,33 @@
 {
-	icon: "create:wrench"
+	icon: "create:fluid_tank"
 	id: "611B505C4FBD0504"
-	loot_size: 2
+	loot_size: 5
 	order_index: 110
 	rewards: [
-		{ item: "create:package_frogport", weight: 16.00f }
-		{ item: "create:packager", weight: 16.00f }
-		{ item: "create:precision_mechanism", weight: 16.00f }
-		{ item: "create:crushing_wheel", weight: 16.00f }
-		{ item: "create:factory_gauge", weight: 16.00f }
-		{ item: "create:stock_link", weight: 16.00f }
-		{ item: "create:stock_ticker", weight: 16.00f }
-		{ item: "create:sturdy_sheet", weight: 16.00f }
-		{ item: "create:railway_casing", weight: 16.00f }
-		{ item: "create:track", weight: 5.00f }
-		{ item: "create:track_station", weight: 5.00f }
-		{ item: "create:track_observer", weight: 5.00f }
-		{ item: "create:track_signal", weight: 5.00f }
-		{ item: "create:schedule", weight: 1.00f }
-		{ item: "create:brass_casing", weight: 1.00f }
+		{ item: "create:fluid_tank", weight: 6.00f }
+		{ item: "create:mechanical_bearing", weight: 6.00f }
+		{ item: "create:mechanical_piston", weight: 6.00f }
+		{ item: "create:super_glue", weight: 6.00f }
+		{ item: "create:gantry_carriage", weight: 6.00f }
+		{ item: "create:gantry_shaft", weight: 6.00f }
+		{ item: "create:hose_pulley", weight: 6.00f }
+		{ item: "create:item_drain", weight: 6.00f }
+		{ item: "create:rope_pulley", weight: 6.00f }
+		{ item: "create:spout", weight: 6.00f }
+		{ item: "create:contraption_controls", weight: 6.00f }
+		{ item: "create:portable_storage_interface", weight: 6.00f }
+		{ item: "create:redstone_contact", weight: 6.00f }
+		{ item: "create:brass_funnel", weight: 6.00f }
+		{ item: "create:threshold_switch", weight: 5.25f }
+		{ item: "create:brass_ingot", weight: 7.00f }
+		{ item: "create:package_frogport", weight: 5.25f }
+		{ item: "create:packager", weight: 5.25f }
+		{ item: "create:precision_mechanism", weight: 7.00f }
+		{ item: "create:mechanical_arm", weight: 5.25f }
+		{ item: "create:mechanical_crafter", weight: 6.00f }
+		{ item: "create:repackager", weight: 6.00f }
+		{ item: "create:schematic_and_quill", weight: 6.00f }
+		{ item: "create:schematicannon", weight: 6.00f }
 	]
 	title: "Wheel of Fortune — Create Workshops"
 	use_title: true

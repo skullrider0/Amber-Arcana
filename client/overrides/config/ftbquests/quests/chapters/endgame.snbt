@@ -36,6 +36,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "6F76EF0FE2F3D2BB"
+					table_id: 4125809826683960267L
+					title: "A World Worth Building Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -77,12 +85,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "4DB468C5FB41F3C2"
-					table_id: 4125809826683960267L
-					title: "A World Worth Building Tier 1 Roll"
+					id: "79A4161623B6D041"
+					table_id: 4573498009506683053L
+					title: "A World Worth Building Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -127,12 +138,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "3C0C384C574A9876"
-					table_id: 4573498009506683053L
-					title: "A World Worth Building Tier 2 Roll"
+					id: "206DD078F291BEA5"
+					table_id: 7249124095568325970L
+					title: "A World Worth Building Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -182,6 +196,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "3427F89C34BC2225"
+					table_id: 6545486884237050352L
+					title: "A World Worth Building Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

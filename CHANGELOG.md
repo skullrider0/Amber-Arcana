@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9-34 — Richer rewards for short progression chapters
+
+- Rebalance every compact chapter with at most 10 quests.
+- Give 100% of quests in those short chains a depth-appropriate mod-specific loot roll.
+- Expand tier pools to 12/16/20/24 weighted outcomes with 1/2/3/4 draws.
+- Expand short-chapter finales to five draws with deeper items kept in a low-weight jackpot band.
+- Add no generic vanilla filler and preserve existing quest IDs and reward-table IDs.
+
 ## 0.1.9-33 — Productive Bees reward progression
 
 - Rebuild all four Productive Bees tier tables around a much larger pool of mod-specific upgrades, machines, bee tools, and advanced materials.

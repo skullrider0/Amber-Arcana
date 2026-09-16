@@ -30,6 +30,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "2B662AA39B10E24B"
+					table_id: 6751736861749612462L
+					title: "Rituals and Witchcraft Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -70,12 +78,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "4E2A102EF1FBB153"
-					table_id: 6751736861749612462L
-					title: "Rituals and Witchcraft Tier 1 Roll"
+					id: "0BECD38EB7237074"
+					table_id: 8457706976814730598L
+					title: "Rituals and Witchcraft Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -119,12 +130,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "4D5B62DA7BCAD6BB"
+					id: "2F907AB15FFD0343"
 					table_id: 8457706976814730598L
 					title: "Rituals and Witchcraft Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -168,12 +182,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "4571106B669C2976"
-					table_id: 8457706976814730598L
-					title: "Rituals and Witchcraft Tier 2 Roll"
+					id: "7A3F0C6EE587DAB9"
+					table_id: 8750171586227325518L
+					title: "Rituals and Witchcraft Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -223,6 +240,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "3724A603012AB91A"
+					table_id: 8174079271273575001L
+					title: "Rituals and Witchcraft Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

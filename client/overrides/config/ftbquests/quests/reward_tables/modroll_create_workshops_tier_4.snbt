@@ -1,24 +1,33 @@
 {
-	icon: "create:package_frogport"
+	icon: "create:threshold_switch"
 	id: "41AFCEB478452D20"
-	loot_size: 3
+	loot_size: 4
 	order_index: 344
 	rewards: [
-		{ item: "create:package_frogport", weight: 16.00f }
-		{ item: "create:packager", weight: 16.00f }
-		{ item: "create:precision_mechanism", weight: 16.00f }
-		{ item: "create:crushing_wheel", weight: 16.00f }
-		{ item: "create:factory_gauge", weight: 16.00f }
-		{ item: "create:stock_link", weight: 16.00f }
-		{ item: "create:stock_ticker", weight: 16.00f }
-		{ item: "create:sturdy_sheet", weight: 16.00f }
-		{ item: "create:railway_casing", weight: 16.00f }
-		{ item: "create:track", weight: 5.00f }
-		{ item: "create:track_station", weight: 5.00f }
-		{ item: "create:track_observer", weight: 5.00f }
-		{ item: "create:track_signal", weight: 5.00f }
+		{ item: "create:threshold_switch", weight: 14.00f }
+		{ item: "create:brass_ingot", weight: 14.00f }
+		{ item: "create:package_frogport", weight: 14.00f }
+		{ item: "create:packager", weight: 14.00f }
+		{ item: "create:precision_mechanism", weight: 14.00f }
+		{ item: "create:mechanical_arm", weight: 14.00f }
+		{ item: "create:mechanical_crafter", weight: 14.00f }
+		{ item: "create:repackager", weight: 14.00f }
+		{ item: "create:schematic_and_quill", weight: 14.00f }
+		{ item: "create:schematicannon", weight: 14.00f }
+		{ item: "create:crushing_wheel", weight: 14.00f }
+		{ item: "create:factory_gauge", weight: 14.00f }
+		{ item: "create:stock_link", weight: 14.00f }
+		{ item: "create:stock_ticker", weight: 14.00f }
+		{ item: "create:sturdy_sheet", weight: 14.00f }
+		{ item: "create:railway_casing", weight: 14.00f }
+		{ item: "create:track", weight: 7.00f }
+		{ item: "create:track_station", weight: 7.00f }
+		{ item: "create:track_observer", weight: 7.00f }
+		{ item: "create:track_signal", weight: 7.00f }
 		{ item: "create:schedule", weight: 0.60f }
 		{ item: "create:brass_casing", weight: 0.60f }
+		{ item: "create:threshold_switch", weight: 5.00f }
+		{ count: 8, item: "create:brass_ingot", weight: 11.00f }
 	]
 	title: "Create Workshops — Tier 4 Roll"
 	use_title: true

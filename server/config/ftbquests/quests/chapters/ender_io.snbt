@@ -31,12 +31,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "32D4AE8668EA6FAA"
+					id: "1A0ECE2545F6DA95"
 					table_id: 5632215108216343851L
 					title: "Ender IO Connections Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -78,12 +81,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "6871527493616134"
-					table_id: 5632215108216343851L
-					title: "Ender IO Connections Tier 1 Roll"
+					id: "414938FF7D7D745B"
+					table_id: 148992126386032531L
+					title: "Ender IO Connections Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -134,6 +140,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "3E62C3ABAF50A3AB"
+					table_id: 4555311109604732959L
+					title: "Ender IO Connections Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

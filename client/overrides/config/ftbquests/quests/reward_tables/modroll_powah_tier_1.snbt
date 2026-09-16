@@ -4,12 +4,18 @@
 	loot_size: 1
 	order_index: 381
 	rewards: [
-		{ item: "powah:dielectric_casing", weight: 14.00f }
-		{ item: "powah:energizing_orb", weight: 14.00f }
-		{ item: "powah:thermo_generator_starter", weight: 14.00f }
-		{ item: "powah:energy_cell_starter", weight: 14.00f }
-		{ item: "powah:energy_cell_basic", weight: 14.00f }
-		{ item: "powah:reactor_starter", weight: 14.00f }
+		{ item: "powah:dielectric_casing", weight: 16.00f }
+		{ item: "powah:energizing_orb", weight: 16.00f }
+		{ item: "powah:thermo_generator_starter", weight: 16.00f }
+		{ item: "powah:energy_cell_starter", weight: 16.00f }
+		{ item: "powah:energy_cell_basic", weight: 16.00f }
+		{ item: "powah:reactor_starter", weight: 16.00f }
+		{ item: "powah:dielectric_casing", weight: 5.00f }
+		{ item: "powah:energizing_orb", weight: 5.00f }
+		{ item: "powah:thermo_generator_starter", weight: 5.00f }
+		{ item: "powah:energy_cell_starter", weight: 5.00f }
+		{ item: "powah:energy_cell_basic", weight: 5.00f }
+		{ item: "powah:reactor_starter", weight: 5.00f }
 	]
 	title: "Powah Energy — Tier 1 Roll"
 	use_title: true

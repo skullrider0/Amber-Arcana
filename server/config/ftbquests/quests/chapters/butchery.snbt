@@ -28,6 +28,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "34FE688BB590EF27"
+					table_id: 8159238488607377893L
+					title: "Butchery Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -69,12 +77,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "0F9EA37A84236127"
-					table_id: 8159238488607377893L
-					title: "Butchery Tier 1 Roll"
+					id: "6886EA3D4CD17EE7"
+					table_id: 7884837036022247062L
+					title: "Butchery Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -117,12 +128,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "1486CBCC9982E58C"
+					id: "533E21B6C6FCDB66"
 					table_id: 7884837036022247062L
 					title: "Butchery Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -165,12 +179,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "0C2C858A691B8E81"
-					table_id: 7884837036022247062L
-					title: "Butchery Tier 2 Roll"
+					id: "0675273FDA5C93D9"
+					table_id: 667461344241498180L
+					title: "Butchery Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -218,6 +235,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "29E7961079FC3AC2"
+					table_id: 5966810228284698770L
+					title: "Butchery Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

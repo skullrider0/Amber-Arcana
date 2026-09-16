@@ -30,6 +30,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "484559EFCD2F7E22"
+					table_id: 1618880879207947504L
+					title: "Create Workshops Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -70,12 +78,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "2695F9B7034F0EB9"
-					table_id: 1618880879207947504L
-					title: "Create Workshops Tier 1 Roll"
+					id: "692820D35467E85B"
+					table_id: 5810496629928189331L
+					title: "Create Workshops Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -120,12 +131,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "4011223250D2CA4B"
+					id: "76309D003C644D87"
 					table_id: 5810496629928189331L
 					title: "Create Workshops Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -170,12 +184,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "720B3D7C25DF11D8"
-					table_id: 5810496629928189331L
-					title: "Create Workshops Tier 2 Roll"
+					id: "3C13E055E9B2B415"
+					table_id: 6565388913077191251L
+					title: "Create Workshops Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -225,6 +242,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "6158178169D905B7"
+					table_id: 4733229007896915232L
+					title: "Create Workshops Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

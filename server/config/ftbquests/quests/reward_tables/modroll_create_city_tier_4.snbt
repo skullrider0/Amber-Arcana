@@ -1,22 +1,33 @@
 {
-	icon: "create:speedometer"
+	icon: "create:gearshift"
 	id: "1B8CF435029ECCDC"
-	loot_size: 3
+	loot_size: 4
 	order_index: 336
 	rewards: [
-		{ item: "create:speedometer", weight: 16.00f }
-		{ item: "create:stressometer", weight: 16.00f }
-		{ item: "create:water_wheel", weight: 16.00f }
-		{ item: "create:basin", weight: 5.00f }
-		{ item: "create:encased_fan", weight: 5.00f }
+		{ item: "create:gearshift", weight: 14.00f }
+		{ item: "create:mechanical_press", weight: 14.00f }
+		{ item: "create:speedometer", weight: 14.00f }
+		{ item: "create:stressometer", weight: 14.00f }
+		{ item: "create:water_wheel", weight: 14.00f }
+		{ item: "create:basin", weight: 14.00f }
+		{ item: "create:encased_fan", weight: 14.00f }
 		{ item: "create:mechanical_mixer", weight: 0.60f }
 		{ item: "create:millstone", weight: 0.60f }
+		{ item: "create:belt_connector", weight: 7.00f }
+		{ item: "create:depot", weight: 7.00f }
+		{ count: 8, item: "create:gearshift", weight: 11.00f }
+		{ item: "create:mechanical_press", weight: 5.00f }
+		{ item: "create:speedometer", weight: 5.00f }
+		{ item: "create:stressometer", weight: 5.00f }
+		{ item: "create:water_wheel", weight: 5.00f }
+		{ item: "create:basin", weight: 5.00f }
+		{ item: "create:encased_fan", weight: 5.00f }
+		{ item: "create:mechanical_mixer", weight: 5.00f }
+		{ item: "create:millstone", weight: 5.00f }
 		{ item: "create:belt_connector", weight: 5.00f }
 		{ item: "create:depot", weight: 5.00f }
-		{ item: "create:basin", weight: 5.00f }
-		{ item: "create:encased_fan", weight: 5.00f }
-		{ item: "create:mechanical_mixer", weight: 0.60f }
-		{ item: "create:millstone", weight: 0.60f }
+		{ count: 16, item: "create:gearshift", weight: 9.65f }
+		{ count: 2, item: "create:mechanical_press", weight: 4.45f }
 	]
 	title: "The Mechanical City — Tier 4 Roll"
 	use_title: true

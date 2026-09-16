@@ -28,6 +28,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "503DEDA15733652B"
+					table_id: 5644335580356364118L
+					title: "Alex Utilities Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -70,12 +78,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "1A54E46D36C14B32"
-					table_id: 5644335580356364118L
-					title: "Alex Utilities Tier 1 Roll"
+					id: "5672E45D6326DA6B"
+					table_id: 5029940395661334725L
+					title: "Alex Utilities Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -118,12 +129,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "4787A9CA53988CF8"
+					id: "4D6E2276240A814B"
 					table_id: 5029940395661334725L
 					title: "Alex Utilities Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -165,12 +179,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "642AFE070ED5D027"
-					table_id: 5029940395661334725L
-					title: "Alex Utilities Tier 2 Roll"
+					id: "4584B34FA804EDD6"
+					table_id: 3251463663773336572L
+					title: "Alex Utilities Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -219,6 +236,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "61C0B80DE84E209B"
+					table_id: 5667537324514802654L
+					title: "Alex Utilities Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

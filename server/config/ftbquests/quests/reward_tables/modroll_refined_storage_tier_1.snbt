@@ -4,9 +4,18 @@
 	loot_size: 1
 	order_index: 389
 	rewards: [
-		{ item: "refinedstorage:controller", weight: 9.00f }
-		{ item: "refinedstorage:disk_drive", weight: 9.00f }
-		{ item: "refinedstorage:grid", weight: 9.00f }
+		{ item: "refinedstorage:controller", weight: 16.00f }
+		{ item: "refinedstorage:disk_drive", weight: 16.00f }
+		{ item: "refinedstorage:grid", weight: 16.00f }
+		{ item: "refinedstorage:controller", weight: 5.00f }
+		{ item: "refinedstorage:disk_drive", weight: 5.00f }
+		{ item: "refinedstorage:grid", weight: 5.00f }
+		{ item: "refinedstorage:controller", weight: 4.45f }
+		{ item: "refinedstorage:disk_drive", weight: 4.45f }
+		{ item: "refinedstorage:grid", weight: 4.45f }
+		{ item: "refinedstorage:controller", weight: 3.90f }
+		{ item: "refinedstorage:disk_drive", weight: 3.90f }
+		{ item: "refinedstorage:grid", weight: 3.90f }
 	]
 	title: "Refined Storage — Tier 1 Roll"
 	use_title: true

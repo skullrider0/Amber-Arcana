@@ -1,24 +1,33 @@
 {
-	icon: "refinedstorage:disk_drive"
+	icon: "refinedstorage:importer"
 	id: "1C5BBD65CA9934DE"
-	loot_size: 3
+	loot_size: 4
 	order_index: 392
 	rewards: [
+		{ item: "refinedstorage:importer", weight: 14.00f }
+		{ item: "refinedstorage:controller", weight: 14.00f }
 		{ item: "refinedstorage:disk_drive", weight: 0.60f }
 		{ item: "refinedstorage:grid", weight: 0.60f }
-		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
-		{ item: "refinedstorage:exporter", weight: 5.00f }
-		{ item: "refinedstorage:importer", weight: 5.00f }
-		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
-		{ item: "refinedstorage:controller", weight: 5.00f }
-		{ item: "refinedstorage:disk_drive", weight: 0.60f }
-		{ item: "refinedstorage:grid", weight: 0.60f }
-		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
-		{ item: "refinedstorage:exporter", weight: 5.00f }
+		{ item: "refinedstorage:crafting_grid", weight: 14.00f }
+		{ item: "refinedstorage:exporter", weight: 14.00f }
 		{ item: "refinedstorage:importer", weight: 5.00f }
 		{ item: "refinedstorage:controller", weight: 5.00f }
-		{ item: "refinedstorage:disk_drive", weight: 0.60f }
-		{ item: "refinedstorage:grid", weight: 0.60f }
+		{ item: "refinedstorage:disk_drive", weight: 5.00f }
+		{ item: "refinedstorage:grid", weight: 5.00f }
+		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
+		{ item: "refinedstorage:exporter", weight: 5.00f }
+		{ count: 2, item: "refinedstorage:importer", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:controller", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:disk_drive", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:grid", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:crafting_grid", weight: 4.45f }
+		{ count: 2, item: "refinedstorage:exporter", weight: 4.45f }
+		{ count: 3, item: "refinedstorage:importer", weight: 3.90f }
+		{ count: 3, item: "refinedstorage:controller", weight: 3.90f }
+		{ count: 3, item: "refinedstorage:disk_drive", weight: 3.90f }
+		{ count: 3, item: "refinedstorage:grid", weight: 3.90f }
+		{ count: 3, item: "refinedstorage:crafting_grid", weight: 3.90f }
+		{ count: 3, item: "refinedstorage:exporter", weight: 3.90f }
 	]
 	title: "Refined Storage — Tier 4 Roll"
 	use_title: true

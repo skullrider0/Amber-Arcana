@@ -1,22 +1,33 @@
 {
-	icon: "mekanism:enrichment_chamber"
+	icon: "mekanism:purification_chamber"
 	id: "024C5EDEC32A9BE3"
-	loot_size: 3
+	loot_size: 4
 	order_index: 380
 	rewards: [
-		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
+		{ item: "mekanism:purification_chamber", weight: 14.00f }
+		{ item: "mekanism:ultimate_energy_cube", weight: 14.00f }
+		{ item: "mekanism:enrichment_chamber", weight: 14.00f }
 		{ item: "mekanism:metallurgic_infuser", weight: 0.60f }
-		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
-		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
+		{ item: "mekanism:mekasuit_helmet", weight: 14.00f }
 		{ item: "mekanism:purification_chamber", weight: 5.00f }
-		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
-		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
-		{ item: "mekanism:metallurgic_infuser", weight: 0.60f }
-		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
 		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
-		{ item: "mekanism:purification_chamber", weight: 5.00f }
 		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
-		{ item: "mekanism:metallurgic_infuser", weight: 0.60f }
+		{ item: "mekanism:metallurgic_infuser", weight: 5.00f }
+		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
+		{ count: 2, item: "mekanism:purification_chamber", weight: 4.45f }
+		{ count: 2, item: "mekanism:ultimate_energy_cube", weight: 4.45f }
+		{ count: 2, item: "mekanism:enrichment_chamber", weight: 4.45f }
+		{ count: 2, item: "mekanism:metallurgic_infuser", weight: 4.45f }
+		{ count: 2, item: "mekanism:mekasuit_helmet", weight: 4.45f }
+		{ count: 3, item: "mekanism:purification_chamber", weight: 3.90f }
+		{ count: 3, item: "mekanism:ultimate_energy_cube", weight: 3.90f }
+		{ count: 3, item: "mekanism:enrichment_chamber", weight: 3.90f }
+		{ count: 3, item: "mekanism:metallurgic_infuser", weight: 3.90f }
+		{ count: 3, item: "mekanism:mekasuit_helmet", weight: 3.90f }
+		{ count: 3, item: "mekanism:purification_chamber", weight: 3.35f }
+		{ count: 3, item: "mekanism:ultimate_energy_cube", weight: 3.35f }
+		{ count: 3, item: "mekanism:enrichment_chamber", weight: 3.35f }
+		{ count: 3, item: "mekanism:metallurgic_infuser", weight: 3.35f }
 	]
 	title: "Mekanism Industry — Tier 4 Roll"
 	use_title: true

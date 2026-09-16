@@ -28,6 +28,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "23D6B3DA0B04B741"
+					table_id: 8867598836112496240L
+					title: "Alex Wildlife Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -69,12 +77,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "3122643637C4CF30"
-					table_id: 8867598836112496240L
-					title: "Alex Wildlife Tier 1 Roll"
+					id: "291B3971D9263B1A"
+					table_id: 2425209919904331885L
+					title: "Alex Wildlife Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -117,12 +128,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "0CDE4007A21D8AF9"
+					id: "53FD72629A0D5208"
 					table_id: 2425209919904331885L
 					title: "Alex Wildlife Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -165,12 +179,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "358D981829C259B5"
-					table_id: 2425209919904331885L
-					title: "Alex Wildlife Tier 2 Roll"
+					id: "3AF9419E1E033428"
+					table_id: 9058127679987895700L
+					title: "Alex Wildlife Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -218,6 +235,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "321FFC75B09ADCD1"
+					table_id: 2191938023281736832L
+					title: "Alex Wildlife Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

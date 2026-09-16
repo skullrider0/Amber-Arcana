@@ -30,6 +30,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "4EAD32764C51789B"
+					table_id: 4776605992129075617L
+					title: "Mekanism Industry Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -78,12 +86,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "7E8A9A1921BDCA61"
-					table_id: 4776605992129075617L
-					title: "Mekanism Industry Tier 1 Roll"
+					id: "4D565557F9BD63AA"
+					table_id: 2059557368985092533L
+					title: "Mekanism Industry Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -128,12 +139,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "27E9C03AAC5F6767"
-					table_id: 2059557368985092533L
-					title: "Mekanism Industry Tier 2 Roll"
+					id: "2E9621B23BE0CC59"
+					table_id: 4136371881537435336L
+					title: "Mekanism Industry Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -184,6 +198,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "297BB209C89F85FD"
+					table_id: 165611597155965923L
+					title: "Mekanism Industry Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

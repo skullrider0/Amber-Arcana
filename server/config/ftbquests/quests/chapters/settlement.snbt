@@ -30,6 +30,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "2EB43F6916243E2B"
+					table_id: 2102205047588045513L
+					title: "Claims and Colonies Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -71,12 +79,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "6BD2BC222AD06500"
-					table_id: 2102205047588045513L
-					title: "Claims and Colonies Tier 1 Roll"
+					id: "58726A2298A6BC8A"
+					table_id: 7873154793243079245L
+					title: "Claims and Colonies Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -120,12 +131,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "549C95D73D131112"
+					id: "35C07E55DF7F4F47"
 					table_id: 7873154793243079245L
 					title: "Claims and Colonies Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -170,12 +184,15 @@
 					xp: 250
 				}
 			
+				
+			
+
 				{
-					id: "74A33F413B3EA315"
-					table_id: 7873154793243079245L
-					title: "Claims and Colonies Tier 2 Roll"
+					id: "01AC7C26CEF801F9"
+					table_id: 6058436575497866350L
+					title: "Claims and Colonies Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -226,6 +243,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "1375E3DBD329BE14"
+					table_id: 467443591320423481L
+					title: "Claims and Colonies Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

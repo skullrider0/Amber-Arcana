@@ -28,6 +28,14 @@
 					type: "xp"
 					xp: 100
 				}
+			
+
+				{
+					id: "3BADC37CDE97D94C"
+					table_id: 5609730175655515100L
+					title: "Aquarium Tier 1 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
@@ -70,12 +78,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "3A4C31B032C9E248"
-					table_id: 5609730175655515100L
-					title: "Aquarium Tier 1 Roll"
+					id: "0FD2EDD0BCBDCCB2"
+					table_id: 4749007782323878427L
+					title: "Aquarium Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -125,12 +136,15 @@
 					xp: 200
 				}
 			
+				
+			
+
 				{
-					id: "7AC2ABD86B78F79F"
-					table_id: 4749007782323878427L
-					title: "Aquarium Tier 2 Roll"
+					id: "1899A00FA6F4C432"
+					table_id: 169270084993063530L
+					title: "Aquarium Tier 3 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -179,6 +193,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "1B4F4DF185D9F3A3"
+					table_id: 3252730487586429544L
+					title: "Aquarium Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{

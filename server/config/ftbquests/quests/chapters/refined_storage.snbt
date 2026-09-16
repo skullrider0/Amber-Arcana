@@ -31,12 +31,15 @@
 					xp: 100
 				}
 			
+				
+			
+
 				{
-					id: "07F1A3B71074EEB8"
+					id: "294FBAE91B22368D"
 					table_id: 5360781829601029293L
 					title: "Refined Storage Tier 1 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -92,12 +95,15 @@
 					xp: 150
 				}
 			
+				
+			
+
 				{
-					id: "5DF0CB0CD075F643"
-					table_id: 5360781829601029293L
-					title: "Refined Storage Tier 1 Roll"
+					id: "416C1FC4BFB02CBB"
+					table_id: 8369957222493326091L
+					title: "Refined Storage Tier 2 Roll"
 					type: "loot"
-				}
+				
 			]
 			tasks: [
 				{
@@ -155,6 +161,14 @@
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
+			
+
+				{
+					id: "75904A88C15CE57E"
+					table_id: 2043435100831036638L
+					title: "Refined Storage Tier 4 Roll"
+					type: "loot"
+				
 			]
 			tasks: [
 				{
