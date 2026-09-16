@@ -21,6 +21,10 @@ python3 "$repo_dir/scripts/hotfix-bee-cage-labels-0.1.9-31.py"
 # as genuinely rare jackpots even though high-tier rolls return multiple items.
 python3 "$repo_dir/scripts/run-hotfix-mod-tier-loot-0.1.9-32.py"
 
+# 0.1.9-33 makes Productive Bees rewards scale more strongly with progression:
+# larger mod-specific pools, more draws at higher tiers, and rare Omega jackpots.
+python3 "$repo_dir/scripts/hotfix-productive-bees-rewards-0.1.9-33.py"
+
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
 "$repo_dir/scripts/generate-recipe-compat.sh"
