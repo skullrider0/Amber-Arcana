@@ -11,8 +11,8 @@
 			id: "43F76D74D0E60C18",
 			subtitle: "Requires Nether expedition trophy; then confirm the milestone."
 			title: "Nether expedition",
-			x: -14.0d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Build a Nether portal, prepare food and a marked return route, and establish a safe foothold on the other side."
@@ -30,14 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "63A0F4C2D44A292B"
 					table_id: 2411341189262328692L
 					title: "Beyond the Overworld Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -53,40 +51,86 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["43F76D74D0E60C18"]
+			description: [
+				"Reach the dimension or portal stage represented by this milestone and establish a safe arrival point."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:blaze_rod"
+			id: "65ECC54FE5DC185A"
+			rewards: [
+				{
+					id: "73BFA415CF19ED5A"
+					table_id: 2411341189262328692L
+					title: "Beyond the Overworld Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "038FE9CFE36D9C6D"
+					title: "Confirm: Enter: Nether expedition"
+					type: "checkmark"
+				}
+			]
+			title: "Enter: Nether expedition"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65ECC54FE5DC185A"]
+			description: [
+				"Create a small operating foothold with supplies, storage, and a reliable route home."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:blaze_rod"
+			id: "547A240BCD80FA1B"
+			rewards: [
+				{
+					id: "42D5084CD6EADAC1"
+					table_id: 2411341189262328692L
+					title: "Beyond the Overworld Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2F3C5EF06795DF05"
+					title: "Confirm: Establish: Nether expedition"
+					type: "checkmark"
+				}
+			]
+			title: "Establish: Nether expedition"
+			x: -8.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:echo_shard"
 			id: "36F1DC4DCF854967",
 			subtitle: "Requires Deep-dark expedition proof; then confirm the milestone."
 			title: "The Otherside",
-			x: -7.0d,
-			y: 0.0d,
+			x: -4.0d
+			y: 0.0d
 			description: [
 				"Use Deeper and Darker progression to reach the Otherside. Establish a marked return route before carrying rare materials home.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 4
-					id: "B7B151F69CABA710"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "D70478B2EBCAC258"
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "237DAE261BD0BC15"
-					table_id: 6198371505029133212L
-					title: "Beyond the Overworld Tier 2 Roll"
+					table_id: 2411341189262328692L
+					title: "Beyond the Overworld Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -102,17 +146,71 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"43F76D74D0E60C18"
+			dependencies: ["547A240BCD80FA1B"]
+		}
+		{
+			dependencies: ["36F1DC4DCF854967"]
+			description: [
+				"Reach the dimension or portal stage represented by this milestone and establish a safe arrival point."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:echo_shard"
+			id: "7D65B23001EAD562"
+			rewards: [
+				{
+					id: "72A4F95B6085C07E"
+					table_id: 6198371505029133212L
+					title: "Beyond the Overworld Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6923636021AC976F"
+					title: "Confirm: Enter: The Otherside"
+					type: "checkmark"
+				}
+			]
+			title: "Enter: The Otherside"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D65B23001EAD562"]
+			description: [
+				"Create a small operating foothold with supplies, storage, and a reliable route home."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:echo_shard"
+			id: "522526C5B0EA2229"
+			rewards: [
+				{
+					id: "4D35F2C19F21C783"
+					table_id: 6198371505029133212L
+					title: "Beyond the Overworld Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "407D878E73876063"
+					title: "Confirm: Establish: The Otherside"
+					type: "checkmark"
+				}
+			]
+			title: "Establish: The Otherside"
+			x: 4.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:diamond"
 			id: "7A6715D16FCD5049",
 			subtitle: "Requires Blue Skies expedition supplies; then confirm the milestone."
 			title: "Blue Skies expedition",
-			x: 0.0d,
-			y: 0.0d,
+			x: 8.0d
+			y: 0.0d
 			description: [
 				"Enter a Blue Skies dimension and progress using its own materials and equipment rules.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -129,16 +227,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "2F7B4E619E30CAF0"
 					table_id: 6198371505029133212L
 					title: "Beyond the Overworld Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -155,17 +249,71 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"36F1DC4DCF854967"
+			dependencies: ["522526C5B0EA2229"]
+		}
+		{
+			dependencies: ["7A6715D16FCD5049"]
+			description: [
+				"Reach the dimension or portal stage represented by this milestone and establish a safe arrival point."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:diamond"
+			id: "221E1D8E1A66BB41"
+			rewards: [
+				{
+					id: "7296C5CFC71CD758"
+					table_id: 6198371505029133212L
+					title: "Beyond the Overworld Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "03F7D998690FBD2A"
+					title: "Confirm: Enter: Blue Skies expedition"
+					type: "checkmark"
+				}
+			]
+			title: "Enter: Blue Skies expedition"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["221E1D8E1A66BB41"]
+			description: [
+				"Create a small operating foothold with supplies, storage, and a reliable route home."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:diamond"
+			id: "5BC44F175B0DC81F"
+			rewards: [
+				{
+					id: "26E3A5ED861EB313"
+					table_id: 5932388669675509111L
+					title: "Beyond the Overworld Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "402FBA2871B60277"
+					title: "Confirm: Establish: Blue Skies expedition"
+					type: "checkmark"
+				}
+			]
+			title: "Establish: Blue Skies expedition"
+			x: 16.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:honeycomb"
 			id: "645820C5A20557B2",
 			subtitle: "Requires Bumblezone resources; then confirm the milestone."
 			title: "The Bumblezone",
-			x: 7.0d,
-			y: 0.0d,
+			x: 16.0d
+			y: 8.0d
 			description: [
 				"Explore the Bumblezone, learn how its inhabitants react, and bring back useful resources.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -182,16 +330,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "798F620CA0020F8F"
 					table_id: 5932388669675509111L
 					title: "Beyond the Overworld Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -208,48 +352,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"7A6715D16FCD5049"
+			dependencies: ["5BC44F175B0DC81F"]
+		}
+		{
+			dependencies: ["645820C5A20557B2"]
+			description: [
+				"Reach the dimension or portal stage represented by this milestone and establish a safe arrival point."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:honeycomb"
+			id: "6E3D84AAF016CE02"
+			rewards: [
+				{
+					id: "440A595A4704BFBC"
+					table_id: 5932388669675509111L
+					title: "Beyond the Overworld Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "37AF45B09EC4A9AF"
+					title: "Confirm: Enter: The Bumblezone"
+					type: "checkmark"
+				}
+			]
+			title: "Enter: The Bumblezone"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6E3D84AAF016CE02"]
+			description: [
+				"Create a small operating foothold with supplies, storage, and a reliable route home."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:honeycomb"
+			id: "7D36E1F5C1716927"
+			rewards: [
+				{
+					id: "60E41E708CFAD3D7"
+					table_id: 5932388669675509111L
+					title: "Beyond the Overworld Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "35828403F03F985E"
+					title: "Confirm: Establish: The Bumblezone"
+					type: "checkmark"
+				}
+			]
+			title: "Establish: The Bumblezone"
+			x: 8.0d
+			y: 8.0d
+		}
 		{
 			icon: "minecraft:netherite_ingot"
 			id: "703E1B74FC15549F",
 			subtitle: "Requires Cataclysm-ready material; then confirm the milestone."
 			title: "Cataclysm expeditions",
-			x: 14.0d,
-			y: 0.0d,
+			x: 4.0d
+			y: 8.0d
 			description: [
 				"Locate and challenge a structure from L_Ender's Cataclysm. Prepare an escape route and test your equipment on lesser enemies before confronting its boss.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 2
-					id: "531D024B22F5BC51"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "CB4AA3EBE16D5795"
 					type: "xp"
 					xp: 450
 				}
-			
-				{
-					id: "6A8B691DC452E409"
-					table_id: 261242414033698481L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "5168A42BDC6EC397"
 					table_id: 2948667954704824210L
 					title: "Beyond the Overworld Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -265,9 +448,97 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"645820C5A20557B2"
+			dependencies: ["7D36E1F5C1716927"]
+		}
+		{
+			dependencies: ["703E1B74FC15549F"]
+			description: [
+				"Reach the dimension or portal stage represented by this milestone and establish a safe arrival point."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:netherite_ingot"
+			id: "71C8B11AABFFB59E"
+			rewards: [
+				{
+					id: "3745940C3B4758D5"
+					table_id: 2948667954704824210L
+					title: "Beyond the Overworld Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "036AA25585E00116"
+					title: "Confirm: Enter: Cataclysm expeditions"
+					type: "checkmark"
+				}
+			]
+			title: "Enter: Cataclysm expeditions"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["71C8B11AABFFB59E"]
+			description: [
+				"Create a small operating foothold with supplies, storage, and a reliable route home."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:netherite_ingot"
+			id: "00211AF169786419"
+			rewards: [
+				{
+					id: "07E8E5C2105B045F"
+					table_id: 2948667954704824210L
+					title: "Beyond the Overworld Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "71F1E45F9C0F4AB6"
+					title: "Confirm: Establish: Cataclysm expeditions"
+					type: "checkmark"
+				}
+			]
+			title: "Establish: Cataclysm expeditions"
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00211AF169786419"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:blaze_rod"
+			id: "33105A0888538631"
+			rewards: [
+				{
+					id: "1D971E564D05AEBB"
+					table_id: 2948667954704824210L
+					title: "Beyond the Overworld Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "6A8B691DC452E409"
+					table_id: 261242414033698481L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "09B348CFCA534FBD"
+					title: "Confirm chapter mastery: Beyond the Overworld"
+					type: "checkmark"
+				}
+			]
+			title: "Beyond the Overworld Mastery"
+			x: -8.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

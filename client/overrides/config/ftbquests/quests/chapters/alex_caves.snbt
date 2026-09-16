@@ -28,14 +28,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "075C239C4D89127E"
 					table_id: 4954719110179601135L
 					title: "Alex Caves Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -53,11 +51,39 @@
 			]
 			subtitle: "Requires Expedition spyglass; then confirm the milestone."
 			title: "An expedition begins"
-			x: -17.5d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7461A4C60A86DB74"]
+			description: [
+				"Travel through the cave content tied to this milestone and identify the hazards, resources, and landmarks around it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:spyglass"
+			id: "4845C0DD3345D8FF"
+			rewards: [
+				{
+					id: "24CE1AE38E372F5B"
+					table_id: 4954719110179601135L
+					title: "Alex Caves Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5715E3F1EF7E130E"
+					title: "Confirm: Explore: Obtain: Expedition spyglass"
+					type: "checkmark"
+				}
+			]
+			title: "Explore: Obtain: Expedition spyglass"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4845C0DD3345D8FF"]
 			description: [
 				"Build an Aquatic Ambitions processing setup and investigate an Alex's Caves aquatic area. Keep expedition equipment distinct from the public aquarium display."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -66,26 +92,16 @@
 			id: "7FE48558E795564B"
 			rewards: [
 				{
-					count: 4
-					id: "78BFF98E477A8F33"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "7D3733E0FA2146D6"
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "48A5EF3E0940D7E7"
 					table_id: 4954719110179601135L
 					title: "Alex Caves Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -111,11 +127,39 @@
 			]
 			subtitle: "Requires Aquarium water supply + Aquarium glass; then confirm the milestone."
 			title: "The deep aquarium"
-			x: -10.5d
+			x: -8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7FE48558E795564B"]
+			description: [
+				"Travel through the cave content tied to this milestone and identify the hazards, resources, and landmarks around it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:water_bucket"
+			id: "675EC9BC4923A7D3"
+			rewards: [
+				{
+					id: "1ED378AA64F9036A"
+					table_id: 9086790777740076044L
+					title: "Alex Caves Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3D6A3B5C3E5F1D95"
+					title: "Confirm: Explore: Obtain: Aquarium water supply"
+					type: "checkmark"
+				}
+			]
+			title: "Explore: Obtain: Aquarium water supply"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["675EC9BC4923A7D3"]
 			description: [
 				"Use a recipe supplied by Create: Alex's Caves Compat. Check the recipe category in JEI and automate a small batch without bypassing the expedition that provides the first ingredients."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -134,16 +178,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "3C150AD7979481C7"
 					table_id: 9086790777740076044L
 					title: "Alex Caves Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -161,11 +201,39 @@
 			]
 			subtitle: "Requires Cave transport cart; then confirm the milestone."
 			title: "Cave resources in motion"
-			x: -3.5d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["75BB6ABE317E1135"]
+			description: [
+				"Travel through the cave content tied to this milestone and identify the hazards, resources, and landmarks around it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:minecart"
+			id: "7A52824D32560BE2"
+			rewards: [
+				{
+					id: "6A49EBE07BB86133"
+					table_id: 9086790777740076044L
+					title: "Alex Caves Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "55BEDE5B1ADE2329"
+					title: "Confirm: Explore: Obtain: Cave transport cart"
+					type: "checkmark"
+				}
+			]
+			title: "Explore: Obtain: Cave transport cart"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7A52824D32560BE2"]
 			description: [
 				"Obtain a Relics item from an Alex's Mobs or Alex's Caves compatibility addon. Equip it in the correct Curios slot and inspect its upgrade information."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -184,16 +252,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "55D30E80310996EF"
 					table_id: 691650327864054008L
 					title: "Alex Caves Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -211,11 +275,39 @@
 			]
 			subtitle: "Requires Relic excavation brush; then confirm the milestone."
 			title: "A relic with a history"
-			x: 3.5d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7B9BA95C7DE84FD2"]
+			description: [
+				"Travel through the cave content tied to this milestone and identify the hazards, resources, and landmarks around it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:brush"
+			id: "4C063B92DA40CE7D"
+			rewards: [
+				{
+					id: "4A0311976AB697FA"
+					table_id: 691650327864054008L
+					title: "Alex Caves Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "756FC01626A7B0F2"
+					title: "Confirm: Explore: Obtain: Relic excavation brush"
+					type: "checkmark"
+				}
+			]
+			title: "Explore: Obtain: Relic excavation brush"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4C063B92DA40CE7D"]
 			description: [
 				"Craft gear or learn a spell from Alex's Caves: Spellbooks. Test it in a controlled combat area and compare it with your Iron's Spells equipment."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -224,26 +316,16 @@
 			id: "7A3C820F73672F99"
 			rewards: [
 				{
-					count: 4
-					id: "A119F3B1D64B934C"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "F0CEED86E3D7E04D"
 					type: "xp"
 					xp: 300
 				}
-			
-				
-			
-
 				{
 					id: "25B70F5E2B3D5FAA"
 					table_id: 691650327864054008L
 					title: "Alex Caves Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -262,11 +344,39 @@
 			]
 			subtitle: "Requires Arcane cave crystals; then confirm the milestone."
 			title: "Spells from the depths"
-			x: 10.5d
+			x: 16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7A3C820F73672F99"]
+			description: [
+				"Travel through the cave content tied to this milestone and identify the hazards, resources, and landmarks around it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:amethyst_shard"
+			id: "54EB91A484425C2F"
+			rewards: [
+				{
+					id: "7BD4B832731EBED5"
+					table_id: 8615607550808823151L
+					title: "Alex Caves Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "65807AB7B9C55E12"
+					title: "Confirm: Explore: Obtain: Arcane cave crystals"
+					type: "checkmark"
+				}
+			]
+			title: "Explore: Obtain: Arcane cave crystals"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["54EB91A484425C2F"]
 			description: [
 				"Use Create Wizardry to automate an Iron's Spells ingredient. Finish an expedition with that supply line supporting your spellcasting."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -275,31 +385,16 @@
 			id: "784A85F81BAE7DB3"
 			rewards: [
 				{
-					count: 2
-					id: "1E3D57D91FC9B3D8"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "F636F691B8660CFA"
 					type: "xp"
 					xp: 500
 				}
-			
-				{
-					id: "17F1F4B0C5A660C9"
-					table_id: 5456128582134330173L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "60A327817F6D8AAA"
 					table_id: 8615607550808823151L
 					title: "Alex Caves Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -318,8 +413,70 @@
 			]
 			subtitle: "Requires Automation supplies; then confirm the milestone."
 			title: "The arcane workshop"
-			x: 17.5d
-			y: 0.0d
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["784A85F81BAE7DB3"]
+			description: [
+				"Travel through the cave content tied to this milestone and identify the hazards, resources, and landmarks around it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:redstone"
+			id: "078DC555B456D6C9"
+			rewards: [
+				{
+					id: "177CE5E138D9B551"
+					table_id: 8615607550808823151L
+					title: "Alex Caves Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "73B8D7EDD07A990A"
+					title: "Confirm: Explore: Obtain: Automation supplies"
+					type: "checkmark"
+				}
+			]
+			title: "Explore: Obtain: Automation supplies"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["078DC555B456D6C9"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:spyglass"
+			id: "258EB15B5D2B91BB"
+			rewards: [
+				{
+					id: "42C256C663D8415B"
+					table_id: 8615607550808823151L
+					title: "Alex Caves Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "17F1F4B0C5A660C9"
+					table_id: 5456128582134330173L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "09176AF92CD3E2B0"
+					title: "Confirm chapter mastery: Alex Caves"
+					type: "checkmark"
+				}
+			]
+			title: "Alex Caves Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	]
 	title: "Caves, Relics and Spells"

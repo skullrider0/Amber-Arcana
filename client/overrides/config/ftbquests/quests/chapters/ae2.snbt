@@ -28,16 +28,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-				
-			
-
 				{
 					id: "7061D3315F75EAF8"
 					table_id: 1071851966108093733L
 					title: "Ae2 Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -56,11 +52,95 @@
 			]
 			subtitle: "Requires ME Controller; completion is detected automatically."
 			title: "ME foundations"
-			x: -7.0d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4FED0F46376BBAFB"]
+			description: [
+				"Bring the ME components from this milestone online as part of a powered network and verify terminals can see the intended storage."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:controller"
+			id: "282F54C12EE8740D"
+			rewards: [
+				{
+					id: "06090CC11CDA7152"
+					table_id: 1071851966108093733L
+					title: "Ae2 Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "212C22CC80B41593"
+					title: "Confirm: Network: Obtain: ME Controller"
+					type: "checkmark"
+				}
+			]
+			title: "Network: Obtain: ME Controller"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["282F54C12EE8740D"]
+			description: [
+				"Route the network cleanly with channels, dense cable, P2P, or subnetworks as appropriate for the installed AE2 setup."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:controller"
+			id: "202AB678B4860D69"
+			rewards: [
+				{
+					id: "6B306C3B399EEE4F"
+					table_id: 1071851966108093733L
+					title: "Ae2 Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "42D7D126FF5280D4"
+					title: "Confirm: Channel: Obtain: ME Controller"
+					type: "checkmark"
+				}
+			]
+			title: "Channel: Obtain: ME Controller"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["202AB678B4860D69"]
+			description: [
+				"Teach AE2 a useful recipe and successfully request it through the network rather than crafting it by hand."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:controller"
+			id: "7FC05BEDC5D8D1FB"
+			rewards: [
+				{
+					id: "32694B94A53140AC"
+					table_id: 2866491850263192602L
+					title: "Ae2 Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "268A509291A98DE3"
+					title: "Confirm: Autocraft: Obtain: ME Controller"
+					type: "checkmark"
+				}
+			]
+			title: "Autocraft: Obtain: ME Controller"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7FC05BEDC5D8D1FB"]
 			description: [
 				"Build an autocrafting system and learn how your chosen AE2 network handles channels, power, and subnetworks."
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -79,16 +159,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "691C3BF05CEAF42A"
 					table_id: 2866491850263192602L
 					title: "Ae2 Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -120,6 +196,90 @@
 		{
 			dependencies: ["2B5CC0DDAF0E909D"]
 			description: [
+				"Bring the ME components from this milestone online as part of a powered network and verify terminals can see the intended storage."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:pattern_provider"
+			id: "1969A1CDFECB4BFD"
+			rewards: [
+				{
+					id: "5F758CA112F147B4"
+					table_id: 2866491850263192602L
+					title: "Ae2 Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "34D1903308ED1418"
+					title: "Confirm: Network: Obtain: Pattern Provider"
+					type: "checkmark"
+				}
+			]
+			title: "Network: Obtain: Pattern Provider"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1969A1CDFECB4BFD"]
+			description: [
+				"Route the network cleanly with channels, dense cable, P2P, or subnetworks as appropriate for the installed AE2 setup."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:pattern_provider"
+			id: "1AC5F82BEC89B53C"
+			rewards: [
+				{
+					id: "7732196B319427BA"
+					table_id: 434412329485966300L
+					title: "Ae2 Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "749485118FCE7080"
+					title: "Confirm: Channel: Obtain: Pattern Provider"
+					type: "checkmark"
+				}
+			]
+			title: "Channel: Obtain: Pattern Provider"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1AC5F82BEC89B53C"]
+			description: [
+				"Teach AE2 a useful recipe and successfully request it through the network rather than crafting it by hand."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:pattern_provider"
+			id: "1A5EA4CA70B9FA82"
+			rewards: [
+				{
+					id: "73497B1175E9EC39"
+					table_id: 434412329485966300L
+					title: "Ae2 Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5898010B76116AF1"
+					title: "Confirm: Autocraft: Obtain: Pattern Provider"
+					type: "checkmark"
+				}
+			]
+			title: "Autocraft: Obtain: Pattern Provider"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A5EA4CA70B9FA82"]
+			description: [
 				"Craft a MEGA Cells component and install a compatible cell. Use AE2 and Refined Storage as independent systems wherever that suits your base."
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			]
@@ -127,31 +287,16 @@
 			id: "0B542AC7B25BACFF"
 			rewards: [
 				{
-					count: 1
-					id: "E0B05B43D31D42FF"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "913EA8ED4CCCDFE8"
 					type: "xp"
 					xp: 350
 				}
-			
-				{
-					id: "3F8BFFE67729C32C"
-					table_id: 7100585325777291438L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "4E7DC97C3AEF607A"
-					table_id: 6929581866957786509L
-					title: "Ae2 Tier 4 Roll"
+					table_id: 434412329485966300L
+					title: "Ae2 Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -170,8 +315,126 @@
 			]
 			subtitle: "Requires 64k ME Storage Cell; completion is detected automatically."
 			title: "MEGA storage"
-			x: 7.0d
+			x: 16.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["0B542AC7B25BACFF"]
+			description: [
+				"Bring the ME components from this milestone online as part of a powered network and verify terminals can see the intended storage."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:item_storage_cell_64k"
+			id: "721582683E5BC188"
+			rewards: [
+				{
+					id: "2190485D64DD96C0"
+					table_id: 6929581866957786509L
+					title: "Ae2 Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1372E50FEB93B61E"
+					title: "Confirm: Network: Obtain: 64k ME Storage Cell"
+					type: "checkmark"
+				}
+			]
+			title: "Network: Obtain: 64k ME Storage Cell"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["721582683E5BC188"]
+			description: [
+				"Route the network cleanly with channels, dense cable, P2P, or subnetworks as appropriate for the installed AE2 setup."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:item_storage_cell_64k"
+			id: "0145AF8FF59E9D92"
+			rewards: [
+				{
+					id: "3F840ACE18490E1E"
+					table_id: 6929581866957786509L
+					title: "Ae2 Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "482025CCE47A5A16"
+					title: "Confirm: Channel: Obtain: 64k ME Storage Cell"
+					type: "checkmark"
+				}
+			]
+			title: "Channel: Obtain: 64k ME Storage Cell"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0145AF8FF59E9D92"]
+			description: [
+				"Teach AE2 a useful recipe and successfully request it through the network rather than crafting it by hand."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ae2:item_storage_cell_64k"
+			id: "652B51097825C530"
+			rewards: [
+				{
+					id: "7C7CAE0C93616A86"
+					table_id: 6929581866957786509L
+					title: "Ae2 Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "38637F2E98014F82"
+					title: "Confirm: Autocraft: Obtain: 64k ME Storage Cell"
+					type: "checkmark"
+				}
+			]
+			title: "Autocraft: Obtain: 64k ME Storage Cell"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["652B51097825C530"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "ae2:controller"
+			id: "41D86ED017FFE623"
+			rewards: [
+				{
+					id: "3A1FDC1C66C00181"
+					table_id: 6929581866957786509L
+					title: "Ae2 Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "3F8BFFE67729C32C"
+					table_id: 7100585325777291438L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "7F203D984DA9F1A7"
+					title: "Confirm chapter mastery: Ae2"
+					type: "checkmark"
+				}
+			]
+			title: "Ae2 Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	]
 	title: "AE2 and MEGA Cells"

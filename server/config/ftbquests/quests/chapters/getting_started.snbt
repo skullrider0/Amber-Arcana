@@ -35,6 +35,7 @@
 			]
 			icon: "minecraft:crafting_table"
 			id: "5DF2CA9EF5F2B2D4"
+			dependencies: []
 			rewards: [
 				{
 					count: 16
@@ -53,16 +54,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-				
-			
-
 				{
 					id: "684EF3660B22254A"
 					table_id: 1728851355489678624L
 					title: "Getting Started Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			shape: "hexagon"
 			size: 1.25d
@@ -89,11 +86,95 @@
 			]
 			subtitle: "Build your first safe shelter and claim starter supplies."
 			title: "Make a home"
-			x: -7.0d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5DF2CA9EF5F2B2D4"]
+			description: [
+				"Organize the materials and tools from this milestone so the next system can be built without scavenging mid-project."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:crafting_table"
+			id: "1644590DAE1A3D55"
+			rewards: [
+				{
+					id: "391A252CBC350B3E"
+					table_id: 1728851355489678624L
+					title: "Getting Started Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "191D6FFF85972B0B"
+					title: "Confirm: Prepare: Obtain: Crafting Table"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Obtain: Crafting Table"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1644590DAE1A3D55"]
+			description: [
+				"Put the milestone into a real starter-base setup instead of leaving the required item in a chest."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:crafting_table"
+			id: "1FB0859F4C376E94"
+			rewards: [
+				{
+					id: "7390DB006FCF9EE8"
+					table_id: 1728851355489678624L
+					title: "Getting Started Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "24261A2C431A6E6A"
+					title: "Confirm: Build: Obtain: Crafting Table"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Crafting Table"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1FB0859F4C376E94"]
+			description: [
+				"Connect this milestone to storage, power, farming, or another useful base system and verify it works in normal play."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:crafting_table"
+			id: "02AAF8FFBFD8DCCD"
+			rewards: [
+				{
+					id: "6FF7C49C9CD41E94"
+					table_id: 4990266738195959726L
+					title: "Getting Started Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2A5D84E0EA13BFF7"
+					title: "Confirm: Connect: Obtain: Crafting Table"
+					type: "checkmark"
+				}
+			]
+			title: "Connect: Obtain: Crafting Table"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["02AAF8FFBFD8DCCD"]
 			description: [
 				"Create an FTB Team and claim the chunks around your home with the FTB Chunks map."
 				""
@@ -126,16 +207,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "75EFBAF5AAF214C4"
 					table_id: 4990266738195959726L
 					title: "Getting Started Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			shape: "hexagon"
 			size: 1.25d
@@ -161,6 +238,90 @@
 		{
 			dependencies: ["3FEA10D47DFED5ED"]
 			description: [
+				"Organize the materials and tools from this milestone so the next system can be built without scavenging mid-project."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:book"
+			id: "0CCBD58531DF7B48"
+			rewards: [
+				{
+					id: "10A0A69597EBF0AD"
+					table_id: 4990266738195959726L
+					title: "Getting Started Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1BE0273DADAFF371"
+					title: "Confirm: Prepare: Obtain: Claim-planning map"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Obtain: Claim-planning map"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0CCBD58531DF7B48"]
+			description: [
+				"Put the milestone into a real starter-base setup instead of leaving the required item in a chest."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:book"
+			id: "028AB66F765DC675"
+			rewards: [
+				{
+					id: "3FFB82BF9BA93E6D"
+					table_id: 1950168003814570354L
+					title: "Getting Started Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6EF1B67872461ED6"
+					title: "Confirm: Build: Obtain: Claim-planning map"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Claim-planning map"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["028AB66F765DC675"]
+			description: [
+				"Connect this milestone to storage, power, farming, or another useful base system and verify it works in normal play."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:book"
+			id: "677F4551866BBB11"
+			rewards: [
+				{
+					id: "3D0BDCB8F4271202"
+					table_id: 1950168003814570354L
+					title: "Getting Started Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "04873901C1C73960"
+					title: "Confirm: Connect: Obtain: Claim-planning map"
+					type: "checkmark"
+				}
+			]
+			title: "Connect: Obtain: Claim-planning map"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["677F4551866BBB11"]
+			description: [
 				"Build a Sophisticated Backpack, prepare a good food supply, and place a Waystone at home."
 				""
 				"This is the point where your starter camp becomes a real base. Plan separate areas for industry, livestock, magic, storage, and your future colony."
@@ -170,12 +331,6 @@
 			icon: "sophisticatedbackpacks:backpack"
 			id: "5DF5A47BBDCD9172"
 			rewards: [
-				{
-					count: 2
-					id: "08A5C71845022AF8"
-					item: "minecraft:diamond"
-					type: "item"
-				}
 				{
 					count: 8
 					id: "7EB3152EAE3383D1"
@@ -187,21 +342,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				{
-					id: "1AF8CD1B25E24CCB"
-					table_id: 6228429737413144684L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "015021A3CC9E987C"
-					table_id: 6105266698705282770L
-					title: "Getting Started Tier 4 Roll"
+					table_id: 1950168003814570354L
+					title: "Getting Started Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			shape: "hexagon"
 			size: 1.25d
@@ -221,8 +367,126 @@
 			]
 			subtitle: "Requires Sophisticated Backpack; then confirm the milestone."
 			title: "Tools for the journey"
-			x: 7.0d
+			x: 16.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["5DF5A47BBDCD9172"]
+			description: [
+				"Organize the materials and tools from this milestone so the next system can be built without scavenging mid-project."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "160F158B62CA24C6"
+			rewards: [
+				{
+					id: "15A3318B2EDC17B7"
+					table_id: 6105266698705282770L
+					title: "Getting Started Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "503D6B55346D2A44"
+					title: "Confirm: Prepare: Obtain: Sophisticated Backpack"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Obtain: Sophisticated Backpack"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["160F158B62CA24C6"]
+			description: [
+				"Put the milestone into a real starter-base setup instead of leaving the required item in a chest."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "0328A88774FE687F"
+			rewards: [
+				{
+					id: "6FB8FF4BE7770984"
+					table_id: 6105266698705282770L
+					title: "Getting Started Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6913A851D36FE6F1"
+					title: "Confirm: Build: Obtain: Sophisticated Backpack"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Sophisticated Backpack"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0328A88774FE687F"]
+			description: [
+				"Connect this milestone to storage, power, farming, or another useful base system and verify it works in normal play."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "278AF1D7D2611C9F"
+			rewards: [
+				{
+					id: "6FFCCFB818A4B1EB"
+					table_id: 6105266698705282770L
+					title: "Getting Started Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "57DD8AFC38F0A5C1"
+					title: "Confirm: Connect: Obtain: Sophisticated Backpack"
+					type: "checkmark"
+				}
+			]
+			title: "Connect: Obtain: Sophisticated Backpack"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["278AF1D7D2611C9F"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:book"
+			id: "461949C45E5B602C"
+			rewards: [
+				{
+					id: "743D5D8A479A8437"
+					table_id: 6105266698705282770L
+					title: "Getting Started Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "1AF8CD1B25E24CCB"
+					table_id: 6228429737413144684L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "51E1DCD97DC3679A"
+					title: "Confirm chapter mastery: Getting Started"
+					type: "checkmark"
+				}
+			]
+			title: "Getting Started Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	]
 	title: "{\"text\":\"Welcome to Amber and Arcana\"}"

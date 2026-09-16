@@ -11,8 +11,8 @@
 			id: "538C111A2F15C97F",
 			subtitle: "Requires Fossil evidence; then confirm the milestone."
 			title: "Collect evidence",
-			x: -10.5d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Explore for fossils and unusual amber. Keep Prehistoric Legacy specimens separate from Fossils and Archeology specimens because they use different processing systems.",
@@ -30,14 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "3131FF7EC2AA9056"
 					table_id: 5306158820336966195L
 					title: "Jurassic Laboratory Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -54,40 +52,86 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["538C111A2F15C97F"]
+			description: [
+				"Run the fossil or DNA workflow far enough to produce usable material for the laboratory."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:bone"
+			id: "03892C82B5229B82"
+			rewards: [
+				{
+					id: "4EE579635E204944"
+					table_id: 5306158820336966195L
+					title: "Jurassic Laboratory Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "13CBC6F9849581B8"
+					title: "Confirm: Extract: Collect evidence"
+					type: "checkmark"
+				}
+			]
+			title: "Extract: Collect evidence"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["03892C82B5229B82"]
+			description: [
+				"Use the laboratory chain to create or prepare a living specimen rather than stopping at raw DNA."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:bone"
+			id: "2D4B333F29AAFF1D"
+			rewards: [
+				{
+					id: "58747B4B5BAED430"
+					table_id: 5306158820336966195L
+					title: "Jurassic Laboratory Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "26339D2D4292915E"
+					title: "Confirm: Incubate: Collect evidence"
+					type: "checkmark"
+				}
+			]
+			title: "Incubate: Collect evidence"
+			x: -8.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:glass"
 			id: "63C450EF80054073",
 			subtitle: "Requires Laboratory glassware and containment; then confirm the milestone."
 			title: "The amber laboratory",
-			x: -3.5d,
-			y: 0.0d,
+			x: -4.0d
+			y: 0.0d
 			description: [
 				"Follow Prehistoric Legacys guide to process unusual amber through its extraction and revival stages. Supply each machine with the resources it actually requires.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 4
-					id: "DA906239E6EB2702"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "EFA821828D2E2561"
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "169073B079FFBD9B"
 					table_id: 6388233646105654668L
 					title: "Jurassic Laboratory Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -104,17 +148,71 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"538C111A2F15C97F"
+			dependencies: ["2D4B333F29AAFF1D"]
+		}
+		{
+			dependencies: ["63C450EF80054073"]
+			description: [
+				"Run the fossil or DNA workflow far enough to produce usable material for the laboratory."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:glass"
+			id: "192BCEC76AB41E53"
+			rewards: [
+				{
+					id: "7EB796686000B0DE"
+					table_id: 6388233646105654668L
+					title: "Jurassic Laboratory Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "573B30B07B8ED429"
+					title: "Confirm: Extract: The amber laboratory"
+					type: "checkmark"
+				}
+			]
+			title: "Extract: The amber laboratory"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["192BCEC76AB41E53"]
+			description: [
+				"Use the laboratory chain to create or prepare a living specimen rather than stopping at raw DNA."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:glass"
+			id: "4962E37D9687D1F8"
+			rewards: [
+				{
+					id: "28BDCE2EF4CAECF0"
+					table_id: 6388233646105654668L
+					title: "Jurassic Laboratory Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "39E605BFC8DCF8ED"
+					title: "Confirm: Incubate: The amber laboratory"
+					type: "checkmark"
+				}
+			]
+			title: "Incubate: The amber laboratory"
+			x: 4.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:egg"
 			id: "3B1E3F88AAA755B8",
 			subtitle: "Requires Revival/incubation supplies; then confirm the milestone."
 			title: "Fossils and revival",
-			x: 3.5d,
-			y: 0.0d,
+			x: 8.0d
+			y: 0.0d
 			description: [
 				"Use the Fossils and Archeology guide to analyze a fossil, obtain DNA, and complete a revival sequence.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -131,16 +229,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "5FD5C129A09FCB45"
 					table_id: 6184376737876792336L
 					title: "Jurassic Laboratory Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -157,48 +251,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"63C450EF80054073"
+			dependencies: ["4962E37D9687D1F8"]
+		}
+		{
+			dependencies: ["3B1E3F88AAA755B8"]
+			description: [
+				"Run the fossil or DNA workflow far enough to produce usable material for the laboratory."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:egg"
+			id: "4DC6B17C99E086D0"
+			rewards: [
+				{
+					id: "2D81360C0AA2E3E8"
+					table_id: 6184376737876792336L
+					title: "Jurassic Laboratory Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "7DC767D9C61E7058"
+					title: "Confirm: Extract: Fossils and revival"
+					type: "checkmark"
+				}
+			]
+			title: "Extract: Fossils and revival"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4DC6B17C99E086D0"]
+			description: [
+				"Use the laboratory chain to create or prepare a living specimen rather than stopping at raw DNA."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:egg"
+			id: "2A4997E26A44D90E"
+			rewards: [
+				{
+					id: "581D41294B1517AA"
+					table_id: 6184376737876792336L
+					title: "Jurassic Laboratory Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "21FADC34489D688C"
+					title: "Confirm: Incubate: Fossils and revival"
+					type: "checkmark"
+				}
+			]
+			title: "Incubate: Fossils and revival"
+			x: 16.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:iron_bars"
 			id: "7D39BB362CB3149A",
 			subtitle: "Requires Secure habitat barriers; then confirm the milestone."
 			title: "A secure habitat",
-			x: 10.5d,
-			y: 0.0d,
+			x: 16.0d
+			y: 8.0d
 			description: [
 				"Build a species-appropriate enclosure before releasing your first dinosaur. Provide food and secure visitor paths, then document its care needs.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 2
-					id: "9F3CAE6B206705A5"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "AE1C32916F269055"
 					type: "xp"
 					xp: 400
 				}
-			
-				{
-					id: "656328FB70E04AC7"
-					table_id: 3552266519016100354L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "31810C7E42D7261E"
 					table_id: 2513025998819792296L
 					title: "Jurassic Laboratory Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -215,9 +348,97 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"3B1E3F88AAA755B8"
+			dependencies: ["2A4997E26A44D90E"]
+		}
+		{
+			dependencies: ["7D39BB362CB3149A"]
+			description: [
+				"Run the fossil or DNA workflow far enough to produce usable material for the laboratory."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:iron_bars"
+			id: "7153AE0F2FCB0BD4"
+			rewards: [
+				{
+					id: "173B42C214C0A848"
+					table_id: 2513025998819792296L
+					title: "Jurassic Laboratory Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "26C7296A746C84BA"
+					title: "Confirm: Extract: A secure habitat"
+					type: "checkmark"
+				}
+			]
+			title: "Extract: A secure habitat"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7153AE0F2FCB0BD4"]
+			description: [
+				"Use the laboratory chain to create or prepare a living specimen rather than stopping at raw DNA."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_bars"
+			id: "5C33908F0284804F"
+			rewards: [
+				{
+					id: "4F79E86A2E378A7A"
+					table_id: 2513025998819792296L
+					title: "Jurassic Laboratory Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "7433BFECA00D7127"
+					title: "Confirm: Incubate: A secure habitat"
+					type: "checkmark"
+				}
+			]
+			title: "Incubate: A secure habitat"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5C33908F0284804F"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:bone"
+			id: "321C52136B265F58"
+			rewards: [
+				{
+					id: "22290868FBA65F78"
+					table_id: 2513025998819792296L
+					title: "Jurassic Laboratory Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "656328FB70E04AC7"
+					table_id: 3552266519016100354L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "4B5BF220428ED340"
+					title: "Confirm chapter mastery: Jurassic Laboratory"
+					type: "checkmark"
+				}
+			]
+			title: "Jurassic Laboratory Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

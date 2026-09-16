@@ -28,16 +28,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-				
-			
-
 				{
 					id: "46D6795B6B5066B5"
 					table_id: 6421184882677979736L
 					title: "Ars Nouveau Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -56,11 +52,95 @@
 			]
 			subtitle: "Requires Novice Spell Book; completion is detected automatically."
 			title: "First spells"
-			x: -7.0d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5E46C1A7EB1FF9DB"]
+			description: [
+				"Build and test a practical Ars Nouveau spell that uses the progression unlocked by this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:novice_spell_book"
+			id: "751BD5A5935B7CCC"
+			rewards: [
+				{
+					id: "1494616A0E403B9B"
+					table_id: 6421184882677979736L
+					title: "Ars Nouveau Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "75998AB607AD5B99"
+					title: "Confirm: Cast: Obtain: Novice Spell Book"
+					type: "checkmark"
+				}
+			]
+			title: "Cast: Obtain: Novice Spell Book"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["751BD5A5935B7CCC"]
+			description: [
+				"Generate and move Source reliably enough to keep this stage of Ars crafting or automation supplied."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:novice_spell_book"
+			id: "710E7880F9B59420"
+			rewards: [
+				{
+					id: "0B286D482E7D93A6"
+					table_id: 6421184882677979736L
+					title: "Ars Nouveau Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "40FCE69B64872F24"
+					title: "Confirm: Source: Obtain: Novice Spell Book"
+					type: "checkmark"
+				}
+			]
+			title: "Source: Obtain: Novice Spell Book"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["710E7880F9B59420"]
+			description: [
+				"Use Ars automation such as turrets, relays, apparatus work, or another installed integration on a repeatable task."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:novice_spell_book"
+			id: "7D3DBDF83E769F1C"
+			rewards: [
+				{
+					id: "47B73DD3F59ED860"
+					table_id: 723896153243885020L
+					title: "Ars Nouveau Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "0B2BDDC306EA8E66"
+					title: "Confirm: Automate: Obtain: Novice Spell Book"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Obtain: Novice Spell Book"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D3DBDF83E769F1C"]
 			description: [
 				"Build a Source supply and Enchanting Apparatus workshop. Create a magical tool or upgrade."
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -79,16 +159,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "0EFB1B988677B541"
 					table_id: 723896153243885020L
 					title: "Ars Nouveau Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -120,6 +196,90 @@
 		{
 			dependencies: ["4B6DB13056E0CBC2"]
 			description: [
+				"Build and test a practical Ars Nouveau spell that uses the progression unlocked by this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:source_jar"
+			id: "47E1A5F440070C39"
+			rewards: [
+				{
+					id: "6B1BD488CA03A536"
+					table_id: 723896153243885020L
+					title: "Ars Nouveau Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3700C7CC995E012D"
+					title: "Confirm: Cast: Obtain: Source Jar"
+					type: "checkmark"
+				}
+			]
+			title: "Cast: Obtain: Source Jar"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["47E1A5F440070C39"]
+			description: [
+				"Generate and move Source reliably enough to keep this stage of Ars crafting or automation supplied."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:source_jar"
+			id: "04F13883F399FAE6"
+			rewards: [
+				{
+					id: "7F161057DB6DF6D6"
+					table_id: 8336647676060392025L
+					title: "Ars Nouveau Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4F97CEF61D3E6CCF"
+					title: "Confirm: Source: Obtain: Source Jar"
+					type: "checkmark"
+				}
+			]
+			title: "Source: Obtain: Source Jar"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04F13883F399FAE6"]
+			description: [
+				"Use Ars automation such as turrets, relays, apparatus work, or another installed integration on a repeatable task."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:source_jar"
+			id: "11D5E8F65F0421E0"
+			rewards: [
+				{
+					id: "0614A3D03494BDF4"
+					table_id: 8336647676060392025L
+					title: "Ars Nouveau Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1D6C0E034073C7CA"
+					title: "Confirm: Automate: Obtain: Source Jar"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Obtain: Source Jar"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["11D5E8F65F0421E0"]
+			description: [
 				"Use an Ars automation method, then explore Ars Elemental and the installed Create or spell integrations."
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			]
@@ -127,31 +287,16 @@
 			id: "11538580D4752A8A"
 			rewards: [
 				{
-					count: 1
-					id: "AA2E78534F784826"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "EDFC93627749BE28"
 					type: "xp"
 					xp: 350
 				}
-			
-				{
-					id: "431450E2DB126D11"
-					table_id: 3963667117506098185L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "583B04509DC628D8"
-					table_id: 5965291529919979376L
-					title: "Ars Nouveau Tier 4 Roll"
+					table_id: 8336647676060392025L
+					title: "Ars Nouveau Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -170,8 +315,126 @@
 			]
 			subtitle: "Requires Spell Turret; completion is detected automatically."
 			title: "A magical factory"
-			x: 7.0d
+			x: 16.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["11538580D4752A8A"]
+			description: [
+				"Build and test a practical Ars Nouveau spell that uses the progression unlocked by this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:spell_turret"
+			id: "430A285ED8F49AC3"
+			rewards: [
+				{
+					id: "19F8D1AA65F940E3"
+					table_id: 5965291529919979376L
+					title: "Ars Nouveau Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "135AFA2B91C58612"
+					title: "Confirm: Cast: Obtain: Spell Turret"
+					type: "checkmark"
+				}
+			]
+			title: "Cast: Obtain: Spell Turret"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["430A285ED8F49AC3"]
+			description: [
+				"Generate and move Source reliably enough to keep this stage of Ars crafting or automation supplied."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:spell_turret"
+			id: "20F0CC18A7856D84"
+			rewards: [
+				{
+					id: "3D978390C40EA38F"
+					table_id: 5965291529919979376L
+					title: "Ars Nouveau Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "7EEEA2B03A974CC1"
+					title: "Confirm: Source: Obtain: Spell Turret"
+					type: "checkmark"
+				}
+			]
+			title: "Source: Obtain: Spell Turret"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["20F0CC18A7856D84"]
+			description: [
+				"Use Ars automation such as turrets, relays, apparatus work, or another installed integration on a repeatable task."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:spell_turret"
+			id: "6539A7CBB80F50F0"
+			rewards: [
+				{
+					id: "2BE039F9E83E990B"
+					table_id: 5965291529919979376L
+					title: "Ars Nouveau Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "42574D9BB6AF98BF"
+					title: "Confirm: Automate: Obtain: Spell Turret"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Obtain: Spell Turret"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6539A7CBB80F50F0"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "ars_nouveau:novice_spell_book"
+			id: "12C2C4846879A818"
+			rewards: [
+				{
+					id: "07DFBA186EB84DA1"
+					table_id: 5965291529919979376L
+					title: "Ars Nouveau Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "431450E2DB126D11"
+					table_id: 3963667117506098185L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "7334938CFF655F61"
+					title: "Confirm chapter mastery: Ars Nouveau"
+					type: "checkmark"
+				}
+			]
+			title: "Ars Nouveau Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	]
 	title: "Ars Nouveau"

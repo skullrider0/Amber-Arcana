@@ -11,15 +11,9 @@
 			id: "4422161D0412164C",
 			subtitle: "Requires Seasonal food reserve; then confirm the milestone."
 			title: "Seasonal estate",
-			x: -10.5d,
-			y: 0.0d,
-			dependencies: [
-				"6A19120000000601"
-				"27F120E99FCF093B"
-				"0529657A7D4C8721"
-				"7E43AF9888FA9F2E"
-				"7D39BB362CB3149A"
-			]
+			x: -16.0d
+			y: 0.0d
+			dependencies: ["6A19120000000601", "27F120E99FCF093B", "0529657A7D4C8721", "7E43AF9888FA9F2E", "7D39BB362CB3149A"]
 			description: [
 				"Build a Serene Seasons farm and food store that can support your settlement throughout the year.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -36,14 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "6F76EF0FE2F3D2BB"
 					table_id: 4125809826683960267L
 					title: "A World Worth Building Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -60,14 +52,70 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["4422161D0412164C"]
+			description: [
+				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:hay_block"
+			id: "3F50BD9BA18E7C70"
+			rewards: [
+				{
+					id: "2D12F5CC41E03B91"
+					table_id: 4125809826683960267L
+					title: "A World Worth Building Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "110031C20F4070EC"
+					title: "Confirm: Prepare: Seasonal estate"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Seasonal estate"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F50BD9BA18E7C70"]
+			description: [
+				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:hay_block"
+			id: "27A91091FEFBA711"
+			rewards: [
+				{
+					id: "104E06F0B1A8A065"
+					table_id: 4125809826683960267L
+					title: "A World Worth Building Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1348693E55F44007"
+					title: "Confirm: Conquer: Seasonal estate"
+					type: "checkmark"
+				}
+			]
+			title: "Conquer: Seasonal estate"
+			x: -8.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:powered_rail"
 			id: "5112E3596ADFFB90",
 			subtitle: "Requires Civilization transport link; then confirm the milestone."
 			title: "Connected civilization",
-			x: -3.5d,
-			y: 0.0d,
+			x: -4.0d
+			y: 0.0d
 			description: [
 				"Link your colony, factories, magical workshops, zoo, aquarium, and dinosaur park with transport routes.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -84,16 +132,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "79A4161623B6D041"
 					table_id: 4573498009506683053L
 					title: "A World Worth Building Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -110,43 +154,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"4422161D0412164C"
+			dependencies: ["27A91091FEFBA711"]
+		}
+		{
+			dependencies: ["5112E3596ADFFB90"]
+			description: [
+				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:powered_rail"
+			id: "28A67009BD924142"
+			rewards: [
+				{
+					id: "5D2B9DFCAC5B08C1"
+					table_id: 4573498009506683053L
+					title: "A World Worth Building Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6006721363493659"
+					title: "Confirm: Prepare: Connected civilization"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Connected civilization"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28A67009BD924142"]
+			description: [
+				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:powered_rail"
+			id: "0499FA63742C43C6"
+			rewards: [
+				{
+					id: "2E562D4EDDBDE0A4"
+					table_id: 4573498009506683053L
+					title: "A World Worth Building Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4F160C0CE2FDF1BE"
+					title: "Confirm: Conquer: Connected civilization"
+					type: "checkmark"
+				}
+			]
+			title: "Conquer: Connected civilization"
+			x: 4.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:netherite_chestplate"
 			id: "2632742BFA82EB75",
 			subtitle: "Requires Adventure-ready armor; then confirm the milestone."
 			title: "Adventure ready",
-			x: 3.5d,
-			y: 0.0d,
+			x: 8.0d
+			y: 0.0d
 			description: [
 				"Prepare powerful equipment through Mekanism, Tinkers, magic, and exploration rewards. Apotheosis is excluded from this pack.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 4
-					id: "FACACAAFD4A12BDF"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "1B49F12EBBCBFCDA"
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "206DD078F291BEA5"
 					table_id: 7249124095568325970L
 					title: "A World Worth Building Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -162,48 +250,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"5112E3596ADFFB90"
+			dependencies: ["0499FA63742C43C6"]
+		}
+		{
+			dependencies: ["2632742BFA82EB75"]
+			description: [
+				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:netherite_chestplate"
+			id: "78FF2B6ECD708F35"
+			rewards: [
+				{
+					id: "40FE5ACA0E2D8E6B"
+					table_id: 7249124095568325970L
+					title: "A World Worth Building Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "22E61BC19C3B6A63"
+					title: "Confirm: Prepare: Adventure ready"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Adventure ready"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["78FF2B6ECD708F35"]
+			description: [
+				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:netherite_chestplate"
+			id: "0DDC7245E6CD27F4"
+			rewards: [
+				{
+					id: "2B9123AAFC59B990"
+					table_id: 7249124095568325970L
+					title: "A World Worth Building Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6511AAFF8665A44B"
+					title: "Confirm: Conquer: Adventure ready"
+					type: "checkmark"
+				}
+			]
+			title: "Conquer: Adventure ready"
+			x: 16.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:emerald_block"
 			id: "1C5E1BCE0A87E013",
 			subtitle: "Requires Grand-opening reserve; then confirm the milestone."
 			title: "The grand opening",
-			x: 10.5d,
-			y: 0.0d,
+			x: 16.0d
+			y: 8.0d
 			description: [
 				"Complete a visitor route through the park and a tour of your factories and magical builds. Invite friends to add their own districts.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 2
-					id: "BF0CF1125F02E623"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "C3ED7C3D37D93E2F"
 					type: "xp"
 					xp: 400
 				}
-			
-				{
-					id: "5289AD830FE95666"
-					table_id: 5967421395539988631L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "3427F89C34BC2225"
 					table_id: 6545486884237050352L
 					title: "A World Worth Building Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -220,9 +347,97 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"2632742BFA82EB75"
+			dependencies: ["0DDC7245E6CD27F4"]
+		}
+		{
+			dependencies: ["1C5E1BCE0A87E013"]
+			description: [
+				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:emerald_block"
+			id: "7132A74DC7040308"
+			rewards: [
+				{
+					id: "0F78173B46B6207A"
+					table_id: 6545486884237050352L
+					title: "A World Worth Building Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2389B970656C7846"
+					title: "Confirm: Prepare: The grand opening"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: The grand opening"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7132A74DC7040308"]
+			description: [
+				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:emerald_block"
+			id: "240F2E0D8C37E2AC"
+			rewards: [
+				{
+					id: "1FB5F39DB7CE2063"
+					table_id: 6545486884237050352L
+					title: "A World Worth Building Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1AEC9C38209CBD8E"
+					title: "Confirm: Conquer: The grand opening"
+					type: "checkmark"
+				}
+			]
+			title: "Conquer: The grand opening"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["240F2E0D8C37E2AC"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:hay_block"
+			id: "792C4FB4A27E5D45"
+			rewards: [
+				{
+					id: "256FD4CD10B4E604"
+					table_id: 6545486884237050352L
+					title: "A World Worth Building Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "5289AD830FE95666"
+					table_id: 5967421395539988631L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "718B595CCB67B4C5"
+					title: "Confirm chapter mastery: A World Worth Building"
+					type: "checkmark"
+				}
+			]
+			title: "A World Worth Building Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

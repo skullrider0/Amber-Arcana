@@ -11,8 +11,8 @@
 			id: "30532555D30762EA",
 			subtitle: "Requires Starter Thermo Generator; completion is detected automatically."
 			title: "Your first generator",
-			x: -7.0d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft a starter Powah generator and keep a connected machine powered.",
@@ -30,16 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-				
-			
-
 				{
 					id: "6373C21B65916BC4"
 					table_id: 1615019638250334031L
 					title: "Powah Energy Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -56,14 +52,98 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["30532555D30762EA"]
+			description: [
+				"Install the Powah generation or storage from this milestone and keep a useful machine powered continuously."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "powah:thermo_generator_starter"
+			id: "7698B63C45DD0588"
+			rewards: [
+				{
+					id: "7BF9037D983BE8DB"
+					table_id: 1615019638250334031L
+					title: "Powah Energy Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5689F82E36CAF233"
+					title: "Confirm: Stabilize: Your first generator"
+					type: "checkmark"
+				}
+			]
+			title: "Stabilize: Your first generator"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7698B63C45DD0588"]
+			description: [
+				"Use the Energizing system and tier materials to support the next stage instead of crafting only the quest item."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "powah:thermo_generator_starter"
+			id: "38EFE4DE7CC87D6C"
+			rewards: [
+				{
+					id: "49536D2F8149197D"
+					table_id: 1615019638250334031L
+					title: "Powah Energy Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1BA98C9605DC180C"
+					title: "Confirm: Energize: Your first generator"
+					type: "checkmark"
+				}
+			]
+			title: "Energize: Your first generator"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["38EFE4DE7CC87D6C"]
+			description: [
+				"Increase generation, transfer, and storage headroom so the network can survive a larger factory load."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "powah:thermo_generator_starter"
+			id: "6FAEA58ED93EEAFE"
+			rewards: [
+				{
+					id: "045AB9833B62F40A"
+					table_id: 7019145743264263493L
+					title: "Powah Energy Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "44BD6CA5C9C396A4"
+					title: "Confirm: Scale: Your first generator"
+					type: "checkmark"
+				}
+			]
+			title: "Scale: Your first generator"
+			x: -4.0d
+			y: 0.0d
+		}
 		{
 			icon: "powah:energizing_orb"
 			id: "41D6A5B567823C5F",
 			subtitle: "Requires Energizing Orb; completion is detected automatically."
 			title: "Energizing station",
-			x: 0.0d,
-			y: 0.0d,
+			x: 0.0d
+			y: 0.0d
 			description: [
 				"Build an Energizing Orb setup and produce the next tier of energized materials.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -80,16 +160,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "4F2C2962E5B74CCB"
 					table_id: 7019145743264263493L
 					title: "Powah Energy Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -106,48 +182,115 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"30532555D30762EA"
+			dependencies: ["6FAEA58ED93EEAFE"]
+		}
+		{
+			dependencies: ["41D6A5B567823C5F"]
+			description: [
+				"Install the Powah generation or storage from this milestone and keep a useful machine powered continuously."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "powah:energizing_orb"
+			id: "0E902F6A1B9306A0"
+			rewards: [
+				{
+					id: "256764ECC3085EE1"
+					table_id: 7019145743264263493L
+					title: "Powah Energy Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "392F8B6B47E4C51B"
+					title: "Confirm: Stabilize: Energizing station"
+					type: "checkmark"
+				}
+			]
+			title: "Stabilize: Energizing station"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0E902F6A1B9306A0"]
+			description: [
+				"Use the Energizing system and tier materials to support the next stage instead of crafting only the quest item."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "powah:energizing_orb"
+			id: "29E4600857EAA4A7"
+			rewards: [
+				{
+					id: "7D359AF98679B9EF"
+					table_id: 2915018311261013654L
+					title: "Powah Energy Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5EC2A1BAE130F58B"
+					title: "Confirm: Energize: Energizing station"
+					type: "checkmark"
+				}
+			]
+			title: "Energize: Energizing station"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29E4600857EAA4A7"]
+			description: [
+				"Increase generation, transfer, and storage headroom so the network can survive a larger factory load."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "powah:energizing_orb"
+			id: "440EEFD11CFF000F"
+			rewards: [
+				{
+					id: "15E4E2854A5EF6F8"
+					table_id: 2915018311261013654L
+					title: "Powah Energy Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "0E2A0684FD713A0F"
+					title: "Confirm: Scale: Energizing station"
+					type: "checkmark"
+				}
+			]
+			title: "Scale: Energizing station"
+			x: 12.0d
+			y: 0.0d
+		}
 		{
 			icon: "powah:energy_cell_basic"
 			id: "3B900127ED58D474",
 			subtitle: "Requires Basic Energy Cell; completion is detected automatically."
 			title: "A dependable grid",
-			x: 7.0d,
-			y: 0.0d,
+			x: 16.0d
+			y: 0.0d
 			description: [
 				"Upgrade your generation and energy storage. Connect your factory and dinosaur laboratory through an organized distribution system.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
-					count: 1
-					id: "21C1D603AFB0FDF4"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "D7763BFF050D91B1"
 					type: "xp"
 					xp: 350
 				}
-			
-				{
-					id: "6820AF628C567E79"
-					table_id: 4720482761680196546L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "670D20E476093BEB"
-					table_id: 8147253890862149015L
-					title: "Powah Energy Tier 4 Roll"
+					table_id: 2915018311261013654L
+					title: "Powah Energy Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -164,9 +307,125 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"41D6A5B567823C5F"
+			dependencies: ["440EEFD11CFF000F"]
+		}
+		{
+			dependencies: ["3B900127ED58D474"]
+			description: [
+				"Install the Powah generation or storage from this milestone and keep a useful machine powered continuously."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "powah:energy_cell_basic"
+			id: "21D2D444E7ED7292"
+			rewards: [
+				{
+					id: "07F5AFF62A3179E4"
+					table_id: 8147253890862149015L
+					title: "Powah Energy Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "397F74906CE6761B"
+					title: "Confirm: Stabilize: A dependable grid"
+					type: "checkmark"
+				}
+			]
+			title: "Stabilize: A dependable grid"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["21D2D444E7ED7292"]
+			description: [
+				"Use the Energizing system and tier materials to support the next stage instead of crafting only the quest item."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "powah:energy_cell_basic"
+			id: "1A3A6F25CB72DC15"
+			rewards: [
+				{
+					id: "08155831CEB85CE8"
+					table_id: 8147253890862149015L
+					title: "Powah Energy Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "518E0D963F79B289"
+					title: "Confirm: Energize: A dependable grid"
+					type: "checkmark"
+				}
+			]
+			title: "Energize: A dependable grid"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1A3A6F25CB72DC15"]
+			description: [
+				"Increase generation, transfer, and storage headroom so the network can survive a larger factory load."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "powah:energy_cell_basic"
+			id: "185DDE299B4735C4"
+			rewards: [
+				{
+					id: "05F5BB9E32D66FB7"
+					table_id: 8147253890862149015L
+					title: "Powah Energy Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "62E404AEC00ADA4F"
+					title: "Confirm: Scale: A dependable grid"
+					type: "checkmark"
+				}
+			]
+			title: "Scale: A dependable grid"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["185DDE299B4735C4"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "powah:thermo_generator_starter"
+			id: "473042DFFC43B684"
+			rewards: [
+				{
+					id: "7ED03D851B67C1E5"
+					table_id: 8147253890862149015L
+					title: "Powah Energy Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "6820AF628C567E79"
+					table_id: 4720482761680196546L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "0998A77375C6168B"
+					title: "Confirm chapter mastery: Powah Energy"
+					type: "checkmark"
+				}
+			]
+			title: "Powah Energy Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

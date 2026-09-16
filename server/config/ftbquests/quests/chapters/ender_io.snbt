@@ -11,8 +11,8 @@
 			id: "3358221532325ED1",
 			subtitle: "Requires Conduit control materials; then confirm the milestone."
 			title: "Conduit workshop",
-			x: -7.0d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft Ender IO conduits and use them to connect one item, fluid, or energy route.",
@@ -30,16 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-				
-			
-
 				{
 					id: "1A0ECE2545F6DA95"
 					table_id: 5632215108216343851L
 					title: "Ender IO Connections Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -56,14 +52,98 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["3358221532325ED1"]
+			description: [
+				"Build a clean Ender IO conduit backbone for the machines unlocked by this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:redstone"
+			id: "299C0567C1D6EB9D"
+			rewards: [
+				{
+					id: "61B5DD70CB9A0FB4"
+					table_id: 5632215108216343851L
+					title: "Ender IO Connections Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "7151548CA910729C"
+					title: "Confirm: Wire: Conduit workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Wire: Conduit workshop"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["299C0567C1D6EB9D"]
+			description: [
+				"Use conduit filters, priorities, and extraction settings to move the correct resources without loops."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:redstone"
+			id: "0B055F7EA958BC55"
+			rewards: [
+				{
+					id: "751617DA675C91CB"
+					table_id: 5632215108216343851L
+					title: "Ender IO Connections Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "53274BF3A2270784"
+					title: "Confirm: Route: Conduit workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Route: Conduit workshop"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0B055F7EA958BC55"]
+			description: [
+				"Turn this part of Ender IO into a repeatable unattended production step."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:redstone"
+			id: "39851932267D3839"
+			rewards: [
+				{
+					id: "32BE5ED3A5604666"
+					table_id: 148992126386032531L
+					title: "Ender IO Connections Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "625D0A8612D56F5C"
+					title: "Confirm: Automate: Conduit workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Conduit workshop"
+			x: -4.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:furnace"
 			id: "0EBE8506C43A0D98",
 			subtitle: "Requires Processing station machines; then confirm the milestone."
 			title: "Machine integration",
-			x: 0.0d,
-			y: 0.0d,
+			x: 0.0d
+			y: 0.0d
 			description: [
 				"Build an Ender IO processing station. Add filters and redstone control where needed.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -80,16 +160,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "414938FF7D7D745B"
 					table_id: 148992126386032531L
 					title: "Ender IO Connections Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -106,48 +182,115 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"3358221532325ED1"
+			dependencies: ["39851932267D3839"]
+		}
+		{
+			dependencies: ["0EBE8506C43A0D98"]
+			description: [
+				"Build a clean Ender IO conduit backbone for the machines unlocked by this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:furnace"
+			id: "3C4DC0A2FA6EEEA3"
+			rewards: [
+				{
+					id: "4F6C367E7758872B"
+					table_id: 148992126386032531L
+					title: "Ender IO Connections Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "0C1D6897933B4DC3"
+					title: "Confirm: Wire: Machine integration"
+					type: "checkmark"
+				}
+			]
+			title: "Wire: Machine integration"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3C4DC0A2FA6EEEA3"]
+			description: [
+				"Use conduit filters, priorities, and extraction settings to move the correct resources without loops."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:furnace"
+			id: "572C403BD8631BAD"
+			rewards: [
+				{
+					id: "33E763D718ED4BD1"
+					table_id: 8964843128813105254L
+					title: "Ender IO Connections Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2C8061B15E15A10B"
+					title: "Confirm: Route: Machine integration"
+					type: "checkmark"
+				}
+			]
+			title: "Route: Machine integration"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["572C403BD8631BAD"]
+			description: [
+				"Turn this part of Ender IO into a repeatable unattended production step."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:furnace"
+			id: "203D60325D14F452"
+			rewards: [
+				{
+					id: "62EDC65C6A2CDC34"
+					table_id: 8964843128813105254L
+					title: "Ender IO Connections Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "0C2E2D0FF9C50111"
+					title: "Confirm: Automate: Machine integration"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Machine integration"
+			x: 12.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:chest"
 			id: "67881CF73E1F3602",
 			subtitle: "Requires Factory routing buffers; then confirm the milestone."
 			title: "A tidy factory",
-			x: 7.0d,
-			y: 0.0d,
+			x: 16.0d
+			y: 0.0d
 			description: [
 				"Replace a messy section of factory routing with a serviceable conduit run. Label buffers and make maintenance access easy.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 1
-					id: "D878055661B07849"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "97C7F7F302917BB8"
 					type: "xp"
 					xp: 350
 				}
-			
-				{
-					id: "1B739066D5A73EE5"
-					table_id: 7776240355537200943L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "3E62C3ABAF50A3AB"
-					table_id: 4555311109604732959L
-					title: "Ender IO Connections Tier 4 Roll"
+					table_id: 8964843128813105254L
+					title: "Ender IO Connections Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -164,9 +307,125 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"0EBE8506C43A0D98"
+			dependencies: ["203D60325D14F452"]
+		}
+		{
+			dependencies: ["67881CF73E1F3602"]
+			description: [
+				"Build a clean Ender IO conduit backbone for the machines unlocked by this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:chest"
+			id: "1D4D429181162FBC"
+			rewards: [
+				{
+					id: "04446A38E901EC2A"
+					table_id: 4555311109604732959L
+					title: "Ender IO Connections Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2E8E709C93CC2020"
+					title: "Confirm: Wire: A tidy factory"
+					type: "checkmark"
+				}
+			]
+			title: "Wire: A tidy factory"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1D4D429181162FBC"]
+			description: [
+				"Use conduit filters, priorities, and extraction settings to move the correct resources without loops."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:chest"
+			id: "7502D490CA700914"
+			rewards: [
+				{
+					id: "4AF6F0CF73C4EC2A"
+					table_id: 4555311109604732959L
+					title: "Ender IO Connections Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "58051319F6F234E3"
+					title: "Confirm: Route: A tidy factory"
+					type: "checkmark"
+				}
+			]
+			title: "Route: A tidy factory"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7502D490CA700914"]
+			description: [
+				"Turn this part of Ender IO into a repeatable unattended production step."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:chest"
+			id: "751747D22A26009A"
+			rewards: [
+				{
+					id: "0FAFA9383B92D3C0"
+					table_id: 4555311109604732959L
+					title: "Ender IO Connections Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "06565840C66DA034"
+					title: "Confirm: Automate: A tidy factory"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: A tidy factory"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["751747D22A26009A"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:redstone"
+			id: "77DBDD9620FEA5EB"
+			rewards: [
+				{
+					id: "7FB602C774EA32FF"
+					table_id: 4555311109604732959L
+					title: "Ender IO Connections Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "1B739066D5A73EE5"
+					table_id: 7776240355537200943L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "1C56AD3FEB70AA3C"
+					title: "Confirm chapter mastery: Ender IO Connections"
+					type: "checkmark"
+				}
+			]
+			title: "Ender IO Connections Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

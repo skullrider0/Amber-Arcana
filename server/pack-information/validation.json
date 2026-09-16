@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-34",
+  "pack_version": "0.1.9-35",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -481,6 +481,508 @@
         "chapter": "tinkers",
         "title": "Tinkers Construct",
         "quests": 3
+      }
+    ]
+  },
+  "deep_short_progression_0_1_9_35": {
+    "chapters_expanded": 24,
+    "historical_short_quests_preserved": 100,
+    "generated_mechanics_quests": 215,
+    "expanded_short_quest_total": 339,
+    "minimum_quests_per_expanded_chapter": 13,
+    "minimum_dependency_depth": 12,
+    "tier_roll_coverage_percent": 100.0,
+    "finale_wheels_moved_to_true_mastery": 24,
+    "generic_diamond_emerald_rewards_removed": 38,
+    "max_layout_width": 32.0,
+    "max_layout_height": 8.0,
+    "historical_quest_ids_preserved": true,
+    "historical_tier_reward_ids_reused": true,
+    "client_server_quest_files_identical": true,
+    "excluded_custom_deep_chapters": [
+      "create_engineering",
+      "productive_bees"
+    ],
+    "chapters": [
+      {
+        "chapter": "ae2",
+        "title": "Ae2",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "alex_caves",
+        "title": "Alex Caves",
+        "historical_quests": 6,
+        "generated_mechanics_quests": 6,
+        "total_quests": 13,
+        "stages_per_historical_quest": 1,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 3,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "alex_utilities",
+        "title": "Alex Utilities",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "alex_wildlife",
+        "title": "Alex Wildlife",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "aquarium",
+        "title": "Aquarium",
+        "historical_quests": 4,
+        "generated_mechanics_quests": 8,
+        "total_quests": 13,
+        "stages_per_historical_quest": 2,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "ars_nouveau",
+        "title": "Ars Nouveau",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "buddycards",
+        "title": "Buddycards",
+        "historical_quests": 6,
+        "generated_mechanics_quests": 6,
+        "total_quests": 13,
+        "stages_per_historical_quest": 1,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 3,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "butchery",
+        "title": "Butchery",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "create_city",
+        "title": "The Mechanical City",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "create_workshops",
+        "title": "Create Workshops",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "dimensions",
+        "title": "Beyond the Overworld",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "dinosaur_laboratory",
+        "title": "Jurassic Laboratory",
+        "historical_quests": 4,
+        "generated_mechanics_quests": 8,
+        "total_quests": 13,
+        "stages_per_historical_quest": 2,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "ender_io",
+        "title": "Ender IO Connections",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "endgame",
+        "title": "A World Worth Building",
+        "historical_quests": 4,
+        "generated_mechanics_quests": 8,
+        "total_quests": 13,
+        "stages_per_historical_quest": 2,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "firearms",
+        "title": "Firearms and Artillery",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "food_factory",
+        "title": "Food and Seasons",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "getting_started",
+        "title": "Getting Started",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "irons_spells",
+        "title": "Iron Spells and Wizardry",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "mekanism",
+        "title": "Mekanism Industry",
+        "historical_quests": 4,
+        "generated_mechanics_quests": 8,
+        "total_quests": 13,
+        "stages_per_historical_quest": 2,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "powah",
+        "title": "Powah Energy",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "refined_storage",
+        "title": "Refined Storage",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "ritual_magic",
+        "title": "Rituals and Witchcraft",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "settlement",
+        "title": "Claims and Colonies",
+        "historical_quests": 5,
+        "generated_mechanics_quests": 10,
+        "total_quests": 16,
+        "stages_per_historical_quest": 2,
+        "max_depth": 15,
+        "tier_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 2,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
+      },
+      {
+        "chapter": "tinkers",
+        "title": "Tinkers Construct",
+        "historical_quests": 3,
+        "generated_mechanics_quests": 9,
+        "total_quests": 13,
+        "stages_per_historical_quest": 3,
+        "max_depth": 12,
+        "tier_counts": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 4
+        },
+        "layout_width": 32.0,
+        "layout_height": 8.0,
+        "generic_currency_rewards_removed": 1,
+        "historical_ids_preserved": true,
+        "wheel_moved_to_mastery": true
       }
     ]
   }

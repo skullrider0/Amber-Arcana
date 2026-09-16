@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.9-35 — Deep progression for compact chapters
+
+- Expand all 24 formerly compact chapters into multi-step mechanics progression trees while preserving their historical quest IDs.
+- Add 215 required hands-on progression quests for commissioning, operation, automation, exploration, rituals, scaling, and other chapter-specific mechanics.
+- Gate historical local dependencies through the new mechanics milestones so the added depth is real progression rather than optional decoration.
+- Give every original and new quest one depth-appropriate mod-specific Tier 1-4 loot roll.
+- Move every compact chapter's Wheel of Fortune reward to a new true mastery finale that depends on all branch leaves.
+- Remove fixed diamond/emerald currency rewards from the expanded chapters; XP and useful starter materials remain.
+- Re-layout the expanded trees in a compact serpentine dependency layout and synchronize the complete quest tree client/server.
+
 ## 0.1.9-34 — Richer rewards for short progression chapters
 
 - Rebalance every compact chapter with at most 10 quests.

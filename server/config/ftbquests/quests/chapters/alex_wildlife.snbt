@@ -28,14 +28,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "23D6B3DA0B04B741"
 					table_id: 8867598836112496240L
 					title: "Alex Wildlife Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -53,11 +51,67 @@
 			]
 			subtitle: "Requires Wildlife observation tool; then confirm the milestone."
 			title: "Observe before collecting"
-			x: -14.0d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["72C5275F6EA620EB"]
+			description: [
+				"Find and observe the creature or wildlife system represented by this milestone in an appropriate habitat."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:spyglass"
+			id: "2D541C296B604EAD"
+			rewards: [
+				{
+					id: "4582B507F7DBC6AB"
+					table_id: 8867598836112496240L
+					title: "Alex Wildlife Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4AD0C23D37E5C972"
+					title: "Confirm: Observe: Obtain: Wildlife observation tool"
+					type: "checkmark"
+				}
+			]
+			title: "Observe: Obtain: Wildlife observation tool"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D541C296B604EAD"]
+			description: [
+				"Provide the food, enclosure, breeding conditions, or interaction needed to keep the creature safely."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:spyglass"
+			id: "086C1B301C657B19"
+			rewards: [
+				{
+					id: "167D9551B88712AA"
+					table_id: 8867598836112496240L
+					title: "Alex Wildlife Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2A1B882B1BBE8DD7"
+					title: "Confirm: Care: Obtain: Wildlife observation tool"
+					type: "checkmark"
+				}
+			]
+			title: "Care: Obtain: Wildlife observation tool"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["086C1B301C657B19"]
 			description: [
 				"Tame one Companions! creature and one eligible animal supported by Domestication Innovation. Check their individual feeding, healing, and movement behavior."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -66,26 +120,16 @@
 			id: "76C534C1F9B94490"
 			rewards: [
 				{
-					count: 4
-					id: "74552B99B30A6584"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "BDAE2737D62ABCFA"
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "291B3971D9263B1A"
-					table_id: 2425209919904331885L
-					title: "Alex Wildlife Tier 2 Roll"
+					table_id: 8867598836112496240L
+					title: "Alex Wildlife Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -104,11 +148,67 @@
 			]
 			subtitle: "Requires Companion leads; then confirm the milestone."
 			title: "Friends of different kinds"
-			x: -7.0d
+			x: -4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["76C534C1F9B94490"]
+			description: [
+				"Find and observe the creature or wildlife system represented by this milestone in an appropriate habitat."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:lead"
+			id: "1F0FCF91D3422504"
+			rewards: [
+				{
+					id: "58F8B3AF3A999CFF"
+					table_id: 2425209919904331885L
+					title: "Alex Wildlife Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "72874AC34725FB09"
+					title: "Confirm: Observe: Obtain: Companion leads"
+					type: "checkmark"
+				}
+			]
+			title: "Observe: Obtain: Companion leads"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F0FCF91D3422504"]
+			description: [
+				"Provide the food, enclosure, breeding conditions, or interaction needed to keep the creature safely."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:lead"
+			id: "2AB15DF8944B6559"
+			rewards: [
+				{
+					id: "3EB295D6E97E3B60"
+					table_id: 2425209919904331885L
+					title: "Alex Wildlife Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5534A1981814CF83"
+					title: "Confirm: Care: Obtain: Companion leads"
+					type: "checkmark"
+				}
+			]
+			title: "Care: Obtain: Companion leads"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2AB15DF8944B6559"]
 			description: [
 				"Tame a rat and give it a supported job. Test its pickup and deposit behavior with a small supply before connecting it to valuable storage."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -127,16 +227,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "53FD72629A0D5208"
 					table_id: 2425209919904331885L
 					title: "Alex Wildlife Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -155,11 +251,67 @@
 			]
 			subtitle: "Requires Rat pickup/deposit test containers; then confirm the milestone."
 			title: "A working rat team"
-			x: 0.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7516A701A4929E8F"]
+			description: [
+				"Find and observe the creature or wildlife system represented by this milestone in an appropriate habitat."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:chest"
+			id: "66FCCD80F336FD3A"
+			rewards: [
+				{
+					id: "027B865B287DF84B"
+					table_id: 2425209919904331885L
+					title: "Alex Wildlife Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "22604503B7A39FF4"
+					title: "Confirm: Observe: Obtain: Rat pickup/deposit test containers"
+					type: "checkmark"
+				}
+			]
+			title: "Observe: Obtain: Rat pickup/deposit test containers"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["66FCCD80F336FD3A"]
+			description: [
+				"Provide the food, enclosure, breeding conditions, or interaction needed to keep the creature safely."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:chest"
+			id: "4CC0E7131B817156"
+			rewards: [
+				{
+					id: "022CA112EDEFEB4D"
+					table_id: 9058127679987895700L
+					title: "Alex Wildlife Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5B8AF400FEC0B1D3"
+					title: "Confirm: Care: Obtain: Rat pickup/deposit test containers"
+					type: "checkmark"
+				}
+			]
+			title: "Care: Obtain: Rat pickup/deposit test containers"
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4CC0E7131B817156"]
 			description: [
 				"Use Ice and Fire progression to work toward a tame dragon and a separate habitat. Site the habitat away from the public colony until its behavior is understood."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -178,16 +330,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "3AF9419E1E033428"
 					table_id: 9058127679987895700L
 					title: "Alex Wildlife Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -205,11 +353,67 @@
 			]
 			subtitle: "Requires Dragon progression proof; then confirm the milestone."
 			title: "A home for dragons"
-			x: 7.0d
-			y: 0.0d
+			x: 16.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7A142D1190A1BE80"]
+			description: [
+				"Find and observe the creature or wildlife system represented by this milestone in an appropriate habitat."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:dragon_breath"
+			id: "3383ABB4CE2F485E"
+			rewards: [
+				{
+					id: "56E90A3FE0EA0206"
+					table_id: 9058127679987895700L
+					title: "Alex Wildlife Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "006A10D89267BA69"
+					title: "Confirm: Observe: Obtain: Dragon progression proof"
+					type: "checkmark"
+				}
+			]
+			title: "Observe: Obtain: Dragon progression proof"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3383ABB4CE2F485E"]
+			description: [
+				"Provide the food, enclosure, breeding conditions, or interaction needed to keep the creature safely."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:dragon_breath"
+			id: "6251330E9032828F"
+			rewards: [
+				{
+					id: "236E9A23D2127AC9"
+					table_id: 9058127679987895700L
+					title: "Alex Wildlife Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "7CF059799ED6AFD8"
+					title: "Confirm: Care: Obtain: Dragon progression proof"
+					type: "checkmark"
+				}
+			]
+			title: "Care: Obtain: Dragon progression proof"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6251330E9032828F"]
 			description: [
 				"Walk the park with a friend at night. Check paths, lighting, animal escape routes, and interactions added by Alex's Mobs Interaction."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -218,31 +422,16 @@
 			id: "7BC237CFDD76939F"
 			rewards: [
 				{
-					count: 2
-					id: "ABA31B233A754579"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "98F8510CED2B9CFB"
 					type: "xp"
 					xp: 450
 				}
-			
-				{
-					id: "7E8758433135AA8D"
-					table_id: 3160071878403486707L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "321FFC75B09ADCD1"
 					table_id: 2191938023281736832L
 					title: "Alex Wildlife Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -261,8 +450,98 @@
 			]
 			subtitle: "Requires Night park lighting; then confirm the milestone."
 			title: "The park after dark"
-			x: 14.0d
-			y: 0.0d
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7BC237CFDD76939F"]
+			description: [
+				"Find and observe the creature or wildlife system represented by this milestone in an appropriate habitat."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:lantern"
+			id: "1506B8D21789000C"
+			rewards: [
+				{
+					id: "63E93BAA8359B9FE"
+					table_id: 2191938023281736832L
+					title: "Alex Wildlife Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "39425D215AF09DB0"
+					title: "Confirm: Observe: Obtain: Night park lighting"
+					type: "checkmark"
+				}
+			]
+			title: "Observe: Obtain: Night park lighting"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1506B8D21789000C"]
+			description: [
+				"Provide the food, enclosure, breeding conditions, or interaction needed to keep the creature safely."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:lantern"
+			id: "5F46FA940CE1483F"
+			rewards: [
+				{
+					id: "54B5C38B2DAE4B0E"
+					table_id: 2191938023281736832L
+					title: "Alex Wildlife Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6EDD6DDFC059C061"
+					title: "Confirm: Care: Obtain: Night park lighting"
+					type: "checkmark"
+				}
+			]
+			title: "Care: Obtain: Night park lighting"
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F46FA940CE1483F"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:spyglass"
+			id: "3E2EB39C4389C773"
+			rewards: [
+				{
+					id: "294F2A3623F2EC74"
+					table_id: 2191938023281736832L
+					title: "Alex Wildlife Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "7E8758433135AA8D"
+					table_id: 3160071878403486707L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "7D6326480A7F901F"
+					title: "Confirm chapter mastery: Alex Wildlife"
+					type: "checkmark"
+				}
+			]
+			title: "Alex Wildlife Mastery"
+			x: -8.0d
+			y: 8.0d
 		}
 	]
 	title: "Wildlife and Companions"

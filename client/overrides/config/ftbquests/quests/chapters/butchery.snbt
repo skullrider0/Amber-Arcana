@@ -28,14 +28,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "34FE688BB590EF27"
 					table_id: 8159238488607377893L
 					title: "Butchery Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -53,11 +51,67 @@
 			]
 			subtitle: "Requires Butchery cutting tool; then confirm the milestone."
 			title: "A working butchery"
-			x: -14.0d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["721D62786F52052B"]
+			description: [
+				"Use the Butchery equipment from this milestone on its intended processing step and collect the resulting products."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_sword"
+			id: "4CBFDE2ED6102C97"
+			rewards: [
+				{
+					id: "3DFCCEC1151BC64A"
+					table_id: 8159238488607377893L
+					title: "Butchery Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "247A0617F5B7758E"
+					title: "Confirm: Process: Obtain: Butchery cutting tool"
+					type: "checkmark"
+				}
+			]
+			title: "Process: Obtain: Butchery cutting tool"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4CBFDE2ED6102C97"]
+			description: [
+				"Turn the outputs into useful food, blood, organs, or downstream ingredients instead of discarding byproducts."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_sword"
+			id: "2A3AAEA7891236B5"
+			rewards: [
+				{
+					id: "79AE53646BEF7270"
+					table_id: 8159238488607377893L
+					title: "Butchery Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "446E4C3884E4877C"
+					title: "Confirm: Preserve: Obtain: Butchery cutting tool"
+					type: "checkmark"
+				}
+			]
+			title: "Preserve: Obtain: Butchery cutting tool"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2A3AAEA7891236B5"]
 			description: [
 				"Produce a Farmer's Delight meat cut from the Butchery setup, then use it in a cooked meal. Confirm the recipe in JEI before connecting it to a Create cooking line."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -76,16 +130,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "6886EA3D4CD17EE7"
-					table_id: 7884837036022247062L
-					title: "Butchery Tier 2 Roll"
+					table_id: 8159238488607377893L
+					title: "Butchery Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -104,11 +154,67 @@
 			]
 			subtitle: "Requires Prepared meat; then confirm the milestone."
 			title: "From cuts to cooking"
-			x: -7.0d
+			x: -4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["71390971389C67F4"]
+			description: [
+				"Use the Butchery equipment from this milestone on its intended processing step and collect the resulting products."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:cooked_beef"
+			id: "54A92BCE267BE9FB"
+			rewards: [
+				{
+					id: "7F7723965F226B62"
+					table_id: 7884837036022247062L
+					title: "Butchery Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "36A0DD1F50B451E2"
+					title: "Confirm: Process: Obtain: Prepared meat"
+					type: "checkmark"
+				}
+			]
+			title: "Process: Obtain: Prepared meat"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["54A92BCE267BE9FB"]
+			description: [
+				"Turn the outputs into useful food, blood, organs, or downstream ingredients instead of discarding byproducts."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:cooked_beef"
+			id: "1EEDBE28A40E2D24"
+			rewards: [
+				{
+					id: "435C7094AD22576D"
+					table_id: 7884837036022247062L
+					title: "Butchery Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "33447C39D94A96BA"
+					title: "Confirm: Preserve: Obtain: Prepared meat"
+					type: "checkmark"
+				}
+			]
+			title: "Preserve: Obtain: Prepared meat"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1EEDBE28A40E2D24"]
 			description: [
 				"Inspect the Butchery blood-handling options with Blood Magic and Hexerei installed. Build one supported connection shown by the installed guide or recipes; keep the different fluid systems distinct until you verify a conversion."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -117,26 +223,16 @@
 			id: "7E7522394BC0CA28"
 			rewards: [
 				{
-					count: 4
-					id: "95257F1DD9E7E543"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "19DCC7769A415978"
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "533E21B6C6FCDB66"
 					table_id: 7884837036022247062L
 					title: "Butchery Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -155,11 +251,67 @@
 			]
 			subtitle: "Requires Blood-handling containers; then confirm the milestone."
 			title: "The blood workshop"
-			x: 0.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7E7522394BC0CA28"]
+			description: [
+				"Use the Butchery equipment from this milestone on its intended processing step and collect the resulting products."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:glass_bottle"
+			id: "37E40670110447F3"
+			rewards: [
+				{
+					id: "008847E6C31D8E09"
+					table_id: 7884837036022247062L
+					title: "Butchery Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "667359AF9ACBC28A"
+					title: "Confirm: Process: Obtain: Blood-handling containers"
+					type: "checkmark"
+				}
+			]
+			title: "Process: Obtain: Blood-handling containers"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["37E40670110447F3"]
+			description: [
+				"Turn the outputs into useful food, blood, organs, or downstream ingredients instead of discarding byproducts."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:glass_bottle"
+			id: "0AA45D4189A443DD"
+			rewards: [
+				{
+					id: "1661696A69307A6B"
+					table_id: 667461344241498180L
+					title: "Butchery Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "79AB8D1CB7411D04"
+					title: "Confirm: Preserve: Obtain: Blood-handling containers"
+					type: "checkmark"
+				}
+			]
+			title: "Preserve: Obtain: Blood-handling containers"
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0AA45D4189A443DD"]
 			description: [
 				"Explore Vampirism as a vampire or hunter at your choice. Inspect Butchery blood values and heart integration; build a supply station appropriate to your faction."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -178,16 +330,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "0675273FDA5C93D9"
 					table_id: 667461344241498180L
 					title: "Butchery Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -205,11 +353,67 @@
 			]
 			subtitle: "Requires Faction provisions; then confirm the milestone."
 			title: "Vampire provisions"
-			x: 7.0d
-			y: 0.0d
+			x: 16.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["71462C1C525987DD"]
+			description: [
+				"Use the Butchery equipment from this milestone on its intended processing step and collect the resulting products."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:golden_apple"
+			id: "5FD713ECD628ECE7"
+			rewards: [
+				{
+					id: "7D465011E1C1F50B"
+					table_id: 667461344241498180L
+					title: "Butchery Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "73D5DD341475FB65"
+					title: "Confirm: Process: Obtain: Faction provisions"
+					type: "checkmark"
+				}
+			]
+			title: "Process: Obtain: Faction provisions"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5FD713ECD628ECE7"]
+			description: [
+				"Turn the outputs into useful food, blood, organs, or downstream ingredients instead of discarding byproducts."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:golden_apple"
+			id: "5EBD7AF067CE5682"
+			rewards: [
+				{
+					id: "1191B3C48F024CD7"
+					table_id: 667461344241498180L
+					title: "Butchery Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "255A4FD7449CBF23"
+					title: "Confirm: Preserve: Obtain: Faction provisions"
+					type: "checkmark"
+				}
+			]
+			title: "Preserve: Obtain: Faction provisions"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5EBD7AF067CE5682"]
 			description: [
 				"Use the Butchery Alex's Mobs addon on one of its supported animals. Its beta list covers six species, so check support before planning a larger processing line."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -218,31 +422,16 @@
 			id: "78F216007C4453E8"
 			rewards: [
 				{
-					count: 2
-					id: "78E78936C3E4CAEA"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "86D440F4FF62F9CA"
 					type: "xp"
 					xp: 450
 				}
-			
-				{
-					id: "2DB0D68E6C625309"
-					table_id: 3948077817384895605L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "29E7961079FC3AC2"
 					table_id: 5966810228284698770L
 					title: "Butchery Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -261,8 +450,98 @@
 			]
 			subtitle: "Requires Animal handling supplies; then confirm the milestone."
 			title: "Expanded processing"
-			x: 14.0d
-			y: 0.0d
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["78F216007C4453E8"]
+			description: [
+				"Use the Butchery equipment from this milestone on its intended processing step and collect the resulting products."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:lead"
+			id: "2E93C172CD9D5D05"
+			rewards: [
+				{
+					id: "7B1F696FC50F7C62"
+					table_id: 5966810228284698770L
+					title: "Butchery Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3D9EB171BC7101CB"
+					title: "Confirm: Process: Obtain: Animal handling supplies"
+					type: "checkmark"
+				}
+			]
+			title: "Process: Obtain: Animal handling supplies"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2E93C172CD9D5D05"]
+			description: [
+				"Turn the outputs into useful food, blood, organs, or downstream ingredients instead of discarding byproducts."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:lead"
+			id: "6481BDDEB50060D9"
+			rewards: [
+				{
+					id: "25BC07A762166EA2"
+					table_id: 5966810228284698770L
+					title: "Butchery Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4B9D5C7FA7AE0CBB"
+					title: "Confirm: Preserve: Obtain: Animal handling supplies"
+					type: "checkmark"
+				}
+			]
+			title: "Preserve: Obtain: Animal handling supplies"
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6481BDDEB50060D9"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_sword"
+			id: "0A685228B17ED51D"
+			rewards: [
+				{
+					id: "74463653A9AA33D8"
+					table_id: 5966810228284698770L
+					title: "Butchery Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "2DB0D68E6C625309"
+					table_id: 3948077817384895605L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "539361A411EAFDDA"
+					title: "Confirm chapter mastery: Butchery"
+					type: "checkmark"
+				}
+			]
+			title: "Butchery Mastery"
+			x: -8.0d
+			y: 8.0d
 		}
 	]
 	title: "Butchery and Bloodcraft"

@@ -11,8 +11,8 @@
 			id: "6562879F7F787283",
 			subtitle: "Requires Metallurgic Infuser + Enrichment Chamber; completion is detected automatically."
 			title: "A powered machine room",
-			x: -10.5d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Generate energy, connect cables, and run a Metallurgic Infuser and Enrichment Chamber. Leave room for upgrades.",
@@ -30,14 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "4EAD32764C51789B"
 					table_id: 4776605992129075617L
 					title: "Mekanism Industry Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -61,14 +59,70 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["6562879F7F787283"]
+			description: [
+				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "mekanism:metallurgic_infuser"
+			id: "63F5C772CFB29528"
+			rewards: [
+				{
+					id: "62C8645F81DFCBF6"
+					table_id: 4776605992129075617L
+					title: "Mekanism Industry Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "51D0B33B529A1CB8"
+					title: "Confirm: Commission: A powered machine room"
+					type: "checkmark"
+				}
+			]
+			title: "Commission: A powered machine room"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["63F5C772CFB29528"]
+			description: [
+				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "mekanism:metallurgic_infuser"
+			id: "5B9F22B2E0B07385"
+			rewards: [
+				{
+					id: "4FCD9A9E2DCF3B47"
+					table_id: 4776605992129075617L
+					title: "Mekanism Industry Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "328160359A5167BD"
+					title: "Confirm: Automate: A powered machine room"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: A powered machine room"
+			x: -8.0d
+			y: 0.0d
+		}
 		{
 			icon: "mekanism:purification_chamber"
 			id: "0C7A1308769A74B9",
 			subtitle: "Requires Advanced ore-processing machine; completion is detected automatically."
 			title: "Ore processing",
-			x: -3.5d,
-			y: 0.0d,
+			x: -4.0d
+			y: 0.0d
 			description: [
 				"Build a reliable processing line and automate its inputs and outputs. Expand chemical processing only after checking the installed recipes.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -85,16 +139,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "4D565557F9BD63AA"
 					table_id: 2059557368985092533L
 					title: "Mekanism Industry Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -111,17 +161,71 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"6562879F7F787283"
+			dependencies: ["5B9F22B2E0B07385"]
+		}
+		{
+			dependencies: ["0C7A1308769A74B9"]
+			description: [
+				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "mekanism:purification_chamber"
+			id: "183643F28E664C44"
+			rewards: [
+				{
+					id: "11AB59B9885FAADA"
+					table_id: 2059557368985092533L
+					title: "Mekanism Industry Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "06282D4A25584D00"
+					title: "Confirm: Commission: Ore processing"
+					type: "checkmark"
+				}
+			]
+			title: "Commission: Ore processing"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["183643F28E664C44"]
+			description: [
+				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "mekanism:purification_chamber"
+			id: "5EAF458D93D049F9"
+			rewards: [
+				{
+					id: "2F169E599E8E3F73"
+					table_id: 2059557368985092533L
+					title: "Mekanism Industry Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3BB2F6359E650B9F"
+					title: "Confirm: Automate: Ore processing"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Ore processing"
+			x: 4.0d
+			y: 0.0d
+		}
 		{
 			icon: "mekanism:ultimate_energy_cube"
 			id: "6E3143B357129102",
 			subtitle: "Requires High-capacity energy buffer; completion is detected automatically."
 			title: "Power with safeguards",
-			x: 3.5d,
-			y: 0.0d,
+			x: 8.0d
+			y: 0.0d
 			description: [
 				"Build a larger energy system. Read the reactor guide before operation and provide a reliable shutdown and waste-handling plan for any fission installation.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -138,16 +242,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "2E9621B23BE0CC59"
 					table_id: 4136371881537435336L
 					title: "Mekanism Industry Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -164,48 +264,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"0C7A1308769A74B9"
+			dependencies: ["5EAF458D93D049F9"]
+		}
+		{
+			dependencies: ["6E3143B357129102"]
+			description: [
+				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "mekanism:ultimate_energy_cube"
+			id: "26E091D092556FB0"
+			rewards: [
+				{
+					id: "0DE9E5FF6E7B7B24"
+					table_id: 4136371881537435336L
+					title: "Mekanism Industry Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "605ECC7E7F5C10AC"
+					title: "Confirm: Commission: Power with safeguards"
+					type: "checkmark"
+				}
+			]
+			title: "Commission: Power with safeguards"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["26E091D092556FB0"]
+			description: [
+				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "mekanism:ultimate_energy_cube"
+			id: "44EA9A10C307DAE7"
+			rewards: [
+				{
+					id: "7E60A9ACD85B4ED5"
+					table_id: 4136371881537435336L
+					title: "Mekanism Industry Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2374DD4FB4901FBE"
+					title: "Confirm: Automate: Power with safeguards"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Power with safeguards"
+			x: 16.0d
+			y: 0.0d
+		}
 		{
 			icon: "mekanism:mekasuit_helmet"
 			id: "27F120E99FCF093B",
 			subtitle: "Requires MekaSuit Helmet; completion is detected automatically."
 			title: "The MekaSuit",
-			x: 10.5d,
-			y: 0.0d,
+			x: 16.0d
+			y: 8.0d
 			description: [
 				"Craft and charge the MekaSuit pieces, then install modules appropriate to your exploration plans.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
-					count: 2
-					id: "E0EA773CF8268E71"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "6702318ADC479DA3"
 					type: "xp"
 					xp: 400
 				}
-			
-				{
-					id: "00013103C75074FF"
-					table_id: 5287311716821505651L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "297BB209C89F85FD"
 					table_id: 165611597155965923L
 					title: "Mekanism Industry Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -222,9 +361,97 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"6E3143B357129102"
+			dependencies: ["44EA9A10C307DAE7"]
+		}
+		{
+			dependencies: ["27F120E99FCF093B"]
+			description: [
+				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "mekanism:mekasuit_helmet"
+			id: "4A4EFCC143C10893"
+			rewards: [
+				{
+					id: "0CCCEEEC263EDA08"
+					table_id: 165611597155965923L
+					title: "Mekanism Industry Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "03B2BF66D6B5C2F8"
+					title: "Confirm: Commission: The MekaSuit"
+					type: "checkmark"
+				}
+			]
+			title: "Commission: The MekaSuit"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["4A4EFCC143C10893"]
+			description: [
+				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "mekanism:mekasuit_helmet"
+			id: "7629A6E7C160C1D0"
+			rewards: [
+				{
+					id: "0337D408F992C544"
+					table_id: 165611597155965923L
+					title: "Mekanism Industry Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1996B57A411FDD34"
+					title: "Confirm: Automate: The MekaSuit"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: The MekaSuit"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7629A6E7C160C1D0"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "mekanism:metallurgic_infuser"
+			id: "3A3D9EA4421B3E5F"
+			rewards: [
+				{
+					id: "393AB8E1188B48C2"
+					table_id: 165611597155965923L
+					title: "Mekanism Industry Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "00013103C75074FF"
+					table_id: 5287311716821505651L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "79F92F0089C076F4"
+					title: "Confirm chapter mastery: Mekanism Industry"
+					type: "checkmark"
+				}
+			]
+			title: "Mekanism Industry Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

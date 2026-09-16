@@ -11,8 +11,8 @@
 			id: "15DAE3CE842B7E3D",
 			subtitle: "Requires Ritual reference book; then confirm the milestone."
 			title: "Occultism rituals",
-			x: -14.0d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Follow the Dictionary of Spirits to summon a spirit and establish one useful ritual or storage system.",
@@ -30,14 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "2B662AA39B10E24B"
 					table_id: 6751736861749612462L
 					title: "Rituals and Witchcraft Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -53,14 +51,70 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["15DAE3CE842B7E3D"]
+			description: [
+				"Build the ritual workspace and stock the ingredients or power source needed for this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:book"
+			id: "5401EFCC238554DF"
+			rewards: [
+				{
+					id: "4D2186E241BA7884"
+					table_id: 6751736861749612462L
+					title: "Rituals and Witchcraft Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "03E94309C39F93A3"
+					title: "Confirm: Prepare: Occultism rituals"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Occultism rituals"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5401EFCC238554DF"]
+			description: [
+				"Complete a real ritual, rite, or magical process from this stage and verify the expected result occurs."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:book"
+			id: "78EF235E132F28E2"
+			rewards: [
+				{
+					id: "09BC581158688DCA"
+					table_id: 6751736861749612462L
+					title: "Rituals and Witchcraft Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4AF7D9A38F81A206"
+					title: "Confirm: Perform: Occultism rituals"
+					type: "checkmark"
+				}
+			]
+			title: "Perform: Occultism rituals"
+			x: -8.0d
+			y: 0.0d
+		}
 		{
 			icon: "botania:mana_pool"
 			id: "200753C8EB83311D",
 			subtitle: "Requires Mana Pool; then confirm the milestone."
 			title: "Botania garden",
-			x: -7.0d,
-			y: 0.0d,
+			x: -4.0d
+			y: 0.0d
 			description: [
 				"Create a mana-generating garden, transfer mana, and craft a functional botanical item.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -77,16 +131,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "0BECD38EB7237074"
-					table_id: 8457706976814730598L
-					title: "Rituals and Witchcraft Tier 2 Roll"
+					table_id: 6751736861749612462L
+					title: "Rituals and Witchcraft Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -102,17 +152,71 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"15DAE3CE842B7E3D"
+			dependencies: ["78EF235E132F28E2"]
+		}
+		{
+			dependencies: ["200753C8EB83311D"]
+			description: [
+				"Build the ritual workspace and stock the ingredients or power source needed for this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "botania:mana_pool"
+			id: "0ADB05963B4E7DF2"
+			rewards: [
+				{
+					id: "5C212817B10323F9"
+					table_id: 8457706976814730598L
+					title: "Rituals and Witchcraft Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "68C2B3F7A092C479"
+					title: "Confirm: Prepare: Botania garden"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Botania garden"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0ADB05963B4E7DF2"]
+			description: [
+				"Complete a real ritual, rite, or magical process from this stage and verify the expected result occurs."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "botania:mana_pool"
+			id: "346F3225EA6754EF"
+			rewards: [
+				{
+					id: "693C856FED31E7C9"
+					table_id: 8457706976814730598L
+					title: "Rituals and Witchcraft Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3C19EE96DE9EFD31"
+					title: "Confirm: Perform: Botania garden"
+					type: "checkmark"
+				}
+			]
+			title: "Perform: Botania garden"
+			x: 4.0d
+			y: 0.0d
+		}
 		{
 			icon: "bloodmagic:altar"
 			id: "03AFE303E07AA846",
 			subtitle: "Requires Blood Altar; then confirm the milestone."
 			title: "Blood Magic altar",
-			x: 0.0d,
-			y: 0.0d,
+			x: 8.0d
+			y: 0.0d
 			description: [
 				"Build a Blood Altar and progress through the early slate and orb recipes in the installed guide.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -129,16 +233,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "2F907AB15FFD0343"
 					table_id: 8457706976814730598L
 					title: "Rituals and Witchcraft Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -154,17 +254,71 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"200753C8EB83311D"
+			dependencies: ["346F3225EA6754EF"]
+		}
+		{
+			dependencies: ["03AFE303E07AA846"]
+			description: [
+				"Build the ritual workspace and stock the ingredients or power source needed for this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "bloodmagic:altar"
+			id: "37B3F4081BF2AE4F"
+			rewards: [
+				{
+					id: "2B16BA144D642BF1"
+					table_id: 8457706976814730598L
+					title: "Rituals and Witchcraft Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "088585F39BFA934F"
+					title: "Confirm: Prepare: Blood Magic altar"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Blood Magic altar"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["37B3F4081BF2AE4F"]
+			description: [
+				"Complete a real ritual, rite, or magical process from this stage and verify the expected result occurs."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "bloodmagic:altar"
+			id: "1975272D9EBAA353"
+			rewards: [
+				{
+					id: "77187C5DA469EFCF"
+					table_id: 8750171586227325518L
+					title: "Rituals and Witchcraft Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4998BFCD3174CC0A"
+					title: "Confirm: Perform: Blood Magic altar"
+					type: "checkmark"
+				}
+			]
+			title: "Perform: Blood Magic altar"
+			x: 16.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:cauldron"
 			id: "785DBD084E3E054F",
 			subtitle: "Requires Witch workshop cauldron; then confirm the milestone."
 			title: "Hexerei workshop",
-			x: 7.0d,
-			y: 0.0d,
+			x: 16.0d
+			y: 8.0d
 			description: [
 				"Build a witchs workshop and use Hexerei crafting to make a useful item. Keep its blood and fluid systems separate unless JEI shows a supported conversion.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -181,16 +335,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "7A3F0C6EE587DAB9"
 					table_id: 8750171586227325518L
 					title: "Rituals and Witchcraft Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -206,48 +356,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"03AFE303E07AA846"
+			dependencies: ["1975272D9EBAA353"]
+		}
+		{
+			dependencies: ["785DBD084E3E054F"]
+			description: [
+				"Build the ritual workspace and stock the ingredients or power source needed for this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:cauldron"
+			id: "24E4FD1DC5D504F3"
+			rewards: [
+				{
+					id: "0F343A22682A2A8A"
+					table_id: 8750171586227325518L
+					title: "Rituals and Witchcraft Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "794D15FF93629028"
+					title: "Confirm: Prepare: Hexerei workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Hexerei workshop"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["24E4FD1DC5D504F3"]
+			description: [
+				"Complete a real ritual, rite, or magical process from this stage and verify the expected result occurs."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:cauldron"
+			id: "5497AD492FF00057"
+			rewards: [
+				{
+					id: "3853AFD3F7FB723F"
+					table_id: 8750171586227325518L
+					title: "Rituals and Witchcraft Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4355BFDEDF683C70"
+					title: "Confirm: Perform: Hexerei workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Perform: Hexerei workshop"
+			x: 8.0d
+			y: 8.0d
+		}
 		{
 			icon: "minecraft:golden_apple"
 			id: "0529657A7D4C8721",
 			subtitle: "Requires Faction progression supplies; then confirm the milestone."
 			title: "Vampire or hunter",
-			x: 14.0d,
-			y: 0.0d,
+			x: 4.0d
+			y: 8.0d
 			description: [
 				"Choose your Vampirism faction if desired. Establish the supplies and equipment needed for its progression.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 2
-					id: "F2441BCD4090B5F2"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "5086B21A1C4F7FB1"
 					type: "xp"
 					xp: 450
 				}
-			
-				{
-					id: "0AF34DDAE87AA366"
-					table_id: 406399213614318139L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "3724A603012AB91A"
 					table_id: 8174079271273575001L
 					title: "Rituals and Witchcraft Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -263,9 +452,97 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"785DBD084E3E054F"
+			dependencies: ["5497AD492FF00057"]
+		}
+		{
+			dependencies: ["0529657A7D4C8721"]
+			description: [
+				"Build the ritual workspace and stock the ingredients or power source needed for this milestone."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:golden_apple"
+			id: "26E9577FF90BC688"
+			rewards: [
+				{
+					id: "53199A4EC0558B1C"
+					table_id: 8174079271273575001L
+					title: "Rituals and Witchcraft Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3623A016592CBB02"
+					title: "Confirm: Prepare: Vampire or hunter"
+					type: "checkmark"
+				}
+			]
+			title: "Prepare: Vampire or hunter"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["26E9577FF90BC688"]
+			description: [
+				"Complete a real ritual, rite, or magical process from this stage and verify the expected result occurs."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:golden_apple"
+			id: "1295AF9C490201C9"
+			rewards: [
+				{
+					id: "1E7608F0DA819689"
+					table_id: 8174079271273575001L
+					title: "Rituals and Witchcraft Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6E9160FBD52818D4"
+					title: "Confirm: Perform: Vampire or hunter"
+					type: "checkmark"
+				}
+			]
+			title: "Perform: Vampire or hunter"
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1295AF9C490201C9"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:book"
+			id: "398216DB58484B74"
+			rewards: [
+				{
+					id: "302B8B64C91A2DFE"
+					table_id: 8174079271273575001L
+					title: "Rituals and Witchcraft Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "0AF34DDAE87AA366"
+					table_id: 406399213614318139L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "449C70E006BCF672"
+					title: "Confirm chapter mastery: Rituals and Witchcraft"
+					type: "checkmark"
+				}
+			]
+			title: "Rituals and Witchcraft Mastery"
+			x: -8.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

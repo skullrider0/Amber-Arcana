@@ -11,8 +11,8 @@
 			id: "2F90A5A4DB0404F1",
 			subtitle: "Requires Iron Spell Book; completion is detected automatically."
 			title: "Choose a school",
-			x: -7.0d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Find or craft a spellbook and learn a spell. Read its mana cost and cooldown before entering combat.",
@@ -30,16 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-				
-			
-
 				{
 					id: "02D2314163DFAEAB"
 					table_id: 3870714476569221173L
 					title: "Iron Spells and Wizardry Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -56,14 +52,98 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["2F90A5A4DB0404F1"]
+			description: [
+				"Equip the spellcasting gear from this milestone and successfully use an appropriate spell in normal play."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "irons_spellbooks:iron_spell_book"
+			id: "7B33A9B197BDA8E4"
+			rewards: [
+				{
+					id: "6EABD246715F5935"
+					table_id: 3870714476569221173L
+					title: "Iron Spells and Wizardry Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "0414DCA23C976C1C"
+					title: "Confirm: Learn: Choose a school"
+					type: "checkmark"
+				}
+			]
+			title: "Learn: Choose a school"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B33A9B197BDA8E4"]
+			description: [
+				"Improve your spellbook, scrolls, ink, armor, or spell selection so this tier is more than a one-off craft."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "irons_spellbooks:iron_spell_book"
+			id: "1A4EDB33F6F51D0A"
+			rewards: [
+				{
+					id: "54C54682992E8803"
+					table_id: 3870714476569221173L
+					title: "Iron Spells and Wizardry Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "45E3703CAF29C69D"
+					title: "Confirm: Upgrade: Choose a school"
+					type: "checkmark"
+				}
+			]
+			title: "Upgrade: Choose a school"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A4EDB33F6F51D0A"]
+			description: [
+				"Use the upgraded spell loadout in a meaningful combat or exploration encounter and confirm it is ready for the next tier."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "irons_spellbooks:iron_spell_book"
+			id: "3EDF4CAF2B04D895"
+			rewards: [
+				{
+					id: "28E4F448A1F7E3AF"
+					table_id: 3398924762288486032L
+					title: "Iron Spells and Wizardry Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "43459842FB688B6C"
+					title: "Confirm: Prove: Choose a school"
+					type: "checkmark"
+				}
+			]
+			title: "Prove: Choose a school"
+			x: -4.0d
+			y: 0.0d
+		}
 		{
 			icon: "irons_spellbooks:inscription_table"
 			id: "017F83F1867628E2",
 			subtitle: "Requires Inscription Table; completion is detected automatically."
 			title: "The inscription workshop",
-			x: 0.0d,
-			y: 0.0d,
+			x: 0.0d
+			y: 0.0d
 			description: [
 				"Build the spell-crafting stations supported by this version and improve your book and equipment.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -80,16 +160,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "0A9ED78FA07295FD"
 					table_id: 3398924762288486032L
 					title: "Iron Spells and Wizardry Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -106,48 +182,115 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"2F90A5A4DB0404F1"
+			dependencies: ["3EDF4CAF2B04D895"]
+		}
+		{
+			dependencies: ["017F83F1867628E2"]
+			description: [
+				"Equip the spellcasting gear from this milestone and successfully use an appropriate spell in normal play."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "irons_spellbooks:inscription_table"
+			id: "1CEDEE246BE2D2BF"
+			rewards: [
+				{
+					id: "7C30EC73882E8166"
+					table_id: 3398924762288486032L
+					title: "Iron Spells and Wizardry Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "70D74069841561B8"
+					title: "Confirm: Learn: The inscription workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Learn: The inscription workshop"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1CEDEE246BE2D2BF"]
+			description: [
+				"Improve your spellbook, scrolls, ink, armor, or spell selection so this tier is more than a one-off craft."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "irons_spellbooks:inscription_table"
+			id: "2FD6EE9C8439BAAA"
+			rewards: [
+				{
+					id: "2CF1115BDFD1F468"
+					table_id: 6085629220671797886L
+					title: "Iron Spells and Wizardry Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1E5EB944884D87BF"
+					title: "Confirm: Upgrade: The inscription workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Upgrade: The inscription workshop"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2FD6EE9C8439BAAA"]
+			description: [
+				"Use the upgraded spell loadout in a meaningful combat or exploration encounter and confirm it is ready for the next tier."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "irons_spellbooks:inscription_table"
+			id: "18F75D70F9DD8AF8"
+			rewards: [
+				{
+					id: "1839545C9BF049BF"
+					table_id: 6085629220671797886L
+					title: "Iron Spells and Wizardry Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "0706DC366823D5DD"
+					title: "Confirm: Prove: The inscription workshop"
+					type: "checkmark"
+				}
+			]
+			title: "Prove: The inscription workshop"
+			x: 12.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:amethyst_shard"
 			id: "00C1FF44E8C395ED",
 			subtitle: "Requires Cross-mod spell materials; then confirm the milestone."
 			title: "Spells beyond the surface",
-			x: 7.0d,
-			y: 0.0d,
+			x: 16.0d
+			y: 0.0d
 			description: [
 				"Explore the installed Alexs Caves spell addon and Create Wizardry. Use JEI to find the recipes that connect the systems.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 1
-					id: "F030614B4A69FF2C"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "CB45882F419365E2"
 					type: "xp"
 					xp: 350
 				}
-			
-				{
-					id: "4F97C3A3BFA4EEF2"
-					table_id: 4628124955891944383L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "1ADA128F2ACC6C45"
-					table_id: 5158442644180175083L
-					title: "Iron Spells and Wizardry Tier 4 Roll"
+					table_id: 6085629220671797886L
+					title: "Iron Spells and Wizardry Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -164,9 +307,125 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"017F83F1867628E2"
+			dependencies: ["18F75D70F9DD8AF8"]
+		}
+		{
+			dependencies: ["00C1FF44E8C395ED"]
+			description: [
+				"Equip the spellcasting gear from this milestone and successfully use an appropriate spell in normal play."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:amethyst_shard"
+			id: "3FB1D4CC4A95EA20"
+			rewards: [
+				{
+					id: "3D833B70AFEFBFA0"
+					table_id: 5158442644180175083L
+					title: "Iron Spells and Wizardry Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3538D8966A5144D2"
+					title: "Confirm: Learn: Spells beyond the surface"
+					type: "checkmark"
+				}
+			]
+			title: "Learn: Spells beyond the surface"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3FB1D4CC4A95EA20"]
+			description: [
+				"Improve your spellbook, scrolls, ink, armor, or spell selection so this tier is more than a one-off craft."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:amethyst_shard"
+			id: "24A9320752D0796A"
+			rewards: [
+				{
+					id: "409583818F583AF9"
+					table_id: 5158442644180175083L
+					title: "Iron Spells and Wizardry Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "082B4754036933C1"
+					title: "Confirm: Upgrade: Spells beyond the surface"
+					type: "checkmark"
+				}
+			]
+			title: "Upgrade: Spells beyond the surface"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["24A9320752D0796A"]
+			description: [
+				"Use the upgraded spell loadout in a meaningful combat or exploration encounter and confirm it is ready for the next tier."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:amethyst_shard"
+			id: "60EBDBD174C2D1C8"
+			rewards: [
+				{
+					id: "568EFD3CDFDACE3C"
+					table_id: 5158442644180175083L
+					title: "Iron Spells and Wizardry Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "03A74B4DD52B67A7"
+					title: "Confirm: Prove: Spells beyond the surface"
+					type: "checkmark"
+				}
+			]
+			title: "Prove: Spells beyond the surface"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["60EBDBD174C2D1C8"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "irons_spellbooks:iron_spell_book"
+			id: "7B450B061D4C09EB"
+			rewards: [
+				{
+					id: "534C9261BE7B40E9"
+					table_id: 5158442644180175083L
+					title: "Iron Spells and Wizardry Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "4F97C3A3BFA4EEF2"
+					table_id: 4628124955891944383L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "1E6ED92FE880BCAB"
+					title: "Confirm chapter mastery: Iron Spells and Wizardry"
+					type: "checkmark"
+				}
+			]
+			title: "Iron Spells and Wizardry Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

@@ -11,8 +11,8 @@
 			id: "3099F106AB3C6A98",
 			subtitle: "Requires Gunsmithing metal; then confirm the milestone."
 			title: "A gunsmiths bench",
-			x: -7.0d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft a Create Gunsmithing weapon and compatible ammunition using the installed recipes.",
@@ -30,16 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-				
-			
-
 				{
 					id: "6678B339067E471E"
 					table_id: 4636241790363593019L
 					title: "Firearms and Artillery Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -56,14 +52,98 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["3099F106AB3C6A98"]
+			description: [
+				"Produce the weapon, ammunition, or supporting components for this milestone through the intended crafting chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_ingot"
+			id: "6E9C52C7FF998034"
+			rewards: [
+				{
+					id: "0C0244716FD74B5F"
+					table_id: 4636241790363593019L
+					title: "Firearms and Artillery Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "443D49A537446B97"
+					title: "Confirm: Manufacture: A gunsmiths bench"
+					type: "checkmark"
+				}
+			]
+			title: "Manufacture: A gunsmiths bench"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6E9C52C7FF998034"]
+			description: [
+				"Use the firearm on a safe combat test and confirm ammunition, handling, and reliability before relying on it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_ingot"
+			id: "76C31DB7461F26CC"
+			rewards: [
+				{
+					id: "154FE16C8825EDAD"
+					table_id: 4636241790363593019L
+					title: "Firearms and Artillery Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6310D9154F631962"
+					title: "Confirm: Test: A gunsmiths bench"
+					type: "checkmark"
+				}
+			]
+			title: "Test: A gunsmiths bench"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["76C31DB7461F26CC"]
+			description: [
+				"Improve the weapon setup with the installed attachments, ammunition options, or higher-tier manufacturing path."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_ingot"
+			id: "481D4481FEAE55BB"
+			rewards: [
+				{
+					id: "63D1CBFF10DD33A9"
+					table_id: 7052582788099293422L
+					title: "Firearms and Artillery Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "24EC13835BEBD35F"
+					title: "Confirm: Upgrade: A gunsmiths bench"
+					type: "checkmark"
+				}
+			]
+			title: "Upgrade: A gunsmiths bench"
+			x: -4.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:gunpowder"
 			id: "75559872A530EDA9",
 			subtitle: "Requires Ammunition ingredients; then confirm the milestone."
 			title: "An ammunition line",
-			x: 0.0d,
-			y: 0.0d,
+			x: 0.0d
+			y: 0.0d
 			description: [
 				"Automate a repeatable ammunition ingredient or assembly step using the available Create recipes.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -80,16 +160,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "53D4CCD0DF161519"
 					table_id: 7052582788099293422L
 					title: "Firearms and Artillery Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -106,48 +182,115 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"3099F106AB3C6A98"
+			dependencies: ["481D4481FEAE55BB"]
+		}
+		{
+			dependencies: ["75559872A530EDA9"]
+			description: [
+				"Produce the weapon, ammunition, or supporting components for this milestone through the intended crafting chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:gunpowder"
+			id: "548A70162F6BEE5B"
+			rewards: [
+				{
+					id: "79812B2E145866DD"
+					table_id: 7052582788099293422L
+					title: "Firearms and Artillery Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5BAC82E3F9EABD8A"
+					title: "Confirm: Manufacture: An ammunition line"
+					type: "checkmark"
+				}
+			]
+			title: "Manufacture: An ammunition line"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["548A70162F6BEE5B"]
+			description: [
+				"Use the firearm on a safe combat test and confirm ammunition, handling, and reliability before relying on it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:gunpowder"
+			id: "727E40B8EAA9C534"
+			rewards: [
+				{
+					id: "43D6732D14882096"
+					table_id: 709602571571831489L
+					title: "Firearms and Artillery Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "62121FCA5C3BE976"
+					title: "Confirm: Test: An ammunition line"
+					type: "checkmark"
+				}
+			]
+			title: "Test: An ammunition line"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["727E40B8EAA9C534"]
+			description: [
+				"Improve the weapon setup with the installed attachments, ammunition options, or higher-tier manufacturing path."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:gunpowder"
+			id: "2B1A3C09F702DA23"
+			rewards: [
+				{
+					id: "30E83E7AF0242829"
+					table_id: 709602571571831489L
+					title: "Firearms and Artillery Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "6508A54CC5D69201"
+					title: "Confirm: Upgrade: An ammunition line"
+					type: "checkmark"
+				}
+			]
+			title: "Upgrade: An ammunition line"
+			x: 12.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:obsidian"
 			id: "2129796B99A6F9F3",
 			subtitle: "Requires Cannon test-site reinforcement; then confirm the milestone."
 			title: "Big Cannons",
-			x: 7.0d,
-			y: 0.0d,
+			x: 16.0d
+			y: 0.0d
 			description: [
 				"Construct and load a Create Big Cannons installation using its guide. Test it in a clear area away from your colony and habitats.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 1
-					id: "B126F54554011AF5"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "7781225F05FC40F3"
 					type: "xp"
 					xp: 350
 				}
-			
-				{
-					id: "4DF488AD5457B9CD"
-					table_id: 1706152579520021409L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "0263E8719AA0326E"
-					table_id: 7383814185449608606L
-					title: "Firearms and Artillery Tier 4 Roll"
+					table_id: 709602571571831489L
+					title: "Firearms and Artillery Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -164,9 +307,125 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"75559872A530EDA9"
+			dependencies: ["2B1A3C09F702DA23"]
+		}
+		{
+			dependencies: ["2129796B99A6F9F3"]
+			description: [
+				"Produce the weapon, ammunition, or supporting components for this milestone through the intended crafting chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:obsidian"
+			id: "72C5BA2466C1B1F8"
+			rewards: [
+				{
+					id: "55390CAE8101F9D0"
+					table_id: 7383814185449608606L
+					title: "Firearms and Artillery Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "1A76DDCEFF28BA80"
+					title: "Confirm: Manufacture: Big Cannons"
+					type: "checkmark"
+				}
+			]
+			title: "Manufacture: Big Cannons"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["72C5BA2466C1B1F8"]
+			description: [
+				"Use the firearm on a safe combat test and confirm ammunition, handling, and reliability before relying on it."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:obsidian"
+			id: "241435C36FDCD1D1"
+			rewards: [
+				{
+					id: "1EAD24BD12BF2A54"
+					table_id: 7383814185449608606L
+					title: "Firearms and Artillery Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2D327441BD6A8A59"
+					title: "Confirm: Test: Big Cannons"
+					type: "checkmark"
+				}
+			]
+			title: "Test: Big Cannons"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["241435C36FDCD1D1"]
+			description: [
+				"Improve the weapon setup with the installed attachments, ammunition options, or higher-tier manufacturing path."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:obsidian"
+			id: "5ECAA18093E17A5F"
+			rewards: [
+				{
+					id: "3E819EE7B3A2AA68"
+					table_id: 7383814185449608606L
+					title: "Firearms and Artillery Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "16ABE5620C1E46D4"
+					title: "Confirm: Upgrade: Big Cannons"
+					type: "checkmark"
+				}
+			]
+			title: "Upgrade: Big Cannons"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5ECAA18093E17A5F"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_ingot"
+			id: "1C9304C84F5CB9CA"
+			rewards: [
+				{
+					id: "71016667C6F8FD72"
+					table_id: 7383814185449608606L
+					title: "Firearms and Artillery Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "4DF488AD5457B9CD"
+					table_id: 1706152579520021409L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "43790726BA943820"
+					title: "Confirm chapter mastery: Firearms and Artillery"
+					type: "checkmark"
+				}
+			]
+			title: "Firearms and Artillery Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

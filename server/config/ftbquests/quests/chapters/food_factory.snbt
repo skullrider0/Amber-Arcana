@@ -11,8 +11,8 @@
 			id: "7E251CBA1509E973",
 			subtitle: "Requires Seasonal staple crop; then confirm the milestone."
 			title: "A seasonal farm",
-			x: -14.0d,
-			y: 0.0d,
+			x: -16.0d
+			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Check Serene Seasons crop information and grow a Farmer's Delight crop during a suitable season. Reserve protected growing space for your staple crops.",
@@ -30,14 +30,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "6D1618E6378F8CA1"
 					table_id: 2140302369873473984L
 					title: "Food and Seasons Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -54,14 +52,70 @@
 					type: "checkmark"
 				}
 			]
-		},
+		}
+		{
+			dependencies: ["7E251CBA1509E973"]
+			description: [
+				"Use the food-production blocks from this milestone to complete a real processing chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:wheat"
+			id: "60390428758D8098"
+			rewards: [
+				{
+					id: "70340F5C9E9736BB"
+					table_id: 2140302369873473984L
+					title: "Food and Seasons Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3027F6093C5C1772"
+					title: "Confirm: Process: A seasonal farm"
+					type: "checkmark"
+				}
+			]
+			title: "Process: A seasonal farm"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["60390428758D8098"]
+			description: [
+				"Automate ingredient input and finished-food output so the line can keep producing while you do something else."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:wheat"
+			id: "3DF602B256480012"
+			rewards: [
+				{
+					id: "6AED47AF9CCC0BC6"
+					table_id: 2140302369873473984L
+					title: "Food and Seasons Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "12F3AAAD32E27E70"
+					title: "Confirm: Automate: A seasonal farm"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: A seasonal farm"
+			x: -8.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:milk_bucket"
 			id: "7A7B1E2BC56BBFAC",
 			subtitle: "Requires Cheese production input; then confirm the milestone."
 			title: "Cheese on the belt",
-			x: -7.0d,
-			y: 0.0d,
+			x: -4.0d
+			y: 0.0d
 			description: [
 				"Build a Cheese Factory production line and store its output separately from Rats cheese until JEI confirms any shared recipes or tags.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -78,16 +132,12 @@
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "73EFDC2299AA9E87"
-					table_id: 5797659329762223513L
-					title: "Food and Seasons Tier 2 Roll"
+					table_id: 2140302369873473984L
+					title: "Food and Seasons Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -104,43 +154,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"7E251CBA1509E973"
+			dependencies: ["3DF602B256480012"]
+		}
+		{
+			dependencies: ["7A7B1E2BC56BBFAC"]
+			description: [
+				"Use the food-production blocks from this milestone to complete a real processing chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:milk_bucket"
+			id: "1E0B72CBC0C0AF3A"
+			rewards: [
+				{
+					id: "079A4AE3614028A2"
+					table_id: 5797659329762223513L
+					title: "Food and Seasons Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4528C9A828B676A1"
+					title: "Confirm: Process: Cheese on the belt"
+					type: "checkmark"
+				}
+			]
+			title: "Process: Cheese on the belt"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1E0B72CBC0C0AF3A"]
+			description: [
+				"Automate ingredient input and finished-food output so the line can keep producing while you do something else."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:milk_bucket"
+			id: "225C8E63DF0052D1"
+			rewards: [
+				{
+					id: "3E6A9182E6E361F3"
+					table_id: 5797659329762223513L
+					title: "Food and Seasons Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "68F8228CB85507A4"
+					title: "Confirm: Automate: Cheese on the belt"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Cheese on the belt"
+			x: 4.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:sugar"
 			id: "7E926CB17B6B198E",
 			subtitle: "Requires Drink production input; then confirm the milestone."
 			title: "Cola for the crew",
-			x: 0.0d,
-			y: 0.0d,
+			x: 8.0d
+			y: 0.0d
 			description: [
 				"Automate a Cola Factory drink from its raw ingredients through bottling. Provide storage overflow handling.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 4
-					id: "DEC69C9993610E87"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "C899CA5DCE8B87C2"
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "6191D1F1260F21D9"
 					table_id: 5797659329762223513L
 					title: "Food and Seasons Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -157,17 +251,71 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"7A7B1E2BC56BBFAC"
+			dependencies: ["225C8E63DF0052D1"]
+		}
+		{
+			dependencies: ["7E926CB17B6B198E"]
+			description: [
+				"Use the food-production blocks from this milestone to complete a real processing chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:sugar"
+			id: "0C5267F19F54DCA3"
+			rewards: [
+				{
+					id: "1C775E4780EBA83D"
+					table_id: 5797659329762223513L
+					title: "Food and Seasons Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "21EA97F6716F9D84"
+					title: "Confirm: Process: Cola for the crew"
+					type: "checkmark"
+				}
+			]
+			title: "Process: Cola for the crew"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C5267F19F54DCA3"]
+			description: [
+				"Automate ingredient input and finished-food output so the line can keep producing while you do something else."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:sugar"
+			id: "31629201F96558CB"
+			rewards: [
+				{
+					id: "2EA0662FABC76D76"
+					table_id: 8652775081272156602L
+					title: "Food and Seasons Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "69CF6A7A176B389B"
+					title: "Confirm: Automate: Cola for the crew"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: Cola for the crew"
+			x: 16.0d
+			y: 0.0d
+		}
 		{
 			icon: "minecraft:cooked_beef"
 			id: "7480F7554AF497FF",
 			subtitle: "Requires Prepared feast; then confirm the milestone."
 			title: "A fried feast",
-			x: 7.0d,
-			y: 0.0d,
+			x: 16.0d
+			y: 8.0d
 			description: [
 				"Use Deepfried and its Bitterballen dependency to prepare a meal. Connect compatible cutting and processing steps with Slice and Dice or Central Kitchen.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -184,16 +332,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "1A08D658C8128864"
 					table_id: 8652775081272156602L
 					title: "Food and Seasons Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -210,48 +354,87 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"7E926CB17B6B198E"
+			dependencies: ["31629201F96558CB"]
+		}
+		{
+			dependencies: ["7480F7554AF497FF"]
+			description: [
+				"Use the food-production blocks from this milestone to complete a real processing chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-		},
+			icon: "minecraft:cooked_beef"
+			id: "5BFFC941F18D9276"
+			rewards: [
+				{
+					id: "16B28B1201BE8660"
+					table_id: 8652775081272156602L
+					title: "Food and Seasons Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5971C96CD5634702"
+					title: "Confirm: Process: A fried feast"
+					type: "checkmark"
+				}
+			]
+			title: "Process: A fried feast"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5BFFC941F18D9276"]
+			description: [
+				"Automate ingredient input and finished-food output so the line can keep producing while you do something else."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:cooked_beef"
+			id: "2AD94BB420108984"
+			rewards: [
+				{
+					id: "7857973A7F443953"
+					table_id: 8652775081272156602L
+					title: "Food and Seasons Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "36DAFCFB93D9F5C9"
+					title: "Confirm: Automate: A fried feast"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: A fried feast"
+			x: 8.0d
+			y: 8.0d
+		}
 		{
 			icon: "minecraft:bread"
 			id: "7D0F5EFE4719D539",
 			subtitle: "Requires Pantry reserve; then confirm the milestone."
 			title: "A dependable pantry",
-			x: 14.0d,
-			y: 0.0d,
+			x: 4.0d
+			y: 8.0d
 			description: [
 				"Keep a buffer of at least two usable meal types through a season change. Eat Andesite is a novelty option; keep a proper kitchen for colony meals.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
 			],
 			rewards: [
 				{
-					count: 2
-					id: "A4D26A3B083B002B"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "88EC0F9738B513B8"
 					type: "xp"
 					xp: 450
 				}
-			
-				{
-					id: "145F539CBD4195E5"
-					table_id: 5221740806800916523L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "6B4B0D10BB9F52D7"
 					table_id: 6021695586514683820L
 					title: "Food and Seasons Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -268,9 +451,97 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: [
-				"7480F7554AF497FF"
+			dependencies: ["2AD94BB420108984"]
+		}
+		{
+			dependencies: ["7D0F5EFE4719D539"]
+			description: [
+				"Use the food-production blocks from this milestone to complete a real processing chain."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
+			icon: "minecraft:bread"
+			id: "373AB71FB9B27817"
+			rewards: [
+				{
+					id: "7D5470949590C67A"
+					table_id: 6021695586514683820L
+					title: "Food and Seasons Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "27C557F1595FA810"
+					title: "Confirm: Process: A dependable pantry"
+					type: "checkmark"
+				}
+			]
+			title: "Process: A dependable pantry"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["373AB71FB9B27817"]
+			description: [
+				"Automate ingredient input and finished-food output so the line can keep producing while you do something else."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:bread"
+			id: "5F5004B5BFA14DE1"
+			rewards: [
+				{
+					id: "59CE7DC6CD37504B"
+					table_id: 6021695586514683820L
+					title: "Food and Seasons Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2293F59FDCB279D4"
+					title: "Confirm: Automate: A dependable pantry"
+					type: "checkmark"
+				}
+			]
+			title: "Automate: A dependable pantry"
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F5004B5BFA14DE1"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:wheat"
+			id: "187EF298EF979794"
+			rewards: [
+				{
+					id: "01606FB0EE998FFD"
+					table_id: 6021695586514683820L
+					title: "Food and Seasons Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "145F539CBD4195E5"
+					table_id: 5221740806800916523L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "3188C6942B1175EE"
+					title: "Confirm chapter mastery: Food and Seasons"
+					type: "checkmark"
+				}
+			]
+			title: "Food and Seasons Mastery"
+			x: -8.0d
+			y: 8.0d
 		}
 	],
 	quest_links: []

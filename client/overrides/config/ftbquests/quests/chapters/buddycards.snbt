@@ -28,14 +28,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "0EA83D970ED8DE70"
 					table_id: 7679472932105695936L
 					title: "Buddycards Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -54,11 +52,39 @@
 			]
 			subtitle: "Requires Card-sorting supplies; then confirm the milestone."
 			title: "Your first collection"
-			x: -17.5d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7FCDE8795B31F33B"]
+			description: [
+				"Open, trade, or find enough cards from this stage to make visible progress on the collection rather than obtaining only one sample."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:paper"
+			id: "240AFBC6E0274C67"
+			rewards: [
+				{
+					id: "5CDEE604CB1B423D"
+					table_id: 7679472932105695936L
+					title: "Buddycards Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "08327C662AE661F4"
+					title: "Confirm: Collect: Obtain: Card-sorting supplies"
+					type: "checkmark"
+				}
+			]
+			title: "Collect: Obtain: Card-sorting supplies"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["240AFBC6E0274C67"]
 			description: [
 				"Use Create Buddycards recipes to recycle duplicate cards into Create set packs. Make a small line first and confirm it never consumes your display collection."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -67,26 +93,16 @@
 			id: "74D1135963FC93B7"
 			rewards: [
 				{
-					count: 4
-					id: "C6C81F907282017F"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "1B81DAAA5454C225"
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "029A2E3D857CCCBD"
 					table_id: 7679472932105695936L
 					title: "Buddycards Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -105,11 +121,39 @@
 			]
 			subtitle: "Requires Mechanical recycling materials; then confirm the milestone."
 			title: "Mechanical recycling"
-			x: -10.5d
+			x: -8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["74D1135963FC93B7"]
+			description: [
+				"Open, trade, or find enough cards from this stage to make visible progress on the collection rather than obtaining only one sample."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:copper_ingot"
+			id: "4F47F76BF3037ECD"
+			rewards: [
+				{
+					id: "4B1E7C26A8C18F60"
+					table_id: 7476996288365007586L
+					title: "Buddycards Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "22A955FB6122DB44"
+					title: "Confirm: Collect: Obtain: Mechanical recycling materials"
+					type: "checkmark"
+				}
+			]
+			title: "Collect: Obtain: Mechanical recycling materials"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4F47F76BF3037ECD"]
 			description: [
 				"Grow Buddybeans and use Delightful Buddycards recipes to make a pack. Expand the food factory to supply the ingredients."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -128,16 +172,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "524684550A6B87B4"
 					table_id: 7476996288365007586L
 					title: "Buddycards Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -156,11 +196,39 @@
 			]
 			subtitle: "Requires Farm collection supplies; then confirm the milestone."
 			title: "The farmers collection"
-			x: -3.5d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["76E508B4DA1156E6"]
+			description: [
+				"Open, trade, or find enough cards from this stage to make visible progress on the collection rather than obtaining only one sample."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:wheat"
+			id: "7A49FDD4B01812F0"
+			rewards: [
+				{
+					id: "11F66011EF8F97FB"
+					table_id: 7476996288365007586L
+					title: "Buddycards Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4693EE29C173A275"
+					title: "Confirm: Collect: Obtain: Farm collection supplies"
+					type: "checkmark"
+				}
+			]
+			title: "Collect: Obtain: Farm collection supplies"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7A49FDD4B01812F0"]
 			description: [
 				"Fit a Buddysteel Hook to an Aquaculture rod and fish for Aquaculture Buddycards packs or Cardfish. Build a display beside your aquarium."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -179,16 +247,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "5E7CB979F405C354"
 					table_id: 7285622350947601090L
 					title: "Buddycards Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -206,11 +270,39 @@
 			]
 			subtitle: "Requires Fishing setup; then confirm the milestone."
 			title: "Cards from the water"
-			x: 3.5d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7213DF73BF55B790"]
+			description: [
+				"Open, trade, or find enough cards from this stage to make visible progress on the collection rather than obtaining only one sample."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:fishing_rod"
+			id: "44A34495B31FC7B1"
+			rewards: [
+				{
+					id: "3C092DAC48936F86"
+					table_id: 7285622350947601090L
+					title: "Buddycards Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "518CCEDBBCAEB99C"
+					title: "Confirm: Collect: Obtain: Fishing setup"
+					type: "checkmark"
+				}
+			]
+			title: "Collect: Obtain: Fishing setup"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["44A34495B31FC7B1"]
 			description: [
 				"Use AE2 Buddycards to make its collection components and Singularity set packs. Teach the processing recipes to AE2 and keep a buffer of the ingredients."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -219,26 +311,16 @@
 			id: "7683E53A2478761A"
 			rewards: [
 				{
-					count: 4
-					id: "648E1E1921EE0C00"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "A9C73AC61B065F15"
 					type: "xp"
 					xp: 300
 				}
-			
-				
-			
-
 				{
 					id: "595742BFDF2C4129"
 					table_id: 7285622350947601090L
 					title: "Buddycards Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -257,11 +339,39 @@
 			]
 			subtitle: "Requires AE2 collection materials; then confirm the milestone."
 			title: "Singularity collector"
-			x: 10.5d
+			x: 16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7683E53A2478761A"]
+			description: [
+				"Open, trade, or find enough cards from this stage to make visible progress on the collection rather than obtaining only one sample."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:quartz"
+			id: "374D7EE552257D52"
+			rewards: [
+				{
+					id: "5A6A1ECBB11B5EBB"
+					table_id: 7676865499021914423L
+					title: "Buddycards Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "01F83E1CEE03A1ED"
+					title: "Confirm: Collect: Obtain: AE2 collection materials"
+					type: "checkmark"
+				}
+			]
+			title: "Collect: Obtain: AE2 collection materials"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["374D7EE552257D52"]
 			description: [
 				"Complete a card set and display it in a public museum. Trade duplicates with friends and equip an earned medal using Curios."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -270,31 +380,16 @@
 			id: "762E20CA5C1E2D39"
 			rewards: [
 				{
-					count: 2
-					id: "BD92F0FEDC7CE35C"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "BCD35D5CA0873EE3"
 					type: "xp"
 					xp: 500
 				}
-			
-				{
-					id: "24E3EDD18E8A48EE"
-					table_id: 3375361865779001053L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "471EB6212D9592FA"
 					table_id: 7676865499021914423L
 					title: "Buddycards Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -313,8 +408,70 @@
 			]
 			subtitle: "Requires Museum displays; then confirm the milestone."
 			title: "A museum of friendships"
-			x: 17.5d
-			y: 0.0d
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["762E20CA5C1E2D39"]
+			description: [
+				"Open, trade, or find enough cards from this stage to make visible progress on the collection rather than obtaining only one sample."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:item_frame"
+			id: "329A3FD96320EFFC"
+			rewards: [
+				{
+					id: "1514B5426C9E27DD"
+					table_id: 7676865499021914423L
+					title: "Buddycards Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "23EC18CFBD659B07"
+					title: "Confirm: Collect: Obtain: Museum displays"
+					type: "checkmark"
+				}
+			]
+			title: "Collect: Obtain: Museum displays"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["329A3FD96320EFFC"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:paper"
+			id: "218C1D17CCCCEAF5"
+			rewards: [
+				{
+					id: "1666DF0FF921037B"
+					table_id: 7676865499021914423L
+					title: "Buddycards Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "24E3EDD18E8A48EE"
+					table_id: 3375361865779001053L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "7433695C01B030FC"
+					title: "Confirm chapter mastery: Buddycards"
+					type: "checkmark"
+				}
+			]
+			title: "Buddycards Mastery"
+			x: 4.0d
+			y: 8.0d
 		}
 	]
 	title: "The Collectors Club"

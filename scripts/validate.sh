@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-34" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-34" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-35" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-35" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -98,7 +98,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-34 static validation passed"
+echo "Amber & Arcana 0.1.9-35 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -222,3 +222,9 @@ for table in "$client_quests"/reward_tables/modroll_*_tier_4.snbt; do
   if [ "$stem" = "modroll_productive_bees_tier_4.snbt" ] || [ "$stem" = "modroll_create_engineering_tier_4.snbt" ]; then continue; fi
   grep -Eq 'loot_size: [34]' "$table" || { echo "Expanded T4 table has too few draws: $stem" >&2; exit 1; }
 done
+
+
+# 0.1.9-35 deep compact-chapter progression checks
+jq -e '.deep_short_progression_0_1_9_35.chapters_expanded == 24 and .deep_short_progression_0_1_9_35.historical_short_quests_preserved >= 100 and .deep_short_progression_0_1_9_35.generated_mechanics_quests >= 100 and .deep_short_progression_0_1_9_35.minimum_quests_per_expanded_chapter >= 10 and .deep_short_progression_0_1_9_35.minimum_dependency_depth >= 4 and .deep_short_progression_0_1_9_35.tier_roll_coverage_percent == 100 and .deep_short_progression_0_1_9_35.finale_wheels_moved_to_true_mastery == 24 and .deep_short_progression_0_1_9_35.historical_quest_ids_preserved == true and .deep_short_progression_0_1_9_35.client_server_quest_files_identical == true' "$validation" >/dev/null
+test "$(rg -l 'AA35 deep progression milestone' "$client_quests/chapters" | wc -l)" = "24" || { echo "Deep progression marker missing from one or more expanded chapters" >&2; exit 1; }
+diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-35" >&2; exit 1; }

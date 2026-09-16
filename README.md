@@ -122,3 +122,8 @@ For an existing server, download `dist/Amber-and-Arcana-0.1.9-19-Crafty-JEI-Over
 ## 0.1.9-34 short-chain reward progression
 
 Compact quest chapters now use a compressed but much richer reward curve. Every quest in chapters with at most 10 quests receives a mod-specific tier roll, tiers 3/4 use 3/4 draws, and chapter finales use five draws. Reward tables are expanded with weighted quantity variants and rare deep-progression outcomes using only modded item IDs already validated by the preceding reward pass. Productive Bees and Create Engineering retain their dedicated deeper reward systems.
+
+
+## 0.1.9-35 deep progression pass
+
+The 24 formerly compact quest chapters now use real multi-step progression trees instead of three-to-ten broad milestones. Historical item-acquisition quests are preserved, but every local dependency is gated through required hands-on mechanics milestones such as commissioning machines, routing storage, automating production, performing rituals, exploring safely, or scaling a system. The pass adds 215 hands-on quests, raises the compact chapters to 339 total quests, keeps tiered mod-specific loot on 100% of those quests, moves each Wheel of Fortune reward to a true chapter-mastery finale, removes remaining fixed diamond/emerald rewards from the expanded chapters, and preserves the existing historical quest IDs. Create Engineering and Productive Bees retain their dedicated custom trees.

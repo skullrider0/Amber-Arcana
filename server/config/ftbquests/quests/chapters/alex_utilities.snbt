@@ -28,14 +28,12 @@
 					type: "xp"
 					xp: 100
 				}
-			
-
 				{
 					id: "503DEDA15733652B"
 					table_id: 5644335580356364118L
 					title: "Alex Utilities Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -54,11 +52,67 @@
 			]
 			subtitle: "Requires Remote storage containers; then confirm the milestone."
 			title: "Cloud deliveries"
-			x: -14.0d
+			x: -16.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["705C75CC0EB0777B"]
+			description: [
+				"Craft and place the utility from this milestone where it solves a real base or exploration problem."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:chest"
+			id: "10FDADEB7D2CC802"
+			rewards: [
+				{
+					id: "5D0237E689B3EDEE"
+					table_id: 5644335580356364118L
+					title: "Alex Utilities Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2141276154A20CEA"
+					title: "Confirm: Build: Obtain: Remote storage containers"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Remote storage containers"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10FDADEB7D2CC802"]
+			description: [
+				"Run the utility through its intended job and verify you understand its controls and limitations."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:chest"
+			id: "1494A4F7915454A3"
+			rewards: [
+				{
+					id: "780D1416892E5286"
+					table_id: 5644335580356364118L
+					title: "Alex Utilities Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "5B24DC05ACFD1F01"
+					title: "Confirm: Use: Obtain: Remote storage containers"
+					type: "checkmark"
+				}
+			]
+			title: "Use: Obtain: Remote storage containers"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1494A4F7915454A3"]
 			description: [
 				"Sleep in a home bed and then an expedition bed using Back Up Beds. Learn how the fallback spawn works and keep the destination beds accessible."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -67,26 +121,16 @@
 			id: "7FE445198F2DF5FA"
 			rewards: [
 				{
-					count: 4
-					id: "C491522717C0BE82"
-					item: "minecraft:emerald"
-					type: "item"
-				}
-				{
 					id: "6296DAE96C8EDD3E"
 					type: "xp"
 					xp: 150
 				}
-			
-				
-			
-
 				{
 					id: "5672E45D6326DA6B"
-					table_id: 5029940395661334725L
-					title: "Alex Utilities Tier 2 Roll"
+					table_id: 5644335580356364118L
+					title: "Alex Utilities Tier 1 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -105,11 +149,67 @@
 			]
 			subtitle: "Requires Primary and backup beds; then confirm the milestone."
 			title: "A second bed"
-			x: -7.0d
+			x: -4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7FE445198F2DF5FA"]
+			description: [
+				"Craft and place the utility from this milestone where it solves a real base or exploration problem."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:white_bed"
+			id: "2993894BEA2E0C37"
+			rewards: [
+				{
+					id: "074E23A4447BCE06"
+					table_id: 5029940395661334725L
+					title: "Alex Utilities Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "32A016880F377906"
+					title: "Confirm: Build: Obtain: Primary and backup beds"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Primary and backup beds"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2993894BEA2E0C37"]
+			description: [
+				"Run the utility through its intended job and verify you understand its controls and limitations."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:white_bed"
+			id: "1E8496FB291BA35F"
+			rewards: [
+				{
+					id: "3DFE6E36869A0E6F"
+					table_id: 5029940395661334725L
+					title: "Alex Utilities Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "521B61C71C57A02C"
+					title: "Confirm: Use: Obtain: Primary and backup beds"
+					type: "checkmark"
+				}
+			]
+			title: "Use: Obtain: Primary and backup beds"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1E8496FB291BA35F"]
 			description: [
 				"Design a banner for your home, team, or park district and display it at the main entrance. Reuse the same colors or pattern on waypoints so visitors can recognize your builds."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -128,16 +228,12 @@
 					type: "xp"
 					xp: 200
 				}
-			
-				
-			
-
 				{
 					id: "4D6E2276240A814B"
 					table_id: 5029940395661334725L
 					title: "Alex Utilities Tier 2 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -155,11 +251,67 @@
 			]
 			subtitle: "Requires Personal banner; then confirm the milestone."
 			title: "A personal banner"
-			x: 0.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["75DC91845E9ED3AA"]
+			description: [
+				"Craft and place the utility from this milestone where it solves a real base or exploration problem."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:white_banner"
+			id: "68E08BC2CC3F0FEC"
+			rewards: [
+				{
+					id: "4F33DE2D3B1445B4"
+					table_id: 5029940395661334725L
+					title: "Alex Utilities Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "212F3CE1673DE078"
+					title: "Confirm: Build: Obtain: Personal banner"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Personal banner"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["68E08BC2CC3F0FEC"]
+			description: [
+				"Run the utility through its intended job and verify you understand its controls and limitations."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:white_banner"
+			id: "1B9A770AD37614A9"
+			rewards: [
+				{
+					id: "3D7FFD7B888A4A25"
+					table_id: 3251463663773336572L
+					title: "Alex Utilities Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "4587AB21844467D8"
+					title: "Confirm: Use: Obtain: Personal banner"
+					type: "checkmark"
+				}
+			]
+			title: "Use: Obtain: Personal banner"
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1B9A770AD37614A9"]
 			description: [
 				"Make an I Wanna Skate route through a safe district. Keep the skate path separate from colony worker bottlenecks."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -178,16 +330,12 @@
 					type: "xp"
 					xp: 250
 				}
-			
-				
-			
-
 				{
 					id: "4584B34FA804EDD6"
 					table_id: 3251463663773336572L
 					title: "Alex Utilities Tier 3 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -206,11 +354,67 @@
 			]
 			subtitle: "Requires Skate-route supplies; then confirm the milestone."
 			title: "Skate through town"
-			x: 7.0d
-			y: 0.0d
+			x: 16.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7A9CC6DDD312FFA2"]
+			description: [
+				"Craft and place the utility from this milestone where it solves a real base or exploration problem."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_ingot"
+			id: "6B27726A1075EF74"
+			rewards: [
+				{
+					id: "4891BD6377755767"
+					table_id: 3251463663773336572L
+					title: "Alex Utilities Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "3039260951878242"
+					title: "Confirm: Build: Obtain: Skate-route supplies"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Skate-route supplies"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6B27726A1075EF74"]
+			description: [
+				"Run the utility through its intended job and verify you understand its controls and limitations."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:iron_ingot"
+			id: "2F4EA37FD4C8E8E2"
+			rewards: [
+				{
+					id: "2C2AF46F56022F1C"
+					table_id: 3251463663773336572L
+					title: "Alex Utilities Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "2523FA9280380EBF"
+					title: "Confirm: Use: Obtain: Skate-route supplies"
+					type: "checkmark"
+				}
+			]
+			title: "Use: Obtain: Skate-route supplies"
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2F4EA37FD4C8E8E2"]
 			description: [
 				"Use Wiki Zoomer displays for an exhibit of a creature or item. Adjust Retro Damage Indicators to keep the HUD readable. Mediumcore is an optional world difficulty, not a required quest or pack progression gate."
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -219,31 +423,16 @@
 			id: "7946F6B43F6E0E44"
 			rewards: [
 				{
-					count: 2
-					id: "621271EF19C7F633"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
 					id: "59F9643431E29478"
 					type: "xp"
 					xp: 450
 				}
-			
-				{
-					id: "4314FAE57337CED4"
-					table_id: 7486324590925875558L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			
-
 				{
 					id: "61C0B80DE84E209B"
 					table_id: 5667537324514802654L
 					title: "Alex Utilities Tier 4 Roll"
 					type: "loot"
-				
+				}
 			]
 			tasks: [
 				{
@@ -262,8 +451,98 @@
 			]
 			subtitle: "Requires Museum displays; then confirm the milestone."
 			title: "The illustrated museum"
-			x: 14.0d
-			y: 0.0d
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7946F6B43F6E0E44"]
+			description: [
+				"Craft and place the utility from this milestone where it solves a real base or exploration problem."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:item_frame"
+			id: "011F11FE29D7C649"
+			rewards: [
+				{
+					id: "278901848C4EDB8E"
+					table_id: 5667537324514802654L
+					title: "Alex Utilities Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "418AE1F664BAB048"
+					title: "Confirm: Build: Obtain: Museum displays"
+					type: "checkmark"
+				}
+			]
+			title: "Build: Obtain: Museum displays"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["011F11FE29D7C649"]
+			description: [
+				"Run the utility through its intended job and verify you understand its controls and limitations."
+				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			]
+			icon: "minecraft:item_frame"
+			id: "3400257E594DBF01"
+			rewards: [
+				{
+					id: "0E8FDFB9840B29F8"
+					table_id: 5667537324514802654L
+					title: "Alex Utilities Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
+			tasks: [
+				{
+					id: "71FADC9967538A5B"
+					title: "Confirm: Use: Obtain: Museum displays"
+					type: "checkmark"
+				}
+			]
+			title: "Use: Obtain: Museum displays"
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3400257E594DBF01"]
+			description: [
+				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
+				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
+			]
+			icon: "minecraft:chest"
+			id: "361139FB2605C924"
+			rewards: [
+				{
+					id: "160F305CAD3329F2"
+					table_id: 5667537324514802654L
+					title: "Alex Utilities Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "4314FAE57337CED4"
+					table_id: 7486324590925875558L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			subtitle: "Complete every branch before claiming the chapter finale."
+			tasks: [
+				{
+					id: "7E8D4758BA2A4DA8"
+					title: "Confirm chapter mastery: Alex Utilities"
+					type: "checkmark"
+				}
+			]
+			title: "Alex Utilities Mastery"
+			x: -8.0d
+			y: 8.0d
 		}
 	]
 	title: "Exhibits and Everyday Tools"
