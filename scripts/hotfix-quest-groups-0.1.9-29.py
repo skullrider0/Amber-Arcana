@@ -35,10 +35,8 @@ GROUPS = [
 # Chapters are grouped by gameplay mechanic rather than mod-name/alphabetical order.
 # Order indexes are local to each chapter group.
 ASSIGNMENTS = {
-    # Start Here
     "getting_started": ("5A29000000000001", 0),
 
-    # Machines & Production
     "create_engineering": ("5A29000000000002", 0),
     "mekanism": ("5A29000000000002", 1),
     "ender_io": ("5A29000000000002", 2),
@@ -46,47 +44,33 @@ ASSIGNMENTS = {
     "create_workshops": ("5A29000000000002", 4),
     "create_city": ("5A29000000000002", 5),
 
-    # Storage & Networks
     "ae2": ("5A29000000000003", 0),
     "refined_storage": ("5A29000000000003", 1),
 
-    # Resources & Farming
     "productive_bees": ("5A29000000000004", 0),
-    # Mystical Agriculture belongs here when/if it is added to the pack.
+    # Reserve order_index 1 for Mystical Agriculture if it is added later.
     "food_factory": ("5A29000000000004", 2),
     "butchery": ("5A29000000000004", 3),
 
-    # Magic & Rituals
     "ars_nouveau": ("5A29000000000005", 0),
     "irons_spells": ("5A29000000000005", 1),
     "ritual_magic": ("5A29000000000005", 2),
 
-    # Exploration & Creatures
     "alex_caves": ("5A29000000000006", 0),
     "dimensions": ("5A29000000000006", 1),
     "dinosaur_laboratory": ("5A29000000000006", 2),
     "alex_wildlife": ("5A29000000000006", 3),
     "aquarium": ("5A29000000000006", 4),
 
-    # Building & Settlements
     "settlement": ("5A29000000000007", 0),
 
-    # Tools, Combat & Equipment
     "tinkers": ("5A29000000000008", 0),
     "firearms": ("5A29000000000008", 1),
     "alex_utilities": ("5A29000000000008", 2),
 
-    # Collections & Endgame
     "buddycards": ("5A29000000000009", 0),
     "endgame": ("5A29000000000009", 1),
 }
-
-
-def replace_one(text: str, pattern: str, replacement: str, label: str) -> str:
-    updated, count = re.subn(pattern, replacement, text, count=1, flags=re.MULTILINE)
-    if count != 1:
-        raise RuntimeError(f"Expected exactly one {label}; found {count}")
-    return updated
 
 
 def write_groups() -> None:
@@ -95,6 +79,45 @@ def write_groups() -> None:
         lines.append(f'\t\t{{ id: "{group_id}", title: "{title}" }}')
     lines += ["\t]", "}", ""]
     GROUPS_FILE.write_text("\n".join(lines))
+
+
+def set_group(text: str, group_id: str, filename: str) -> str:
+    pattern = r'^\s*group:\s*"[^"]*"\s*$'
+    if re.search(pattern, text, flags=re.MULTILINE):
+        return re.sub(pattern, f'\tgroup: "{group_id}"', text, count=1, flags=re.MULTILINE)
+
+    # Some historical chapters never had a group field. Insert it immediately
+    # after filename so the result remains normal FTB Quests chapter SNBT.
+    pattern = r'^(\s*filename:\s*"[^"]+"\s*)$'
+    updated, count = re.subn(
+        pattern,
+        lambda m: m.group(1) + f'\n\tgroup: "{group_id}"',
+        text,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    if count != 1:
+        raise RuntimeError(f"Could not add group field to {filename}")
+    return updated
+
+
+def set_order(text: str, order: int, filename: str) -> str:
+    pattern = r'^\s*order_index:\s*-?\d+\s*$'
+    if re.search(pattern, text, flags=re.MULTILINE):
+        return re.sub(pattern, f"\torder_index: {order}", text, count=1, flags=re.MULTILINE)
+
+    # Be tolerant of old chapters without order_index as well.
+    pattern = r'^(\s*quest_links:\s*\[.*)$'
+    updated, count = re.subn(
+        pattern,
+        lambda m: f"\torder_index: {order}\n" + m.group(1),
+        text,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    if count != 1:
+        raise RuntimeError(f"Could not add order_index to {filename}")
+    return updated
 
 
 def organize_chapters() -> dict[str, int]:
@@ -114,8 +137,8 @@ def organize_chapters() -> dict[str, int]:
     for path in files:
         group_id, order = ASSIGNMENTS[path.stem]
         text = path.read_text()
-        text = replace_one(text, r'^\s*group:\s*"[^"]*"\s*$', f'\tgroup: "{group_id}"', f"group field in {path.name}")
-        text = replace_one(text, r'^\s*order_index:\s*-?\d+\s*$', f"\torder_index: {order}", f"order_index in {path.name}")
+        text = set_group(text, group_id, path.name)
+        text = set_order(text, order, path.name)
         path.write_text(text)
         counts[title_by_id[group_id]] += 1
 
