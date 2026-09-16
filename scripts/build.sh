@@ -12,6 +12,10 @@ cat "$repo_dir"/scripts/quest30-parts/*.part > "$repo_dir/scripts/hotfix-quest-u
 python3 "$repo_dir/scripts/hotfix-quest-ux-0.1.9-30.py"
 python3 "$repo_dir/scripts/normalize-validation-0.1.9-30.py"
 
+# 0.1.9-31 keeps the exact Productive Bees NBT matching from 0.1.9-30 but gives
+# every species-specific Bee Cage task an explicit species label in FTB Quests.
+python3 "$repo_dir/scripts/hotfix-bee-cage-labels-0.1.9-31.py"
+
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
 "$repo_dir/scripts/generate-recipe-compat.sh"
