@@ -82,29 +82,48 @@ def write_groups() -> None:
 
 
 def set_group(text: str, group_id: str, filename: str) -> str:
-    pattern = r'^\s*group:\s*"[^"]*"\s*$'
-    if re.search(pattern, text, flags=re.MULTILINE):
-        return re.sub(pattern, f'\tgroup: "{group_id}"', text, count=1, flags=re.MULTILINE)
+    # Historical chapter files use both comma-separated and newline-separated SNBT.
+    # Preserve whichever comma style the chapter already uses.
+    pattern = r'^(\s*)group:\s*"[^"]*"\s*(,?)\s*$'
+    match = re.search(pattern, text, flags=re.MULTILINE)
+    if match:
+        indent, comma = match.group(1), match.group(2)
+        return re.sub(
+            pattern,
+            lambda _m: f'{indent}group: "{group_id}"{comma}',
+            text,
+            count=1,
+            flags=re.MULTILINE,
+        )
 
     # Some historical chapters never had a group field. Insert it immediately
-    # after filename so the result remains normal FTB Quests chapter SNBT.
-    pattern = r'^(\s*filename:\s*"[^"]+"\s*)$'
-    updated, count = re.subn(
+    # after filename, mirroring that chapter's comma style.
+    pattern = r'^(\s*filename:\s*"[^"]+"\s*(,?)\s*)$'
+    match = re.search(pattern, text, flags=re.MULTILINE)
+    if not match:
+        raise RuntimeError(f"Could not add group field to {filename}")
+    comma = match.group(2)
+    return re.sub(
         pattern,
-        lambda m: m.group(1) + f'\n\tgroup: "{group_id}"',
+        lambda m: m.group(1) + f'\n\tgroup: "{group_id}"{comma}',
         text,
         count=1,
         flags=re.MULTILINE,
     )
-    if count != 1:
-        raise RuntimeError(f"Could not add group field to {filename}")
-    return updated
 
 
 def set_order(text: str, order: int, filename: str) -> str:
-    pattern = r'^\s*order_index:\s*-?\d+\s*$'
-    if re.search(pattern, text, flags=re.MULTILINE):
-        return re.sub(pattern, f"\torder_index: {order}", text, count=1, flags=re.MULTILINE)
+    pattern = r'^(\s*)order_index:\s*-?\d+\s*(,?)\s*$'
+    match = re.search(pattern, text, flags=re.MULTILINE)
+    if match:
+        indent, comma = match.group(1), match.group(2)
+        return re.sub(
+            pattern,
+            lambda _m: f"{indent}order_index: {order}{comma}",
+            text,
+            count=1,
+            flags=re.MULTILINE,
+        )
 
     # Be tolerant of old chapters without order_index as well.
     pattern = r'^(\s*quest_links:\s*\[.*)$'
