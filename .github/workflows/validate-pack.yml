@@ -90,6 +90,7 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
+          import re
 
           path = Path('scripts/validate.sh')
           text = path.read_text()
@@ -106,18 +107,24 @@ jobs:
               if not ('hotfix-quest-requirements-0.1.9-' in line and '--check-only' in line)
           ) + '\n'
 
-          text = text.replace('.version == "0.1.9-26"', '.version == "0.1.9-27"')
-          text = text.replace('.pack_version == "0.1.9-26"', '.pack_version == "0.1.9-27"')
-          text = text.replace('Amber & Arcana 0.1.9-26 static validation passed',
-                              'Amber & Arcana 0.1.9-27 static validation passed')
-          text = text.replace(
-              'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "25" || { echo "Expected 25 live quest chapters"',
-              'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "26" || { echo "Expected 26 live quest chapters"',
-          )
-          text = text.replace(
-              'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "30" || { echo "Expected 30 live reward tables"',
-              'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "31" || { echo "Expected 31 live reward tables"',
-          )
+          # Historical release transformers can reset validator version strings.
+          # Normalize all release-version references while protecting the historical
+          # quest-requirements script filename if it ever appears here.
+          text = re.sub(r'(?<!hotfix-quest-requirements-)0\.1\.9-[0-9]+', '0.1.9-27', text)
+          text = text.replace('rg -F "item: "$item""', 'rg -F "$item"')
+
+          # Historical quest finalizers can restore their original 25 chapter / 5 table
+          # expectations, while a published 0.1.9-26 validator may already expect 30 tables.
+          for old in ('25',):
+              text = text.replace(
+                  f'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "{old}" || {{ echo "Expected {old} live quest chapters"',
+                  'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "26" || { echo "Expected 26 live quest chapters"',
+              )
+          for old in ('5', '30'):
+              text = text.replace(
+                  f'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "{old}" || {{ echo "Expected {old} live reward tables"',
+                  'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "31" || { echo "Expected 31 live reward tables"',
+              )
           path.write_text(text)
           PY
 
