@@ -139,3 +139,7 @@ Quest chapters now use a denser ATM10-inspired visual scale with visible depende
 
 ### 0.1.9-38 major quest progression
 ATM10-inspired milestone/branch audit for the major tech and magic chapters, plus new Hostile Neural Networks and Draconic Evolution progression. Amber & Arcana keeps its own tier-roll and Fortune Wheel reward system.
+
+
+### 0.1.9-39 client QoL
+Adds No Recipe Book Reborn 1.0.5 to the client manifest only. It is not installed on the dedicated server and does not touch world data.

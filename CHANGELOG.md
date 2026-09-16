@@ -1,3 +1,9 @@
+## 0.1.9-39
+
+- Added No Recipe Book Reborn 1.0.5 for Forge 1.20.1.
+- Client-only quality-of-life change: removes the vanilla recipe-book buttons from supported crafting/furnace-style screens.
+- Dedicated-server mod list is intentionally unchanged.
+
 ## 0.1.9-38
 
 - Rebuilt AE2, Mekanism, Powah, Ars Nouveau, Iron's Spells, Ender IO, and Refined Storage into real mechanics-based progression branches using ATM10 only as a layout/progression reference.

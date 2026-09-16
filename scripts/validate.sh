@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-38" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-38" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-39" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-39" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -98,7 +98,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-38 static validation passed"
+echo "Amber & Arcana 0.1.9-39 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -224,40 +224,40 @@ for table in "$client_quests"/reward_tables/modroll_*_tier_4.snbt; do
 done
 
 
-# 0.1.9-38 deep compact-chapter progression checks
+# 0.1.9-39 deep compact-chapter progression checks
 jq -e '.deep_short_progression_0_1_9_35.chapters_expanded == 24 and .deep_short_progression_0_1_9_35.historical_short_quests_preserved >= 100 and .deep_short_progression_0_1_9_35.generated_mechanics_quests >= 100 and .deep_short_progression_0_1_9_35.minimum_quests_per_expanded_chapter >= 10 and .deep_short_progression_0_1_9_35.minimum_dependency_depth >= 4 and .deep_short_progression_0_1_9_35.tier_roll_coverage_percent == 100 and .deep_short_progression_0_1_9_35.finale_wheels_moved_to_true_mastery == 24 and .deep_short_progression_0_1_9_35.historical_quest_ids_preserved == true and .deep_short_progression_0_1_9_35.client_server_quest_files_identical == true' "$validation" >/dev/null
 test "$(rg -l 'AA35 deep progression milestone' "$client_quests/chapters" | wc -l)" = "17" || { echo "Expected AA35 marker in the 17 untouched expanded chapters" >&2; exit 1; }
-diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-38" >&2; exit 1; }
+diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }
 
 
-# 0.1.9-38 requested technology/content expansion checks
+# 0.1.9-39 requested technology/content expansion checks
 for pin in 351748:4864220 284497:6880323 1060096:5870964 223565:6793843 231382:5422013 242818:8491810 552574:5895036 283644:6274231 1632230:8670714; do
   project="${pin%%:*}"
   file="${pin##*:}"
-  test "$(jq --argjson p "$project" --argjson f "$file" '[.files[] | select(.projectID == $p and .fileID == $f)] | length' "$manifest")" = "1" || { echo "Missing 0.1.9-38 client manifest pin $pin" >&2; exit 1; }
+  test "$(jq --argjson p "$project" --argjson f "$file" '[.files[] | select(.projectID == $p and .fileID == $f)] | length' "$manifest")" = "1" || { echo "Missing 0.1.9-39 client manifest pin $pin" >&2; exit 1; }
 done
-test "$(awk -F '\\t' '$1 == "4864220" && $2 == "mininggadgets-1.15.6.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Mining Gadgets" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "6880323" && $2 == "IronJetpacks-1.20.1-7.0.9.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Iron Jetpacks" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "5870964" && $2 == "mekanism_lasers-1.0.10.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Mekanism Lasers" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "6793843" && $2 == "Draconic-Evolution-1.20.1-3.1.2.621-universal.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Draconic Evolution" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "5422013" && $2 == "BrandonsCore-1.20.1-3.2.1.302-universal.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Brandon's Core" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "8491810" && $2 == "CodeChickenLib-1.20.1-4.4.0.528-universal.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: CodeChicken Lib" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "5895036" && $2 == "HostileNeuralNetworks-1.20.1-5.3.3.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Hostile Neural Networks" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "6274231" && $2 == "Placebo-1.20.1-8.6.3.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Placebo" >&2; exit 1; }
-test "$(awk -F '\\t' '$1 == "8670714" && $2 == "ottertaming-1.20.1-Forge-1.0.2.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-38 server mod pin: Infernos Otter Taming" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "4864220" && $2 == "mininggadgets-1.15.6.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Mining Gadgets" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "6880323" && $2 == "IronJetpacks-1.20.1-7.0.9.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Iron Jetpacks" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "5870964" && $2 == "mekanism_lasers-1.0.10.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Mekanism Lasers" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "6793843" && $2 == "Draconic-Evolution-1.20.1-3.1.2.621-universal.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Draconic Evolution" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "5422013" && $2 == "BrandonsCore-1.20.1-3.2.1.302-universal.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Brandon's Core" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "8491810" && $2 == "CodeChickenLib-1.20.1-4.4.0.528-universal.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: CodeChicken Lib" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "5895036" && $2 == "HostileNeuralNetworks-1.20.1-5.3.3.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Hostile Neural Networks" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "6274231" && $2 == "Placebo-1.20.1-8.6.3.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Placebo" >&2; exit 1; }
+test "$(awk -F '\\t' '$1 == "8670714" && $2 == "ottertaming-1.20.1-Forge-1.0.2.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-39 server mod pin: Infernos Otter Taming" >&2; exit 1; }
 jq -e '.tech_expansion_0_1_9_36.curseforge_entries_added == 9 and .tech_expansion_0_1_9_36.requires_client_update == true and .tech_expansion_0_1_9_36.world_data_touched == false and .tech_expansion_0_1_9_36.crafty_update_overlay_world_safe == true and .tech_expansion_0_1_9_36.server_downloads_on_next_start == true' "$validation" >/dev/null
 
 
-# 0.1.9-38 ATM10-inspired compact layout checks
+# 0.1.9-39 ATM10-inspired compact layout checks
 jq -e '.atm10_layout_0_1_9_37.reference_pack == "AllTheMods/ATM-10" and .atm10_layout_0_1_9_37.reference_commit == "ab6f65e07b88423cdae1724864ba42a573ba758a" and .atm10_layout_0_1_9_37.chapters_compacted == 26 and .atm10_layout_0_1_9_37.quest_ids_preserved == true and .atm10_layout_0_1_9_37.tasks_preserved == true and .atm10_layout_0_1_9_37.rewards_preserved == true and .atm10_layout_0_1_9_37.fortune_wheel_preserved == true and .atm10_layout_0_1_9_37.client_server_quest_files_identical == true and .atm10_layout_0_1_9_37.max_chapter_width_after < .atm10_layout_0_1_9_37.max_chapter_width_before' "$validation" >/dev/null
 test "$(grep -Rhc $'\tprogression_mode: "flexible"' "$client_quests/chapters"/*.snbt | awk '{s+=$1} END {print s+0}')" = "28" || { echo "Expected flexible progression mode in all 28 chapters" >&2; exit 1; }
-diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-38" >&2; exit 1; }
+diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }
 
 
-# 0.1.9-38 ATM10-inspired semantic major progression checks
+# 0.1.9-39 ATM10-inspired semantic major progression checks
 jq -e '.atm10_major_progression_0_1_9_38.reference_pack == "AllTheMods/ATM-10" and .atm10_major_progression_0_1_9_38.reference_commit == "ab6f65e07b88423cdae1724864ba42a573ba758a" and .atm10_major_progression_0_1_9_38.existing_chapters_rebuilt == 7 and .atm10_major_progression_0_1_9_38.new_chapters_added == 2 and .atm10_major_progression_0_1_9_38.final_chapters == 28 and .atm10_major_progression_0_1_9_38.preserved_existing_quest_ids == 91 and .atm10_major_progression_0_1_9_38.reward_tables_final == 145 and .atm10_major_progression_0_1_9_38.fortune_wheels_touched == 9 and .atm10_major_progression_0_1_9_38.client_server_quest_files_identical == true' "$validation" >/dev/null
 for chapter in hostile_neural_networks draconic_evolution; do
-  test -f "$client_quests/chapters/$chapter.snbt" || { echo "Missing new 0.1.9-38 chapter: $chapter" >&2; exit 1; }
+  test -f "$client_quests/chapters/$chapter.snbt" || { echo "Missing new 0.1.9-39 chapter: $chapter" >&2; exit 1; }
 done
 for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_storage; do
   if rg -F 'AA35 deep progression milestone' "$client_quests/chapters/$chapter.snbt" >/dev/null; then
@@ -271,4 +271,13 @@ for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_stor
   done
   test -f "$client_quests/reward_tables/wheel_${chapter}.snbt" || { echo "Missing Fortune Wheel: $chapter" >&2; exit 1; }
 done
-diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-38" >&2; exit 1; }
+diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }
+
+
+# 0.1.9-39 No Recipe Book Reborn client-only checks
+test "$(jq '[.files[] | select(.projectID == 551314 and .fileID == 4725571)] | length' "$manifest")" = "1" || { echo "Expected No Recipe Book Reborn 1.0.5 client pin" >&2; exit 1; }
+if rg -F 'norecipebookreborn-1.0.5.jar' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null || rg -F $'\tno-recipe-book-reborn\t' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null; then
+  echo "No Recipe Book Reborn is client-only and must not be installed on the dedicated server" >&2
+  exit 1
+fi
+jq -e '.no_recipe_book_reborn_0_1_9_39.project_id == 551314 and .no_recipe_book_reborn_0_1_9_39.file_id == 4725571 and .no_recipe_book_reborn_0_1_9_39.environment == "client-only" and .no_recipe_book_reborn_0_1_9_39.requires_server_update == false and .no_recipe_book_reborn_0_1_9_39.world_data_touched == false' "$validation" >/dev/null

@@ -1,10 +1,10 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-38",
+  "pack_version": "0.1.9-39",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 285,
-  "mod_metadata_entries": 285,
+  "manifest_entries": 286,
+  "mod_metadata_entries": 286,
   "server_mod_downloads": 266,
   "excluded_mod_jars": 19,
   "excluded_shader_entries": 1,
@@ -1466,5 +1466,19 @@
     "client_server_quest_files_identical": true,
     "minecraft_launch_tested": false,
     "gameplay_tested": false
+  },
+  "no_recipe_book_reborn_0_1_9_39": {
+    "name": "No Recipe Book Reborn",
+    "version": "1.0.5",
+    "project_id": 551314,
+    "file_id": 4725571,
+    "filename": "norecipebookreborn-1.0.5.jar",
+    "minecraft": "1.20.1",
+    "loader": "Forge",
+    "environment": "client-only",
+    "server_mod_added": false,
+    "requires_server_update": false,
+    "requires_client_update": true,
+    "world_data_touched": false
   }
 }

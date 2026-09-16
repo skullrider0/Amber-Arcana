@@ -11,8 +11,8 @@
   },
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
-  "name": "Amber & Arcana 0.1.9-38",
-  "version": "0.1.9-38",
+  "name": "Amber & Arcana 0.1.9-39",
+  "version": "0.1.9-39",
   "author": "Custom pack for Chris",
   "files": [
     {
@@ -768,6 +768,11 @@
     {
       "projectID": 550579,
       "fileID": 5929264,
+      "required": true
+    },
+    {
+      "projectID": 551314,
+      "fileID": 4725571,
       "required": true
     },
     {

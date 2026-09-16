@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-38",
+  "pack_version": "0.1.9-39",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1412,5 +1412,19 @@
     "client_server_quest_files_identical": true,
     "minecraft_launch_tested": false,
     "gameplay_tested": false
+  },
+  "no_recipe_book_reborn_0_1_9_39": {
+    "name": "No Recipe Book Reborn",
+    "version": "1.0.5",
+    "project_id": 551314,
+    "file_id": 4725571,
+    "filename": "norecipebookreborn-1.0.5.jar",
+    "minecraft": "1.20.1",
+    "loader": "Forge",
+    "environment": "client-only",
+    "server_mod_added": false,
+    "requires_server_update": false,
+    "requires_client_update": true,
+    "world_data_touched": false
   }
 }
