@@ -57,3 +57,13 @@ if spec is None or spec.loader is None:
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
 mod.main()
+
+# GNU cmp has no recursive -r option. The source transformer historically wrote
+# that check into validate.sh; normalize it to diff -qr after generation.
+validate = ROOT / "scripts/validate.sh"
+validation_text = validate.read_text()
+validation_text = validation_text.replace(
+    'cmp -r "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-35" >&2; exit 1; }',
+    'diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-35" >&2; exit 1; }',
+)
+validate.write_text(validation_text)
