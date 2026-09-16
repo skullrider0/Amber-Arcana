@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import importlib.util
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,6 +57,23 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Could not load 0.1.9-35 deep progression hotfix")
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
+
+# The original helper selected the first nested `title:` in a quest block, which
+# is often a reward/task label such as "Obtain: ME Controller". The actual quest
+# title is the final title field in the block. Likewise, chapter titles live at
+# one-tab indentation and should be used instead of filename fallbacks like Ae2.
+def polished_root_title(block: str) -> str:
+    titles = re.findall(r'(?m)^\s*title:\s*"([^"]+)"', block)
+    return titles[-1] if titles else "Milestone"
+
+
+def polished_chapter_title(text: str, stem: str) -> str:
+    titles = re.findall(r'(?m)^\ttitle:\s*"([^"]+)"\s*$', text)
+    return titles[-1].replace(" & ", " and ") if titles else stem.replace("_", " ").title()
+
+
+mod.root_title = polished_root_title
+mod.chapter_title = polished_chapter_title
 mod.main()
 
 # GNU cmp has no recursive -r option. The source transformer historically wrote
