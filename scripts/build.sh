@@ -16,6 +16,11 @@ python3 "$repo_dir/scripts/normalize-validation-0.1.9-30.py"
 # every species-specific Bee Cage task an explicit species label in FTB Quests.
 python3 "$repo_dir/scripts/hotfix-bee-cage-labels-0.1.9-31.py"
 
+# 0.1.9-32 replaces the four global vanilla-heavy depth pools with four
+# chapter/mod-specific tiers, rethemes finale wheels, and keeps top-tier machines
+# as genuinely rare jackpots even though high-tier rolls return multiple items.
+python3 "$repo_dir/scripts/hotfix-mod-tier-loot-0.1.9-32.py"
+
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
 "$repo_dir/scripts/generate-recipe-compat.sh"
