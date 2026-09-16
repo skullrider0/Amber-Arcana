@@ -26,7 +26,8 @@ The More Hitboxes patch changes only the expensive global `Level` entity-query b
 
 - `client/` — CurseForge-compatible manifest and client overrides.
 - `server/` — Crafty-ready server package source, launcher, config, quests, and validation records.
-- `dist/` — ready-to-import client/server ZIPs, Crafty update overlay, and checksums.
+- `dist/` — ready-to-import client/server ZIPs, Crafty update overlays, and checksums.
+- `overlays/spawn-balance/` — server-side spawn-balance patch source used for the combined quest + spawn overlay.
 - `vendor/morehitboxes/` — the client-safe local More Hitboxes patch plus upstream MIT license and checksums.
 - `patches/` — source-level More Hitboxes performance changes used to build the patched classes.
 - `scripts/` — repeatable validation and packaging helpers.
@@ -72,6 +73,10 @@ The stale Twilight Forest objective is removed because Twilight Forest is no lon
 
 For an existing Crafty server that already has the correct mods, use `dist/Amber-and-Arcana-0.1.9-25-Crafty-Quest-Overlay.zip`. Stop the server, back up the world, extract the ZIP into the server root with overwrite enabled, and start the server again. If you copy the quest files while the server is already running, run `/ftbquests reload` from the server console or with sufficient in-game permission. The quest-only overlay contains only `config/ftbquests/quests/`; it does not contain a world, mods, or Crafty launcher files.
 
+### Quest + spawn-balance Crafty update
+
+For the active Crafty server, `dist/Amber-and-Arcana-0.1.9-25-Crafty-Quest-Spawn-Balance-Overlay.zip` combines the finalized 0.1.9-25 quest tree with the server-side spawn-balance patch. It adds `kubejs/server_scripts/amber_arcana_spawn_balance.js`, cuts normal natural spawn attempts by 50%, applies another 50% reduction to Vampirism natural spawns, and blocks the listed Mekanism Additions baby mobs. The bundle does not contain a world, mod JARs, or Crafty launcher files.
+
 ## Validate and rebuild
 
 Requirements: Bash, Java 17, `jq`, `zip`, `unzip`, `sha256sum`, `sha512sum`, and Python 3. Rebuild the launcher after Java-source edits with `bash scripts/build-launcher.sh`.
@@ -96,7 +101,3 @@ Historical More Hitboxes note (0.1.9-21): stock 1.9.2 was temporarily restored o
 - `Eternal Steak` (`artifacts:eternal_steak`) is removed from chest-generated loot with LootJS while Artifacts remains installed.
 - Glitchy Mantle is not included in this Minecraft 1.20.1 pack, so no unrelated Relics/GlitchCore content was removed.
 
-
-## Crafty JEI overlay
-
-For an existing server, download `dist/Amber-and-Arcana-0.1.9-19-Crafty-JEI-Overlay.zip`, stop the server, and extract it into the Crafty server root (the folder containing `AmberArcana-Crafty-Launcher.jar`) with overwrite enabled. The overlay contains only `_crafty/server-mods.tsv`; on the next start the launcher downloads `jei-1.20.1-forge-15.20.0.106.jar` into `mods/`. It does not contain or overwrite the world.
