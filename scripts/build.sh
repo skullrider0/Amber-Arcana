@@ -4,28 +4,31 @@ set -euo pipefail
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 dist_dir="$repo_dir/dist"
 patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
+validation="$repo_dir/server/pack-information/validation.json"
 
-# The repository stores the canonical current pack source. 0.1.9-35 expanded
-# the formerly short chapters in-place. Only run that transformer for an older
-# source tree; re-running it on an already-expanded tree would try to move the
-# same finale wheels a second time.
+# The repository stores the canonical current pack source. Only replay older
+# transforms when their canonical marker is absent.
 if ! grep -Fq 'AA35 deep progression milestone' \
   "$repo_dir/client/overrides/config/ftbquests/quests/chapters/ae2.snbt"; then
   python3 "$repo_dir/scripts/run-hotfix-deep-short-progression-0.1.9-35.py"
 fi
 
-# 0.1.9-36 added the requested technology/content mods. Only replay it when the
-# canonical source is missing those pins; this avoids rewriting later release
-# metadata on every build.
 if ! grep -Fq $'\tmining-gadgets\tMining Gadgets' "$repo_dir/server/_crafty/server-mods.tsv" || \
    ! grep -Fq $'\tdraconic-evolution\tDraconic Evolution' "$repo_dir/server/_crafty/server-mods.tsv"; then
   python3 "$repo_dir/scripts/hotfix-tech-expansion-0.1.9-36.py"
 fi
 
-# 0.1.9-37 applies an idempotent ATM10-inspired compact layout to the current
-# Amber & Arcana quest graph. It never copies ATM10 prose/rewards and preserves
-# all existing quest IDs, tasks, tier-roll rewards, and Wheel of Fortune tables.
-python3 "$repo_dir/scripts/hotfix-atm10-compact-layout-0.1.9-37.py"
+# 0.1.9-37 compacted the old quest geometry. Once its canonical marker exists,
+# never rescale later quest releases again; 0.1.9-38 supplies its own tight branch
+# coordinates for the rebuilt major chapters.
+if ! grep -Fq '"atm10_layout_0_1_9_37"' "$validation"; then
+  python3 "$repo_dir/scripts/hotfix-atm10-compact-layout-0.1.9-37.py"
+fi
+
+# 0.1.9-38 replaces generic generated milestone chains in the major tech/magic
+# chapters with concrete mechanics-based branches inspired by ATM10's progression
+# style, while retaining Amber & Arcana's weighted tier rolls and Fortune Wheels.
+python3 "$repo_dir/scripts/hotfix-atm10-major-progression-0.1.9-38.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
@@ -55,20 +58,14 @@ rm -f "$update_overlay" "$legacy_overlay" "$quest_overlay" "$quest_spawn_overlay
   test -f "mods/$patch_jar" || { echo "Missing patched More Hitboxes jar: server/mods/$patch_jar" >&2; exit 1; }
   zip -qr "$update_overlay" _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests
 )
-# Keep the old overlay filename as a compatibility alias for anyone following an
-# older README/bookmark, but its contents are now the full update overlay.
 cp "$update_overlay" "$legacy_overlay"
 
-# Quest-only overlay for an already-correct Crafty server. This intentionally
-# contains no world, mods, launcher files, or mod-management state.
 (
   cd "$repo_dir/server"
   zip -qr "$quest_overlay" config/ftbquests/quests
 )
 
-# Combined quest + spawn-balance overlay requested for the active Crafty server.
-# It contains only the synchronized quest tree, the server-side KubeJS spawn
-# balance script, and its README. It does not contain or modify any world data.
+# Combined quest + spawn-balance overlay. No world data is ever included.
 tmp_overlay_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_overlay_dir"' EXIT
 mkdir -p "$tmp_overlay_dir/config/ftbquests" "$tmp_overlay_dir/kubejs/server_scripts"
