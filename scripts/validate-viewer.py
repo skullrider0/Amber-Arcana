@@ -11,7 +11,8 @@ expected = (238222, 6075247)
 files = manifest["files"]
 assert len({f["projectID"] for f in files}) == len(files), "Duplicate projects"
 assert [(f["projectID"], f["fileID"]) for f in files if f["projectID"] == 238222] == [expected], "Client JEI pin differs"
-assert not {310111, 521393, 388800} & {f["projectID"] for f in files}, "Old viewer/Polymorph present"
+assert not {310111, 521393} & {f["projectID"] for f in files}, "Old viewer present"
+assert [(f["projectID"], f["fileID"]) for f in files if f["projectID"] == 388800] == [(388800, 6450982)], "Polymorph client pin differs"
 rows = [line.split("\t") for line in (root / "server/_crafty/server-mods.tsv").read_text().splitlines() if line and not line.startswith("#")]
 server_jei = [row for row in rows if len(row) >= 4 and (row[3] == "jei" or row[1].startswith("jei-"))]
 assert len(server_jei) == 1, "Expected exactly one server JEI entry"

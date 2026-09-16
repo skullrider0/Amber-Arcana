@@ -1,3 +1,11 @@
+## 0.1.9-41
+
+- Restored Polymorph 0.49.10 for selectable conflicting crafting/smelting/smithing outputs.
+- Added Polymorphic Energistics 0.1.1 for AE2 terminal recipe selection.
+- Added Refined Polymorphism 0.1.1 for Refined Storage grid recipe selection.
+- Added Spartan Weaponry 3.2.1 for the expanded weapon arsenal.
+- Client and server must both update; the world-safe Crafty overlay contains no world save data.
+
 ## 0.1.9-40
 
 - Fixed Crafty server mod downloads after CurseForge enforced API-key authentication on direct CDN requests.

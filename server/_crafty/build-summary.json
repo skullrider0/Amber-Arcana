@@ -1,17 +1,17 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-40",
+  "pack_version": "0.1.9-41",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 286,
-  "mod_metadata_entries": 286,
-  "server_mod_downloads": 266,
+  "manifest_entries": 290,
+  "mod_metadata_entries": 290,
+  "server_mod_downloads": 270,
   "excluded_mod_jars": 19,
   "excluded_shader_entries": 1,
   "compatibility_fix": "More Hitboxes retained; Colorwheel excluded because it requires Oculus on dedicated server.",
   "runtime_fix": "Prefer Java 17 automatically; force Spark background profiler engine to built-in Java sampler to avoid native async-profiler crashes.",
   "compatibility_fix_v3": "Wiki Zoomer 1.3.0 restored to dedicated-server mod list so its registered content remains present after registry sync; fixes client NPE wikizoomer:item_zoomer.",
-  "server_mod_count": 266,
+  "server_mod_count": 270,
   "optimization_0_1_9": {
     "spark_background_profiler": false,
     "view_distance": 8,
@@ -1494,5 +1494,32 @@
     "launcher_in_update_overlay": true,
     "world_data_touched": false,
     "world_data_in_update_overlay": false
+  },
+  "recipe_conflicts_spartan_0_1_9_41": {
+    "mods_added": [
+      "Polymorph",
+      "Polymorphic Energistics",
+      "Refined Polymorphism",
+      "Spartan Weaponry"
+    ],
+    "pins": {
+      "Polymorph": "CurseForge 388800:6450982 / polymorph-forge-0.49.10+1.20.1.jar",
+      "Polymorphic Energistics": "CurseForge 941096:5282394 / polyeng-forge-0.1.1-1.20.1.jar",
+      "Refined Polymorphism": "CurseForge 943086:5227282 / refinedpolymorph-0.1.1-1.20.1.jar",
+      "Spartan Weaponry": "CurseForge 278141:6842571 / SpartanWeaponry-1.20.1-forge-3.2.1-all.jar"
+    },
+    "polymorph_selector": true,
+    "ae2_selector_integration": true,
+    "refined_storage_selector_integration": true,
+    "spartan_weaponry": true,
+    "spartan_weaponry_version": "3.2.1",
+    "better_combat_already_present": true,
+    "jei_already_present": true,
+    "client_update_required": true,
+    "server_update_required": true,
+    "world_data_touched": false,
+    "world_data_in_update_overlay": false,
+    "manifest_entries": 290,
+    "server_mod_downloads": 270
   }
 }

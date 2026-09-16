@@ -147,3 +147,7 @@ Adds No Recipe Book Reborn 1.0.5 to the client manifest only. It is not installe
 
 ### 0.1.9-40 CurseForge downloader
 Crafty can again populate a missing server mods directory after CurseForge's July 2026 CDN authentication change. The launcher first uses an authenticated CDN when CURSEFORGE_API_KEY is configured, otherwise it uses validated CurseForge web and CurseMaven fallbacks. The update overlay contains no world save data.
+
+
+### 0.1.9-41 recipe conflicts and Spartan Weaponry
+Adds Polymorph plus AE2/Refined Storage integrations so conflicting recipes can be selected in crafting/storage terminals, and adds Spartan Weaponry 3.2.1. This is a client-and-server content update; the Crafty update overlay remains world-safe.
