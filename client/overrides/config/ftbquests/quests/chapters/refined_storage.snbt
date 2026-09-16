@@ -1,454 +1,438 @@
 {
-	icon: "refinedstorage:controller"
-	id: "49F444D8188D9792",
-	filename: "refined_storage",
-	title: "Refined Storage",
-	order_index: 1,
-	progression_mode: "flexible"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "refined_storage"
 	group: "5A29000000000003"
+	icon: "refinedstorage:controller"
+	id: "49F444D8188D9792"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
 	quests: [
 		{
-			icon: "refinedstorage:controller"
-			id: "4AFB3BC1D5AEA04F",
-			subtitle: "Requires RS Controller + RS Grid + Disk Drive; completion is detected automatically."
-			title: "Digital storage",
-			x: -16.0d
-			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
-			description: [
-				"Build a powered Controller, Grid, Disk Drive, and storage disk. Keep important supplies accessible while you work on the network.",
-				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
-			],
+			description: ["Build the Controller and power your first Refined Storage network."]
+			icon: "refinedstorage:controller"
+			id: "4AFB3BC1D5AEA04F"
 			rewards: [
 				{
-					count: 8
-					id: "87DEFA9668203004"
-					item: "minecraft:redstone"
-					type: "item"
-				}
-				{
-					id: "C8192479E08BF0ED"
+					id: "33E2C5B3915F9572"
 					type: "xp"
-					xp: 100
+					xp: 50
 				}
 				{
-					id: "294FBAE91B22368D"
+					id: "1EED82840EF12957"
 					table_id: 5360781829601029293L
-					title: "Refined Storage Tier 1 Roll"
+					title: "Controller — Tier 1 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "77A8ADF59E2DF572"
+					id: "78A9D95D8FF062AF"
 					item: "refinedstorage:controller"
 					consume_items: false
-					title: "Obtain: RS Controller"
+					title: "Obtain: Controller"
 					type: "item"
 				}
+			]
+			subtitle: "Obtain Controller; inventory detection completes this milestone automatically."
+			title: "Controller"
+			x: -5.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4AFB3BC1D5AEA04F"]
+			description: ["Add a Grid so the network becomes a usable storage interface."]
+			icon: "refinedstorage:grid"
+			id: "02F832E67FCEE0E6"
+			rewards: [
 				{
-					id: "70F9507BAC38FBCD"
+					id: "700FE28BA56827D0"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "416D27A9ED8C2BF6"
+					table_id: 5360781829601029293L
+					title: "Grid — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "3F20831E1BF815E9"
 					item: "refinedstorage:grid"
 					consume_items: false
-					title: "Obtain: RS Grid"
+					title: "Obtain: Grid"
 					type: "item"
 				}
+			]
+			subtitle: "Obtain Grid; inventory detection completes this milestone automatically."
+			title: "Grid"
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4AFB3BC1D5AEA04F"]
+			description: ["Build a Disk Drive as the storage backbone of the network."]
+			icon: "refinedstorage:disk_drive"
+			id: "15A6CF45BD071F7E"
+			rewards: [
 				{
-					id: "2180B7178BCA638B"
+					id: "2BC8031C967D9B6D"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "5F87E0C18052584B"
+					table_id: 5360781829601029293L
+					title: "Disk Drive — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "4B41E17F51ED48C2"
 					item: "refinedstorage:disk_drive"
 					consume_items: false
 					title: "Obtain: Disk Drive"
 					type: "item"
 				}
-				{
-					id: "38ADF6D51852CF9C"
-					title: "Completed milestone: Digital storage"
-					optional_task: true
-					type: "checkmark"
-				}
 			]
-		}
-		{
-			dependencies: ["4AFB3BC1D5AEA04F"]
-			description: [
-				"Bring this Refined Storage milestone online as a powered network with accessible storage."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:controller"
-			id: "02F832E67FCEE0E6"
-			rewards: [
-				{
-					id: "58EC72CE295FDD5E"
-					table_id: 5360781829601029293L
-					title: "Refined Storage Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "64F9F5A2EA754E98"
-					title: "Confirm: Network: Digital storage"
-					type: "checkmark"
-				}
-			]
-			title: "Network: Digital storage"
-			x: -6.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["02F832E67FCEE0E6"]
-			description: [
-				"Connect at least one real machine or inventory using import, export, external storage, or interfaces without creating loops."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:controller"
-			id: "15A6CF45BD071F7E"
-			rewards: [
-				{
-					id: "78570D4EDA1C78A4"
-					table_id: 5360781829601029293L
-					title: "Refined Storage Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2C8CE42344FE129C"
-					title: "Confirm: Route: Digital storage"
-					type: "checkmark"
-				}
-			]
-			title: "Route: Digital storage"
-			x: -4.5d
-			y: -1.75d
+			subtitle: "Obtain Disk Drive; inventory detection completes this milestone automatically."
+			title: "Disk Drive"
+			x: -3.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["15A6CF45BD071F7E"]
-			description: [
-				"Teach the network a useful recipe and successfully request or process it automatically."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:controller"
+			description: ["Install a storage disk and move real inventory into the network."]
+			icon: "refinedstorage:1k_storage_disk"
 			id: "104F5F3D46E4E6A3"
 			rewards: [
 				{
-					id: "1CC073A9E91E3DBA"
-					table_id: 8369957222493326091L
-					title: "Refined Storage Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "3095A1A72AA1141A"
-					title: "Confirm: Autocraft: Digital storage"
-					type: "checkmark"
-				}
-			]
-			title: "Autocraft: Digital storage"
-			x: -2.5d
-			y: -1.75d
-		}
-		{
-			icon: "refinedstorage:importer"
-			id: "1453151A6BAA50DA",
-			subtitle: "Requires Importer + Exporter; completion is detected automatically."
-			title: "Connected production",
-			x: 0.0d
-			y: 0.0d
-			description: [
-				"Connect importers, exporters, and external storage to one production line. Avoid import/export loops.",
-				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
-			],
-			rewards: [
-				{
-					count: 8
-					id: "694E3541E7734AA0"
-					item: "minecraft:quartz"
-					type: "item"
-				}
-				{
-					id: "5EBECD7BBBA72881"
+					id: "6F01F40EF23280C6"
 					type: "xp"
-					xp: 150
+					xp: 100
 				}
 				{
-					id: "416C1FC4BFB02CBB"
+					id: "69BF89B3FDB29FB0"
 					table_id: 8369957222493326091L
-					title: "Refined Storage Tier 2 Roll"
+					title: "Storage Disk — Tier 2 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "53990B91542C32B3"
-					item: "refinedstorage:importer"
+					id: "04D1D4A2AEDA1E98"
+					item: "refinedstorage:1k_storage_disk"
 					consume_items: false
-					title: "Obtain: Importer"
+					title: "Obtain: Storage Disk"
 					type: "item"
 				}
-				{
-					id: "004E20E49D97748E"
-					item: "refinedstorage:exporter"
-					consume_items: false
-					title: "Obtain: Exporter"
-					type: "item"
-				}
-				{
-					id: "782D7B9D7887D255"
-					title: "Completed milestone: Connected production"
-					optional_task: true
-					type: "checkmark"
-				}
-			],
-			dependencies: ["104F5F3D46E4E6A3"]
+			]
+			subtitle: "Obtain Storage Disk; inventory detection completes this milestone automatically."
+			title: "Storage Disk"
+			x: -1.75d
+			y: 1.5d
 		}
 		{
-			dependencies: ["1453151A6BAA50DA"]
-			description: [
-				"Bring this Refined Storage milestone online as a powered network with accessible storage."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:importer"
-			id: "52B7D5EBBE21C333"
-			rewards: [
-				{
-					id: "15DBD6EB62634D71"
-					table_id: 8369957222493326091L
-					title: "Refined Storage Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "6D05D4F321B6F451"
-					title: "Confirm: Network: Connected production"
-					type: "checkmark"
-				}
-			]
-			title: "Network: Connected production"
-			x: 1.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["52B7D5EBBE21C333"]
-			description: [
-				"Connect at least one real machine or inventory using import, export, external storage, or interfaces without creating loops."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:importer"
-			id: "21619475BB12F889"
-			rewards: [
-				{
-					id: "73A029C963E19558"
-					table_id: 3068496538472242200L
-					title: "Refined Storage Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "71A9C37EA5F49935"
-					title: "Confirm: Route: Connected production"
-					type: "checkmark"
-				}
-			]
-			title: "Route: Connected production"
-			x: 2.5d
-			y: -1.75d
-		}
-		{
-			dependencies: ["21619475BB12F889"]
-			description: [
-				"Teach the network a useful recipe and successfully request or process it automatically."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:importer"
-			id: "2E6792C5D494F3C0"
-			rewards: [
-				{
-					id: "6526F069538DA5C4"
-					table_id: 3068496538472242200L
-					title: "Refined Storage Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "4FE588A4D86431E8"
-					title: "Confirm: Autocraft: Connected production"
-					type: "checkmark"
-				}
-			]
-			title: "Autocraft: Connected production"
-			x: 4.5d
-			y: -1.75d
-		}
-		{
+			dependencies: ["02F832E67FCEE0E6"]
+			description: ["Upgrade to a Crafting Grid so storage and everyday crafting happen in one place."]
 			icon: "refinedstorage:crafting_grid"
-			id: "6F10E04E6E520C5C",
-			subtitle: "Requires Crafting Grid; completion is detected automatically."
-			title: "Automatic crafting",
-			x: 16.0d
-			y: 0.0d
-			description: [
-				"Create patterns and automate one useful component, then expand with the installed Refined Storage addons.",
-				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
-			],
+			id: "1453151A6BAA50DA"
 			rewards: [
 				{
-					id: "51BB0B627ADA4FCE"
+					id: "128C566DE4482A13"
 					type: "xp"
-					xp: 350
+					xp: 100
 				}
 				{
-					id: "75904A88C15CE57E"
-					table_id: 3068496538472242200L
-					title: "Refined Storage Tier 3 Roll"
+					id: "24A4C9189EFFD479"
+					table_id: 8369957222493326091L
+					title: "Crafting Grid — Tier 2 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "1F07791A02F13C6C"
+					id: "7CFE6B17B377CAF9"
 					item: "refinedstorage:crafting_grid"
 					consume_items: false
 					title: "Obtain: Crafting Grid"
 					type: "item"
 				}
-				{
-					id: "28E331A629F63940"
-					title: "Completed milestone: Automatic crafting"
-					optional_task: true
-					type: "checkmark"
-				}
-			],
-			dependencies: ["2E6792C5D494F3C0"]
+			]
+			subtitle: "Obtain Crafting Grid; inventory detection completes this milestone automatically."
+			title: "Crafting Grid"
+			x: -1.75d
+			y: -1.5d
 		}
 		{
-			dependencies: ["6F10E04E6E520C5C"]
-			description: [
-				"Bring this Refined Storage milestone online as a powered network with accessible storage."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
+			dependencies: ["104F5F3D46E4E6A3"]
+			description: ["Attach an external inventory or tank to the network without importing all of its contents."]
+			icon: "refinedstorage:external_storage"
+			id: "52B7D5EBBE21C333"
+			rewards: [
+				{
+					id: "694F2DDE038B16FE"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "545DF6DC66950D92"
+					table_id: 8369957222493326091L
+					title: "External Storage — Tier 2 Roll"
+					type: "loot"
+				}
 			]
-			icon: "refinedstorage:crafting_grid"
+			tasks: [
+				{
+					id: "7F735C50204BBB0D"
+					item: "refinedstorage:external_storage"
+					consume_items: false
+					title: "Obtain: External Storage"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain External Storage; inventory detection completes this milestone automatically."
+			title: "External Storage"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1453151A6BAA50DA"]
+			description: ["Automatically pull a useful resource into the network."]
+			icon: "refinedstorage:importer"
+			id: "21619475BB12F889"
+			rewards: [
+				{
+					id: "091C73E15FA594D0"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "34ABEFC8561145FF"
+					table_id: 8369957222493326091L
+					title: "Importer — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "64BEEE8D6A5D9D7F"
+					item: "refinedstorage:importer"
+					consume_items: false
+					title: "Obtain: Importer"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Importer; inventory detection completes this milestone automatically."
+			title: "Importer"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["21619475BB12F889"]
+			description: ["Automatically keep a machine or inventory supplied from network storage."]
+			icon: "refinedstorage:exporter"
+			id: "2E6792C5D494F3C0"
+			rewards: [
+				{
+					id: "7DF2C2539BAA862B"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7FF23AA83DDC860C"
+					table_id: 3068496538472242200L
+					title: "Exporter — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "0C6C14A9DD353725"
+					item: "refinedstorage:exporter"
+					consume_items: false
+					title: "Obtain: Exporter"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Exporter; inventory detection completes this milestone automatically."
+			title: "Exporter"
+			x: 1.75d
+			y: -1.5d
+		}
+		{
+			dependencies: ["52B7D5EBBE21C333"]
+			description: ["Use an Interface as a controlled bridge between the RS network and external automation."]
+			icon: "refinedstorage:interface"
+			id: "6F10E04E6E520C5C"
+			rewards: [
+				{
+					id: "2C30A4B5FF778753"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7288CCD5F92F188B"
+					table_id: 3068496538472242200L
+					title: "Interface — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "48C8CA215E85E895"
+					item: "refinedstorage:interface"
+					consume_items: false
+					title: "Obtain: Interface"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Interface; inventory detection completes this milestone automatically."
+			title: "Interface"
+			x: 1.75d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2E6792C5D494F3C0" "6F10E04E6E520C5C"]
+			description: ["Encode processing and crafting patterns instead of crafting every intermediate by hand."]
+			icon: "refinedstorage:pattern_grid"
 			id: "42F75EA8D2175084"
 			rewards: [
 				{
-					id: "3C52C59ED119C894"
-					table_id: 2043435100831036638L
-					title: "Refined Storage Tier 4 Roll"
+					id: "7DE33A11F4723614"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "3DE691DAC6934136"
+					table_id: 3068496538472242200L
+					title: "Pattern Grid — Tier 3 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "724677200FF8CECC"
-					title: "Confirm: Network: Automatic crafting"
-					type: "checkmark"
+					id: "205416435C1BA1E9"
+					item: "refinedstorage:pattern_grid"
+					consume_items: false
+					title: "Obtain: Pattern Grid"
+					type: "item"
 				}
 			]
-			title: "Network: Automatic crafting"
-			x: 6.0d
-			y: 1.75d
+			subtitle: "Obtain Pattern Grid; inventory detection completes this milestone automatically."
+			title: "Pattern Grid"
+			x: 3.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["42F75EA8D2175084"]
-			description: [
-				"Connect at least one real machine or inventory using import, export, external storage, or interfaces without creating loops."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:crafting_grid"
+			description: ["Build a Crafter and successfully request an automated recipe."]
+			icon: "refinedstorage:crafter"
 			id: "5E709105C261166A"
 			rewards: [
 				{
-					id: "732A31BBB3E5E9AD"
+					id: "2D9084EC34EEA95F"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "43C296F36DFB3667"
 					table_id: 2043435100831036638L
-					title: "Refined Storage Tier 4 Roll"
+					title: "Crafter — Tier 4 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "6EC9BA05301E6375"
-					title: "Confirm: Route: Automatic crafting"
-					type: "checkmark"
+					id: "078A87234F0AC290"
+					item: "refinedstorage:crafter"
+					consume_items: false
+					title: "Obtain: Crafter"
+					type: "item"
 				}
 			]
-			title: "Route: Automatic crafting"
-			x: 4.5d
-			y: 1.75d
+			subtitle: "Obtain Crafter; inventory detection completes this milestone automatically."
+			title: "Crafter"
+			x: 5.25d
+			y: -1.5d
 		}
 		{
-			dependencies: ["5E709105C261166A"]
-			description: [
-				"Teach the network a useful recipe and successfully request or process it automatically."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:crafting_grid"
+			dependencies: ["6F10E04E6E520C5C"]
+			description: ["Prepare the network for remote links with a Network Transmitter."]
+			icon: "refinedstorage:network_transmitter"
 			id: "0FFE4556CAF47C98"
 			rewards: [
 				{
-					id: "060BE1948B8A1F10"
+					id: "2DF733DC49ED15EC"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "5AF03D08063AE628"
 					table_id: 2043435100831036638L
-					title: "Refined Storage Tier 4 Roll"
+					title: "Network Transmitter — Tier 4 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "4D86694E1FFE0286"
-					title: "Confirm: Autocraft: Automatic crafting"
-					type: "checkmark"
+					id: "1BEF04C270F44FB9"
+					item: "refinedstorage:network_transmitter"
+					consume_items: false
+					title: "Obtain: Network Transmitter"
+					type: "item"
 				}
 			]
-			title: "Autocraft: Automatic crafting"
-			x: 2.5d
-			y: 1.75d
+			subtitle: "Obtain Network Transmitter; inventory detection completes this milestone automatically."
+			title: "Network Transmitter"
+			x: 3.5d
+			y: 1.5d
 		}
 		{
-			dependencies: ["0FFE4556CAF47C98"]
-			description: [
-				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
-				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
-			]
-			icon: "refinedstorage:controller"
+			dependencies: ["5E709105C261166A" "0FFE4556CAF47C98"]
+			description: ["Complete storage, machine I/O, autocrafting, and remote networking with a Network Receiver."]
+			icon: "refinedstorage:network_receiver"
 			id: "6045E2950FEFB97C"
 			rewards: [
 				{
-					id: "437B4E1D47BFBB86"
+					id: "574566E734059029"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "240C1519AE1BA066"
 					table_id: 2043435100831036638L
-					title: "Refined Storage Tier 4 Roll"
+					title: "Mastery: Refined Storage — Tier 4 Roll"
 					type: "loot"
 				}
 				{
-					id: "466F7BE7FAAF029D"
+					id: "64F3218330CE705C"
 					table_id: 2006348011782033194L
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
 			]
-			subtitle: "Complete every branch before claiming the chapter finale."
+			shape: "hexagon"
+			size: 1.5d
 			tasks: [
 				{
-					id: "6F46ABF9D0B2FF38"
-					title: "Confirm chapter mastery: Refined Storage"
-					type: "checkmark"
+					id: "241408CF7FEECDCC"
+					item: "refinedstorage:network_receiver"
+					consume_items: false
+					title: "Obtain: Mastery: Refined Storage"
+					type: "item"
 				}
 			]
-			title: "Refined Storage Mastery"
-			x: 1.0d
-			y: 1.75d
+			subtitle: "Obtain Mastery: Refined Storage; inventory detection completes this milestone automatically."
+			title: "Mastery: Refined Storage"
+			x: 5.25d
+			y: 0.0d
 		}
-	],
-	quest_links: []
+	]
+	title: "Refined Storage"
 }

@@ -1,0 +1,14 @@
+{
+	icon: "draconicevolution:awakened_core"
+	id: "740B9808FD18C3A5"
+	loot_size: 1
+	order_index: 871
+	rewards: [
+		{ count: 6, item: "draconicevolution:draconium_ingot", weight: 18.00f }
+		{ count: 10, item: "draconicevolution:draconium_dust", weight: 14.00f }
+		{ item: "draconicevolution:draconic_core", weight: 7.00f }
+		{ item: "draconicevolution:basic_crafting_injector", weight: 3.00f }
+	]
+	title: "Draconic Evolution — Tier 1 Roll"
+	use_title: true
+}

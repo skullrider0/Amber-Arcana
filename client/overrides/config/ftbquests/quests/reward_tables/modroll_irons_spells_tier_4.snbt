@@ -4,30 +4,11 @@
 	loot_size: 4
 	order_index: 376
 	rewards: [
-		{ item: "irons_spellbooks:iron_spell_book", weight: 0.60f }
-		{ item: "irons_spellbooks:inscription_table", weight: 14.00f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 5.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 4.45f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 4.45f }
-		{ count: 3, item: "irons_spellbooks:iron_spell_book", weight: 3.90f }
-		{ count: 3, item: "irons_spellbooks:inscription_table", weight: 3.90f }
-		{ count: 3, item: "irons_spellbooks:iron_spell_book", weight: 3.35f }
-		{ count: 3, item: "irons_spellbooks:inscription_table", weight: 3.35f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 2.80f }
-		{ item: "irons_spellbooks:inscription_table", weight: 2.80f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 2.25f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 2.25f }
-		{ count: 3, item: "irons_spellbooks:iron_spell_book", weight: 1.70f }
-		{ count: 3, item: "irons_spellbooks:inscription_table", weight: 1.70f }
-		{ count: 3, item: "irons_spellbooks:iron_spell_book", weight: 1.15f }
-		{ count: 3, item: "irons_spellbooks:inscription_table", weight: 1.15f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 0.60f }
-		{ item: "irons_spellbooks:inscription_table", weight: 0.60f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 0.35f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 0.35f }
-		{ count: 3, item: "irons_spellbooks:iron_spell_book", weight: 0.35f }
-		{ count: 3, item: "irons_spellbooks:inscription_table", weight: 0.35f }
+		{ count: 8, item: "irons_spellbooks:mithril_ingot", weight: 12.00f }
+		{ count: 4, item: "irons_spellbooks:upgrade_orb", weight: 12.00f }
+		{ item: "irons_spellbooks:diamond_spell_book", weight: 7.00f }
+		{ item: "irons_spellbooks:netherite_spell_book", weight: 0.35f }
+		{ count: 16, item: "irons_spellbooks:arcane_ingot", weight: 10.00f }
 	]
 	title: "Iron Spells and Wizardry — Tier 4 Roll"
 	use_title: true

@@ -4,23 +4,12 @@
 	loot_size: 2
 	order_index: 302
 	rewards: [
-		{ item: "ae2:controller", weight: 16.00f }
-		{ item: "ae2:molecular_assembler", weight: 16.00f }
-		{ item: "ae2:pattern_provider", weight: 16.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 16.00f }
-		{ item: "ae2:controller", weight: 5.00f }
-		{ item: "ae2:molecular_assembler", weight: 5.00f }
-		{ item: "ae2:pattern_provider", weight: 5.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ count: 2, item: "ae2:controller", weight: 4.45f }
-		{ count: 2, item: "ae2:molecular_assembler", weight: 4.45f }
-		{ count: 2, item: "ae2:pattern_provider", weight: 4.45f }
-		{ count: 2, item: "ae2:item_storage_cell_64k", weight: 4.45f }
-		{ count: 2, item: "ae2:controller", weight: 3.90f }
-		{ count: 2, item: "ae2:molecular_assembler", weight: 3.90f }
-		{ count: 2, item: "ae2:pattern_provider", weight: 3.90f }
-		{ count: 2, item: "ae2:item_storage_cell_64k", weight: 3.90f }
+		{ count: 4, item: "ae2:logic_processor", weight: 14.00f }
+		{ count: 3, item: "ae2:engineering_processor", weight: 10.00f }
+		{ item: "ae2:drive", weight: 6.00f }
+		{ item: "ae2:crafting_terminal", weight: 6.00f }
+		{ item: "ae2:item_storage_cell_4k", weight: 5.00f }
 	]
-	title: "Ae2 — Tier 2 Roll"
+	title: "Applied Energistics 2 — Tier 2 Roll"
 	use_title: true
 }

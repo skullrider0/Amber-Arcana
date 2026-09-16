@@ -1,29 +1,15 @@
 {
-	icon: "powah:energy_cell_basic"
+	icon: "powah:energizing_orb"
 	id: "287439B5AC78C696"
 	loot_size: 3
 	order_index: 383
 	rewards: [
-		{ item: "powah:energy_cell_basic", weight: 14.00f }
-		{ item: "powah:reactor_starter", weight: 14.00f }
-		{ item: "powah:thermo_generator_basic", weight: 14.00f }
-		{ item: "powah:thermo_generator_hardened", weight: 14.00f }
-		{ item: "powah:energy_cell_hardened", weight: 14.00f }
-		{ item: "powah:reactor_basic", weight: 14.00f }
-		{ item: "powah:reactor_hardened", weight: 14.00f }
-		{ item: "powah:energizing_rod_hardened", weight: 14.00f }
-		{ item: "powah:thermo_generator_blazing", weight: 7.00f }
+		{ count: 5, item: "powah:crystal_niotic", weight: 12.00f }
+		{ count: 3, item: "powah:crystal_spirited", weight: 8.00f }
 		{ item: "powah:thermo_generator_niotic", weight: 7.00f }
-		{ item: "powah:energy_cell_blazing", weight: 7.00f }
-		{ item: "powah:energy_cell_niotic", weight: 7.00f }
-		{ item: "powah:reactor_blazing", weight: 7.00f }
-		{ item: "powah:reactor_niotic", weight: 7.00f }
-		{ item: "powah:energizing_rod_niotic", weight: 7.00f }
-		{ item: "powah:energy_cell_basic", weight: 5.00f }
-		{ item: "powah:reactor_starter", weight: 5.00f }
-		{ item: "powah:thermo_generator_basic", weight: 5.00f }
-		{ item: "powah:thermo_generator_hardened", weight: 5.00f }
-		{ item: "powah:energy_cell_hardened", weight: 5.00f }
+		{ item: "powah:energy_cell_spirited", weight: 5.00f }
+		{ item: "powah:reactor_spirited", weight: 3.00f }
+		{ item: "powah:energizing_rod_spirited", weight: 5.00f }
 	]
 	title: "Powah Energy — Tier 3 Roll"
 	use_title: true

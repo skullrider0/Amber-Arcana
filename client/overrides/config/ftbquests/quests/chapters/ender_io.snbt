@@ -1,433 +1,432 @@
 {
-	icon: "minecraft:redstone"
-	id: "23A7E1B745DDC088",
-	filename: "ender_io",
-	title: "Ender IO Connections",
-	order_index: 2,
-	progression_mode: "flexible"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ender_io"
 	group: "5A29000000000002"
+	icon: "enderio:sag_mill"
+	id: "23A7E1B745DDC088"
+	order_index: 2
+	progression_mode: "flexible"
+	quest_links: [ ]
 	quests: [
 		{
-			icon: "minecraft:redstone"
-			id: "3358221532325ED1",
-			subtitle: "Requires Conduit control materials; then confirm the milestone."
-			title: "Conduit workshop",
-			x: -16.0d
-			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
-			description: [
-				"Craft Ender IO conduits and use them to connect one item, fluid, or energy route.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
-			],
+			description: ["Gather Grains of Infinity and begin Ender IO's material progression."]
+			icon: "enderio:grains_of_infinity"
+			id: "3358221532325ED1"
 			rewards: [
 				{
-					count: 8
-					id: "8C1F38379B8826F7"
-					item: "minecraft:redstone"
-					type: "item"
+					id: "35BD5AB6A7A8A721"
+					type: "xp"
+					xp: 50
 				}
 				{
-					id: "02E630C41790BF26"
+					id: "54A569BEB6DEE98B"
+					table_id: 5632215108216343851L
+					title: "Grains of Infinity — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "40286DFBD85017AD"
+					item: "enderio:grains_of_infinity"
+					consume_items: false
+					title: "Obtain: Grains of Infinity"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Grains of Infinity; inventory detection completes this milestone automatically."
+			title: "Grains of Infinity"
+			x: -5.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3358221532325ED1"]
+			description: ["Build an Alloy Smelter and start producing Ender IO alloys on demand."]
+			icon: "enderio:alloy_smelter"
+			id: "299C0567C1D6EB9D"
+			rewards: [
+				{
+					id: "4FCBB842ACAC45E3"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "06612DADBCE4AFD2"
+					table_id: 5632215108216343851L
+					title: "Alloy Smelter — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "2AC2537075FFE491"
+					item: "enderio:alloy_smelter"
+					consume_items: false
+					title: "Obtain: Alloy Smelter"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Alloy Smelter; inventory detection completes this milestone automatically."
+			title: "Alloy Smelter"
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3358221532325ED1"]
+			description: ["Build a SAG Mill and use grinding balls and byproducts where they improve processing."]
+			icon: "enderio:sag_mill"
+			id: "0B055F7EA958BC55"
+			rewards: [
+				{
+					id: "78E666655FBD402D"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "0BFD9EA70998037F"
+					table_id: 5632215108216343851L
+					title: "SAG Mill — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "4440F820FDB7CE5E"
+					item: "enderio:sag_mill"
+					consume_items: false
+					title: "Obtain: SAG Mill"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain SAG Mill; inventory detection completes this milestone automatically."
+			title: "SAG Mill"
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["299C0567C1D6EB9D" "0B055F7EA958BC55"]
+			description: ["Build an Ender IO conduit backbone that carries at least one useful factory resource."]
+			icon: "enderio:sag_mill"
+			id: "39851932267D3839"
+			rewards: [
+				{
+					id: "52EB8D4F3C2C75DD"
 					type: "xp"
 					xp: 100
 				}
 				{
-					id: "1A0ECE2545F6DA95"
-					table_id: 5632215108216343851L
-					title: "Ender IO Connections Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			tasks: [
-				{
-					id: "4B0A84227C7502D1"
-					item: "minecraft:redstone"
-					count: 16L
-					consume_items: false
-					title: "Obtain: Conduit control materials"
-					type: "item"
-				}
-				{
-					id: "7C1D4DD583EA5F50"
-					title: "Completed milestone: Conduit workshop"
-					type: "checkmark"
-				}
-			]
-		}
-		{
-			dependencies: ["3358221532325ED1"]
-			description: [
-				"Build a clean Ender IO conduit backbone for the machines unlocked by this milestone."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:redstone"
-			id: "299C0567C1D6EB9D"
-			rewards: [
-				{
-					id: "61B5DD70CB9A0FB4"
-					table_id: 5632215108216343851L
-					title: "Ender IO Connections Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "7151548CA910729C"
-					title: "Confirm: Wire: Conduit workshop"
-					type: "checkmark"
-				}
-			]
-			title: "Wire: Conduit workshop"
-			x: -6.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["299C0567C1D6EB9D"]
-			description: [
-				"Use conduit filters, priorities, and extraction settings to move the correct resources without loops."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:redstone"
-			id: "0B055F7EA958BC55"
-			rewards: [
-				{
-					id: "751617DA675C91CB"
-					table_id: 5632215108216343851L
-					title: "Ender IO Connections Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "53274BF3A2270784"
-					title: "Confirm: Route: Conduit workshop"
-					type: "checkmark"
-				}
-			]
-			title: "Route: Conduit workshop"
-			x: -4.5d
-			y: -1.75d
-		}
-		{
-			dependencies: ["0B055F7EA958BC55"]
-			description: [
-				"Turn this part of Ender IO into a repeatable unattended production step."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:redstone"
-			id: "39851932267D3839"
-			rewards: [
-				{
-					id: "32BE5ED3A5604666"
+					id: "6BF8CC367C10556A"
 					table_id: 148992126386032531L
-					title: "Ender IO Connections Tier 2 Roll"
+					title: "Conduit Backbone — Tier 2 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "625D0A8612D56F5C"
-					title: "Confirm: Automate: Conduit workshop"
+					id: "1654330955AD3FF6"
+					title: "Confirm: Conduit Backbone"
 					type: "checkmark"
 				}
 			]
-			title: "Automate: Conduit workshop"
-			x: -2.5d
-			y: -1.75d
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Conduit Backbone"
+			x: -1.75d
+			y: 0.0d
 		}
 		{
-			icon: "minecraft:furnace"
-			id: "0EBE8506C43A0D98",
-			subtitle: "Requires Processing station machines; then confirm the milestone."
-			title: "Machine integration",
+			dependencies: ["39851932267D3839"]
+			description: ["Configure filters, extraction, priorities, and redstone behavior so the conduit network routes items correctly."]
+			icon: "enderio:sag_mill"
+			id: "0EBE8506C43A0D98"
+			rewards: [
+				{
+					id: "500CAE12FB1CBD51"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "6B2444DFD1D8CB12"
+					table_id: 148992126386032531L
+					title: "Filters and Priorities — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "0017CFB04E978A0A"
+					title: "Confirm: Filters and Priorities"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Filters and Priorities"
 			x: 0.0d
 			y: 0.0d
-			description: [
-				"Build an Ender IO processing station. Add filters and redstone control where needed.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
-			],
+		}
+		{
+			dependencies: ["0EBE8506C43A0D98"]
+			description: ["Add a Vacuum Chest where automatic collection is more useful than manual pickup."]
+			icon: "enderio:vacuum_chest"
+			id: "3C4DC0A2FA6EEEA3"
 			rewards: [
 				{
-					count: 8
-					id: "F89B9B292EB25C33"
-					item: "minecraft:quartz"
-					type: "item"
+					id: "62057EB524BF702D"
+					type: "xp"
+					xp: 100
 				}
 				{
-					id: "59C3845F99217379"
+					id: "5520BC040FCDA706"
+					table_id: 148992126386032531L
+					title: "Vacuum Chest — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "73AED542058A4420"
+					item: "enderio:vacuum_chest"
+					consume_items: false
+					title: "Obtain: Vacuum Chest"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Vacuum Chest; inventory detection completes this milestone automatically."
+			title: "Vacuum Chest"
+			x: 1.75d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0EBE8506C43A0D98"]
+			description: ["Use an Impulse Hopper for controlled batching and machine feeding."]
+			icon: "enderio:impulse_hopper"
+			id: "572C403BD8631BAD"
+			rewards: [
+				{
+					id: "1B15B109CB12E95A"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "21AD87EF5D16EFF1"
+					table_id: 148992126386032531L
+					title: "Impulse Hopper — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "12D0C90CEE809F1C"
+					item: "enderio:impulse_hopper"
+					consume_items: false
+					title: "Obtain: Impulse Hopper"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Impulse Hopper; inventory detection completes this milestone automatically."
+			title: "Impulse Hopper"
+			x: 1.75d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3C4DC0A2FA6EEEA3"]
+			description: ["Build the Slice'N'Splice and enter Ender IO's advanced component chain."]
+			icon: "enderio:slice_and_splice"
+			id: "203D60325D14F452"
+			rewards: [
+				{
+					id: "45B3E3E5352FDB42"
 					type: "xp"
 					xp: 150
 				}
 				{
-					id: "414938FF7D7D745B"
-					table_id: 148992126386032531L
-					title: "Ender IO Connections Tier 2 Roll"
+					id: "424ADD745AD6102D"
+					table_id: 8964843128813105254L
+					title: "Slice'N'Splice — Tier 3 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "733B4B7084A02E0B"
-					item: "minecraft:furnace"
-					count: 2L
+					id: "515D44DF7DFAD67E"
+					item: "enderio:slice_and_splice"
 					consume_items: false
-					title: "Obtain: Processing station machines"
+					title: "Obtain: Slice'N'Splice"
 					type: "item"
 				}
-				{
-					id: "104B80DEF5C864F5"
-					title: "Completed milestone: Machine integration"
-					type: "checkmark"
-				}
-			],
-			dependencies: ["39851932267D3839"]
-		}
-		{
-			dependencies: ["0EBE8506C43A0D98"]
-			description: [
-				"Build a clean Ender IO conduit backbone for the machines unlocked by this milestone."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-			icon: "minecraft:furnace"
-			id: "3C4DC0A2FA6EEEA3"
-			rewards: [
-				{
-					id: "4F6C367E7758872B"
-					table_id: 148992126386032531L
-					title: "Ender IO Connections Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "0C1D6897933B4DC3"
-					title: "Confirm: Wire: Machine integration"
-					type: "checkmark"
-				}
-			]
-			title: "Wire: Machine integration"
-			x: 1.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["3C4DC0A2FA6EEEA3"]
-			description: [
-				"Use conduit filters, priorities, and extraction settings to move the correct resources without loops."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:furnace"
-			id: "572C403BD8631BAD"
-			rewards: [
-				{
-					id: "33E763D718ED4BD1"
-					table_id: 8964843128813105254L
-					title: "Ender IO Connections Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2C8061B15E15A10B"
-					title: "Confirm: Route: Machine integration"
-					type: "checkmark"
-				}
-			]
-			title: "Route: Machine integration"
-			x: 2.5d
-			y: -1.75d
+			subtitle: "Obtain Slice'N'Splice; inventory detection completes this milestone automatically."
+			title: "Slice'N'Splice"
+			x: 3.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["572C403BD8631BAD"]
-			description: [
-				"Turn this part of Ender IO into a repeatable unattended production step."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:furnace"
-			id: "203D60325D14F452"
+			description: ["Build a Soul Binder and begin working with captured mob souls."]
+			icon: "enderio:soul_binder"
+			id: "67881CF73E1F3602"
 			rewards: [
 				{
-					id: "62EDC65C6A2CDC34"
-					table_id: 8964843128813105254L
-					title: "Ender IO Connections Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "0C2E2D0FF9C50111"
-					title: "Confirm: Automate: Machine integration"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: Machine integration"
-			x: 4.5d
-			y: -1.75d
-		}
-		{
-			icon: "minecraft:chest"
-			id: "67881CF73E1F3602",
-			subtitle: "Requires Factory routing buffers; then confirm the milestone."
-			title: "A tidy factory",
-			x: 16.0d
-			y: 0.0d
-			description: [
-				"Replace a messy section of factory routing with a serviceable conduit run. Label buffers and make maintenance access easy.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
-			],
-			rewards: [
-				{
-					id: "97C7F7F302917BB8"
+					id: "307A9E6DE53CDD53"
 					type: "xp"
-					xp: 350
+					xp: 150
 				}
 				{
-					id: "3E62C3ABAF50A3AB"
+					id: "6E919352DB226522"
 					table_id: 8964843128813105254L
-					title: "Ender IO Connections Tier 3 Roll"
+					title: "Soul Binder — Tier 3 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "764F25ADE6E71A67"
-					item: "minecraft:chest"
-					count: 4L
+					id: "6FD04CB3F8717899"
+					item: "enderio:soul_binder"
 					consume_items: false
-					title: "Obtain: Factory routing buffers"
+					title: "Obtain: Soul Binder"
 					type: "item"
 				}
-				{
-					id: "5373F5363F56903D"
-					title: "Completed milestone: A tidy factory"
-					type: "checkmark"
-				}
-			],
-			dependencies: ["203D60325D14F452"]
+			]
+			subtitle: "Obtain Soul Binder; inventory detection completes this milestone automatically."
+			title: "Soul Binder"
+			x: 3.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["67881CF73E1F3602"]
-			description: [
-				"Build a clean Ender IO conduit backbone for the machines unlocked by this milestone."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:chest"
+			description: ["Build a Powered Spawner and automate a mob resource without relying on natural spawns."]
+			icon: "enderio:powered_spawner"
 			id: "1D4D429181162FBC"
 			rewards: [
 				{
-					id: "04446A38E901EC2A"
+					id: "1ED4EC340A0BC4CE"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "3F3936EF15EF2064"
 					table_id: 4555311109604732959L
-					title: "Ender IO Connections Tier 4 Roll"
+					title: "Powered Spawner — Tier 4 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "2E8E709C93CC2020"
-					title: "Confirm: Wire: A tidy factory"
-					type: "checkmark"
+					id: "4BC238C3226F2D9D"
+					item: "enderio:powered_spawner"
+					consume_items: false
+					title: "Obtain: Powered Spawner"
+					type: "item"
 				}
 			]
-			title: "Wire: A tidy factory"
-			x: 6.0d
-			y: 1.75d
+			subtitle: "Obtain Powered Spawner; inventory detection completes this milestone automatically."
+			title: "Powered Spawner"
+			x: 5.25d
+			y: 1.5d
 		}
 		{
-			dependencies: ["1D4D429181162FBC"]
-			description: [
-				"Use conduit filters, priorities, and extraction settings to move the correct resources without loops."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:chest"
+			dependencies: ["203D60325D14F452"]
+			description: ["Use the Enchanter as a practical factory-side enchanting tool."]
+			icon: "enderio:enchanter"
 			id: "7502D490CA700914"
 			rewards: [
 				{
-					id: "4AF6F0CF73C4EC2A"
-					table_id: 4555311109604732959L
-					title: "Ender IO Connections Tier 4 Roll"
+					id: "7F39C2EC66A58417"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0D85354B9F06EF3E"
+					table_id: 8964843128813105254L
+					title: "Enchanter — Tier 3 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "58051319F6F234E3"
-					title: "Confirm: Route: A tidy factory"
-					type: "checkmark"
+					id: "47523AA4348B8BEC"
+					item: "enderio:enchanter"
+					consume_items: false
+					title: "Obtain: Enchanter"
+					type: "item"
 				}
 			]
-			title: "Route: A tidy factory"
-			x: 4.5d
-			y: 1.75d
+			subtitle: "Obtain Enchanter; inventory detection completes this milestone automatically."
+			title: "Enchanter"
+			x: 5.25d
+			y: -1.5d
 		}
 		{
-			dependencies: ["7502D490CA700914"]
-			description: [
-				"Turn this part of Ender IO into a repeatable unattended production step."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:chest"
+			dependencies: ["1D4D429181162FBC" "7502D490CA700914"]
+			description: ["Connect important factory areas with Travel Anchors and finish the infrastructure branch."]
+			icon: "enderio:travel_anchor"
 			id: "751747D22A26009A"
 			rewards: [
 				{
-					id: "0FAFA9383B92D3C0"
+					id: "090F3188E1273183"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "2C93B48446FAE5CF"
 					table_id: 4555311109604732959L
-					title: "Ender IO Connections Tier 4 Roll"
+					title: "Travel Anchors — Tier 4 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "06565840C66DA034"
-					title: "Confirm: Automate: A tidy factory"
-					type: "checkmark"
+					id: "7F4DFA17D4C15CFD"
+					item: "enderio:travel_anchor"
+					consume_items: false
+					title: "Obtain: Travel Anchors"
+					type: "item"
 				}
 			]
-			title: "Automate: A tidy factory"
-			x: 2.5d
-			y: 1.75d
+			subtitle: "Obtain Travel Anchors; inventory detection completes this milestone automatically."
+			title: "Travel Anchors"
+			x: 7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["751747D22A26009A"]
-			description: [
-				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
-				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
-			]
-			icon: "minecraft:redstone"
+			description: ["Confirm the processing, conduit, soul, automation, and travel systems operate as one clean Ender IO factory."]
+			icon: "enderio:powered_spawner"
 			id: "77DBDD9620FEA5EB"
 			rewards: [
 				{
-					id: "7FB602C774EA32FF"
+					id: "2D832EFC93CCFA12"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "38AFA152687DE078"
 					table_id: 4555311109604732959L
-					title: "Ender IO Connections Tier 4 Roll"
+					title: "Mastery: Ender IO — Tier 4 Roll"
 					type: "loot"
 				}
 				{
-					id: "1B739066D5A73EE5"
+					id: "5C437F9873722CAB"
 					table_id: 7776240355537200943L
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
 			]
-			subtitle: "Complete every branch before claiming the chapter finale."
+			shape: "hexagon"
+			size: 1.5d
 			tasks: [
 				{
-					id: "1C56AD3FEB70AA3C"
-					title: "Confirm chapter mastery: Ender IO Connections"
+					id: "6DCAADD012600A05"
+					title: "Confirm: Mastery: Ender IO"
 					type: "checkmark"
 				}
 			]
-			title: "Ender IO Connections Mastery"
-			x: 1.0d
-			y: 1.75d
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Mastery: Ender IO"
+			x: 8.75d
+			y: 0.0d
 		}
-	],
-	quest_links: []
+	]
+	title: "Ender IO Connections"
 }

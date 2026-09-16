@@ -1,0 +1,18 @@
+{
+	icon: "hostilenetworks:deep_learner"
+	id: "0B9D57E7894C77E2"
+	loot_size: 4
+	order_index: 874
+	rewards: [
+		{ count: 32, item: "hostilenetworks:prediction_matrix", weight: 15.00f }
+		{ count: 8, item: "hostilenetworks:overworld_prediction", weight: 10.00f }
+		{ count: 8, item: "hostilenetworks:nether_prediction", weight: 10.00f }
+		{ count: 6, item: "hostilenetworks:end_prediction", weight: 9.00f }
+		{ item: "hostilenetworks:sim_chamber", weight: 7.00f }
+		{ item: "hostilenetworks:loot_fabricator", weight: 7.00f }
+		{ count: 2, item: "hostilenetworks:sim_chamber", weight: 0.75f }
+		{ count: 2, item: "hostilenetworks:loot_fabricator", weight: 0.65f }
+	]
+	title: "Hostile Neural Networks — Tier 4 Roll"
+	use_title: true
+}

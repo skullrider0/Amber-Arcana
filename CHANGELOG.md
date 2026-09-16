@@ -1,3 +1,12 @@
+## 0.1.9-38
+
+- Rebuilt AE2, Mekanism, Powah, Ars Nouveau, Iron's Spells, Ender IO, and Refined Storage into real mechanics-based progression branches using ATM10 only as a layout/progression reference.
+- Added dedicated 13-quest Hostile Neural Networks and 15-quest Draconic Evolution chapters.
+- Replaced generic AA35 filler milestones in the rebuilt chapters with concrete mod mechanics and item milestones.
+- Hand-curated four weighted reward tiers plus a five-draw Fortune Wheel for all nine touched chapters.
+- Corrected the Ender IO reward pools so they no longer contain Create items.
+- Preserved all 91 existing quest IDs across the seven rebuilt chapters.
+
 ## 0.1.9-37
 
 - Reworked the quest-book display using ATM10's compact visual density and dependency-chain readability as a reference, without copying ATM10 quest text or rewards.

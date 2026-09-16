@@ -4,26 +4,12 @@
 	loot_size: 3
 	order_index: 323
 	rewards: [
-		{ item: "ars_nouveau:novice_spell_book", weight: 14.00f }
-		{ item: "ars_nouveau:enchanting_apparatus", weight: 14.00f }
-		{ item: "ars_nouveau:source_jar", weight: 14.00f }
-		{ item: "ars_nouveau:spell_turret", weight: 14.00f }
-		{ item: "ars_nouveau:novice_spell_book", weight: 5.00f }
-		{ item: "ars_nouveau:enchanting_apparatus", weight: 5.00f }
-		{ item: "ars_nouveau:source_jar", weight: 5.00f }
-		{ item: "ars_nouveau:spell_turret", weight: 5.00f }
-		{ count: 2, item: "ars_nouveau:novice_spell_book", weight: 4.45f }
-		{ count: 2, item: "ars_nouveau:enchanting_apparatus", weight: 4.45f }
-		{ count: 2, item: "ars_nouveau:source_jar", weight: 4.45f }
-		{ count: 2, item: "ars_nouveau:spell_turret", weight: 4.45f }
-		{ count: 3, item: "ars_nouveau:novice_spell_book", weight: 3.90f }
-		{ count: 3, item: "ars_nouveau:enchanting_apparatus", weight: 3.90f }
-		{ count: 3, item: "ars_nouveau:source_jar", weight: 3.90f }
-		{ count: 3, item: "ars_nouveau:spell_turret", weight: 3.90f }
-		{ count: 3, item: "ars_nouveau:novice_spell_book", weight: 3.35f }
-		{ count: 3, item: "ars_nouveau:enchanting_apparatus", weight: 3.35f }
-		{ count: 3, item: "ars_nouveau:source_jar", weight: 3.35f }
-		{ count: 3, item: "ars_nouveau:spell_turret", weight: 3.35f }
+		{ item: "ars_nouveau:spell_turret", weight: 7.00f }
+		{ item: "ars_nouveau:starbuncle_charm", weight: 7.00f }
+		{ item: "ars_nouveau:wixie_charm", weight: 6.00f }
+		{ item: "ars_nouveau:drygmy_charm", weight: 5.00f }
+		{ item: "ars_nouveau:ritual_brazier", weight: 5.00f }
+		{ count: 24, item: "ars_nouveau:source_gem", weight: 10.00f }
 	]
 	title: "Ars Nouveau — Tier 3 Roll"
 	use_title: true

@@ -4,22 +4,10 @@
 	loot_size: 2
 	order_index: 374
 	rewards: [
-		{ item: "irons_spellbooks:iron_spell_book", weight: 16.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 16.00f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 5.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 4.45f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 4.45f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 3.90f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 3.90f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 3.35f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 3.35f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 2.80f }
-		{ item: "irons_spellbooks:inscription_table", weight: 2.80f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 2.25f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 2.25f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 1.70f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 1.70f }
+		{ count: 8, item: "irons_spellbooks:arcane_ingot", weight: 14.00f }
+		{ count: 2, item: "irons_spellbooks:upgrade_orb", weight: 10.00f }
+		{ item: "irons_spellbooks:arcane_anvil", weight: 6.00f }
+		{ item: "irons_spellbooks:diamond_spell_book", weight: 1.50f }
 	]
 	title: "Iron Spells and Wizardry — Tier 2 Roll"
 	use_title: true

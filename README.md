@@ -135,3 +135,7 @@ Adds Mining Gadgets, Iron Jetpacks, Mekanism Lasers, Draconic Evolution, Hostile
 
 ### 0.1.9-37 compact quest layout
 Quest chapters now use a denser ATM10-inspired visual scale with visible dependency chains while retaining Amber & Arcana's own progression, tier rolls, and Wheel of Fortune system.
+
+
+### 0.1.9-38 major quest progression
+ATM10-inspired milestone/branch audit for the major tech and magic chapters, plus new Hostile Neural Networks and Draconic Evolution progression. Amber & Arcana keeps its own tier-roll and Fortune Wheel reward system.

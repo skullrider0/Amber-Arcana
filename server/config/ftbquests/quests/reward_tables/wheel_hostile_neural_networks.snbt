@@ -1,0 +1,27 @@
+{
+	icon: "hostilenetworks:deep_learner"
+	id: "7EF8A7D309AFCC0B"
+	loot_size: 5
+	order_index: 907
+	rewards: [
+		{ count: 16, item: "hostilenetworks:prediction_matrix", weight: 16.00f }
+		{ count: 4, item: "hostilenetworks:overworld_prediction", weight: 10.00f }
+		{ item: "hostilenetworks:sim_chamber", weight: 2.50f }
+		{ count: 24, item: "hostilenetworks:prediction_matrix", weight: 15.00f }
+		{ count: 6, item: "hostilenetworks:overworld_prediction", weight: 9.00f }
+		{ count: 5, item: "hostilenetworks:nether_prediction", weight: 8.00f }
+		{ count: 4, item: "hostilenetworks:end_prediction", weight: 7.00f }
+		{ item: "hostilenetworks:sim_chamber", weight: 5.00f }
+		{ item: "hostilenetworks:loot_fabricator", weight: 4.00f }
+		{ count: 32, item: "hostilenetworks:prediction_matrix", weight: 15.00f }
+		{ count: 8, item: "hostilenetworks:overworld_prediction", weight: 10.00f }
+		{ count: 8, item: "hostilenetworks:nether_prediction", weight: 10.00f }
+		{ count: 6, item: "hostilenetworks:end_prediction", weight: 9.00f }
+		{ item: "hostilenetworks:sim_chamber", weight: 7.00f }
+		{ item: "hostilenetworks:loot_fabricator", weight: 7.00f }
+		{ count: 2, item: "hostilenetworks:sim_chamber", weight: 0.75f }
+		{ count: 2, item: "hostilenetworks:loot_fabricator", weight: 0.65f }
+	]
+	title: "Wheel of Fortune — Hostile Neural Networks"
+	use_title: true
+}

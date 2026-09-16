@@ -1,33 +1,24 @@
 {
-	icon: "create:goggles"
+	icon: "enderio:sag_mill"
 	id: "6BEAC1672FDA272F"
 	loot_size: 5
 	order_index: 113
 	rewards: [
-		{ item: "create:goggles", weight: 6.00f }
-		{ item: "create:large_cogwheel", weight: 6.00f }
-		{ item: "create:shaft", weight: 6.00f }
-		{ item: "create:wrench", weight: 6.00f }
-		{ item: "create:andesite_alloy", weight: 9.00f }
-		{ item: "create:clutch", weight: 6.00f }
-		{ item: "create:gearbox", weight: 9.00f }
-		{ item: "create:gearshift", weight: 9.00f }
-		{ item: "create:mechanical_press", weight: 6.00f }
-		{ item: "create:speedometer", weight: 6.00f }
-		{ item: "create:stressometer", weight: 6.00f }
-		{ item: "create:water_wheel", weight: 6.00f }
-		{ item: "create:basin", weight: 5.25f }
-		{ item: "create:encased_fan", weight: 5.25f }
-		{ item: "create:mechanical_mixer", weight: 5.25f }
-		{ item: "create:millstone", weight: 5.25f }
-		{ item: "create:belt_connector", weight: 5.25f }
-		{ item: "create:depot", weight: 5.25f }
-		{ count: 8, item: "create:gearshift", weight: 9.00f }
-		{ count: 16, item: "create:gearshift", weight: 9.00f }
-		{ count: 2, item: "create:mechanical_press", weight: 3.34f }
-		{ count: 2, item: "create:goggles", weight: 0.80f }
-		{ count: 2, item: "create:large_cogwheel", weight: 0.80f }
-		{ count: 2, item: "create:shaft", weight: 0.80f }
+		{ item: "enderio:vacuum_chest", weight: 9.00f }
+		{ item: "enderio:impulse_hopper", weight: 9.00f }
+		{ item: "enderio:alloy_smelter", weight: 7.00f }
+		{ item: "enderio:sag_mill", weight: 7.00f }
+		{ count: 24, item: "enderio:grains_of_infinity", weight: 12.00f }
+		{ item: "enderio:slice_and_splice", weight: 9.00f }
+		{ item: "enderio:soul_binder", weight: 9.00f }
+		{ item: "enderio:enchanter", weight: 8.00f }
+		{ item: "enderio:vacuum_chest", weight: 7.00f }
+		{ item: "enderio:impulse_hopper", weight: 7.00f }
+		{ item: "enderio:slice_and_splice", weight: 10.00f }
+		{ item: "enderio:soul_binder", weight: 10.00f }
+		{ item: "enderio:enchanter", weight: 9.00f }
+		{ count: 2, item: "enderio:travel_anchor", weight: 6.00f }
+		{ item: "enderio:powered_spawner", weight: 0.65f }
 	]
 	title: "Wheel of Fortune — Ender IO Connections"
 	use_title: true

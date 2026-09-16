@@ -3,7 +3,7 @@
 	id: "76EC4F6922B5CFF9",
 	filename: "endgame",
 	title: "A World Worth Building",
-	order_index: 1,
+	order_index: 2
 	progression_mode: "flexible"
 	group: "5A29000000000009"
 	quests: [

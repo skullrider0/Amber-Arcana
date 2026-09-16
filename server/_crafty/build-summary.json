@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-37",
+  "pack_version": "0.1.9-38",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 285,
@@ -1431,5 +1431,40 @@
         "dependency_edges": 7
       }
     ]
+  },
+  "atm10_major_progression_0_1_9_38": {
+    "reference_pack": "AllTheMods/ATM-10",
+    "reference_commit": "ab6f65e07b88423cdae1724864ba42a573ba758a",
+    "reference_use": "milestone sequencing, branch structure, and visual progression density only; Amber & Arcana uses original prose and its own weighted tier rolls plus Fortune Wheels",
+    "existing_chapters_rebuilt": 7,
+    "existing_chapter_names": [
+      "mekanism",
+      "ae2",
+      "powah",
+      "ars_nouveau",
+      "irons_spells",
+      "ender_io",
+      "refined_storage"
+    ],
+    "new_chapters_added": 2,
+    "new_chapter_names": [
+      "hostile_neural_networks",
+      "draconic_evolution"
+    ],
+    "final_chapters": 28,
+    "preserved_existing_quest_ids": 91,
+    "hostile_neural_networks_quests": 13,
+    "draconic_evolution_quests": 15,
+    "final_quest_count": 495,
+    "tier_tables_hand_curated": 36,
+    "fortune_wheels_touched": 9,
+    "reward_tables_final": 145,
+    "generic_aa35_filler_removed_from_rebuilt_chapters": true,
+    "generic_fixed_vanilla_item_rewards_removed_from_rebuilt_chapters": true,
+    "fortune_wheel_mechanic_preserved": true,
+    "compact_branch_spacing_preserved": true,
+    "client_server_quest_files_identical": true,
+    "minecraft_launch_tested": false,
+    "gameplay_tested": false
   }
 }

@@ -1,0 +1,499 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "draconic_evolution"
+	group: "5A29000000000009"
+	icon: "draconicevolution:awakened_core"
+	id: "608EE4B831AFA826"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Refine Draconium and begin Draconic Evolution's core material ladder."]
+			icon: "draconicevolution:draconium_ingot"
+			id: "728840F2BE233CA7"
+			rewards: [
+				{
+					id: "2542D08F2A55B23C"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "44F8E6967F9FAE68"
+					table_id: 8361944297516876709L
+					title: "Draconium — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "58629134B66F88E6"
+					item: "draconicevolution:draconium_ingot"
+					consume_items: false
+					title: "Obtain: Draconium"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Draconium; inventory detection completes this milestone automatically."
+			title: "Draconium"
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["728840F2BE233CA7"]
+			description: ["Craft a Draconic Core, the component behind most advanced Draconic technology."]
+			icon: "draconicevolution:draconic_core"
+			id: "35FC434D382F10E7"
+			rewards: [
+				{
+					id: "5B55DC143B9A1BA3"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "2F2978BD0CAD928F"
+					table_id: 8361944297516876709L
+					title: "Draconic Core — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "7DB31682E3D0AC40"
+					item: "draconicevolution:draconic_core"
+					consume_items: false
+					title: "Obtain: Draconic Core"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Draconic Core; inventory detection completes this milestone automatically."
+			title: "Draconic Core"
+			x: -5.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35FC434D382F10E7"]
+			description: ["Build the Fusion Crafting Core and prepare a safe, powered fusion-crafting area."]
+			icon: "draconicevolution:crafting_core"
+			id: "67338C08C202A6D9"
+			rewards: [
+				{
+					id: "58E40FE727BEF136"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "7E643C15F80333A4"
+					table_id: 8361944297516876709L
+					title: "Fusion Crafting Core — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "61EC8C91AD297863"
+					item: "draconicevolution:crafting_core"
+					consume_items: false
+					title: "Obtain: Fusion Crafting Core"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Fusion Crafting Core; inventory detection completes this milestone automatically."
+			title: "Fusion Crafting Core"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67338C08C202A6D9"]
+			description: ["Add Basic Fusion Crafting Injectors and complete a real fusion recipe."]
+			icon: "draconicevolution:basic_crafting_injector"
+			id: "4CF18F4AF8CC9EFD"
+			rewards: [
+				{
+					id: "487FD9C68D82DB3F"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "2CF9DDCA7413106E"
+					table_id: 3979577326081051507L
+					title: "Basic Fusion Injector — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "118AD6877F6803B0"
+					item: "draconicevolution:basic_crafting_injector"
+					consume_items: false
+					title: "Obtain: Basic Fusion Injector"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Basic Fusion Injector; inventory detection completes this milestone automatically."
+			title: "Basic Fusion Injector"
+			x: -1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4CF18F4AF8CC9EFD"]
+			description: ["Reach Wyvern-tier components and prepare for stronger injectors and equipment."]
+			icon: "draconicevolution:wyvern_core"
+			id: "4D59F745630B7398"
+			rewards: [
+				{
+					id: "22B9DB59049F66B0"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "52425ABBE00A52D4"
+					table_id: 3979577326081051507L
+					title: "Wyvern Core — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "3F280D5D501C2E08"
+					item: "draconicevolution:wyvern_core"
+					consume_items: false
+					title: "Obtain: Wyvern Core"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Wyvern Core; inventory detection completes this milestone automatically."
+			title: "Wyvern Core"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4D59F745630B7398"]
+			description: ["Upgrade the fusion array to Wyvern injectors."]
+			icon: "draconicevolution:wyvern_crafting_injector"
+			id: "78F6247B16DC0276"
+			rewards: [
+				{
+					id: "2451A7E5C9FB1FFC"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "71C9FD8151B71F1E"
+					table_id: 3979577326081051507L
+					title: "Wyvern Fusion — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "2E7D0AF7F9F725A8"
+					item: "draconicevolution:wyvern_crafting_injector"
+					consume_items: false
+					title: "Obtain: Wyvern Fusion"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Wyvern Fusion; inventory detection completes this milestone automatically."
+			title: "Wyvern Fusion"
+			x: 1.75d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4D59F745630B7398"]
+			description: ["Produce Awakened Draconium, the gateway to Draconic-tier crafting."]
+			icon: "draconicevolution:awakened_draconium_ingot"
+			id: "45E57F50048C82D4"
+			rewards: [
+				{
+					id: "37A8E72D93A30018"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "776C67863D63A997"
+					table_id: 3571663549451093721L
+					title: "Awakened Draconium — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "6BED18E5D3140A41"
+					item: "draconicevolution:awakened_draconium_ingot"
+					consume_items: false
+					title: "Obtain: Awakened Draconium"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Awakened Draconium; inventory detection completes this milestone automatically."
+			title: "Awakened Draconium"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["45E57F50048C82D4"]
+			description: ["Craft an Awakened Core and step into the mod's late-game technology."]
+			icon: "draconicevolution:awakened_core"
+			id: "781B7CC8D747FD26"
+			rewards: [
+				{
+					id: "008AEE4C6D714CE5"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4E6A2427915494A3"
+					table_id: 3571663549451093721L
+					title: "Awakened Core — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "49AC1D7B96CCA0D5"
+					item: "draconicevolution:awakened_core"
+					consume_items: false
+					title: "Obtain: Awakened Core"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Awakened Core; inventory detection completes this milestone automatically."
+			title: "Awakened Core"
+			x: 1.75d
+			y: 1.5d
+		}
+		{
+			dependencies: ["78F6247B16DC0276" "781B7CC8D747FD26"]
+			description: ["Upgrade the fusion system again so awakened recipes are repeatable rather than one-off crafts."]
+			icon: "draconicevolution:awakened_crafting_injector"
+			id: "3AA2702B71B775F8"
+			rewards: [
+				{
+					id: "5875A128D933AA1E"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "3AEBD76950CB58B9"
+					table_id: 3571663549451093721L
+					title: "Awakened Fusion — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "12874B07E88FB377"
+					item: "draconicevolution:awakened_crafting_injector"
+					consume_items: false
+					title: "Obtain: Awakened Fusion"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Awakened Fusion; inventory detection completes this milestone automatically."
+			title: "Awakened Fusion"
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4D59F745630B7398"]
+			description: ["Build the heart of Draconic Evolution's massive energy-storage multiblock."]
+			icon: "draconicevolution:energy_core"
+			id: "6FC5EC8BAD2634FE"
+			rewards: [
+				{
+					id: "2B8ED75AB1649674"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "2E4E3DD8C8B5EA12"
+					table_id: 3571663549451093721L
+					title: "Energy Core — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "1F0A8213EBC2DD25"
+					item: "draconicevolution:energy_core"
+					consume_items: false
+					title: "Obtain: Energy Core"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Energy Core; inventory detection completes this milestone automatically."
+			title: "Energy Core"
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6FC5EC8BAD2634FE"]
+			description: ["Connect the Energy Core with pylons and prove the storage system can charge and discharge."]
+			icon: "draconicevolution:energy_pylon"
+			id: "78564D8AD17C11FA"
+			rewards: [
+				{
+					id: "21C9A9B08A98B9A8"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "3AEF30C99F00401A"
+					table_id: 3571663549451093721L
+					title: "Energy Pylons — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "4C33C05AD738F082"
+					item: "draconicevolution:energy_pylon"
+					consume_items: false
+					title: "Obtain: Energy Pylons"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Energy Pylons; inventory detection completes this milestone automatically."
+			title: "Energy Pylons"
+			x: 5.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3AA2702B71B775F8" "78564D8AD17C11FA"]
+			description: ["Reach Chaotic components through your own progression rather than relying on a reward jackpot."]
+			icon: "draconicevolution:chaotic_core"
+			id: "3F0EDFA8103184AE"
+			rewards: [
+				{
+					id: "5864F132F44F7BFA"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "45D798D209A73DEA"
+					table_id: 9131747617301332572L
+					title: "Chaotic Core — Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "6BF681222B4DB4D7"
+					item: "draconicevolution:chaotic_core"
+					consume_items: false
+					title: "Obtain: Chaotic Core"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Chaotic Core; inventory detection completes this milestone automatically."
+			title: "Chaotic Core"
+			x: 5.25d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3F0EDFA8103184AE"]
+			description: ["Build Chaotic Fusion Crafting Injectors and complete the highest fusion tier."]
+			icon: "draconicevolution:chaotic_crafting_injector"
+			id: "178915C1B4D834F5"
+			rewards: [
+				{
+					id: "4AD7FAE2B188EC06"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "795265267823A080"
+					table_id: 9131747617301332572L
+					title: "Chaotic Fusion — Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "7170C1002D5FCB2C"
+					item: "draconicevolution:chaotic_crafting_injector"
+					consume_items: false
+					title: "Obtain: Chaotic Fusion"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Chaotic Fusion; inventory detection completes this milestone automatically."
+			title: "Chaotic Fusion"
+			x: 7.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3F0EDFA8103184AE"]
+			description: ["Build the Reactor Core only after understanding the mod's reactor controls and containment requirements."]
+			icon: "draconicevolution:reactor_core"
+			id: "7DCEB4A49B9F72D6"
+			rewards: [
+				{
+					id: "4CA7F53F9E888E59"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "1807CB913CFCF609"
+					table_id: 9131747617301332572L
+					title: "Draconic Reactor — Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "5A919E025D323A77"
+					item: "draconicevolution:reactor_core"
+					consume_items: false
+					title: "Obtain: Draconic Reactor"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Draconic Reactor; inventory detection completes this milestone automatically."
+			title: "Draconic Reactor"
+			x: 7.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["178915C1B4D834F5" "7DCEB4A49B9F72D6"]
+			description: ["Complete the fusion, energy-storage, chaotic, and reactor branches and confirm the endgame Draconic workshop is operational."]
+			icon: "draconicevolution:awakened_core"
+			id: "7EE2113CA8FFD2A2"
+			rewards: [
+				{
+					id: "69067D9EE2730CCC"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "437DC0656CB3E486"
+					table_id: 9131747617301332572L
+					title: "Mastery: Draconic Evolution — Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "32872C7315AB5078"
+					table_id: 8042395617692443324L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7DF0EE63B809AB6A"
+					title: "Confirm: Mastery: Draconic Evolution"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Mastery: Draconic Evolution"
+			x: 8.75d
+			y: 0.0d
+		}
+	]
+	title: "Draconic Evolution"
+}

@@ -4,22 +4,11 @@
 	loot_size: 2
 	order_index: 390
 	rewards: [
-		{ item: "refinedstorage:controller", weight: 16.00f }
-		{ item: "refinedstorage:disk_drive", weight: 16.00f }
-		{ item: "refinedstorage:grid", weight: 16.00f }
-		{ item: "refinedstorage:exporter", weight: 9.00f }
-		{ item: "refinedstorage:importer", weight: 9.00f }
-		{ item: "refinedstorage:crafting_grid", weight: 9.00f }
-		{ item: "refinedstorage:controller", weight: 5.00f }
-		{ item: "refinedstorage:disk_drive", weight: 5.00f }
-		{ item: "refinedstorage:grid", weight: 5.00f }
-		{ item: "refinedstorage:exporter", weight: 5.00f }
-		{ item: "refinedstorage:importer", weight: 5.00f }
-		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
-		{ count: 2, item: "refinedstorage:controller", weight: 4.45f }
-		{ count: 2, item: "refinedstorage:disk_drive", weight: 4.45f }
-		{ count: 2, item: "refinedstorage:grid", weight: 4.45f }
-		{ count: 2, item: "refinedstorage:exporter", weight: 4.45f }
+		{ item: "refinedstorage:4k_storage_disk", weight: 10.00f }
+		{ item: "refinedstorage:16k_storage_disk", weight: 5.00f }
+		{ item: "refinedstorage:crafting_grid", weight: 7.00f }
+		{ item: "refinedstorage:external_storage", weight: 7.00f }
+		{ item: "refinedstorage:disk_drive", weight: 7.00f }
 	]
 	title: "Refined Storage — Tier 2 Roll"
 	use_title: true

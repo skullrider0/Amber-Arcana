@@ -1,25 +1,14 @@
 {
-	icon: "create:andesite_casing"
+	icon: "enderio:sag_mill"
 	id: "0211538CAF91CF93"
 	loot_size: 2
 	order_index: 354
 	rewards: [
-		{ item: "create:andesite_casing", weight: 16.00f }
-		{ item: "create:cogwheel", weight: 16.00f }
-		{ item: "create:goggles", weight: 16.00f }
-		{ item: "create:large_cogwheel", weight: 16.00f }
-		{ item: "create:shaft", weight: 16.00f }
-		{ item: "create:wrench", weight: 16.00f }
-		{ item: "create:andesite_alloy", weight: 9.00f }
-		{ item: "create:clutch", weight: 9.00f }
-		{ item: "create:gearbox", weight: 9.00f }
-		{ item: "create:gearshift", weight: 9.00f }
-		{ item: "create:mechanical_press", weight: 9.00f }
-		{ item: "create:speedometer", weight: 9.00f }
-		{ item: "create:stressometer", weight: 9.00f }
-		{ item: "create:water_wheel", weight: 9.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
+		{ item: "enderio:vacuum_chest", weight: 9.00f }
+		{ item: "enderio:impulse_hopper", weight: 9.00f }
+		{ item: "enderio:alloy_smelter", weight: 7.00f }
+		{ item: "enderio:sag_mill", weight: 7.00f }
+		{ count: 24, item: "enderio:grains_of_infinity", weight: 12.00f }
 	]
 	title: "Ender IO Connections — Tier 2 Roll"
 	use_title: true

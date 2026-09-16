@@ -1,459 +1,438 @@
 {
-	icon: "mekanism:metallurgic_infuser"
-	id: "151A507B6002E7CB",
-	filename: "mekanism",
-	title: "Mekanism Industry",
-	order_index: 1,
-	progression_mode: "flexible"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "mekanism"
 	group: "5A29000000000002"
+	icon: "mekanism:metallurgic_infuser"
+	id: "151A507B6002E7CB"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
 	quests: [
 		{
-			icon: "mekanism:metallurgic_infuser"
-			id: "6562879F7F787283",
-			subtitle: "Requires Metallurgic Infuser + Enrichment Chamber; completion is detected automatically."
-			title: "A powered machine room",
-			x: -16.0d
-			y: 0.0d
 			dependencies: ["5DF5A47BBDCD9172"]
-			description: [
-				"Generate energy, connect cables, and run a Metallurgic Infuser and Enrichment Chamber. Leave room for upgrades.",
-				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
-			],
+			description: ["Begin Mekanism with infusion chemistry and the alloys used by nearly every later machine."]
+			icon: "mekanism:metallurgic_infuser"
+			id: "6562879F7F787283"
 			rewards: [
 				{
-					count: 8
-					id: "E784906E5E9663A7"
-					item: "minecraft:redstone"
-					type: "item"
-				}
-				{
-					id: "45D2D3A69A95A384"
+					id: "3AD19E24E38E757F"
 					type: "xp"
-					xp: 100
+					xp: 50
 				}
 				{
-					id: "4EAD32764C51789B"
+					id: "7C28A1CF62054ECB"
 					table_id: 4776605992129075617L
-					title: "Mekanism Industry Tier 1 Roll"
+					title: "Metallurgic Foundations — Tier 1 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "4696A8476A8A273F"
+					id: "2BFFD77E45DA310B"
 					item: "mekanism:metallurgic_infuser"
 					consume_items: false
-					title: "Obtain: Metallurgic Infuser"
+					title: "Obtain: Metallurgic Foundations"
 					type: "item"
 				}
+			]
+			subtitle: "Obtain Metallurgic Foundations; inventory detection completes this milestone automatically."
+			title: "Metallurgic Foundations"
+			x: -5.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6562879F7F787283"]
+			description: ["Build the Enrichment Chamber and establish the first efficient ore-processing step."]
+			icon: "mekanism:enrichment_chamber"
+			id: "63F5C772CFB29528"
+			rewards: [
 				{
-					id: "65374FE5A893613E"
+					id: "107649F46F61E0B7"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "391DFF58D0856032"
+					table_id: 4776605992129075617L
+					title: "Enrichment Chamber — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "698D0E8C856FED56"
 					item: "mekanism:enrichment_chamber"
 					consume_items: false
 					title: "Obtain: Enrichment Chamber"
 					type: "item"
 				}
-				{
-					id: "4CF8AA93280B9A5D"
-					title: "Completed milestone: A powered machine room"
-					optional_task: true
-					type: "checkmark"
-				}
 			]
+			subtitle: "Obtain Enrichment Chamber; inventory detection completes this milestone automatically."
+			title: "Enrichment Chamber"
+			x: -3.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["6562879F7F787283"]
-			description: [
-				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "mekanism:metallurgic_infuser"
-			id: "63F5C772CFB29528"
-			rewards: [
-				{
-					id: "62C8645F81DFCBF6"
-					table_id: 4776605992129075617L
-					title: "Mekanism Industry Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "51D0B33B529A1CB8"
-					title: "Confirm: Commission: A powered machine room"
-					type: "checkmark"
-				}
-			]
-			title: "Commission: A powered machine room"
-			x: -6.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["63F5C772CFB29528"]
-			description: [
-				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "mekanism:metallurgic_infuser"
+			description: ["Produce steel and build the casings that anchor Mekanism machines and multiblocks."]
+			icon: "mekanism:steel_casing"
 			id: "5B9F22B2E0B07385"
 			rewards: [
 				{
-					id: "4FCD9A9E2DCF3B47"
+					id: "334D09C1933CD44E"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "33C403DEEF471B83"
 					table_id: 4776605992129075617L
-					title: "Mekanism Industry Tier 1 Roll"
+					title: "Steel Infrastructure — Tier 1 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "328160359A5167BD"
-					title: "Confirm: Automate: A powered machine room"
-					type: "checkmark"
+					id: "71B264EA92BCFA33"
+					item: "mekanism:steel_casing"
+					consume_items: false
+					title: "Obtain: Steel Infrastructure"
+					type: "item"
 				}
 			]
-			title: "Automate: A powered machine room"
-			x: -4.5d
-			y: -1.75d
+			subtitle: "Obtain Steel Infrastructure; inventory detection completes this milestone automatically."
+			title: "Steel Infrastructure"
+			x: -3.5d
+			y: 1.5d
 		}
 		{
-			icon: "mekanism:purification_chamber"
-			id: "0C7A1308769A74B9",
-			subtitle: "Requires Advanced ore-processing machine; completion is detected automatically."
-			title: "Ore processing",
-			x: -4.0d
-			y: 0.0d
-			description: [
-				"Build a reliable processing line and automate its inputs and outputs. Expand chemical processing only after checking the installed recipes.",
-				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
-			],
+			dependencies: ["63F5C772CFB29528"]
+			description: ["Add crushing so your processing room can prepare materials for more advanced chemistry."]
+			icon: "mekanism:crusher"
+			id: "0C7A1308769A74B9"
 			rewards: [
 				{
-					count: 8
-					id: "E9352DCC64E81B5A"
-					item: "minecraft:quartz"
-					type: "item"
-				}
-				{
-					id: "AD4C9DAC73A9C17E"
+					id: "1C46FA5489ECA712"
 					type: "xp"
-					xp: 150
+					xp: 100
 				}
 				{
-					id: "4D565557F9BD63AA"
+					id: "0C3EB751E31AE0EA"
 					table_id: 2059557368985092533L
-					title: "Mekanism Industry Tier 2 Roll"
+					title: "Crushing Line — Tier 2 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "5F3F36F05E636517"
-					item: "mekanism:purification_chamber"
+					id: "221A8805E25801AC"
+					item: "mekanism:crusher"
 					consume_items: false
-					title: "Obtain: Advanced ore-processing machine"
+					title: "Obtain: Crushing Line"
 					type: "item"
 				}
-				{
-					id: "4CE67B43815401BD"
-					title: "Completed milestone: Ore processing"
-					optional_task: true
-					type: "checkmark"
-				}
-			],
-			dependencies: ["5B9F22B2E0B07385"]
+			]
+			subtitle: "Obtain Crushing Line; inventory detection completes this milestone automatically."
+			title: "Crushing Line"
+			x: -1.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["0C7A1308769A74B9"]
-			description: [
-				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
+			description: ["Advance into oxygen-based ore purification and automate the material flow around it."]
 			icon: "mekanism:purification_chamber"
 			id: "183643F28E664C44"
 			rewards: [
 				{
-					id: "11AB59B9885FAADA"
+					id: "2E657DC4DC23E757"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "6EFFCDCC2682F39E"
 					table_id: 2059557368985092533L
-					title: "Mekanism Industry Tier 2 Roll"
+					title: "Purification Line — Tier 2 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "06282D4A25584D00"
-					title: "Confirm: Commission: Ore processing"
-					type: "checkmark"
+					id: "73EB3EE3519C6767"
+					item: "mekanism:purification_chamber"
+					consume_items: false
+					title: "Obtain: Purification Line"
+					type: "item"
 				}
 			]
-			title: "Commission: Ore processing"
-			x: -1.0d
-			y: -1.75d
+			subtitle: "Obtain Purification Line; inventory detection completes this milestone automatically."
+			title: "Purification Line"
+			x: 0.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["183643F28E664C44"]
-			description: [
-				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "mekanism:purification_chamber"
+			description: ["Add the Chemical Injection Chamber and move beyond the early ore-processing tiers."]
+			icon: "mekanism:chemical_injection_chamber"
 			id: "5EAF458D93D049F9"
 			rewards: [
 				{
-					id: "2F169E599E8E3F73"
+					id: "07CDD79F76E1F25F"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "2C103A22D7238478"
 					table_id: 2059557368985092533L
-					title: "Mekanism Industry Tier 2 Roll"
+					title: "Chemical Injection — Tier 2 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "3BB2F6359E650B9F"
-					title: "Confirm: Automate: Ore processing"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: Ore processing"
-			x: 1.0d
-			y: -1.75d
-		}
-		{
-			icon: "mekanism:ultimate_energy_cube"
-			id: "6E3143B357129102",
-			subtitle: "Requires High-capacity energy buffer; completion is detected automatically."
-			title: "Power with safeguards",
-			x: 8.0d
-			y: 0.0d
-			description: [
-				"Build a larger energy system. Read the reactor guide before operation and provide a reliable shutdown and waste-handling plan for any fission installation.",
-				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
-			],
-			rewards: [
-				{
-					count: 4
-					id: "22B3CEC5EFC942A0"
-					item: "minecraft:gold_ingot"
+					id: "10606FEEBCE48599"
+					item: "mekanism:chemical_injection_chamber"
+					consume_items: false
+					title: "Obtain: Chemical Injection"
 					type: "item"
 				}
+			]
+			subtitle: "Obtain Chemical Injection; inventory detection completes this milestone automatically."
+			title: "Chemical Injection"
+			x: 1.75d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5B9F22B2E0B07385"]
+			description: ["Split fluids into useful gases and build dependable chemical production instead of hand-feeding machines."]
+			icon: "mekanism:electrolytic_separator"
+			id: "6E3143B357129102"
+			rewards: [
 				{
-					id: "86EA4FA68B78611F"
+					id: "2E1A07B1045D206E"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "3B67EE5973069175"
+					table_id: 2059557368985092533L
+					title: "Electrolysis — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "259FA402F7346C68"
+					item: "mekanism:electrolytic_separator"
+					consume_items: false
+					title: "Obtain: Electrolysis"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Electrolysis; inventory detection completes this milestone automatically."
+			title: "Electrolysis"
+			x: -1.75d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6E3143B357129102"]
+			description: ["Use the Pressurized Reaction Chamber as the bridge between items, fluids, gases, and higher chemistry."]
+			icon: "mekanism:pressurized_reaction_chamber"
+			id: "26E091D092556FB0"
+			rewards: [
+				{
+					id: "7D28A4098B83C08C"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "3364CE58CB0DF36B"
+					table_id: 4136371881537435336L
+					title: "Pressurized Reactions — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "5271AA7CA0F5334A"
+					item: "mekanism:pressurized_reaction_chamber"
+					consume_items: false
+					title: "Obtain: Pressurized Reactions"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Pressurized Reactions; inventory detection completes this milestone automatically."
+			title: "Pressurized Reactions"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5EAF458D93D049F9" "26E091D092556FB0"]
+			description: ["Enter the full chemical ore-processing chain with the Chemical Dissolution Chamber."]
+			icon: "mekanism:chemical_dissolution_chamber"
+			id: "44EA9A10C307DAE7"
+			rewards: [
+				{
+					id: "3D5EEA1F81778934"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "607F7F3A11145B24"
+					table_id: 4136371881537435336L
+					title: "Dissolve the Ore — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "78B9019AB369F65E"
+					item: "mekanism:chemical_dissolution_chamber"
+					consume_items: false
+					title: "Obtain: Dissolve the Ore"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Dissolve the Ore; inventory detection completes this milestone automatically."
+			title: "Dissolve the Ore"
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["44EA9A10C307DAE7"]
+			description: ["Clean slurry before crystallization and keep the chemical chain continuously supplied."]
+			icon: "mekanism:chemical_washer"
+			id: "27F120E99FCF093B"
+			rewards: [
+				{
+					id: "4292D5BD023E68F7"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "66BC71700B823D17"
+					table_id: 4136371881537435336L
+					title: "Wash the Slurry — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "12A382183B26DBBC"
+					item: "mekanism:chemical_washer"
+					consume_items: false
+					title: "Obtain: Wash the Slurry"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Wash the Slurry; inventory detection completes this milestone automatically."
+			title: "Wash the Slurry"
+			x: 5.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27F120E99FCF093B"]
+			description: ["Finish the advanced ore-processing chain by crystallizing clean slurry into usable material."]
+			icon: "mekanism:chemical_crystallizer"
+			id: "4A4EFCC143C10893"
+			rewards: [
+				{
+					id: "7DE3D97CF872C252"
 					type: "xp"
 					xp: 200
 				}
 				{
-					id: "2E9621B23BE0CC59"
-					table_id: 4136371881537435336L
-					title: "Mekanism Industry Tier 3 Roll"
+					id: "69B4BEEE2E5CBA73"
+					table_id: 165611597155965923L
+					title: "Crystallize the Output — Tier 4 Roll"
 					type: "loot"
 				}
 			]
 			tasks: [
 				{
-					id: "CB85B165CAFC4D3C"
-					item: "mekanism:ultimate_energy_cube"
+					id: "62172EAB06DD4411"
+					item: "mekanism:chemical_crystallizer"
 					consume_items: false
-					title: "Obtain: High-capacity energy buffer"
+					title: "Obtain: Crystallize the Output"
 					type: "item"
 				}
-				{
-					id: "2107AF1EEF77061E"
-					title: "Completed milestone: Power with safeguards"
-					optional_task: true
-					type: "checkmark"
-				}
-			],
-			dependencies: ["5EAF458D93D049F9"]
-		}
-		{
-			dependencies: ["6E3143B357129102"]
-			description: [
-				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
 			]
-			icon: "mekanism:ultimate_energy_cube"
-			id: "26E091D092556FB0"
-			rewards: [
-				{
-					id: "0DE9E5FF6E7B7B24"
-					table_id: 4136371881537435336L
-					title: "Mekanism Industry Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "605ECC7E7F5C10AC"
-					title: "Confirm: Commission: Power with safeguards"
-					type: "checkmark"
-				}
-			]
-			title: "Commission: Power with safeguards"
-			x: 4.5d
-			y: -1.75d
+			subtitle: "Obtain Crystallize the Output; inventory detection completes this milestone automatically."
+			title: "Crystallize the Output"
+			x: 7.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["26E091D092556FB0"]
-			description: [
-				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "mekanism:ultimate_energy_cube"
-			id: "44EA9A10C307DAE7"
-			rewards: [
-				{
-					id: "7E60A9ACD85B4ED5"
-					table_id: 4136371881537435336L
-					title: "Mekanism Industry Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2374DD4FB4901FBE"
-					title: "Confirm: Automate: Power with safeguards"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: Power with safeguards"
-			x: 6.0d
-			y: -1.75d
-		}
-		{
-			icon: "mekanism:mekasuit_helmet"
-			id: "27F120E99FCF093B",
-			subtitle: "Requires MekaSuit Helmet; completion is detected automatically."
-			title: "The MekaSuit",
-			x: 16.0d
-			y: 8.0d
-			description: [
-				"Craft and charge the MekaSuit pieces, then install modules appropriate to your exploration plans.",
-				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
-			],
-			rewards: [
-				{
-					id: "6702318ADC479DA3"
-					type: "xp"
-					xp: 400
-				}
-				{
-					id: "297BB209C89F85FD"
-					table_id: 165611597155965923L
-					title: "Mekanism Industry Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			tasks: [
-				{
-					id: "65B2B499EFE2EE35"
-					item: "mekanism:mekasuit_helmet"
-					consume_items: false
-					title: "Obtain: MekaSuit Helmet"
-					type: "item"
-				}
-				{
-					id: "29050B08F0F81008"
-					title: "Completed milestone: The MekaSuit"
-					optional_task: true
-					type: "checkmark"
-				}
-			],
-			dependencies: ["44EA9A10C307DAE7"]
-		}
-		{
-			dependencies: ["27F120E99FCF093B"]
-			description: [
-				"Place, power, configure, and run the Mekanism machines from this milestone on a real recipe."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "mekanism:mekasuit_helmet"
-			id: "4A4EFCC143C10893"
-			rewards: [
-				{
-					id: "0CCCEEEC263EDA08"
-					table_id: 165611597155965923L
-					title: "Mekanism Industry Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "03B2BF66D6B5C2F8"
-					title: "Confirm: Commission: The MekaSuit"
-					type: "checkmark"
-				}
-			]
-			title: "Commission: The MekaSuit"
-			x: 4.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["4A4EFCC143C10893"]
-			description: [
-				"Route inputs, outputs, power, and side configuration so this Mekanism step can run without hand-feeding every operation."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "mekanism:mekasuit_helmet"
+			description: ["Reach Mekanism's portable high-energy tool tier and prove the factory can support expensive technology."]
+			icon: "mekanism:atomic_disassembler"
 			id: "7629A6E7C160C1D0"
 			rewards: [
 				{
-					id: "0337D408F992C544"
+					id: "2E784A3842C8BB7B"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "284502C4993BE0EC"
 					table_id: 165611597155965923L
-					title: "Mekanism Industry Tier 4 Roll"
+					title: "Atomic Technology — Tier 4 Roll"
 					type: "loot"
 				}
 			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
 			tasks: [
 				{
-					id: "1996B57A411FDD34"
-					title: "Confirm: Automate: The MekaSuit"
-					type: "checkmark"
+					id: "43D425DF71CC6036"
+					item: "mekanism:atomic_disassembler"
+					consume_items: false
+					title: "Obtain: Atomic Technology"
+					type: "item"
 				}
 			]
-			title: "Automate: The MekaSuit"
-			x: 2.5d
-			y: 1.75d
+			subtitle: "Obtain Atomic Technology; inventory detection completes this milestone automatically."
+			title: "Atomic Technology"
+			x: 3.5d
+			y: 1.5d
 		}
 		{
-			dependencies: ["7629A6E7C160C1D0"]
-			description: [
-				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
-				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
-			]
-			icon: "mekanism:metallurgic_infuser"
+			dependencies: ["4A4EFCC143C10893" "7629A6E7C160C1D0"]
+			description: ["Complete both advanced processing and atomic technology, then build the Antiprotonic Nucleosynthesizer."]
+			icon: "mekanism:antiprotonic_nucleosynthesizer"
 			id: "3A3D9EA4421B3E5F"
 			rewards: [
 				{
-					id: "393AB8E1188B48C2"
+					id: "20CD28C3DD6B37D4"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "63EE4765DA99A8A0"
 					table_id: 165611597155965923L
-					title: "Mekanism Industry Tier 4 Roll"
+					title: "Mastery: Mekanism — Tier 4 Roll"
 					type: "loot"
 				}
 				{
-					id: "00013103C75074FF"
+					id: "6255A709452DB6EE"
 					table_id: 5287311716821505651L
 					title: "Spin the Wheel of Fortune"
 					type: "loot"
 				}
 			]
-			subtitle: "Complete every branch before claiming the chapter finale."
+			shape: "hexagon"
+			size: 1.5d
 			tasks: [
 				{
-					id: "79F92F0089C076F4"
-					title: "Confirm chapter mastery: Mekanism Industry"
-					type: "checkmark"
+					id: "76FE21D31694ED9F"
+					item: "mekanism:antiprotonic_nucleosynthesizer"
+					consume_items: false
+					title: "Obtain: Mastery: Mekanism"
+					type: "item"
 				}
 			]
-			title: "Mekanism Industry Mastery"
-			x: 1.0d
-			y: 1.75d
+			subtitle: "Obtain Mastery: Mekanism; inventory detection completes this milestone automatically."
+			title: "Mastery: Mekanism"
+			x: 8.75d
+			y: 0.0d
 		}
-	],
-	quest_links: []
+	]
+	title: "Mekanism Industry"
 }

@@ -4,19 +4,11 @@
 	loot_size: 1
 	order_index: 301
 	rewards: [
-		{ item: "ae2:controller", weight: 16.00f }
-		{ item: "ae2:molecular_assembler", weight: 16.00f }
-		{ item: "ae2:pattern_provider", weight: 16.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 16.00f }
-		{ item: "ae2:controller", weight: 5.00f }
-		{ item: "ae2:molecular_assembler", weight: 5.00f }
-		{ item: "ae2:pattern_provider", weight: 5.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ item: "ae2:controller", weight: 4.45f }
-		{ item: "ae2:molecular_assembler", weight: 4.45f }
-		{ item: "ae2:pattern_provider", weight: 4.45f }
-		{ item: "ae2:item_storage_cell_64k", weight: 4.45f }
+		{ count: 8, item: "ae2:certus_quartz_crystal", weight: 16.00f }
+		{ count: 4, item: "ae2:fluix_crystal", weight: 12.00f }
+		{ item: "ae2:charger", weight: 4.00f }
+		{ item: "ae2:inscriber", weight: 3.00f }
 	]
-	title: "Ae2 — Tier 1 Roll"
+	title: "Applied Energistics 2 — Tier 1 Roll"
 	use_title: true
 }

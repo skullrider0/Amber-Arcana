@@ -4,14 +4,20 @@
 	loot_size: 5
 	order_index: 118
 	rewards: [
-		{ item: "irons_spellbooks:iron_spell_book", weight: 6.00f }
-		{ item: "irons_spellbooks:inscription_table", weight: 6.00f }
-		{ count: 2, item: "irons_spellbooks:iron_spell_book", weight: 3.34f }
-		{ count: 2, item: "irons_spellbooks:inscription_table", weight: 3.34f }
-		{ count: 3, item: "irons_spellbooks:iron_spell_book", weight: 2.92f }
-		{ count: 3, item: "irons_spellbooks:inscription_table", weight: 2.92f }
-		{ count: 4, item: "irons_spellbooks:iron_spell_book", weight: 0.80f }
-		{ count: 4, item: "irons_spellbooks:inscription_table", weight: 0.80f }
+		{ count: 8, item: "irons_spellbooks:arcane_ingot", weight: 14.00f }
+		{ count: 2, item: "irons_spellbooks:upgrade_orb", weight: 10.00f }
+		{ item: "irons_spellbooks:arcane_anvil", weight: 6.00f }
+		{ item: "irons_spellbooks:diamond_spell_book", weight: 1.50f }
+		{ count: 4, item: "irons_spellbooks:mithril_ingot", weight: 12.00f }
+		{ count: 3, item: "irons_spellbooks:upgrade_orb", weight: 10.00f }
+		{ item: "irons_spellbooks:diamond_spell_book", weight: 5.00f }
+		{ item: "irons_spellbooks:arcane_anvil", weight: 6.00f }
+		{ item: "irons_spellbooks:netherite_spell_book", weight: 0.75f }
+		{ count: 8, item: "irons_spellbooks:mithril_ingot", weight: 12.00f }
+		{ count: 4, item: "irons_spellbooks:upgrade_orb", weight: 12.00f }
+		{ item: "irons_spellbooks:diamond_spell_book", weight: 7.00f }
+		{ item: "irons_spellbooks:netherite_spell_book", weight: 0.35f }
+		{ count: 16, item: "irons_spellbooks:arcane_ingot", weight: 10.00f }
 	]
 	title: "Wheel of Fortune — Iron Spells and Wizardry"
 	use_title: true

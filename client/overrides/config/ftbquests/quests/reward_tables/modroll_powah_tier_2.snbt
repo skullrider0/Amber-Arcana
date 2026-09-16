@@ -1,25 +1,14 @@
 {
-	icon: "powah:dielectric_casing"
+	icon: "powah:energizing_orb"
 	id: "616903DD4DF62D45"
 	loot_size: 2
 	order_index: 382
 	rewards: [
-		{ item: "powah:dielectric_casing", weight: 16.00f }
-		{ item: "powah:energizing_orb", weight: 16.00f }
-		{ item: "powah:thermo_generator_starter", weight: 16.00f }
-		{ item: "powah:energy_cell_starter", weight: 16.00f }
-		{ item: "powah:energy_cell_basic", weight: 16.00f }
-		{ item: "powah:reactor_starter", weight: 16.00f }
-		{ item: "powah:thermo_generator_basic", weight: 9.00f }
-		{ item: "powah:thermo_generator_hardened", weight: 9.00f }
-		{ item: "powah:energy_cell_hardened", weight: 9.00f }
-		{ item: "powah:reactor_basic", weight: 9.00f }
-		{ item: "powah:reactor_hardened", weight: 9.00f }
-		{ item: "powah:energizing_rod_hardened", weight: 9.00f }
-		{ item: "powah:dielectric_casing", weight: 5.00f }
-		{ item: "powah:energizing_orb", weight: 5.00f }
-		{ item: "powah:thermo_generator_starter", weight: 5.00f }
-		{ item: "powah:energy_cell_starter", weight: 5.00f }
+		{ count: 5, item: "powah:crystal_blazing", weight: 14.00f }
+		{ item: "powah:thermo_generator_hardened", weight: 8.00f }
+		{ item: "powah:energy_cell_hardened", weight: 8.00f }
+		{ item: "powah:reactor_basic", weight: 5.00f }
+		{ item: "powah:energizing_rod_hardened", weight: 6.00f }
 	]
 	title: "Powah Energy — Tier 2 Roll"
 	use_title: true

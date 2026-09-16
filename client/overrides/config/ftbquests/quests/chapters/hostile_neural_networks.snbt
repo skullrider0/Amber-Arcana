@@ -1,0 +1,427 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hostile_neural_networks"
+	group: "5A29000000000004"
+	icon: "hostilenetworks:deep_learner"
+	id: "1CC0D39948805A09"
+	order_index: 4
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Build a Deep Learner, the tool used to train mob Data Models."]
+			icon: "hostilenetworks:deep_learner"
+			id: "4FCE30FEC8982135"
+			rewards: [
+				{
+					id: "108147E77A0F2E61"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "74C6853A7AA0DFB1"
+					table_id: 1105787497020267212L
+					title: "Deep Learner — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "02E9EBC6AAF0786C"
+					item: "hostilenetworks:deep_learner"
+					consume_items: false
+					title: "Obtain: Deep Learner"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Deep Learner; inventory detection completes this milestone automatically."
+			title: "Deep Learner"
+			x: -5.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4FCE30FEC8982135"]
+			description: ["Craft a Blank Data Model and convert it into a model for a mob you actually want to farm."]
+			icon: "hostilenetworks:blank_data_model"
+			id: "1637D2A8326C02E3"
+			rewards: [
+				{
+					id: "7F39A1664235F6E3"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "25CF40CD15CD1378"
+					table_id: 1105787497020267212L
+					title: "Blank Data Model — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "4A806EE469F7D2C7"
+					item: "hostilenetworks:blank_data_model"
+					consume_items: false
+					title: "Obtain: Blank Data Model"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Blank Data Model; inventory detection completes this milestone automatically."
+			title: "Blank Data Model"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1637D2A8326C02E3"]
+			description: ["Train a Data Model through real kills until it is ready for simulation."]
+			icon: "hostilenetworks:data_model"
+			id: "7C440F5C6194AD99"
+			rewards: [
+				{
+					id: "5CAE9C8E97B3F368"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "633FFD4A2223EF0F"
+					table_id: 1105787497020267212L
+					title: "Train a Model — Tier 1 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "0C567726768C5524"
+					title: "Confirm: Train a Model"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Train a Model"
+			x: -1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7C440F5C6194AD99"]
+			description: ["Produce Prediction Matrices to fuel automated simulations."]
+			icon: "hostilenetworks:prediction_matrix"
+			id: "400557FC8B9FB30A"
+			rewards: [
+				{
+					id: "28D8E2AFF4DFCF44"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "0675690128D51E5F"
+					table_id: 1172762047090694777L
+					title: "Prediction Matrix — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "0D65B962D0AD41B9"
+					item: "hostilenetworks:prediction_matrix"
+					consume_items: false
+					title: "Obtain: Prediction Matrix"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Prediction Matrix; inventory detection completes this milestone automatically."
+			title: "Prediction Matrix"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7C440F5C6194AD99"]
+			description: ["Build and power a Simulation Chamber, then run a trained model inside it."]
+			icon: "hostilenetworks:sim_chamber"
+			id: "0EBD9BDCE0FCD1A1"
+			rewards: [
+				{
+					id: "5B6242435AB461EF"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "68168AA0270E89D2"
+					table_id: 1172762047090694777L
+					title: "Simulation Chamber — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "750CBEFDE9CBD295"
+					item: "hostilenetworks:sim_chamber"
+					consume_items: false
+					title: "Obtain: Simulation Chamber"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Simulation Chamber; inventory detection completes this milestone automatically."
+			title: "Simulation Chamber"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["400557FC8B9FB30A" "0EBD9BDCE0FCD1A1"]
+			description: ["Generate an Overworld Prediction from a working simulation."]
+			icon: "hostilenetworks:overworld_prediction"
+			id: "3CD71E762A18ADAC"
+			rewards: [
+				{
+					id: "1B9D643377904BEB"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "4AADEE5394F37483"
+					table_id: 1172762047090694777L
+					title: "Overworld Predictions — Tier 2 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "36C2B577B54F0F9A"
+					item: "hostilenetworks:overworld_prediction"
+					consume_items: false
+					title: "Obtain: Overworld Predictions"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Overworld Predictions; inventory detection completes this milestone automatically."
+			title: "Overworld Predictions"
+			x: 1.75d
+			y: -1.5d
+		}
+		{
+			dependencies: ["400557FC8B9FB30A" "0EBD9BDCE0FCD1A1"]
+			description: ["Generate a Nether Prediction and broaden the kinds of loot your network can synthesize."]
+			icon: "hostilenetworks:nether_prediction"
+			id: "381659E89358ABF7"
+			rewards: [
+				{
+					id: "717D216D39C138FE"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "428737A89E0E30E3"
+					table_id: 5499599307418336824L
+					title: "Nether Predictions — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "23F76024F160E390"
+					item: "hostilenetworks:nether_prediction"
+					consume_items: false
+					title: "Obtain: Nether Predictions"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Nether Predictions; inventory detection completes this milestone automatically."
+			title: "Nether Predictions"
+			x: 1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["400557FC8B9FB30A" "0EBD9BDCE0FCD1A1"]
+			description: ["Generate an End Prediction and prove the chamber can support higher-value models."]
+			icon: "hostilenetworks:end_prediction"
+			id: "5F1EA4FE2CA3D52D"
+			rewards: [
+				{
+					id: "499896690BD3E5C7"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7E3B57E9E3CD25DF"
+					table_id: 5499599307418336824L
+					title: "End Predictions — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "02EC2A0B1C294AD9"
+					item: "hostilenetworks:end_prediction"
+					consume_items: false
+					title: "Obtain: End Predictions"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain End Predictions; inventory detection completes this milestone automatically."
+			title: "End Predictions"
+			x: 1.75d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3CD71E762A18ADAC" "381659E89358ABF7" "5F1EA4FE2CA3D52D"]
+			description: ["Build a Loot Fabricator and turn predictions into the mob drops you actually need."]
+			icon: "hostilenetworks:loot_fabricator"
+			id: "00D817F2873C84CB"
+			rewards: [
+				{
+					id: "16638F6A044F5C7E"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "751BD2CF00862E48"
+					table_id: 5499599307418336824L
+					title: "Loot Fabricator — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "26060ECB06175E39"
+					item: "hostilenetworks:loot_fabricator"
+					consume_items: false
+					title: "Obtain: Loot Fabricator"
+					type: "item"
+				}
+			]
+			subtitle: "Obtain Loot Fabricator; inventory detection completes this milestone automatically."
+			title: "Loot Fabricator"
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00D817F2873C84CB"]
+			description: ["Train at least one useful model beyond its basic state so simulations become more efficient."]
+			icon: "hostilenetworks:data_model"
+			id: "2B072392A81EB04D"
+			rewards: [
+				{
+					id: "25ED80003B9477E5"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4D1036D0114744E1"
+					table_id: 5499599307418336824L
+					title: "Advanced Model Training — Tier 3 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "58D1C2907DADA5D9"
+					title: "Confirm: Advanced Model Training"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Advanced Model Training"
+			x: 5.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2B072392A81EB04D"]
+			description: ["Push a valuable model into the upper training tiers and keep it supplied with matrices."]
+			icon: "hostilenetworks:data_model"
+			id: "4C1CB27F8F0C7D89"
+			rewards: [
+				{
+					id: "7E4968AB2CC98A9A"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "18E2DB8DD04C2EC7"
+					table_id: 836921757713332194L
+					title: "Superior Model Training — Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "54AC2245DAA8688F"
+					title: "Confirm: Superior Model Training"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Superior Model Training"
+			x: 5.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4C1CB27F8F0C7D89"]
+			description: ["Reach the Self-Aware tier on at least one valuable model."]
+			icon: "hostilenetworks:data_model"
+			id: "6FF48D6A74369A6C"
+			rewards: [
+				{
+					id: "78EE3A8BAF88B531"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "4A9FE69FADDF6F0B"
+					table_id: 836921757713332194L
+					title: "Self-Aware Models — Tier 4 Roll"
+					type: "loot"
+				}
+			]
+			tasks: [
+				{
+					id: "2908609D8523776A"
+					title: "Confirm: Self-Aware Models"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Self-Aware Models"
+			x: 5.25d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6FF48D6A74369A6C"]
+			description: ["Confirm the learner, model training, simulations, predictions, and loot fabrication operate as a renewable mob-resource system."]
+			icon: "hostilenetworks:loot_fabricator"
+			id: "1393C4ECBCB1A0EB"
+			rewards: [
+				{
+					id: "64A9103A3454D277"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "48875FFDC60D5736"
+					table_id: 836921757713332194L
+					title: "Mastery: Neural Networks — Tier 4 Roll"
+					type: "loot"
+				}
+				{
+					id: "19495F945B55F7D0"
+					table_id: 9149247167845616651L
+					title: "Spin the Wheel of Fortune"
+					type: "loot"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "5DA45DDEDE2A172B"
+					title: "Confirm: Mastery: Neural Networks"
+					type: "checkmark"
+				}
+			]
+			subtitle: "Hands-on progression milestone; confirm it after completing the described mechanic."
+			title: "Mastery: Neural Networks"
+			x: 7.0d
+			y: 0.0d
+		}
+	]
+	title: "Hostile Neural Networks"
+}

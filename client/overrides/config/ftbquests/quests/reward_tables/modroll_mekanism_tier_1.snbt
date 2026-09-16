@@ -1,21 +1,14 @@
 {
-	icon: "mekanism:enrichment_chamber"
+	icon: "mekanism:metallurgic_infuser"
 	id: "4249E9D7A0DB19A1"
 	loot_size: 1
 	order_index: 377
 	rewards: [
-		{ item: "mekanism:enrichment_chamber", weight: 16.00f }
-		{ item: "mekanism:metallurgic_infuser", weight: 16.00f }
-		{ item: "mekanism:purification_chamber", weight: 16.00f }
-		{ item: "mekanism:ultimate_energy_cube", weight: 16.00f }
-		{ item: "mekanism:mekasuit_helmet", weight: 16.00f }
-		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
-		{ item: "mekanism:metallurgic_infuser", weight: 5.00f }
-		{ item: "mekanism:purification_chamber", weight: 5.00f }
-		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
-		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
-		{ item: "mekanism:enrichment_chamber", weight: 4.45f }
-		{ item: "mekanism:metallurgic_infuser", weight: 4.45f }
+		{ count: 6, item: "mekanism:basic_control_circuit", weight: 16.00f }
+		{ count: 6, item: "mekanism:alloy_infused", weight: 14.00f }
+		{ count: 2, item: "mekanism:steel_casing", weight: 8.00f }
+		{ item: "mekanism:enrichment_chamber", weight: 3.00f }
+		{ item: "mekanism:metallurgic_infuser", weight: 3.00f }
 	]
 	title: "Mekanism Industry — Tier 1 Roll"
 	use_title: true

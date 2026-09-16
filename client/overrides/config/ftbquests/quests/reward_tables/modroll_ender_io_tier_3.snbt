@@ -1,29 +1,14 @@
 {
-	icon: "create:goggles"
+	icon: "enderio:sag_mill"
 	id: "7C698553F001B066"
 	loot_size: 3
 	order_index: 355
 	rewards: [
-		{ item: "create:goggles", weight: 14.00f }
-		{ item: "create:large_cogwheel", weight: 14.00f }
-		{ item: "create:shaft", weight: 14.00f }
-		{ item: "create:wrench", weight: 14.00f }
-		{ item: "create:andesite_alloy", weight: 14.00f }
-		{ item: "create:clutch", weight: 14.00f }
-		{ item: "create:gearbox", weight: 14.00f }
-		{ item: "create:gearshift", weight: 14.00f }
-		{ item: "create:mechanical_press", weight: 14.00f }
-		{ item: "create:speedometer", weight: 14.00f }
-		{ item: "create:stressometer", weight: 14.00f }
-		{ item: "create:water_wheel", weight: 14.00f }
-		{ item: "create:basin", weight: 7.00f }
-		{ item: "create:encased_fan", weight: 7.00f }
-		{ item: "create:mechanical_mixer", weight: 7.00f }
-		{ item: "create:millstone", weight: 7.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 5.00f }
-		{ item: "create:shaft", weight: 5.00f }
-		{ item: "create:wrench", weight: 5.00f }
+		{ item: "enderio:slice_and_splice", weight: 9.00f }
+		{ item: "enderio:soul_binder", weight: 9.00f }
+		{ item: "enderio:enchanter", weight: 8.00f }
+		{ item: "enderio:vacuum_chest", weight: 7.00f }
+		{ item: "enderio:impulse_hopper", weight: 7.00f }
 	]
 	title: "Ender IO Connections — Tier 3 Roll"
 	use_title: true

@@ -1,0 +1,13 @@
+{
+	icon: "hostilenetworks:deep_learner"
+	id: "10467CDE46E69A79"
+	loot_size: 2
+	order_index: 872
+	rewards: [
+		{ count: 16, item: "hostilenetworks:prediction_matrix", weight: 16.00f }
+		{ count: 4, item: "hostilenetworks:overworld_prediction", weight: 10.00f }
+		{ item: "hostilenetworks:sim_chamber", weight: 2.50f }
+	]
+	title: "Hostile Neural Networks — Tier 2 Roll"
+	use_title: true
+}

@@ -4,22 +4,23 @@
 	loot_size: 5
 	order_index: 105
 	rewards: [
-		{ item: "ars_nouveau:novice_spell_book", weight: 6.00f }
+		{ count: 16, item: "ars_nouveau:source_gem", weight: 14.00f }
+		{ item: "ars_nouveau:source_jar", weight: 8.00f }
+		{ item: "ars_nouveau:enchanting_apparatus", weight: 7.00f }
+		{ item: "ars_nouveau:arcane_core", weight: 7.00f }
+		{ item: "ars_nouveau:apprentice_spell_book", weight: 3.00f }
+		{ item: "ars_nouveau:spell_turret", weight: 7.00f }
+		{ item: "ars_nouveau:starbuncle_charm", weight: 7.00f }
+		{ item: "ars_nouveau:wixie_charm", weight: 6.00f }
+		{ item: "ars_nouveau:drygmy_charm", weight: 5.00f }
+		{ item: "ars_nouveau:ritual_brazier", weight: 5.00f }
+		{ count: 24, item: "ars_nouveau:source_gem", weight: 10.00f }
+		{ count: 2, item: "ars_nouveau:spell_turret", weight: 8.00f }
+		{ item: "ars_nouveau:drygmy_charm", weight: 7.00f }
+		{ item: "ars_nouveau:wixie_charm", weight: 7.00f }
+		{ item: "ars_nouveau:ritual_brazier", weight: 7.00f }
 		{ item: "ars_nouveau:enchanting_apparatus", weight: 6.00f }
-		{ item: "ars_nouveau:source_jar", weight: 6.00f }
-		{ item: "ars_nouveau:spell_turret", weight: 6.00f }
-		{ count: 2, item: "ars_nouveau:novice_spell_book", weight: 3.34f }
-		{ count: 2, item: "ars_nouveau:enchanting_apparatus", weight: 3.34f }
-		{ count: 2, item: "ars_nouveau:source_jar", weight: 3.34f }
-		{ count: 2, item: "ars_nouveau:spell_turret", weight: 3.34f }
-		{ count: 3, item: "ars_nouveau:novice_spell_book", weight: 2.92f }
-		{ count: 3, item: "ars_nouveau:enchanting_apparatus", weight: 2.92f }
-		{ count: 3, item: "ars_nouveau:source_jar", weight: 2.92f }
-		{ count: 3, item: "ars_nouveau:spell_turret", weight: 2.92f }
-		{ count: 4, item: "ars_nouveau:novice_spell_book", weight: 0.80f }
-		{ count: 4, item: "ars_nouveau:enchanting_apparatus", weight: 0.80f }
-		{ count: 4, item: "ars_nouveau:source_jar", weight: 0.80f }
-		{ count: 4, item: "ars_nouveau:spell_turret", weight: 0.80f }
+		{ item: "ars_nouveau:archmage_spell_book", weight: 0.45f }
 	]
 	title: "Wheel of Fortune — Ars Nouveau"
 	use_title: true

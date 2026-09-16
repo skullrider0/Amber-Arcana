@@ -4,26 +4,24 @@
 	loot_size: 5
 	order_index: 119
 	rewards: [
-		{ item: "mekanism:metallurgic_infuser", weight: 6.00f }
-		{ item: "mekanism:purification_chamber", weight: 6.00f }
-		{ item: "mekanism:ultimate_energy_cube", weight: 6.00f }
-		{ item: "mekanism:mekasuit_helmet", weight: 6.00f }
-		{ item: "mekanism:enrichment_chamber", weight: 6.00f }
-		{ count: 2, item: "mekanism:metallurgic_infuser", weight: 3.34f }
-		{ count: 2, item: "mekanism:purification_chamber", weight: 3.34f }
-		{ count: 2, item: "mekanism:ultimate_energy_cube", weight: 3.34f }
-		{ count: 2, item: "mekanism:mekasuit_helmet", weight: 3.34f }
-		{ count: 2, item: "mekanism:enrichment_chamber", weight: 3.34f }
-		{ count: 3, item: "mekanism:metallurgic_infuser", weight: 2.92f }
-		{ count: 3, item: "mekanism:purification_chamber", weight: 2.92f }
-		{ count: 3, item: "mekanism:ultimate_energy_cube", weight: 2.92f }
-		{ count: 3, item: "mekanism:mekasuit_helmet", weight: 2.92f }
-		{ count: 3, item: "mekanism:enrichment_chamber", weight: 2.92f }
-		{ count: 4, item: "mekanism:metallurgic_infuser", weight: 0.80f }
-		{ count: 4, item: "mekanism:purification_chamber", weight: 0.80f }
-		{ count: 4, item: "mekanism:ultimate_energy_cube", weight: 0.80f }
-		{ count: 4, item: "mekanism:mekasuit_helmet", weight: 0.80f }
-		{ count: 4, item: "mekanism:enrichment_chamber", weight: 0.80f }
+		{ count: 6, item: "mekanism:advanced_control_circuit", weight: 14.00f }
+		{ count: 5, item: "mekanism:alloy_reinforced", weight: 12.00f }
+		{ item: "mekanism:crusher", weight: 6.00f }
+		{ item: "mekanism:purification_chamber", weight: 5.00f }
+		{ item: "mekanism:electrolytic_separator", weight: 4.00f }
+		{ count: 5, item: "mekanism:elite_control_circuit", weight: 12.00f }
+		{ count: 4, item: "mekanism:alloy_atomic", weight: 10.00f }
+		{ item: "mekanism:chemical_injection_chamber", weight: 6.00f }
+		{ item: "mekanism:pressurized_reaction_chamber", weight: 6.00f }
+		{ item: "mekanism:chemical_dissolution_chamber", weight: 3.00f }
+		{ count: 4, item: "mekanism:ultimate_control_circuit", weight: 12.00f }
+		{ item: "mekanism:chemical_washer", weight: 8.00f }
+		{ item: "mekanism:chemical_crystallizer", weight: 8.00f }
+		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
+		{ item: "mekanism:atomic_disassembler", weight: 3.00f }
+		{ item: "mekanism:digital_miner", weight: 1.00f }
+		{ item: "mekanism:antiprotonic_nucleosynthesizer", weight: 0.35f }
+		{ item: "mekanism:mekasuit_helmet", weight: 0.25f }
 	]
 	title: "Wheel of Fortune — Mekanism Industry"
 	use_title: true

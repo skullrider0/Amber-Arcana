@@ -1,34 +1,17 @@
 {
-	icon: "ae2:molecular_assembler"
+	icon: "ae2:controller"
 	id: "602AD1FE5601CD8D"
 	loot_size: 4
 	order_index: 304
 	rewards: [
-		{ item: "ae2:molecular_assembler", weight: 14.00f }
-		{ item: "ae2:pattern_provider", weight: 14.00f }
-		{ item: "ae2:controller", weight: 0.60f }
-		{ item: "ae2:item_storage_cell_64k", weight: 14.00f }
-		{ item: "ae2:molecular_assembler", weight: 5.00f }
-		{ item: "ae2:pattern_provider", weight: 5.00f }
+		{ count: 2, item: "ae2:pattern_provider", weight: 9.00f }
+		{ count: 2, item: "ae2:molecular_assembler", weight: 9.00f }
+		{ item: "ae2:item_storage_cell_64k", weight: 6.00f }
+		{ item: "ae2:crafting_storage_16k", weight: 5.00f }
 		{ item: "ae2:controller", weight: 5.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ count: 2, item: "ae2:molecular_assembler", weight: 4.45f }
-		{ count: 2, item: "ae2:pattern_provider", weight: 4.45f }
-		{ count: 2, item: "ae2:controller", weight: 4.45f }
-		{ count: 2, item: "ae2:item_storage_cell_64k", weight: 4.45f }
-		{ count: 3, item: "ae2:molecular_assembler", weight: 3.90f }
-		{ count: 3, item: "ae2:pattern_provider", weight: 3.90f }
-		{ count: 3, item: "ae2:controller", weight: 3.90f }
-		{ count: 3, item: "ae2:item_storage_cell_64k", weight: 3.90f }
-		{ count: 3, item: "ae2:molecular_assembler", weight: 3.35f }
-		{ count: 3, item: "ae2:pattern_provider", weight: 3.35f }
-		{ count: 3, item: "ae2:controller", weight: 3.35f }
-		{ count: 3, item: "ae2:item_storage_cell_64k", weight: 3.35f }
-		{ item: "ae2:molecular_assembler", weight: 2.80f }
-		{ item: "ae2:pattern_provider", weight: 2.80f }
-		{ item: "ae2:controller", weight: 2.80f }
-		{ item: "ae2:item_storage_cell_64k", weight: 2.80f }
+		{ item: "ae2:quantum_ring", weight: 1.00f }
+		{ item: "ae2:quantum_link", weight: 0.35f }
 	]
-	title: "Ae2 — Tier 4 Roll"
+	title: "Applied Energistics 2 — Tier 4 Roll"
 	use_title: true
 }

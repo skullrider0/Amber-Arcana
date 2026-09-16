@@ -1,0 +1,25 @@
+{
+	icon: "draconicevolution:awakened_core"
+	id: "6F9C54342FB762BC"
+	loot_size: 5
+	order_index: 907
+	rewards: [
+		{ count: 12, item: "draconicevolution:draconium_ingot", weight: 14.00f }
+		{ item: "draconicevolution:wyvern_core", weight: 8.00f }
+		{ item: "draconicevolution:wyvern_crafting_injector", weight: 5.00f }
+		{ item: "draconicevolution:crafting_core", weight: 4.00f }
+		{ count: 4, item: "draconicevolution:awakened_draconium_ingot", weight: 10.00f }
+		{ item: "draconicevolution:awakened_core", weight: 8.00f }
+		{ item: "draconicevolution:awakened_crafting_injector", weight: 6.00f }
+		{ item: "draconicevolution:energy_core", weight: 4.00f }
+		{ count: 2, item: "draconicevolution:energy_pylon", weight: 5.00f }
+		{ count: 6, item: "draconicevolution:awakened_draconium_ingot", weight: 12.00f }
+		{ count: 2, item: "draconicevolution:awakened_core", weight: 10.00f }
+		{ count: 2, item: "draconicevolution:energy_pylon", weight: 8.00f }
+		{ item: "draconicevolution:chaotic_core", weight: 0.40f }
+		{ item: "draconicevolution:chaotic_crafting_injector", weight: 0.30f }
+		{ item: "draconicevolution:reactor_core", weight: 0.20f }
+	]
+	title: "Wheel of Fortune — Draconic Evolution"
+	use_title: true
+}
