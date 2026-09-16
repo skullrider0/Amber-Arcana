@@ -15,5 +15,9 @@ text = text.replace(
     '= "26" || { echo "Expected 26 generated server wheel tables"',
     '= "28" || { echo "Expected 28 generated server wheel tables"',
 )
+text = text.replace(
+    '= "104" || { echo "Mod-specific tier table count mismatch"',
+    '= "112" || { echo "Mod-specific tier table count mismatch"',
+)
 path.write_text(text)
-print("Updated live 0.1.9-38 validation for 28 chapters and 28 Fortune Wheels")
+print("Updated live 0.1.9-38 validation for 28 chapters, 28 Fortune Wheels, and 112 tier tables")
