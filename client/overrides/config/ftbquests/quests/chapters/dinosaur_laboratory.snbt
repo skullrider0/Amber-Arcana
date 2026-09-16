@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "603AF8E52A7922C1"
-					item: { count: 1, id: "minecraft:bone" }
+					item: "minecraft:bone"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Fossil evidence"
@@ -74,7 +74,7 @@
 			tasks: [
 				{
 					id: "A5E013AFA9FB8F5B"
-					item: { count: 1, id: "minecraft:glass" }
+					item: "minecraft:glass"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Laboratory glassware and containment"
@@ -117,7 +117,7 @@
 			tasks: [
 				{
 					id: "8B5A943A02C4C93A"
-					item: { count: 1, id: "minecraft:egg" }
+					item: "minecraft:egg"
 					count: 4L
 					consume_items: false
 					title: "Obtain: Revival/incubation supplies"
@@ -160,7 +160,7 @@
 			tasks: [
 				{
 					id: "49B310D0D1EF9104"
-					item: { count: 1, id: "minecraft:iron_bars" }
+					item: "minecraft:iron_bars"
 					count: 32L
 					consume_items: false
 					title: "Obtain: Secure habitat barriers"

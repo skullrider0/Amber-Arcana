@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "8FA440D700AE5F74"
-					item: { count: 1, id: "minecraft:wheat" }
+					item: "minecraft:wheat"
 					count: 32L
 					consume_items: false
 					title: "Obtain: Seasonal staple crop"
@@ -74,7 +74,7 @@
 			tasks: [
 				{
 					id: "E83081C8EC695621"
-					item: { count: 1, id: "minecraft:milk_bucket" }
+					item: "minecraft:milk_bucket"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Cheese production input"
@@ -117,7 +117,7 @@
 			tasks: [
 				{
 					id: "63D58A9453336F75"
-					item: { count: 1, id: "minecraft:sugar" }
+					item: "minecraft:sugar"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Drink production input"
@@ -160,7 +160,7 @@
 			tasks: [
 				{
 					id: "6F470FCA9D5F2AF9"
-					item: { count: 1, id: "minecraft:cooked_beef" }
+					item: "minecraft:cooked_beef"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Prepared feast"
@@ -203,7 +203,7 @@
 			tasks: [
 				{
 					id: "009B6CD2A81FD1D7"
-					item: { count: 1, id: "minecraft:bread" }
+					item: "minecraft:bread"
 					count: 32L
 					consume_items: false
 					title: "Obtain: Pantry reserve"

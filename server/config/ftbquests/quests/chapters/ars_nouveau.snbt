@@ -12,7 +12,7 @@
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft a spellbook and use early glyphs to create a useful spell."
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			]
 			icon: "ars_nouveau:novice_spell_book"
 			id: "5E46C1A7EB1FF9DB"
@@ -32,7 +32,7 @@
 			tasks: [
 				{
 					id: "27D313FEFB03103A"
-					item: { count: 1, id: "ars_nouveau:novice_spell_book" }
+					item: "ars_nouveau:novice_spell_book"
 					consume_items: false
 					title: "Obtain: Novice Spell Book"
 					type: "item"
@@ -40,10 +40,11 @@
 				{
 					id: "7E4889B8BC4F95CA"
 					title: "Completed milestone: First spells"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Novice Spell Book; then confirm the milestone."
+			subtitle: "Requires Novice Spell Book; completion is detected automatically."
 			title: "First spells"
 			x: 0.0d
 			y: 0.0d
@@ -52,7 +53,7 @@
 			dependencies: ["5E46C1A7EB1FF9DB"]
 			description: [
 				"Build a Source supply and Enchanting Apparatus workshop. Create a magical tool or upgrade."
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			]
 			icon: "ars_nouveau:source_jar"
 			id: "4B6DB13056E0CBC2"
@@ -72,14 +73,14 @@
 			tasks: [
 				{
 					id: "7EAAEC428580F813"
-					item: { count: 1, id: "ars_nouveau:source_jar" }
+					item: "ars_nouveau:source_jar"
 					consume_items: false
 					title: "Obtain: Source Jar"
 					type: "item"
 				}
 				{
 					id: "EA66CBE4CF4D1F65"
-					item: { count: 1, id: "ars_nouveau:enchanting_apparatus" }
+					item: "ars_nouveau:enchanting_apparatus"
 					consume_items: false
 					title: "Obtain: Enchanting Apparatus"
 					type: "item"
@@ -87,10 +88,11 @@
 				{
 					id: "1D1750A413234B32"
 					title: "Completed milestone: Source and crafting"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Source Jar + Enchanting Apparatus; then confirm the milestone."
+			subtitle: "Requires Source Jar + Enchanting Apparatus; completion is detected automatically."
 			title: "Source and crafting"
 			x: 3.0d
 			y: 0.0d
@@ -99,7 +101,7 @@
 			dependencies: ["4B6DB13056E0CBC2"]
 			description: [
 				"Use an Ars automation method, then explore Ars Elemental and the installed Create or spell integrations."
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			]
 			icon: "ars_nouveau:spell_turret"
 			id: "11538580D4752A8A"
@@ -119,7 +121,7 @@
 			tasks: [
 				{
 					id: "84849CDB99EBE54A"
-					item: { count: 1, id: "ars_nouveau:spell_turret" }
+					item: "ars_nouveau:spell_turret"
 					consume_items: false
 					title: "Obtain: Spell Turret"
 					type: "item"
@@ -127,10 +129,11 @@
 				{
 					id: "496300BA3947926A"
 					title: "Completed milestone: A magical factory"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Spell Turret; then confirm the milestone."
+			subtitle: "Requires Spell Turret; completion is detected automatically."
 			title: "A magical factory"
 			x: 6.0d
 			y: 0.0d

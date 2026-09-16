@@ -40,7 +40,7 @@
 			tasks: [
 				{
 					id: "463AEABA546CA4F4"
-					item: { count: 1, id: "minecraft:hay_block" }
+					item: "minecraft:hay_block"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Seasonal food reserve"
@@ -80,7 +80,7 @@
 			tasks: [
 				{
 					id: "0B6BFB424F25683F"
-					item: { count: 1, id: "minecraft:powered_rail" }
+					item: "minecraft:powered_rail"
 					count: 32L
 					consume_items: false
 					title: "Obtain: Civilization transport link"
@@ -123,7 +123,7 @@
 			tasks: [
 				{
 					id: "FE821364C0F52ADE"
-					item: { count: 1, id: "minecraft:netherite_chestplate" }
+					item: "minecraft:netherite_chestplate"
 					consume_items: false
 					title: "Obtain: Adventure-ready armor"
 					type: "item"
@@ -165,7 +165,7 @@
 			tasks: [
 				{
 					id: "B56E021C02C79AC6"
-					item: { count: 1, id: "minecraft:emerald_block" }
+					item: "minecraft:emerald_block"
 					count: 4L
 					consume_items: false
 					title: "Obtain: Grand-opening reserve"

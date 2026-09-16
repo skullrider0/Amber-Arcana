@@ -32,7 +32,7 @@
 			tasks: [
 				{
 					id: "BB1E0404FBE0211F"
-					item: { count: 1, id: "minecraft:paper" }
+					item: "minecraft:paper"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Card-sorting supplies"
@@ -73,7 +73,7 @@
 			tasks: [
 				{
 					id: "DE050DBE6107406A"
-					item: { count: 1, id: "minecraft:copper_ingot" }
+					item: "minecraft:copper_ingot"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Mechanical recycling materials"
@@ -114,7 +114,7 @@
 			tasks: [
 				{
 					id: "978FBEB1B371B760"
-					item: { count: 1, id: "minecraft:wheat" }
+					item: "minecraft:wheat"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Farm collection supplies"
@@ -155,7 +155,7 @@
 			tasks: [
 				{
 					id: "0CD6466D81CABF14"
-					item: { count: 1, id: "minecraft:fishing_rod" }
+					item: "minecraft:fishing_rod"
 					consume_items: false
 					title: "Obtain: Fishing setup"
 					type: "item"
@@ -195,7 +195,7 @@
 			tasks: [
 				{
 					id: "AFC6973A29A5167B"
-					item: { count: 1, id: "minecraft:quartz" }
+					item: "minecraft:quartz"
 					count: 16L
 					consume_items: false
 					title: "Obtain: AE2 collection materials"
@@ -236,7 +236,7 @@
 			tasks: [
 				{
 					id: "174310B39DAE3A07"
-					item: { count: 1, id: "minecraft:item_frame" }
+					item: "minecraft:item_frame"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Museum displays"

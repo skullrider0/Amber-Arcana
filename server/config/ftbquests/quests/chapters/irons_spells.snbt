@@ -9,14 +9,14 @@
 		{
 			icon: "irons_spellbooks:iron_spell_book"
 			id: "2F90A5A4DB0404F1",
-			subtitle: "Requires Iron Spell Book; then confirm the milestone."
+			subtitle: "Requires Iron Spell Book; completion is detected automatically."
 			title: "Choose a school",
 			x: 0.0,
 			y: 0.0,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Find or craft a spellbook and learn a spell. Read its mana cost and cooldown before entering combat.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "87251E1D62264BF3"
-					item: { count: 1, id: "irons_spellbooks:iron_spell_book" }
+					item: "irons_spellbooks:iron_spell_book"
 					consume_items: false
 					title: "Obtain: Iron Spell Book"
 					type: "item"
@@ -42,6 +42,7 @@
 				{
 					id: "22E46B8AF87F85E6"
 					title: "Completed milestone: Choose a school"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -49,13 +50,13 @@
 		{
 			icon: "irons_spellbooks:inscription_table"
 			id: "017F83F1867628E2",
-			subtitle: "Requires Inscription Table; then confirm the milestone."
+			subtitle: "Requires Inscription Table; completion is detected automatically."
 			title: "The inscription workshop",
 			x: 3.0,
 			y: 0.0,
 			description: [
 				"Build the spell-crafting stations supported by this version and improve your book and equipment.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -73,7 +74,7 @@
 			tasks: [
 				{
 					id: "138483EBD91DA738"
-					item: { count: 1, id: "irons_spellbooks:inscription_table" }
+					item: "irons_spellbooks:inscription_table"
 					consume_items: false
 					title: "Obtain: Inscription Table"
 					type: "item"
@@ -81,6 +82,7 @@
 				{
 					id: "21B3DD407A70E254"
 					title: "Completed milestone: The inscription workshop"
+					optional_task: true
 					type: "checkmark"
 				}
 			],
@@ -115,7 +117,7 @@
 			tasks: [
 				{
 					id: "BE5C81C2F8252446"
-					item: { count: 1, id: "minecraft:amethyst_shard" }
+					item: "minecraft:amethyst_shard"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Cross-mod spell materials"

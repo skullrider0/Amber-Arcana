@@ -32,7 +32,7 @@
 			tasks: [
 				{
 					id: "7DB77220D9925E16"
-					item: { count: 1, id: "minecraft:spyglass" }
+					item: "minecraft:spyglass"
 					consume_items: false
 					title: "Obtain: Expedition spyglass"
 					type: "item"
@@ -72,14 +72,14 @@
 			tasks: [
 				{
 					id: "033AF7CFB6B5CEBE"
-					item: { count: 1, id: "minecraft:water_bucket" }
+					item: "minecraft:water_bucket"
 					consume_items: false
 					title: "Obtain: Aquarium water supply"
 					type: "item"
 				}
 				{
 					id: "9EB6871EA368354E"
-					item: { count: 1, id: "minecraft:glass" }
+					item: "minecraft:glass"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Aquarium glass"
@@ -120,7 +120,7 @@
 			tasks: [
 				{
 					id: "76CA155320CC905D"
-					item: { count: 1, id: "minecraft:minecart" }
+					item: "minecraft:minecart"
 					consume_items: false
 					title: "Obtain: Cave transport cart"
 					type: "item"
@@ -160,7 +160,7 @@
 			tasks: [
 				{
 					id: "DC0097EB8B1D1141"
-					item: { count: 1, id: "minecraft:brush" }
+					item: "minecraft:brush"
 					consume_items: false
 					title: "Obtain: Relic excavation brush"
 					type: "item"
@@ -200,7 +200,7 @@
 			tasks: [
 				{
 					id: "FFC6A10287DE5A24"
-					item: { count: 1, id: "minecraft:amethyst_shard" }
+					item: "minecraft:amethyst_shard"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Arcane cave crystals"
@@ -241,7 +241,7 @@
 			tasks: [
 				{
 					id: "F459367C3AE4C383"
-					item: { count: 1, id: "minecraft:redstone" }
+					item: "minecraft:redstone"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Automation supplies"

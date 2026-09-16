@@ -9,14 +9,14 @@
 		{
 			icon: "tconstruct:crafting_station"
 			id: "51C15EB45468ED7A",
-			subtitle: "Requires Tinkers Crafting Station; then confirm the milestone."
+			subtitle: "Requires Tinkers Crafting Station; completion is detected automatically."
 			title: "Tool maker",
 			x: 0.0,
 			y: 0.0,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Read Materials and You and make your first customizable Tinkers tool.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "1301E2332A5B5B26"
-					item: { count: 1, id: "tconstruct:crafting_station" }
+					item: "tconstruct:crafting_station"
 					consume_items: false
 					title: "Obtain: Tinkers Crafting Station"
 					type: "item"
@@ -42,6 +42,7 @@
 				{
 					id: "73D66BA8BD33A4D7"
 					title: "Completed milestone: Tool maker"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -49,13 +50,13 @@
 		{
 			icon: "tconstruct:seared_melter"
 			id: "4C6BE38139D72DC8",
-			subtitle: "Requires Seared Melter; then confirm the milestone."
+			subtitle: "Requires Seared Melter; completion is detected automatically."
 			title: "Melting and casting",
 			x: 3.0,
 			y: 0.0,
 			description: [
 				"Build the melting and casting equipment described in the installed guide. Produce an alloy and cast a tool part.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -73,7 +74,7 @@
 			tasks: [
 				{
 					id: "2F5A99FF051B5284"
-					item: { count: 1, id: "tconstruct:seared_melter" }
+					item: "tconstruct:seared_melter"
 					consume_items: false
 					title: "Obtain: Seared Melter"
 					type: "item"
@@ -81,6 +82,7 @@
 				{
 					id: "4B462AD204C472EE"
 					title: "Completed milestone: Melting and casting"
+					optional_task: true
 					type: "checkmark"
 				}
 			],
@@ -91,13 +93,13 @@
 		{
 			icon: "tconstruct:tinkers_anvil"
 			id: "1516BE85C9F46A4B",
-			subtitle: "Requires Tinkers Anvil; then confirm the milestone."
+			subtitle: "Requires Tinkers Anvil; completion is detected automatically."
 			title: "A personal tool set",
 			x: 6.0,
 			y: 0.0,
 			description: [
 				"Build and modify a set of tools suited to mining, building, and adventuring. Compare materials in the guide before spending rare resources.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -115,7 +117,7 @@
 			tasks: [
 				{
 					id: "12099F84813E5EDC"
-					item: { count: 1, id: "tconstruct:tinkers_anvil" }
+					item: "tconstruct:tinkers_anvil"
 					consume_items: false
 					title: "Obtain: Tinkers Anvil"
 					type: "item"
@@ -123,6 +125,7 @@
 				{
 					id: "234B6A6692C458CB"
 					title: "Completed milestone: A personal tool set"
+					optional_task: true
 					type: "checkmark"
 				}
 			],

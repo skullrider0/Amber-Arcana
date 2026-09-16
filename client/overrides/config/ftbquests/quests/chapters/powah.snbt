@@ -9,14 +9,14 @@
 		{
 			icon: "powah:thermo_generator_starter"
 			id: "30532555D30762EA",
-			subtitle: "Requires Starter Thermo Generator; then confirm the milestone."
+			subtitle: "Requires Starter Thermo Generator; completion is detected automatically."
 			title: "Your first generator",
 			x: 0.0,
 			y: 0.0,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft a starter Powah generator and keep a connected machine powered.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "8F7F0857E5359C5D"
-					item: { count: 1, id: "powah:thermo_generator_starter" }
+					item: "powah:thermo_generator_starter"
 					consume_items: false
 					title: "Obtain: Starter Thermo Generator"
 					type: "item"
@@ -42,6 +42,7 @@
 				{
 					id: "234CDFD407C6F43D"
 					title: "Completed milestone: Your first generator"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -49,13 +50,13 @@
 		{
 			icon: "powah:energizing_orb"
 			id: "41D6A5B567823C5F",
-			subtitle: "Requires Energizing Orb; then confirm the milestone."
+			subtitle: "Requires Energizing Orb; completion is detected automatically."
 			title: "Energizing station",
 			x: 3.0,
 			y: 0.0,
 			description: [
 				"Build an Energizing Orb setup and produce the next tier of energized materials.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -73,7 +74,7 @@
 			tasks: [
 				{
 					id: "7902D17B60BD614D"
-					item: { count: 1, id: "powah:energizing_orb" }
+					item: "powah:energizing_orb"
 					consume_items: false
 					title: "Obtain: Energizing Orb"
 					type: "item"
@@ -81,6 +82,7 @@
 				{
 					id: "0C342597921AC9C5"
 					title: "Completed milestone: Energizing station"
+					optional_task: true
 					type: "checkmark"
 				}
 			],
@@ -91,13 +93,13 @@
 		{
 			icon: "powah:energy_cell_basic"
 			id: "3B900127ED58D474",
-			subtitle: "Requires Basic Energy Cell; then confirm the milestone."
+			subtitle: "Requires Basic Energy Cell; completion is detected automatically."
 			title: "A dependable grid",
 			x: 6.0,
 			y: 0.0,
 			description: [
 				"Upgrade your generation and energy storage. Connect your factory and dinosaur laboratory through an organized distribution system.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -115,7 +117,7 @@
 			tasks: [
 				{
 					id: "D75EAFA8A3254DC2"
-					item: { count: 1, id: "powah:energy_cell_basic" }
+					item: "powah:energy_cell_basic"
 					consume_items: false
 					title: "Obtain: Basic Energy Cell"
 					type: "item"
@@ -123,6 +125,7 @@
 				{
 					id: "7FFB455D6A69F884"
 					title: "Completed milestone: A dependable grid"
+					optional_task: true
 					type: "checkmark"
 				}
 			],

@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "EB367B49C1B60C33"
-					item: { count: 1, id: "minecraft:book" }
+					item: "minecraft:book"
 					consume_items: false
 					title: "Obtain: Ritual reference book"
 					type: "item"
@@ -73,7 +73,7 @@
 			tasks: [
 				{
 					id: "E6675AA5880DD632"
-					item: { count: 1, id: "botania:mana_pool" }
+					item: "botania:mana_pool"
 					consume_items: false
 					title: "Obtain: Mana Pool"
 					type: "item"
@@ -115,7 +115,7 @@
 			tasks: [
 				{
 					id: "17B31582B1191642"
-					item: { count: 1, id: "bloodmagic:altar" }
+					item: "bloodmagic:altar"
 					consume_items: false
 					title: "Obtain: Blood Altar"
 					type: "item"
@@ -157,7 +157,7 @@
 			tasks: [
 				{
 					id: "2E59B221504AB81A"
-					item: { count: 1, id: "minecraft:cauldron" }
+					item: "minecraft:cauldron"
 					consume_items: false
 					title: "Obtain: Witch workshop cauldron"
 					type: "item"
@@ -199,7 +199,7 @@
 			tasks: [
 				{
 					id: "A86F22A3C010FFC7"
-					item: { count: 1, id: "minecraft:golden_apple" }
+					item: "minecraft:golden_apple"
 					consume_items: false
 					title: "Obtain: Faction progression supplies"
 					type: "item"

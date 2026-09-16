@@ -9,14 +9,14 @@
 		{
 			icon: "refinedstorage:controller"
 			id: "4AFB3BC1D5AEA04F",
-			subtitle: "Requires RS Controller + RS Grid + Disk Drive; then confirm the milestone."
+			subtitle: "Requires RS Controller + RS Grid + Disk Drive; completion is detected automatically."
 			title: "Digital storage",
 			x: 0.0,
 			y: 0.0,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Build a powered Controller, Grid, Disk Drive, and storage disk. Keep important supplies accessible while you work on the network.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -34,21 +34,21 @@
 			tasks: [
 				{
 					id: "77A8ADF59E2DF572"
-					item: { count: 1, id: "refinedstorage:controller" }
+					item: "refinedstorage:controller"
 					consume_items: false
 					title: "Obtain: RS Controller"
 					type: "item"
 				}
 				{
 					id: "70F9507BAC38FBCD"
-					item: { count: 1, id: "refinedstorage:grid" }
+					item: "refinedstorage:grid"
 					consume_items: false
 					title: "Obtain: RS Grid"
 					type: "item"
 				}
 				{
 					id: "2180B7178BCA638B"
-					item: { count: 1, id: "refinedstorage:disk_drive" }
+					item: "refinedstorage:disk_drive"
 					consume_items: false
 					title: "Obtain: Disk Drive"
 					type: "item"
@@ -56,6 +56,7 @@
 				{
 					id: "38ADF6D51852CF9C"
 					title: "Completed milestone: Digital storage"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -63,13 +64,13 @@
 		{
 			icon: "refinedstorage:importer"
 			id: "1453151A6BAA50DA",
-			subtitle: "Requires Importer + Exporter; then confirm the milestone."
+			subtitle: "Requires Importer + Exporter; completion is detected automatically."
 			title: "Connected production",
 			x: 3.0,
 			y: 0.0,
 			description: [
 				"Connect importers, exporters, and external storage to one production line. Avoid import/export loops.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -87,14 +88,14 @@
 			tasks: [
 				{
 					id: "53990B91542C32B3"
-					item: { count: 1, id: "refinedstorage:importer" }
+					item: "refinedstorage:importer"
 					consume_items: false
 					title: "Obtain: Importer"
 					type: "item"
 				}
 				{
 					id: "004E20E49D97748E"
-					item: { count: 1, id: "refinedstorage:exporter" }
+					item: "refinedstorage:exporter"
 					consume_items: false
 					title: "Obtain: Exporter"
 					type: "item"
@@ -102,6 +103,7 @@
 				{
 					id: "782D7B9D7887D255"
 					title: "Completed milestone: Connected production"
+					optional_task: true
 					type: "checkmark"
 				}
 			],
@@ -112,13 +114,13 @@
 		{
 			icon: "refinedstorage:crafting_grid"
 			id: "6F10E04E6E520C5C",
-			subtitle: "Requires Crafting Grid; then confirm the milestone."
+			subtitle: "Requires Crafting Grid; completion is detected automatically."
 			title: "Automatic crafting",
 			x: 6.0,
 			y: 0.0,
 			description: [
 				"Create patterns and automate one useful component, then expand with the installed Refined Storage addons.",
-				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
+				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
 			],
 			rewards: [
 				{
@@ -136,7 +138,7 @@
 			tasks: [
 				{
 					id: "1F07791A02F13C6C"
-					item: { count: 1, id: "refinedstorage:crafting_grid" }
+					item: "refinedstorage:crafting_grid"
 					consume_items: false
 					title: "Obtain: Crafting Grid"
 					type: "item"
@@ -144,6 +146,7 @@
 				{
 					id: "28E331A629F63940"
 					title: "Completed milestone: Automatic crafting"
+					optional_task: true
 					type: "checkmark"
 				}
 			],

@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-24",
+  "pack_version": "0.1.9-25",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -211,5 +211,17 @@
     "twilight_forest_stale_quest_replaced": true,
     "replacement": "Nether expedition",
     "client_server_quest_files_identical": true
+  },
+  "quest_finalize_0_1_9_25": {
+    "enabled": true,
+    "malformed_item_stacks_fixed": 116,
+    "malformed_item_stacks_remaining": 0,
+    "canonical_simple_item_filters": true,
+    "auto_item_milestones": 27,
+    "optional_confirmation_tasks": 27,
+    "required_confirmation_tasks": 79,
+    "ids_preserved": true,
+    "client_server_quest_files_identical": true,
+    "quest_only_crafty_overlay": "Amber-and-Arcana-0.1.9-25-Crafty-Quest-Overlay.zip"
   }
 }

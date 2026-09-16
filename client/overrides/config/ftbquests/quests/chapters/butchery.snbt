@@ -32,7 +32,7 @@
 			tasks: [
 				{
 					id: "8F92BB1D170FF088"
-					item: { count: 1, id: "minecraft:iron_sword" }
+					item: "minecraft:iron_sword"
 					consume_items: false
 					title: "Obtain: Butchery cutting tool"
 					type: "item"
@@ -72,7 +72,7 @@
 			tasks: [
 				{
 					id: "AECF1EC7C7D1FE03"
-					item: { count: 1, id: "minecraft:cooked_beef" }
+					item: "minecraft:cooked_beef"
 					count: 4L
 					consume_items: false
 					title: "Obtain: Prepared meat"
@@ -113,7 +113,7 @@
 			tasks: [
 				{
 					id: "1236786C2E3A62E2"
-					item: { count: 1, id: "minecraft:glass_bottle" }
+					item: "minecraft:glass_bottle"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Blood-handling containers"
@@ -154,7 +154,7 @@
 			tasks: [
 				{
 					id: "25BDAF535D74F670"
-					item: { count: 1, id: "minecraft:golden_apple" }
+					item: "minecraft:golden_apple"
 					consume_items: false
 					title: "Obtain: Faction provisions"
 					type: "item"
@@ -194,7 +194,7 @@
 			tasks: [
 				{
 					id: "FC8A76718B0B8F82"
-					item: { count: 1, id: "minecraft:lead" }
+					item: "minecraft:lead"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Animal handling supplies"

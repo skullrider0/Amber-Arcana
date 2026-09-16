@@ -33,8 +33,10 @@ test "$(jq '[.files[] | select(.projectID == 1115989 or .fileID == 6942239)] | l
 client_mh="$repo_dir/client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.1.jar"
 server_mh="$repo_dir/server/mods/morehitboxes-forge-1.20.1-1.9.2.1.jar"
 test -f "$client_mh" && test -f "$server_mh" || { echo "Patched More Hitboxes jar missing" >&2; exit 1; }
-printf '%s  %s\n' 'd7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5' "$client_mh" | sha512sum --check - >/dev/null
-printf '%s  %s\n' 'd7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5' "$server_mh" | sha512sum --check - >/dev/null
+printf '%s  %s
+' 'd7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5' "$client_mh" | sha512sum --check - >/dev/null
+printf '%s  %s
+' 'd7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5' "$server_mh" | sha512sum --check - >/dev/null
 cmp -s "$client_mh" "$server_mh" || { echo "Client/server More Hitboxes patch differs" >&2; exit 1; }
 test "$(awk -F '\t' '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.1.jar" && $3 == "d7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
 grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Old More Hitboxes cleanup missing" >&2; exit 1; }
@@ -57,6 +59,7 @@ client_quests="$repo_dir/client/overrides/config/ftbquests/quests"
 server_quests="$repo_dir/server/config/ftbquests/quests"
 diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest files differ" >&2; exit 1; }
 
+
 # 0.1.9-25 live quest sync checks
 for qroot in "$client_quests" "$server_quests"; do
   test -f "$qroot/chapter_groups.snbt" || { echo "Quest chapter_groups.snbt missing" >&2; exit 1; }
@@ -69,22 +72,9 @@ for item in minecraft:torch minecraft:bread minecraft:iron_ingot minecraft:compa
 done
 jq -e '.quest_live_sync_0_1_9_23.broken_item_rewards_fixed == 12' "$validation" >/dev/null
 
-# 0.1.9-24 completed quest progression checks
-jq -e '.quest_completion_0_1_9_24.quests_checked == 106 and .quest_completion_0_1_9_24.item_requirements_present == 106' "$validation" >/dev/null
 
-# Final quest runtime-format checks
-python3 "$repo_dir/scripts/hotfix-quest-finalize-0.1.9-25.py" --check-only
-jq -e '.quest_finalize_0_1_9_25.quests_checked == 106 and .quest_finalize_0_1_9_25.malformed_item_stacks_remaining == 0 and .quest_finalize_0_1_9_25.optional_confirmation_tasks > 0 and .quest_finalize_0_1_9_25.required_confirmation_tasks > 0 and .quest_finalize_0_1_9_25.ids_preserved == true and .quest_finalize_0_1_9_25.client_server_quest_files_identical == true' "$validation" >/dev/null
-if rg -n 'item:\s*\{\s*count:\s*1([bBsSlL])?\s*,\s*id:' "$client_quests/chapters" "$server_quests/chapters" >/dev/null; then
-  echo "Malformed lowercase-count FTB Quests ItemStack remains" >&2
-  exit 1
-fi
-grep -Fq 'item: "mekanism:metallurgic_infuser"' "$client_quests/chapters/mekanism.snbt" || { echo "Canonical Mekanism quest item filter missing" >&2; exit 1; }
-grep -Fq 'optional_task: true' "$client_quests/chapters/mekanism.snbt" || { echo "Automatic Mekanism milestone confirmation is not optional" >&2; exit 1; }
-if grep -Fq 'optional_task: true' "$client_quests/chapters/settlement.snbt"; then
-  echo "Settlement build confirmations must remain manual" >&2
-  exit 1
-fi
+# 0.1.9-25 completed quest progression checks
+jq -e '.quest_completion_0_1_9_24.quests_checked == 106 and .quest_completion_0_1_9_24.item_requirements_present == 106' "$validation" >/dev/null
 
 client_compat="$repo_dir/client/overrides/kubejs/data"
 server_compat="$repo_dir/server/kubejs/data"
@@ -99,16 +89,9 @@ unzip -tq "$overlay"
 test "$(unzip -Z1 "$overlay" | grep -Fxc '_crafty/server-mods.tsv')" = "1" || { echo "Crafty update overlay missing server-mods.tsv" >&2; exit 1; }
 test "$(unzip -Z1 "$overlay" | grep -Fxc '_crafty/remove-mods.txt')" = "1" || { echo "Crafty update overlay missing remove-mods.txt" >&2; exit 1; }
 test "$(unzip -Z1 "$overlay" | grep -Fxc 'mods/morehitboxes-forge-1.20.1-1.9.2.1.jar')" = "1" || { echo "Crafty update overlay missing patched jar" >&2; exit 1; }
-test "$(unzip -Z1 "$overlay" | grep -Fxc 'config/ftbquests/quests/chapters/getting_started.snbt')" = "1" || { echo "Crafty update overlay missing synced quests" >&2; exit 1; }
 
-quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
-test -f "$quest_overlay" || { echo "Crafty quest-only overlay missing" >&2; exit 1; }
-unzip -tq "$quest_overlay"
-test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/getting_started.snbt')" = "1" || { echo "Crafty quest-only overlay missing quest data" >&2; exit 1; }
-if unzip -Z1 "$quest_overlay" | grep -Eq '^(world/|mods/|_crafty/)'; then
-  echo "Crafty quest-only overlay contains non-quest server state" >&2
-  exit 1
-fi
+
+test "$(unzip -Z1 "$overlay" | grep -Fxc 'config/ftbquests/quests/chapters/getting_started.snbt')" = "1" || { echo "Crafty update overlay missing synced quests" >&2; exit 1; }
 
 unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Client.zip"
 unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"

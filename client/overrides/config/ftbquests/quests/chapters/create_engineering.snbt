@@ -39,14 +39,14 @@
 			tasks: [
 				{
 					id: "F72E447E49B9B1A4"
-					item: { count: 1, id: "create:water_wheel" }
+					item: "create:water_wheel"
 					consume_items: false
 					title: "Obtain: Water Wheel"
 					type: "item"
 				}
 				{
 					id: "DB32483F0ECA7267"
-					item: { count: 1, id: "create:mechanical_press" }
+					item: "create:mechanical_press"
 					consume_items: false
 					title: "Obtain: Mechanical Press"
 					type: "item"
@@ -54,10 +54,11 @@
 				{
 					id: "17597223D8AA140A"
 					title: "Completed milestone: First rotation"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Water Wheel + Mechanical Press; then confirm the milestone."
+			subtitle: "Requires Water Wheel + Mechanical Press; completion is detected automatically."
 			title: "First rotation"
 			x: 0.0d
 			y: 0.0d
@@ -91,7 +92,7 @@
 			tasks: [
 				{
 					id: "60EBB3EBF4534609"
-					item: { count: 1, id: "create:belt_connector" }
+					item: "create:belt_connector"
 					consume_items: false
 					title: "Obtain: Mechanical Belt Connector"
 					type: "item"
@@ -99,10 +100,11 @@
 				{
 					id: "0DFA213F45F74EFE"
 					title: "Completed milestone: A processing line"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Mechanical Belt Connector; then confirm the milestone."
+			subtitle: "Requires Mechanical Belt Connector; completion is detected automatically."
 			title: "A processing line"
 			x: 3.0d
 			y: 0.0d
@@ -136,7 +138,7 @@
 			tasks: [
 				{
 					id: "C0ACA01B4C80BBE4"
-					item: { count: 1, id: "create:precision_mechanism" }
+					item: "create:precision_mechanism"
 					consume_items: false
 					title: "Obtain: Precision Mechanism"
 					type: "item"
@@ -144,10 +146,11 @@
 				{
 					id: "5330479A28BDAE3F"
 					title: "Completed milestone: Precision mechanisms"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Precision Mechanism; then confirm the milestone."
+			subtitle: "Requires Precision Mechanism; completion is detected automatically."
 			title: "Precision mechanisms"
 			x: 6.0d
 			y: 0.0d
@@ -181,7 +184,7 @@
 			tasks: [
 				{
 					id: "0B2726B1E2836F93"
-					item: { count: 1, id: "create:steam_engine" }
+					item: "create:steam_engine"
 					consume_items: false
 					title: "Obtain: Steam Engine"
 					type: "item"
@@ -189,10 +192,11 @@
 				{
 					id: "6A19120000000402"
 					title: "Completed milestone: Steam under control"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Steam Engine; then confirm the milestone."
+			subtitle: "Requires Steam Engine; completion is detected automatically."
 			title: "Steam under control"
 			x: 6.0d
 			y: 3.0d
@@ -226,7 +230,7 @@
 			tasks: [
 				{
 					id: "A32B4E720E7FE605"
-					item: { count: 1, id: "create:track_station" }
+					item: "create:track_station"
 					consume_items: false
 					title: "Obtain: Track Station"
 					type: "item"
@@ -234,10 +238,11 @@
 				{
 					id: "266DB38DB0AF235D"
 					title: "Completed milestone: Rails and schedules"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Track Station; then confirm the milestone."
+			subtitle: "Requires Track Station; completion is detected automatically."
 			title: "Rails and schedules"
 			x: 3.0d
 			y: 3.0d
@@ -273,7 +278,7 @@
 			tasks: [
 				{
 					id: "BE6613FDD637ECF3"
-					item: { count: 1, id: "create:brass_casing" }
+					item: "create:brass_casing"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Brass Casings"
@@ -282,10 +287,11 @@
 				{
 					id: "6A19120000000602"
 					title: "Completed milestone: A reliable factory"
+					optional_task: true
 					type: "checkmark"
 				}
 			]
-			subtitle: "Requires Brass Casings; then confirm the milestone."
+			subtitle: "Requires Brass Casings; completion is detected automatically."
 			title: "A reliable factory"
 			x: 0.0d
 			y: 3.0d

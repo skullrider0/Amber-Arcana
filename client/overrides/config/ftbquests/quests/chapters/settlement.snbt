@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "076B560AD1B6264F"
-					item: { count: 1, id: "minecraft:oak_planks" }
+					item: "minecraft:oak_planks"
 					count: 64L
 					consume_items: false
 					title: "Obtain: Settlement building stock"
@@ -74,7 +74,7 @@
 			tasks: [
 				{
 					id: "1BE83228A22C0849"
-					item: { count: 1, id: "minecraft:map" }
+					item: "minecraft:map"
 					consume_items: false
 					title: "Obtain: Settlement claim map"
 					type: "item"
@@ -116,7 +116,7 @@
 			tasks: [
 				{
 					id: "E8B48BF1C1111E45"
-					item: { count: 1, id: "minecraft:crafting_table" }
+					item: "minecraft:crafting_table"
 					count: 4L
 					consume_items: false
 					title: "Obtain: Builder work supplies"
@@ -159,7 +159,7 @@
 			tasks: [
 				{
 					id: "645F12330B2FF482"
-					item: { count: 1, id: "minecraft:chest" }
+					item: "minecraft:chest"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Warehouse and delivery buffers"
@@ -202,7 +202,7 @@
 			tasks: [
 				{
 					id: "AD563F7042D6FA21"
-					item: { count: 1, id: "minecraft:bread" }
+					item: "minecraft:bread"
 					count: 32L
 					consume_items: false
 					title: "Obtain: Colony food supply"

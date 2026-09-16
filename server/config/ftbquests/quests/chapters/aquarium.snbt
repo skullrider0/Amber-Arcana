@@ -32,7 +32,7 @@
 			tasks: [
 				{
 					id: "DC997FDF8A0AAD69"
-					item: { count: 1, id: "minecraft:glass" }
+					item: "minecraft:glass"
 					count: 32L
 					consume_items: false
 					title: "Obtain: Habitat glass"
@@ -73,7 +73,7 @@
 			tasks: [
 				{
 					id: "35FB580086EEFE45"
-					item: { count: 1, id: "minecraft:water_bucket" }
+					item: "minecraft:water_bucket"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Freshwater and marine water"
@@ -81,7 +81,7 @@
 				}
 				{
 					id: "B8B8F113FE54464E"
-					item: { count: 1, id: "minecraft:cod_bucket" }
+					item: "minecraft:cod_bucket"
 					consume_items: false
 					title: "Obtain: Display fish"
 					type: "item"
@@ -121,7 +121,7 @@
 			tasks: [
 				{
 					id: "29C8018423599327"
-					item: { count: 1, id: "minecraft:lead" }
+					item: "minecraft:lead"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Companion handling supplies"
@@ -162,7 +162,7 @@
 			tasks: [
 				{
 					id: "3F53B8E92AB71623"
-					item: { count: 1, id: "minecraft:wheat" }
+					item: "minecraft:wheat"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Animal care supplies"

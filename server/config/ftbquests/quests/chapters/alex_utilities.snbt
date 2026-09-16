@@ -32,7 +32,7 @@
 			tasks: [
 				{
 					id: "76D86A02CEA4FD67"
-					item: { count: 1, id: "minecraft:chest" }
+					item: "minecraft:chest"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Remote storage containers"
@@ -73,7 +73,7 @@
 			tasks: [
 				{
 					id: "72FB74FCD9BE9F30"
-					item: { count: 1, id: "minecraft:white_bed" }
+					item: "minecraft:white_bed"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Primary and backup beds"
@@ -114,7 +114,7 @@
 			tasks: [
 				{
 					id: "CD5BB55F03B6F208"
-					item: { count: 1, id: "minecraft:white_banner" }
+					item: "minecraft:white_banner"
 					consume_items: false
 					title: "Obtain: Personal banner"
 					type: "item"
@@ -154,7 +154,7 @@
 			tasks: [
 				{
 					id: "819D852FD48D73A2"
-					item: { count: 1, id: "minecraft:iron_ingot" }
+					item: "minecraft:iron_ingot"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Skate-route supplies"
@@ -195,7 +195,7 @@
 			tasks: [
 				{
 					id: "CF536E808959DD9E"
-					item: { count: 1, id: "minecraft:item_frame" }
+					item: "minecraft:item_frame"
 					count: 4L
 					consume_items: false
 					title: "Obtain: Museum displays"

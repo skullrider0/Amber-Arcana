@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "4B0A84227C7502D1"
-					item: { count: 1, id: "minecraft:redstone" }
+					item: "minecraft:redstone"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Conduit control materials"
@@ -74,7 +74,7 @@
 			tasks: [
 				{
 					id: "733B4B7084A02E0B"
-					item: { count: 1, id: "minecraft:furnace" }
+					item: "minecraft:furnace"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Processing station machines"
@@ -117,7 +117,7 @@
 			tasks: [
 				{
 					id: "764F25ADE6E71A67"
-					item: { count: 1, id: "minecraft:chest" }
+					item: "minecraft:chest"
 					count: 4L
 					consume_items: false
 					title: "Obtain: Factory routing buffers"

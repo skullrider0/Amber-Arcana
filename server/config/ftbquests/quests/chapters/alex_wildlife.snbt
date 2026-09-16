@@ -32,7 +32,7 @@
 			tasks: [
 				{
 					id: "06BDD608E987C4FE"
-					item: { count: 1, id: "minecraft:spyglass" }
+					item: "minecraft:spyglass"
 					consume_items: false
 					title: "Obtain: Wildlife observation tool"
 					type: "item"
@@ -72,7 +72,7 @@
 			tasks: [
 				{
 					id: "17458586B7B5DA9F"
-					item: { count: 1, id: "minecraft:lead" }
+					item: "minecraft:lead"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Companion leads"
@@ -113,7 +113,7 @@
 			tasks: [
 				{
 					id: "572C69F3027833BC"
-					item: { count: 1, id: "minecraft:chest" }
+					item: "minecraft:chest"
 					count: 2L
 					consume_items: false
 					title: "Obtain: Rat pickup/deposit test containers"
@@ -154,7 +154,7 @@
 			tasks: [
 				{
 					id: "40636C474E4958FF"
-					item: { count: 1, id: "minecraft:dragon_breath" }
+					item: "minecraft:dragon_breath"
 					consume_items: false
 					title: "Obtain: Dragon progression proof"
 					type: "item"
@@ -194,7 +194,7 @@
 			tasks: [
 				{
 					id: "F70840B2BE1563CA"
-					item: { count: 1, id: "minecraft:lantern" }
+					item: "minecraft:lantern"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Night park lighting"

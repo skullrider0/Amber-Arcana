@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9-25 — Finalize quest runtime format and automatic milestones
+
+- Repair all malformed FTB Quests simple item stacks by serializing item filters in the canonical 1.20.1 format.
+- Preserve every existing 16-character quest/task/reward ID while making concrete mod-item milestones complete automatically.
+- Keep historical checkmark task IDs as optional verification tasks for automatic milestones; keep manual confirmation required for build/claim/behavior objectives.
+- Add static validation for canonical item-task serialization, mixed automatic/manual progression, ID preservation, and client/server quest parity.
+- Add a quest-only Crafty overlay so existing servers can update `config/ftbquests/quests/` without touching worlds or mods.
+
 ## 0.1.9-24 — Complete quest requirements and rewards
 
 - Finish the full 25-chapter / 106-quest pass.

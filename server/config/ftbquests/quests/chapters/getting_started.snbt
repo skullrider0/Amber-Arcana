@@ -59,14 +59,14 @@
 			tasks: [
 				{
 					id: "C64FBED6194FFC41"
-					item: { count: 1, id: "minecraft:crafting_table" }
+					item: "minecraft:crafting_table"
 					consume_items: false
 					title: "Obtain: Crafting Table"
 					type: "item"
 				}
 				{
 					id: "37653D5E43D4B7BA"
-					item: { count: 1, id: "minecraft:white_bed" }
+					item: "minecraft:white_bed"
 					consume_items: false
 					title: "Obtain: Bed"
 					type: "item"
@@ -122,7 +122,7 @@
 			tasks: [
 				{
 					id: "F0DF27EA8BDE1E35"
-					item: { count: 1, id: "minecraft:map" }
+					item: "minecraft:map"
 					consume_items: false
 					title: "Obtain: Claim-planning map"
 					type: "item"
@@ -173,7 +173,7 @@
 			tasks: [
 				{
 					id: "E644804A582024C6"
-					item: { count: 1, id: "sophisticatedbackpacks:backpack" }
+					item: "sophisticatedbackpacks:backpack"
 					consume_items: false
 					title: "Obtain: Sophisticated Backpack"
 					type: "item"

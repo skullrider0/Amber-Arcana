@@ -34,7 +34,7 @@
 			tasks: [
 				{
 					id: "2544B8EF432FCBE9"
-					item: { count: 1, id: "create:wrench" }
+					item: "create:wrench"
 					consume_items: false
 					title: "Obtain: Create Wrench"
 					type: "item"
@@ -73,7 +73,7 @@
 			tasks: [
 				{
 					id: "7592FF57067AAB2A"
-					item: { count: 1, id: "create:andesite_casing" }
+					item: "create:andesite_casing"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Workshop casings"
@@ -116,7 +116,7 @@
 			tasks: [
 				{
 					id: "5DC14B765B78FD62"
-					item: { count: 1, id: "minecraft:string" }
+					item: "minecraft:string"
 					count: 16L
 					consume_items: false
 					title: "Obtain: Sifting mesh supplies"
@@ -159,7 +159,7 @@
 			tasks: [
 				{
 					id: "FE639BEF4E585144"
-					item: { count: 1, id: "minecraft:diamond_pickaxe" }
+					item: "minecraft:diamond_pickaxe"
 					consume_items: false
 					title: "Obtain: Careful bulk-mining tool"
 					type: "item"
@@ -201,7 +201,7 @@
 			tasks: [
 				{
 					id: "7C85D18812131EB8"
-					item: { count: 1, id: "create:brass_casing" }
+					item: "create:brass_casing"
 					count: 8L
 					consume_items: false
 					title: "Obtain: Large-scale Create components"
