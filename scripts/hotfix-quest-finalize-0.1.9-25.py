@@ -260,7 +260,24 @@ def update_readme() -> None:
     text = text.replace("Download Client 0.1.9-24", "Download Client 0.1.9-25")
     text = text.replace("Download Crafty Server 0.1.9-24", "Download Crafty Server 0.1.9-25")
     text = text.replace("| Pack | 0.1.9-24 |", "| Pack | 0.1.9-25 |")
+    text = text.replace("| Manual quests | 106 across 25 chapters |", "| Quests | 106 across 25 chapters |")
     text = text.replace("Release 0.1.9-24 keeps JEI", "Release 0.1.9-25 keeps JEI")
+
+    text = re.sub(
+        r'(?:- `config/ftbquests/quests/` \(the synchronized 0\.1\.9-\d+ quest book\)\n)+',
+        '- `config/ftbquests/quests/` (the synchronized 0.1.9-25 quest book)\n',
+        text,
+    )
+    text = re.sub(
+        r'(?:In 0\.1\.9-\d+ the overlay also updates the FTB Quests configuration so existing Crafty servers receive the repaired quest book\. )+',
+        'In 0.1.9-25 the overlay also updates the FTB Quests configuration so existing Crafty servers receive the repaired quest book. ',
+        text,
+    )
+    text = re.sub(
+        r'(The historical `Crafty-JEI-Overlay\.zip` filename is also rebuilt as a compatibility alias to the same )0\.1\.9-\d+( update overlay\.)',
+        r'\g<1>0.1.9-25\2',
+        text,
+    )
 
     duplicate_bullet = (
         "- `config/ftbquests/quests/` (the synchronized 0.1.9-24 quest book)\n"
