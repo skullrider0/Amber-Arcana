@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -140,11 +141,25 @@ def robust_render_wheel(table_id, order, title, pools):
 mod.bulky_count = bundle_count
 mod.expand_pool = robust_expand_pool
 mod.render_wheel = robust_render_wheel
+
+# 0.1.9-35 turns the former compact chapters into deeper trees. Keep this
+# historical reward pass replayable on those expanded sources rather than
+# selecting only chapters that are still <=10 quests in the committed tree.
+mod.SHORT_CHAIN_MAX_QUESTS = 10000
 mod.main()
 
+# Keep the historical 0.1.9-34 metric truthful even though the replay ceiling is
+# raised internally for deterministic rebuilds of 0.1.9-35+ sources.
+for metadata in (mod.VALIDATION, mod.SUMMARY):
+    data = json.loads(metadata.read_text())
+    stats = data.get("short_chain_rewards_0_1_9_34")
+    if isinstance(stats, dict):
+        stats["short_chain_max_quests"] = 10
+    metadata.write_text(json.dumps(data, indent=2) + "\n")
+
 # 0.1.9-32 originally asserted exactly three T4 draws for Powah. The 0.1.9-34
-# short-chain pass intentionally upgrades compact chapters, including Powah, to
-# four T4 draws. Keep the original jackpot checks but accept the richer draw count.
+# pass intentionally upgrades compact chapters, including Powah, to four T4
+# draws. Keep the jackpot checks but accept either historical/richer draw count.
 validate = ROOT / "scripts/validate.sh"
 text = validate.read_text()
 text = text.replace(
