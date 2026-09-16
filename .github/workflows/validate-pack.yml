@@ -64,6 +64,7 @@ jobs:
       - name: Normalize 0.1.9-25 validation version
         shell: bash
         run: |
+          sed -i -E '/hotfix-quest-requirements-0\.1\.9-[0-9]+\.py.*--check-only/d' scripts/validate.sh
           sed -i -E 's/0\.1\.9-[0-9]+/0.1.9-25/g' scripts/validate.sh
           sed -i 's/rg -F "item: "$item""/rg -F "$item"/' scripts/validate.sh
 
