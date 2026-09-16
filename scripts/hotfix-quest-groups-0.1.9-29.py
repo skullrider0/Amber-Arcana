@@ -83,29 +83,30 @@ def write_groups() -> None:
 
 def set_group(text: str, group_id: str, filename: str) -> str:
     # Historical chapter files use both comma-separated and newline-separated SNBT.
-    # Preserve whichever comma style the chapter already uses.
-    pattern = r'^(\s*)group:\s*"[^"]*"\s*(,?)\s*$'
+    # Normalize this one metadata field to newline-separated form so all 26 chapter
+    # assignments are represented consistently while remaining valid SNBT.
+    pattern = r'^(\s*)group:\s*"[^"]*"\s*,?\s*$'
     match = re.search(pattern, text, flags=re.MULTILINE)
     if match:
-        indent, comma = match.group(1), match.group(2)
+        indent = match.group(1)
         return re.sub(
             pattern,
-            lambda _m: f'{indent}group: "{group_id}"{comma}',
+            lambda _m: f'{indent}group: "{group_id}"',
             text,
             count=1,
             flags=re.MULTILINE,
         )
 
     # Some historical chapters never had a group field. Insert it immediately
-    # after filename, mirroring that chapter's comma style.
-    pattern = r'^(\s*filename:\s*"[^"]+"\s*(,?)\s*)$'
+    # after filename. The surrounding SNBT may use commas; commas are optional
+    # separators in the existing FTB Quests files, so the normalized line is safe.
+    pattern = r'^(\s*filename:\s*"[^"]+"\s*,?\s*)$'
     match = re.search(pattern, text, flags=re.MULTILINE)
     if not match:
         raise RuntimeError(f"Could not add group field to {filename}")
-    comma = match.group(2)
     return re.sub(
         pattern,
-        lambda m: m.group(1) + f'\n\tgroup: "{group_id}"{comma}',
+        lambda m: m.group(1) + f'\n\tgroup: "{group_id}"',
         text,
         count=1,
         flags=re.MULTILINE,
