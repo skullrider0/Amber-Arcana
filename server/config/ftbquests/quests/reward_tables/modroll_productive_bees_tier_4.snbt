@@ -1,24 +1,34 @@
 {
-	icon: "productivebees:bee_cage"
+	icon: "productivebees:upgrade_productivity"
 	id: "479FD349D58DF596"
-	loot_size: 3
+	loot_size: 4
 	order_index: 388
 	rewards: [
-		{ item: "productivebees:bee_cage", weight: 0.60f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:feeder", weight: 5.00f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 0.60f }
-		{ item: "productivebees:bee_cage", weight: 0.60f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:feeder", weight: 5.00f }
-		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 0.60f }
-		{ item: "productivebees:bee_cage", weight: 0.60f }
+		{ count: 2, item: "productivebees:upgrade_productivity", weight: 10.00f }
+		{ item: "productivebees:upgrade_productivity_2", weight: 9.00f }
+		{ item: "productivebees:upgrade_productivity_3", weight: 4.00f }
+		{ item: "productivebees:upgrade_productivity_4", weight: 0.30f }
+		{ item: "productivebees:upgrade_simulator", weight: 7.00f }
+		{ item: "productivebees:upgrade_bee_sampler", weight: 7.00f }
+		{ item: "productivebees:upgrade_anti_teleport", weight: 6.00f }
+		{ item: "productivebees:upgrade_comb_block", weight: 6.00f }
+		{ count: 2, item: "productivebees:upgrade_breeding", weight: 6.00f }
+		{ count: 2, item: "productivebees:upgrade_range", weight: 6.00f }
+		{ count: 2, item: "productivebees:upgrade_filter", weight: 6.00f }
+		{ item: "productivebees:powered_centrifuge", weight: 8.00f }
+		{ item: "productivebees:heated_centrifuge", weight: 7.00f }
+		{ item: "productivebees:gene_indexer", weight: 8.00f }
+		{ item: "productivebees:honey_generator", weight: 7.00f }
+		{ item: "productivebees:incubator", weight: 7.00f }
+		{ item: "productivebees:catcher", weight: 6.00f }
+		{ item: "productivebees:bottler", weight: 6.00f }
+		{ count: 4, item: "productivebees:draconic_dust", weight: 5.00f }
+		{ count: 2, item: "productivebees:draconic_chunk", weight: 2.50f }
+		{ count: 4, item: "productivebees:sugarbag_honeycomb", weight: 3.00f }
+		{ item: "productivebees:bee_nest_diamond_helmet", weight: 0.75f }
+		{ item: "productivebees:inactive_dragon_egg", weight: 0.50f }
+		{ count: 8, item: "productivebees:sturdy_bee_cage", weight: 7.00f }
+		{ count: 16, item: "productivebees:gene_bottle", weight: 6.00f }
 	]
 	title: "Productive Bees — Tier 4 Roll"
 	use_title: true

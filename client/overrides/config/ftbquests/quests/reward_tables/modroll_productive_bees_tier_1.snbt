@@ -1,15 +1,21 @@
 {
-	icon: "productivebees:bee_cage"
+	icon: "productivebees:honey_treat"
 	id: "0309CAABDEA9B221"
 	loot_size: 1
 	order_index: 385
 	rewards: [
-		{ item: "productivebees:bee_cage", weight: 9.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 9.00f }
-		{ item: "productivebees:expansion_box_oak", weight: 9.00f }
-		{ item: "productivebees:feeder", weight: 9.00f }
+		{ count: 8, item: "productivebees:honey_treat", weight: 20.00f }
+		{ count: 8, item: "productivebees:bee_cage", weight: 18.00f }
+		{ count: 2, item: "productivebees:sturdy_bee_cage", weight: 8.00f }
+		{ item: "productivebees:nest_locator", weight: 8.00f }
+		{ count: 2, item: "productivebees:upgrade_base", weight: 14.00f }
+		{ item: "productivebees:feeder", weight: 10.00f }
 		{ item: "productivebees:centrifuge", weight: 9.00f }
-		{ item: "productivebees:breeding_chamber", weight: 9.00f }
+		{ item: "productivebees:advanced_oak_beehive", weight: 7.00f }
+		{ item: "productivebees:expansion_box_oak", weight: 7.00f }
+		{ count: 4, item: "productivebees:gene_bottle", weight: 6.00f }
+		{ count: 16, item: "productivebees:wax", weight: 10.00f }
+		{ item: "productivebees:bottler", weight: 5.00f }
 	]
 	title: "Productive Bees — Tier 1 Roll"
 	use_title: true

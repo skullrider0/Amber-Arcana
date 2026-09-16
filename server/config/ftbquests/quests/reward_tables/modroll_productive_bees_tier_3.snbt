@@ -1,20 +1,28 @@
 {
-	icon: "productivebees:advanced_oak_beehive"
+	icon: "productivebees:upgrade_productivity"
 	id: "07A952322C3AA85E"
-	loot_size: 2
+	loot_size: 3
 	order_index: 387
 	rewards: [
-		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
-		{ item: "productivebees:feeder", weight: 5.00f }
-		{ item: "productivebees:bee_cage", weight: 5.00f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:feeder", weight: 5.00f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
-		{ item: "productivebees:bee_cage", weight: 5.00f }
+		{ count: 2, item: "productivebees:upgrade_productivity", weight: 12.00f }
+		{ item: "productivebees:upgrade_productivity_2", weight: 8.00f }
+		{ count: 2, item: "productivebees:upgrade_time", weight: 9.00f }
+		{ item: "productivebees:upgrade_breeding", weight: 8.00f }
+		{ item: "productivebees:upgrade_range", weight: 8.00f }
+		{ item: "productivebees:upgrade_filter", weight: 8.00f }
+		{ item: "productivebees:upgrade_simulator", weight: 7.00f }
+		{ item: "productivebees:upgrade_bee_sampler", weight: 7.00f }
+		{ item: "productivebees:upgrade_anti_teleport", weight: 6.00f }
+		{ item: "productivebees:upgrade_comb_block", weight: 6.00f }
+		{ item: "productivebees:powered_centrifuge", weight: 8.00f }
+		{ item: "productivebees:heated_centrifuge", weight: 5.00f }
+		{ item: "productivebees:gene_indexer", weight: 7.00f }
+		{ item: "productivebees:honey_generator", weight: 7.00f }
+		{ item: "productivebees:incubator", weight: 7.00f }
+		{ count: 8, item: "productivebees:gene_bottle", weight: 6.00f }
+		{ count: 2, item: "productivebees:draconic_dust", weight: 3.00f }
+		{ item: "productivebees:upgrade_productivity_3", weight: 2.00f }
+		{ item: "productivebees:upgrade_productivity_4", weight: 0.10f }
 	]
 	title: "Productive Bees — Tier 3 Roll"
 	use_title: true

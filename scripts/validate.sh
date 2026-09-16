@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-32" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-32" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-33" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-33" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -98,7 +98,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-32 static validation passed"
+echo "Amber & Arcana 0.1.9-33 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -199,3 +199,17 @@ if rg -n 'minecraft:(diamond|emerald|emerald_block)' "$client_quests/reward_tabl
 grep -Fq 'item: "powah:thermo_generator_nitro", weight: 0.25f' "$client_quests/reward_tables/modroll_powah_tier_4.snbt" || { echo "Rare Nitro Thermo Generator jackpot missing" >&2; exit 1; }
 grep -Fq 'item: "powah:reactor_nitro", weight: 0.20f' "$client_quests/reward_tables/modroll_powah_tier_4.snbt" || { echo "Rare Nitro Reactor jackpot missing" >&2; exit 1; }
 grep -Fq 'loot_size: 3' "$client_quests/reward_tables/modroll_powah_tier_4.snbt" || { echo "High-tier multi-item roll missing" >&2; exit 1; }
+
+
+# 0.1.9-33 Productive Bees reward progression checks
+jq -e '.productive_bees_rewards_0_1_9_33.tier_tables_rebalanced == 4 and .productive_bees_rewards_0_1_9_33.tier_entry_counts["1"] >= 10 and .productive_bees_rewards_0_1_9_33.tier_entry_counts["2"] >= 15 and .productive_bees_rewards_0_1_9_33.tier_entry_counts["3"] >= 18 and .productive_bees_rewards_0_1_9_33.tier_entry_counts["4"] >= 20 and .productive_bees_rewards_0_1_9_33.tier_loot_sizes["4"] == 4 and .productive_bees_rewards_0_1_9_33.finale_loot_size == 5 and .productive_bees_rewards_0_1_9_33.unique_productive_bees_rewards >= 30 and .productive_bees_rewards_0_1_9_33.generic_vanilla_items_in_new_bee_tables == 0 and .productive_bees_rewards_0_1_9_33.historical_table_ids_preserved == true and .productive_bees_rewards_0_1_9_33.client_server_quest_files_identical == true' "$validation" >/dev/null
+pb_t4="$client_quests/reward_tables/modroll_productive_bees_tier_4.snbt"
+pb_wheel="$client_quests/reward_tables/wheel_productive_bees.snbt"
+grep -Fq 'loot_size: 4' "$pb_t4" || { echo "Productive Bees Tier 4 should return four draws" >&2; exit 1; }
+grep -Fq 'item: "productivebees:upgrade_productivity_4", weight: 0.30f' "$pb_t4" || { echo "Productive Bees Omega Tier 4 jackpot missing" >&2; exit 1; }
+grep -Fq 'loot_size: 5' "$pb_wheel" || { echo "Productive Bees finale should return five draws" >&2; exit 1; }
+grep -Fq 'item: "productivebees:upgrade_productivity_4", weight: 0.20f' "$pb_wheel" || { echo "Productive Bees finale Omega jackpot missing" >&2; exit 1; }
+if rg -n 'minecraft:(diamond|emerald|emerald_block)' "$client_quests/reward_tables/modroll_productive_bees_tier_"*.snbt "$pb_wheel" >/dev/null; then
+  echo "Generic diamond/emerald reward leaked into Productive Bees progression tables" >&2
+  exit 1
+fi

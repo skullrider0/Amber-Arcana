@@ -1,19 +1,26 @@
 {
-	icon: "productivebees:expansion_box_oak"
+	icon: "productivebees:sturdy_bee_cage"
 	id: "172DF70A2C60D395"
 	loot_size: 2
 	order_index: 386
 	rewards: [
-		{ item: "productivebees:expansion_box_oak", weight: 9.00f }
-		{ item: "productivebees:feeder", weight: 9.00f }
-		{ item: "productivebees:centrifuge", weight: 9.00f }
-		{ item: "productivebees:breeding_chamber", weight: 9.00f }
-		{ item: "productivebees:expansion_box_oak", weight: 9.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 9.00f }
-		{ item: "productivebees:feeder", weight: 9.00f }
-		{ item: "productivebees:bee_cage", weight: 9.00f }
-		{ item: "productivebees:centrifuge", weight: 9.00f }
-		{ item: "productivebees:breeding_chamber", weight: 9.00f }
+		{ count: 4, item: "productivebees:sturdy_bee_cage", weight: 12.00f }
+		{ count: 4, item: "productivebees:upgrade_base", weight: 12.00f }
+		{ count: 2, item: "productivebees:upgrade_time", weight: 11.00f }
+		{ item: "productivebees:upgrade_breeding", weight: 9.00f }
+		{ item: "productivebees:upgrade_range", weight: 9.00f }
+		{ item: "productivebees:upgrade_filter", weight: 9.00f }
+		{ item: "productivebees:upgrade_not_babee", weight: 7.00f }
+		{ item: "productivebees:upgrade_productivity", weight: 8.00f }
+		{ item: "productivebees:powered_centrifuge", weight: 7.00f }
+		{ item: "productivebees:incubator", weight: 7.00f }
+		{ item: "productivebees:catcher", weight: 6.00f }
+		{ item: "productivebees:gene_indexer", weight: 6.00f }
+		{ item: "productivebees:honey_generator", weight: 6.00f }
+		{ item: "productivebees:bottler", weight: 8.00f }
+		{ item: "productivebees:upgrade_comb_block", weight: 4.00f }
+		{ item: "productivebees:upgrade_bee_sampler", weight: 3.50f }
+		{ item: "productivebees:upgrade_simulator", weight: 2.50f }
 	]
 	title: "Productive Bees — Tier 2 Roll"
 	use_title: true

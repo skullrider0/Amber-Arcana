@@ -1,24 +1,29 @@
 {
-	icon: "productivebees:honey_treat"
+	icon: "productivebees:upgrade_productivity_3"
 	id: "6F22A2C849A53E6E"
-	loot_size: 2
+	loot_size: 5
 	order_index: 130
 	rewards: [
-		{ item: "productivebees:bee_cage", weight: 1.00f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:feeder", weight: 5.00f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 1.00f }
-		{ item: "productivebees:bee_cage", weight: 1.00f }
-		{ item: "productivebees:centrifuge", weight: 5.00f }
-		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:feeder", weight: 5.00f }
-		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 1.00f }
-		{ item: "productivebees:bee_cage", weight: 1.00f }
+		{ count: 2, item: "productivebees:upgrade_productivity", weight: 10.00f }
+		{ item: "productivebees:upgrade_productivity_2", weight: 8.00f }
+		{ item: "productivebees:upgrade_productivity_3", weight: 3.00f }
+		{ item: "productivebees:upgrade_productivity_4", weight: 0.20f }
+		{ item: "productivebees:upgrade_simulator", weight: 7.00f }
+		{ item: "productivebees:upgrade_bee_sampler", weight: 7.00f }
+		{ item: "productivebees:upgrade_anti_teleport", weight: 5.00f }
+		{ item: "productivebees:upgrade_comb_block", weight: 5.00f }
+		{ item: "productivebees:heated_centrifuge", weight: 7.00f }
+		{ item: "productivebees:powered_centrifuge", weight: 8.00f }
+		{ item: "productivebees:gene_indexer", weight: 8.00f }
+		{ item: "productivebees:honey_generator", weight: 7.00f }
+		{ item: "productivebees:incubator", weight: 7.00f }
+		{ count: 2, item: "productivebees:draconic_chunk", weight: 3.00f }
+		{ count: 8, item: "productivebees:draconic_dust", weight: 5.00f }
+		{ count: 8, item: "productivebees:sugarbag_honeycomb", weight: 4.00f }
+		{ item: "productivebees:bee_nest_diamond_helmet", weight: 0.50f }
+		{ item: "productivebees:inactive_dragon_egg", weight: 0.35f }
+		{ count: 8, item: "productivebees:sturdy_bee_cage", weight: 6.00f }
+		{ count: 16, item: "productivebees:gene_bottle", weight: 6.00f }
 	]
 	title: "Wheel of Fortune — Productive Bees"
 	use_title: true

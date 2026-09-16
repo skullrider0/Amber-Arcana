@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9-33 — Productive Bees reward progression
+
+- Rebuild all four Productive Bees tier tables around a much larger pool of mod-specific upgrades, machines, bee tools, and advanced materials.
+- Scale reward volume with progression: Tier 1 gives 1 draw, Tier 2 gives 2, Tier 3 gives 3, Tier 4 gives 4, and Master Apiarist gives 5.
+- Add the Productive Bees productivity upgrade ladder to later tiers, including an intentionally rare Omega Productivity jackpot.
+- Keep Omega rare despite multi-draw tables: weight 0.10 as a Tier 3 preview, 0.30 in Tier 4, and 0.20 in the finale wheel.
+- Remove generic diamond/emerald-style filler from the new bee reward pools and preserve existing reward-table IDs.
+
 ## 0.1.9-32 — Mod-specific tier loot rolls
 
 - Replace the four generic depth reward pools with four themed tiers per quest chapter/mod.
