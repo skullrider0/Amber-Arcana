@@ -84,7 +84,10 @@ jobs:
       - name: Add 0.1.9-27 Productive Bees family tree
         run: python3 scripts/hotfix-productive-bees-0.1.9-27.py
 
-      - name: Normalize 0.1.9-27 validation gates
+      - name: Add 0.1.9-28 Create progression tree
+        run: python3 scripts/hotfix-create-progression-0.1.9-28.py
+
+      - name: Normalize 0.1.9-28 validation gates
         shell: bash
         run: |
           set -euo pipefail
@@ -98,6 +101,7 @@ jobs:
           for marker in (
               '# 0.1.9-26 weighted Wheel of Fortune checks',
               '# 0.1.9-27 Productive Bees family-tree checks',
+              '# 0.1.9-28 Create progression checks',
           ):
               if marker in text:
                   text = text.split(marker, 1)[0].rstrip() + '\n'
@@ -108,13 +112,11 @@ jobs:
           ) + '\n'
 
           # Historical release transformers can reset validator version strings.
-          # Normalize all release-version references while protecting the historical
-          # quest-requirements script filename if it ever appears here.
-          text = re.sub(r'(?<!hotfix-quest-requirements-)0\.1\.9-[0-9]+', '0.1.9-27', text)
+          text = re.sub(r'(?<!hotfix-quest-requirements-)0\.1\.9-[0-9]+', '0.1.9-28', text)
           text = text.replace('rg -F "item: "$item""', 'rg -F "$item"')
 
-          # Historical quest finalizers can restore their original 25 chapter / 5 table
-          # expectations, while a published 0.1.9-26 validator may already expect 30 tables.
+          # Productive Bees adds one chapter and one wheel table. Create expands its
+          # existing chapter in place, so the final release remains 26 chapters / 31 tables.
           for old in ('25',):
               text = text.replace(
                   f'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "{old}" || {{ echo "Expected {old} live quest chapters"',
@@ -143,12 +145,28 @@ jobs:
           done
           grep -Fq 'title: "Master Apiarist"' "$pb_chapter" || { echo "Master Apiarist finale missing" >&2; exit 1; }
           grep -Fq 'Wheel of Fortune — Productive Bees' "$client_quests/reward_tables/wheel_productive_bees.snbt" || { echo "Productive Bees wheel table missing" >&2; exit 1; }
+
+          # 0.1.9-28 Create progression checks
+          jq -e '.create_progression_0_1_9_28.create_version == "1.20.1-6.0.8" and .create_progression_0_1_9_28.upstream_commit == "1a1a9a2819b4f89f78caec41b55ed8cb222fa24b" and .create_progression_0_1_9_28.quests == 41 and .create_progression_0_1_9_28.new_quests == 35 and .create_progression_0_1_9_28.preserved_anchor_quests == 6 and .create_progression_0_1_9_28.milestone_item_tasks >= 50 and .create_progression_0_1_9_28.required_dependency_edges >= 45 and .create_progression_0_1_9_28.validated_create_item_ids >= 50 and .create_progression_0_1_9_28.historical_create_quest_ids_preserved == true and .create_progression_0_1_9_28.client_server_quest_files_identical == true' "$validation" >/dev/null
+          create_chapter="$client_quests/chapters/create_engineering.snbt"
+          test -f "$create_chapter" || { echo "Create Engineering chapter missing" >&2; exit 1; }
+          for item in create:andesite_alloy create:mechanical_press create:mechanical_mixer create:blaze_burner create:brass_ingot create:deployer create:precision_mechanism create:mechanical_crafter create:crushing_wheel create:packager create:stock_ticker create:steam_engine create:track_station create:schedule; do
+            grep -Fq "$item" "$create_chapter" || { echo "Create milestone missing: $item" >&2; exit 1; }
+          done
+          for qid in 1ED63F4805934997 49A0DF8BF8B13288 2B415B8CDDC3ACFF 6A19120000000401 42BD2E092F753492 6A19120000000601; do
+            grep -Fq "id: \"$qid\"" "$create_chapter" || { echo "Historical Create quest ID missing: $qid" >&2; exit 1; }
+          done
+          grep -Fq 'title: "A Reliable Factory"' "$create_chapter" || { echo "Create finale missing" >&2; exit 1; }
+          grep -Fq 'Wheel of Fortune — Create Engineering' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel table missing" >&2; exit 1; }
+          grep -Fq 'create:stock_ticker' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel was not refreshed" >&2; exit 1; }
+
           test "$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)" = "26" || { echo "Expected 26 finale loot rewards" >&2; exit 1; }
           test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated client wheel tables" >&2; exit 1; }
           test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated server wheel tables" >&2; exit 1; }
           quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
           test -f "$quest_overlay" || { echo "Quest-only Crafty overlay missing" >&2; exit 1; }
           test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/productive_bees.snbt')" = "1" || { echo "Productive Bees chapter missing from quest overlay" >&2; exit 1; }
+          test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/create_engineering.snbt')" = "1" || { echo "Create chapter missing from quest overlay" >&2; exit 1; }
           EOF
 
       - name: Build client and server distributions
