@@ -3,8 +3,8 @@
 	id: "01DA3803DBA7D386",
 	filename: "firearms",
 	title: "Firearms and Artillery",
-	order_index: 23,
-	group: "",
+	order_index: 1,
+	group: "5A29000000000008"
 	quests: [
 		{
 			icon: "minecraft:iron_ingot"

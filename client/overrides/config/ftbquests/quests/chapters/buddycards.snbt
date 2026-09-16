@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "buddycards"
-	group: ""
+	group: "5A29000000000009"
 	icon: "minecraft:paper"
 	id: "7BDEAC7129B97A9A"
-	order_index: 4
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{

@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "productive_bees"
-	group: "6AA0010000000001"
+	group: "5A29000000000004"
 	icon: "productivebees:bee_cage"
 	id: "6AA002BEE00000000"
-	order_index: 25
+	order_index: 0
 	quest_links: []
 	quests: [
 		{

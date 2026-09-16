@@ -3,8 +3,8 @@
 	id: "4373E7571823BE97",
 	filename: "dimensions",
 	title: "Beyond the Overworld",
-	order_index: 22,
-	group: "",
+	order_index: 1,
+	group: "5A29000000000006"
 	quests: [
 		{
 			icon: "minecraft:blaze_rod"

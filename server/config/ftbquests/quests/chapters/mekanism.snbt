@@ -3,8 +3,8 @@
 	id: "151A507B6002E7CB",
 	filename: "mekanism",
 	title: "Mekanism Industry",
-	order_index: 11,
-	group: "",
+	order_index: 1,
+	group: "5A29000000000002"
 	quests: [
 		{
 			icon: "mekanism:metallurgic_infuser"

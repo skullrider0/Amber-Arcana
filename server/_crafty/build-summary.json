@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-28",
+  "pack_version": "0.1.9-29",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -262,6 +262,60 @@
     "required_dependency_edges": 72,
     "validated_create_item_ids": 71,
     "historical_create_quest_ids_preserved": true,
+    "client_server_quest_files_identical": true
+  },
+  "quest_organization_0_1_9_29": {
+    "chapter_groups": 9,
+    "chapters_grouped": 26,
+    "groups": [
+      {
+        "id": "5A29000000000001",
+        "title": "Start Here",
+        "chapters": 1
+      },
+      {
+        "id": "5A29000000000002",
+        "title": "Machines & Production",
+        "chapters": 6
+      },
+      {
+        "id": "5A29000000000003",
+        "title": "Storage & Networks",
+        "chapters": 2
+      },
+      {
+        "id": "5A29000000000004",
+        "title": "Resources & Farming",
+        "chapters": 3
+      },
+      {
+        "id": "5A29000000000005",
+        "title": "Magic & Rituals",
+        "chapters": 3
+      },
+      {
+        "id": "5A29000000000006",
+        "title": "Exploration & Creatures",
+        "chapters": 5
+      },
+      {
+        "id": "5A29000000000007",
+        "title": "Building & Settlements",
+        "chapters": 1
+      },
+      {
+        "id": "5A29000000000008",
+        "title": "Tools, Combat & Equipment",
+        "chapters": 3
+      },
+      {
+        "id": "5A29000000000009",
+        "title": "Collections & Endgame",
+        "chapters": 2
+      }
+    ],
+    "future_mystical_agriculture_slot": "Resources & Farming / order_index 1",
+    "quest_ids_changed": false,
     "client_server_quest_files_identical": true
   }
 }

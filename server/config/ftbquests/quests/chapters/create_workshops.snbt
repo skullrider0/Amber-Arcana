@@ -3,8 +3,8 @@
 	id: "748801A59E39015D",
 	filename: "create_workshops",
 	title: "Create Workshops",
-	order_index: 1,
-	group: "",
+	order_index: 4,
+	group: "5A29000000000002"
 	quests: [
 		{
 			icon: "create:wrench"

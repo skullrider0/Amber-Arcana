@@ -3,8 +3,8 @@
 	id: "6EC1474C2D86A12B",
 	filename: "tinkers",
 	title: "Tinkers Construct",
-	order_index: 16,
-	group: "",
+	order_index: 0,
+	group: "5A29000000000008"
 	quests: [
 		{
 			icon: "tconstruct:crafting_station"

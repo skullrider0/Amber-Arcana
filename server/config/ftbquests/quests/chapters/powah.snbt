@@ -3,8 +3,8 @@
 	id: "04E2847BE2F7547E",
 	filename: "powah",
 	title: "Powah Energy",
-	order_index: 12,
-	group: "",
+	order_index: 3,
+	group: "5A29000000000002"
 	quests: [
 		{
 			icon: "powah:thermo_generator_starter"

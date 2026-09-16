@@ -3,8 +3,8 @@
 	id: "39A27A2CEB307EA7",
 	filename: "dinosaur_laboratory",
 	title: "Jurassic Laboratory",
-	order_index: 20,
-	group: "",
+	order_index: 2,
+	group: "5A29000000000006"
 	quests: [
 		{
 			icon: "minecraft:bone"

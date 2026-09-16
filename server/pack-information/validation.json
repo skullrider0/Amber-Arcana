@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-28",
+  "pack_version": "0.1.9-29",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -161,8 +161,8 @@
     "client_server_quest_files_identical": true
   },
   "quest_finalize_0_1_9_25": {
-    "quests_checked": 106,
-    "item_tasks_checked": 116,
+    "quests_checked": 141,
+    "item_tasks_checked": 181,
     "malformed_item_stacks_fixed": 116,
     "malformed_item_stacks_remaining": 0,
     "optional_confirmation_tasks": 27,
@@ -208,6 +208,60 @@
     "total_reward_tables": 31,
     "total_finale_loot_rewards": 26,
     "historical_create_quest_ids_preserved": true,
+    "client_server_quest_files_identical": true
+  },
+  "quest_organization_0_1_9_29": {
+    "chapter_groups": 9,
+    "chapters_grouped": 26,
+    "groups": [
+      {
+        "id": "5A29000000000001",
+        "title": "Start Here",
+        "chapters": 1
+      },
+      {
+        "id": "5A29000000000002",
+        "title": "Machines & Production",
+        "chapters": 6
+      },
+      {
+        "id": "5A29000000000003",
+        "title": "Storage & Networks",
+        "chapters": 2
+      },
+      {
+        "id": "5A29000000000004",
+        "title": "Resources & Farming",
+        "chapters": 3
+      },
+      {
+        "id": "5A29000000000005",
+        "title": "Magic & Rituals",
+        "chapters": 3
+      },
+      {
+        "id": "5A29000000000006",
+        "title": "Exploration & Creatures",
+        "chapters": 5
+      },
+      {
+        "id": "5A29000000000007",
+        "title": "Building & Settlements",
+        "chapters": 1
+      },
+      {
+        "id": "5A29000000000008",
+        "title": "Tools, Combat & Equipment",
+        "chapters": 3
+      },
+      {
+        "id": "5A29000000000009",
+        "title": "Collections & Endgame",
+        "chapters": 2
+      }
+    ],
+    "all_chapters_explicitly_assigned": true,
+    "historical_ids_preserved": true,
     "client_server_quest_files_identical": true
   }
 }

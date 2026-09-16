@@ -3,8 +3,8 @@
 	id: "7BA39355491F9AE9",
 	filename: "create_city",
 	title: "The Mechanical City",
-	order_index: 2,
-	group: "",
+	order_index: 5,
+	group: "5A29000000000002"
 	quests: [
 		{
 			icon: "minecraft:rail"

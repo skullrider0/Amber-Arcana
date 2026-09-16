@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "aquarium"
-	group: ""
+	group: "5A29000000000006"
 	icon: "minecraft:glass"
 	id: "6596524E182D7451"
-	order_index: 21
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{

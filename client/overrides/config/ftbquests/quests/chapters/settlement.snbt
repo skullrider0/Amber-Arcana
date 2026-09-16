@@ -4,7 +4,7 @@
 	filename: "settlement",
 	title: "Claims and Colonies",
 	order_index: 0,
-	group: "",
+	group: "5A29000000000007"
 	quests: [
 		{
 			icon: "minecraft:oak_planks"

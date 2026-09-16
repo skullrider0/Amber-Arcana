@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "alex_caves"
-	group: ""
+	group: "5A29000000000006"
 	icon: "minecraft:spyglass"
 	id: "76CF3A2F1DBFB5BE"
-	order_index: 6
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{

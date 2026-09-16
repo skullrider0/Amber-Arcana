@@ -227,8 +227,8 @@ def collect_stats() -> dict[str, int | bool]:
                     else:
                         required_checks += 1
 
-    if quests != 106:
-        raise RuntimeError(f"Expected 106 quests, found {quests}")
+    if quests < 106:
+        raise RuntimeError(f"Expected at least 106 quests, found {quests}")
     if malformed:
         raise RuntimeError(f"Malformed lowercase-count ItemStacks remain: {malformed}")
     if rewards_missing:

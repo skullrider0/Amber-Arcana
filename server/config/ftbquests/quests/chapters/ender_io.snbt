@@ -3,8 +3,8 @@
 	id: "23A7E1B745DDC088",
 	filename: "ender_io",
 	title: "Ender IO Connections",
-	order_index: 15,
-	group: "",
+	order_index: 2,
+	group: "5A29000000000002"
 	quests: [
 		{
 			icon: "minecraft:redstone"

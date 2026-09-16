@@ -3,8 +3,8 @@
 	id: "71D49BFF3C2684F7",
 	filename: "food_factory",
 	title: "Food and Seasons",
-	order_index: 3,
-	group: "",
+	order_index: 2,
+	group: "5A29000000000004"
 	quests: [
 		{
 			icon: "minecraft:wheat"

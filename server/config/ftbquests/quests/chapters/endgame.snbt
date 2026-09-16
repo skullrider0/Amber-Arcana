@@ -3,8 +3,8 @@
 	id: "76EC4F6922B5CFF9",
 	filename: "endgame",
 	title: "A World Worth Building",
-	order_index: 24,
-	group: "",
+	order_index: 1,
+	group: "5A29000000000009"
 	quests: [
 		{
 			icon: "minecraft:hay_block"

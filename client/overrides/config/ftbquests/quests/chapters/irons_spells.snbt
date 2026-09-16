@@ -3,8 +3,8 @@
 	id: "303C0D3F1478FB5C",
 	filename: "irons_spells",
 	title: "Iron Spells and Wizardry",
-	order_index: 18,
-	group: "",
+	order_index: 1,
+	group: "5A29000000000005"
 	quests: [
 		{
 			icon: "irons_spellbooks:iron_spell_book"

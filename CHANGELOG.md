@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.9-29 — Mechanics-based quest organization
+
+- Reorganize all 26 FTB Quests chapters into stable mechanic-based chapter groups.
+- Put Create Engineering/Workshops/City, Mekanism, Ender IO and Powah under Machines & Production.
+- Put Applied Energistics 2 and Refined Storage under Storage & Networks.
+- Put Productive Bees and resource/food-production content under Resources & Farming, reserving order index 1 for a future Mystical Agriculture chapter.
+- Separate magic, exploration/creatures, settlements, tools/combat, and collection/endgame content into their own groups.
+- Preserve every existing chapter, quest, task and reward ID; this is navigation/order only.
+  - Start Here: 1 chapter(s)
+  - Machines & Production: 6 chapter(s)
+  - Storage & Networks: 2 chapter(s)
+  - Resources & Farming: 3 chapter(s)
+  - Magic & Rituals: 3 chapter(s)
+  - Exploration & Creatures: 5 chapter(s)
+  - Building & Settlements: 1 chapter(s)
+  - Tools, Combat & Equipment: 3 chapter(s)
+  - Collections & Endgame: 2 chapter(s)
+
 ## 0.1.9-28 — Create progression tree
 
 - Expand Create Engineering from 6 quests to 41 machine and setup milestones.

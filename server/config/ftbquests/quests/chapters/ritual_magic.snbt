@@ -3,8 +3,8 @@
 	id: "043ED5D2BC9679C5",
 	filename: "ritual_magic",
 	title: "Rituals and Witchcraft",
-	order_index: 19,
-	group: "",
+	order_index: 2,
+	group: "5A29000000000005"
 	quests: [
 		{
 			icon: "minecraft:book"

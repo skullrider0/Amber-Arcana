@@ -3,8 +3,8 @@
 	id: "49F444D8188D9792",
 	filename: "refined_storage",
 	title: "Refined Storage",
-	order_index: 13,
-	group: "",
+	order_index: 1,
+	group: "5A29000000000003"
 	quests: [
 		{
 			icon: "refinedstorage:controller"
