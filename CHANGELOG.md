@@ -1,3 +1,9 @@
+## 0.1.9-43
+
+- Add Create: Easy Stone Generators 1.0.0 (Forge 1.20.1) to both sides, with SHA-512-pinned server download.
+- Keep Create 6.0.8, bee recipes, quests, JEI and patched More Hitboxes unchanged.
+- Publish matching client/server archives and a checksummed stopped-server update command.
+
 ## 0.1.9-42
 
 - Add Ferricore, Blazegold, Celestigem, Eclipse Alloy and Time Crystal bee definitions and 15 Forge 1.20.1 recipes.

@@ -9,7 +9,8 @@ from unittest.mock import patch
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-spec=importlib.util.spec_from_file_location('updater',ROOT/'scripts/update-crafty-0.1.9-42.py')
+VERSION=json.loads((ROOT/'client/manifest.json').read_text())['version']
+spec=importlib.util.spec_from_file_location('updater',ROOT/f'scripts/update-crafty-{VERSION}.py')
 u=importlib.util.module_from_spec(spec);spec.loader.exec_module(u)
 
 class UpdaterTests(unittest.TestCase):
@@ -19,7 +20,7 @@ class UpdaterTests(unittest.TestCase):
         (self.root/'_crafty').mkdir();(self.root/'_crafty/server-mods.tsv').write_text('old manifest')
         (self.root/'server.properties').write_text('level-name=world\n')
         (self.root/'world').mkdir();(self.root/'world/level.dat').write_bytes(b'WORLD SENTINEL')
-        self.blob=(ROOT/'dist/Amber-and-Arcana-0.1.9-42-Crafty-Update-Overlay.zip').read_bytes()
+        self.blob=(ROOT/f'dist/Amber-and-Arcana-{VERSION}-Crafty-Update-Overlay.zip').read_bytes()
     def test_apply_and_backup_without_world_changes(self):
         u.install(self.blob,self.root)
         backups=list((self.root/'_amber_updates').iterdir());self.assertEqual(len(backups),1)

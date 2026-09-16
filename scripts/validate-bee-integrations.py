@@ -7,7 +7,7 @@ import zipfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='0.1.9-42'
+VERSION=json.loads((ROOT/'client/manifest.json').read_text())['version']
 SPECIES={'ferricore','blazegold','celestigem','eclipsealloy','time_crystal'}
 
 def load_module(name,path):
@@ -71,7 +71,7 @@ def main():
     for project,fileid in [(1533501,8733229),(223565,6793843),(377897,5566102)]:
         assert pins[project]==fileid
     assert not ({1108467,1297089}&pins.keys()),'Incompatible requested mods must not be inserted'
-    installer=load_module('installer',ROOT/'scripts/update-crafty-0.1.9-42.py')
+    installer=load_module('installer',ROOT/f'scripts/update-crafty-{VERSION}.py')
     with zipfile.ZipFile(ROOT/f'dist/Amber-and-Arcana-{VERSION}-Crafty-Update-Overlay.zip') as update, zipfile.ZipFile(ROOT/f'dist/Amber-and-Arcana-{VERSION}-Client.zip') as clientzip, zipfile.ZipFile(ROOT/f'dist/Amber-and-Arcana-{VERSION}-Server.zip') as serverzip:
         installer.checked_members(update,server)
         for p in data.rglob('*.json'):

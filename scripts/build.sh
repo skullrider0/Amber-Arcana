@@ -54,6 +54,8 @@ fi
 
 python3 "$repo_dir/scripts/hotfix-bee-integrations-0.1.9-42.py"
 
+python3 "$repo_dir/scripts/hotfix-stone-generators-0.1.9-43.py"
+
 bash "$repo_dir/scripts/build-launcher.sh"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
