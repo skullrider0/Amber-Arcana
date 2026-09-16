@@ -2,9 +2,17 @@
 set -euo pipefail
 
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 dist_dir="$repo_dir/dist"
 patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
+
+# 0.1.9-30 is assembled from small source parts in the same style as the older
+# quest24 generator. Running it here keeps the existing historical workflow
+# replay intact while ensuring every normal build receives the latest quest UX.
+cat "$repo_dir"/scripts/quest30-parts/*.part > "$repo_dir/scripts/hotfix-quest-ux-0.1.9-30.py"
+python3 "$repo_dir/scripts/hotfix-quest-ux-0.1.9-30.py"
+python3 "$repo_dir/scripts/normalize-validation-0.1.9-30.py"
+
+version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
 "$repo_dir/scripts/generate-recipe-compat.sh"
 
