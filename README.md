@@ -16,7 +16,7 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 | Java | 17 |
 | Client manifest entries | 276 + 1 local patched JAR |
 | Server managed mod entries | 257 |
-| Manual quests | 106 across 25 chapters |
+| Quests | 106 across 25 chapters |
 
 Release 0.1.9-25 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
 
@@ -53,11 +53,10 @@ Stop the server and extract `dist/Amber-and-Arcana-0.1.9-25-Crafty-Update-Overla
 - `_crafty/remove-mods.txt`
 - `mods/morehitboxes-forge-1.20.1-1.9.2.1.jar`
 - `config/ftbquests/quests/` (the synchronized 0.1.9-25 quest book)
-- `config/ftbquests/quests/` (the synchronized 0.1.9-25 quest book)
 
-It does **not** contain or overwrite the world. In 0.1.9-25 the overlay also updates the FTB Quests configuration so existing Crafty servers receive the repaired quest book. In 0.1.9-24 the overlay also updates the FTB Quests configuration so existing Crafty servers receive the repaired quest book. On the next start Crafty removes the old stock `morehitboxes-forge-1.20.1-1.9.2.jar` and validates the patched JAR instead of redownloading the original.
+It does **not** contain or overwrite the world. In 0.1.9-25 the overlay also updates the FTB Quests configuration so existing Crafty servers receive the repaired quest book. On the next start Crafty removes the old stock `morehitboxes-forge-1.20.1-1.9.2.jar` and validates the patched JAR instead of redownloading the original.
 
-The historical `Crafty-JEI-Overlay.zip` filename is also rebuilt as a compatibility alias to the same 0.1.9-24 update overlay.
+The historical `Crafty-JEI-Overlay.zip` filename is also rebuilt as a compatibility alias to the same 0.1.9-25 update overlay.
 
 ## Quest runtime status — 2026-09-15
 
