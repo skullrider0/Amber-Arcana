@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9-28 — Create progression tree
+
+- Expand Create Engineering from 6 quests to 41 machine and setup milestones.
+- Pin validation to Create 1.20.1-6.0.8 / upstream commit `1a1a9a2819b4f89f78caec41b55ed8cb222fa24b`.
+- Guide progression through kinetics, processing, fluids, contraptions, brass, precision assembly, logistics, steam power, schematics, and trains.
+- Preserve the six historical Create quest IDs and their task/reward IDs so existing progression is not discarded.
+- Keep concrete machine milestones inventory-detected and retain the Create Wheel of Fortune finale.
+- Keep client and dedicated-server quest trees byte-identical.
+
 ## 0.1.9-27 — Productive Bees progression tree
 
 - Add a Productive Bees quest chapter generated from the exact 1.20.1-12.6.0 upstream breeding and conversion data.

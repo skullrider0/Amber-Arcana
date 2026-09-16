@@ -2,7 +2,7 @@
   "mod_files": 276,
   "shader_files": 1,
   "chapters": 26,
-  "manual_quests": 193,
+  "manual_quests": 228,
   "curseforge_schema_checked": true,
   "jars_readable": true,
   "missing_declared_required_mods": [],
@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-27",
+  "pack_version": "0.1.9-28",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -194,5 +194,20 @@
     "total_finale_loot_rewards": 26,
     "client_server_quest_files_identical": true,
     "historical_ids_preserved": true
+  },
+  "create_progression_0_1_9_28": {
+    "create_version": "1.20.1-6.0.8",
+    "upstream_commit": "1a1a9a2819b4f89f78caec41b55ed8cb222fa24b",
+    "quests": 41,
+    "new_quests": 35,
+    "preserved_anchor_quests": 6,
+    "milestone_item_tasks": 72,
+    "required_dependency_edges": 72,
+    "validated_create_item_ids": 71,
+    "total_chapters": 26,
+    "total_reward_tables": 31,
+    "total_finale_loot_rewards": 26,
+    "historical_create_quest_ids_preserved": true,
+    "client_server_quest_files_identical": true
   }
 }

@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-27",
+  "pack_version": "0.1.9-28",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -249,6 +249,19 @@
     "active_routes_screened": 52,
     "active_configurable_bee_definitions": 93,
     "master_apiarist_wheel": true,
+    "client_server_quest_files_identical": true
+  },
+  "create_progression_0_1_9_28": {
+    "enabled": true,
+    "create_version": "1.20.1-6.0.8",
+    "upstream_commit": "1a1a9a2819b4f89f78caec41b55ed8cb222fa24b",
+    "quests": 41,
+    "new_quests": 35,
+    "preserved_anchor_quests": 6,
+    "milestone_item_tasks": 72,
+    "required_dependency_edges": 72,
+    "validated_create_item_ids": 71,
+    "historical_create_quest_ids_preserved": true,
     "client_server_quest_files_identical": true
   }
 }

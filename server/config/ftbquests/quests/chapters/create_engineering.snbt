@@ -6,302 +6,1609 @@
 	icon: "create:mechanical_press"
 	id: "0C5565DC7663F603"
 	order_index: 10
-	quest_links: [ ]
+	quest_links: []
 	quests: [
 		{
-			dependencies: ["5DF5A47BBDCD9172"]
+			dependencies: [
+				"5DF5A47BBDCD9172"
+			]
 			description: [
-				"&6Turn motion into useful work.&r"
-				""
-				"Build a Water Wheel or Windmill Bearing, then carry its rotation through shafts and cogwheels to a Mechanical Press."
-				""
-				"Use Create's Ponder scenes to inspect unfamiliar blocks. Wear Engineer's Goggles and watch the stress readout before adding more machines."
-				""
-				"Tick the checkmark after the press completes its first operation."
+				"Make Andesite Alloy, the foundation material for early Create machines."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:andesite_alloy"
+			id: "608BC3FA0634EC69"
+			rewards: [
+			{
+				id: "3F8C79410DBD6DB1"
+				type: "xp"
+				xp: 40
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "0A485B9A05153493"
+				item: "create:andesite_alloy"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Andesite Alloy"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"608BC3FA0634EC69"
+			]
+			description: [
+				"Craft Engineer's Goggles and a Wrench so you can inspect stress and reconfigure machines."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:goggles"
+			id: "2FBD653159D95FCE"
+			rewards: [
+			{
+				id: "363668970FCD2328"
+				type: "xp"
+				xp: 40
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "33C07B3D71199178"
+				item: "create:goggles"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "306BC3A24EFA2588"
+				item: "create:wrench"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Engineer's Tools"
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"608BC3FA0634EC69"
+			]
+			description: [
+				"Make Andesite Casing. Many first-tier kinetic machines build on this casing."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:andesite_casing"
+			id: "3A29EDDDBF83025C"
+			rewards: [
+			{
+				id: "017C37550C3FF9B8"
+				type: "xp"
+				xp: 40
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "481FF705AC742138"
+				item: "create:andesite_casing"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Andesite Casing"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"608BC3FA0634EC69"
+			]
+			description: [
+				"Build shafts and both cogwheel sizes so rotation can be routed and geared."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:shaft"
+			id: "610EA78EE7E7870A"
+			rewards: [
+			{
+				id: "096B65EA0A979A37"
+				type: "xp"
+				xp: 50
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
+			tasks: [
+			{
+				id: "3B7A4663FD5164A5"
+				item: "create:shaft"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "660B89938EE0F000"
+				item: "create:cogwheel"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "49CE0C3459A6A8F1"
+				item: "create:large_cogwheel"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Shafts & Gears"
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"610EA78EE7E7870A"
+				"2FBD653159D95FCE"
+			]
+			description: [
+				"Add direction control, disconnects, and gauges before expanding the workshop."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:gearbox"
+			id: "00A9D35C4D91E590"
+			rewards: [
+			{
+				id: "5D623B2B36E6DA8C"
+				type: "xp"
+				xp: 75
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 5 required milestone items"
+			tasks: [
+			{
+				id: "3D5E7F3938140F58"
+				item: "create:gearbox"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "21254E2FAD5AB432"
+				item: "create:clutch"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "2707C5E7B2C66271"
+				item: "create:gearshift"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "41C7E7D57E84B63A"
+				item: "create:stressometer"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "0383BAFA06D95C30"
+				item: "create:speedometer"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Control the Rotation"
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"3A29EDDDBF83025C"
+				"610EA78EE7E7870A"
+			]
+			description: [
+				"Build renewable rotational power and prove it by running a Mechanical Press."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
 			]
 			icon: "create:water_wheel"
 			id: "1ED63F4805934997"
 			rewards: [
-				{
-					count: 8
-					id: "4CF5E9DE1697B136"
-					item: "create:andesite_alloy"
-					type: "item"
-				}
-				{
-					id: "46F12E8E436F654A"
-					type: "xp"
-					xp: 100
-				}
+			{
+				count: 8
+				id: "4CF5E9DE1697B136"
+				item: "create:andesite_alloy"
+				type: "item"
+			}
+			{
+				id: "46F12E8E436F654A"
+				type: "xp"
+				xp: 100
+			}
 			]
 			shape: "hexagon"
-			size: 1.15d
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
 			tasks: [
-				{
-					id: "F72E447E49B9B1A4"
-					item: "create:water_wheel"
-					consume_items: false
-					title: "Obtain: Water Wheel"
-					type: "item"
-				}
-				{
-					id: "DB32483F0ECA7267"
-					item: "create:mechanical_press"
-					consume_items: false
-					title: "Obtain: Mechanical Press"
-					type: "item"
-				}
-				{
-					id: "17597223D8AA140A"
-					title: "Completed milestone: First rotation"
-					optional_task: true
-					type: "checkmark"
-				}
+			{
+				id: "F72E447E49B9B1A4"
+				item: "create:water_wheel"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "DB32483F0ECA7267"
+				item: "create:mechanical_press"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "17597223D8AA140A"
+				optional_task: true
+				type: "checkmark"
+			}
 			]
-			subtitle: "Requires Water Wheel + Mechanical Press; completion is detected automatically."
-			title: "First rotation"
+			title: "First Rotation"
 			x: 0.0d
-			y: 0.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1ED63F4805934997"]
+			dependencies: [
+				"1ED63F4805934997"
+			]
 			description: [
-				"Connect a belt-fed line that performs at least two operations: washing, pressing, mixing, compacting, or bulk smelting."
-				""
-				"Place an input chest and an output buffer. Add funnels or filters so unfinished materials cannot loop back into the wrong machine."
-				""
-				"Run a full stack through the line, then tick the checkmark."
+				"Add a Millstone for early crushing and material preparation."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:millstone"
+			id: "19FBA30AA6630E79"
+			rewards: [
+			{
+				id: "417ADC6488398362"
+				type: "xp"
+				xp: 60
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "49F30BE390520E4C"
+				item: "create:millstone"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Milling"
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"1ED63F4805934997"
+			]
+			description: [
+				"Build a Mechanical Mixer over a Basin. This setup later becomes essential for heated alloy recipes."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:mechanical_mixer"
+			id: "770C779E7B0F237E"
+			rewards: [
+			{
+				id: "175E8AC5167C9C2E"
+				type: "xp"
+				xp: 75
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "51C6F9734E672584"
+				item: "create:mechanical_mixer"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "7E6C612E2F6925A2"
+				item: "create:basin"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Mixing & Basins"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"1ED63F4805934997"
+			]
+			description: [
+				"Build an Encased Fan and learn washing, smoking, blasting, and bulk processing."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:encased_fan"
+			id: "595195FF6989BEE6"
+			rewards: [
+			{
+				id: "29221189A7BAF754"
+				type: "xp"
+				xp: 60
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "4FA736BD44651B5F"
+				item: "create:encased_fan"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Bulk Processing"
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"1ED63F4805934997"
+				"595195FF6989BEE6"
+			]
+			description: [
+				"Build a belt, depot, and funnel line so items can move through multiple machines automatically."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
 			]
 			icon: "create:belt_connector"
 			id: "49A0DF8BF8B13288"
 			rewards: [
-				{
-					count: 12
-					id: "09EE1EC0A7BD54FA"
-					item: "minecraft:iron_ingot"
-					type: "item"
-				}
-				{
-					id: "3D5BF33CC799EF27"
-					type: "xp"
-					xp: 150
-				}
+			{
+				count: 12
+				id: "09EE1EC0A7BD54FA"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}
+			{
+				id: "3D5BF33CC799EF27"
+				type: "xp"
+				xp: 150
+			}
 			]
 			shape: "hexagon"
-			size: 1.15d
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
 			tasks: [
-				{
-					id: "60EBB3EBF4534609"
-					item: "create:belt_connector"
-					consume_items: false
-					title: "Obtain: Mechanical Belt Connector"
-					type: "item"
-				}
-				{
-					id: "0DFA213F45F74EFE"
-					title: "Completed milestone: A processing line"
-					optional_task: true
-					type: "checkmark"
-				}
+			{
+				id: "60EBB3EBF4534609"
+				item: "create:belt_connector"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "43C7627F2FBC9562"
+				item: "create:depot"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "57EC872B228E8C8C"
+				item: "create:andesite_funnel"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "0DFA213F45F74EFE"
+				optional_task: true
+				type: "checkmark"
+			}
 			]
-			subtitle: "Requires Mechanical Belt Connector; completion is detected automatically."
-			title: "A processing line"
-			x: 3.0d
-			y: 0.0d
+			title: "A Processing Line"
+			x: 4.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["49A0DF8BF8B13288"]
+			dependencies: [
+				"1ED63F4805934997"
+				"3A29EDDDBF83025C"
+			]
 			description: [
-				"Build a sequenced assembly line for Precision Mechanisms and power a Deployer from the same workshop."
-				""
-				"Use JEI to confirm every assembly step. Give the incomplete mechanism a return path, but stop the belt when its output storage is full."
-				""
-				"Successfully produce several mechanisms before claiming the reward."
+				"Add Mechanical Saws and Drills for automated cutting, mining, and contraption work."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:mechanical_saw"
+			id: "4FFE8F8DE3727308"
+			rewards: [
+			{
+				id: "37BB2D0DFCE4E2AC"
+				type: "xp"
+				xp: 75
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "7FE6E9F95DF55F5C"
+				item: "create:mechanical_saw"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "1AFB46A47315C24C"
+				item: "create:mechanical_drill"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Cutting & Drilling"
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"3A29EDDDBF83025C"
+				"1ED63F4805934997"
+			]
+			description: [
+				"Build fluid pipes and a Mechanical Pump. Fluids become a second automation network alongside belts."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:fluid_pipe"
+			id: "00D86AC29BA3ACE1"
+			rewards: [
+			{
+				id: "158A9F9C22E60BB6"
+				type: "xp"
+				xp: 75
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "189C0D9E899869B5"
+				item: "create:fluid_pipe"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "64D96CBE21C09D2A"
+				item: "create:mechanical_pump"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Pipes & Pumps"
+			x: 9.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00D86AC29BA3ACE1"
+			]
+			description: [
+				"Build Fluid Tanks and Copper Casing for reliable fluid buffering and later steam systems."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:fluid_tank"
+			id: "1072269CE5C9CEC2"
+			rewards: [
+			{
+				id: "2F413B569281DDD0"
+				type: "xp"
+				xp: 75
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "1225B0298E4517F3"
+				item: "create:fluid_tank"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "3ADCF672862A4B88"
+				item: "create:copper_casing"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Fluid Storage"
+			x: 9.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"1072269CE5C9CEC2"
+				"49A0DF8BF8B13288"
+			]
+			description: [
+				"Use an Item Drain and Spout to move fluids between items, tanks, and production lines."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:item_drain"
+			id: "69DB67E9CDE38925"
+			rewards: [
+			{
+				id: "7ABC6B07C91A1DBB"
+				type: "xp"
+				xp: 90
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "5E6C0F112AFC4CE6"
+				item: "create:item_drain"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "326043536BCF6EB5"
+				item: "create:spout"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Drain & Spout"
+			x: 9.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"1072269CE5C9CEC2"
+			]
+			description: [
+				"Build a Hose Pulley for large-scale fluid intake and bottomless-source setups."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:hose_pulley"
+			id: "5376456F8A4015FF"
+			rewards: [
+			{
+				id: "281E3B04589A60FE"
+				type: "xp"
+				xp: 75
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "70FE8FEC0DA67BE7"
+				item: "create:hose_pulley"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Hose Pulley"
+			x: 13.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"4FFE8F8DE3727308"
+				"610EA78EE7E7870A"
+			]
+			description: [
+				"Build pistons, bearings, and Super Glue so structures can become controlled contraptions."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:mechanical_piston"
+			id: "1A4FD9AEBC1D9757"
+			rewards: [
+			{
+				id: "3738D41283AF0FAB"
+				type: "xp"
+				xp: 100
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
+			tasks: [
+			{
+				id: "7C6421ACC346493F"
+				item: "create:mechanical_piston"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "65313D96AD64739F"
+				item: "create:mechanical_bearing"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "6F23C091295B2970"
+				item: "create:super_glue"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Moving Contraptions"
+			x: -10.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"1A4FD9AEBC1D9757"
+			]
+			description: [
+				"Add Rope Pulleys and Gantries for elevators, traversing platforms, and precise linear motion."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:rope_pulley"
+			id: "6981B2DD5FA8DE25"
+			rewards: [
+			{
+				id: "7CD707C5D6FFB956"
+				type: "xp"
+				xp: 100
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
+			tasks: [
+			{
+				id: "5C904194364611CC"
+				item: "create:rope_pulley"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "6AA6EB7A30CD6F5B"
+				item: "create:gantry_shaft"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "6B077890D39B43CF"
+				item: "create:gantry_carriage"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Pulleys & Gantries"
+			x: -10.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"6981B2DD5FA8DE25"
+				"49A0DF8BF8B13288"
+			]
+			description: [
+				"Give moving contraptions safe item transfer, docking detection, and onboard controls."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:portable_storage_interface"
+			id: "6D024877BCAF46C6"
+			rewards: [
+			{
+				id: "4151D2D056A368FD"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
+			tasks: [
+			{
+				id: "756FB75E9443EEFA"
+				item: "create:portable_storage_interface"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "60C4ED05CFF4CE63"
+				item: "create:redstone_contact"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "25269B391C86611B"
+				item: "create:contraption_controls"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Contraption I/O"
+			x: -10.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"1ED63F4805934997"
+			]
+			description: [
+				"Produce Polished Rose Quartz and Electron Tubes to open the redstone and brass-era control tier."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:polished_rose_quartz"
+			id: "0BD9FD8ABD2A9892"
+			rewards: [
+			{
+				id: "7AC2AF6D2204D3B6"
+				type: "xp"
+				xp: 75
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "7C16125569AF72B7"
+				item: "create:polished_rose_quartz"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "0FF291F02A117721"
+				item: "create:electron_tube"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Electron Tubes"
+			x: 4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"770C779E7B0F237E"
+			]
+			description: [
+				"Capture a Blaze in an empty burner and place it beneath the Basin for heated mixing."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:blaze_burner"
+			id: "3F2D4E15AD18B1D9"
+			rewards: [
+			{
+				id: "4DB860A5207929F9"
+				type: "xp"
+				xp: 100
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "7D20495337C3831D"
+				item: "create:blaze_burner"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Blaze Burner"
+			x: -1.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"770C779E7B0F237E"
+				"3F2D4E15AD18B1D9"
+			]
+			description: [
+				"Heat a Basin and mix Copper with Zinc to make Brass, unlocking advanced automation."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:brass_ingot"
+			id: "218CB2C4A4033742"
+			rewards: [
+			{
+				id: "641C5F9FDC75B5F8"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "1746C66E0DB2C88B"
+				item: "create:brass_ingot"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Enter the Brass Age"
+			x: -1.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"218CB2C4A4033742"
+			]
+			description: [
+				"Make Brass Casing for advanced logistics and automation machines."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:brass_casing"
+			id: "34BBF086E9BF3249"
+			rewards: [
+			{
+				id: "0347A6061BF745D7"
+				type: "xp"
+				xp: 100
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "5CD71538C4810F9F"
+				item: "create:brass_casing"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Brass Casing"
+			x: -1.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"34BBF086E9BF3249"
+				"0BD9FD8ABD2A9892"
+				"49A0DF8BF8B13288"
+			]
+			description: [
+				"Build Brass Funnels, Brass Tunnels, and Smart Chutes for filtered routing and controlled extraction."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:brass_funnel"
+			id: "12CE2A569C691122"
+			rewards: [
+			{
+				id: "791F7A9B71543BA9"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
+			tasks: [
+			{
+				id: "6D4F115864693ED8"
+				item: "create:brass_funnel"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "7DA1F4FBDC6EA79D"
+				item: "create:brass_tunnel"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "1631599785F422C6"
+				item: "create:smart_chute"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Brass Logistics"
+			x: 4.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"34BBF086E9BF3249"
+				"0BD9FD8ABD2A9892"
+				"49A0DF8BF8B13288"
+			]
+			description: [
+				"Build a Deployer. It applies items during sequenced assembly."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:deployer"
+			id: "3D2FFBF87CC326AB"
+			rewards: [
+			{
+				id: "7C9B062D5220767A"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "6AB1F213CEA4CA3D"
+				item: "create:deployer"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Deployer"
+			x: -1.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"3D2FFBF87CC326AB"
+				"49A0DF8BF8B13288"
+				"1ED63F4805934997"
+			]
+			description: [
+				"Complete a sequenced assembly loop and produce a Precision Mechanism."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
 			]
 			icon: "create:precision_mechanism"
 			id: "2B415B8CDDC3ACFF"
 			rewards: [
-				{
-					count: 6
-					id: "7F94B72F2CF7FCC2"
-					item: "create:brass_ingot"
-					type: "item"
-				}
-				{
-					id: "02B62428010B71D8"
-					type: "xp"
-					xp: 200
-				}
+			{
+				count: 6
+				id: "7F94B72F2CF7FCC2"
+				item: "create:brass_ingot"
+				type: "item"
+			}
+			{
+				id: "02B62428010B71D8"
+				type: "xp"
+				xp: 200
+			}
 			]
 			shape: "hexagon"
-			size: 1.15d
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
 			tasks: [
-				{
-					id: "C0ACA01B4C80BBE4"
-					item: "create:precision_mechanism"
-					consume_items: false
-					title: "Obtain: Precision Mechanism"
-					type: "item"
-				}
-				{
-					id: "5330479A28BDAE3F"
-					title: "Completed milestone: Precision mechanisms"
-					optional_task: true
-					type: "checkmark"
-				}
+			{
+				id: "C0ACA01B4C80BBE4"
+				item: "create:precision_mechanism"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "5330479A28BDAE3F"
+				optional_task: true
+				type: "checkmark"
+			}
 			]
-			subtitle: "Requires Precision Mechanism; completion is detected automatically."
-			title: "Precision mechanisms"
-			x: 6.0d
-			y: 0.0d
+			title: "Precision Mechanisms"
+			x: -1.0d
+			y: 18.0d
 		}
 		{
-			dependencies: ["2B415B8CDDC3ACFF"]
+			dependencies: [
+				"2B415B8CDDC3ACFF"
+				"12CE2A569C691122"
+			]
 			description: [
-				"Build a small Steam Engine installation with a dependable water supply. Keep heat sources accessible and protect nearby wood, animals, and colony buildings."
-				""
-				"Add a clutch, gearshift, or another deliberate shutdown control before connecting the engine to your main network."
-				""
-				"Run it under load and confirm the water supply remains stable."
+				"Build a Mechanical Arm for programmable routing between depots, belts, and inventories."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:mechanical_arm"
+			id: "20AE3680C462C12B"
+			rewards: [
+			{
+				id: "447AAEE0D7DADA1A"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "4BFEE1F5D7C716A2"
+				item: "create:mechanical_arm"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Mechanical Arm"
+			x: 4.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"2B415B8CDDC3ACFF"
+				"0BD9FD8ABD2A9892"
+			]
+			description: [
+				"Build Mechanical Crafters for recipes larger than the vanilla 3x3 crafting grid."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:mechanical_crafter"
+			id: "361E63B76C700DAB"
+			rewards: [
+			{
+				id: "1445C8A0847861BC"
+				type: "xp"
+				xp: 150
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "4D59D72C21887A84"
+				item: "create:mechanical_crafter"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Mechanical Crafter"
+			x: 8.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"361E63B76C700DAB"
+			]
+			description: [
+				"Use Mechanical Crafters to make Crushing Wheels and unlock heavy crushing recipes."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:crushing_wheel"
+			id: "1C9DEF3B834DD4FA"
+			rewards: [
+			{
+				id: "2103E4EE59EEECB2"
+				type: "xp"
+				xp: 150
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "145043148BAE93FE"
+				item: "create:crushing_wheel"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Crushing Wheels"
+			x: 8.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"1C9DEF3B834DD4FA"
+				"1ED63F4805934997"
+			]
+			description: [
+				"Refine obsidian into Sturdy Sheets, a gateway material for railway infrastructure."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:sturdy_sheet"
+			id: "0DB51B42E51225C2"
+			rewards: [
+			{
+				id: "43BAC5A9D6185E5B"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "78024738E84FBA67"
+				item: "create:sturdy_sheet"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Sturdy Sheets"
+			x: 8.0d
+			y: 22.0d
+		}
+		{
+			dependencies: [
+				"0BD9FD8ABD2A9892"
+				"34BBF086E9BF3249"
+			]
+			description: [
+				"Add wireless redstone links and inventory sensors so the factory can react to its own state."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:redstone_link"
+			id: "7CFD5CC7EA5F966A"
+			rewards: [
+			{
+				id: "51C2B3BDAA263B8E"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
+			tasks: [
+			{
+				id: "1662F1C6E7D5EF7D"
+				item: "create:redstone_link"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "493F43AF41385E16"
+				item: "create:content_observer"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "19D5AABFCCCE824F"
+				item: "create:threshold_switch"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Factory Signals"
+			x: 13.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"7CFD5CC7EA5F966A"
+				"12CE2A569C691122"
+			]
+			description: [
+				"Package inventory requests and route addressed packages through a Frogport."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:packager"
+			id: "466CBEE02DF382A0"
+			rewards: [
+			{
+				id: "320392310058FBE7"
+				type: "xp"
+				xp: 150
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "3F7F923843157427"
+				item: "create:packager"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "3FC0DCF00EA271D7"
+				item: "create:package_frogport"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Packaging Logistics"
+			x: 13.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"466CBEE02DF382A0"
+			]
+			description: [
+				"Add a Re-Packager so multi-package orders can be recombined before delivery."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:repackager"
+			id: "756FF78F1E96E06C"
+			rewards: [
+			{
+				id: "19B40224E351A6BF"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "37FE0C33D93FD266"
+				item: "create:repackager"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Repackaging"
+			x: 13.0d
+			y: 22.0d
+		}
+		{
+			dependencies: [
+				"756FF78F1E96E06C"
+				"20AE3680C462C12B"
+			]
+			description: [
+				"Build a Stock Link, Stock Ticker, and Factory Gauge to turn storage into a requestable logistics network."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:stock_link"
+			id: "798F3CA8756AA484"
+			rewards: [
+			{
+				id: "5686520E6F4F3861"
+				type: "xp"
+				xp: 200
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 3 required milestone items"
+			tasks: [
+			{
+				id: "392DC0021A184A5A"
+				item: "create:stock_link"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "12592080B94D4A1F"
+				item: "create:stock_ticker"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "2B3BFB379C34B767"
+				item: "create:factory_gauge"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Stock Network"
+			x: 13.0d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"2B415B8CDDC3ACFF"
+			]
+			description: [
+				"Capture a build with the Schematic and Quill, then let a Schematicannon reproduce it from supplied materials."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:schematic_and_quill"
+			id: "3341B0A25D5F455B"
+			rewards: [
+			{
+				id: "79474739582E0B1A"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "4613B78994A4A3B3"
+				item: "create:schematic_and_quill"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "0BF986FCD1875571"
+				item: "create:schematicannon"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Schematics"
+			x: -11.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"1072269CE5C9CEC2"
+				"3F2D4E15AD18B1D9"
+				"34BBF086E9BF3249"
+			]
+			description: [
+				"Build a stable Steam Engine with continuous water, controllable heat, and an emergency disconnect."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
 			]
 			icon: "create:steam_engine"
 			id: "6A19120000000401"
 			rewards: [
-				{
-					count: 4
-					id: "682E10436449AE71"
-					item: "minecraft:copper_block"
-					type: "item"
-				}
-				{
-					id: "66FEA6BC6A22BF7D"
-					type: "xp"
-					xp: 250
-				}
+			{
+				count: 4
+				id: "682E10436449AE71"
+				item: "minecraft:copper_block"
+				type: "item"
+			}
+			{
+				id: "66FEA6BC6A22BF7D"
+				type: "xp"
+				xp: 250
+			}
 			]
 			shape: "hexagon"
-			size: 1.15d
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
 			tasks: [
-				{
-					id: "0B2726B1E2836F93"
-					item: "create:steam_engine"
-					consume_items: false
-					title: "Obtain: Steam Engine"
-					type: "item"
-				}
-				{
-					id: "6A19120000000402"
-					title: "Completed milestone: Steam under control"
-					optional_task: true
-					type: "checkmark"
-				}
+			{
+				id: "0B2726B1E2836F93"
+				item: "create:steam_engine"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "6A19120000000402"
+				optional_task: true
+				type: "checkmark"
+			}
 			]
-			subtitle: "Requires Steam Engine; completion is detected automatically."
-			title: "Steam under control"
-			x: 6.0d
-			y: 3.0d
+			title: "Steam Under Control"
+			x: -5.0d
+			y: 20.0d
 		}
 		{
-			dependencies: ["6A19120000000401"]
+			dependencies: [
+				"0DB51B42E51225C2"
+				"34BBF086E9BF3249"
+			]
 			description: [
-				"Build a railway between your base and a useful outpost. Place stations at both ends and give the train a working schedule."
-				""
-				"Use Steam 'n' Rails where it improves the route, but test signals and junctions with an empty train before carrying players or valuable cargo."
-				""
-				"Complete one automatic round trip, then tick the checkmark."
+				"Make Railway Casing, the advanced casing tier used by train infrastructure."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:railway_casing"
+			id: "539D5F23C0D545BB"
+			rewards: [
+			{
+				id: "0154C8A4B48C6C7F"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "330C9C71B4D70CA4"
+				item: "create:railway_casing"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Railway Casing"
+			x: 18.0d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"539D5F23C0D545BB"
+			]
+			description: [
+				"Craft Create Train Track and lay a usable route with room for stations and signaling."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:track"
+			id: "133516C48E9E7B2D"
+			rewards: [
+			{
+				id: "4C45585EAA6F35E3"
+				type: "xp"
+				xp: 125
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "4A3EC81D92E22E8A"
+				item: "create:track"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Train Track"
+			x: 18.0d
+			y: 26.0d
+		}
+		{
+			dependencies: [
+				"133516C48E9E7B2D"
+				"2B415B8CDDC3ACFF"
+			]
+			description: [
+				"Build a Track Station and assemble a train on the route."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
 			]
 			icon: "create:track_station"
 			id: "42BD2E092F753492"
 			rewards: [
-				{
-					count: 16
-					id: "65EA8FA9B022DFAF"
-					item: "minecraft:powered_rail"
-					type: "item"
-				}
-				{
-					id: "4BFDAFBF94A53AD6"
-					type: "xp"
-					xp: 300
-				}
+			{
+				count: 16
+				id: "65EA8FA9B022DFAF"
+				item: "minecraft:powered_rail"
+				type: "item"
+			}
+			{
+				id: "4BFDAFBF94A53AD6"
+				type: "xp"
+				xp: 300
+			}
 			]
 			shape: "hexagon"
-			size: 1.15d
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
 			tasks: [
-				{
-					id: "A32B4E720E7FE605"
-					item: "create:track_station"
-					consume_items: false
-					title: "Obtain: Track Station"
-					type: "item"
-				}
-				{
-					id: "266DB38DB0AF235D"
-					title: "Completed milestone: Rails and schedules"
-					optional_task: true
-					type: "checkmark"
-				}
+			{
+				id: "A32B4E720E7FE605"
+				item: "create:track_station"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "266DB38DB0AF235D"
+				optional_task: true
+				type: "checkmark"
+			}
 			]
-			subtitle: "Requires Track Station; completion is detected automatically."
-			title: "Rails and schedules"
-			x: 3.0d
-			y: 3.0d
+			title: "Rails & Stations"
+			x: 18.0d
+			y: 28.0d
 		}
 		{
-			dependencies: ["42BD2E092F753492"]
+			dependencies: [
+				"42BD2E092F753492"
+			]
 			description: [
-				"&6Bring the workshop together.&r"
-				""
-				"Connect one renewable input, a multi-step processing line, safe power, and organized output storage. Label emergency stops and leave maintenance access around moving parts."
-				""
-				"Let the factory run long enough to fill an output buffer. Confirm that full storage stops or diverts production without spilling items into the world."
-				""
-				"Tick the final checkmark when another player could understand and safely operate the system."
+				"Add Track Signals and Track Observers so multiple trains can share a network safely."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:track_signal"
+			id: "7646A43C2BA83B44"
+			rewards: [
+			{
+				id: "315022C40F7AD9C8"
+				type: "xp"
+				xp: 175
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 2 required milestone items"
+			tasks: [
+			{
+				id: "42E94A000FF6610A"
+				item: "create:track_signal"
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "00F8180B96AF6BD1"
+				item: "create:track_observer"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Signals & Observers"
+			x: 18.0d
+			y: 30.0d
+		}
+		{
+			dependencies: [
+				"7646A43C2BA83B44"
+			]
+			description: [
+				"Create a Train Schedule and complete an automatic trip between stations."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
+			]
+			icon: "create:schedule"
+			id: "3FEDFBEBCD18E0E9"
+			rewards: [
+			{
+				id: "2FE19546C202A5F2"
+				type: "xp"
+				xp: 175
+			}
+			]
+			shape: "hexagon"
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
+			tasks: [
+			{
+				id: "39B9309F495E5441"
+				item: "create:schedule"
+				consume_items: false
+				type: "item"
+			}
+			]
+			title: "Scheduled Trains"
+			x: 18.0d
+			y: 32.0d
+		}
+		{
+			dependencies: [
+				"798F3CA8756AA484"
+				"6D024877BCAF46C6"
+				"6A19120000000401"
+				"3FEDFBEBCD18E0E9"
+				"1C9DEF3B834DD4FA"
+				"69DB67E9CDE38925"
+				"3341B0A25D5F455B"
+			]
+			description: [
+				"Bring power, processing, fluids, contraptions, logistics, and rail automation into one maintainable factory."
+				"Progression is inventory-detected; dependencies show the setup that should be completed first."
 			]
 			icon: "create:brass_casing"
 			id: "6A19120000000601"
 			rewards: [
-				{
-					count: 2
-					id: "0F84366908588733"
-					item: "minecraft:diamond"
-					type: "item"
-				}
-				{
-					id: "38C4AF77A33A2944"
-					type: "xp"
-					xp: 400
-				}
-			
-				{
-					id: "3955EED61E5751FB"
-					table_id: 787970406010393259L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
+			{
+				count: 2
+				id: "0F84366908588733"
+				item: "minecraft:diamond"
+				type: "item"
+			}
+			{
+				id: "38C4AF77A33A2944"
+				type: "xp"
+				xp: 400
+			}
+			{
+				id: "3955EED61E5751FB"
+				table_id: 787970406010393259L
+				title: "Spin the Wheel of Fortune"
+				type: "loot"
+			}
 			]
 			shape: "hexagon"
-			size: 1.25d
+			size: 1.0d
+			subtitle: "Create progression — 1 required milestone item"
 			tasks: [
-				{
-					id: "BE6613FDD637ECF3"
-					item: "create:brass_casing"
-					count: 8L
-					consume_items: false
-					title: "Obtain: Brass Casings"
-					type: "item"
-				}
-				{
-					id: "6A19120000000602"
-					title: "Completed milestone: A reliable factory"
-					optional_task: true
-					type: "checkmark"
-				}
+			{
+				id: "BE6613FDD637ECF3"
+				item: "create:brass_casing"
+				count: 8L
+				consume_items: false
+				type: "item"
+			}
+			{
+				id: "6A19120000000602"
+				optional_task: true
+				type: "checkmark"
+			}
 			]
-			subtitle: "Requires Brass Casings; completion is detected automatically."
-			title: "A reliable factory"
-			x: 0.0d
-			y: 3.0d
+			title: "A Reliable Factory"
+			x: 3.0d
+			y: 34.0d
 		}
 	]
 	title: "Create Engineering"
