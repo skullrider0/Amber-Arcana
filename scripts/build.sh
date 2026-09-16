@@ -5,12 +5,18 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 dist_dir="$repo_dir/dist"
 patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
 
-# The repository stores the canonical current pack source. Historical quest
-# migrations (0.1.9-30 through 0.1.9-34) are already reflected in that source and
-# must not be replayed on every build, because doing so can flatten or regenerate
-# modern quest graphs. The current runner first repairs the known 0.1.9-34 loot
-# brace defect, then applies the idempotent 0.1.9-35 deep-progression transform.
-python3 "$repo_dir/scripts/run-hotfix-deep-short-progression-0.1.9-35.py"
+# The repository stores the canonical current pack source. 0.1.9-35 expanded
+# the formerly short chapters in-place. Only run that transformer for an older
+# source tree; re-running it on an already-expanded tree would try to move the
+# same finale wheels a second time.
+if ! grep -Fq 'AA35 deep progression milestone' \
+  "$repo_dir/client/overrides/config/ftbquests/quests/chapters/ae2.snbt"; then
+  python3 "$repo_dir/scripts/run-hotfix-deep-short-progression-0.1.9-35.py"
+fi
+
+# 0.1.9-36 adds the requested technology/content mods and missing libraries to
+# both the CurseForge client manifest and the Crafty server download manifest.
+python3 "$repo_dir/scripts/hotfix-tech-expansion-0.1.9-36.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
