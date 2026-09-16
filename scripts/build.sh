@@ -27,7 +27,7 @@ python3 "$repo_dir/scripts/hotfix-productive-bees-rewards-0.1.9-33.py"
 
 # 0.1.9-34 compresses richer 4-tier reward progression into every short quest
 # chapter so even three-to-ten-quest chains escalate meaningfully with depth.
-python3 "$repo_dir/scripts/hotfix-short-chain-rewards-0.1.9-34.py"
+python3 "$repo_dir/scripts/run-hotfix-short-chain-rewards-0.1.9-34.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
