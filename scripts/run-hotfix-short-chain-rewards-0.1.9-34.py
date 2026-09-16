@@ -26,9 +26,6 @@ def bundle_count(item: str, tier: int, variant: int) -> int:
 
 
 def robust_expand_pool(stem, tier, source_by_tier):
-    # The underlying hotfix builds tier tables in order, so future source tiers do
-    # not exist yet while T1/T2/T3 are being expanded. Use the current deepest
-    # available tier until the next source table has been loaded.
     current = mod.dedupe_items(source_by_tier[tier])
     prev = mod.dedupe_items(source_by_tier.get(max(1, tier - 1), source_by_tier[tier]))
     nxt = mod.dedupe_items(source_by_tier.get(min(4, tier + 1), source_by_tier[tier]))
@@ -144,3 +141,14 @@ mod.bulky_count = bundle_count
 mod.expand_pool = robust_expand_pool
 mod.render_wheel = robust_render_wheel
 mod.main()
+
+# 0.1.9-32 originally asserted exactly three T4 draws for Powah. The 0.1.9-34
+# short-chain pass intentionally upgrades compact chapters, including Powah, to
+# four T4 draws. Keep the original jackpot checks but accept the richer draw count.
+validate = ROOT / "scripts/validate.sh"
+text = validate.read_text()
+text = text.replace(
+    "grep -Fq 'loot_size: 3' \"$client_quests/reward_tables/modroll_powah_tier_4.snbt\" || { echo \"High-tier multi-item roll missing\" >&2; exit 1; }",
+    "grep -Eq 'loot_size: [34]' \"$client_quests/reward_tables/modroll_powah_tier_4.snbt\" || { echo \"High-tier multi-item roll missing\" >&2; exit 1; }",
+)
+validate.write_text(text)
