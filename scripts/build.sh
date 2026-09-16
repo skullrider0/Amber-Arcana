@@ -8,8 +8,9 @@ patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
 # The repository stores the canonical current pack source. Historical quest
 # migrations (0.1.9-30 through 0.1.9-34) are already reflected in that source and
 # must not be replayed on every build, because doing so can flatten or regenerate
-# modern quest graphs. Only the current idempotent release transformer runs here.
-python3 "$repo_dir/scripts/hotfix-deep-short-progression-0.1.9-35.py"
+# modern quest graphs. The current runner first repairs the known 0.1.9-34 loot
+# brace defect, then applies the idempotent 0.1.9-35 deep-progression transform.
+python3 "$repo_dir/scripts/run-hotfix-deep-short-progression-0.1.9-35.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
