@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#353647",
+  "secondaryColor": "#989cb5",
+  "flowerBlock": "justdirethings:eclipsealloy_block",
+  "selfbreed": false,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    }
+  ]
+}

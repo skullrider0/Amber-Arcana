@@ -24,3 +24,7 @@ server/.curseforge/
 .env.*
 *.key
 *.pem
+
+# Python build caches
+__pycache__/
+*.pyc

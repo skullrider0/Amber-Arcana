@@ -1,0 +1,41 @@
+{
+  "type": "productivebees:centrifuge",
+  "ingredient": {
+    "type": "forge:nbt",
+    "item": "productivebees:configurable_honeycomb",
+    "nbt": {
+      "EntityTag": {
+        "type": "productivebees:time_crystal"
+      }
+    }
+  },
+  "outputs": [
+    {
+      "item": {
+        "item": "justdirethings:time_crystal"
+      },
+      "chance": 10
+    },
+    {
+      "item": {
+        "item": "productivebees:wax"
+      }
+    },
+    {
+      "fluid": {
+        "fluid": "justdirethings:time_fluid"
+      },
+      "amount": 25
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:time_crystal"
+    }
+  ]
+}

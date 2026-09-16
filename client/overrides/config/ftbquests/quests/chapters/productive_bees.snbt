@@ -3530,6 +3530,187 @@
 			x: 10.75d
 			y: -1.75d
 		}
+		{
+			dependencies: [
+				"5B25A50D02B325FB"
+			]
+			description: ["Convert a Iron Bee with Just Dire Things Goo Block Tier 1. Pollinate the Ferricore Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "47E44A8F18917EDA"
+			rewards: [{ id: "4BA20CEAC532C407", type: "loot", table_id: 218928896428061217L, title: "Productive Bees Tier 1 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "6C086EC60C6C0BB9"
+				type: "item"
+				title: "Produce Ferricore Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:ferricore" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Ferricore Bee"
+			x: -6.0d
+			y: 12.75d
+		}
+		{
+			dependencies: [
+				"5BBC7594632E8376"
+			]
+			description: ["Convert a Gold Bee with Just Dire Things Goo Block Tier 2. Pollinate the Blazegold Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "2F06F75CB0A570CF"
+			rewards: [{ id: "0C099AFE902A4E43", type: "loot", table_id: 1670262659890598805L, title: "Productive Bees Tier 2 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "49B7885E05892793"
+				type: "item"
+				title: "Produce Blazegold Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:blazegold" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Blazegold Bee"
+			x: -3.0d
+			y: 12.75d
+		}
+		{
+			dependencies: [
+				"10417A69C94B12D1"
+			]
+			description: ["Convert a Diamond Bee with Just Dire Things Goo Block Tier 3. Pollinate the Celestigem Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "220A994D1B14600B"
+			rewards: [{ id: "5138373189299542", type: "loot", table_id: 552062804773480542L, title: "Productive Bees Tier 3 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "3636C0ED126CC337"
+				type: "item"
+				title: "Produce Celestigem Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:celestigem" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Celestigem Bee"
+			x: 0.0d
+			y: 12.75d
+		}
+		{
+			dependencies: [
+				"3DA90B121030AB0B"
+			]
+			description: ["Convert a Netherite Bee with Just Dire Things Goo Block Tier 4. Pollinate the Eclipse Alloy Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "53E937448B3357A0"
+			rewards: [{ id: "3935903A43820B5E", type: "loot", table_id: 5161076012058801558L, title: "Productive Bees Tier 4 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "5CFF901B297CE8E1"
+				type: "item"
+				title: "Produce Eclipse Alloy Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:eclipsealloy" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Eclipse Alloy Bee"
+			x: 3.0d
+			y: 12.75d
+		}
+		{
+			dependencies: [
+				"220A994D1B14600B"
+				"53E937448B3357A0"
+			]
+			description: ["Craft the Time Crystal Bee spawn egg in JEI using Celestigem, Eclipse Alloy, Sculk and Draconic bee eggs, Time Crystal Blocks and a Time Fluid Bucket. Pollinate a Time Crystal Block." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "3CA10B6DC618FB53"
+			rewards: [{ id: "1824C722A641F5B3", type: "loot", table_id: 5161076012058801558L, title: "Productive Bees Tier 4 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "20102E724423B4E9"
+				type: "item"
+				title: "Produce Time Crystal Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:time_crystal" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Time Crystal Bee"
+			x: 6.0d
+			y: 12.75d
+		}
+		{
+			dependencies: [
+				"7D5007A61260310D"
+			]
+			description: ["Attract a Draconic Bee into an Obsidian Nest in the End with Dragon Breath. Use an advanced hive or Dragon Egg Hive to obtain its comb. JEI shows the nest attraction recipe." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "4BE950EB0334DB1A"
+			rewards: [{ id: "2A25CFA9515082E3", type: "loot", table_id: 1670262659890598805L, title: "Productive Bees Tier 2 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "52D012CF0C88C3EA"
+				type: "item"
+				title: "Produce Draconic Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:draconic" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Draconic Bee"
+			x: -6.0d
+			y: 14.75d
+		}
+		{
+			dependencies: [
+				"4BE950EB0334DB1A"
+			]
+			description: ["Use Draconic Evolution Fusion Crafting to upgrade the previous bee spawn egg. Search the typed spawn egg in JEI: these are fusion recipes, not bee breeding recipes. Pollinate Draconium Blocks." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "004AF7A09DB0C41C"
+			rewards: [{ id: "4CA8F658FED716D4", type: "loot", table_id: 1670262659890598805L, title: "Productive Bees Tier 2 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "4BFA8FC8B4C838D1"
+				type: "item"
+				title: "Produce Draconium Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:draconium" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Draconium Bee"
+			x: -3.0d
+			y: 14.75d
+		}
+		{
+			dependencies: [
+				"004AF7A09DB0C41C"
+			]
+			description: ["Use Draconic Evolution Fusion Crafting to upgrade the previous bee spawn egg. Search the typed spawn egg in JEI: these are fusion recipes, not bee breeding recipes. Pollinate Awakened Draconium Blocks." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "582AE3D2DFB1C911"
+			rewards: [{ id: "6FED62E1E6F86846", type: "loot", table_id: 552062804773480542L, title: "Productive Bees Tier 3 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "03B030024DD91025"
+				type: "item"
+				title: "Produce Awakened Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:awakened" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Awakened Bee"
+			x: 0.0d
+			y: 14.75d
+		}
+		{
+			dependencies: [
+				"582AE3D2DFB1C911"
+			]
+			description: ["Use Draconic Evolution Fusion Crafting to upgrade the previous bee spawn egg. Search the typed spawn egg in JEI: these are fusion recipes, not bee breeding recipes. Supply a Chaos Shard as the flowering item." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
+			id: "701BBAF009D08482"
+			rewards: [{ id: "4026A6D40A188502", type: "loot", table_id: 5161076012058801558L, title: "Productive Bees Tier 4 Roll" }]
+			subtitle: "AA42 bee integrations"
+			tasks: [{
+				id: "22C9C07460144BE7"
+				type: "item"
+				title: "Produce Chaos Bee Honeycomb"
+				item: { Count: 1b, id: "productivebees:configurable_honeycomb", tag: { EntityTag: { type: "productivebees:chaos" } } }
+				match_nbt: true
+				weak_nbt_match: true
+			}]
+			title: "Chaos Bee"
+			x: 3.0d
+			y: 14.75d
+		}
 	]
 	title: "Productive Bees"
 }

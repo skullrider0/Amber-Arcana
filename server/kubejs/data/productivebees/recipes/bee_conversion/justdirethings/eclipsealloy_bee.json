@@ -1,0 +1,22 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:netherite",
+  "result": "productivebees:eclipsealloy",
+  "item": {
+    "item": "justdirethings:gooblock_tier4"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:netherite"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:eclipsealloy"
+    }
+  ]
+}

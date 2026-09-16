@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#1d8e92",
+  "secondaryColor": "#b0f3eb",
+  "flowerBlock": "justdirethings:celestigem_block",
+  "selfbreed": false,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    }
+  ]
+}

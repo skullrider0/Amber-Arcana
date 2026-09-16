@@ -4,19 +4,19 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[⬇️ Download Client 0.1.9-33](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-33-Client.zip) · [⬇️ Download Crafty Server 0.1.9-33](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-33-Server.zip) · [⬇️ Update an existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-33-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-42](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-42-Client.zip) · [Download Crafty Server 0.1.9-42](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-42-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-42-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-33 |
+| Pack | 0.1.9-42 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
-| Client manifest entries | 276 + 1 local patched JAR |
-| Server managed mod entries | 257 |
-| Quests | 106 across 25 chapters |
+| Client manifest entries | 290 + 1 local patched JAR |
+| Server managed mod entries | 270 |
+| Quests | 504 across 28 chapters |
 
 Release 0.1.9-25 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
 
@@ -38,26 +38,19 @@ The More Hitboxes patch changes only the expensive global `Level` entity-query b
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-33-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
+Import `dist/Amber-and-Arcana-0.1.9-42-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
 
 ### Fresh Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-33-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-42-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a complete server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 
 ### Existing Crafty server
 
-Stop the server and extract `dist/Amber-and-Arcana-0.1.9-33-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The overlay contains only:
+Stop the server and extract `dist/Amber-and-Arcana-0.1.9-42-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
 
-- `_crafty/server-mods.tsv`
-- `_crafty/remove-mods.txt`
-- `mods/morehitboxes-forge-1.20.1-1.9.2.1.jar`
-- `config/ftbquests/quests/` (the synchronized 0.1.9-25 quest book)
-
-It does **not** contain or overwrite the world. In 0.1.9-25 the overlay also updates the FTB Quests configuration so existing Crafty servers receive the repaired quest book. On the next start Crafty removes the old stock `morehitboxes-forge-1.20.1-1.9.2.jar` and validates the patched JAR instead of redownloading the original.
-
-The historical `Crafty-JEI-Overlay.zip` filename is also rebuilt as a compatibility alias to the same 0.1.9-25 update overlay.
+For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-42.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
 
 ## Quest runtime status — 2026-09-15
 
@@ -87,7 +80,7 @@ The stale Twilight Forest objective is removed because Twilight Forest is no lon
 
 ### Quest-only Crafty update
 
-For an existing Crafty server that already has the correct mods, use `dist/Amber-and-Arcana-0.1.9-33-Crafty-Quest-Overlay.zip`. Stop the server, back up the world, extract the ZIP into the server root with overwrite enabled, and start the server again. If you copy the quest files while the server is already running, run `/ftbquests reload` from the server console or with sufficient in-game permission. The quest-only overlay contains only `config/ftbquests/quests/`; it does not contain a world, mods, or Crafty launcher files.
+For an existing Crafty server that already has the correct mods, use `dist/Amber-and-Arcana-0.1.9-42-Crafty-Quest-Overlay.zip`. Stop the server, back up the world, extract the ZIP into the server root with overwrite enabled, and start the server again. If you copy the quest files while the server is already running, run `/ftbquests reload` from the server console or with sufficient in-game permission. The quest-only overlay contains only `config/ftbquests/quests/`; it does not contain a world, mods, or Crafty launcher files.
 
 ## Validate and rebuild
 
@@ -151,3 +144,7 @@ Crafty can again populate a missing server mods directory after CurseForge's Jul
 
 ### 0.1.9-41 recipe conflicts and Spartan Weaponry
 Adds Polymorph plus AE2/Refined Storage integrations so conflicting recipes can be selected in crafting/storage terminals, and adds Spartan Weaponry 3.2.1. This is a client-and-server content update; the Crafty update overlay remains world-safe.
+
+
+### 0.1.9-42 bee integrations
+Adds five Just Dire Things resource bees and nine bee quests. The full update overlay now includes KubeJS data/assets and release metadata, required for existing servers to receive recipes. See [bee integration notes](docs/bee-integrations-0.1.9-42.md) and [the stopped-server updater](scripts/update-crafty-0.1.9-42.py). Cobblegen Galore and Tiny Soldiers have no compatible 1.20.1 Forge release and are not added.

@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-41" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-41" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-42" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-42" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -79,7 +79,7 @@ jq -e '.quest_completion_0_1_9_24.quests_checked == 106 and .quest_completion_0_
 client_compat="$repo_dir/client/overrides/kubejs/data"
 server_compat="$repo_dir/server/kubejs/data"
 diff -qr "$client_compat" "$server_compat" >/dev/null || { echo "Client/server compatibility data differs" >&2; exit 1; }
-test "$(find "$client_compat" -path '*/recipes/*.json' -type f | wc -l)" = "36" || { echo "Expected 36 disabled recipe overrides" >&2; exit 1; }
+test "$(find "$client_compat" -path '*/recipes/*.json' -type f | wc -l)" = "51" || { echo "Expected 36 disabled recipe overrides plus 15 bee recipes" >&2; exit 1; }
 test "$(find "$client_compat" -path '*/tags/*.json' -type f | wc -l)" = "4" || { echo "Expected 4 repaired tag files" >&2; exit 1; }
 find "$client_compat" -name '*.json' -type f -print0 | xargs -0 -n1 jq -e . >/dev/null
 
@@ -98,7 +98,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-41 static validation passed"
+echo "Amber & Arcana 0.1.9-42 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -385,3 +385,25 @@ test "$(jq '[.files[] | select(.projectID == 278141 and .fileID == 6842571)] | l
 test "$(awk -F '\t' '$1 == "6842571" && $2 == "SpartanWeaponry-1.20.1-forge-3.2.1-all.jar" && $4 == "spartan-weaponry" && $6 == "278141" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-41 server pin: Spartan Weaponry" >&2; exit 1; }
 if grep -Fxq 'polymorph-forge-0.49.10+1.20.1.jar' "$repo_dir/server/_crafty/remove-mods.txt"; then echo "Current Polymorph jar is scheduled for deletion" >&2; exit 1; fi
 jq -e '.recipe_conflicts_spartan_0_1_9_41.polymorph_selector == true and .recipe_conflicts_spartan_0_1_9_41.ae2_selector_integration == true and .recipe_conflicts_spartan_0_1_9_41.refined_storage_selector_integration == true and .recipe_conflicts_spartan_0_1_9_41.spartan_weaponry == true and .recipe_conflicts_spartan_0_1_9_41.client_update_required == true and .recipe_conflicts_spartan_0_1_9_41.world_data_touched == false' "$validation" >/dev/null
+
+python3 "$repo_dir/scripts/validate-bee-integrations.py"
+
+
+# 0.1.9-39 ATM10-inspired semantic major progression checks
+jq -e '.atm10_major_progression_0_1_9_38.reference_pack == "AllTheMods/ATM-10" and .atm10_major_progression_0_1_9_38.reference_commit == "ab6f65e07b88423cdae1724864ba42a573ba758a" and .atm10_major_progression_0_1_9_38.existing_chapters_rebuilt == 7 and .atm10_major_progression_0_1_9_38.new_chapters_added == 2 and .atm10_major_progression_0_1_9_38.final_chapters == 28 and .atm10_major_progression_0_1_9_38.preserved_existing_quest_ids == 91 and .atm10_major_progression_0_1_9_38.reward_tables_final == 145 and .atm10_major_progression_0_1_9_38.fortune_wheels_touched == 9 and .atm10_major_progression_0_1_9_38.client_server_quest_files_identical == true' "$validation" >/dev/null
+for chapter in hostile_neural_networks draconic_evolution; do
+  test -f "$client_quests/chapters/$chapter.snbt" || { echo "Missing new 0.1.9-39 chapter: $chapter" >&2; exit 1; }
+done
+for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_storage; do
+  if rg -F 'AA35 deep progression milestone' "$client_quests/chapters/$chapter.snbt" >/dev/null; then
+    echo "Generic AA35 filler remains in rebuilt major chapter: $chapter" >&2
+    exit 1
+  fi
+done
+for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_storage hostile_neural_networks draconic_evolution; do
+  for tier in 1 2 3 4; do
+    test -f "$client_quests/reward_tables/modroll_${chapter}_tier_${tier}.snbt" || { echo "Missing hand-curated tier table: $chapter tier $tier" >&2; exit 1; }
+  done
+  test -f "$client_quests/reward_tables/wheel_${chapter}.snbt" || { echo "Missing Fortune Wheel: $chapter" >&2; exit 1; }
+done
+diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }

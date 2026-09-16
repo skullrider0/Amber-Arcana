@@ -6,6 +6,8 @@ dist_dir="$repo_dir/dist"
 patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
 validation="$repo_dir/server/pack-information/validation.json"
 
+# Do not replay historical release migrations over canonical 0.1.9-42 data.
+if ! grep -Fq '"bee_integrations_0_1_9_42"' "$validation"; then
 # The repository stores the canonical current pack source. Only replay the old
 # 0.1.9-35 deepening transform on genuinely pre-deepening sources. The 0.1.9-38
 # ATM10-inspired rebuild intentionally replaces the old AA35 marker text, so its
@@ -48,6 +50,10 @@ python3 "$repo_dir/scripts/hotfix-curseforge-downloads-0.1.9-40.py"
 # extends that selector into AE2 and Refined Storage, and adds Spartan Weaponry.
 python3 "$repo_dir/scripts/hotfix-recipe-conflicts-spartan-0.1.9-41.py"
 
+fi
+
+python3 "$repo_dir/scripts/hotfix-bee-integrations-0.1.9-42.py"
+
 bash "$repo_dir/scripts/build-launcher.sh"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
@@ -78,7 +84,7 @@ rm -f "$update_overlay" "$legacy_overlay" "$quest_overlay" "$quest_spawn_overlay
   cd "$repo_dir/server"
   test -f "mods/$patch_jar" || { echo "Missing patched More Hitboxes jar: server/mods/$patch_jar" >&2; exit 1; }
   test -f "AmberArcana-Crafty-Launcher.jar" || { echo "Missing rebuilt Crafty launcher" >&2; exit 1; }
-  zip -qr "$update_overlay" AmberArcana-Crafty-Launcher.jar _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests
+  zip -qr "$update_overlay" AmberArcana-Crafty-Launcher.jar _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests kubejs/data kubejs/assets _crafty/build-summary.json pack-information/validation.json
 )
 cp "$update_overlay" "$legacy_overlay"
 

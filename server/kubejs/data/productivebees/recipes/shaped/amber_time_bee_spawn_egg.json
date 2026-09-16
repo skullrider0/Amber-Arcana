@@ -1,0 +1,86 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PRP",
+    "EME",
+    "HCH"
+  ],
+  "key": {
+    "P": {
+      "type": "forge:nbt",
+      "item": "productivebees:spawn_egg_configurable_bee",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:celestigem"
+        }
+      }
+    },
+    "R": {
+      "type": "forge:nbt",
+      "item": "productivebees:spawn_egg_configurable_bee",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:draconic"
+        }
+      }
+    },
+    "E": {
+      "item": "justdirethings:time_crystal_block"
+    },
+    "M": {
+      "type": "forge:nbt",
+      "item": "productivebees:spawn_egg_configurable_bee",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:sculk"
+        }
+      }
+    },
+    "H": {
+      "type": "forge:nbt",
+      "item": "productivebees:spawn_egg_configurable_bee",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:eclipsealloy"
+        }
+      }
+    },
+    "C": {
+      "item": "justdirethings:time_fluid_bucket"
+    }
+  },
+  "result": {
+    "item": "productivebees:spawn_egg_configurable_bee",
+    "nbt": {
+      "EntityTag": {
+        "type": "productivebees:time_crystal"
+      }
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:time_crystal"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:celestigem"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:draconic"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:sculk"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:eclipsealloy"
+    }
+  ]
+}

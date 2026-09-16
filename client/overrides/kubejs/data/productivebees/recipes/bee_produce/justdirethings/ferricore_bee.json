@@ -1,0 +1,27 @@
+{
+  "type": "productivebees:advanced_beehive",
+  "ingredient": "productivebees:ferricore",
+  "results": [
+    {
+      "item": {
+        "type": "forge:nbt",
+        "item": "productivebees:configurable_honeycomb",
+        "nbt": {
+          "EntityTag": {
+            "type": "productivebees:ferricore"
+          }
+        }
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:ferricore"
+    }
+  ]
+}

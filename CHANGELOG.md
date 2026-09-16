@@ -1,3 +1,10 @@
+## 0.1.9-42
+
+- Add Ferricore, Blazegold, Celestigem, Eclipse Alloy and Time Crystal bee definitions and 15 Forge 1.20.1 recipes.
+- Add nine species-specific bee quests; preserve all existing quest IDs and finale progress.
+- Include recipe data in the full Crafty update overlay; add checksummed stopped-server updater with rollback backup.
+- Repair stale current download links. No mod JAR additions: the two requested mods do not support 1.20.1 Forge.
+
 ## 0.1.9-41
 
 - Restored Polymorph 0.49.10 for selectable conflicting crafting/smelting/smithing outputs.

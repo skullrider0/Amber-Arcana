@@ -1,0 +1,35 @@
+{
+  "type": "productivebees:centrifuge",
+  "ingredient": {
+    "type": "forge:nbt",
+    "item": "productivebees:configurable_honeycomb",
+    "nbt": {
+      "EntityTag": {
+        "type": "productivebees:ferricore"
+      }
+    }
+  },
+  "outputs": [
+    {
+      "item": {
+        "item": "justdirethings:raw_ferricore"
+      },
+      "chance": 80
+    },
+    {
+      "item": {
+        "item": "productivebees:wax"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:ferricore"
+    }
+  ]
+}

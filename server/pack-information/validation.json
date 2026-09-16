@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-41",
+  "pack_version": "0.1.9-42",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1429,8 +1429,8 @@
   },
   "curseforge_download_fix_0_1_9_40": {
     "reason": "CurseForge began requiring API-key authentication for direct CDN downloads on 2026-07-16; the old Crafty bootstrap therefore received 401 responses for missing server mods.",
-    "server_mod_rows": 266,
-    "server_mod_rows_with_project_ids": 265,
+    "server_mod_rows": 270,
+    "server_mod_rows_with_project_ids": 269,
     "server_manifest_has_project_ids": true,
     "curseforge_web_download_fallback": true,
     "cursemaven_fallback": true,
@@ -1467,5 +1467,28 @@
     "world_data_in_update_overlay": false,
     "manifest_entries": 290,
     "server_mod_downloads": 270
+  },
+  "bee_integrations_0_1_9_42": {
+    "new_species": [
+      "ferricore",
+      "blazegold",
+      "celestigem",
+      "eclipsealloy",
+      "time_crystal"
+    ],
+    "new_recipes": 15,
+    "new_quests": 9,
+    "draconic_species": [
+      "draconium",
+      "awakened",
+      "chaos"
+    ],
+    "draconic_native_recipes_preserved": true,
+    "world_data_touched": false,
+    "runtime_multiplayer_tested": false,
+    "incompatible_requests": [
+      "Cobblegen Galore",
+      "Tiny Soldiers"
+    ]
   }
 }

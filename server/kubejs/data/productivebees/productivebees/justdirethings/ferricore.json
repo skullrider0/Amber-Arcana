@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#536e78",
+  "secondaryColor": "#c4e1dc",
+  "flowerBlock": "justdirethings:ferricore_block",
+  "selfbreed": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    }
+  ]
+}

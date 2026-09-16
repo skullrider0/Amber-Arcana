@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#a24a36",
+  "secondaryColor": "#ffbf64",
+  "flowerBlock": "justdirethings:blazegold_block",
+  "selfbreed": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justdirethings"
+    }
+  ]
+}
