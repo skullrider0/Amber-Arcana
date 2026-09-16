@@ -1,20 +1,18 @@
 {
-	icon: "create:mechanical_press"
+	icon: "create:gearshift"
 	id: "55D351E07A55D410"
 	loot_size: 2
 	order_index: 351
 	rewards: [
+		{ item: "create:gearshift", weight: 16.00f }
 		{ item: "create:mechanical_press", weight: 16.00f }
 		{ item: "create:speedometer", weight: 16.00f }
 		{ item: "create:stressometer", weight: 16.00f }
 		{ item: "create:water_wheel", weight: 16.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
 		{ item: "create:basin", weight: 5.00f }
 		{ item: "create:encased_fan", weight: 5.00f }
 		{ item: "create:mechanical_mixer", weight: 5.00f }
 		{ item: "create:millstone", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
 	]
 	title: "Jurassic Laboratory — Tier 3 Roll"
 	use_title: true

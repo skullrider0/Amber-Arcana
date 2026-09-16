@@ -4,22 +4,19 @@
 	loot_size: 2
 	order_index: 106
 	rewards: [
+		{ item: "create:speedometer", weight: 16.00f }
 		{ item: "create:stressometer", weight: 16.00f }
 		{ item: "create:water_wheel", weight: 16.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
 		{ item: "create:basin", weight: 5.00f }
 		{ item: "create:encased_fan", weight: 5.00f }
-		{ item: "create:mechanical_mixer", weight: 5.00f }
+		{ item: "create:mechanical_mixer", weight: 1.00f }
 		{ item: "create:millstone", weight: 1.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
-		{ item: "create:cogwheel", weight: 16.00f }
 		{ item: "create:belt_connector", weight: 5.00f }
 		{ item: "create:depot", weight: 5.00f }
 		{ item: "create:basin", weight: 5.00f }
 		{ item: "create:encased_fan", weight: 5.00f }
-		{ item: "create:mechanical_mixer", weight: 5.00f }
+		{ item: "create:mechanical_mixer", weight: 1.00f }
 		{ item: "create:millstone", weight: 1.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Buddycards"
 	use_title: true

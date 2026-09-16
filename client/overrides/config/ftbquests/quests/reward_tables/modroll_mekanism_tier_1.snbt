@@ -9,7 +9,6 @@
 		{ item: "mekanism:purification_chamber", weight: 9.00f }
 		{ item: "mekanism:ultimate_energy_cube", weight: 9.00f }
 		{ item: "mekanism:mekasuit_helmet", weight: 9.00f }
-		{ item: "create:andesite_casing", weight: 9.00f }
 	]
 	title: "Mekanism Industry — Tier 1 Roll"
 	use_title: true

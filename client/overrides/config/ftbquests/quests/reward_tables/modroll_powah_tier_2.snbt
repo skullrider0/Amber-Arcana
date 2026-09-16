@@ -1,18 +1,17 @@
 {
-	icon: "powah:reactor_starter"
+	icon: "powah:energy_cell_basic"
 	id: "616903DD4DF62D45"
 	loot_size: 2
 	order_index: 382
 	rewards: [
+		{ item: "powah:energy_cell_basic", weight: 14.00f }
 		{ item: "powah:reactor_starter", weight: 14.00f }
-		{ item: "create:andesite_casing", weight: 14.00f }
 		{ item: "powah:thermo_generator_basic", weight: 14.00f }
 		{ item: "powah:thermo_generator_hardened", weight: 14.00f }
 		{ item: "powah:energy_cell_hardened", weight: 14.00f }
 		{ item: "powah:reactor_basic", weight: 14.00f }
 		{ item: "powah:reactor_hardened", weight: 14.00f }
 		{ item: "powah:energizing_rod_hardened", weight: 14.00f }
-		{ item: "create:andesite_casing", weight: 14.00f }
 	]
 	title: "Powah Energy — Tier 2 Roll"
 	use_title: true

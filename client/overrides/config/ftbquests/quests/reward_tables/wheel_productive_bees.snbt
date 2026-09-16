@@ -4,22 +4,21 @@
 	loot_size: 2
 	order_index: 130
 	rewards: [
+		{ item: "productivebees:bee_cage", weight: 1.00f }
 		{ item: "productivebees:centrifuge", weight: 5.00f }
 		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "productivebees:feeder", weight: 5.00f }
 		{ item: "productivebees:centrifuge", weight: 5.00f }
 		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
 		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
+		{ item: "productivebees:advanced_oak_beehive", weight: 1.00f }
 		{ item: "productivebees:bee_cage", weight: 1.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
 		{ item: "productivebees:centrifuge", weight: 5.00f }
 		{ item: "productivebees:breeding_chamber", weight: 5.00f }
 		{ item: "productivebees:feeder", weight: 5.00f }
 		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
+		{ item: "productivebees:advanced_oak_beehive", weight: 1.00f }
 		{ item: "productivebees:bee_cage", weight: 1.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Productive Bees"
 	use_title: true

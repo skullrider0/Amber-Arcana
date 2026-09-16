@@ -4,21 +4,15 @@
 	loot_size: 2
 	order_index: 124
 	rewards: [
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 1.00f }
-		{ item: "create:goggles", weight: 1.00f }
 		{ item: "tconstruct:seared_melter", weight: 5.00f }
-		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
-		{ item: "tconstruct:crafting_station", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 1.00f }
-		{ item: "create:goggles", weight: 1.00f }
+		{ item: "tconstruct:crafting_station", weight: 1.00f }
 		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
 		{ item: "tconstruct:seared_melter", weight: 5.00f }
-		{ item: "tconstruct:crafting_station", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 1.00f }
-		{ item: "create:goggles", weight: 1.00f }
+		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
+		{ item: "tconstruct:crafting_station", weight: 1.00f }
+		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
+		{ item: "tconstruct:seared_melter", weight: 5.00f }
+		{ item: "tconstruct:crafting_station", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Tinkers Construct"
 	use_title: true

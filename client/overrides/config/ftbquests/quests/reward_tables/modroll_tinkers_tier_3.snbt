@@ -1,20 +1,15 @@
 {
-	icon: "tconstruct:crafting_station"
+	icon: "tconstruct:seared_melter"
 	id: "15E54023A9128FE2"
 	loot_size: 2
 	order_index: 403
 	rewards: [
+		{ item: "tconstruct:seared_melter", weight: 5.00f }
 		{ item: "tconstruct:crafting_station", weight: 5.00f }
 		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 5.00f }
 		{ item: "tconstruct:seared_melter", weight: 5.00f }
 		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
 		{ item: "tconstruct:crafting_station", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 5.00f }
 	]
 	title: "Tinkers Construct — Tier 3 Roll"
 	use_title: true

@@ -1,24 +1,15 @@
 {
-	icon: "create:cogwheel"
+	icon: "botania:mana_pool"
 	id: "717029CA02253259"
 	loot_size: 3
 	order_index: 396
 	rewards: [
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 0.60f }
-		{ item: "create:large_cogwheel", weight: 0.60f }
-		{ item: "botania:mana_pool", weight: 5.00f }
+		{ item: "botania:mana_pool", weight: 0.60f }
 		{ item: "bloodmagic:altar", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 0.60f }
-		{ item: "create:large_cogwheel", weight: 0.60f }
+		{ item: "botania:mana_pool", weight: 0.60f }
 		{ item: "bloodmagic:altar", weight: 5.00f }
-		{ item: "botania:mana_pool", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 0.60f }
-		{ item: "create:large_cogwheel", weight: 0.60f }
+		{ item: "bloodmagic:altar", weight: 5.00f }
+		{ item: "botania:mana_pool", weight: 0.60f }
 	]
 	title: "Rituals and Witchcraft — Tier 4 Roll"
 	use_title: true

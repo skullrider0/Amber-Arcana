@@ -1,14 +1,14 @@
 {
-	icon: "create:brass_ingot"
+	icon: "create:threshold_switch"
 	id: "5B1CF26E78410253"
 	loot_size: 2
 	order_index: 343
 	rewards: [
+		{ item: "create:threshold_switch", weight: 16.00f }
 		{ item: "create:brass_ingot", weight: 16.00f }
 		{ item: "create:package_frogport", weight: 16.00f }
 		{ item: "create:packager", weight: 16.00f }
 		{ item: "create:precision_mechanism", weight: 16.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
 		{ item: "create:mechanical_arm", weight: 5.00f }
 		{ item: "create:mechanical_crafter", weight: 5.00f }
 		{ item: "create:repackager", weight: 5.00f }

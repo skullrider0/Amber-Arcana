@@ -1,24 +1,15 @@
 {
-	icon: "create:cogwheel"
+	icon: "irons_spellbooks:iron_spell_book"
 	id: "47967841189608EB"
 	loot_size: 3
 	order_index: 376
 	rewards: [
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 0.60f }
-		{ item: "create:large_cogwheel", weight: 0.60f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 0.60f }
 		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 0.60f }
-		{ item: "create:large_cogwheel", weight: 0.60f }
 		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
-		{ item: "irons_spellbooks:iron_spell_book", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 0.60f }
-		{ item: "create:large_cogwheel", weight: 0.60f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 0.60f }
+		{ item: "irons_spellbooks:inscription_table", weight: 5.00f }
+		{ item: "irons_spellbooks:iron_spell_book", weight: 0.60f }
 	]
 	title: "Iron Spells and Wizardry — Tier 4 Roll"
 	use_title: true

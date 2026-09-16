@@ -1,20 +1,19 @@
 {
-	icon: "mekanism:ultimate_energy_cube"
+	icon: "mekanism:purification_chamber"
 	id: "3967584F91F3F6C8"
 	loot_size: 2
 	order_index: 379
 	rewards: [
+		{ item: "mekanism:purification_chamber", weight: 5.00f }
 		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
 		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
 		{ item: "mekanism:metallurgic_infuser", weight: 5.00f }
 		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
 		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
 		{ item: "mekanism:purification_chamber", weight: 5.00f }
 		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
 		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
 		{ item: "mekanism:metallurgic_infuser", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
 	]
 	title: "Mekanism Industry — Tier 3 Roll"
 	use_title: true

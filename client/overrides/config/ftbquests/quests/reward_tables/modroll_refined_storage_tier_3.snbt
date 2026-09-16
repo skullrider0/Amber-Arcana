@@ -1,21 +1,20 @@
 {
-	icon: "refinedstorage:controller"
+	icon: "refinedstorage:importer"
 	id: "2A957D581A275C18"
 	loot_size: 2
 	order_index: 391
 	rewards: [
+		{ item: "refinedstorage:importer", weight: 5.00f }
 		{ item: "refinedstorage:controller", weight: 5.00f }
 		{ item: "refinedstorage:disk_drive", weight: 5.00f }
 		{ item: "refinedstorage:grid", weight: 5.00f }
 		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
 		{ item: "refinedstorage:exporter", weight: 5.00f }
 		{ item: "refinedstorage:importer", weight: 5.00f }
 		{ item: "refinedstorage:crafting_grid", weight: 5.00f }
 		{ item: "refinedstorage:controller", weight: 5.00f }
 		{ item: "refinedstorage:disk_drive", weight: 5.00f }
 		{ item: "refinedstorage:grid", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
 	]
 	title: "Refined Storage — Tier 3 Roll"
 	use_title: true

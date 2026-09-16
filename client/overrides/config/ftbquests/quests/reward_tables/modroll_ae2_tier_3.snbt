@@ -1,20 +1,17 @@
 {
-	icon: "ae2:pattern_provider"
+	icon: "ae2:molecular_assembler"
 	id: "060757B6490F9BDC"
 	loot_size: 2
 	order_index: 303
 	rewards: [
+		{ item: "ae2:molecular_assembler", weight: 5.00f }
 		{ item: "ae2:pattern_provider", weight: 5.00f }
 		{ item: "ae2:controller", weight: 5.00f }
 		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
 		{ item: "ae2:molecular_assembler", weight: 5.00f }
 		{ item: "ae2:pattern_provider", weight: 5.00f }
 		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
 		{ item: "ae2:controller", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
 	]
 	title: "Ae2 — Tier 3 Roll"
 	use_title: true

@@ -16,7 +16,6 @@
 		{ item: "create:speedometer", weight: 9.00f }
 		{ item: "create:stressometer", weight: 9.00f }
 		{ item: "create:water_wheel", weight: 9.00f }
-		{ item: "create:andesite_casing", weight: 9.00f }
 	]
 	title: "A World Worth Building — Tier 2 Roll"
 	use_title: true

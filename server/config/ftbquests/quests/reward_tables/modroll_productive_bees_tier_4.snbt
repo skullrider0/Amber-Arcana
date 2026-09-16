@@ -1,25 +1,24 @@
 {
-	icon: "productivebees:centrifuge"
+	icon: "productivebees:bee_cage"
 	id: "479FD349D58DF596"
 	loot_size: 3
 	order_index: 388
 	rewards: [
+		{ item: "productivebees:bee_cage", weight: 0.60f }
 		{ item: "productivebees:centrifuge", weight: 5.00f }
 		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 0.60f }
+		{ item: "productivebees:feeder", weight: 5.00f }
 		{ item: "productivebees:centrifuge", weight: 5.00f }
 		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
 		{ item: "productivebees:breeding_chamber", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
+		{ item: "productivebees:advanced_oak_beehive", weight: 0.60f }
 		{ item: "productivebees:bee_cage", weight: 0.60f }
-		{ item: "create:andesite_casing", weight: 0.60f }
 		{ item: "productivebees:centrifuge", weight: 5.00f }
 		{ item: "productivebees:breeding_chamber", weight: 5.00f }
 		{ item: "productivebees:feeder", weight: 5.00f }
 		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
+		{ item: "productivebees:advanced_oak_beehive", weight: 0.60f }
 		{ item: "productivebees:bee_cage", weight: 0.60f }
-		{ item: "create:andesite_casing", weight: 0.60f }
 	]
 	title: "Productive Bees — Tier 4 Roll"
 	use_title: true

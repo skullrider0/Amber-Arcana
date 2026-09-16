@@ -4,21 +4,19 @@
 	loot_size: 2
 	order_index: 119
 	rewards: [
+		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
 		{ item: "mekanism:metallurgic_infuser", weight: 1.00f }
 		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
 		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
 		{ item: "mekanism:purification_chamber", weight: 5.00f }
 		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
 		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
 		{ item: "mekanism:metallurgic_infuser", weight: 1.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
 		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
 		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
 		{ item: "mekanism:purification_chamber", weight: 5.00f }
 		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
 		{ item: "mekanism:metallurgic_infuser", weight: 1.00f }
-		{ item: "create:andesite_casing", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Mekanism Industry"
 	use_title: true

@@ -10,7 +10,6 @@
 		{ item: "powah:energy_cell_starter", weight: 14.00f }
 		{ item: "powah:energy_cell_basic", weight: 14.00f }
 		{ item: "powah:reactor_starter", weight: 14.00f }
-		{ item: "create:andesite_casing", weight: 14.00f }
 	]
 	title: "Powah Energy — Tier 1 Roll"
 	use_title: true
