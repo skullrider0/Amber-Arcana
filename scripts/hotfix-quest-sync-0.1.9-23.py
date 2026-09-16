@@ -29,13 +29,16 @@ def validate_live_client_tree() -> None:
     # Later releases deliberately leave generated depth_tier_* files in the source
     # tree, while wheel_* files are removed immediately before this replay. Ignore
     # those later generated tables here instead of making future releases break the
-    # 0.1.9-23 baseline check.
+    # 0.1.9-23 baseline check, then remove them so 0.1.9-26 can rebuild from a clean
+    # five-table baseline. 0.1.9-30 regenerates the depth tables during the build.
     baseline_rewards = [
         p for p in rewards.glob("*.snbt")
         if not p.name.startswith("wheel_") and not p.name.startswith("depth_tier_")
     ]
     if len(baseline_rewards) != 5:
         raise RuntimeError(f"Expected 5 baseline live reward tables, found {len(baseline_rewards)}")
+    for generated in rewards.glob("depth_tier_*.snbt"):
+        generated.unlink()
 
     gs = (chapters / "getting_started.snbt").read_text()
     ce = (chapters / "create_engineering.snbt").read_text()
