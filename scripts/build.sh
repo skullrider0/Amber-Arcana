@@ -25,9 +25,14 @@ python3 "$repo_dir/scripts/run-hotfix-mod-tier-loot-0.1.9-32.py"
 # real late-mod upgrades and a tiny Omega Productivity jackpot chance.
 python3 "$repo_dir/scripts/hotfix-productive-bees-rewards-0.1.9-33.py"
 
-# 0.1.9-34 compresses richer 4-tier reward progression into every short quest
-# chapter so even three-to-ten-quest chains escalate meaningfully with depth.
+# 0.1.9-34 gives every formerly compact chapter a richer chapter-specific reward
+# curve. Its hardened runner remains replayable after those chapters are deepened.
 python3 "$repo_dir/scripts/run-hotfix-short-chain-rewards-0.1.9-34.py"
+
+# 0.1.9-35 turns those compact chapters into real mechanics progression trees:
+# historical acquisition milestones remain intact, hands-on stages gate local
+# dependencies, every quest gets a depth tier roll, and the wheel moves to mastery.
+python3 "$repo_dir/scripts/hotfix-deep-short-progression-0.1.9-35.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
