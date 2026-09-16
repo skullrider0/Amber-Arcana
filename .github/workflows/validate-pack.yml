@@ -87,7 +87,10 @@ jobs:
       - name: Add 0.1.9-28 Create progression tree
         run: python3 scripts/hotfix-create-progression-0.1.9-28.py
 
-      - name: Normalize 0.1.9-28 validation gates
+      - name: Add 0.1.9-29 mechanics-based quest groups
+        run: python3 scripts/hotfix-quest-groups-0.1.9-29.py
+
+      - name: Normalize 0.1.9-29 validation gates
         shell: bash
         run: |
           set -euo pipefail
@@ -102,6 +105,7 @@ jobs:
               '# 0.1.9-26 weighted Wheel of Fortune checks',
               '# 0.1.9-27 Productive Bees family-tree checks',
               '# 0.1.9-28 Create progression checks',
+              '# 0.1.9-29 mechanics-based quest grouping checks',
           ):
               if marker in text:
                   text = text.split(marker, 1)[0].rstrip() + '\n'
@@ -112,11 +116,11 @@ jobs:
           ) + '\n'
 
           # Historical release transformers can reset validator version strings.
-          text = re.sub(r'(?<!hotfix-quest-requirements-)0\.1\.9-[0-9]+', '0.1.9-28', text)
+          text = re.sub(r'(?<!hotfix-quest-requirements-)0\.1\.9-[0-9]+', '0.1.9-29', text)
           text = text.replace('rg -F "item: "$item""', 'rg -F "$item"')
 
-          # Productive Bees adds one chapter and one wheel table. Create expands its
-          # existing chapter in place, so the final release remains 26 chapters / 31 tables.
+          # Productive Bees adds one chapter and one wheel table. Create and the
+          # mechanics grouping reorganize existing chapters in place.
           for old in ('25',):
               text = text.replace(
                   f'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "{old}" || {{ echo "Expected {old} live quest chapters"',
@@ -160,11 +164,35 @@ jobs:
           grep -Fq 'Wheel of Fortune — Create Engineering' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel table missing" >&2; exit 1; }
           grep -Fq 'create:stock_ticker' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel was not refreshed" >&2; exit 1; }
 
+          # 0.1.9-29 mechanics-based quest grouping checks
+          jq -e '.quest_organization_0_1_9_29.chapter_groups == 9 and .quest_organization_0_1_9_29.chapters_grouped == 26 and .quest_organization_0_1_9_29.all_chapters_explicitly_assigned == true and .quest_organization_0_1_9_29.historical_ids_preserved == true and .quest_organization_0_1_9_29.client_server_quest_files_identical == true' "$validation" >/dev/null
+          groups="$client_quests/chapter_groups.snbt"
+          test -f "$groups" || { echo "chapter_groups.snbt missing" >&2; exit 1; }
+          for pair in \
+            '5A29000000000001|Start Here' \
+            '5A29000000000002|Machines & Production' \
+            '5A29000000000003|Storage & Networks' \
+            '5A29000000000004|Resources & Farming' \
+            '5A29000000000005|Magic & Rituals' \
+            '5A29000000000006|Exploration & Creatures' \
+            '5A29000000000007|Building & Settlements' \
+            '5A29000000000008|Tools, Combat & Equipment' \
+            '5A29000000000009|Collections & Endgame'; do
+            gid="${pair%%|*}"; title="${pair#*|}"
+            grep -Fq "{ id: \"$gid\", title: \"$title\" }" "$groups" || { echo "Quest group missing: $title" >&2; exit 1; }
+          done
+          test "$(rg -n '^\s*group: "5A2900000000000[1-9]"\s*$' "$client_quests/chapters" | wc -l)" = "26" || { echo "Not all 26 chapters are assigned to mechanics groups" >&2; exit 1; }
+          grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/create_engineering.snbt" || { echo "Create Engineering is not under Machines & Production" >&2; exit 1; }
+          grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/mekanism.snbt" || { echo "Mekanism is not under Machines & Production" >&2; exit 1; }
+          grep -Fq 'group: "5A29000000000004"' "$client_quests/chapters/productive_bees.snbt" || { echo "Productive Bees is not under Resources & Farming" >&2; exit 1; }
+          cmp "$client_quests/chapter_groups.snbt" "$server_quests/chapter_groups.snbt" >/dev/null || { echo "Client/server chapter groups differ" >&2; exit 1; }
+
           test "$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)" = "26" || { echo "Expected 26 finale loot rewards" >&2; exit 1; }
           test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated client wheel tables" >&2; exit 1; }
           test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated server wheel tables" >&2; exit 1; }
           quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
           test -f "$quest_overlay" || { echo "Quest-only Crafty overlay missing" >&2; exit 1; }
+          test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapter_groups.snbt')" = "1" || { echo "chapter_groups.snbt missing from quest overlay" >&2; exit 1; }
           test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/productive_bees.snbt')" = "1" || { echo "Productive Bees chapter missing from quest overlay" >&2; exit 1; }
           test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/create_engineering.snbt')" = "1" || { echo "Create chapter missing from quest overlay" >&2; exit 1; }
           EOF
