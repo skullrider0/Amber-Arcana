@@ -61,47 +61,79 @@ jobs:
       - name: Finalize 0.1.9-25 quest runtime format and progression
         run: python3 scripts/hotfix-quest-finalize-0.1.9-25.py
 
+      - name: Reset generated Productive Bees quest files before 0.1.9-26 replay
+        shell: bash
+        run: |
+          rm -f \
+            client/overrides/config/ftbquests/quests/chapters/productive_bees.snbt \
+            server/config/ftbquests/quests/chapters/productive_bees.snbt \
+            client/overrides/config/ftbquests/quests/reward_tables/wheel_productive_bees.snbt \
+            server/config/ftbquests/quests/reward_tables/wheel_productive_bees.snbt
+
       - name: Add 0.1.9-26 weighted Wheel of Fortune rewards
         run: python3 scripts/hotfix-weighted-wheel-0.1.9-26.py
 
-      - name: Normalize 0.1.9-26 validation gates
+      - name: Add 0.1.9-27 Productive Bees family tree
+        run: python3 scripts/hotfix-productive-bees-0.1.9-27.py
+
+      - name: Normalize 0.1.9-27 validation gates
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          import re
 
           path = Path('scripts/validate.sh')
           text = path.read_text()
-          marker = '# 0.1.9-26 weighted Wheel of Fortune checks'
-          if marker in text:
-              text = text.split(marker, 1)[0].rstrip() + '\n'
 
-          # The historical 0.1.9-24 transformer rewrites files and also asserts the
-          # manifest version, so it must not be called from the final 0.1.9-26 validator.
+          for marker in (
+              '# 0.1.9-26 weighted Wheel of Fortune checks',
+              '# 0.1.9-27 Productive Bees family-tree checks',
+          ):
+              if marker in text:
+                  text = text.split(marker, 1)[0].rstrip() + '\n'
+
           text = '\n'.join(
               line for line in text.splitlines()
               if not ('hotfix-quest-requirements-0.1.9-' in line and '--check-only' in line)
           ) + '\n'
 
-          # Update version assertions/output without inventing renamed hotfix files.
-          text = re.sub(r'(?<!hotfix-quest-requirements-)0\.1\.9-[0-9]+', '0.1.9-26', text)
-          text = text.replace('rg -F "item: "$item""', 'rg -F "$item"')
+          text = text.replace('.version == "0.1.9-26"', '.version == "0.1.9-27"')
+          text = text.replace('.pack_version == "0.1.9-26"', '.pack_version == "0.1.9-27"')
+          text = text.replace('Amber & Arcana 0.1.9-26 static validation passed',
+                              'Amber & Arcana 0.1.9-27 static validation passed')
           text = text.replace(
-              'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "5" || { echo "Expected 5 live reward tables"',
+              'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "25" || { echo "Expected 25 live quest chapters"',
+              'find "$qroot/chapters" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "26" || { echo "Expected 26 live quest chapters"',
+          )
+          text = text.replace(
               'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "30" || { echo "Expected 30 live reward tables"',
+              'find "$qroot/reward_tables" -maxdepth 1 -name \'*.snbt\' -type f | wc -l)" = "31" || { echo "Expected 31 live reward tables"',
           )
           path.write_text(text)
           PY
+
           cat >> scripts/validate.sh <<'EOF'
 
           # 0.1.9-26 weighted Wheel of Fortune checks
           jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
-          test "$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)" = "25" || { echo "Expected 25 finale loot rewards" >&2; exit 1; }
-          test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "25" || { echo "Expected 25 generated client wheel tables" >&2; exit 1; }
-          test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "25" || { echo "Expected 25 generated server wheel tables" >&2; exit 1; }
           grep -Fq '"ftbquests.rewards": "Wheel of Fortune"' "$repo_dir/client/overrides/kubejs/assets/ftbquests/lang/en_us.json" || { echo "Wheel of Fortune client heading override missing" >&2; exit 1; }
+
+          # 0.1.9-27 Productive Bees family-tree checks
+          jq -e '.productive_bees_0_1_9_27.productive_bees_version == "1.20.1-12.6.0" and .productive_bees_0_1_9_27.upstream_commit == "2190d6b4c0f4a35acc26415759c3be731d1eac22" and .productive_bees_0_1_9_27.setup_quests == 6 and .productive_bees_0_1_9_27.bee_quests >= 40 and .productive_bees_0_1_9_27.root_bees >= 2 and .productive_bees_0_1_9_27.generated_branches >= 3 and .productive_bees_0_1_9_27.total_chapters == 26 and .productive_bees_0_1_9_27.total_reward_tables == 31 and .productive_bees_0_1_9_27.total_finale_loot_rewards == 26 and .productive_bees_0_1_9_27.client_server_quest_files_identical == true' "$validation" >/dev/null
+          pb_chapter="$client_quests/chapters/productive_bees.snbt"
+          test -f "$pb_chapter" || { echo "Productive Bees chapter missing" >&2; exit 1; }
+          for item in productivebees:bee_cage productivebees:advanced_oak_beehive productivebees:expansion_box_oak productivebees:feeder productivebees:centrifuge productivebees:breeding_chamber; do
+            grep -Fq "$item" "$pb_chapter" || { echo "Productive Bees setup item missing: $item" >&2; exit 1; }
+          done
+          grep -Fq 'title: "Master Apiarist"' "$pb_chapter" || { echo "Master Apiarist finale missing" >&2; exit 1; }
+          grep -Fq 'Wheel of Fortune — Productive Bees' "$client_quests/reward_tables/wheel_productive_bees.snbt" || { echo "Productive Bees wheel table missing" >&2; exit 1; }
+          test "$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)" = "26" || { echo "Expected 26 finale loot rewards" >&2; exit 1; }
+          test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated client wheel tables" >&2; exit 1; }
+          test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated server wheel tables" >&2; exit 1; }
+          quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
+          test -f "$quest_overlay" || { echo "Quest-only Crafty overlay missing" >&2; exit 1; }
+          test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/productive_bees.snbt')" = "1" || { echo "Productive Bees chapter missing from quest overlay" >&2; exit 1; }
           EOF
 
       - name: Build client and server distributions
