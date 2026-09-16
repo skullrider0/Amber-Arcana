@@ -25,8 +25,13 @@ jobs:
           set -euo pipefail
           test -d client/overrides/config/ftbquests/quests/chapters
           test -d server/config/ftbquests/quests/chapters
-          test "$(find client/overrides/config/ftbquests/quests/chapters -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "26"
-          test "$(find server/config/ftbquests/quests/chapters -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "26"
+          client_chapters="$(find client/overrides/config/ftbquests/quests/chapters -maxdepth 1 -name '*.snbt' -type f | wc -l)"
+          server_chapters="$(find server/config/ftbquests/quests/chapters -maxdepth 1 -name '*.snbt' -type f | wc -l)"
+          test "$client_chapters" = "$server_chapters"
+          case "$client_chapters" in
+            26|28) ;;
+            *) echo "Expected canonical quest source with 26 pre-0.1.9-38 chapters or 28 post-0.1.9-38 chapters; found $client_chapters" >&2; exit 1 ;;
+          esac
           jar='morehitboxes-forge-1.20.1-1.9.2.1.jar'
           source="vendor/morehitboxes/1.9.2.1/$jar"
           test -f "$source"
@@ -36,9 +41,8 @@ jobs:
 
       # The repository now stores the canonical current pack source. Historical
       # release transformers are intentionally not replayed here: newer quest
-      # releases substantially deepen the old chapters, and re-running 0.1.9-24
-      # over those current files can destroy the modern quest graph. build.sh
-      # contains the idempotent current release passes (0.1.9-30 onward).
+      # releases substantially deepen the old chapters, and re-running old
+      # migrations over current files can destroy the modern quest graph.
       - name: Build client and server distributions
         run: bash scripts/build.sh
 
