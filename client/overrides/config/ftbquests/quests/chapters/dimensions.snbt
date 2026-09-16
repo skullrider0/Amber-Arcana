@@ -72,8 +72,8 @@
 			
 				{
 					id: "41FDB1DB577FF812"
-					table_id: 6186592811492234544L
-					title: "Tier 1 Depth Roll"
+					table_id: 2411341189262328692L
+					title: "Beyond the Overworld Tier 1 Roll"
 					type: "loot"
 				}
 			]
@@ -121,8 +121,8 @@
 			
 				{
 					id: "28062CB1CD11081F"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 6198371505029133212L
+					title: "Beyond the Overworld Tier 2 Roll"
 					type: "loot"
 				}
 			]
@@ -171,8 +171,8 @@
 			
 				{
 					id: "13848562AC770AFB"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 6198371505029133212L
+					title: "Beyond the Overworld Tier 2 Roll"
 					type: "loot"
 				}
 			]

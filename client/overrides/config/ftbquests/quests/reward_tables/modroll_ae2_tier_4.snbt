@@ -1,0 +1,25 @@
+{
+	icon: "ae2:item_storage_cell_64k"
+	id: "602AD1FE5601CD8D"
+	loot_size: 3
+	order_index: 304
+	rewards: [
+		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 0.60f }
+		{ item: "create:cogwheel", weight: 0.60f }
+		{ item: "ae2:molecular_assembler", weight: 5.00f }
+		{ item: "ae2:pattern_provider", weight: 5.00f }
+		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
+		{ item: "ae2:controller", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 0.60f }
+		{ item: "create:cogwheel", weight: 0.60f }
+		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
+		{ item: "ae2:molecular_assembler", weight: 5.00f }
+		{ item: "ae2:pattern_provider", weight: 5.00f }
+		{ item: "ae2:controller", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 0.60f }
+		{ item: "create:cogwheel", weight: 0.60f }
+	]
+	title: "Ae2 — Tier 4 Roll"
+	use_title: true
+}

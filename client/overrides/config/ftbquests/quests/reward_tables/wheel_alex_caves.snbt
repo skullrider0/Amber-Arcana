@@ -1,17 +1,25 @@
 {
 	icon: "minecraft:golden_carrot"
 	id: "4BB81009A2F8F33D"
-	loot_size: 1
+	loot_size: 2
 	order_index: 101
 	rewards: [
-		{ count: 4, item: "minecraft:golden_carrot", weight: 36.0f }
-		{ count: 4, item: "minecraft:emerald", weight: 36.0f }
-		{ count: 2, item: "minecraft:ender_pearl", weight: 18.0f }
-		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
-		{ item: "minecraft:spyglass", weight: 2.0f }
-		{ item: "minecraft:water_bucket", weight: 2.0f }
-		{ item: "minecraft:glass", weight: 2.0f }
-		{ item: "minecraft:minecart", weight: 2.0f }
+		{ item: "create:stressometer", weight: 16.00f }
+		{ item: "create:water_wheel", weight: 16.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:basin", weight: 5.00f }
+		{ item: "create:encased_fan", weight: 5.00f }
+		{ item: "create:mechanical_mixer", weight: 5.00f }
+		{ item: "create:millstone", weight: 1.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 16.00f }
+		{ item: "create:belt_connector", weight: 5.00f }
+		{ item: "create:depot", weight: 5.00f }
+		{ item: "create:basin", weight: 5.00f }
+		{ item: "create:encased_fan", weight: 5.00f }
+		{ item: "create:mechanical_mixer", weight: 5.00f }
+		{ item: "create:millstone", weight: 1.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Alex Caves"
 	use_title: true

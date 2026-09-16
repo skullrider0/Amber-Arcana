@@ -1,0 +1,21 @@
+{
+	icon: "create:mechanical_press"
+	id: "09434C8E64D1B844"
+	loot_size: 2
+	order_index: 331
+	rewards: [
+		{ item: "create:mechanical_press", weight: 16.00f }
+		{ item: "create:speedometer", weight: 16.00f }
+		{ item: "create:stressometer", weight: 16.00f }
+		{ item: "create:water_wheel", weight: 16.00f }
+		{ item: "create:andesite_casing", weight: 5.00f }
+		{ item: "create:basin", weight: 5.00f }
+		{ item: "create:encased_fan", weight: 5.00f }
+		{ item: "create:mechanical_mixer", weight: 5.00f }
+		{ item: "create:millstone", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 5.00f }
+		{ item: "create:cogwheel", weight: 5.00f }
+	]
+	title: "Butchery — Tier 3 Roll"
+	use_title: true
+}

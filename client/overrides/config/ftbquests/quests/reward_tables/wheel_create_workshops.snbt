@@ -1,17 +1,25 @@
 {
 	icon: "create:wrench"
 	id: "611B505C4FBD0504"
-	loot_size: 1
+	loot_size: 2
 	order_index: 110
 	rewards: [
-		{ count: 8, item: "minecraft:redstone", weight: 36.0f }
-		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
-		{ count: 4, item: "minecraft:gold_ingot", weight: 18.0f }
-		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
-		{ item: "create:wrench", weight: 7.0f }
-		{ item: "create:andesite_casing", weight: 7.0f }
-		{ item: "create:brass_casing", weight: 7.0f }
-		{ item: "minecraft:string", weight: 2.0f }
+		{ item: "create:packager", weight: 16.00f }
+		{ item: "create:precision_mechanism", weight: 16.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:factory_gauge", weight: 16.00f }
+		{ item: "create:stock_link", weight: 16.00f }
+		{ item: "create:stock_ticker", weight: 16.00f }
+		{ item: "create:sturdy_sheet", weight: 16.00f }
+		{ item: "create:railway_casing", weight: 16.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:track", weight: 5.00f }
+		{ item: "create:track_station", weight: 5.00f }
+		{ item: "create:track_observer", weight: 5.00f }
+		{ item: "create:track_signal", weight: 5.00f }
+		{ item: "create:schedule", weight: 5.00f }
+		{ item: "create:brass_casing", weight: 1.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Create Workshops"
 	use_title: true

@@ -1,0 +1,17 @@
+{
+	icon: "powah:dielectric_casing"
+	id: "1669B3CDE330E74F"
+	loot_size: 1
+	order_index: 381
+	rewards: [
+		{ item: "powah:dielectric_casing", weight: 14.00f }
+		{ item: "powah:energizing_orb", weight: 14.00f }
+		{ item: "powah:thermo_generator_starter", weight: 14.00f }
+		{ item: "powah:energy_cell_starter", weight: 14.00f }
+		{ item: "powah:energy_cell_basic", weight: 14.00f }
+		{ item: "powah:reactor_starter", weight: 14.00f }
+		{ item: "create:andesite_casing", weight: 14.00f }
+	]
+	title: "Powah Energy — Tier 1 Roll"
+	use_title: true
+}

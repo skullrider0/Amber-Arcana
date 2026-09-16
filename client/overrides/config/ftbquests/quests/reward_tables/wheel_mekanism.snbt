@@ -1,17 +1,24 @@
 {
 	icon: "mekanism:metallurgic_infuser"
 	id: "49604DFE39E81673"
-	loot_size: 1
+	loot_size: 2
 	order_index: 119
 	rewards: [
-		{ count: 8, item: "minecraft:redstone", weight: 18.0f }
-		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
-		{ count: 4, item: "minecraft:gold_ingot", weight: 18.0f }
-		{ count: 2, item: "minecraft:diamond", weight: 18.0f }
-		{ item: "mekanism:metallurgic_infuser", weight: 7.0f }
-		{ item: "mekanism:enrichment_chamber", weight: 7.0f }
-		{ item: "mekanism:purification_chamber", weight: 7.0f }
-		{ item: "mekanism:ultimate_energy_cube", weight: 7.0f }
+		{ item: "mekanism:metallurgic_infuser", weight: 1.00f }
+		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
+		{ item: "mekanism:purification_chamber", weight: 5.00f }
+		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
+		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
+		{ item: "mekanism:metallurgic_infuser", weight: 1.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "mekanism:mekasuit_helmet", weight: 5.00f }
+		{ item: "mekanism:ultimate_energy_cube", weight: 5.00f }
+		{ item: "mekanism:purification_chamber", weight: 5.00f }
+		{ item: "mekanism:enrichment_chamber", weight: 5.00f }
+		{ item: "mekanism:metallurgic_infuser", weight: 1.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Mekanism Industry"
 	use_title: true

@@ -1,0 +1,16 @@
+{
+	icon: "irons_spellbooks:iron_spell_book"
+	id: "35B78A4EFADED835"
+	loot_size: 1
+	order_index: 373
+	rewards: [
+		{ item: "irons_spellbooks:iron_spell_book", weight: 9.00f }
+		{ item: "irons_spellbooks:inscription_table", weight: 9.00f }
+		{ item: "create:andesite_casing", weight: 9.00f }
+		{ item: "create:cogwheel", weight: 9.00f }
+		{ item: "create:goggles", weight: 9.00f }
+		{ item: "create:large_cogwheel", weight: 9.00f }
+	]
+	title: "Iron Spells and Wizardry — Tier 1 Roll"
+	use_title: true
+}

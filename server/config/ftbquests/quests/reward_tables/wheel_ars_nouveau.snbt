@@ -1,16 +1,24 @@
 {
 	icon: "ars_nouveau:novice_spell_book"
 	id: "3701C63E32D8F409"
-	loot_size: 1
+	loot_size: 2
 	order_index: 105
 	rewards: [
-		{ count: 8, item: "minecraft:lapis_lazuli", weight: 18.0f }
-		{ count: 8, item: "minecraft:amethyst_shard", weight: 18.0f }
-		{ item: "minecraft:diamond", weight: 18.0f }
-		{ item: "ars_nouveau:novice_spell_book", weight: 7.0f }
-		{ item: "ars_nouveau:source_jar", weight: 7.0f }
-		{ item: "ars_nouveau:enchanting_apparatus", weight: 7.0f }
-		{ item: "ars_nouveau:spell_turret", weight: 7.0f }
+		{ item: "ars_nouveau:spell_turret", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 1.00f }
+		{ item: "ars_nouveau:enchanting_apparatus", weight: 5.00f }
+		{ item: "ars_nouveau:source_jar", weight: 5.00f }
+		{ item: "ars_nouveau:spell_turret", weight: 5.00f }
+		{ item: "ars_nouveau:novice_spell_book", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 1.00f }
+		{ item: "ars_nouveau:spell_turret", weight: 5.00f }
+		{ item: "ars_nouveau:enchanting_apparatus", weight: 5.00f }
+		{ item: "ars_nouveau:source_jar", weight: 5.00f }
+		{ item: "ars_nouveau:novice_spell_book", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Ars Nouveau"
 	use_title: true

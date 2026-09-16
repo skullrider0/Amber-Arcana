@@ -1,0 +1,24 @@
+{
+	icon: "create:fluid_tank"
+	id: "50A307E64B795D93"
+	loot_size: 2
+	order_index: 342
+	rewards: [
+		{ item: "create:fluid_tank", weight: 16.00f }
+		{ item: "create:mechanical_bearing", weight: 16.00f }
+		{ item: "create:mechanical_piston", weight: 16.00f }
+		{ item: "create:super_glue", weight: 16.00f }
+		{ item: "create:gantry_carriage", weight: 9.00f }
+		{ item: "create:gantry_shaft", weight: 9.00f }
+		{ item: "create:hose_pulley", weight: 9.00f }
+		{ item: "create:item_drain", weight: 9.00f }
+		{ item: "create:rope_pulley", weight: 9.00f }
+		{ item: "create:spout", weight: 9.00f }
+		{ item: "create:contraption_controls", weight: 9.00f }
+		{ item: "create:portable_storage_interface", weight: 9.00f }
+		{ item: "create:redstone_contact", weight: 9.00f }
+		{ item: "create:brass_funnel", weight: 9.00f }
+	]
+	title: "Create Workshops — Tier 2 Roll"
+	use_title: true
+}

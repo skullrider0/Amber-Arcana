@@ -1,16 +1,24 @@
 {
 	icon: "ae2:controller"
 	id: "628A58BBB84E88AE"
-	loot_size: 1
+	loot_size: 2
 	order_index: 100
 	rewards: [
-		{ count: 8, item: "minecraft:redstone", weight: 18.0f }
-		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
-		{ item: "minecraft:diamond", weight: 18.0f }
-		{ item: "ae2:controller", weight: 7.0f }
-		{ item: "ae2:pattern_provider", weight: 7.0f }
-		{ item: "ae2:molecular_assembler", weight: 7.0f }
-		{ item: "ae2:item_storage_cell_64k", weight: 7.0f }
+		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 1.00f }
+		{ item: "ae2:molecular_assembler", weight: 5.00f }
+		{ item: "ae2:pattern_provider", weight: 5.00f }
+		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
+		{ item: "ae2:controller", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 1.00f }
+		{ item: "ae2:item_storage_cell_64k", weight: 5.00f }
+		{ item: "ae2:molecular_assembler", weight: 5.00f }
+		{ item: "ae2:pattern_provider", weight: 5.00f }
+		{ item: "ae2:controller", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "create:cogwheel", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Ae2"
 	use_title: true

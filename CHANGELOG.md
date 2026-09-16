@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9-32 — Mod-specific tier loot rolls
+
+- Replace the four generic depth reward pools with four themed tiers per quest chapter/mod.
+- Remove diamonds, emeralds, and other generic vanilla filler from the new tier tables; rewards are selected from items belonging to the chapter's actual mods.
+- Make Tier 2 rolls award two results, Tier 3 two results, and Tier 4 three results.
+- Keep the strongest Tier 4 equipment rare instead of guaranteed; Powah Nitro generators/cells/reactors/rods are explicit sub-1-weight jackpots.
+- Re-theme chapter finale Wheel of Fortune tables around the same mod-specific progression pools.
+- Preserve quest/reward IDs and current player progression while changing only loot-table targets and contents.
+
 ## 0.1.9-31 — Productive Bees cage task labels
 
 - Give all 26 species-specific Bee Cage tasks explicit species labels in FTB Quests.

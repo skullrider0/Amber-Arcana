@@ -80,8 +80,8 @@
 			
 				{
 					id: "7E8A9A1921BDCA61"
-					table_id: 6186592811492234544L
-					title: "Tier 1 Depth Roll"
+					table_id: 4776605992129075617L
+					title: "Mekanism Industry Tier 1 Roll"
 					type: "loot"
 				}
 			]
@@ -130,8 +130,8 @@
 			
 				{
 					id: "27E9C03AAC5F6767"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 2059557368985092533L
+					title: "Mekanism Industry Tier 2 Roll"
 					type: "loot"
 				}
 			]

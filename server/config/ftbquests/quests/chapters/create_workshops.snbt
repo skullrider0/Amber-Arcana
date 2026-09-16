@@ -72,8 +72,8 @@
 			
 				{
 					id: "2695F9B7034F0EB9"
-					table_id: 6186592811492234544L
-					title: "Tier 1 Depth Roll"
+					table_id: 1618880879207947504L
+					title: "Create Workshops Tier 1 Roll"
 					type: "loot"
 				}
 			]
@@ -122,8 +122,8 @@
 			
 				{
 					id: "4011223250D2CA4B"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 5810496629928189331L
+					title: "Create Workshops Tier 2 Roll"
 					type: "loot"
 				}
 			]
@@ -172,8 +172,8 @@
 			
 				{
 					id: "720B3D7C25DF11D8"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 5810496629928189331L
+					title: "Create Workshops Tier 2 Roll"
 					type: "loot"
 				}
 			]

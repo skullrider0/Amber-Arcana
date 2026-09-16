@@ -1,0 +1,16 @@
+{
+	icon: "mekanism:enrichment_chamber"
+	id: "4249E9D7A0DB19A1"
+	loot_size: 1
+	order_index: 377
+	rewards: [
+		{ item: "mekanism:enrichment_chamber", weight: 9.00f }
+		{ item: "mekanism:metallurgic_infuser", weight: 9.00f }
+		{ item: "mekanism:purification_chamber", weight: 9.00f }
+		{ item: "mekanism:ultimate_energy_cube", weight: 9.00f }
+		{ item: "mekanism:mekasuit_helmet", weight: 9.00f }
+		{ item: "create:andesite_casing", weight: 9.00f }
+	]
+	title: "Mekanism Industry — Tier 1 Roll"
+	use_title: true
+}

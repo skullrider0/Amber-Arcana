@@ -1,0 +1,25 @@
+{
+	icon: "create:andesite_casing"
+	id: "038B11B1835B66C6"
+	loot_size: 3
+	order_index: 404
+	rewards: [
+		{ item: "create:andesite_casing", weight: 5.00f }
+		{ item: "create:cogwheel", weight: 0.60f }
+		{ item: "create:goggles", weight: 0.60f }
+		{ item: "tconstruct:seared_melter", weight: 5.00f }
+		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
+		{ item: "tconstruct:crafting_station", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 5.00f }
+		{ item: "create:cogwheel", weight: 0.60f }
+		{ item: "create:goggles", weight: 0.60f }
+		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
+		{ item: "tconstruct:seared_melter", weight: 5.00f }
+		{ item: "tconstruct:crafting_station", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 5.00f }
+		{ item: "create:cogwheel", weight: 0.60f }
+		{ item: "create:goggles", weight: 0.60f }
+	]
+	title: "Tinkers Construct — Tier 4 Roll"
+	use_title: true
+}

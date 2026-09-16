@@ -1,0 +1,21 @@
+{
+	icon: "create:andesite_casing"
+	id: "1B1063778FB33972"
+	loot_size: 2
+	order_index: 371
+	rewards: [
+		{ item: "create:andesite_casing", weight: 5.00f }
+		{ item: "create:cogwheel", weight: 5.00f }
+		{ item: "create:goggles", weight: 5.00f }
+		{ item: "create:large_cogwheel", weight: 5.00f }
+		{ item: "create:shaft", weight: 5.00f }
+		{ item: "sophisticatedbackpacks:backpack", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 5.00f }
+		{ item: "create:cogwheel", weight: 5.00f }
+		{ item: "create:goggles", weight: 5.00f }
+		{ item: "create:large_cogwheel", weight: 5.00f }
+		{ item: "create:shaft", weight: 5.00f }
+	]
+	title: "Getting Started — Tier 3 Roll"
+	use_title: true
+}

@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-31" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-31" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-32" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-32" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -64,7 +64,7 @@ diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server q
 for qroot in "$client_quests" "$server_quests"; do
   test -f "$qroot/chapter_groups.snbt" || { echo "Quest chapter_groups.snbt missing" >&2; exit 1; }
   test "$(find "$qroot/chapters" -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 live quest chapters" >&2; exit 1; }
-  test "$(find "$qroot/reward_tables" -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "35" || { echo "Expected 35 live reward tables" >&2; exit 1; }
+  test "$(find "$qroot/reward_tables" -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "135" || { echo "Expected 135 live reward tables" >&2; exit 1; }
 done
 grep -Fq 'subtitle: "Build your first safe shelter and claim starter supplies."' "$client_quests/chapters/getting_started.snbt" || { echo "Make a home subtitle missing" >&2; exit 1; }
 for item in minecraft:torch minecraft:bread minecraft:iron_ingot minecraft:compass minecraft:diamond minecraft:golden_carrot create:andesite_alloy create:brass_ingot minecraft:copper_block minecraft:powered_rail; do
@@ -98,7 +98,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-31 static validation passed"
+echo "Amber & Arcana 0.1.9-32 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -179,16 +179,23 @@ grep -Fq 'id: "productivebees:bee_cage"' "$pb_chapter" || { echo "Filled Product
 grep -Fq 'match_nbt: true' "$pb_chapter" || { echo "Productive Bees NBT matching missing" >&2; exit 1; }
 grep -Fq 'weak_nbt_match: true' "$pb_chapter" || { echo "Productive Bees weak NBT matching missing" >&2; exit 1; }
 
-test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'depth_tier_*.snbt' -type f | wc -l)" = "4" || { echo "Expected four client depth-tier reward tables" >&2; exit 1; }
-test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'depth_tier_*.snbt' -type f | wc -l)" = "4" || { echo "Expected four server depth-tier reward tables" >&2; exit 1; }
 loot_count="$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)"
 covered="$(jq -r '.quest_ux_0_1_9_30.loot_covered_quests' "$validation")"
 test "$loot_count" -ge "$covered" || { echo "Quest loot reward count is below recorded coverage" >&2; exit 1; }
 
 quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
-test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/reward_tables/depth_tier_4.snbt')" = "1" || { echo "Depth-tier tables missing from quest overlay" >&2; exit 1; }
 
 
-# 0.1.9-31 Productive Bees cage-label checks
+# 0.1.9-32 Productive Bees cage-label checks
 jq -e '.bee_cage_ui_0_1_9_31.cage_tasks_labeled == 26 and .bee_cage_ui_0_1_9_31.species_filters_verified == 26 and .bee_cage_ui_0_1_9_31.matching_behavior_changed == false and .bee_cage_ui_0_1_9_31.client_server_quest_files_identical == true' "$validation" >/dev/null
 test "$(grep -Ec '^\s*title: "Capture .*Bee"' "$client_quests/chapters/productive_bees.snbt")" -ge "26" || { echo "Productive Bees cage task species labels missing" >&2; exit 1; }
+
+
+# 0.1.9-32 mod-specific tier loot checks
+jq -e '.mod_tier_loot_0_1_9_32.tier_tables == 104 and .mod_tier_loot_0_1_9_32.depth_rewards_retargeted >= 100 and .mod_tier_loot_0_1_9_32.generic_depth_tables_remaining == 0 and .mod_tier_loot_0_1_9_32.powah_nitro_jackpots == 4 and .mod_tier_loot_0_1_9_32.client_server_quest_files_identical == true' "$validation" >/dev/null
+test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'modroll_*_tier_*.snbt' -type f | wc -l)" = "104" || { echo "Mod-specific tier table count mismatch" >&2; exit 1; }
+test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'depth_tier_*.snbt' -type f | wc -l)" = "0" || { echo "Legacy generic depth tables still present" >&2; exit 1; }
+if rg -n 'minecraft:(diamond|emerald|emerald_block)' "$client_quests/reward_tables/modroll_"* >/dev/null; then echo "Generic diamond/emerald leaked into mod tier tables" >&2; exit 1; fi
+grep -Fq 'item: "powah:thermo_generator_nitro", weight: 0.25f' "$client_quests/reward_tables/modroll_powah_tier_4.snbt" || { echo "Rare Nitro Thermo Generator jackpot missing" >&2; exit 1; }
+grep -Fq 'item: "powah:reactor_nitro", weight: 0.20f' "$client_quests/reward_tables/modroll_powah_tier_4.snbt" || { echo "Rare Nitro Reactor jackpot missing" >&2; exit 1; }
+grep -Fq 'loot_size: 3' "$client_quests/reward_tables/modroll_powah_tier_4.snbt" || { echo "High-tier multi-item roll missing" >&2; exit 1; }

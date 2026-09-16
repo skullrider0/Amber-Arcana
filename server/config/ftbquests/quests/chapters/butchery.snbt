@@ -71,8 +71,8 @@
 			
 				{
 					id: "0F9EA37A84236127"
-					table_id: 6186592811492234544L
-					title: "Tier 1 Depth Roll"
+					table_id: 8159238488607377893L
+					title: "Butchery Tier 1 Roll"
 					type: "loot"
 				}
 			]
@@ -119,8 +119,8 @@
 			
 				{
 					id: "1486CBCC9982E58C"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 7884837036022247062L
+					title: "Butchery Tier 2 Roll"
 					type: "loot"
 				}
 			]
@@ -167,8 +167,8 @@
 			
 				{
 					id: "0C2C858A691B8E81"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 7884837036022247062L
+					title: "Butchery Tier 2 Roll"
 					type: "loot"
 				}
 			]

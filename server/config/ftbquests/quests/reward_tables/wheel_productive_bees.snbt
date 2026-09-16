@@ -1,16 +1,25 @@
 {
 	icon: "productivebees:honey_treat"
 	id: "6F22A2C849A53E6E"
-	loot_size: 1
+	loot_size: 2
 	order_index: 130
 	rewards: [
-		{ count: 8, item: "productivebees:bee_cage", weight: 26.0f }
-		{ count: 16, item: "productivebees:honey_treat", weight: 24.0f }
-		{ item: "productivebees:advanced_oak_beehive", weight: 16.0f }
-		{ item: "productivebees:expansion_box_oak", weight: 14.0f }
-		{ item: "productivebees:centrifuge", weight: 10.0f }
-		{ item: "productivebees:feeder", weight: 6.0f }
-		{ item: "productivebees:breeding_chamber", weight: 4.0f }
+		{ item: "productivebees:centrifuge", weight: 5.00f }
+		{ item: "productivebees:breeding_chamber", weight: 5.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "productivebees:centrifuge", weight: 5.00f }
+		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
+		{ item: "productivebees:breeding_chamber", weight: 5.00f }
+		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
+		{ item: "productivebees:bee_cage", weight: 1.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
+		{ item: "productivebees:centrifuge", weight: 5.00f }
+		{ item: "productivebees:breeding_chamber", weight: 5.00f }
+		{ item: "productivebees:feeder", weight: 5.00f }
+		{ item: "productivebees:expansion_box_oak", weight: 5.00f }
+		{ item: "productivebees:advanced_oak_beehive", weight: 5.00f }
+		{ item: "productivebees:bee_cage", weight: 1.00f }
+		{ item: "create:andesite_casing", weight: 1.00f }
 	]
 	title: "Wheel of Fortune — Productive Bees"
 	use_title: true

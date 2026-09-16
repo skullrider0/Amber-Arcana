@@ -1,0 +1,22 @@
+{
+	icon: "create:andesite_casing"
+	id: "2509E06D30526843"
+	loot_size: 1
+	order_index: 337
+	rewards: [
+		{ item: "create:andesite_casing", weight: 9.00f }
+		{ item: "create:cogwheel", weight: 9.00f }
+		{ item: "create:goggles", weight: 9.00f }
+		{ item: "create:large_cogwheel", weight: 9.00f }
+		{ item: "create:shaft", weight: 9.00f }
+		{ item: "create:wrench", weight: 9.00f }
+		{ item: "create:andesite_alloy", weight: 9.00f }
+		{ item: "create:clutch", weight: 9.00f }
+		{ item: "create:gearbox", weight: 9.00f }
+		{ item: "create:gearshift", weight: 9.00f }
+		{ item: "create:mechanical_press", weight: 9.00f }
+		{ item: "create:speedometer", weight: 9.00f }
+	]
+	title: "Create Engineering — Tier 1 Roll"
+	use_title: true
+}

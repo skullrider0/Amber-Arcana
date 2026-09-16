@@ -1,15 +1,21 @@
 {
 	icon: "powah:thermo_generator_starter"
 	id: "4182860FC24D93C2"
-	loot_size: 1
+	loot_size: 2
 	order_index: 120
 	rewards: [
-		{ count: 8, item: "minecraft:redstone", weight: 18.0f }
-		{ count: 8, item: "minecraft:quartz", weight: 18.0f }
-		{ item: "minecraft:diamond", weight: 18.0f }
-		{ item: "powah:thermo_generator_starter", weight: 7.0f }
-		{ item: "powah:energizing_orb", weight: 7.0f }
-		{ item: "powah:energy_cell_basic", weight: 7.0f }
+		{ item: "powah:reactor_niotic", weight: 7.00f }
+		{ item: "powah:energizing_rod_niotic", weight: 7.00f }
+		{ item: "create:andesite_casing", weight: 14.00f }
+		{ item: "powah:thermo_generator_spirited", weight: 3.00f }
+		{ item: "powah:energy_cell_spirited", weight: 3.00f }
+		{ item: "powah:reactor_spirited", weight: 3.00f }
+		{ item: "powah:energizing_rod_spirited", weight: 3.00f }
+		{ item: "powah:thermo_generator_nitro", weight: 0.25f }
+		{ item: "powah:energy_cell_nitro", weight: 0.35f }
+		{ item: "powah:reactor_nitro", weight: 0.20f }
+		{ item: "powah:energizing_rod_nitro", weight: 0.50f }
+		{ item: "create:andesite_casing", weight: 14.00f }
 	]
 	title: "Wheel of Fortune — Powah Energy"
 	use_title: true

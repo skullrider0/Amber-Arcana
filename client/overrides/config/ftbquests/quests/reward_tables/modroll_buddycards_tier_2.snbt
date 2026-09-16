@@ -1,0 +1,23 @@
+{
+	icon: "create:goggles"
+	id: "67C3A0826AE912E2"
+	loot_size: 2
+	order_index: 326
+	rewards: [
+		{ item: "create:goggles", weight: 16.00f }
+		{ item: "create:large_cogwheel", weight: 16.00f }
+		{ item: "create:shaft", weight: 16.00f }
+		{ item: "create:wrench", weight: 16.00f }
+		{ item: "create:andesite_alloy", weight: 9.00f }
+		{ item: "create:clutch", weight: 9.00f }
+		{ item: "create:gearbox", weight: 9.00f }
+		{ item: "create:gearshift", weight: 9.00f }
+		{ item: "create:mechanical_press", weight: 9.00f }
+		{ item: "create:speedometer", weight: 9.00f }
+		{ item: "create:stressometer", weight: 9.00f }
+		{ item: "create:water_wheel", weight: 9.00f }
+		{ item: "create:andesite_casing", weight: 9.00f }
+	]
+	title: "Buddycards — Tier 2 Roll"
+	use_title: true
+}

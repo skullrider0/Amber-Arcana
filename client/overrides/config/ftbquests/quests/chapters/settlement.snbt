@@ -73,8 +73,8 @@
 			
 				{
 					id: "6BD2BC222AD06500"
-					table_id: 6186592811492234544L
-					title: "Tier 1 Depth Roll"
+					table_id: 2102205047588045513L
+					title: "Claims and Colonies Tier 1 Roll"
 					type: "loot"
 				}
 			]
@@ -122,8 +122,8 @@
 			
 				{
 					id: "549C95D73D131112"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 7873154793243079245L
+					title: "Claims and Colonies Tier 2 Roll"
 					type: "loot"
 				}
 			]
@@ -172,8 +172,8 @@
 			
 				{
 					id: "74A33F413B3EA315"
-					table_id: 2890082243860220727L
-					title: "Tier 2 Depth Roll"
+					table_id: 7873154793243079245L
+					title: "Claims and Colonies Tier 2 Roll"
 					type: "loot"
 				}
 			]

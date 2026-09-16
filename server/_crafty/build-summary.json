@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-31",
+  "pack_version": "0.1.9-32",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 276,
@@ -348,6 +348,26 @@
     "task_label_format": "Capture <exact quest bee species>",
     "matching_behavior_changed": false,
     "historical_ids_preserved": true,
+    "client_server_quest_files_identical": true
+  },
+  "mod_tier_loot_0_1_9_32": {
+    "chapter_roll_sets": 26,
+    "tier_tables": 104,
+    "tier_loot_sizes": {
+      "1": 1,
+      "2": 2,
+      "3": 2,
+      "4": 3
+    },
+    "depth_rewards_retargeted": 149,
+    "wheel_tables_rethemed": 26,
+    "wheel_modded_entries": 405,
+    "modded_tier_entries": 1184,
+    "generic_depth_tables_remaining": 0,
+    "powah_nitro_jackpots": 4,
+    "powah_nitro_max_weight": 0.5,
+    "total_reward_tables": 135,
+    "historical_quest_reward_ids_preserved": true,
     "client_server_quest_files_identical": true
   }
 }
