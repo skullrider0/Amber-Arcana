@@ -25,29 +25,33 @@ def validate_live_client_tree() -> None:
     if len(list(chapters.glob("*.snbt"))) != 25:
         raise RuntimeError("Expected 25 live quest chapters")
 
-    # Historical replay cleanup: later releases add generated depth reward tables
-    # and Tier N Depth Roll reward blocks. Ignore/remove those here so the 0.1.9-23
-    # baseline still has its original five tables and 0.1.9-26 can replay its 25
-    # finale wheels deterministically. 0.1.9-30 regenerates all depth rewards later.
+    # Historical replay cleanup: later releases add generated depth/mod-specific
+    # reward tables and Tier N Roll reward blocks. Ignore/remove those here so the
+    # 0.1.9-23 baseline still has its original five tables and 0.1.9-26 can replay
+    # its finale wheels deterministically. Current releases regenerate the later
+    # tiered rewards again during the normal build step.
     baseline_rewards = [
         p for p in rewards.glob("*.snbt")
-        if not p.name.startswith("wheel_") and not p.name.startswith("depth_tier_")
+        if not p.name.startswith(("wheel_", "depth_tier_", "modroll_"))
     ]
     if len(baseline_rewards) != 5:
         raise RuntimeError(f"Expected 5 baseline live reward tables, found {len(baseline_rewards)}")
-    for generated in rewards.glob("depth_tier_*.snbt"):
-        generated.unlink()
+    for pattern in ("depth_tier_*.snbt", "modroll_*.snbt"):
+        for generated in rewards.glob(pattern):
+            generated.unlink()
 
-    depth_reward = re.compile(
+    # Strip only generated depth/mod-tier quest rewards. Do not touch the separate
+    # chapter-finale Wheel of Fortune reward blocks.
+    generated_roll = re.compile(
         r'\n\s*\{\s*\n\s*id:\s*"[0-9A-F]{16}"\s*\n'
         r'\s*table_id:\s*\d+L\s*\n'
-        r'\s*title:\s*"Tier [1-4] Depth Roll"\s*\n'
+        r'\s*title:\s*"(?:Tier [1-4] Depth Roll|[^"\n]+ Tier [1-4] Roll)"\s*\n'
         r'\s*type:\s*"loot"\s*\n\s*\}',
         flags=re.MULTILINE,
     )
     for chapter in chapters.glob("*.snbt"):
         text = chapter.read_text()
-        cleaned = depth_reward.sub("", text)
+        cleaned = generated_roll.sub("", text)
         if cleaned != text:
             chapter.write_text(cleaned)
 
