@@ -5,33 +5,10 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 dist_dir="$repo_dir/dist"
 patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
 
-# 0.1.9-30 is assembled from small source parts in the same style as the older
-# quest24 generator. Running it here keeps the existing historical workflow
-# replay intact while ensuring every normal build receives the latest quest UX.
-cat "$repo_dir"/scripts/quest30-parts/*.part > "$repo_dir/scripts/hotfix-quest-ux-0.1.9-30.py"
-python3 "$repo_dir/scripts/hotfix-quest-ux-0.1.9-30.py"
-python3 "$repo_dir/scripts/normalize-validation-0.1.9-30.py"
-
-# 0.1.9-31 keeps the exact Productive Bees NBT matching from 0.1.9-30 but gives
-# every species-specific Bee Cage task an explicit species label in FTB Quests.
-python3 "$repo_dir/scripts/hotfix-bee-cage-labels-0.1.9-31.py"
-
-# 0.1.9-32 replaces the four global vanilla-heavy depth pools with four
-# chapter/mod-specific tiers, rethemes finale wheels, and keeps top-tier machines
-# as genuinely rare jackpots even though high-tier rolls return multiple items.
-python3 "$repo_dir/scripts/run-hotfix-mod-tier-loot-0.1.9-32.py"
-
-# 0.1.9-33 gives Productive Bees a much deeper weighted reward ladder, including
-# real late-mod upgrades and a tiny Omega Productivity jackpot chance.
-python3 "$repo_dir/scripts/hotfix-productive-bees-rewards-0.1.9-33.py"
-
-# 0.1.9-34 gives every formerly compact chapter a richer chapter-specific reward
-# curve. Its hardened runner remains replayable after those chapters are deepened.
-python3 "$repo_dir/scripts/run-hotfix-short-chain-rewards-0.1.9-34.py"
-
-# 0.1.9-35 turns those compact chapters into real mechanics progression trees:
-# historical acquisition milestones remain intact, hands-on stages gate local
-# dependencies, every quest gets a depth tier roll, and the wheel moves to mastery.
+# The repository stores the canonical current pack source. Historical quest
+# migrations (0.1.9-30 through 0.1.9-34) are already reflected in that source and
+# must not be replayed on every build, because doing so can flatten or regenerate
+# modern quest graphs. Only the current idempotent release transformer runs here.
 python3 "$repo_dir/scripts/hotfix-deep-short-progression-0.1.9-35.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
