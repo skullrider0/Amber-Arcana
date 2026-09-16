@@ -1,3 +1,10 @@
+## 0.1.9-40
+
+- Fixed Crafty server mod downloads after CurseForge enforced API-key authentication on direct CDN requests.
+- Added project IDs to the dedicated-server mod manifest and no-key CurseForge website/CurseMaven fallbacks.
+- Added optional authenticated CDN support through CURSEFORGE_API_KEY or _crafty/curseforge-api-key.txt.
+- The world-safe Crafty update overlay now includes the updated bootstrap launcher itself.
+
 ## 0.1.9-39
 
 - Added No Recipe Book Reborn 1.0.5 for Forge 1.20.1.

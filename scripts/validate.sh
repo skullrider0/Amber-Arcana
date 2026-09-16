@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-39" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-39" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-40" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-40" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -321,3 +321,34 @@ for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_stor
   test -f "$client_quests/reward_tables/wheel_${chapter}.snbt" || { echo "Missing Fortune Wheel: $chapter" >&2; exit 1; }
 done
 diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }
+
+
+# 0.1.9-39 ATM10-inspired semantic major progression checks
+jq -e '.atm10_major_progression_0_1_9_38.reference_pack == "AllTheMods/ATM-10" and .atm10_major_progression_0_1_9_38.reference_commit == "ab6f65e07b88423cdae1724864ba42a573ba758a" and .atm10_major_progression_0_1_9_38.existing_chapters_rebuilt == 7 and .atm10_major_progression_0_1_9_38.new_chapters_added == 2 and .atm10_major_progression_0_1_9_38.final_chapters == 28 and .atm10_major_progression_0_1_9_38.preserved_existing_quest_ids == 91 and .atm10_major_progression_0_1_9_38.reward_tables_final == 145 and .atm10_major_progression_0_1_9_38.fortune_wheels_touched == 9 and .atm10_major_progression_0_1_9_38.client_server_quest_files_identical == true' "$validation" >/dev/null
+for chapter in hostile_neural_networks draconic_evolution; do
+  test -f "$client_quests/chapters/$chapter.snbt" || { echo "Missing new 0.1.9-39 chapter: $chapter" >&2; exit 1; }
+done
+for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_storage; do
+  if rg -F 'AA35 deep progression milestone' "$client_quests/chapters/$chapter.snbt" >/dev/null; then
+    echo "Generic AA35 filler remains in rebuilt major chapter: $chapter" >&2
+    exit 1
+  fi
+done
+for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_storage hostile_neural_networks draconic_evolution; do
+  for tier in 1 2 3 4; do
+    test -f "$client_quests/reward_tables/modroll_${chapter}_tier_${tier}.snbt" || { echo "Missing hand-curated tier table: $chapter tier $tier" >&2; exit 1; }
+  done
+  test -f "$client_quests/reward_tables/wheel_${chapter}.snbt" || { echo "Missing Fortune Wheel: $chapter" >&2; exit 1; }
+done
+diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }
+
+
+# 0.1.9-40 CurseForge downloader compatibility checks
+jq -e '.curseforge_download_fix_0_1_9_40.server_manifest_has_project_ids == true and .curseforge_download_fix_0_1_9_40.curseforge_web_download_fallback == true and .curseforge_download_fix_0_1_9_40.cursemaven_fallback == true and .curseforge_download_fix_0_1_9_40.authenticated_cdn_supported == true and .curseforge_download_fix_0_1_9_40.launcher_in_update_overlay == true and .curseforge_download_fix_0_1_9_40.world_data_touched == false and .curseforge_download_fix_0_1_9_40.world_data_in_update_overlay == false' "$validation" >/dev/null
+awk -F '\t' 'BEGIN{bad=0} /^#/ || NF==0 {next} NF!=6 {bad++} $1!="0" && ($6=="" || $6=="0") {bad++} END{exit bad?1:0}' "$repo_dir/server/_crafty/server-mods.tsv" || { echo "0.1.9-40 server mod rows are missing project IDs" >&2; exit 1; }
+grep -Fq 'CURSEFORGE_API_KEY' "$repo_dir/server/_crafty/source/AmberArcanaCraftyLauncher.java" || { echo "Launcher API-key support missing" >&2; exit 1; }
+grep -Fq 'www.curseforge.com/api/v1/mods/' "$repo_dir/server/_crafty/source/AmberArcanaCraftyLauncher.java" || { echo "Launcher CurseForge web fallback missing" >&2; exit 1; }
+grep -Fq 'cursemaven.com' "$repo_dir/server/_crafty/source/AmberArcanaCraftyLauncher.java" || { echo "Launcher CurseMaven fallback missing" >&2; exit 1; }
+update_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Update-Overlay.zip"
+test "$(unzip -Z1 "$update_overlay" | grep -Fxc 'AmberArcana-Crafty-Launcher.jar')" = "1" || { echo "Updated Crafty launcher missing from update overlay" >&2; exit 1; }
+if unzip -Z1 "$update_overlay" | grep -Ei '(^|/)(world|world_nether|world_the_end)(/|$)' >/dev/null; then echo "World data leaked into update overlay" >&2; exit 1; fi

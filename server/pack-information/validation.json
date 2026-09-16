@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-39",
+  "pack_version": "0.1.9-40",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1426,5 +1426,19 @@
     "requires_server_update": false,
     "requires_client_update": true,
     "world_data_touched": false
+  },
+  "curseforge_download_fix_0_1_9_40": {
+    "reason": "CurseForge began requiring API-key authentication for direct CDN downloads on 2026-07-16; the old Crafty bootstrap therefore received 401 responses for missing server mods.",
+    "server_mod_rows": 266,
+    "server_mod_rows_with_project_ids": 265,
+    "server_manifest_has_project_ids": true,
+    "curseforge_web_download_fallback": true,
+    "cursemaven_fallback": true,
+    "authenticated_cdn_supported": true,
+    "api_key_env": "CURSEFORGE_API_KEY",
+    "api_key_file": "_crafty/curseforge-api-key.txt",
+    "launcher_in_update_overlay": true,
+    "world_data_touched": false,
+    "world_data_in_update_overlay": false
   }
 }

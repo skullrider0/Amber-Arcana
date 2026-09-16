@@ -143,3 +143,7 @@ ATM10-inspired milestone/branch audit for the major tech and magic chapters, plu
 
 ### 0.1.9-39 client QoL
 Adds No Recipe Book Reborn 1.0.5 to the client manifest only. It is not installed on the dedicated server and does not touch world data.
+
+
+### 0.1.9-40 CurseForge downloader
+Crafty can again populate a missing server mods directory after CurseForge's July 2026 CDN authentication change. The launcher first uses an authenticated CDN when CURSEFORGE_API_KEY is configured, otherwise it uses validated CurseForge web and CurseMaven fallbacks. The update overlay contains no world save data.

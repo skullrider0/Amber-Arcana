@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-39",
+  "pack_version": "0.1.9-40",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 286,
@@ -1480,5 +1480,19 @@
     "requires_server_update": false,
     "requires_client_update": true,
     "world_data_touched": false
+  },
+  "curseforge_download_fix_0_1_9_40": {
+    "reason": "CurseForge began requiring API-key authentication for direct CDN downloads on 2026-07-16; the old Crafty bootstrap therefore received 401 responses for missing server mods.",
+    "server_mod_rows": 266,
+    "server_mod_rows_with_project_ids": 265,
+    "server_manifest_has_project_ids": true,
+    "curseforge_web_download_fallback": true,
+    "cursemaven_fallback": true,
+    "authenticated_cdn_supported": true,
+    "api_key_env": "CURSEFORGE_API_KEY",
+    "api_key_file": "_crafty/curseforge-api-key.txt",
+    "launcher_in_update_overlay": true,
+    "world_data_touched": false,
+    "world_data_in_update_overlay": false
   }
 }
