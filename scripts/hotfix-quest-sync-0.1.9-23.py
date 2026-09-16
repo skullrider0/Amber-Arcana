@@ -24,8 +24,19 @@ def validate_live_client_tree() -> None:
     rewards = CLIENT_QUESTS / "reward_tables"
     if len(list(chapters.glob("*.snbt"))) != 25:
         raise RuntimeError("Expected 25 live quest chapters")
-    if len(list(rewards.glob("*.snbt"))) != 5:
-        raise RuntimeError("Expected 5 live reward tables")
+
+    # This is a historical replay gate for the five original reward tables.
+    # Later releases deliberately leave generated depth_tier_* files in the source
+    # tree, while wheel_* files are removed immediately before this replay. Ignore
+    # those later generated tables here instead of making future releases break the
+    # 0.1.9-23 baseline check.
+    baseline_rewards = [
+        p for p in rewards.glob("*.snbt")
+        if not p.name.startswith("wheel_") and not p.name.startswith("depth_tier_")
+    ]
+    if len(baseline_rewards) != 5:
+        raise RuntimeError(f"Expected 5 baseline live reward tables, found {len(baseline_rewards)}")
+
     gs = (chapters / "getting_started.snbt").read_text()
     ce = (chapters / "create_engineering.snbt").read_text()
     if 'subtitle: "Build your first safe shelter and claim starter supplies."' not in gs:
