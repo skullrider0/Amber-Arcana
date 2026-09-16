@@ -84,6 +84,66 @@ def robust_expand_pool(stem, tier, source_by_tier):
     return out[:target]
 
 
+def robust_render_wheel(table_id, order, title, pools):
+    # Build a full late-game wheel even for tiny three-quest chapters by using
+    # meaningful quantity variants of already-validated modded rewards. This keeps
+    # the pool thematic without inventing item IDs or falling back to vanilla loot.
+    candidates = pools[3] + pools[4]
+    unique = []
+    seen = set()
+    for count, item, weight in candidates:
+        key = (count, item)
+        if key in seen:
+            continue
+        seen.add(key)
+        if weight < 1.0:
+            final_weight = min(weight, 0.45)
+        elif mod.component_like(item):
+            final_weight = min(9.0, max(3.0, weight))
+        else:
+            final_weight = min(6.0, max(1.0, weight * 0.75))
+        unique.append((count, item, final_weight))
+        if len(unique) >= 24:
+            break
+
+    # If the chapter only has a couple of distinct machines, add further count
+    # variants rather than generic filler. These remain lower-weight than the
+    # ordinary single-item outcomes.
+    idx = 0
+    while len(unique) < 24:
+        _count, item, weight = candidates[idx % len(candidates)]
+        count = 2 + ((idx // max(1, len(candidates))) % 3)
+        key = (count, item)
+        if key not in seen:
+            seen.add(key)
+            final_weight = 2.0 if mod.component_like(item) else 0.8
+            unique.append((count, item, final_weight))
+        idx += 1
+        if idx > 500:
+            break
+
+    lines = [
+        "{",
+        f'\ticon: "{unique[0][1]}"',
+        f'\tid: "{table_id}"',
+        f"\tloot_size: {mod.FINALE_LOOT_SIZE}",
+        f"\torder_index: {order}",
+        "\trewards: [",
+    ]
+    for count, item, weight in unique:
+        cp = f"count: {count}, " if count != 1 else ""
+        lines.append(f'\t\t{{ {cp}item: "{item}", weight: {weight:.2f}f }}')
+    lines += [
+        "\t]",
+        f'\ttitle: "Wheel of Fortune — {title}"',
+        "\tuse_title: true",
+        "}",
+        "",
+    ]
+    return "\n".join(lines), len(unique)
+
+
 mod.bulky_count = bundle_count
 mod.expand_pool = robust_expand_pool
+mod.render_wheel = robust_render_wheel
 mod.main()
