@@ -45,7 +45,7 @@
 			]
 			subtitle: "Requires Wildlife observation tool; then confirm the milestone."
 			title: "Observe before collecting"
-			x: 0.0d
+			x: -14.0d
 			y: 0.0d
 		}
 		{
@@ -68,6 +68,13 @@
 					type: "xp"
 					xp: 150
 				}
+			
+				{
+					id: "3122643637C4CF30"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -86,7 +93,7 @@
 			]
 			subtitle: "Requires Companion leads; then confirm the milestone."
 			title: "Friends of different kinds"
-			x: 3.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
@@ -109,6 +116,13 @@
 					type: "xp"
 					xp: 200
 				}
+			
+				{
+					id: "0CDE4007A21D8AF9"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -127,7 +141,7 @@
 			]
 			subtitle: "Requires Rat pickup/deposit test containers; then confirm the milestone."
 			title: "A working rat team"
-			x: 6.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -150,6 +164,13 @@
 					type: "xp"
 					xp: 250
 				}
+			
+				{
+					id: "358D981829C259B5"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -167,8 +188,8 @@
 			]
 			subtitle: "Requires Dragon progression proof; then confirm the milestone."
 			title: "A home for dragons"
-			x: 0.0d
-			y: 3.0d
+			x: 7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7A142D1190A1BE80"]
@@ -215,8 +236,8 @@
 			]
 			subtitle: "Requires Night park lighting; then confirm the milestone."
 			title: "The park after dark"
-			x: 3.0d
-			y: 3.0d
+			x: 14.0d
+			y: 0.0d
 		}
 	]
 	title: "Wildlife and Companions"

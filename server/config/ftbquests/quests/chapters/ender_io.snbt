@@ -11,8 +11,8 @@
 			id: "3358221532325ED1",
 			subtitle: "Requires Conduit control materials; then confirm the milestone."
 			title: "Conduit workshop",
-			x: 0.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft Ender IO conduits and use them to connect one item, fluid, or energy route.",
@@ -29,6 +29,13 @@
 					id: "02E630C41790BF26"
 					type: "xp"
 					xp: 100
+				}
+			
+				{
+					id: "32D4AE8668EA6FAA"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -52,8 +59,8 @@
 			id: "0EBE8506C43A0D98",
 			subtitle: "Requires Processing station machines; then confirm the milestone."
 			title: "Machine integration",
-			x: 3.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Build an Ender IO processing station. Add filters and redstone control where needed.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -69,6 +76,13 @@
 					id: "59C3845F99217379"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "6871527493616134"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -95,8 +109,8 @@
 			id: "67881CF73E1F3602",
 			subtitle: "Requires Factory routing buffers; then confirm the milestone."
 			title: "A tidy factory",
-			x: 6.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Replace a messy section of factory routing with a serviceable conduit run. Label buffers and make maintenance access easy.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

@@ -11,8 +11,8 @@
 			id: "70C7ABF21CA802F5",
 			subtitle: "Requires Settlement building stock; then confirm the milestone."
 			title: "A place to call home",
-			x: 0.0,
-			y: 0.0,
+			x: -14.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Choose a settlement site with room for farms, factory buildings, and animal enclosures. Use the MineColonies build preview before committing to the first buildings.",
@@ -52,8 +52,8 @@
 			id: "7AF3658FEB97583B",
 			subtitle: "Requires Settlement claim map; then confirm the milestone."
 			title: "Claim together",
-			x: 3.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			description: [
 				"Create your FTB team, invite your friends, and claim the settlement with FTB Chunks. Colony permissions and FTB team membership are separate; give builders access in both systems.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -69,6 +69,13 @@
 					id: "D0E071E651E3F459"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "6BD2BC222AD06500"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -94,8 +101,8 @@
 			id: "7B1372B7801FD7F7",
 			subtitle: "Requires Builder work supplies; then confirm the milestone."
 			title: "The first builders",
-			x: 6.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Establish the Town Hall and a Builder. Supply the requested materials and let the Builder finish a hut. If work stalls, check the worker request list, then check claim permissions.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -111,6 +118,13 @@
 					id: "FC41035166A666AF"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "549C95D73D131112"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -137,8 +151,8 @@
 			id: "7FDBD04CDCC2AC42",
 			subtitle: "Requires Warehouse and delivery buffers; then confirm the milestone."
 			title: "From warehouse to workshop",
-			x: 0.0,
-			y: 3.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Add a Warehouse and Courier, then deliver one batch of Create-produced building materials to the colony. Watch a delivery reach the requesting worker.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -154,6 +168,13 @@
 					id: "37AB774EBAEADD9D"
 					type: "xp"
 					xp: 250
+				}
+			
+				{
+					id: "74A33F413B3EA315"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -180,8 +201,8 @@
 			id: "7E43AF9888FA9F2E",
 			subtitle: "Requires Colony food supply; then confirm the milestone."
 			title: "A town that feeds itself",
-			x: 3.0,
-			y: 3.0,
+			x: 14.0d,
+			y: 0.0d,
 			description: [
 				"Establish food production and a kitchen. Supply a Farmer's Delight meal from your factory to the settlement and confirm the colony can use that food before scaling up.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

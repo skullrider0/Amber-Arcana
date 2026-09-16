@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9-30 — Quest UX, tiered rewards, and automatic bee verification
+
+- Replace literal ampersands in player-facing FTB Quests labels with parser-safe wording, fixing red `Invalid formatting` group headers.
+- Re-layout every chapter into compact left-to-right dependency layers to reduce giant empty gaps and long crossing lines.
+- Give at least 70% of quests a loot roll, counting existing chapter finales; new rolls use four depth tiers and never replace fixed rewards.
+- Make Productive Bees species milestones inventory-detected: comb-producing configurable bees require their exact typed honeycomb, while non-comb or non-configurable bees require the exact species in a filled Bee Cage.
+- Use `match_nbt: true` plus weak NBT matching so cage metadata can contain normal extra bee state without defeating species detection.
+- Preserve existing quest, task, reward, chapter, and group IDs; client/server quest trees remain identical.
+
 ## 0.1.9-29 — Mechanics-based quest organization
 
 - Reorganize all 26 FTB Quests chapters into stable mechanic-based chapter groups.

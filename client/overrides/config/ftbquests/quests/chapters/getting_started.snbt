@@ -25,7 +25,7 @@
 	quests: [
 		{
 			description: [
-				"{\"text\":\"Welcome to Amber & Arcana!\",\"color\":\"gold\"}"
+				"{\"text\":\"Welcome to Amber and Arcana!\",\"color\":\"gold\"}"
 				""
 				"Gather wood, stone, food, and a bed. Build a safe shelter and use JEI to look up recipes."
 				""
@@ -53,6 +53,13 @@
 					type: "xp"
 					xp: 100
 				}
+			
+				{
+					id: "19276653003F21D7"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.25d
@@ -79,7 +86,7 @@
 			]
 			subtitle: "Build your first safe shelter and claim starter supplies."
 			title: "Make a home"
-			x: 0.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
@@ -116,6 +123,13 @@
 					type: "xp"
 					xp: 150
 				}
+			
+				{
+					id: "753DAE4986F7F61E"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.25d
@@ -135,7 +149,7 @@
 			]
 			subtitle: "Requires Claim-planning map; then confirm the milestone."
 			title: "Claim your workshop"
-			x: 3.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -193,9 +207,9 @@
 			]
 			subtitle: "Requires Sophisticated Backpack; then confirm the milestone."
 			title: "Tools for the journey"
-			x: 6.0d
+			x: 7.0d
 			y: 0.0d
 		}
 	]
-	title: "{\"text\":\"Welcome to Amber & Arcana\"}"
+	title: "{\"text\":\"Welcome to Amber and Arcana\"}"
 }

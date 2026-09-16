@@ -11,8 +11,8 @@
 			id: "4422161D0412164C",
 			subtitle: "Requires Seasonal food reserve; then confirm the milestone."
 			title: "Seasonal estate",
-			x: 0.0,
-			y: 0.0,
+			x: -10.5d,
+			y: 0.0d,
 			dependencies: [
 				"6A19120000000601"
 				"27F120E99FCF093B"
@@ -58,8 +58,8 @@
 			id: "5112E3596ADFFB90",
 			subtitle: "Requires Civilization transport link; then confirm the milestone."
 			title: "Connected civilization",
-			x: 3.0,
-			y: 0.0,
+			x: -3.5d,
+			y: 0.0d,
 			description: [
 				"Link your colony, factories, magical workshops, zoo, aquarium, and dinosaur park with transport routes.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -75,6 +75,13 @@
 					id: "65AA6FE56BB640DF"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "4DB468C5FB41F3C2"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -101,8 +108,8 @@
 			id: "2632742BFA82EB75",
 			subtitle: "Requires Adventure-ready armor; then confirm the milestone."
 			title: "Adventure ready",
-			x: 6.0,
-			y: 0.0,
+			x: 3.5d,
+			y: 0.0d,
 			description: [
 				"Prepare powerful equipment through Mekanism, Tinkers, magic, and exploration rewards. Apotheosis is excluded from this pack.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -118,6 +125,13 @@
 					id: "1B49F12EBBCBFCDA"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "3C0C384C574A9876"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -143,8 +157,8 @@
 			id: "1C5E1BCE0A87E013",
 			subtitle: "Requires Grand-opening reserve; then confirm the milestone."
 			title: "The grand opening",
-			x: 9.0,
-			y: 0.0,
+			x: 10.5d,
+			y: 0.0d,
 			description: [
 				"Complete a visitor route through the park and a tour of your factories and magical builds. Invite friends to add their own districts.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

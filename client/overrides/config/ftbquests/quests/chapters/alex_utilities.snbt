@@ -46,7 +46,7 @@
 			]
 			subtitle: "Requires Remote storage containers; then confirm the milestone."
 			title: "Cloud deliveries"
-			x: 0.0d
+			x: -14.0d
 			y: 0.0d
 		}
 		{
@@ -69,6 +69,13 @@
 					type: "xp"
 					xp: 150
 				}
+			
+				{
+					id: "1A54E46D36C14B32"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -87,7 +94,7 @@
 			]
 			subtitle: "Requires Primary and backup beds; then confirm the milestone."
 			title: "A second bed"
-			x: 3.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
@@ -110,6 +117,13 @@
 					type: "xp"
 					xp: 200
 				}
+			
+				{
+					id: "4787A9CA53988CF8"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -127,7 +141,7 @@
 			]
 			subtitle: "Requires Personal banner; then confirm the milestone."
 			title: "A personal banner"
-			x: 6.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -150,6 +164,13 @@
 					type: "xp"
 					xp: 250
 				}
+			
+				{
+					id: "642AFE070ED5D027"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -168,8 +189,8 @@
 			]
 			subtitle: "Requires Skate-route supplies; then confirm the milestone."
 			title: "Skate through town"
-			x: 0.0d
-			y: 3.0d
+			x: 7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7A9CC6DDD312FFA2"]
@@ -216,8 +237,8 @@
 			]
 			subtitle: "Requires Museum displays; then confirm the milestone."
 			title: "The illustrated museum"
-			x: 3.0d
-			y: 3.0d
+			x: 14.0d
+			y: 0.0d
 		}
 	]
 	title: "Exhibits and Everyday Tools"

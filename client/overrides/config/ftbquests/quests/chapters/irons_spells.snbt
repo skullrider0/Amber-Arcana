@@ -11,8 +11,8 @@
 			id: "2F90A5A4DB0404F1",
 			subtitle: "Requires Iron Spell Book; completion is detected automatically."
 			title: "Choose a school",
-			x: 0.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Find or craft a spellbook and learn a spell. Read its mana cost and cooldown before entering combat.",
@@ -29,6 +29,13 @@
 					id: "26FBFF038DF49208"
 					type: "xp"
 					xp: 100
+				}
+			
+				{
+					id: "07780EB6FAC5E825"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -52,8 +59,8 @@
 			id: "017F83F1867628E2",
 			subtitle: "Requires Inscription Table; completion is detected automatically."
 			title: "The inscription workshop",
-			x: 3.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Build the spell-crafting stations supported by this version and improve your book and equipment.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -69,6 +76,13 @@
 					id: "DC97FAB8BC74E47C"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "7B73A7F9597F608D"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -95,8 +109,8 @@
 			id: "00C1FF44E8C395ED",
 			subtitle: "Requires Cross-mod spell materials; then confirm the milestone."
 			title: "Spells beyond the surface",
-			x: 6.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Explore the installed Alexs Caves spell addon and Create Wizardry. Use JEI to find the recipes that connect the systems.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

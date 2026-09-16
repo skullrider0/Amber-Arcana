@@ -46,7 +46,7 @@
 			]
 			subtitle: "Requires Card-sorting supplies; then confirm the milestone."
 			title: "Your first collection"
-			x: 0.0d
+			x: -17.5d
 			y: 0.0d
 		}
 		{
@@ -69,6 +69,13 @@
 					type: "xp"
 					xp: 150
 				}
+			
+				{
+					id: "1741566E542E4C7A"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -87,7 +94,7 @@
 			]
 			subtitle: "Requires Mechanical recycling materials; then confirm the milestone."
 			title: "Mechanical recycling"
-			x: 3.0d
+			x: -10.5d
 			y: 0.0d
 		}
 		{
@@ -110,6 +117,13 @@
 					type: "xp"
 					xp: 200
 				}
+			
+				{
+					id: "12AB5D69B4410191"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -128,7 +142,7 @@
 			]
 			subtitle: "Requires Farm collection supplies; then confirm the milestone."
 			title: "The farmers collection"
-			x: 6.0d
+			x: -3.5d
 			y: 0.0d
 		}
 		{
@@ -151,6 +165,13 @@
 					type: "xp"
 					xp: 250
 				}
+			
+				{
+					id: "14656A796E7BFD97"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -168,8 +189,8 @@
 			]
 			subtitle: "Requires Fishing setup; then confirm the milestone."
 			title: "Cards from the water"
-			x: 0.0d
-			y: 3.0d
+			x: 3.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7213DF73BF55B790"]
@@ -191,6 +212,13 @@
 					type: "xp"
 					xp: 300
 				}
+			
+				{
+					id: "6FEDF55C7DF16916"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -209,8 +237,8 @@
 			]
 			subtitle: "Requires AE2 collection materials; then confirm the milestone."
 			title: "Singularity collector"
-			x: 3.0d
-			y: 3.0d
+			x: 10.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7683E53A2478761A"]
@@ -257,8 +285,8 @@
 			]
 			subtitle: "Requires Museum displays; then confirm the milestone."
 			title: "A museum of friendships"
-			x: 6.0d
-			y: 3.0d
+			x: 17.5d
+			y: 0.0d
 		}
 	]
 	title: "The Collectors Club"

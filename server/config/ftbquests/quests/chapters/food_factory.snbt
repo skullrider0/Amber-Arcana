@@ -11,8 +11,8 @@
 			id: "7E251CBA1509E973",
 			subtitle: "Requires Seasonal staple crop; then confirm the milestone."
 			title: "A seasonal farm",
-			x: 0.0,
-			y: 0.0,
+			x: -14.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Check Serene Seasons crop information and grow a Farmer's Delight crop during a suitable season. Reserve protected growing space for your staple crops.",
@@ -52,8 +52,8 @@
 			id: "7A7B1E2BC56BBFAC",
 			subtitle: "Requires Cheese production input; then confirm the milestone."
 			title: "Cheese on the belt",
-			x: 3.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			description: [
 				"Build a Cheese Factory production line and store its output separately from Rats cheese until JEI confirms any shared recipes or tags.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -69,6 +69,13 @@
 					id: "00F60BAAAF41882C"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "30BC6FC0C1A7A5B9"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -95,8 +102,8 @@
 			id: "7E926CB17B6B198E",
 			subtitle: "Requires Drink production input; then confirm the milestone."
 			title: "Cola for the crew",
-			x: 6.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Automate a Cola Factory drink from its raw ingredients through bottling. Provide storage overflow handling.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -112,6 +119,13 @@
 					id: "C899CA5DCE8B87C2"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "453C21570F64D80D"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -138,8 +152,8 @@
 			id: "7480F7554AF497FF",
 			subtitle: "Requires Prepared feast; then confirm the milestone."
 			title: "A fried feast",
-			x: 0.0,
-			y: 3.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Use Deepfried and its Bitterballen dependency to prepare a meal. Connect compatible cutting and processing steps with Slice and Dice or Central Kitchen.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -155,6 +169,13 @@
 					id: "09FDC94D787DE947"
 					type: "xp"
 					xp: 250
+				}
+			
+				{
+					id: "12C275B535402C57"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -181,8 +202,8 @@
 			id: "7D0F5EFE4719D539",
 			subtitle: "Requires Pantry reserve; then confirm the milestone."
 			title: "A dependable pantry",
-			x: 3.0,
-			y: 3.0,
+			x: 14.0d,
+			y: 0.0d,
 			description: [
 				"Keep a buffer of at least two usable meal types through a season change. Eat Andesite is a novelty option; keep a proper kitchen for colony meals.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

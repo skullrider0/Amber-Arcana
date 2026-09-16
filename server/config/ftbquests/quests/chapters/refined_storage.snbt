@@ -11,8 +11,8 @@
 			id: "4AFB3BC1D5AEA04F",
 			subtitle: "Requires RS Controller + RS Grid + Disk Drive; completion is detected automatically."
 			title: "Digital storage",
-			x: 0.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Build a powered Controller, Grid, Disk Drive, and storage disk. Keep important supplies accessible while you work on the network.",
@@ -29,6 +29,13 @@
 					id: "C8192479E08BF0ED"
 					type: "xp"
 					xp: 100
+				}
+			
+				{
+					id: "07F1A3B71074EEB8"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -66,8 +73,8 @@
 			id: "1453151A6BAA50DA",
 			subtitle: "Requires Importer + Exporter; completion is detected automatically."
 			title: "Connected production",
-			x: 3.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Connect importers, exporters, and external storage to one production line. Avoid import/export loops.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -83,6 +90,13 @@
 					id: "5EBECD7BBBA72881"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "5DF0CB0CD075F643"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -116,8 +130,8 @@
 			id: "6F10E04E6E520C5C",
 			subtitle: "Requires Crafting Grid; completion is detected automatically."
 			title: "Automatic crafting",
-			x: 6.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Create patterns and automate one useful component, then expand with the installed Refined Storage addons.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."

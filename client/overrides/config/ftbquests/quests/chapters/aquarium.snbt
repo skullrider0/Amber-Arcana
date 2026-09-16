@@ -46,7 +46,7 @@
 			]
 			subtitle: "Requires Habitat glass; then confirm the milestone."
 			title: "Plan the habitats"
-			x: 0.0d
+			x: -10.5d
 			y: 0.0d
 		}
 		{
@@ -68,6 +68,13 @@
 					id: "080FE0578F23AA47"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "3A4C31B032C9E248"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -94,7 +101,7 @@
 			]
 			subtitle: "Requires Freshwater and marine water + Display fish; then confirm the milestone."
 			title: "An aquarium gallery"
-			x: 3.0d
+			x: -3.5d
 			y: 0.0d
 		}
 		{
@@ -117,6 +124,13 @@
 					type: "xp"
 					xp: 200
 				}
+			
+				{
+					id: "7AC2ABD86B78F79F"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -135,7 +149,7 @@
 			]
 			subtitle: "Requires Companion handling supplies; then confirm the milestone."
 			title: "Companions"
-			x: 6.0d
+			x: 3.5d
 			y: 0.0d
 		}
 		{
@@ -183,7 +197,7 @@
 			]
 			subtitle: "Requires Animal care supplies; then confirm the milestone."
 			title: "Care and transport"
-			x: 9.0d
+			x: 10.5d
 			y: 0.0d
 		}
 	]

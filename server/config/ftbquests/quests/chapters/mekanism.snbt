@@ -11,8 +11,8 @@
 			id: "6562879F7F787283",
 			subtitle: "Requires Metallurgic Infuser + Enrichment Chamber; completion is detected automatically."
 			title: "A powered machine room",
-			x: 0.0,
-			y: 0.0,
+			x: -10.5d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Generate energy, connect cables, and run a Metallurgic Infuser and Enrichment Chamber. Leave room for upgrades.",
@@ -59,8 +59,8 @@
 			id: "0C7A1308769A74B9",
 			subtitle: "Requires Advanced ore-processing machine; completion is detected automatically."
 			title: "Ore processing",
-			x: 3.0,
-			y: 0.0,
+			x: -3.5d,
+			y: 0.0d,
 			description: [
 				"Build a reliable processing line and automate its inputs and outputs. Expand chemical processing only after checking the installed recipes.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -76,6 +76,13 @@
 					id: "AD4C9DAC73A9C17E"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "7E8A9A1921BDCA61"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -102,8 +109,8 @@
 			id: "6E3143B357129102",
 			subtitle: "Requires High-capacity energy buffer; completion is detected automatically."
 			title: "Power with safeguards",
-			x: 6.0,
-			y: 0.0,
+			x: 3.5d,
+			y: 0.0d,
 			description: [
 				"Build a larger energy system. Read the reactor guide before operation and provide a reliable shutdown and waste-handling plan for any fission installation.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -119,6 +126,13 @@
 					id: "86EA4FA68B78611F"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "27E9C03AAC5F6767"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -145,8 +159,8 @@
 			id: "27F120E99FCF093B",
 			subtitle: "Requires MekaSuit Helmet; completion is detected automatically."
 			title: "The MekaSuit",
-			x: 9.0,
-			y: 0.0,
+			x: 10.5d,
+			y: 0.0d,
 			description: [
 				"Craft and charge the MekaSuit pieces, then install modules appropriate to your exploration plans.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."

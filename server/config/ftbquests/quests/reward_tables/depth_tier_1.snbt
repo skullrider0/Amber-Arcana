@@ -1,0 +1,16 @@
+{
+	icon: "minecraft:iron_ingot"
+	id: "55DB316252FAD530"
+	loot_size: 1
+	order_index: 201
+	rewards: [
+		{ count: 16, item: "minecraft:coal", weight: 24.0f }
+		{ count: 8, item: "minecraft:iron_ingot", weight: 20.0f }
+		{ count: 12, item: "minecraft:copper_ingot", weight: 20.0f }
+		{ count: 16, item: "minecraft:redstone", weight: 16.0f }
+		{ count: 8, item: "minecraft:bread", weight: 12.0f }
+		{ count: 32, item: "minecraft:torch", weight: 8.0f }
+	]
+	title: "Depth Tier 1 Supply Roll"
+	use_title: true
+}

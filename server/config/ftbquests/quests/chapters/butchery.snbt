@@ -45,7 +45,7 @@
 			]
 			subtitle: "Requires Butchery cutting tool; then confirm the milestone."
 			title: "A working butchery"
-			x: 0.0d
+			x: -14.0d
 			y: 0.0d
 		}
 		{
@@ -68,6 +68,13 @@
 					type: "xp"
 					xp: 150
 				}
+			
+				{
+					id: "0F9EA37A84236127"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -86,7 +93,7 @@
 			]
 			subtitle: "Requires Prepared meat; then confirm the milestone."
 			title: "From cuts to cooking"
-			x: 3.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
@@ -109,6 +116,13 @@
 					type: "xp"
 					xp: 200
 				}
+			
+				{
+					id: "1486CBCC9982E58C"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -127,7 +141,7 @@
 			]
 			subtitle: "Requires Blood-handling containers; then confirm the milestone."
 			title: "The blood workshop"
-			x: 6.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -150,6 +164,13 @@
 					type: "xp"
 					xp: 250
 				}
+			
+				{
+					id: "0C2C858A691B8E81"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -167,8 +188,8 @@
 			]
 			subtitle: "Requires Faction provisions; then confirm the milestone."
 			title: "Vampire provisions"
-			x: 0.0d
-			y: 3.0d
+			x: 7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["71462C1C525987DD"]
@@ -215,8 +236,8 @@
 			]
 			subtitle: "Requires Animal handling supplies; then confirm the milestone."
 			title: "Expanded processing"
-			x: 3.0d
-			y: 3.0d
+			x: 14.0d
+			y: 0.0d
 		}
 	]
 	title: "Butchery and Bloodcraft"

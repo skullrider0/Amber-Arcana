@@ -28,6 +28,13 @@
 					type: "xp"
 					xp: 100
 				}
+			
+				{
+					id: "2D15DE8B7DAFF4FF"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -46,7 +53,7 @@
 			]
 			subtitle: "Requires Novice Spell Book; completion is detected automatically."
 			title: "First spells"
-			x: 0.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
@@ -68,6 +75,13 @@
 					id: "F2D9E6DD20544C1D"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "180B0E9723DE5775"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -94,7 +108,7 @@
 			]
 			subtitle: "Requires Source Jar + Enchanting Apparatus; completion is detected automatically."
 			title: "Source and crafting"
-			x: 3.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -142,7 +156,7 @@
 			]
 			subtitle: "Requires Spell Turret; completion is detected automatically."
 			title: "A magical factory"
-			x: 6.0d
+			x: 7.0d
 			y: 0.0d
 		}
 	]

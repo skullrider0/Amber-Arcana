@@ -1,0 +1,17 @@
+{
+	icon: "minecraft:gold_ingot"
+	id: "281BA27D0CF3CB37"
+	loot_size: 1
+	order_index: 202
+	rewards: [
+		{ count: 16, item: "minecraft:iron_ingot", weight: 22.0f }
+		{ count: 8, item: "minecraft:gold_ingot", weight: 18.0f }
+		{ count: 32, item: "minecraft:redstone", weight: 18.0f }
+		{ count: 16, item: "minecraft:lapis_lazuli", weight: 14.0f }
+		{ count: 4, item: "minecraft:emerald", weight: 12.0f }
+		{ count: 4, item: "minecraft:ender_pearl", weight: 10.0f }
+		{ count: 8, item: "minecraft:experience_bottle", weight: 6.0f }
+	]
+	title: "Depth Tier 2 Supply Roll"
+	use_title: true
+}

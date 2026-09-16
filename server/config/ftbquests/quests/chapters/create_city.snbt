@@ -11,8 +11,8 @@
 			id: "761378307EDFBEE1",
 			subtitle: "Requires Station rails; then confirm the milestone."
 			title: "A station with character",
-			x: 0.0,
-			y: 0.0,
+			x: -14.0d,
+			y: 0.0d,
 			dependencies: [
 				"6A19120000000601"
 				"7E43AF9888FA9F2E"
@@ -55,8 +55,8 @@
 			id: "70339CEBB0BD2F57",
 			subtitle: "Requires Industrial chimney materials; then confirm the milestone."
 			title: "Smoke on the skyline",
-			x: 3.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			description: [
 				"Add Chimneys to a train or industrial build. Ride past the station and check that smoke remains readable with your chosen shader settings.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -72,6 +72,13 @@
 					id: "A79EF2C1210D9914"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "3F2AAA1AF802CC55"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -98,8 +105,8 @@
 			id: "7841A29AC08B5763",
 			subtitle: "Requires Escalator construction metal; then confirm the milestone."
 			title: "Going up",
-			x: 6.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Build a powered Escalated escalator that connects two public floors. Test walking onto and off both ends.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -115,6 +122,13 @@
 					id: "8F7202C4206ED5BE"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "36443EF27FF027A9"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -141,8 +155,8 @@
 			id: "79E392E17A92926E",
 			subtitle: "Requires Music hall instruments; then confirm the milestone."
 			title: "Music hall",
-			x: 0.0,
-			y: 3.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Construct a Sound of Steam pipe organ. Arrange a short musical phrase and provide a listening area for friends.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -158,6 +172,13 @@
 					id: "BF66C1B56C64A3DC"
 					type: "xp"
 					xp: 250
+				}
+			
+				{
+					id: "1445C067214D179C"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -184,8 +205,8 @@
 			id: "721E611D8E8141A3",
 			subtitle: "Requires District signs; then confirm the milestone."
 			title: "The finished district",
-			x: 3.0,
-			y: 3.0,
+			x: 14.0d,
+			y: 0.0d,
 			description: [
 				"Connect the station, factory, colony, and zoo with clear paths and signs. Use FindMe to retrieve a building material from nearby storage.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

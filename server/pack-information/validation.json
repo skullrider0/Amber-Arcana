@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-29",
+  "pack_version": "0.1.9-30",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -261,6 +261,30 @@
       }
     ],
     "all_chapters_explicitly_assigned": true,
+    "historical_ids_preserved": true,
+    "client_server_quest_files_identical": true
+  },
+  "quest_ux_0_1_9_30": {
+    "group_labels_fixed": true,
+    "chapters_relaid_out": 26,
+    "max_chapter_width": 119.0,
+    "max_chapter_height": 19.2,
+    "total_quests": 228,
+    "loot_covered_quests": 175,
+    "loot_coverage_percent": 76.8,
+    "tier_loot_rewards_added": 149,
+    "tier_tables": 4,
+    "tier_reward_counts": {
+      "1": 33,
+      "2": 26,
+      "3": 10,
+      "4": 80
+    },
+    "total_reward_tables": 35,
+    "bee_species_item_detection": 66,
+    "bee_comb_tasks": 40,
+    "bee_cage_tasks": 26,
+    "bee_manual_species_tasks_remaining": 0,
     "historical_ids_preserved": true,
     "client_server_quest_files_identical": true
   }

@@ -1,13 +1,13 @@
 {
 	chapter_groups: [
 		{ id: "5A29000000000001", title: "Start Here" }
-		{ id: "5A29000000000002", title: "Machines & Production" }
-		{ id: "5A29000000000003", title: "Storage & Networks" }
-		{ id: "5A29000000000004", title: "Resources & Farming" }
-		{ id: "5A29000000000005", title: "Magic & Rituals" }
-		{ id: "5A29000000000006", title: "Exploration & Creatures" }
-		{ id: "5A29000000000007", title: "Building & Settlements" }
-		{ id: "5A29000000000008", title: "Tools, Combat & Equipment" }
-		{ id: "5A29000000000009", title: "Collections & Endgame" }
+		{ id: "5A29000000000002", title: "Machines and Production" }
+		{ id: "5A29000000000003", title: "Storage and Networks" }
+		{ id: "5A29000000000004", title: "Resources and Farming" }
+		{ id: "5A29000000000005", title: "Magic and Rituals" }
+		{ id: "5A29000000000006", title: "Exploration and Creatures" }
+		{ id: "5A29000000000007", title: "Building and Settlements" }
+		{ id: "5A29000000000008", title: "Tools, Combat and Equipment" }
+		{ id: "5A29000000000009", title: "Collections and Endgame" }
 	]
 }

@@ -11,8 +11,8 @@
 			id: "538C111A2F15C97F",
 			subtitle: "Requires Fossil evidence; then confirm the milestone."
 			title: "Collect evidence",
-			x: 0.0,
-			y: 0.0,
+			x: -10.5d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Explore for fossils and unusual amber. Keep Prehistoric Legacy specimens separate from Fossils and Archeology specimens because they use different processing systems.",
@@ -52,8 +52,8 @@
 			id: "63C450EF80054073",
 			subtitle: "Requires Laboratory glassware and containment; then confirm the milestone."
 			title: "The amber laboratory",
-			x: 3.0,
-			y: 0.0,
+			x: -3.5d,
+			y: 0.0d,
 			description: [
 				"Follow Prehistoric Legacys guide to process unusual amber through its extraction and revival stages. Supply each machine with the resources it actually requires.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -69,6 +69,13 @@
 					id: "EFA821828D2E2561"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "403AB8F28F2FD008"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -95,8 +102,8 @@
 			id: "3B1E3F88AAA755B8",
 			subtitle: "Requires Revival/incubation supplies; then confirm the milestone."
 			title: "Fossils and revival",
-			x: 6.0,
-			y: 0.0,
+			x: 3.5d,
+			y: 0.0d,
 			description: [
 				"Use the Fossils and Archeology guide to analyze a fossil, obtain DNA, and complete a revival sequence.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -112,6 +119,13 @@
 					id: "29A8F73FC4D8B60B"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "74539EFD8C67CEBF"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -138,8 +152,8 @@
 			id: "7D39BB362CB3149A",
 			subtitle: "Requires Secure habitat barriers; then confirm the milestone."
 			title: "A secure habitat",
-			x: 9.0,
-			y: 0.0,
+			x: 10.5d,
+			y: 0.0d,
 			description: [
 				"Build a species-appropriate enclosure before releasing your first dinosaur. Provide food and secure visitor paths, then document its care needs.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

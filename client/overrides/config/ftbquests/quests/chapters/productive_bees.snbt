@@ -30,7 +30,7 @@
 			}
 			]
 			title: "Bee Cage"
-			x: 0.0d
+			x: -49.0d
 			y: 0.0d
 		}
 		{
@@ -58,8 +58,8 @@
 			}
 			]
 			title: "Advanced Beehive"
-			x: 0.0d
-			y: 2.0d
+			x: -42.0d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -86,8 +86,8 @@
 			}
 			]
 			title: "Expansion Box"
-			x: 0.0d
-			y: 4.0d
+			x: -35.0d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -114,8 +114,8 @@
 			}
 			]
 			title: "Feeder"
-			x: 0.0d
-			y: 6.0d
+			x: -28.0d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -142,8 +142,8 @@
 			}
 			]
 			title: "Centrifuge"
-			x: 0.0d
-			y: 8.0d
+			x: -21.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -170,16 +170,16 @@
 			}
 			]
 			title: "Breeding Chamber"
-			x: 0.0d
-			y: 10.0d
+			x: -14.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "7CA5218E42FB8DAC"
 			rewards: [
@@ -188,25 +188,41 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "081F264DF6D8B341"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "2E864098B99CDA87"
-				type: "checkmark"
-			}
+				{
+					id: "2E864098B99CDA87"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:ashy_mining_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Ashy Mining Bee"
-			x: -127.4d
-			y: 12.0d
+			x: -7.0d
+			y: -9.6d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "79202CE48FE50A0F"
 			rewards: [
@@ -215,25 +231,41 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "3C3322BC45AABC49"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "2C003F92644A6D90"
-				type: "checkmark"
-			}
+				{
+					id: "2C003F92644A6D90"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:blue_banded_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Blue Banded Bee"
-			x: -124.6d
-			y: 12.0d
+			x: -7.0d
+			y: -6.4d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "42D92091C18D2331"
 			rewards: [
@@ -242,25 +274,41 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "17FD847FF066BDE0"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "7D53A38DD06420FE"
-				type: "checkmark"
-			}
+				{
+					id: "7D53A38DD06420FE"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:chocolate_mining_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Chocolate Mining Bee"
-			x: -121.8d
-			y: 12.0d
+			x: -7.0d
+			y: -3.2d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "3F92C3512B5F97C9"
 			rewards: [
@@ -270,24 +318,35 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "5F638AF08501E51D"
-				type: "checkmark"
-			}
+				{
+					id: "5F638AF08501E51D"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:crystalline"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Crystalline Bee"
-			x: -119.0d
-			y: 12.0d
+			x: -7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "43C95F5483367362"
 			rewards: [
@@ -296,25 +355,41 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "4EE46FD3F9A63A56"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "5B43F84A490CB8AE"
-				type: "checkmark"
-			}
+				{
+					id: "5B43F84A490CB8AE"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:digger_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Digger Bee"
-			x: -116.2d
-			y: 12.0d
+			x: -7.0d
+			y: 3.2d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "6B4B00FC275F861A"
 			rewards: [
@@ -324,24 +399,35 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "71F419F702E2C5BB"
-				type: "checkmark"
-			}
+				{
+					id: "71F419F702E2C5BB"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:ender"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Ender Bee"
-			x: -113.4d
-			y: 12.0d
+			x: -7.0d
+			y: 6.4d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "7D87C5B260AED842"
 			rewards: [
@@ -351,24 +437,34 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "429BA409F83F5227"
-				type: "checkmark"
-			}
+				{
+					id: "429BA409F83F5227"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:configurable_bee"
+						type: "productivebees:ghostly"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Ghostly Bee"
-			x: -110.6d
-			y: 12.0d
+			x: -7.0d
+			y: 9.6d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "1152510412441866"
 			rewards: [
@@ -377,25 +473,43 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "43580FAC48A5AEA3"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "226572D8057DCFE7"
-				type: "checkmark"
-			}
+				{
+					id: "226572D8057DCFE7"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:glowing"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Glowing Bee"
-			x: -107.8d
-			y: 12.0d
+			x: -4.8d
+			y: -9.6d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "5EAFBDDE7721A637"
 			rewards: [
@@ -405,24 +519,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "3D577F18E5E07EB4"
-				type: "checkmark"
-			}
+				{
+					id: "3D577F18E5E07EB4"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:green_carpenter_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Green Carpenter Bee"
-			x: -105.0d
-			y: 12.0d
+			x: -4.8d
+			y: -6.4d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "2026DA9C41DA710B"
 			rewards: [
@@ -432,24 +555,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "588DC0EAD19E83BC"
-				type: "checkmark"
-			}
+				{
+					id: "588DC0EAD19E83BC"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "minecraft:bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Honey Bee"
-			x: -102.2d
-			y: 12.0d
+			x: -4.8d
+			y: -3.2d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "2F1424762A8F0C36"
 			rewards: [
@@ -459,24 +591,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "3E207BD3901F7F03"
-				type: "checkmark"
-			}
+				{
+					id: "3E207BD3901F7F03"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:leafcutter_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Leafcutter Bee"
-			x: -99.4d
-			y: 12.0d
+			x: -4.8d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "4B65854B2BD10531"
 			rewards: [
@@ -486,24 +627,35 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "092508AC99561D31"
-				type: "checkmark"
-			}
+				{
+					id: "092508AC99561D31"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:magmatic"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Magmatic Bee"
-			x: -96.6d
-			y: 12.0d
+			x: -4.8d
+			y: 3.2d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "4EBCEFE4F7B23BEB"
 			rewards: [
@@ -513,24 +665,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "260C4E9A32594A29"
-				type: "checkmark"
-			}
+				{
+					id: "260C4E9A32594A29"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:mason_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Mason Bee"
-			x: -93.8d
-			y: 12.0d
+			x: -4.8d
+			y: 6.4d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "619BAE9DB0A556B7"
 			rewards: [
@@ -539,25 +700,41 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "398A7EE05415E8CA"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "42877EABFD1D9360"
-				type: "checkmark"
-			}
+				{
+					id: "42877EABFD1D9360"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:neon_cuckoo_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Neon Cuckoo Bee"
-			x: -91.0d
-			y: 12.0d
+			x: -4.8d
+			y: 9.6d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "342FFAE8F9B9FA3C"
 			rewards: [
@@ -567,24 +744,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "5F0014D5FC96B480"
-				type: "checkmark"
-			}
+				{
+					id: "5F0014D5FC96B480"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:nomad_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Nomad Bee"
-			x: -88.2d
-			y: 12.0d
+			x: -2.6d
+			y: -9.6d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "0C1F68F3B6546B65"
 			rewards: [
@@ -594,24 +780,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "0B265B9D2FEF51BA"
-				type: "checkmark"
-			}
+				{
+					id: "0B265B9D2FEF51BA"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:reed_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Reed Bee"
-			x: -85.4d
-			y: 12.0d
+			x: -2.6d
+			y: -6.4d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "57E2378B69F198BD"
 			rewards: [
@@ -621,24 +816,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "1E824813394B0EB9"
-				type: "checkmark"
-			}
+				{
+					id: "1E824813394B0EB9"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:resin_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Resin Bee"
-			x: -82.6d
-			y: 12.0d
+			x: -2.6d
+			y: -3.2d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "7DACCF0A2D1DD744"
 			rewards: [
@@ -648,24 +852,35 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "641B725CCDB8D885"
-				type: "checkmark"
-			}
+				{
+					id: "641B725CCDB8D885"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:skeletal"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Skeletal Bee"
-			x: -79.8d
-			y: 12.0d
+			x: -2.6d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "6FA41BD276303A81"
 			rewards: [
@@ -675,24 +890,35 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "7FCE3444D688D848"
-				type: "checkmark"
-			}
+				{
+					id: "7FCE3444D688D848"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:slimy"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Slimy Bee"
-			x: -77.0d
-			y: 12.0d
+			x: -2.6d
+			y: 3.2d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "4CF19695DD0E4EC7"
 			rewards: [
@@ -701,25 +927,42 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "57B02AD95ACA3E91"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "06E0FB0ABF9A8FD1"
-				type: "checkmark"
-			}
+				{
+					id: "06E0FB0ABF9A8FD1"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:configurable_bee"
+						type: "productivebees:sugarbag"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Sugarbag Bee"
-			x: -74.2d
-			y: 12.0d
+			x: -2.6d
+			y: 6.4d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "526C5450E8F4AE8D"
 			rewards: [
@@ -729,24 +972,33 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "6F16D66B2CCB40F2"
-				type: "checkmark"
-			}
+				{
+					id: "6F16D66B2CCB40F2"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:sweat_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Sweat Bee"
-			x: -71.4d
-			y: 12.0d
+			x: -2.6d
+			y: 9.6d
 		}
 		{
 			dependencies: [
 				"7FBA14E9A2FB1F75"
 			]
 			description: [
-				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage, then confirm the milestone."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "056ECF6A08C8E603"
 			rewards: [
@@ -756,16 +1008,25 @@
 				xp: 25
 			}
 			]
-			subtitle: "Wild & Base Bees — source bee"
+			subtitle: "Wild and Base Bees — source bee"
 			tasks: [
-			{
-				id: "1596D6C8FAFDEC2C"
-				type: "checkmark"
-			}
+				{
+					id: "1596D6C8FAFDEC2C"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:yellow_black_carpenter_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Yellow Black Carpenter Bee"
-			x: -68.6d
-			y: 12.0d
+			x: -0.4d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -774,7 +1035,7 @@
 			]
 			description: [
 				"Breed Crystalline Bee + Ender Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "2F7CCBFCEADB3B24"
 			rewards: [
@@ -783,17 +1044,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "1F17565EC4BA2533"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Applied Energistics 2 Bees — depth 1"
 			tasks: [
-			{
-				id: "5DF551DD95140B86"
-				type: "checkmark"
-			}
+				{
+					id: "5DF551DD95140B86"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:spacial"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Spacial Bee"
-			x: -84.0d
-			y: 16.0d
+			x: 0.0d
+			y: 6.4d
 		}
 		{
 			dependencies: [
@@ -802,7 +1081,7 @@
 			]
 			description: [
 				"Breed Magmatic Bee + Leafcutter Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "6EABC7F1250D5E58"
 			rewards: [
@@ -811,17 +1090,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "45991C07923D6785"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "50ECD789201AC720"
-				type: "checkmark"
-			}
+				{
+					id: "50ECD789201AC720"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:coal"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Coal Bee"
-			x: -70.0d
-			y: 16.0d
+			x: 2.2d
+			y: 6.4d
 		}
 		{
 			dependencies: [
@@ -829,7 +1126,7 @@
 			]
 			description: [
 				"Convert Honey Bee using minecraft:hopper."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "46276164CC949922"
 			rewards: [
@@ -838,17 +1135,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "228017F316903325"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "7374BB0048D9C15A"
-				type: "checkmark"
-			}
+				{
+					id: "7374BB0048D9C15A"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:collector_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Collector Bee"
-			x: -67.2d
-			y: 16.0d
+			x: 2.2d
+			y: -3.2d
 		}
 		{
 			dependencies: [
@@ -856,7 +1169,7 @@
 			]
 			description: [
 				"Convert Honey Bee using minecraft:tnt."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "73CEFBEB7DE11263"
 			rewards: [
@@ -865,17 +1178,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "4995E87F825E4A7C"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "7320A24908438D54"
-				type: "checkmark"
-			}
+				{
+					id: "7320A24908438D54"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:creeper_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Creeper Bee"
-			x: -64.4d
-			y: 16.0d
+			x: 2.2d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -883,7 +1212,7 @@
 			]
 			description: [
 				"Convert Sweat Bee using #productivebees:flowers/frozen."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "598838C461F36E3C"
 			rewards: [
@@ -892,17 +1221,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "391B8458710B8783"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "7FA01A99D5F0A8C7"
-				type: "checkmark"
-			}
+				{
+					id: "7FA01A99D5F0A8C7"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:frosty"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Frosty Bee"
-			x: -61.6d
-			y: 16.0d
+			x: 4.4d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -911,7 +1258,7 @@
 			]
 			description: [
 				"Breed Yellow Black Carpenter Bee + Green Carpenter Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "61D328AAF1784864"
 			rewards: [
@@ -920,17 +1267,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "777F254ABB4F262A"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "21BF237F2CA5E9D1"
-				type: "checkmark"
-			}
+				{
+					id: "21BF237F2CA5E9D1"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:lumber_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Lumber Bee"
-			x: -58.8d
-			y: 16.0d
+			x: 4.4d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -939,7 +1302,7 @@
 			]
 			description: [
 				"Breed Magmatic Bee + Sweat Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "5C4F94615076E2BE"
 			rewards: [
@@ -948,17 +1311,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "03CA11C46FA5A68E"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "7948840B7CBF03C6"
-				type: "checkmark"
-			}
+				{
+					id: "7948840B7CBF03C6"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:obsidian"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Obsidian Bee"
-			x: -56.0d
-			y: 16.0d
+			x: 4.4d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -967,7 +1348,7 @@
 			]
 			description: [
 				"Breed Sugarbag Bee + Neon Cuckoo Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "5835CABC8B4D9350"
 			rewards: [
@@ -976,17 +1357,34 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "6D8E9A0AE753E66D"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "7743A3C569A53224"
-				type: "checkmark"
-			}
+				{
+					id: "7743A3C569A53224"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:configurable_bee"
+						type: "productivebees:pepto_bismol"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Pepto Bismol Bee"
-			x: -53.2d
-			y: 16.0d
+			x: 4.4d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -995,7 +1393,7 @@
 			]
 			description: [
 				"Breed Chocolate Mining Bee + Digger Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "2AA140944E68B69E"
 			rewards: [
@@ -1004,17 +1402,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "48C1B6E018137C9C"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "424BE94A96BD5D21"
-				type: "checkmark"
-			}
+				{
+					id: "424BE94A96BD5D21"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:quarry_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Quarry Bee"
-			x: -50.4d
-			y: 16.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1022,7 +1436,7 @@
 			]
 			description: [
 				"Convert Digger Bee using minecraft:sculk."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "32E8B8380F6A69A4"
 			rewards: [
@@ -1031,17 +1445,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "1C7913289085DAA4"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "52C7DADA01C0C953"
-				type: "checkmark"
-			}
+				{
+					id: "52C7DADA01C0C953"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:sculk"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Sculk Bee"
-			x: -47.6d
-			y: 16.0d
+			x: 0.0d
+			y: 3.2d
 		}
 		{
 			dependencies: [
@@ -1050,7 +1482,7 @@
 			]
 			description: [
 				"Breed Reed Bee + Resin Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "4B7E7A6AB520F1E9"
 			rewards: [
@@ -1059,17 +1491,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "756E70EB4F917D33"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "1EB67D54CA8E8B59"
-				type: "checkmark"
-			}
+				{
+					id: "1EB67D54CA8E8B59"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:silky"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Silky Bee"
-			x: -44.8d
-			y: 16.0d
+			x: 4.4d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1077,7 +1527,7 @@
 			]
 			description: [
 				"Convert Skeletal Bee using minecraft:wither_rose."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "32CC500F17E90473"
 			rewards: [
@@ -1086,17 +1536,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "342B054439023B8F"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 1"
 			tasks: [
-			{
-				id: "4D3ADE9B89E177C9"
-				type: "checkmark"
-			}
+				{
+					id: "4D3ADE9B89E177C9"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:withered"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Withered Bee"
-			x: -42.0d
-			y: 16.0d
+			x: 4.4d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -1105,7 +1573,7 @@
 			]
 			description: [
 				"Breed Magmatic Bee + Nomad Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "166F1D90A3E1E911"
 			rewards: [
@@ -1114,17 +1582,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "447AC0ECC0A9CEB9"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Dust Bees — depth 1"
 			tasks: [
-			{
-				id: "22ABED019F605F8D"
-				type: "checkmark"
-			}
+				{
+					id: "22ABED019F605F8D"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:blazing"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Blazing Bee"
-			x: -29.4d
-			y: 16.0d
+			x: 2.2d
+			y: 9.6d
 		}
 		{
 			dependencies: [
@@ -1133,7 +1619,7 @@
 			]
 			description: [
 				"Breed Glowing Bee + Chocolate Mining Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "6A4DBBE176DFF28D"
 			rewards: [
@@ -1142,17 +1628,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "74325184F4004AD8"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Dust Bees — depth 1"
 			tasks: [
-			{
-				id: "24ED37BE60E218F8"
-				type: "checkmark"
-			}
+				{
+					id: "24ED37BE60E218F8"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:redstone"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Redstone Bee"
-			x: -26.6d
-			y: 16.0d
+			x: 0.0d
+			y: 9.6d
 		}
 		{
 			dependencies: [
@@ -1160,7 +1664,7 @@
 			]
 			description: [
 				"Convert Leafcutter Bee using minecraft:water_bucket."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "242DC0DA7AABB905"
 			rewards: [
@@ -1169,17 +1673,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "5B2C5FD67D3A33DD"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Fluids — depth 1"
 			tasks: [
-			{
-				id: "2708DA5BC6FFA2B4"
-				type: "checkmark"
-			}
+				{
+					id: "2708DA5BC6FFA2B4"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:tea"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Tea Bee"
-			x: -14.0d
-			y: 16.0d
+			x: 2.2d
+			y: 3.2d
 		}
 		{
 			dependencies: [
@@ -1187,7 +1709,7 @@
 			]
 			description: [
 				"Convert Crystalline Bee using mysticalagriculture:prosperity_block."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "7E48BBB3F52FDFF6"
 			rewards: [
@@ -1196,17 +1718,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "37B9AA3E55DB7AD2"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Mysticalagriculture — depth 1"
 			tasks: [
-			{
-				id: "27C27789B85E8F7D"
-				type: "checkmark"
-			}
+				{
+					id: "27C27789B85E8F7D"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:prosperity"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Prosperity Bee"
-			x: 40.6d
-			y: 16.0d
+			x: 0.0d
+			y: -3.2d
 		}
 		{
 			dependencies: [
@@ -1214,7 +1754,7 @@
 			]
 			description: [
 				"Convert Ghostly Bee using mysticalagriculture:soulium_dagger."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "0EF7F9A2AF075CEF"
 			rewards: [
@@ -1223,17 +1763,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "1E48F7090753F40C"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Mysticalagriculture — depth 1"
 			tasks: [
-			{
-				id: "16F9BB55F120EB70"
-				type: "checkmark"
-			}
+				{
+					id: "16F9BB55F120EB70"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:soulium"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Soulium Bee"
-			x: 43.4d
-			y: 16.0d
+			x: 2.2d
+			y: -9.6d
 		}
 		{
 			dependencies: [
@@ -1242,7 +1800,7 @@
 			]
 			description: [
 				"Breed Crystalline Bee + Ashy Mining Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "3EAAD348EE5C2975"
 			rewards: [
@@ -1251,17 +1809,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "7DBB9858295BB389"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Raw Materials — depth 1"
 			tasks: [
-			{
-				id: "5FEA6D17C4BADABE"
-				type: "checkmark"
-			}
+				{
+					id: "5FEA6D17C4BADABE"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:copper"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Copper Bee"
-			x: 53.2d
-			y: 16.0d
+			x: 0.0d
+			y: -9.6d
 		}
 		{
 			dependencies: [
@@ -1270,7 +1846,7 @@
 			]
 			description: [
 				"Breed Crystalline Bee + Mason Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "5BBC7594632E8376"
 			rewards: [
@@ -1279,17 +1855,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "410A7201746CE2E0"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Raw Materials — depth 1"
 			tasks: [
-			{
-				id: "773866CFF673D919"
-				type: "checkmark"
-			}
+				{
+					id: "773866CFF673D919"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:gold"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Gold Bee"
-			x: 56.0d
-			y: 16.0d
+			x: 2.2d
+			y: -6.4d
 		}
 		{
 			dependencies: [
@@ -1298,7 +1892,7 @@
 			]
 			description: [
 				"Breed Crystalline Bee + Ashy Mining Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "5B25A50D02B325FB"
 			rewards: [
@@ -1307,17 +1901,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "1D9286BBEA892956"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Raw Materials — depth 1"
 			tasks: [
-			{
-				id: "730817F99A665D22"
-				type: "checkmark"
-			}
+				{
+					id: "730817F99A665D22"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:iron"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Iron Bee"
-			x: 58.8d
-			y: 16.0d
+			x: 0.0d
+			y: -6.4d
 		}
 		{
 			dependencies: [
@@ -1325,7 +1937,7 @@
 			]
 			description: [
 				"Convert Spacial Bee using ae2:fluix_pearl."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "4C1A01600E6D076E"
 			rewards: [
@@ -1334,17 +1946,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "5D72E01AF5CE8562"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Applied Energistics 2 Bees — depth 2"
 			tasks: [
-			{
-				id: "3DC85287FC7164A4"
-				type: "checkmark"
-			}
+				{
+					id: "3DC85287FC7164A4"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:fluix"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Fluix Bee"
-			x: -84.0d
-			y: 20.0d
+			x: 7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1352,7 +1982,7 @@
 			]
 			description: [
 				"Convert Collector Bee using minecraft:shulker_shell."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "17E3628FA4A7579C"
 			rewards: [
@@ -1361,17 +1991,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "3AEB9DF1178E6195"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 2"
 			tasks: [
-			{
-				id: "7C1A00EAA1F6E597"
-				type: "checkmark"
-			}
+				{
+					id: "7C1A00EAA1F6E597"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:hoarder_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Hoarder Bee"
-			x: -57.4d
-			y: 20.0d
+			x: 7.0d
+			y: 3.2d
 		}
 		{
 			dependencies: [
@@ -1380,7 +2026,7 @@
 			]
 			description: [
 				"Breed Lumber Bee + Sweat Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "20FD547357EEC025"
 			rewards: [
@@ -1389,17 +2035,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "7FA15B4633826C0F"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 2"
 			tasks: [
-			{
-				id: "67B6468B6767D159"
-				type: "checkmark"
-			}
+				{
+					id: "67B6468B6767D159"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:rancher_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Rancher Bee"
-			x: -54.6d
-			y: 20.0d
+			x: 9.2d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1408,7 +2070,7 @@
 			]
 			description: [
 				"Breed Redstone Bee + Blue Banded Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "0ADDABA00FCB2397"
 			rewards: [
@@ -1417,17 +2079,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "5FE3E2AA1C3A467C"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Gem Bees — depth 2"
 			tasks: [
-			{
-				id: "36D2FF1BAEB43257"
-				type: "checkmark"
-			}
+				{
+					id: "36D2FF1BAEB43257"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:lapis"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Lapis Bee"
-			x: 14.0d
-			y: 20.0d
+			x: 7.0d
+			y: -6.4d
 		}
 		{
 			dependencies: [
@@ -1435,7 +2115,7 @@
 			]
 			description: [
 				"Convert Coal Bee using #forge:storage_blocks/graphite."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "2745BE8D68940BD5"
 			rewards: [
@@ -1444,17 +2124,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "4D6729D1B06362FA"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Reactors — depth 2"
 			tasks: [
-			{
-				id: "3B76538043ABAACA"
-				type: "checkmark"
-			}
+				{
+					id: "3B76538043ABAACA"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:graphite"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Graphite Bee"
-			x: 70.0d
-			y: 20.0d
+			x: 9.2d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1463,7 +2161,7 @@
 			]
 			description: [
 				"Breed Crystalline Bee + Iron Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "107CBC2547D8C777"
 			rewards: [
@@ -1472,17 +2170,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "6D3BFFB6DD2C5FA5"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Refinedstorage — depth 2"
 			tasks: [
-			{
-				id: "6F2436DA656A79C2"
-				type: "checkmark"
-			}
+				{
+					id: "6F2436DA656A79C2"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:quartz_enriched_iron"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Quartz Enriched Iron Bee"
-			x: 84.0d
-			y: 20.0d
+			x: 7.0d
+			y: -9.6d
 		}
 		{
 			dependencies: [
@@ -1490,7 +2206,7 @@
 			]
 			description: [
 				"Convert Brown Shroom Bee using minecraft:crimson_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "7A50D797B79D88A3"
 			rewards: [
@@ -1502,14 +2218,25 @@
 			]
 			subtitle: "Shroom — depth 2"
 			tasks: [
-			{
-				id: "696743F1DE87461E"
-				type: "checkmark"
-			}
+				{
+					id: "696743F1DE87461E"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:crimson"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Crimson Bee"
-			x: 98.0d
-			y: 20.0d
+			x: -35.0d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1518,7 +2245,7 @@
 			]
 			description: [
 				"Breed Lapis Bee + Skeletal Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "33C0B0E43C5157AD"
 			rewards: [
@@ -1527,17 +2254,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "1EEE73CD97F2EE35"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 3"
 			tasks: [
-			{
-				id: "1B5EFE09E1A7A1D2"
-				type: "checkmark"
-			}
+				{
+					id: "1B5EFE09E1A7A1D2"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:dye_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Dye Bee"
-			x: -57.4d
-			y: 24.0d
+			x: 14.0d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -1546,7 +2289,7 @@
 			]
 			description: [
 				"Breed Lumber Bee + Rancher Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "10BB1EC86492BD2C"
 			rewards: [
@@ -1555,17 +2298,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "6F95A53FA67D0FC5"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 3"
 			tasks: [
-			{
-				id: "10A90B5A8569B5BE"
-				type: "checkmark"
-			}
+				{
+					id: "10A90B5A8569B5BE"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:farmer_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Farmer Bee"
-			x: -54.6d
-			y: 24.0d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -1574,7 +2333,7 @@
 			]
 			description: [
 				"Breed Ender Bee + Lapis Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "10417A69C94B12D1"
 			rewards: [
@@ -1583,17 +2342,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "57457C392C0CBC51"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Gem Bees — depth 3"
 			tasks: [
-			{
-				id: "1EFEE3558B0F7B5A"
-				type: "checkmark"
-			}
+				{
+					id: "1EFEE3558B0F7B5A"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:diamond"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Diamond Bee"
 			x: 14.0d
-			y: 24.0d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1601,7 +2378,7 @@
 			]
 			description: [
 				"Convert Crimson Bee using minecraft:brown_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "6005351D64A165C3"
 			rewards: [
@@ -1613,14 +2390,25 @@
 			]
 			subtitle: "Shroom — depth 3"
 			tasks: [
-			{
-				id: "7499D8099C4E67BE"
-				type: "checkmark"
-			}
+				{
+					id: "7499D8099C4E67BE"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:brown_shroom"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Brown Shroom Bee"
-			x: 98.0d
-			y: 24.0d
+			x: -42.0d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1628,7 +2416,7 @@
 			]
 			description: [
 				"Convert Diamond Bee using byg:emeraldite_shards."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "385F958EB4D439D5"
 			rewards: [
@@ -1637,17 +2425,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "306016BAB528F7E9"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Biome Integration Bees — depth 4"
 			tasks: [
-			{
-				id: "7E6E880A713CDF45"
-				type: "checkmark"
-			}
+				{
+					id: "7E6E880A713CDF45"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:emeraldite"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Emeraldite Bee"
-			x: -70.0d
-			y: 28.0d
+			x: 21.0d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1656,7 +2462,7 @@
 			]
 			description: [
 				"Breed Farmer Bee + Rancher Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
 			]
 			id: "68DF5E1FE7D5D74E"
 			rewards: [
@@ -1665,17 +2471,33 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "7E8499463D802289"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 4"
 			tasks: [
-			{
-				id: "3CC7AF3B57D270F9"
-				type: "checkmark"
-			}
+				{
+					id: "3CC7AF3B57D270F9"
+					item: {
+						Count: 1b
+						id: "productivebees:bee_cage"
+						tag: {
+						entity: "productivebees:cupid_bee"
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Cupid Bee"
-			x: -56.0d
-			y: 28.0d
+			x: 21.0d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -1683,7 +2505,7 @@
 			]
 			description: [
 				"Convert Diamond Bee using forbidden_arcanus:arcane_crystal_block."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "422B95C6EEDD698F"
 			rewards: [
@@ -1692,17 +2514,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "1644EA868A72CF60"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Forbidden Arcanus — depth 4"
 			tasks: [
-			{
-				id: "53194D89D5162EEE"
-				type: "checkmark"
-			}
+				{
+					id: "53194D89D5162EEE"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:arcane_crystal"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Arcane Crystal Bee"
-			x: 0.0d
-			y: 28.0d
+			x: 21.0d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -1710,7 +2550,7 @@
 			]
 			description: [
 				"Convert Diamond Bee using #productivebees:flowers/amethyst."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "6F69F3F342134A25"
 			rewards: [
@@ -1719,17 +2559,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "42FB709E442E2200"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Gem Bees — depth 4"
 			tasks: [
-			{
-				id: "4E58F1067097D83D"
-				type: "checkmark"
-			}
+				{
+					id: "4E58F1067097D83D"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:amethyst"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Amethyst Bee"
-			x: 12.6d
-			y: 28.0d
+			x: 21.0d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -1738,7 +2596,7 @@
 			]
 			description: [
 				"Breed Diamond Bee + Slimy Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "0F0AD7FA64DE14FD"
 			rewards: [
@@ -1747,17 +2605,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "577E8DBFF91B843D"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Gem Bees — depth 4"
 			tasks: [
-			{
-				id: "6A36AE4A6EC6DF0A"
-				type: "checkmark"
-			}
+				{
+					id: "6A36AE4A6EC6DF0A"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:emerald"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Emerald Bee"
-			x: 15.4d
-			y: 28.0d
+			x: 21.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -1765,7 +2641,7 @@
 			]
 			description: [
 				"Convert Diamond Bee using minecraft:netherite_block."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "3DA90B121030AB0B"
 			rewards: [
@@ -1774,17 +2650,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "267D9FD796989031"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Raw Materials — depth 4"
 			tasks: [
-			{
-				id: "5C617A4683E049AE"
-				type: "checkmark"
-			}
+				{
+					id: "5C617A4683E049AE"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:netherite"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Netherite Bee"
-			x: 56.0d
-			y: 28.0d
+			x: 21.0d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1792,7 +2686,7 @@
 			]
 			description: [
 				"Convert Brown Shroom Bee using minecraft:red_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "2A90A750D426D213"
 			rewards: [
@@ -1804,14 +2698,25 @@
 			]
 			subtitle: "Shroom — depth 4"
 			tasks: [
-			{
-				id: "2F32F218D75F26C9"
-				type: "checkmark"
-			}
+				{
+					id: "2F32F218D75F26C9"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:red_shroom"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Red Shroom Bee"
-			x: 96.6d
-			y: 28.0d
+			x: -35.0d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1819,7 +2724,7 @@
 			]
 			description: [
 				"Convert Brown Shroom Bee using minecraft:warped_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "3916A827D38BB1F7"
 			rewards: [
@@ -1831,14 +2736,25 @@
 			]
 			subtitle: "Shroom — depth 4"
 			tasks: [
-			{
-				id: "0DEC8D369B1CFD38"
-				type: "checkmark"
-			}
+				{
+					id: "0DEC8D369B1CFD38"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:warped"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Warped Bee"
-			x: 99.4d
-			y: 28.0d
+			x: -35.0d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -1847,7 +2763,7 @@
 			]
 			description: [
 				"Breed Diamond Bee + Emeraldite Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "53DA80858B647296"
 			rewards: [
@@ -1856,17 +2772,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "080ADFEE0A2F8D63"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Biome Integration Bees — depth 5"
 			tasks: [
-			{
-				id: "4BE6ABD994CBD958"
-				type: "checkmark"
-			}
+				{
+					id: "4BE6ABD994CBD958"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:pendorite"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Pendorite Bee"
-			x: -70.0d
-			y: 32.0d
+			x: 28.0d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -1875,7 +2809,7 @@
 			]
 			description: [
 				"Breed Emerald Bee + Lapis Bee."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "0B72FC5108C640D1"
 			rewards: [
@@ -1884,17 +2818,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "0CA0419D70D410A9"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Core Resource Bees — depth 5"
 			tasks: [
-			{
-				id: "60F91810E99E5EBD"
-				type: "checkmark"
-			}
+				{
+					id: "60F91810E99E5EBD"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:experience"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Experience Bee"
-			x: -56.0d
-			y: 32.0d
+			x: 28.0d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -1902,7 +2854,7 @@
 			]
 			description: [
 				"Convert Arcane Crystal Bee using forbidden_arcanus:rune_block."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "454BFDDE6E5E9090"
 			rewards: [
@@ -1911,17 +2863,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "267BCEC0D1A3CFA5"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Forbidden Arcanus — depth 5"
 			tasks: [
-			{
-				id: "0147A9A67DB20D8D"
-				type: "checkmark"
-			}
+				{
+					id: "0147A9A67DB20D8D"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:rune"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Rune Bee"
-			x: 0.0d
-			y: 32.0d
+			x: 28.0d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -1929,7 +2899,7 @@
 			]
 			description: [
 				"Convert Netherite Bee using irons_spellbooks:arcane_debris."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "495688E68D4EBCB5"
 			rewards: [
@@ -1938,17 +2908,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "0D5DD0B2BEB03279"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Irons Spellbooks — depth 5"
 			tasks: [
-			{
-				id: "2E71FA459AF2A3E0"
-				type: "checkmark"
-			}
+				{
+					id: "2E71FA459AF2A3E0"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:arcane_debris"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Arcane Debris Bee"
 			x: 28.0d
-			y: 32.0d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1956,7 +2944,7 @@
 			]
 			description: [
 				"Convert Experience Bee using create_enchantment_industry:hyper_experience_bottle."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
 			]
 			id: "70DBBB3F39EB6189"
 			rewards: [
@@ -1965,17 +2953,35 @@
 				type: "xp"
 				xp: 25
 			}
+			
+				{
+					id: "4E81B00C6DABE2FE"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Create Enchantment Industry Bees — depth 6"
 			tasks: [
-			{
-				id: "0BD25864D4D7E7DB"
-				type: "checkmark"
-			}
+				{
+					id: "0BD25864D4D7E7DB"
+					item: {
+						Count: 1b
+						id: "productivebees:configurable_honeycomb"
+						tag: {
+							EntityTag: {
+								type: "productivebees:hyper_experience"
+							}
+						}
+					}
+					match_nbt: true
+					type: "item"
+					weak_nbt_match: true
+				}
 			]
 			title: "Hyper Experience Bee"
-			x: -42.0d
-			y: 36.0d
+			x: 35.0d
+			y: 3.2d
 		}
 		{
 			dependencies: [
@@ -1991,6 +2997,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "1AEDDACFCFBEACDE"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Applied Energistics 2 Bees branch"
 			tasks: [
@@ -2000,8 +3013,8 @@
 			}
 			]
 			title: "Applied Energistics 2 Bees Complete"
-			x: -84.0d
-			y: 44.0d
+			x: 14.0d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -2017,6 +3030,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "7A7B4DC577391782"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Biome Integration Bees branch"
 			tasks: [
@@ -2026,8 +3046,8 @@
 			}
 			]
 			title: "Biome Integration Bees Complete"
-			x: -70.0d
-			y: 44.0d
+			x: 35.0d
+			y: -3.2d
 		}
 		{
 			dependencies: [
@@ -2055,6 +3075,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "2474BCE9E9DFA231"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Core Resource Bees branch"
 			tasks: [
@@ -2064,8 +3091,8 @@
 			}
 			]
 			title: "Core Resource Bees Complete"
-			x: -56.0d
-			y: 44.0d
+			x: 35.0d
+			y: 6.4d
 		}
 		{
 			dependencies: [
@@ -2081,6 +3108,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "574AEA34B26A394A"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Create Enchantment Industry Bees branch"
 			tasks: [
@@ -2090,8 +3124,8 @@
 			}
 			]
 			title: "Create Enchantment Industry Bees Complete"
-			x: -42.0d
-			y: 44.0d
+			x: 42.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -2108,6 +3142,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "1F31E4C1B26A29AA"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Dust Bees branch"
 			tasks: [
@@ -2117,8 +3158,8 @@
 			}
 			]
 			title: "Dust Bees Complete"
-			x: -28.0d
-			y: 44.0d
+			x: 7.0d
+			y: 6.4d
 		}
 		{
 			dependencies: [
@@ -2134,6 +3175,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "00365BF619AA60C5"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Fluids branch"
 			tasks: [
@@ -2143,8 +3191,8 @@
 			}
 			]
 			title: "Fluids Complete"
-			x: -14.0d
-			y: 44.0d
+			x: 7.0d
+			y: 9.6d
 		}
 		{
 			dependencies: [
@@ -2160,6 +3208,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "6F7FCBEA0582A893"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Forbidden Arcanus branch"
 			tasks: [
@@ -2169,8 +3224,8 @@
 			}
 			]
 			title: "Forbidden Arcanus Complete"
-			x: 0.0d
-			y: 44.0d
+			x: 35.0d
+			y: -6.4d
 		}
 		{
 			dependencies: [
@@ -2187,6 +3242,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "0C610B3B7B3BCCD4"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Gem Bees branch"
 			tasks: [
@@ -2196,8 +3258,8 @@
 			}
 			]
 			title: "Gem Bees Complete"
-			x: 14.0d
-			y: 44.0d
+			x: 28.0d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -2213,6 +3275,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "39B2F3C718CB19F7"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Irons Spellbooks branch"
 			tasks: [
@@ -2222,8 +3291,8 @@
 			}
 			]
 			title: "Irons Spellbooks Complete"
-			x: 28.0d
-			y: 44.0d
+			x: 35.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -2240,6 +3309,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "54AB80EFE548CFBE"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Mysticalagriculture branch"
 			tasks: [
@@ -2249,8 +3325,8 @@
 			}
 			]
 			title: "Mysticalagriculture Complete"
-			x: 42.0d
-			y: 44.0d
+			x: 7.0d
+			y: -3.2d
 		}
 		{
 			dependencies: [
@@ -2269,6 +3345,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "40767CB193C1A781"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Raw Materials branch"
 			tasks: [
@@ -2278,8 +3361,8 @@
 			}
 			]
 			title: "Raw Materials Complete"
-			x: 56.0d
-			y: 44.0d
+			x: 28.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -2295,6 +3378,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "3CFF63CE5228609E"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Reactors branch"
 			tasks: [
@@ -2304,8 +3394,8 @@
 			}
 			]
 			title: "Reactors Complete"
-			x: 70.0d
-			y: 44.0d
+			x: 14.0d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -2321,6 +3411,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "2311E10E76774D79"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			subtitle: "Finish the Refinedstorage branch"
 			tasks: [
@@ -2330,8 +3427,8 @@
 			}
 			]
 			title: "Refinedstorage Complete"
-			x: 84.0d
-			y: 44.0d
+			x: 14.0d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -2357,8 +3454,8 @@
 			}
 			]
 			title: "Shroom Complete"
-			x: 98.0d
-			y: 44.0d
+			x: -28.0d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -2403,8 +3500,8 @@
 			}
 			]
 			title: "Master Apiarist"
-			x: 0.0d
-			y: 49.0d
+			x: 49.0d
+			y: 0.0d
 		}
 	]
 	title: "Productive Bees"

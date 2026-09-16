@@ -11,8 +11,8 @@
 			id: "30532555D30762EA",
 			subtitle: "Requires Starter Thermo Generator; completion is detected automatically."
 			title: "Your first generator",
-			x: 0.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft a starter Powah generator and keep a connected machine powered.",
@@ -29,6 +29,13 @@
 					id: "D7752422D0D6ABA0"
 					type: "xp"
 					xp: 100
+				}
+			
+				{
+					id: "4FECE1DDAE2B36BA"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -52,8 +59,8 @@
 			id: "41D6A5B567823C5F",
 			subtitle: "Requires Energizing Orb; completion is detected automatically."
 			title: "Energizing station",
-			x: 3.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Build an Energizing Orb setup and produce the next tier of energized materials.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -69,6 +76,13 @@
 					id: "88B5347C06966723"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "08E4238A736F2DE3"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -95,8 +109,8 @@
 			id: "3B900127ED58D474",
 			subtitle: "Requires Basic Energy Cell; completion is detected automatically."
 			title: "A dependable grid",
-			x: 6.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Upgrade your generation and energy storage. Connect your factory and dinosaur laboratory through an organized distribution system.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."

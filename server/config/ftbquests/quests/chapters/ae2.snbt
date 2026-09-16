@@ -28,6 +28,13 @@
 					type: "xp"
 					xp: 100
 				}
+			
+				{
+					id: "0C1ADF1E430E489D"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -46,7 +53,7 @@
 			]
 			subtitle: "Requires ME Controller; completion is detected automatically."
 			title: "ME foundations"
-			x: 0.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
@@ -68,6 +75,13 @@
 					id: "F0F020A81A8EB565"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "3C40AE1BDAC7A7F9"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -94,7 +108,7 @@
 			]
 			subtitle: "Requires Pattern Provider + Molecular Assembler; completion is detected automatically."
 			title: "Patterns and channels"
-			x: 3.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -142,7 +156,7 @@
 			]
 			subtitle: "Requires 64k ME Storage Cell; completion is detected automatically."
 			title: "MEGA storage"
-			x: 6.0d
+			x: 7.0d
 			y: 0.0d
 		}
 	]

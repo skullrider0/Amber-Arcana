@@ -11,8 +11,8 @@
 			id: "15DAE3CE842B7E3D",
 			subtitle: "Requires Ritual reference book; then confirm the milestone."
 			title: "Occultism rituals",
-			x: 0.0,
-			y: 0.0,
+			x: -14.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Follow the Dictionary of Spirits to summon a spirit and establish one useful ritual or storage system.",
@@ -51,8 +51,8 @@
 			id: "200753C8EB83311D",
 			subtitle: "Requires Mana Pool; then confirm the milestone."
 			title: "Botania garden",
-			x: 3.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			description: [
 				"Create a mana-generating garden, transfer mana, and craft a functional botanical item.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -68,6 +68,13 @@
 					id: "66529EA6A59E551D"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "4E2A102EF1FBB153"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -93,8 +100,8 @@
 			id: "03AFE303E07AA846",
 			subtitle: "Requires Blood Altar; then confirm the milestone."
 			title: "Blood Magic altar",
-			x: 6.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Build a Blood Altar and progress through the early slate and orb recipes in the installed guide.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -110,6 +117,13 @@
 					id: "7BF782991C0A8A89"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "4D5B62DA7BCAD6BB"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -135,8 +149,8 @@
 			id: "785DBD084E3E054F",
 			subtitle: "Requires Witch workshop cauldron; then confirm the milestone."
 			title: "Hexerei workshop",
-			x: 9.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Build a witchs workshop and use Hexerei crafting to make a useful item. Keep its blood and fluid systems separate unless JEI shows a supported conversion.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -152,6 +166,13 @@
 					id: "AA0C524AFD3C58CC"
 					type: "xp"
 					xp: 250
+				}
+			
+				{
+					id: "4571106B669C2976"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -177,8 +198,8 @@
 			id: "0529657A7D4C8721",
 			subtitle: "Requires Faction progression supplies; then confirm the milestone."
 			title: "Vampire or hunter",
-			x: 0.0,
-			y: 3.0,
+			x: 14.0d,
+			y: 0.0d,
 			description: [
 				"Choose your Vampirism faction if desired. Establish the supplies and equipment needed for its progression.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

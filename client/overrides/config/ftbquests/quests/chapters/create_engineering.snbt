@@ -37,7 +37,7 @@
 			}
 			]
 			title: "Andesite Alloy"
-			x: 0.0d
+			x: -59.5d
 			y: 0.0d
 		}
 		{
@@ -75,8 +75,8 @@
 			}
 			]
 			title: "Engineer's Tools"
-			x: -5.0d
-			y: 2.0d
+			x: -52.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -107,8 +107,8 @@
 			}
 			]
 			title: "Andesite Casing"
-			x: 0.0d
-			y: 2.0d
+			x: -52.5d
+			y: -3.2d
 		}
 		{
 			dependencies: [
@@ -150,9 +150,9 @@
 				type: "item"
 			}
 			]
-			title: "Shafts & Gears"
-			x: 5.0d
-			y: 2.0d
+			title: "Shafts and Gears"
+			x: -52.5d
+			y: 3.2d
 		}
 		{
 			dependencies: [
@@ -208,8 +208,8 @@
 			}
 			]
 			title: "Control the Rotation"
-			x: 5.0d
-			y: 4.0d
+			x: -45.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -258,8 +258,8 @@
 			}
 			]
 			title: "First Rotation"
-			x: 0.0d
-			y: 4.0d
+			x: -45.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -290,8 +290,8 @@
 			}
 			]
 			title: "Milling"
-			x: -4.0d
-			y: 6.0d
+			x: -38.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -327,9 +327,9 @@
 				type: "item"
 			}
 			]
-			title: "Mixing & Basins"
-			x: 0.0d
-			y: 6.0d
+			title: "Mixing and Basins"
+			x: -38.5d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -360,8 +360,8 @@
 			}
 			]
 			title: "Bulk Processing"
-			x: 4.0d
-			y: 6.0d
+			x: -38.5d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -386,6 +386,13 @@
 				type: "xp"
 				xp: 150
 			}
+			
+				{
+					id: "3C677D9A64AAEC99"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -416,8 +423,8 @@
 			}
 			]
 			title: "A Processing Line"
-			x: 4.0d
-			y: 8.0d
+			x: -31.5d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -454,9 +461,9 @@
 				type: "item"
 			}
 			]
-			title: "Cutting & Drilling"
-			x: -6.0d
-			y: 8.0d
+			title: "Cutting and Drilling"
+			x: -38.5d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -493,8 +500,8 @@
 				type: "item"
 			}
 			]
-			title: "Pipes & Pumps"
-			x: 9.0d
+			title: "Pipes and Pumps"
+			x: -38.5d
 			y: 8.0d
 		}
 		{
@@ -513,6 +520,13 @@
 				type: "xp"
 				xp: 75
 			}
+			
+				{
+					id: "4DCB3792F88795F8"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -532,8 +546,8 @@
 			}
 			]
 			title: "Fluid Storage"
-			x: 9.0d
-			y: 10.0d
+			x: -31.5d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -552,6 +566,13 @@
 				type: "xp"
 				xp: 90
 			}
+			
+				{
+					id: "062628BD24730409"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -570,9 +591,9 @@
 				type: "item"
 			}
 			]
-			title: "Drain & Spout"
-			x: 9.0d
-			y: 12.0d
+			title: "Drain and Spout"
+			x: -24.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -590,6 +611,13 @@
 				type: "xp"
 				xp: 75
 			}
+			
+				{
+					id: "71528DC2CBA9A536"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -603,8 +631,8 @@
 			}
 			]
 			title: "Hose Pulley"
-			x: 13.0d
-			y: 12.0d
+			x: -24.5d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -623,6 +651,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "5900D53AC4418013"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -648,8 +683,8 @@
 			}
 			]
 			title: "Moving Contraptions"
-			x: -10.0d
-			y: 10.0d
+			x: -31.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -667,6 +702,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "504EF560DCF9B096"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -691,9 +733,9 @@
 				type: "item"
 			}
 			]
-			title: "Pulleys & Gantries"
-			x: -10.0d
-			y: 12.0d
+			title: "Pulleys and Gantries"
+			x: -24.5d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -712,6 +754,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "428BAEC7441D3370"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -737,8 +786,8 @@
 			}
 			]
 			title: "Contraption I/O"
-			x: -10.0d
-			y: 14.0d
+			x: -17.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -775,8 +824,8 @@
 			}
 			]
 			title: "Electron Tubes"
-			x: 4.0d
-			y: 10.0d
+			x: -38.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -794,6 +843,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "2DCE145DD265EEB6"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -807,8 +863,8 @@
 			}
 			]
 			title: "Blaze Burner"
-			x: -1.0d
-			y: 10.0d
+			x: -31.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -827,6 +883,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "6468E8662DE09F6B"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -840,8 +903,8 @@
 			}
 			]
 			title: "Enter the Brass Age"
-			x: -1.0d
-			y: 12.0d
+			x: -24.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -859,6 +922,13 @@
 				type: "xp"
 				xp: 100
 			}
+			
+				{
+					id: "094665CD502D8C13"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -872,8 +942,8 @@
 			}
 			]
 			title: "Brass Casing"
-			x: -1.0d
-			y: 14.0d
+			x: -17.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -893,6 +963,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "3D66DB30D9A712BB"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -918,8 +995,8 @@
 			}
 			]
 			title: "Brass Logistics"
-			x: 4.0d
-			y: 16.0d
+			x: -10.5d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -939,6 +1016,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "60C13F54FD8061B5"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -952,8 +1036,8 @@
 			}
 			]
 			title: "Deployer"
-			x: -1.0d
-			y: 16.0d
+			x: -10.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -979,6 +1063,13 @@
 				type: "xp"
 				xp: 200
 			}
+			
+				{
+					id: "033B183ABFB154A1"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -997,8 +1088,8 @@
 			}
 			]
 			title: "Precision Mechanisms"
-			x: -1.0d
-			y: 18.0d
+			x: -3.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1017,6 +1108,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "727F5DF4F6DE7403"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1030,8 +1128,8 @@
 			}
 			]
 			title: "Mechanical Arm"
-			x: 4.0d
-			y: 18.0d
+			x: 3.5d
+			y: -4.8d
 		}
 		{
 			dependencies: [
@@ -1050,6 +1148,13 @@
 				type: "xp"
 				xp: 150
 			}
+			
+				{
+					id: "6EDBF16EF5550942"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1063,8 +1168,8 @@
 			}
 			]
 			title: "Mechanical Crafter"
-			x: 8.0d
-			y: 18.0d
+			x: 3.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1082,6 +1187,13 @@
 				type: "xp"
 				xp: 150
 			}
+			
+				{
+					id: "2EE4413F8D7DC882"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1095,8 +1207,8 @@
 			}
 			]
 			title: "Crushing Wheels"
-			x: 8.0d
-			y: 20.0d
+			x: 10.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1115,6 +1227,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "6C6454583ADEE53D"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1128,8 +1247,8 @@
 			}
 			]
 			title: "Sturdy Sheets"
-			x: 8.0d
-			y: 22.0d
+			x: 17.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1148,6 +1267,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "3E99B1EE32FDAB7B"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1173,8 +1299,8 @@
 			}
 			]
 			title: "Factory Signals"
-			x: 13.0d
-			y: 18.0d
+			x: -10.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1193,6 +1319,13 @@
 				type: "xp"
 				xp: 150
 			}
+			
+				{
+					id: "0B2765821B80B7C9"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1212,8 +1345,8 @@
 			}
 			]
 			title: "Packaging Logistics"
-			x: 13.0d
-			y: 20.0d
+			x: -3.5d
+			y: 1.6d
 		}
 		{
 			dependencies: [
@@ -1231,6 +1364,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "76252CB2FF0DB7AB"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1244,8 +1384,8 @@
 			}
 			]
 			title: "Repackaging"
-			x: 13.0d
-			y: 22.0d
+			x: 3.5d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -1264,6 +1404,13 @@
 				type: "xp"
 				xp: 200
 			}
+			
+				{
+					id: "2C14E4B07FA8134A"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1289,8 +1436,8 @@
 			}
 			]
 			title: "Stock Network"
-			x: 13.0d
-			y: 24.0d
+			x: 10.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1308,6 +1455,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "6081B19DA744D69D"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1327,8 +1481,8 @@
 			}
 			]
 			title: "Schematics"
-			x: -11.0d
-			y: 20.0d
+			x: 3.5d
+			y: -1.6d
 		}
 		{
 			dependencies: [
@@ -1354,6 +1508,13 @@
 				type: "xp"
 				xp: 250
 			}
+			
+				{
+					id: "0EC3B972BF865E97"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1372,8 +1533,8 @@
 			}
 			]
 			title: "Steam Under Control"
-			x: -5.0d
-			y: 20.0d
+			x: -10.5d
+			y: 4.8d
 		}
 		{
 			dependencies: [
@@ -1392,6 +1553,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "69D1ED3A9962786B"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1405,8 +1573,8 @@
 			}
 			]
 			title: "Railway Casing"
-			x: 18.0d
-			y: 24.0d
+			x: 24.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1424,6 +1592,13 @@
 				type: "xp"
 				xp: 125
 			}
+			
+				{
+					id: "26B5FB56337E23B3"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1437,8 +1612,8 @@
 			}
 			]
 			title: "Train Track"
-			x: 18.0d
-			y: 26.0d
+			x: 31.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1463,6 +1638,13 @@
 				type: "xp"
 				xp: 300
 			}
+			
+				{
+					id: "34627440F9F32777"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1480,9 +1662,9 @@
 				type: "checkmark"
 			}
 			]
-			title: "Rails & Stations"
-			x: 18.0d
-			y: 28.0d
+			title: "Rails and Stations"
+			x: 38.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1500,6 +1682,13 @@
 				type: "xp"
 				xp: 175
 			}
+			
+				{
+					id: "2DCF5453BD19DB5D"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1518,9 +1707,9 @@
 				type: "item"
 			}
 			]
-			title: "Signals & Observers"
-			x: 18.0d
-			y: 30.0d
+			title: "Signals and Observers"
+			x: 45.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1538,6 +1727,13 @@
 				type: "xp"
 				xp: 175
 			}
+			
+				{
+					id: "1C4C5607737263C2"
+					table_id: 1808988788260247882L
+					title: "Tier 4 Depth Roll"
+					type: "loot"
+				}
 			]
 			shape: "hexagon"
 			size: 1.0d
@@ -1551,8 +1747,8 @@
 			}
 			]
 			title: "Scheduled Trains"
-			x: 18.0d
-			y: 32.0d
+			x: 52.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1607,8 +1803,8 @@
 			}
 			]
 			title: "A Reliable Factory"
-			x: 3.0d
-			y: 34.0d
+			x: 59.5d
+			y: 0.0d
 		}
 	]
 	title: "Create Engineering"

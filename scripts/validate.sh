@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-29" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-29" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-30" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-30" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -60,11 +60,11 @@ server_quests="$repo_dir/server/config/ftbquests/quests"
 diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest files differ" >&2; exit 1; }
 
 
-# 0.1.9-29 live quest sync checks
+# 0.1.9-30 live quest sync checks
 for qroot in "$client_quests" "$server_quests"; do
   test -f "$qroot/chapter_groups.snbt" || { echo "Quest chapter_groups.snbt missing" >&2; exit 1; }
   test "$(find "$qroot/chapters" -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 live quest chapters" >&2; exit 1; }
-  test "$(find "$qroot/reward_tables" -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "31" || { echo "Expected 31 live reward tables" >&2; exit 1; }
+  test "$(find "$qroot/reward_tables" -maxdepth 1 -name '*.snbt' -type f | wc -l)" = "35" || { echo "Expected 35 live reward tables" >&2; exit 1; }
 done
 grep -Fq 'subtitle: "Build your first safe shelter and claim starter supplies."' "$client_quests/chapters/getting_started.snbt" || { echo "Make a home subtitle missing" >&2; exit 1; }
 for item in minecraft:torch minecraft:bread minecraft:iron_ingot minecraft:compass minecraft:diamond minecraft:golden_carrot create:andesite_alloy create:brass_ingot minecraft:copper_block minecraft:powered_rail; do
@@ -73,7 +73,7 @@ done
 jq -e '.quest_live_sync_0_1_9_23.broken_item_rewards_fixed == 12' "$validation" >/dev/null
 
 
-# 0.1.9-29 completed quest progression checks
+# 0.1.9-30 completed quest progression checks
 jq -e '.quest_completion_0_1_9_24.quests_checked == 106 and .quest_completion_0_1_9_24.item_requirements_present == 106' "$validation" >/dev/null
 
 client_compat="$repo_dir/client/overrides/kubejs/data"
@@ -98,7 +98,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-29 static validation passed"
+echo "Amber & Arcana 0.1.9-30 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -128,30 +128,30 @@ grep -Fq 'title: "A Reliable Factory"' "$create_chapter" || { echo "Create final
 grep -Fq 'Wheel of Fortune — Create Engineering' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel table missing" >&2; exit 1; }
 grep -Fq 'create:stock_ticker' "$client_quests/reward_tables/wheel_create_engineering.snbt" || { echo "Create wheel was not refreshed" >&2; exit 1; }
 
-# 0.1.9-29 mechanics-based quest grouping checks
+# 0.1.9-30 mechanics-based quest grouping checks
 jq -e '.quest_organization_0_1_9_29.chapter_groups == 9 and .quest_organization_0_1_9_29.chapters_grouped == 26 and .quest_organization_0_1_9_29.all_chapters_explicitly_assigned == true and .quest_organization_0_1_9_29.historical_ids_preserved == true and .quest_organization_0_1_9_29.client_server_quest_files_identical == true' "$validation" >/dev/null
 groups="$client_quests/chapter_groups.snbt"
 test -f "$groups" || { echo "chapter_groups.snbt missing" >&2; exit 1; }
 for pair in \
   '5A29000000000001|Start Here' \
-  '5A29000000000002|Machines & Production' \
-  '5A29000000000003|Storage & Networks' \
-  '5A29000000000004|Resources & Farming' \
-  '5A29000000000005|Magic & Rituals' \
-  '5A29000000000006|Exploration & Creatures' \
-  '5A29000000000007|Building & Settlements' \
-  '5A29000000000008|Tools, Combat & Equipment' \
-  '5A29000000000009|Collections & Endgame'; do
+  '5A29000000000002|Machines and Production' \
+  '5A29000000000003|Storage and Networks' \
+  '5A29000000000004|Resources and Farming' \
+  '5A29000000000005|Magic and Rituals' \
+  '5A29000000000006|Exploration and Creatures' \
+  '5A29000000000007|Building and Settlements' \
+  '5A29000000000008|Tools, Combat and Equipment' \
+  '5A29000000000009|Collections and Endgame'; do
   gid="${pair%%|*}"; title="${pair#*|}"
   grep -Fq "{ id: \"$gid\", title: \"$title\" }" "$groups" || { echo "Quest group missing: $title" >&2; exit 1; }
 done
 test "$(rg -n '^\s*group: "5A2900000000000[1-9]"\s*$' "$client_quests/chapters" | wc -l)" = "26" || { echo "Not all 26 chapters are assigned to mechanics groups" >&2; exit 1; }
-grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/create_engineering.snbt" || { echo "Create Engineering is not under Machines & Production" >&2; exit 1; }
-grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/mekanism.snbt" || { echo "Mekanism is not under Machines & Production" >&2; exit 1; }
-grep -Fq 'group: "5A29000000000004"' "$client_quests/chapters/productive_bees.snbt" || { echo "Productive Bees is not under Resources & Farming" >&2; exit 1; }
+grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/create_engineering.snbt" || { echo "Create Engineering is not under Machines and Production" >&2; exit 1; }
+grep -Fq 'group: "5A29000000000002"' "$client_quests/chapters/mekanism.snbt" || { echo "Mekanism is not under Machines and Production" >&2; exit 1; }
+grep -Fq 'group: "5A29000000000004"' "$client_quests/chapters/productive_bees.snbt" || { echo "Productive Bees is not under Resources and Farming" >&2; exit 1; }
 cmp "$client_quests/chapter_groups.snbt" "$server_quests/chapter_groups.snbt" >/dev/null || { echo "Client/server chapter groups differ" >&2; exit 1; }
 
-test "$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)" = "26" || { echo "Expected 26 finale loot rewards" >&2; exit 1; }
+# 0.1.9-30 loot coverage is validated from release metadata below
 test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated client wheel tables" >&2; exit 1; }
 test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'wheel_*.snbt' -type f | wc -l)" = "26" || { echo "Expected 26 generated server wheel tables" >&2; exit 1; }
 quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
@@ -159,3 +159,31 @@ test -f "$quest_overlay" || { echo "Quest-only Crafty overlay missing" >&2; exit
 test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapter_groups.snbt')" = "1" || { echo "chapter_groups.snbt missing from quest overlay" >&2; exit 1; }
 test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/productive_bees.snbt')" = "1" || { echo "Productive Bees chapter missing from quest overlay" >&2; exit 1; }
 test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/chapters/create_engineering.snbt')" = "1" || { echo "Create chapter missing from quest overlay" >&2; exit 1; }
+
+
+# 0.1.9-30 quest UX checks
+jq -e '.quest_ux_0_1_9_30.group_labels_fixed == true and .quest_ux_0_1_9_30.chapters_relaid_out == 26 and .quest_ux_0_1_9_30.total_quests >= 220 and .quest_ux_0_1_9_30.loot_coverage_percent >= 70 and .quest_ux_0_1_9_30.tier_tables == 4 and .quest_ux_0_1_9_30.total_reward_tables == 35 and .quest_ux_0_1_9_30.bee_species_item_detection == .productive_bees_0_1_9_27.bee_quests and .quest_ux_0_1_9_30.bee_manual_species_tasks_remaining == 0 and .quest_ux_0_1_9_30.historical_ids_preserved == true and .quest_ux_0_1_9_30.client_server_quest_files_identical == true' "$validation" >/dev/null
+
+groups="$client_quests/chapter_groups.snbt"
+for label in 'Machines and Production' 'Storage and Networks' 'Resources and Farming' 'Magic and Rituals' 'Exploration and Creatures' 'Building and Settlements' 'Tools, Combat and Equipment' 'Collections and Endgame'; do
+  grep -Fq "title: \"$label\"" "$groups" || { echo "Parser-safe group label missing: $label" >&2; exit 1; }
+done
+if rg -F ' & ' "$client_quests" >/dev/null; then
+  echo "Literal ampersand-space remains in FTB Quests text" >&2
+  exit 1
+fi
+
+pb_chapter="$client_quests/chapters/productive_bees.snbt"
+grep -Fq 'id: "productivebees:configurable_honeycomb"' "$pb_chapter" || { echo "Typed Productive Bees honeycomb tasks missing" >&2; exit 1; }
+grep -Fq 'id: "productivebees:bee_cage"' "$pb_chapter" || { echo "Filled Productive Bees cage tasks missing" >&2; exit 1; }
+grep -Fq 'match_nbt: true' "$pb_chapter" || { echo "Productive Bees NBT matching missing" >&2; exit 1; }
+grep -Fq 'weak_nbt_match: true' "$pb_chapter" || { echo "Productive Bees weak NBT matching missing" >&2; exit 1; }
+
+test "$(find "$client_quests/reward_tables" -maxdepth 1 -name 'depth_tier_*.snbt' -type f | wc -l)" = "4" || { echo "Expected four client depth-tier reward tables" >&2; exit 1; }
+test "$(find "$server_quests/reward_tables" -maxdepth 1 -name 'depth_tier_*.snbt' -type f | wc -l)" = "4" || { echo "Expected four server depth-tier reward tables" >&2; exit 1; }
+loot_count="$(rg -n 'type: "loot"' "$client_quests/chapters" | wc -l)"
+covered="$(jq -r '.quest_ux_0_1_9_30.loot_covered_quests' "$validation")"
+test "$loot_count" -ge "$covered" || { echo "Quest loot reward count is below recorded coverage" >&2; exit 1; }
+
+quest_overlay="$repo_dir/dist/Amber-and-Arcana-${version}-Crafty-Quest-Overlay.zip"
+test "$(unzip -Z1 "$quest_overlay" | grep -Fxc 'config/ftbquests/quests/reward_tables/depth_tier_4.snbt')" = "1" || { echo "Depth-tier tables missing from quest overlay" >&2; exit 1; }

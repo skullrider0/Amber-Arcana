@@ -11,8 +11,8 @@
 			id: "3099F106AB3C6A98",
 			subtitle: "Requires Gunsmithing metal; then confirm the milestone."
 			title: "A gunsmiths bench",
-			x: 0.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Craft a Create Gunsmithing weapon and compatible ammunition using the installed recipes.",
@@ -29,6 +29,13 @@
 					id: "2964A0BA52A48D2A"
 					type: "xp"
 					xp: 100
+				}
+			
+				{
+					id: "3F4A980A3C6946FC"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -52,8 +59,8 @@
 			id: "75559872A530EDA9",
 			subtitle: "Requires Ammunition ingredients; then confirm the milestone."
 			title: "An ammunition line",
-			x: 3.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Automate a repeatable ammunition ingredient or assembly step using the available Create recipes.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -69,6 +76,13 @@
 					id: "E79046D70F18293E"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "5D03F59738EDE62C"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -95,8 +109,8 @@
 			id: "2129796B99A6F9F3",
 			subtitle: "Requires Cannon test-site reinforcement; then confirm the milestone."
 			title: "Big Cannons",
-			x: 6.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Construct and load a Create Big Cannons installation using its guide. Test it in a clear area away from your colony and habitats.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

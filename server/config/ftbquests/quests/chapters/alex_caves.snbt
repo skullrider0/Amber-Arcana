@@ -45,7 +45,7 @@
 			]
 			subtitle: "Requires Expedition spyglass; then confirm the milestone."
 			title: "An expedition begins"
-			x: 0.0d
+			x: -17.5d
 			y: 0.0d
 		}
 		{
@@ -67,6 +67,13 @@
 					id: "7D3733E0FA2146D6"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "0F211F706EC1EC4A"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -93,7 +100,7 @@
 			]
 			subtitle: "Requires Aquarium water supply + Aquarium glass; then confirm the milestone."
 			title: "The deep aquarium"
-			x: 3.0d
+			x: -10.5d
 			y: 0.0d
 		}
 		{
@@ -116,6 +123,13 @@
 					type: "xp"
 					xp: 200
 				}
+			
+				{
+					id: "3FC777DFA8D65590"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -133,7 +147,7 @@
 			]
 			subtitle: "Requires Cave transport cart; then confirm the milestone."
 			title: "Cave resources in motion"
-			x: 6.0d
+			x: -3.5d
 			y: 0.0d
 		}
 		{
@@ -156,6 +170,13 @@
 					type: "xp"
 					xp: 250
 				}
+			
+				{
+					id: "2FC83FF35E3F4898"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -173,8 +194,8 @@
 			]
 			subtitle: "Requires Relic excavation brush; then confirm the milestone."
 			title: "A relic with a history"
-			x: 0.0d
-			y: 3.0d
+			x: 3.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7B9BA95C7DE84FD2"]
@@ -196,6 +217,13 @@
 					type: "xp"
 					xp: 300
 				}
+			
+				{
+					id: "047C204F3A905E48"
+					table_id: 7268741934947550396L
+					title: "Tier 3 Depth Roll"
+					type: "loot"
+				}
 			]
 			tasks: [
 				{
@@ -214,8 +242,8 @@
 			]
 			subtitle: "Requires Arcane cave crystals; then confirm the milestone."
 			title: "Spells from the depths"
-			x: 3.0d
-			y: 3.0d
+			x: 10.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7A3C820F73672F99"]
@@ -262,8 +290,8 @@
 			]
 			subtitle: "Requires Automation supplies; then confirm the milestone."
 			title: "The arcane workshop"
-			x: 6.0d
-			y: 3.0d
+			x: 17.5d
+			y: 0.0d
 		}
 	]
 	title: "Caves, Relics and Spells"

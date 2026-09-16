@@ -11,8 +11,8 @@
 			id: "7F5A949E389973B0",
 			subtitle: "Requires Create Wrench; then confirm the milestone."
 			title: "A shared workshop",
-			x: 0.0,
-			y: 0.0,
+			x: -14.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Build a powered Create work area. Keep access to shafts, belts, and stress controls clear so friends can maintain the machines.",
@@ -51,8 +51,8 @@
 			id: "790286CC030F3B89",
 			subtitle: "Requires Workshop casings; then confirm the milestone."
 			title: "Casings and conveniences",
-			x: 3.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			description: [
 				"Use Encased and Misc and Things components in a working machine. Decorate the workshop with Interiors and Stuff N Additions blocks or equipment.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -68,6 +68,13 @@
 					id: "F2F611C50CE3C518"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "2695F9B7034F0EB9"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -94,8 +101,8 @@
 			id: "7D97DFC1BF45C254",
 			subtitle: "Requires Sifting mesh supplies; then confirm the milestone."
 			title: "A renewable supply",
-			x: 6.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Construct a Sifting line and sort its outputs. Follow the installed mesh recipes in JEI; avoid assuming every modded ore appears in every sieve.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -111,6 +118,13 @@
 					id: "4F7D194F835EF9B8"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "4011223250D2CA4B"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -137,8 +151,8 @@
 			id: "73AF015A40ECDE9A",
 			subtitle: "Requires Careful bulk-mining tool; then confirm the milestone."
 			title: "Bulk work with care",
-			x: 0.0,
-			y: 3.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Use FTB Ultimine and Create Ultimine on a small owned test structure. Check the selection preview and verify that another team cannot remove your claimed machinery.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -154,6 +168,13 @@
 					id: "9404080F996A2F9C"
 					type: "xp"
 					xp: 250
+				}
+			
+				{
+					id: "720B3D7C25DF11D8"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -179,8 +200,8 @@
 			id: "7B876F79028477C7",
 			subtitle: "Requires Large-scale Create components; then confirm the milestone."
 			title: "Power at scale",
-			x: 3.0,
-			y: 3.0,
+			x: 14.0d,
+			y: 0.0d,
 			description: [
 				"Build a CROWNS power setup using its guide and installed recipes. Add a way to stop production and monitor stress before connecting it to your main factory.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."

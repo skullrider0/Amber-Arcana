@@ -11,8 +11,8 @@
 			id: "51C15EB45468ED7A",
 			subtitle: "Requires Tinkers Crafting Station; completion is detected automatically."
 			title: "Tool maker",
-			x: 0.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Read Materials and You and make your first customizable Tinkers tool.",
@@ -29,6 +29,13 @@
 					id: "36AAE622AA477B27"
 					type: "xp"
 					xp: 100
+				}
+			
+				{
+					id: "4967BCF8BC525462"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -52,8 +59,8 @@
 			id: "4C6BE38139D72DC8",
 			subtitle: "Requires Seared Melter; completion is detected automatically."
 			title: "Melting and casting",
-			x: 3.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Build the melting and casting equipment described in the installed guide. Produce an alloy and cast a tool part.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."
@@ -69,6 +76,13 @@
 					id: "6F89B8649CF11FDC"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "3F69CC9D0F77606C"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -95,8 +109,8 @@
 			id: "1516BE85C9F46A4B",
 			subtitle: "Requires Tinkers Anvil; completion is detected automatically."
 			title: "A personal tool set",
-			x: 6.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Build and modify a set of tools suited to mining, building, and adventuring. Compare materials in the guide before spending rare resources.",
 				"Obtain the listed requirement item(s). This item milestone completes automatically; the retained checkmark is optional for manual verification."

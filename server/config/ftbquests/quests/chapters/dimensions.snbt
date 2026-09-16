@@ -11,8 +11,8 @@
 			id: "43F76D74D0E60C18",
 			subtitle: "Requires Nether expedition trophy; then confirm the milestone."
 			title: "Nether expedition",
-			x: 0.0,
-			y: 0.0,
+			x: -14.0d,
+			y: 0.0d,
 			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Build a Nether portal, prepare food and a marked return route, and establish a safe foothold on the other side."
@@ -51,8 +51,8 @@
 			id: "36F1DC4DCF854967",
 			subtitle: "Requires Deep-dark expedition proof; then confirm the milestone."
 			title: "The Otherside",
-			x: 3.0,
-			y: 0.0,
+			x: -7.0d,
+			y: 0.0d,
 			description: [
 				"Use Deeper and Darker progression to reach the Otherside. Establish a marked return route before carrying rare materials home.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -68,6 +68,13 @@
 					id: "D70478B2EBCAC258"
 					type: "xp"
 					xp: 150
+				}
+			
+				{
+					id: "41FDB1DB577FF812"
+					table_id: 6186592811492234544L
+					title: "Tier 1 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -93,8 +100,8 @@
 			id: "7A6715D16FCD5049",
 			subtitle: "Requires Blue Skies expedition supplies; then confirm the milestone."
 			title: "Blue Skies expedition",
-			x: 6.0,
-			y: 0.0,
+			x: 0.0d,
+			y: 0.0d,
 			description: [
 				"Enter a Blue Skies dimension and progress using its own materials and equipment rules.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -110,6 +117,13 @@
 					id: "11781B285346018E"
 					type: "xp"
 					xp: 200
+				}
+			
+				{
+					id: "28062CB1CD11081F"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -136,8 +150,8 @@
 			id: "645820C5A20557B2",
 			subtitle: "Requires Bumblezone resources; then confirm the milestone."
 			title: "The Bumblezone",
-			x: 9.0,
-			y: 0.0,
+			x: 7.0d,
+			y: 0.0d,
 			description: [
 				"Explore the Bumblezone, learn how its inhabitants react, and bring back useful resources.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
@@ -153,6 +167,13 @@
 					id: "ADFE409A793AD20A"
 					type: "xp"
 					xp: 250
+				}
+			
+				{
+					id: "13848562AC770AFB"
+					table_id: 2890082243860220727L
+					title: "Tier 2 Depth Roll"
+					type: "loot"
 				}
 			]
 			tasks: [
@@ -179,8 +200,8 @@
 			id: "703E1B74FC15549F",
 			subtitle: "Requires Cataclysm-ready material; then confirm the milestone."
 			title: "Cataclysm expeditions",
-			x: 0.0,
-			y: 3.0,
+			x: 14.0d,
+			y: 0.0d,
 			description: [
 				"Locate and challenge a structure from L_Ender's Cataclysm. Prepare an escape route and test your equipment on lesser enemies before confronting its boss.",
 				"Obtain the listed requirement item(s), complete the objective, then use the manual checkmark to confirm it works as intended."
