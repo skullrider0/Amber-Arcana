@@ -6,6 +6,7 @@
 	icon: "minecraft:spyglass"
 	id: "76CF3A2F1DBFB5BE"
 	order_index: 0
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -51,8 +52,8 @@
 			]
 			subtitle: "Requires Expedition spyglass; then confirm the milestone."
 			title: "An expedition begins"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7461A4C60A86DB74"]
@@ -79,8 +80,8 @@
 				}
 			]
 			title: "Explore: Obtain: Expedition spyglass"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4845C0DD3345D8FF"]
@@ -127,8 +128,8 @@
 			]
 			subtitle: "Requires Aquarium water supply + Aquarium glass; then confirm the milestone."
 			title: "The deep aquarium"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7FE48558E795564B"]
@@ -155,8 +156,8 @@
 				}
 			]
 			title: "Explore: Obtain: Aquarium water supply"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["675EC9BC4923A7D3"]
@@ -202,7 +203,7 @@
 			subtitle: "Requires Cave transport cart; then confirm the milestone."
 			title: "Cave resources in motion"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["75BB6ABE317E1135"]
@@ -229,8 +230,8 @@
 				}
 			]
 			title: "Explore: Obtain: Cave transport cart"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7A52824D32560BE2"]
@@ -275,8 +276,8 @@
 			]
 			subtitle: "Requires Relic excavation brush; then confirm the milestone."
 			title: "A relic with a history"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7B9BA95C7DE84FD2"]
@@ -303,8 +304,8 @@
 				}
 			]
 			title: "Explore: Obtain: Relic excavation brush"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4C063B92DA40CE7D"]
@@ -344,8 +345,8 @@
 			]
 			subtitle: "Requires Arcane cave crystals; then confirm the milestone."
 			title: "Spells from the depths"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7A3C820F73672F99"]
@@ -372,8 +373,8 @@
 				}
 			]
 			title: "Explore: Obtain: Arcane cave crystals"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["54EB91A484425C2F"]
@@ -413,8 +414,8 @@
 			]
 			subtitle: "Requires Automation supplies; then confirm the milestone."
 			title: "The arcane workshop"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["784A85F81BAE7DB3"]
@@ -441,8 +442,8 @@
 				}
 			]
 			title: "Explore: Obtain: Automation supplies"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["078DC555B456D6C9"]
@@ -475,8 +476,8 @@
 				}
 			]
 			title: "Alex Caves Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 	]
 	title: "Caves, Relics and Spells"

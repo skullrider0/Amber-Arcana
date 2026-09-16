@@ -4,6 +4,7 @@
 	filename: "dimensions",
 	title: "Beyond the Overworld",
 	order_index: 1,
+	progression_mode: "flexible"
 	group: "5A29000000000006"
 	quests: [
 		{
@@ -77,8 +78,8 @@
 				}
 			]
 			title: "Enter: Nether expedition"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["65ECC54FE5DC185A"]
@@ -105,8 +106,8 @@
 				}
 			]
 			title: "Establish: Nether expedition"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:echo_shard"
@@ -173,8 +174,8 @@
 				}
 			]
 			title: "Enter: The Otherside"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7D65B23001EAD562"]
@@ -201,8 +202,8 @@
 				}
 			]
 			title: "Establish: The Otherside"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:diamond"
@@ -276,8 +277,8 @@
 				}
 			]
 			title: "Enter: Blue Skies expedition"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["221E1D8E1A66BB41"]
@@ -304,8 +305,8 @@
 				}
 			]
 			title: "Establish: Blue Skies expedition"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:honeycomb"
@@ -379,8 +380,8 @@
 				}
 			]
 			title: "Enter: The Bumblezone"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["6E3D84AAF016CE02"]
@@ -407,8 +408,8 @@
 				}
 			]
 			title: "Establish: The Bumblezone"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			icon: "minecraft:netherite_ingot"
@@ -475,8 +476,8 @@
 				}
 			]
 			title: "Enter: Cataclysm expeditions"
-			x: 0.0d
-			y: 8.0d
+			x: -1.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["71C8B11AABFFB59E"]
@@ -503,8 +504,8 @@
 				}
 			]
 			title: "Establish: Cataclysm expeditions"
-			x: -4.0d
-			y: 8.0d
+			x: -2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["00211AF169786419"]
@@ -537,8 +538,8 @@
 				}
 			]
 			title: "Beyond the Overworld Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -4.5d
+			y: 1.75d
 		}
 	],
 	quest_links: []

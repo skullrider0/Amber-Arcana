@@ -6,6 +6,7 @@
 	icon: "minecraft:iron_sword"
 	id: "7C03952947D653FD"
 	order_index: 3
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -51,8 +52,8 @@
 			]
 			subtitle: "Requires Butchery cutting tool; then confirm the milestone."
 			title: "A working butchery"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["721D62786F52052B"]
@@ -79,8 +80,8 @@
 				}
 			]
 			title: "Process: Obtain: Butchery cutting tool"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4CBFDE2ED6102C97"]
@@ -107,8 +108,8 @@
 				}
 			]
 			title: "Preserve: Obtain: Butchery cutting tool"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["2A3AAEA7891236B5"]
@@ -154,8 +155,8 @@
 			]
 			subtitle: "Requires Prepared meat; then confirm the milestone."
 			title: "From cuts to cooking"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["71390971389C67F4"]
@@ -183,7 +184,7 @@
 			]
 			title: "Process: Obtain: Prepared meat"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["54A92BCE267BE9FB"]
@@ -210,8 +211,8 @@
 				}
 			]
 			title: "Preserve: Obtain: Prepared meat"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1EEDBE28A40E2D24"]
@@ -251,8 +252,8 @@
 			]
 			subtitle: "Requires Blood-handling containers; then confirm the milestone."
 			title: "The blood workshop"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7E7522394BC0CA28"]
@@ -279,8 +280,8 @@
 				}
 			]
 			title: "Process: Obtain: Blood-handling containers"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["37E40670110447F3"]
@@ -307,8 +308,8 @@
 				}
 			]
 			title: "Preserve: Obtain: Blood-handling containers"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0AA45D4189A443DD"]
@@ -353,8 +354,8 @@
 			]
 			subtitle: "Requires Faction provisions; then confirm the milestone."
 			title: "Vampire provisions"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["71462C1C525987DD"]
@@ -381,8 +382,8 @@
 				}
 			]
 			title: "Process: Obtain: Faction provisions"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5FD713ECD628ECE7"]
@@ -409,8 +410,8 @@
 				}
 			]
 			title: "Preserve: Obtain: Faction provisions"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5EBD7AF067CE5682"]
@@ -450,8 +451,8 @@
 			]
 			subtitle: "Requires Animal handling supplies; then confirm the milestone."
 			title: "Expanded processing"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 		{
 			dependencies: ["78F216007C4453E8"]
@@ -479,7 +480,7 @@
 			]
 			title: "Process: Obtain: Animal handling supplies"
 			x: 0.0d
-			y: 8.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["2E93C172CD9D5D05"]
@@ -506,8 +507,8 @@
 				}
 			]
 			title: "Preserve: Obtain: Animal handling supplies"
-			x: -4.0d
-			y: 8.0d
+			x: -1.75d
+			y: 1.75d
 		}
 		{
 			dependencies: ["6481BDDEB50060D9"]
@@ -540,8 +541,8 @@
 				}
 			]
 			title: "Butchery Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -3.5d
+			y: 1.75d
 		}
 	]
 	title: "Butchery and Bloodcraft"

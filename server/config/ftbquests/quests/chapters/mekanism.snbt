@@ -4,6 +4,7 @@
 	filename: "mekanism",
 	title: "Mekanism Industry",
 	order_index: 1,
+	progression_mode: "flexible"
 	group: "5A29000000000002"
 	quests: [
 		{
@@ -85,8 +86,8 @@
 				}
 			]
 			title: "Commission: A powered machine room"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["63F5C772CFB29528"]
@@ -113,8 +114,8 @@
 				}
 			]
 			title: "Automate: A powered machine room"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "mekanism:purification_chamber"
@@ -188,8 +189,8 @@
 				}
 			]
 			title: "Commission: Ore processing"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["183643F28E664C44"]
@@ -216,8 +217,8 @@
 				}
 			]
 			title: "Automate: Ore processing"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "mekanism:ultimate_energy_cube"
@@ -291,8 +292,8 @@
 				}
 			]
 			title: "Commission: Power with safeguards"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["26E091D092556FB0"]
@@ -319,8 +320,8 @@
 				}
 			]
 			title: "Automate: Power with safeguards"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "mekanism:mekasuit_helmet"
@@ -388,8 +389,8 @@
 				}
 			]
 			title: "Commission: The MekaSuit"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["4A4EFCC143C10893"]
@@ -416,8 +417,8 @@
 				}
 			]
 			title: "Automate: The MekaSuit"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7629A6E7C160C1D0"]
@@ -450,8 +451,8 @@
 				}
 			]
 			title: "Mekanism Industry Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

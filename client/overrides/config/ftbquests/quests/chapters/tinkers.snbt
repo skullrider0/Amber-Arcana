@@ -4,6 +4,7 @@
 	filename: "tinkers",
 	title: "Tinkers Construct",
 	order_index: 0,
+	progression_mode: "flexible"
 	group: "5A29000000000008"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Forge: Tool maker"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["746A0D535A7DFFD3"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Modify: Tool maker"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["57D175A76E582697"]
@@ -134,8 +135,8 @@
 				}
 			]
 			title: "Upgrade: Tool maker"
-			x: -4.0d
-			y: 0.0d
+			x: -2.5d
+			y: -1.75d
 		}
 		{
 			icon: "tconstruct:seared_melter"
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Forge: Melting and casting"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["6DC91C1B94E37A33"]
@@ -237,8 +238,8 @@
 				}
 			]
 			title: "Modify: Melting and casting"
-			x: 8.0d
-			y: 0.0d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["23DDEB83B46CDB92"]
@@ -265,8 +266,8 @@
 				}
 			]
 			title: "Upgrade: Melting and casting"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			icon: "tconstruct:tinkers_anvil"
@@ -334,8 +335,8 @@
 				}
 			]
 			title: "Forge: A personal tool set"
-			x: 16.0d
-			y: 8.0d
+			x: 6.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["78915EE5B794D3C7"]
@@ -362,8 +363,8 @@
 				}
 			]
 			title: "Modify: A personal tool set"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["650C7E94C0DF0781"]
@@ -390,8 +391,8 @@
 				}
 			]
 			title: "Upgrade: A personal tool set"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["092FAFE54BD5C00B"]
@@ -424,8 +425,8 @@
 				}
 			]
 			title: "Tinkers Construct Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

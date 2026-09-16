@@ -4,6 +4,7 @@
 	filename: "create_workshops",
 	title: "Create Workshops",
 	order_index: 4,
+	progression_mode: "flexible"
 	group: "5A29000000000002"
 	quests: [
 		{
@@ -77,8 +78,8 @@
 				}
 			]
 			title: "Build: A shared workshop"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["189720AF195A5648"]
@@ -105,8 +106,8 @@
 				}
 			]
 			title: "Automate: A shared workshop"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "create:andesite_casing"
@@ -180,8 +181,8 @@
 				}
 			]
 			title: "Build: Casings and conveniences"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["318B0CBB8745AFE2"]
@@ -208,8 +209,8 @@
 				}
 			]
 			title: "Automate: Casings and conveniences"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:string"
@@ -283,8 +284,8 @@
 				}
 			]
 			title: "Build: A renewable supply"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1ABA7155D0E0B854"]
@@ -311,8 +312,8 @@
 				}
 			]
 			title: "Automate: A renewable supply"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:diamond_pickaxe"
@@ -385,8 +386,8 @@
 				}
 			]
 			title: "Build: Bulk work with care"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["333134227239BB72"]
@@ -413,8 +414,8 @@
 				}
 			]
 			title: "Automate: Bulk work with care"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			icon: "create:brass_casing"
@@ -482,8 +483,8 @@
 				}
 			]
 			title: "Build: Power at scale"
-			x: 0.0d
-			y: 8.0d
+			x: -1.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["675C98F0738930E0"]
@@ -510,8 +511,8 @@
 				}
 			]
 			title: "Automate: Power at scale"
-			x: -4.0d
-			y: 8.0d
+			x: -2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["29AF859CA08B7B34"]
@@ -544,8 +545,8 @@
 				}
 			]
 			title: "Create Workshops Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -4.5d
+			y: 1.75d
 		}
 	],
 	quest_links: []

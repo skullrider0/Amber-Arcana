@@ -6,6 +6,7 @@
 	icon: "minecraft:paper"
 	id: "7BDEAC7129B97A9A"
 	order_index: 0
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -52,8 +53,8 @@
 			]
 			subtitle: "Requires Card-sorting supplies; then confirm the milestone."
 			title: "Your first collection"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7FCDE8795B31F33B"]
@@ -80,8 +81,8 @@
 				}
 			]
 			title: "Collect: Obtain: Card-sorting supplies"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["240AFBC6E0274C67"]
@@ -121,8 +122,8 @@
 			]
 			subtitle: "Requires Mechanical recycling materials; then confirm the milestone."
 			title: "Mechanical recycling"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["74D1135963FC93B7"]
@@ -149,8 +150,8 @@
 				}
 			]
 			title: "Collect: Obtain: Mechanical recycling materials"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4F47F76BF3037ECD"]
@@ -197,7 +198,7 @@
 			subtitle: "Requires Farm collection supplies; then confirm the milestone."
 			title: "The farmers collection"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["76E508B4DA1156E6"]
@@ -224,8 +225,8 @@
 				}
 			]
 			title: "Collect: Obtain: Farm collection supplies"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7A49FDD4B01812F0"]
@@ -270,8 +271,8 @@
 			]
 			subtitle: "Requires Fishing setup; then confirm the milestone."
 			title: "Cards from the water"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7213DF73BF55B790"]
@@ -298,8 +299,8 @@
 				}
 			]
 			title: "Collect: Obtain: Fishing setup"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["44A34495B31FC7B1"]
@@ -339,8 +340,8 @@
 			]
 			subtitle: "Requires AE2 collection materials; then confirm the milestone."
 			title: "Singularity collector"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7683E53A2478761A"]
@@ -367,8 +368,8 @@
 				}
 			]
 			title: "Collect: Obtain: AE2 collection materials"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["374D7EE552257D52"]
@@ -408,8 +409,8 @@
 			]
 			subtitle: "Requires Museum displays; then confirm the milestone."
 			title: "A museum of friendships"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["762E20CA5C1E2D39"]
@@ -436,8 +437,8 @@
 				}
 			]
 			title: "Collect: Obtain: Museum displays"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["329A3FD96320EFFC"]
@@ -470,8 +471,8 @@
 				}
 			]
 			title: "Buddycards Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 	]
 	title: "The Collectors Club"

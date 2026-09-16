@@ -6,6 +6,7 @@
 	icon: "create:mechanical_press"
 	id: "0C5565DC7663F603"
 	order_index: 0
+	progression_mode: "flexible"
 	quest_links: []
 	quests: [
 		{
@@ -37,8 +38,8 @@
 			}
 			]
 			title: "Andesite Alloy"
-			x: -59.5d
-			y: 0.0d
+			x: -13.5d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -75,8 +76,8 @@
 			}
 			]
 			title: "Engineer's Tools"
-			x: -52.5d
-			y: 0.0d
+			x: -12.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -107,8 +108,8 @@
 			}
 			]
 			title: "Andesite Casing"
-			x: -52.5d
-			y: -3.2d
+			x: -12.0d
+			y: -2.25d
 		}
 		{
 			dependencies: [
@@ -151,8 +152,8 @@
 			}
 			]
 			title: "Shafts and Gears"
-			x: -52.5d
-			y: 3.2d
+			x: -12.0d
+			y: 0.25d
 		}
 		{
 			dependencies: [
@@ -208,8 +209,8 @@
 			}
 			]
 			title: "Control the Rotation"
-			x: -45.5d
-			y: 1.6d
+			x: -10.25d
+			y: -0.25d
 		}
 		{
 			dependencies: [
@@ -258,8 +259,8 @@
 			}
 			]
 			title: "First Rotation"
-			x: -45.5d
-			y: -1.6d
+			x: -10.25d
+			y: -1.75d
 		}
 		{
 			dependencies: [
@@ -290,8 +291,8 @@
 			}
 			]
 			title: "Milling"
-			x: -38.5d
-			y: 1.6d
+			x: -8.75d
+			y: 0.75d
 		}
 		{
 			dependencies: [
@@ -328,8 +329,8 @@
 			}
 			]
 			title: "Mixing and Basins"
-			x: -38.5d
-			y: 4.8d
+			x: -8.75d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -360,8 +361,8 @@
 			}
 			]
 			title: "Bulk Processing"
-			x: -38.5d
-			y: -8.0d
+			x: -8.75d
+			y: -3.25d
 		}
 		{
 			dependencies: [
@@ -423,8 +424,8 @@
 			}
 			]
 			title: "A Processing Line"
-			x: -31.5d
-			y: -4.8d
+			x: -7.25d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -462,8 +463,8 @@
 			}
 			]
 			title: "Cutting and Drilling"
-			x: -38.5d
-			y: -4.8d
+			x: -8.75d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -501,8 +502,8 @@
 			}
 			]
 			title: "Pipes and Pumps"
-			x: -38.5d
-			y: 8.0d
+			x: -8.75d
+			y: 3.25d
 		}
 		{
 			dependencies: [
@@ -546,8 +547,8 @@
 			}
 			]
 			title: "Fluid Storage"
-			x: -31.5d
-			y: 4.8d
+			x: -7.25d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -592,8 +593,8 @@
 			}
 			]
 			title: "Drain and Spout"
-			x: -24.5d
-			y: -1.6d
+			x: -5.5d
+			y: -1.25d
 		}
 		{
 			dependencies: [
@@ -631,8 +632,8 @@
 			}
 			]
 			title: "Hose Pulley"
-			x: -24.5d
-			y: 4.8d
+			x: -5.5d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -683,8 +684,8 @@
 			}
 			]
 			title: "Moving Contraptions"
-			x: -31.5d
-			y: -1.6d
+			x: -7.25d
+			y: -1.25d
 		}
 		{
 			dependencies: [
@@ -734,8 +735,8 @@
 			}
 			]
 			title: "Pulleys and Gantries"
-			x: -24.5d
-			y: -4.8d
+			x: -5.5d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -786,8 +787,8 @@
 			}
 			]
 			title: "Contraption I/O"
-			x: -17.5d
-			y: -1.6d
+			x: -4.0d
+			y: -1.75d
 		}
 		{
 			dependencies: [
@@ -824,8 +825,8 @@
 			}
 			]
 			title: "Electron Tubes"
-			x: -38.5d
-			y: -1.6d
+			x: -8.75d
+			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -863,8 +864,8 @@
 			}
 			]
 			title: "Blaze Burner"
-			x: -31.5d
-			y: 1.6d
+			x: -7.25d
+			y: 0.25d
 		}
 		{
 			dependencies: [
@@ -903,8 +904,8 @@
 			}
 			]
 			title: "Enter the Brass Age"
-			x: -24.5d
-			y: 1.6d
+			x: -5.5d
+			y: 0.25d
 		}
 		{
 			dependencies: [
@@ -942,8 +943,8 @@
 			}
 			]
 			title: "Brass Casing"
-			x: -17.5d
-			y: 1.6d
+			x: -4.0d
+			y: -0.25d
 		}
 		{
 			dependencies: [
@@ -995,8 +996,8 @@
 			}
 			]
 			title: "Brass Logistics"
-			x: -10.5d
-			y: -4.8d
+			x: -2.5d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -1036,8 +1037,8 @@
 			}
 			]
 			title: "Deployer"
-			x: -10.5d
-			y: -1.6d
+			x: -2.5d
+			y: -1.25d
 		}
 		{
 			dependencies: [
@@ -1088,8 +1089,8 @@
 			}
 			]
 			title: "Precision Mechanisms"
-			x: -3.5d
-			y: -1.6d
+			x: -0.75d
+			y: -1.75d
 		}
 		{
 			dependencies: [
@@ -1128,8 +1129,8 @@
 			}
 			]
 			title: "Mechanical Arm"
-			x: 3.5d
-			y: -4.8d
+			x: 0.75d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -1168,8 +1169,8 @@
 			}
 			]
 			title: "Mechanical Crafter"
-			x: 3.5d
-			y: 1.6d
+			x: 0.75d
+			y: 0.25d
 		}
 		{
 			dependencies: [
@@ -1207,8 +1208,8 @@
 			}
 			]
 			title: "Crushing Wheels"
-			x: 10.5d
-			y: 1.6d
+			x: 2.5d
+			y: -0.25d
 		}
 		{
 			dependencies: [
@@ -1247,8 +1248,8 @@
 			}
 			]
 			title: "Sturdy Sheets"
-			x: 17.5d
-			y: 0.0d
+			x: 4.0d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1299,8 +1300,8 @@
 			}
 			]
 			title: "Factory Signals"
-			x: -10.5d
-			y: 1.6d
+			x: -2.5d
+			y: 0.25d
 		}
 		{
 			dependencies: [
@@ -1345,8 +1346,8 @@
 			}
 			]
 			title: "Packaging Logistics"
-			x: -3.5d
-			y: 1.6d
+			x: -0.75d
+			y: -0.25d
 		}
 		{
 			dependencies: [
@@ -1384,8 +1385,8 @@
 			}
 			]
 			title: "Repackaging"
-			x: 3.5d
-			y: 4.8d
+			x: 0.75d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1436,8 +1437,8 @@
 			}
 			]
 			title: "Stock Network"
-			x: 10.5d
-			y: -1.6d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: [
@@ -1481,8 +1482,8 @@
 			}
 			]
 			title: "Schematics"
-			x: 3.5d
-			y: -1.6d
+			x: 0.75d
+			y: -1.25d
 		}
 		{
 			dependencies: [
@@ -1533,8 +1534,8 @@
 			}
 			]
 			title: "Steam Under Control"
-			x: -10.5d
-			y: 4.8d
+			x: -2.5d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1573,8 +1574,8 @@
 			}
 			]
 			title: "Railway Casing"
-			x: 24.5d
-			y: 0.0d
+			x: 5.5d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1612,8 +1613,8 @@
 			}
 			]
 			title: "Train Track"
-			x: 31.5d
-			y: 0.0d
+			x: 7.25d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1663,8 +1664,8 @@
 			}
 			]
 			title: "Rails and Stations"
-			x: 38.5d
-			y: 0.0d
+			x: 8.75d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1708,8 +1709,8 @@
 			}
 			]
 			title: "Signals and Observers"
-			x: 45.5d
-			y: 0.0d
+			x: 10.25d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1747,8 +1748,8 @@
 			}
 			]
 			title: "Scheduled Trains"
-			x: 52.5d
-			y: 0.0d
+			x: 12.0d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1803,8 +1804,8 @@
 			}
 			]
 			title: "A Reliable Factory"
-			x: 59.5d
-			y: 0.0d
+			x: 13.5d
+			y: -1.5d
 		}
 	]
 	title: "Create Engineering"

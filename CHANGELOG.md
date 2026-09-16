@@ -1,3 +1,11 @@
+## 0.1.9-37
+
+- Reworked the quest-book display using ATM10's compact visual density and dependency-chain readability as a reference, without copying ATM10 quest text or rewards.
+- Compacted all 26 Amber & Arcana chapters adaptively toward ~1.75 quest-node dependency spacing instead of the previous large gaps.
+- Preserved every existing quest ID, task, reward, tier roll, and Wheel of Fortune reward.
+- Enabled flexible chapter progression display and kept dependency lines visible.
+- Reference snapshot: AllTheMods/ATM-10 `ab6f65e07b88423cdae1724864ba42a573ba758a`.
+
 ## 0.1.9-36
 
 - Added Mining Gadgets 1.15.6.

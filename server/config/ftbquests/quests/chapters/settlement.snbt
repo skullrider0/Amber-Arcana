@@ -4,6 +4,7 @@
 	filename: "settlement",
 	title: "Claims and Colonies",
 	order_index: 0,
+	progression_mode: "flexible"
 	group: "5A29000000000007"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Build: A place to call home"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["664B80FE7E04C648"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Staff: A place to call home"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:map"
@@ -180,8 +181,8 @@
 				}
 			]
 			title: "Build: Claim together"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7FBF7A33C847DB84"]
@@ -208,8 +209,8 @@
 				}
 			]
 			title: "Staff: Claim together"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:crafting_table"
@@ -277,8 +278,8 @@
 				}
 			]
 			title: "Build: The first builders"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["53A57238060BD7BF"]
@@ -305,8 +306,8 @@
 				}
 			]
 			title: "Staff: The first builders"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:chest"
@@ -380,8 +381,8 @@
 				}
 			]
 			title: "Build: From warehouse to workshop"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["125C33D1EEC0BEF8"]
@@ -408,8 +409,8 @@
 				}
 			]
 			title: "Staff: From warehouse to workshop"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			icon: "minecraft:bread"
@@ -477,8 +478,8 @@
 				}
 			]
 			title: "Build: A town that feeds itself"
-			x: 0.0d
-			y: 8.0d
+			x: -1.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["43B8DA574E5214FF"]
@@ -505,8 +506,8 @@
 				}
 			]
 			title: "Staff: A town that feeds itself"
-			x: -4.0d
-			y: 8.0d
+			x: -2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["3C2E896515D43508"]
@@ -539,8 +540,8 @@
 				}
 			]
 			title: "Claims and Colonies Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -4.5d
+			y: 1.75d
 		}
 	],
 	quest_links: []

@@ -4,6 +4,7 @@
 	filename: "irons_spells",
 	title: "Iron Spells and Wizardry",
 	order_index: 1,
+	progression_mode: "flexible"
 	group: "5A29000000000005"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Learn: Choose a school"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7B33A9B197BDA8E4"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Upgrade: Choose a school"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1A4EDB33F6F51D0A"]
@@ -134,8 +135,8 @@
 				}
 			]
 			title: "Prove: Choose a school"
-			x: -4.0d
-			y: 0.0d
+			x: -2.5d
+			y: -1.75d
 		}
 		{
 			icon: "irons_spellbooks:inscription_table"
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Learn: The inscription workshop"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1CEDEE246BE2D2BF"]
@@ -237,8 +238,8 @@
 				}
 			]
 			title: "Upgrade: The inscription workshop"
-			x: 8.0d
-			y: 0.0d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["2FD6EE9C8439BAAA"]
@@ -265,8 +266,8 @@
 				}
 			]
 			title: "Prove: The inscription workshop"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:amethyst_shard"
@@ -334,8 +335,8 @@
 				}
 			]
 			title: "Learn: Spells beyond the surface"
-			x: 16.0d
-			y: 8.0d
+			x: 6.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["3FB1D4CC4A95EA20"]
@@ -362,8 +363,8 @@
 				}
 			]
 			title: "Upgrade: Spells beyond the surface"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["24A9320752D0796A"]
@@ -390,8 +391,8 @@
 				}
 			]
 			title: "Prove: Spells beyond the surface"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["60EBDBD174C2D1C8"]
@@ -424,8 +425,8 @@
 				}
 			]
 			title: "Iron Spells and Wizardry Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

@@ -4,6 +4,7 @@
 	filename: "refined_storage",
 	title: "Refined Storage",
 	order_index: 1,
+	progression_mode: "flexible"
 	group: "5A29000000000003"
 	quests: [
 		{
@@ -92,8 +93,8 @@
 				}
 			]
 			title: "Network: Digital storage"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["02F832E67FCEE0E6"]
@@ -120,8 +121,8 @@
 				}
 			]
 			title: "Route: Digital storage"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["15A6CF45BD071F7E"]
@@ -148,8 +149,8 @@
 				}
 			]
 			title: "Autocraft: Digital storage"
-			x: -4.0d
-			y: 0.0d
+			x: -2.5d
+			y: -1.75d
 		}
 		{
 			icon: "refinedstorage:importer"
@@ -230,8 +231,8 @@
 				}
 			]
 			title: "Network: Connected production"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["52B7D5EBBE21C333"]
@@ -258,8 +259,8 @@
 				}
 			]
 			title: "Route: Connected production"
-			x: 8.0d
-			y: 0.0d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["21619475BB12F889"]
@@ -286,8 +287,8 @@
 				}
 			]
 			title: "Autocraft: Connected production"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			icon: "refinedstorage:crafting_grid"
@@ -355,8 +356,8 @@
 				}
 			]
 			title: "Network: Automatic crafting"
-			x: 16.0d
-			y: 8.0d
+			x: 6.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["42F75EA8D2175084"]
@@ -383,8 +384,8 @@
 				}
 			]
 			title: "Route: Automatic crafting"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5E709105C261166A"]
@@ -411,8 +412,8 @@
 				}
 			]
 			title: "Autocraft: Automatic crafting"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["0FFE4556CAF47C98"]
@@ -445,8 +446,8 @@
 				}
 			]
 			title: "Refined Storage Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

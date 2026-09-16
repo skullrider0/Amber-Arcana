@@ -4,6 +4,7 @@
 	filename: "ender_io",
 	title: "Ender IO Connections",
 	order_index: 2,
+	progression_mode: "flexible"
 	group: "5A29000000000002"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Wire: Conduit workshop"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["299C0567C1D6EB9D"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Route: Conduit workshop"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0B055F7EA958BC55"]
@@ -134,8 +135,8 @@
 				}
 			]
 			title: "Automate: Conduit workshop"
-			x: -4.0d
-			y: 0.0d
+			x: -2.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:furnace"
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Wire: Machine integration"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["3C4DC0A2FA6EEEA3"]
@@ -237,8 +238,8 @@
 				}
 			]
 			title: "Route: Machine integration"
-			x: 8.0d
-			y: 0.0d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["572C403BD8631BAD"]
@@ -265,8 +266,8 @@
 				}
 			]
 			title: "Automate: Machine integration"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:chest"
@@ -334,8 +335,8 @@
 				}
 			]
 			title: "Wire: A tidy factory"
-			x: 16.0d
-			y: 8.0d
+			x: 6.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["1D4D429181162FBC"]
@@ -362,8 +363,8 @@
 				}
 			]
 			title: "Route: A tidy factory"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7502D490CA700914"]
@@ -390,8 +391,8 @@
 				}
 			]
 			title: "Automate: A tidy factory"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["751747D22A26009A"]
@@ -424,8 +425,8 @@
 				}
 			]
 			title: "Ender IO Connections Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

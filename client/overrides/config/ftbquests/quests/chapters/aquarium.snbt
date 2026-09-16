@@ -6,6 +6,7 @@
 	icon: "minecraft:glass"
 	id: "6596524E182D7451"
 	order_index: 4
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -52,8 +53,8 @@
 			]
 			subtitle: "Requires Habitat glass; then confirm the milestone."
 			title: "Plan the habitats"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["6985109C2AE6C175"]
@@ -80,8 +81,8 @@
 				}
 			]
 			title: "Collect: Obtain: Habitat glass"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7B7FD5958BCED3E8"]
@@ -108,8 +109,8 @@
 				}
 			]
 			title: "House: Obtain: Habitat glass"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0EDD52CBFC9A13AD"]
@@ -156,8 +157,8 @@
 			]
 			subtitle: "Requires Freshwater and marine water + Display fish; then confirm the milestone."
 			title: "An aquarium gallery"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4FA3828856020273"]
@@ -185,7 +186,7 @@
 			]
 			title: "Collect: Obtain: Freshwater and marine water"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["07A1CEB8A3B74423"]
@@ -212,8 +213,8 @@
 				}
 			]
 			title: "House: Obtain: Freshwater and marine water"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["06839C357B5BEE7E"]
@@ -259,8 +260,8 @@
 			]
 			subtitle: "Requires Companion handling supplies; then confirm the milestone."
 			title: "Companions"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4C8A851B4EA29B66"]
@@ -287,8 +288,8 @@
 				}
 			]
 			title: "Collect: Obtain: Companion handling supplies"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0868DDD6AEC56803"]
@@ -315,8 +316,8 @@
 				}
 			]
 			title: "House: Obtain: Companion handling supplies"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["6AD3DB8187A60D58"]
@@ -356,8 +357,8 @@
 			]
 			subtitle: "Requires Animal care supplies; then confirm the milestone."
 			title: "Care and transport"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["227601982DAC80C1"]
@@ -384,8 +385,8 @@
 				}
 			]
 			title: "Collect: Obtain: Animal care supplies"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["692D798D2EE0B505"]
@@ -412,8 +413,8 @@
 				}
 			]
 			title: "House: Obtain: Animal care supplies"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["48CEC7311F6DC540"]
@@ -446,8 +447,8 @@
 				}
 			]
 			title: "Aquarium Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 	]
 	title: "Aquarium and Wildlife Park"

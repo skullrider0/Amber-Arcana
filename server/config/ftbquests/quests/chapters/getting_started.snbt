@@ -21,6 +21,7 @@
 		y: -3.0d
 	}]
 	order_index: 0
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -86,8 +87,8 @@
 			]
 			subtitle: "Build your first safe shelter and claim starter supplies."
 			title: "Make a home"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["5DF2CA9EF5F2B2D4"]
@@ -114,8 +115,8 @@
 				}
 			]
 			title: "Prepare: Obtain: Crafting Table"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1644590DAE1A3D55"]
@@ -142,8 +143,8 @@
 				}
 			]
 			title: "Build: Obtain: Crafting Table"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1FB0859F4C376E94"]
@@ -170,8 +171,8 @@
 				}
 			]
 			title: "Connect: Obtain: Crafting Table"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["02AAF8FFBFD8DCCD"]
@@ -233,7 +234,7 @@
 			subtitle: "Requires Claim-planning map; then confirm the milestone."
 			title: "Claim your workshop"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["3FEA10D47DFED5ED"]
@@ -260,8 +261,8 @@
 				}
 			]
 			title: "Prepare: Obtain: Claim-planning map"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0CCBD58531DF7B48"]
@@ -288,8 +289,8 @@
 				}
 			]
 			title: "Build: Obtain: Claim-planning map"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["028AB66F765DC675"]
@@ -316,8 +317,8 @@
 				}
 			]
 			title: "Connect: Obtain: Claim-planning map"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["677F4551866BBB11"]
@@ -367,8 +368,8 @@
 			]
 			subtitle: "Requires Sophisticated Backpack; then confirm the milestone."
 			title: "Tools for the journey"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["5DF5A47BBDCD9172"]
@@ -395,8 +396,8 @@
 				}
 			]
 			title: "Prepare: Obtain: Sophisticated Backpack"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["160F158B62CA24C6"]
@@ -423,8 +424,8 @@
 				}
 			]
 			title: "Build: Obtain: Sophisticated Backpack"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["0328A88774FE687F"]
@@ -451,8 +452,8 @@
 				}
 			]
 			title: "Connect: Obtain: Sophisticated Backpack"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["278AF1D7D2611C9F"]
@@ -485,8 +486,8 @@
 				}
 			]
 			title: "Getting Started Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 	]
 	title: "{\"text\":\"Welcome to Amber and Arcana\"}"

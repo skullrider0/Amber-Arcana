@@ -4,6 +4,7 @@
 	filename: "food_factory",
 	title: "Food and Seasons",
 	order_index: 2,
+	progression_mode: "flexible"
 	group: "5A29000000000004"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Process: A seasonal farm"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["60390428758D8098"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Automate: A seasonal farm"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:milk_bucket"
@@ -181,8 +182,8 @@
 				}
 			]
 			title: "Process: Cheese on the belt"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1E0B72CBC0C0AF3A"]
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Automate: Cheese on the belt"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:sugar"
@@ -278,8 +279,8 @@
 				}
 			]
 			title: "Process: Cola for the crew"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0C5267F19F54DCA3"]
@@ -306,8 +307,8 @@
 				}
 			]
 			title: "Automate: Cola for the crew"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:cooked_beef"
@@ -381,8 +382,8 @@
 				}
 			]
 			title: "Process: A fried feast"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5BFFC941F18D9276"]
@@ -409,8 +410,8 @@
 				}
 			]
 			title: "Automate: A fried feast"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			icon: "minecraft:bread"
@@ -478,8 +479,8 @@
 				}
 			]
 			title: "Process: A dependable pantry"
-			x: 0.0d
-			y: 8.0d
+			x: -1.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["373AB71FB9B27817"]
@@ -506,8 +507,8 @@
 				}
 			]
 			title: "Automate: A dependable pantry"
-			x: -4.0d
-			y: 8.0d
+			x: -2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5F5004B5BFA14DE1"]
@@ -540,8 +541,8 @@
 				}
 			]
 			title: "Food and Seasons Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -4.5d
+			y: 1.75d
 		}
 	],
 	quest_links: []

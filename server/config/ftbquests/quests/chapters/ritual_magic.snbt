@@ -4,6 +4,7 @@
 	filename: "ritual_magic",
 	title: "Rituals and Witchcraft",
 	order_index: 2,
+	progression_mode: "flexible"
 	group: "5A29000000000005"
 	quests: [
 		{
@@ -77,8 +78,8 @@
 				}
 			]
 			title: "Prepare: Occultism rituals"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["5401EFCC238554DF"]
@@ -105,8 +106,8 @@
 				}
 			]
 			title: "Perform: Occultism rituals"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "botania:mana_pool"
@@ -179,8 +180,8 @@
 				}
 			]
 			title: "Prepare: Botania garden"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0ADB05963B4E7DF2"]
@@ -207,8 +208,8 @@
 				}
 			]
 			title: "Perform: Botania garden"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "bloodmagic:altar"
@@ -281,8 +282,8 @@
 				}
 			]
 			title: "Prepare: Blood Magic altar"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["37B3F4081BF2AE4F"]
@@ -309,8 +310,8 @@
 				}
 			]
 			title: "Perform: Blood Magic altar"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:cauldron"
@@ -383,8 +384,8 @@
 				}
 			]
 			title: "Prepare: Hexerei workshop"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["24E4FD1DC5D504F3"]
@@ -411,8 +412,8 @@
 				}
 			]
 			title: "Perform: Hexerei workshop"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			icon: "minecraft:golden_apple"
@@ -479,8 +480,8 @@
 				}
 			]
 			title: "Prepare: Vampire or hunter"
-			x: 0.0d
-			y: 8.0d
+			x: -1.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["26E9577FF90BC688"]
@@ -507,8 +508,8 @@
 				}
 			]
 			title: "Perform: Vampire or hunter"
-			x: -4.0d
-			y: 8.0d
+			x: -2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["1295AF9C490201C9"]
@@ -541,8 +542,8 @@
 				}
 			]
 			title: "Rituals and Witchcraft Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -4.5d
+			y: 1.75d
 		}
 	],
 	quest_links: []

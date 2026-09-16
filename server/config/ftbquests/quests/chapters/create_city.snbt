@@ -4,6 +4,7 @@
 	filename: "create_city",
 	title: "The Mechanical City",
 	order_index: 5,
+	progression_mode: "flexible"
 	group: "5A29000000000002"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Plan: A station with character"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["6E77FE69CECE2786"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Connect: A station with character"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:bricks"
@@ -181,8 +182,8 @@
 				}
 			]
 			title: "Plan: Smoke on the skyline"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["11BA9E8BB2351DDF"]
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Connect: Smoke on the skyline"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:iron_ingot"
@@ -278,8 +279,8 @@
 				}
 			]
 			title: "Plan: Going up"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["179DBF2FCE0BDB2D"]
@@ -306,8 +307,8 @@
 				}
 			]
 			title: "Connect: Going up"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:note_block"
@@ -381,8 +382,8 @@
 				}
 			]
 			title: "Plan: Music hall"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["0C156D4292CADADF"]
@@ -409,8 +410,8 @@
 				}
 			]
 			title: "Connect: Music hall"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			icon: "minecraft:oak_sign"
@@ -478,8 +479,8 @@
 				}
 			]
 			title: "Plan: The finished district"
-			x: 0.0d
-			y: 8.0d
+			x: -1.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["060E690FA8E5383C"]
@@ -506,8 +507,8 @@
 				}
 			]
 			title: "Connect: The finished district"
-			x: -4.0d
-			y: 8.0d
+			x: -2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["0126261416CA9BF0"]
@@ -540,8 +541,8 @@
 				}
 			]
 			title: "The Mechanical City Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -4.5d
+			y: 1.75d
 		}
 	],
 	quest_links: []

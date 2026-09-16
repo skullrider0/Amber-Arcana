@@ -6,6 +6,7 @@
 	icon: "minecraft:spyglass"
 	id: "7DDC313A58540776"
 	order_index: 3
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -51,8 +52,8 @@
 			]
 			subtitle: "Requires Wildlife observation tool; then confirm the milestone."
 			title: "Observe before collecting"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["72C5275F6EA620EB"]
@@ -79,8 +80,8 @@
 				}
 			]
 			title: "Observe: Obtain: Wildlife observation tool"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["2D541C296B604EAD"]
@@ -107,8 +108,8 @@
 				}
 			]
 			title: "Care: Obtain: Wildlife observation tool"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["086C1B301C657B19"]
@@ -148,8 +149,8 @@
 			]
 			subtitle: "Requires Companion leads; then confirm the milestone."
 			title: "Friends of different kinds"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["76C534C1F9B94490"]
@@ -177,7 +178,7 @@
 			]
 			title: "Observe: Obtain: Companion leads"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1F0FCF91D3422504"]
@@ -204,8 +205,8 @@
 				}
 			]
 			title: "Care: Obtain: Companion leads"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["2AB15DF8944B6559"]
@@ -251,8 +252,8 @@
 			]
 			subtitle: "Requires Rat pickup/deposit test containers; then confirm the milestone."
 			title: "A working rat team"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7516A701A4929E8F"]
@@ -279,8 +280,8 @@
 				}
 			]
 			title: "Observe: Obtain: Rat pickup/deposit test containers"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["66FCCD80F336FD3A"]
@@ -307,8 +308,8 @@
 				}
 			]
 			title: "Care: Obtain: Rat pickup/deposit test containers"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4CC0E7131B817156"]
@@ -353,8 +354,8 @@
 			]
 			subtitle: "Requires Dragon progression proof; then confirm the milestone."
 			title: "A home for dragons"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7A142D1190A1BE80"]
@@ -381,8 +382,8 @@
 				}
 			]
 			title: "Observe: Obtain: Dragon progression proof"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["3383ABB4CE2F485E"]
@@ -409,8 +410,8 @@
 				}
 			]
 			title: "Care: Obtain: Dragon progression proof"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["6251330E9032828F"]
@@ -450,8 +451,8 @@
 			]
 			subtitle: "Requires Night park lighting; then confirm the milestone."
 			title: "The park after dark"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7BC237CFDD76939F"]
@@ -479,7 +480,7 @@
 			]
 			title: "Observe: Obtain: Night park lighting"
 			x: 0.0d
-			y: 8.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["1506B8D21789000C"]
@@ -506,8 +507,8 @@
 				}
 			]
 			title: "Care: Obtain: Night park lighting"
-			x: -4.0d
-			y: 8.0d
+			x: -1.75d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5F46FA940CE1483F"]
@@ -540,8 +541,8 @@
 				}
 			]
 			title: "Alex Wildlife Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -3.5d
+			y: 1.75d
 		}
 	]
 	title: "Wildlife and Companions"

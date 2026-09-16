@@ -131,3 +131,7 @@ The 24 formerly compact quest chapters now use real multi-step progression trees
 
 ### 0.1.9-36 tech expansion
 Adds Mining Gadgets, Iron Jetpacks, Mekanism Lasers, Draconic Evolution, Hostile Neural Networks, Infernos Otter Taming, and required missing libraries. The Crafty update overlay never contains world data.
+
+
+### 0.1.9-37 compact quest layout
+Quest chapters now use a denser ATM10-inspired visual scale with visible dependency chains while retaining Amber & Arcana's own progression, tier rolls, and Wheel of Fortune system.

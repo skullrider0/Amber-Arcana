@@ -4,6 +4,7 @@
 	filename: "powah",
 	title: "Powah Energy",
 	order_index: 3,
+	progression_mode: "flexible"
 	group: "5A29000000000002"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Stabilize: Your first generator"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7698B63C45DD0588"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Energize: Your first generator"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["38EFE4DE7CC87D6C"]
@@ -134,8 +135,8 @@
 				}
 			]
 			title: "Scale: Your first generator"
-			x: -4.0d
-			y: 0.0d
+			x: -2.5d
+			y: -1.75d
 		}
 		{
 			icon: "powah:energizing_orb"
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Stabilize: Energizing station"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["0E902F6A1B9306A0"]
@@ -237,8 +238,8 @@
 				}
 			]
 			title: "Energize: Energizing station"
-			x: 8.0d
-			y: 0.0d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["29E4600857EAA4A7"]
@@ -265,8 +266,8 @@
 				}
 			]
 			title: "Scale: Energizing station"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			icon: "powah:energy_cell_basic"
@@ -334,8 +335,8 @@
 				}
 			]
 			title: "Stabilize: A dependable grid"
-			x: 16.0d
-			y: 8.0d
+			x: 6.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["21D2D444E7ED7292"]
@@ -362,8 +363,8 @@
 				}
 			]
 			title: "Energize: A dependable grid"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["1A3A6F25CB72DC15"]
@@ -390,8 +391,8 @@
 				}
 			]
 			title: "Scale: A dependable grid"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["185DDE299B4735C4"]
@@ -424,8 +425,8 @@
 				}
 			]
 			title: "Powah Energy Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

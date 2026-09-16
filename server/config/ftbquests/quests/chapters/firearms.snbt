@@ -4,6 +4,7 @@
 	filename: "firearms",
 	title: "Firearms and Artillery",
 	order_index: 1,
+	progression_mode: "flexible"
 	group: "5A29000000000008"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Manufacture: A gunsmiths bench"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["6E9C52C7FF998034"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Test: A gunsmiths bench"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["76C31DB7461F26CC"]
@@ -134,8 +135,8 @@
 				}
 			]
 			title: "Upgrade: A gunsmiths bench"
-			x: -4.0d
-			y: 0.0d
+			x: -2.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:gunpowder"
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Manufacture: An ammunition line"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["548A70162F6BEE5B"]
@@ -237,8 +238,8 @@
 				}
 			]
 			title: "Test: An ammunition line"
-			x: 8.0d
-			y: 0.0d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["727E40B8EAA9C534"]
@@ -265,8 +266,8 @@
 				}
 			]
 			title: "Upgrade: An ammunition line"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:obsidian"
@@ -334,8 +335,8 @@
 				}
 			]
 			title: "Manufacture: Big Cannons"
-			x: 16.0d
-			y: 8.0d
+			x: 6.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["72C5BA2466C1B1F8"]
@@ -362,8 +363,8 @@
 				}
 			]
 			title: "Test: Big Cannons"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["241435C36FDCD1D1"]
@@ -390,8 +391,8 @@
 				}
 			]
 			title: "Upgrade: Big Cannons"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5ECAA18093E17A5F"]
@@ -424,8 +425,8 @@
 				}
 			]
 			title: "Firearms and Artillery Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

@@ -6,6 +6,7 @@
 	icon: "ars_nouveau:novice_spell_book"
 	id: "6793D8E11BBDE16A"
 	order_index: 0
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -52,8 +53,8 @@
 			]
 			subtitle: "Requires Novice Spell Book; completion is detected automatically."
 			title: "First spells"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["5E46C1A7EB1FF9DB"]
@@ -80,8 +81,8 @@
 				}
 			]
 			title: "Cast: Obtain: Novice Spell Book"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["751BD5A5935B7CCC"]
@@ -108,8 +109,8 @@
 				}
 			]
 			title: "Source: Obtain: Novice Spell Book"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["710E7880F9B59420"]
@@ -136,8 +137,8 @@
 				}
 			]
 			title: "Automate: Obtain: Novice Spell Book"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7D3DBDF83E769F1C"]
@@ -191,7 +192,7 @@
 			subtitle: "Requires Source Jar + Enchanting Apparatus; completion is detected automatically."
 			title: "Source and crafting"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4B6DB13056E0CBC2"]
@@ -218,8 +219,8 @@
 				}
 			]
 			title: "Cast: Obtain: Source Jar"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["47E1A5F440070C39"]
@@ -246,8 +247,8 @@
 				}
 			]
 			title: "Source: Obtain: Source Jar"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["04F13883F399FAE6"]
@@ -274,8 +275,8 @@
 				}
 			]
 			title: "Automate: Obtain: Source Jar"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["11D5E8F65F0421E0"]
@@ -315,8 +316,8 @@
 			]
 			subtitle: "Requires Spell Turret; completion is detected automatically."
 			title: "A magical factory"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["11538580D4752A8A"]
@@ -343,8 +344,8 @@
 				}
 			]
 			title: "Cast: Obtain: Spell Turret"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["430A285ED8F49AC3"]
@@ -371,8 +372,8 @@
 				}
 			]
 			title: "Source: Obtain: Spell Turret"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["20F0CC18A7856D84"]
@@ -399,8 +400,8 @@
 				}
 			]
 			title: "Automate: Obtain: Spell Turret"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["6539A7CBB80F50F0"]
@@ -433,8 +434,8 @@
 				}
 			]
 			title: "Ars Nouveau Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 	]
 	title: "Ars Nouveau"

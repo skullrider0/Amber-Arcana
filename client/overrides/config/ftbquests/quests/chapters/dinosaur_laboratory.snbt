@@ -4,6 +4,7 @@
 	filename: "dinosaur_laboratory",
 	title: "Jurassic Laboratory",
 	order_index: 2,
+	progression_mode: "flexible"
 	group: "5A29000000000006"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Extract: Collect evidence"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["03892C82B5229B82"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Incubate: Collect evidence"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:glass"
@@ -175,8 +176,8 @@
 				}
 			]
 			title: "Extract: The amber laboratory"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["192BCEC76AB41E53"]
@@ -203,8 +204,8 @@
 				}
 			]
 			title: "Incubate: The amber laboratory"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:egg"
@@ -278,8 +279,8 @@
 				}
 			]
 			title: "Extract: Fossils and revival"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["4DC6B17C99E086D0"]
@@ -306,8 +307,8 @@
 				}
 			]
 			title: "Incubate: Fossils and revival"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:iron_bars"
@@ -375,8 +376,8 @@
 				}
 			]
 			title: "Extract: A secure habitat"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7153AE0F2FCB0BD4"]
@@ -403,8 +404,8 @@
 				}
 			]
 			title: "Incubate: A secure habitat"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["5C33908F0284804F"]
@@ -437,8 +438,8 @@
 				}
 			]
 			title: "Jurassic Laboratory Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []

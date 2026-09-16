@@ -6,6 +6,7 @@
 	icon: "minecraft:chest"
 	id: "799BD5EE27E6BA03"
 	order_index: 2
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -52,8 +53,8 @@
 			]
 			subtitle: "Requires Remote storage containers; then confirm the milestone."
 			title: "Cloud deliveries"
-			x: -16.0d
-			y: 0.0d
+			x: -7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["705C75CC0EB0777B"]
@@ -80,8 +81,8 @@
 				}
 			]
 			title: "Build: Obtain: Remote storage containers"
-			x: -12.0d
-			y: 0.0d
+			x: -5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["10FDADEB7D2CC802"]
@@ -108,8 +109,8 @@
 				}
 			]
 			title: "Use: Obtain: Remote storage containers"
-			x: -8.0d
-			y: 0.0d
+			x: -3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1494A4F7915454A3"]
@@ -149,8 +150,8 @@
 			]
 			subtitle: "Requires Primary and backup beds; then confirm the milestone."
 			title: "A second bed"
-			x: -4.0d
-			y: 0.0d
+			x: -1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["7FE445198F2DF5FA"]
@@ -178,7 +179,7 @@
 			]
 			title: "Build: Obtain: Primary and backup beds"
 			x: 0.0d
-			y: 0.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["2993894BEA2E0C37"]
@@ -205,8 +206,8 @@
 				}
 			]
 			title: "Use: Obtain: Primary and backup beds"
-			x: 4.0d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1E8496FB291BA35F"]
@@ -251,8 +252,8 @@
 			]
 			subtitle: "Requires Personal banner; then confirm the milestone."
 			title: "A personal banner"
-			x: 8.0d
-			y: 0.0d
+			x: 3.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["75DC91845E9ED3AA"]
@@ -279,8 +280,8 @@
 				}
 			]
 			title: "Build: Obtain: Personal banner"
-			x: 12.0d
-			y: 0.0d
+			x: 5.25d
+			y: -1.75d
 		}
 		{
 			dependencies: ["68E08BC2CC3F0FEC"]
@@ -307,8 +308,8 @@
 				}
 			]
 			title: "Use: Obtain: Personal banner"
-			x: 16.0d
-			y: 0.0d
+			x: 7.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["1B9A770AD37614A9"]
@@ -354,8 +355,8 @@
 			]
 			subtitle: "Requires Skate-route supplies; then confirm the milestone."
 			title: "Skate through town"
-			x: 16.0d
-			y: 8.0d
+			x: 7.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7A9CC6DDD312FFA2"]
@@ -382,8 +383,8 @@
 				}
 			]
 			title: "Build: Obtain: Skate-route supplies"
-			x: 12.0d
-			y: 8.0d
+			x: 5.25d
+			y: 1.75d
 		}
 		{
 			dependencies: ["6B27726A1075EF74"]
@@ -410,8 +411,8 @@
 				}
 			]
 			title: "Use: Obtain: Skate-route supplies"
-			x: 8.0d
-			y: 8.0d
+			x: 3.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["2F4EA37FD4C8E8E2"]
@@ -451,8 +452,8 @@
 			]
 			subtitle: "Requires Museum displays; then confirm the milestone."
 			title: "The illustrated museum"
-			x: 4.0d
-			y: 8.0d
+			x: 1.75d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7946F6B43F6E0E44"]
@@ -480,7 +481,7 @@
 			]
 			title: "Build: Obtain: Museum displays"
 			x: 0.0d
-			y: 8.0d
+			y: 1.75d
 		}
 		{
 			dependencies: ["011F11FE29D7C649"]
@@ -507,8 +508,8 @@
 				}
 			]
 			title: "Use: Obtain: Museum displays"
-			x: -4.0d
-			y: 8.0d
+			x: -1.75d
+			y: 1.75d
 		}
 		{
 			dependencies: ["3400257E594DBF01"]
@@ -541,8 +542,8 @@
 				}
 			]
 			title: "Alex Utilities Mastery"
-			x: -8.0d
-			y: 8.0d
+			x: -3.5d
+			y: 1.75d
 		}
 	]
 	title: "Exhibits and Everyday Tools"

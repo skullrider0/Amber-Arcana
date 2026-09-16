@@ -4,6 +4,7 @@
 	filename: "endgame",
 	title: "A World Worth Building",
 	order_index: 1,
+	progression_mode: "flexible"
 	group: "5A29000000000009"
 	quests: [
 		{
@@ -78,8 +79,8 @@
 				}
 			]
 			title: "Prepare: Seasonal estate"
-			x: -12.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["3F50BD9BA18E7C70"]
@@ -106,8 +107,8 @@
 				}
 			]
 			title: "Conquer: Seasonal estate"
-			x: -8.0d
-			y: 0.0d
+			x: -4.5d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:powered_rail"
@@ -181,8 +182,8 @@
 				}
 			]
 			title: "Prepare: Connected civilization"
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.75d
 		}
 		{
 			dependencies: ["28A67009BD924142"]
@@ -209,8 +210,8 @@
 				}
 			]
 			title: "Conquer: Connected civilization"
-			x: 4.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:netherite_chestplate"
@@ -277,8 +278,8 @@
 				}
 			]
 			title: "Prepare: Adventure ready"
-			x: 12.0d
-			y: 0.0d
+			x: 4.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["78FF2B6ECD708F35"]
@@ -305,8 +306,8 @@
 				}
 			]
 			title: "Conquer: Adventure ready"
-			x: 16.0d
-			y: 0.0d
+			x: 6.0d
+			y: -1.75d
 		}
 		{
 			icon: "minecraft:emerald_block"
@@ -374,8 +375,8 @@
 				}
 			]
 			title: "Prepare: The grand opening"
-			x: 12.0d
-			y: 8.0d
+			x: 4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["7132A74DC7040308"]
@@ -402,8 +403,8 @@
 				}
 			]
 			title: "Conquer: The grand opening"
-			x: 8.0d
-			y: 8.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["240F2E0D8C37E2AC"]
@@ -436,8 +437,8 @@
 				}
 			]
 			title: "A World Worth Building Mastery"
-			x: 4.0d
-			y: 8.0d
+			x: 1.0d
+			y: 1.75d
 		}
 	],
 	quest_links: []
