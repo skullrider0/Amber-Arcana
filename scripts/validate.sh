@@ -301,3 +301,23 @@ for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_stor
   test -f "$client_quests/reward_tables/wheel_${chapter}.snbt" || { echo "Missing Fortune Wheel: $chapter" >&2; exit 1; }
 done
 diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }
+
+
+# 0.1.9-39 ATM10-inspired semantic major progression checks
+jq -e '.atm10_major_progression_0_1_9_38.reference_pack == "AllTheMods/ATM-10" and .atm10_major_progression_0_1_9_38.reference_commit == "ab6f65e07b88423cdae1724864ba42a573ba758a" and .atm10_major_progression_0_1_9_38.existing_chapters_rebuilt == 7 and .atm10_major_progression_0_1_9_38.new_chapters_added == 2 and .atm10_major_progression_0_1_9_38.final_chapters == 28 and .atm10_major_progression_0_1_9_38.preserved_existing_quest_ids == 91 and .atm10_major_progression_0_1_9_38.reward_tables_final == 145 and .atm10_major_progression_0_1_9_38.fortune_wheels_touched == 9 and .atm10_major_progression_0_1_9_38.client_server_quest_files_identical == true' "$validation" >/dev/null
+for chapter in hostile_neural_networks draconic_evolution; do
+  test -f "$client_quests/chapters/$chapter.snbt" || { echo "Missing new 0.1.9-39 chapter: $chapter" >&2; exit 1; }
+done
+for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_storage; do
+  if rg -F 'AA35 deep progression milestone' "$client_quests/chapters/$chapter.snbt" >/dev/null; then
+    echo "Generic AA35 filler remains in rebuilt major chapter: $chapter" >&2
+    exit 1
+  fi
+done
+for chapter in ae2 mekanism powah ars_nouveau irons_spells ender_io refined_storage hostile_neural_networks draconic_evolution; do
+  for tier in 1 2 3 4; do
+    test -f "$client_quests/reward_tables/modroll_${chapter}_tier_${tier}.snbt" || { echo "Missing hand-curated tier table: $chapter tier $tier" >&2; exit 1; }
+  done
+  test -f "$client_quests/reward_tables/wheel_${chapter}.snbt" || { echo "Missing Fortune Wheel: $chapter" >&2; exit 1; }
+done
+diff -qr "$client_quests" "$server_quests" >/dev/null || { echo "Client/server quest trees differ after 0.1.9-39" >&2; exit 1; }
