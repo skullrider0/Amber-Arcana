@@ -29,6 +29,7 @@ fi
 # chapters with concrete mechanics-based branches inspired by ATM10's progression
 # style, while retaining Amber & Arcana's weighted tier rolls and Fortune Wheels.
 python3 "$repo_dir/scripts/hotfix-atm10-major-progression-0.1.9-38.py"
+python3 "$repo_dir/scripts/fix-current-validator-0.1.9-38.py"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
