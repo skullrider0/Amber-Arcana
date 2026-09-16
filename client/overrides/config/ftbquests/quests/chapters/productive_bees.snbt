@@ -1486,16 +1486,16 @@
 		}
 		{
 			dependencies: [
-				"7A50D797B79D88A3"
+				"6005351D64A165C3"
 			]
 			description: [
-				"Convert Crimson Bee using minecraft:brown_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Convert Brown Shroom Bee using minecraft:crimson_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
 				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
 			]
-			id: "6005351D64A165C3"
+			id: "7A50D797B79D88A3"
 			rewards: [
 			{
-				id: "085782D16F9DB1FD"
+				id: "66963CA72A1793F8"
 				type: "xp"
 				xp: 25
 			}
@@ -1503,11 +1503,11 @@
 			subtitle: "Shroom — depth 2"
 			tasks: [
 			{
-				id: "7499D8099C4E67BE"
+				id: "696743F1DE87461E"
 				type: "checkmark"
 			}
 			]
-			title: "Brown Shroom Bee"
+			title: "Crimson Bee"
 			x: 98.0d
 			y: 20.0d
 		}
@@ -1597,16 +1597,16 @@
 		}
 		{
 			dependencies: [
-				"6005351D64A165C3"
+				"7A50D797B79D88A3"
 			]
 			description: [
-				"Convert Brown Shroom Bee using minecraft:crimson_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Convert Crimson Bee using minecraft:brown_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
 				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
 			]
-			id: "7A50D797B79D88A3"
+			id: "6005351D64A165C3"
 			rewards: [
 			{
-				id: "66963CA72A1793F8"
+				id: "085782D16F9DB1FD"
 				type: "xp"
 				xp: 25
 			}
@@ -1614,66 +1614,12 @@
 			subtitle: "Shroom — depth 3"
 			tasks: [
 			{
-				id: "696743F1DE87461E"
+				id: "7499D8099C4E67BE"
 				type: "checkmark"
 			}
 			]
-			title: "Crimson Bee"
-			x: 95.2d
-			y: 24.0d
-		}
-		{
-			dependencies: [
-				"6005351D64A165C3"
-			]
-			description: [
-				"Convert Brown Shroom Bee using minecraft:red_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
-			]
-			id: "2A90A750D426D213"
-			rewards: [
-			{
-				id: "40A13C9143AA0DB9"
-				type: "xp"
-				xp: 25
-			}
-			]
-			subtitle: "Shroom — depth 3"
-			tasks: [
-			{
-				id: "2F32F218D75F26C9"
-				type: "checkmark"
-			}
-			]
-			title: "Red Shroom Bee"
+			title: "Brown Shroom Bee"
 			x: 98.0d
-			y: 24.0d
-		}
-		{
-			dependencies: [
-				"6005351D64A165C3"
-			]
-			description: [
-				"Convert Brown Shroom Bee using minecraft:warped_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
-				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
-			]
-			id: "3916A827D38BB1F7"
-			rewards: [
-			{
-				id: "7B63954138AE3540"
-				type: "xp"
-				xp: 25
-			}
-			]
-			subtitle: "Shroom — depth 3"
-			tasks: [
-			{
-				id: "0DEC8D369B1CFD38"
-				type: "checkmark"
-			}
-			]
-			title: "Warped Bee"
-			x: 100.8d
 			y: 24.0d
 		}
 		{
@@ -1838,6 +1784,60 @@
 			]
 			title: "Netherite Bee"
 			x: 56.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"6005351D64A165C3"
+			]
+			description: [
+				"Convert Brown Shroom Bee using minecraft:red_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "2A90A750D426D213"
+			rewards: [
+			{
+				id: "40A13C9143AA0DB9"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Shroom — depth 4"
+			tasks: [
+			{
+				id: "2F32F218D75F26C9"
+				type: "checkmark"
+			}
+			]
+			title: "Red Shroom Bee"
+			x: 96.6d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"6005351D64A165C3"
+			]
+			description: [
+				"Convert Brown Shroom Bee using minecraft:warped_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
+				"Bee-species completion is a manual confirmation because individual Productive Bees species are stored as typed bee data rather than unique inventory item IDs."
+			]
+			id: "3916A827D38BB1F7"
+			rewards: [
+			{
+				id: "7B63954138AE3540"
+				type: "xp"
+				xp: 25
+			}
+			]
+			subtitle: "Shroom — depth 4"
+			tasks: [
+			{
+				id: "0DEC8D369B1CFD38"
+				type: "checkmark"
+			}
+			]
+			title: "Warped Bee"
+			x: 99.4d
 			y: 28.0d
 		}
 		{
