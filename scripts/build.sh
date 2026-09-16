@@ -31,6 +31,10 @@ fi
 python3 "$repo_dir/scripts/hotfix-atm10-major-progression-0.1.9-38.py"
 python3 "$repo_dir/scripts/fix-current-validator-0.1.9-38.py"
 
+# 0.1.9-39 adds No Recipe Book Reborn to the CurseForge client manifest only.
+# It intentionally does not change the dedicated-server mod list.
+python3 "$repo_dir/scripts/hotfix-no-recipe-book-reborn-0.1.9-39.py"
+
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
 
 "$repo_dir/scripts/generate-recipe-compat.sh"
