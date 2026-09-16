@@ -43,6 +43,11 @@ python3 "$repo_dir/scripts/hotfix-no-recipe-book-reborn-0.1.9-39.py"
 # the launcher gains validated web/CurseMaven fallbacks and optional API-key CDN
 # support, and the update overlay now ships the current launcher itself.
 python3 "$repo_dir/scripts/hotfix-curseforge-downloads-0.1.9-40.py"
+
+# 0.1.9-41 restores recipe-conflict selection now that the pack is back on JEI,
+# extends that selector into AE2 and Refined Storage, and adds Spartan Weaponry.
+python3 "$repo_dir/scripts/hotfix-recipe-conflicts-spartan-0.1.9-41.py"
+
 bash "$repo_dir/scripts/build-launcher.sh"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
