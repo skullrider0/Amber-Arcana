@@ -18,9 +18,6 @@ def bundle_count(item: str, tier: int, variant: int) -> int:
     if mod.component_like(item):
         base = {1: 2, 2: 4, 3: 6, 4: 8}[tier]
         return min(16, base * (variant + 1))
-    # Short chapters often expose only a handful of machines. Later tiers may
-    # therefore award a small multi-machine bundle as one of the common outcomes,
-    # while the deepest/jackpot entry stays single-count and low weight.
     if tier == 1:
         return 1
     if tier == 2:
@@ -29,10 +26,13 @@ def bundle_count(item: str, tier: int, variant: int) -> int:
 
 
 def robust_expand_pool(stem, tier, source_by_tier):
+    # The underlying hotfix builds tier tables in order, so future source tiers do
+    # not exist yet while T1/T2/T3 are being expanded. Use the current deepest
+    # available tier until the next source table has been loaded.
     current = mod.dedupe_items(source_by_tier[tier])
-    prev = mod.dedupe_items(source_by_tier[max(1, tier - 1)])
-    nxt = mod.dedupe_items(source_by_tier[min(4, tier + 1)])
-    deepest = mod.dedupe_items(source_by_tier[4])
+    prev = mod.dedupe_items(source_by_tier.get(max(1, tier - 1), source_by_tier[tier]))
+    nxt = mod.dedupe_items(source_by_tier.get(min(4, tier + 1), source_by_tier[tier]))
+    deepest = mod.dedupe_items(source_by_tier[max(source_by_tier)])
 
     ordered = []
     seen = set()
@@ -85,9 +85,6 @@ def robust_expand_pool(stem, tier, source_by_tier):
 
 
 def robust_render_wheel(table_id, order, title, pools):
-    # Build a full late-game wheel even for tiny three-quest chapters by using
-    # meaningful quantity variants of already-validated modded rewards. This keeps
-    # the pool thematic without inventing item IDs or falling back to vanilla loot.
     candidates = pools[3] + pools[4]
     unique = []
     seen = set()
@@ -106,12 +103,9 @@ def robust_render_wheel(table_id, order, title, pools):
         if len(unique) >= 24:
             break
 
-    # If the chapter only has a couple of distinct machines, add further count
-    # variants rather than generic filler. These remain lower-weight than the
-    # ordinary single-item outcomes.
     idx = 0
     while len(unique) < 24:
-        _count, item, weight = candidates[idx % len(candidates)]
+        _count, item, _weight = candidates[idx % len(candidates)]
         count = 2 + ((idx // max(1, len(candidates))) % 3)
         key = (count, item)
         if key not in seen:
@@ -121,6 +115,9 @@ def robust_render_wheel(table_id, order, title, pools):
         idx += 1
         if idx > 500:
             break
+
+    if not unique:
+        raise RuntimeError(f"No finale rewards generated for {title}")
 
     lines = [
         "{",
