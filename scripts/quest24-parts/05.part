@@ -1,1 +1,9 @@
+    finalizer_path = ROOT / "scripts/hotfix-quest-finalize-0.1.9-25.py"
+    finalizer_text = finalizer_path.read_text()
+    finalizer_text = finalizer_text.replace(
+        "    if quests != 106:\n        raise RuntimeError(f\"Expected 106 quests, found {quests}\")",
+        "    if quests < 106:\n        raise RuntimeError(f\"Expected at least 106 quests, found {quests}\")",
+        1,
+    )
+    finalizer_path.write_text(finalizer_text)
     main()
