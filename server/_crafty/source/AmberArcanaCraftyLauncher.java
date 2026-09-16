@@ -19,13 +19,19 @@ public class AmberArcanaCraftyLauncher {
             .followRedirects(HttpClient.Redirect.ALWAYS)
             .connectTimeout(Duration.ofSeconds(30))
             .build();
+    static final String CURSEFORGE_API_KEY = loadCurseForgeApiKey();
     static volatile Process child;
 
-    record Mod(String fileId, String filename, String sha512, String slug, String name) {}
+    record Mod(String fileId, String filename, String sha512, String slug, String name, String projectId) {}
 
     public static void main(String[] args) throws Exception {
         System.out.println("[Amber & Arcana] Crafty bootstrap starting in " + ROOT);
         System.out.println("[Amber & Arcana] Minecraft " + MC + " / Forge " + FORGE);
+        if (CURSEFORGE_API_KEY.isBlank()) {
+            System.out.println("[Amber & Arcana] CurseForge API key not configured; using CurseForge web/CurseMaven fallbacks.");
+        } else {
+            System.out.println("[Amber & Arcana] CurseForge API key detected; authenticated CDN downloads enabled.");
+        }
         Files.createDirectories(ROOT.resolve("mods"));
         cleanupRemovedMods();
         cleanupReplacedRecipeViewers();
@@ -68,9 +74,10 @@ public class AmberArcanaCraftyLauncher {
         List<Mod> out = new ArrayList<>();
         for (String line : Files.readAllLines(p, StandardCharsets.UTF_8)) {
             if (line.isBlank() || line.startsWith("#")) continue;
-            String[] x = line.split("\\t", 5);
-            if (x.length != 5) throw new IOException("Invalid mod entry: " + line);
-            out.add(new Mod(x[0], x[1], x[2], x[3], x[4]));
+            String[] x = line.split("\\t", -1);
+            if (x.length < 5 || x.length > 6) throw new IOException("Invalid mod entry: " + line);
+            String projectId = x.length == 6 ? x[5].trim() : "";
+            out.add(new Mod(x[0], x[1], x[2], x[3], x[4], projectId));
         }
         return out;
     }
@@ -85,16 +92,16 @@ public class AmberArcanaCraftyLauncher {
             futures.add(pool.submit(() -> {
                 try {
                     Path dest = ROOT.resolve("mods").resolve(m.filename());
-                    if (Files.isRegularFile(dest) && verifyHash(dest, m.sha512())) {
+                    if (Files.isRegularFile(dest) && verifyHash(dest, m.sha512()) && looksLikeJar(dest)) {
                         int n = done.incrementAndGet();
                         System.out.printf("[mods %d/%d] OK %s%n", n, mods.size(), m.filename());
                         return;
                     }
                     if (Files.exists(dest)) Files.delete(dest);
                     downloadCurseForge(m, dest);
-                    if (!verifyHash(dest, m.sha512())) {
+                    if (!verifyHash(dest, m.sha512()) || !looksLikeJar(dest)) {
                         Files.deleteIfExists(dest);
-                        throw new IOException("Checksum mismatch after download: " + m.filename());
+                        throw new IOException("Checksum/JAR validation failed after download: " + m.filename());
                     }
                     int n = done.incrementAndGet();
                     System.out.printf("[mods %d/%d] DOWNLOADED %s%n", n, mods.size(), m.filename());
@@ -112,6 +119,9 @@ public class AmberArcanaCraftyLauncher {
         if (!failures.isEmpty()) {
             System.err.println("[Amber & Arcana] One or more mod downloads failed:");
             for (Throwable t : failures) System.err.println("  - " + t.getMessage());
+            if (CURSEFORGE_API_KEY.isBlank()) {
+                System.err.println("[Amber & Arcana] If a project blocks third-party download fallbacks, set CURSEFORGE_API_KEY or put the key in _crafty/curseforge-api-key.txt and restart.");
+            }
             throw new IOException("Failed to prepare " + failures.size() + " mod file(s). See errors above.");
         }
     }
@@ -119,38 +129,114 @@ public class AmberArcanaCraftyLauncher {
     static void downloadCurseForge(Mod m, Path dest) throws Exception {
         String id = m.fileId();
         if (id.length() <= 3) throw new IOException("Unexpected CurseForge file ID: " + id);
-        String a = id.substring(0, id.length() - 3);
-        String b = id.substring(id.length() - 3);
-        String encoded = encodePathSegment(m.filename());
-        String path = "/files/" + a + "/" + b + "/" + encoded;
-        String[] hosts = {"mediafilez.forgecdn.net", "edge.forgecdn.net", "media.forgecdn.net"};
-        Exception last = null;
-        for (String host : hosts) {
-            Path part = dest.resolveSibling(dest.getFileName() + ".part");
-            Files.deleteIfExists(part);
-            try {
-                URI uri = URI.create("https://" + host + path);
-                HttpRequest req = HttpRequest.newBuilder(uri)
-                        .timeout(Duration.ofMinutes(5))
-                        .header("User-Agent", "AmberArcana-Crafty4-ServerBootstrap/1.0")
-                        .GET().build();
-                HttpResponse<Path> res = HTTP.send(req, HttpResponse.BodyHandlers.ofFile(part));
-                if (res.statusCode() >= 200 && res.statusCode() < 300 && Files.size(part) > 0) {
-                    try {
-                        Files.move(part, dest, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
-                    } catch (AtomicMoveNotSupportedException ex) {
-                        Files.move(part, dest, StandardCopyOption.REPLACE_EXISTING);
-                    }
-                    return;
-                }
-                Files.deleteIfExists(part);
-                last = new IOException("HTTP " + res.statusCode() + " from " + host);
-            } catch (Exception e) {
-                Files.deleteIfExists(part);
-                last = e;
+        List<String> errors = new ArrayList<>();
+
+        // Since July 16, 2026 CurseForge requires an API key for direct CDN
+        // requests. Use the authenticated official CDN first when a key exists.
+        if (!CURSEFORGE_API_KEY.isBlank() && tryAuthenticatedCdn(m, dest, errors)) return;
+
+        // The CurseForge website download route handles its own authorization and
+        // redirects. This keeps ordinary Crafty installs working without storing a
+        // developer key in the server configuration.
+        if (hasProjectId(m)) {
+            URI web = URI.create("https://www.curseforge.com/api/v1/mods/" + m.projectId()
+                    + "/files/" + m.fileId() + "/download");
+            if (tryDownload(m, web, dest, "", "CurseForge web download", errors)) return;
+
+            // CurseMaven is a final no-key fallback for projects that permit
+            // third-party distribution. Hash/JAR validation still applies.
+            String descriptor = safeDescriptor(m.slug());
+            String artifact = descriptor + "-" + m.projectId();
+            String path = "/curse/maven/" + artifact + "/" + m.fileId() + "/"
+                    + artifact + "-" + m.fileId() + ".jar";
+            for (String host : List.of("www.cursemaven.com", "cursemaven.com")) {
+                if (tryDownload(m, URI.create("https://" + host + path), dest, "", "CurseMaven", errors)) return;
             }
         }
-        throw new IOException(m.filename() + " (CurseForge file " + m.fileId() + ") failed from all CDN hosts", last);
+
+        String detail = errors.isEmpty() ? "no usable download route" : String.join("; ", errors);
+        if (CURSEFORGE_API_KEY.isBlank()) {
+            throw new IOException(m.filename() + " (CurseForge file " + m.fileId()
+                    + ") could not be downloaded without a CurseForge API key: " + detail);
+        }
+        throw new IOException(m.filename() + " (CurseForge file " + m.fileId()
+                + ") failed from authenticated CDN and fallbacks: " + detail);
+    }
+
+    static boolean tryAuthenticatedCdn(Mod m, Path dest, List<String> errors) {
+        String id = m.fileId();
+        String a = id.substring(0, id.length() - 3);
+        String b = id.substring(id.length() - 3);
+        String path = "/files/" + a + "/" + b + "/" + encodePathSegment(m.filename());
+        for (String host : List.of("edge.forgecdn.net", "mediafilez.forgecdn.net", "media.forgecdn.net")) {
+            if (tryDownload(m, URI.create("https://" + host + path), dest, CURSEFORGE_API_KEY,
+                    "authenticated CurseForge CDN", errors)) return true;
+        }
+        return false;
+    }
+
+    static boolean tryDownload(Mod m, URI uri, Path dest, String apiKey, String source, List<String> errors) {
+        Path part = dest.resolveSibling(dest.getFileName() + ".part");
+        try {
+            Files.deleteIfExists(part);
+            HttpRequest.Builder builder = HttpRequest.newBuilder(uri)
+                    .timeout(Duration.ofMinutes(5))
+                    .header("User-Agent", "Mozilla/5.0 AmberArcana-Crafty4-ServerBootstrap/2.0")
+                    .GET();
+            if (apiKey != null && !apiKey.isBlank()) builder.header("x-api-key", apiKey);
+            HttpResponse<Path> res = HTTP.send(builder.build(), HttpResponse.BodyHandlers.ofFile(part));
+            if (res.statusCode() >= 200 && res.statusCode() < 300
+                    && Files.isRegularFile(part) && Files.size(part) > 0
+                    && looksLikeJar(part) && verifyHash(part, m.sha512())) {
+                try {
+                    Files.move(part, dest, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+                } catch (AtomicMoveNotSupportedException ex) {
+                    Files.move(part, dest, StandardCopyOption.REPLACE_EXISTING);
+                }
+                return true;
+            }
+            long size = Files.exists(part) ? Files.size(part) : 0L;
+            errors.add(source + " HTTP " + res.statusCode() + " / " + size + " bytes");
+        } catch (Exception e) {
+            errors.add(source + " " + e.getClass().getSimpleName() + ": " + String.valueOf(e.getMessage()));
+        } finally {
+            try { Files.deleteIfExists(part); } catch (IOException ignored) {}
+        }
+        return false;
+    }
+
+    static boolean hasProjectId(Mod m) {
+        return m.projectId() != null && !m.projectId().isBlank() && !m.projectId().equals("0");
+    }
+
+    static String safeDescriptor(String slug) {
+        String s = slug == null ? "mod" : slug.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9._-]+", "-");
+        s = s.replaceAll("^-+|-+$", "");
+        return s.isBlank() ? "mod" : s;
+    }
+
+    static String loadCurseForgeApiKey() {
+        String env = System.getenv("CURSEFORGE_API_KEY");
+        if (env != null && !env.isBlank()) return env.trim();
+        Path file = ROOT.resolve("_crafty/curseforge-api-key.txt");
+        try {
+            if (Files.isRegularFile(file)) {
+                String key = Files.readString(file, StandardCharsets.UTF_8).trim();
+                if (!key.isBlank()) return key;
+            }
+        } catch (IOException ignored) {}
+        return "";
+    }
+
+    static boolean looksLikeJar(Path p) {
+        try (InputStream in = Files.newInputStream(p)) {
+            byte[] sig = in.readNBytes(4);
+            return sig.length == 4 && sig[0] == 'P' && sig[1] == 'K'
+                    && (sig[2] == 3 || sig[2] == 5 || sig[2] == 7)
+                    && (sig[3] == 4 || sig[3] == 6 || sig[3] == 8);
+        } catch (IOException e) {
+            return false;
+        }
     }
 
     static String encodePathSegment(String s) {
@@ -200,7 +286,7 @@ public class AmberArcanaCraftyLauncher {
             System.out.println("[Amber & Arcana] Downloading Forge installer...");
             URI uri = URI.create("https://maven.minecraftforge.net/net/minecraftforge/forge/" + FORGE_COORD + "/forge-" + FORGE_COORD + "-installer.jar");
             HttpRequest req = HttpRequest.newBuilder(uri).timeout(Duration.ofMinutes(5))
-                    .header("User-Agent", "AmberArcana-Crafty4-ServerBootstrap/1.0").GET().build();
+                    .header("User-Agent", "AmberArcana-Crafty4-ServerBootstrap/2.0").GET().build();
             Path part = installer.resolveSibling(installer.getFileName() + ".part");
             Files.deleteIfExists(part);
             HttpResponse<Path> res = HTTP.send(req, HttpResponse.BodyHandlers.ofFile(part));
@@ -224,20 +310,13 @@ public class AmberArcanaCraftyLauncher {
         List<String> cmd = new ArrayList<>();
         String forgeJava = forgeJavaCommand();
         cmd.add(forgeJava);
-        // Spark stays available for manual diagnostics. Background profiling is disabled by config;
-        // retain the Java sampler override as an additional safety fallback.
         cmd.add("-Dspark.backgroundProfilerEngine=java");
-        // Amber & Arcana 0.1.9-5 safe memory preset. Crafty often defaults imports to 4096 MB,
-        // which is too small for this pack. The bootstrap process itself can stay small; the real
-        // Forge child is always launched with the pack preset below.
         cmd.add("-Xms4096M");
         cmd.add("-Xmx10240M");
         for (String a : ManagementFactory.getRuntimeMXBean().getInputArguments()) {
-            // Preserve Crafty/JVM tuning flags, but not inherited heap sizes: the pack preset owns those.
             if (a.startsWith("-XX:")) cmd.add(a);
         }
         cmd.add("@libraries/net/minecraftforge/forge/" + FORGE_COORD + "/unix_args.txt");
-        // The Crafty import passes nogui. Preserve any non-launcher application args too.
         boolean hasNogui = false;
         for (String a : appArgs) {
             if (a.equalsIgnoreCase("nogui")) hasNogui = true;
@@ -268,36 +347,23 @@ public class AmberArcanaCraftyLauncher {
 
     static String forgeJavaCommand() {
         LinkedHashSet<String> candidates = new LinkedHashSet<>();
-
         String explicit = System.getenv("AMBER_ARCANA_JAVA17");
         if (explicit != null && !explicit.isBlank()) candidates.add(explicit.trim());
-
         for (String env : new String[]{"JAVA17_HOME", "JDK17_HOME"}) {
             String home = System.getenv(env);
-            if (home != null && !home.isBlank()) {
-                candidates.add(Paths.get(home, "bin", "java").toString());
-            }
+            if (home != null && !home.isBlank()) candidates.add(Paths.get(home, "bin", "java").toString());
         }
-
-        // Common Debian/Ubuntu/Crafty Java 17 locations.
         candidates.add("/usr/lib/jvm/java-17-openjdk-amd64/bin/java");
         candidates.add("/usr/lib/jvm/java-17-openjdk/bin/java");
         candidates.add("/usr/lib/jvm/temurin-17-jdk-amd64/bin/java");
         candidates.add("/usr/lib/jvm/temurin-17-jre-amd64/bin/java");
-
-        // Crafty detects installed JVMs through update-alternatives on Linux too.
         try {
-            Process p = new ProcessBuilder("update-alternatives", "--list", "java")
-                    .redirectErrorStream(true).start();
+            Process p = new ProcessBuilder("update-alternatives", "--list", "java").redirectErrorStream(true).start();
             try (BufferedReader r = p.inputReader(StandardCharsets.UTF_8)) {
-                for (String line; (line = r.readLine()) != null;) {
-                    if (!line.isBlank()) candidates.add(line.trim());
-                }
+                for (String line; (line = r.readLine()) != null;) if (!line.isBlank()) candidates.add(line.trim());
             }
             p.waitFor(5, TimeUnit.SECONDS);
         } catch (Exception ignored) {}
-
-        // Also scan /usr/lib/jvm in case alternatives is unavailable.
         Path jvmRoot = Paths.get("/usr/lib/jvm");
         if (Files.isDirectory(jvmRoot)) {
             try (var stream = Files.walk(jvmRoot, 4)) {
@@ -306,17 +372,13 @@ public class AmberArcanaCraftyLauncher {
                         .forEach(x -> candidates.add(x.toString()));
             } catch (IOException ignored) {}
         }
-
-        // Prefer the exact runtime Crafty launched us with if it is already Java 17.
         candidates.add(javaCommand());
-
         for (String candidate : candidates) {
             if (isJava17(candidate)) {
                 System.out.println("[Amber & Arcana] Selected Java 17 runtime: " + candidate);
                 return candidate;
             }
         }
-
         String fallback = javaCommand();
         System.err.println("[Amber & Arcana] WARNING: Java 17 was not found. Falling back to: " + fallback);
         System.err.println("[Amber & Arcana] For Minecraft 1.20.1 / Forge 47.4.10, select Java 17 in Crafty if available.");
