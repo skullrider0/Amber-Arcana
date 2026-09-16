@@ -1,0 +1,185 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import hashlib
+import io
+import json
+import math
+import re
+import shutil
+import urllib.request
+import zipfile
+from collections import defaultdict
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+VERSION = "0.1.9-30"
+PB_COMMIT = "2190d6b4c0f4a35acc26415759c3be731d1eac22"
+PB_ARCHIVE = f"https://codeload.github.com/JDKDigital/productive-bees/zip/{PB_COMMIT}"
+
+CLIENT_QUESTS = ROOT / "client/overrides/config/ftbquests/quests"
+SERVER_QUESTS = ROOT / "server/config/ftbquests/quests"
+CHAPTERS = CLIENT_QUESTS / "chapters"
+REWARD_TABLES = CLIENT_QUESTS / "reward_tables"
+GROUPS_FILE = CLIENT_QUESTS / "chapter_groups.snbt"
+PB_CHAPTER = CHAPTERS / "productive_bees.snbt"
+MANIFEST = ROOT / "client/manifest.json"
+SUMMARY = ROOT / "server/_crafty/build-summary.json"
+VALIDATION = ROOT / "server/pack-information/validation.json"
+README = ROOT / "README.md"
+CHANGELOG = ROOT / "CHANGELOG.md"
+
+SAFE_GROUPS = [
+    ("5A29000000000001", "Start Here"),
+    ("5A29000000000002", "Machines and Production"),
+    ("5A29000000000003", "Storage and Networks"),
+    ("5A29000000000004", "Resources and Farming"),
+    ("5A29000000000005", "Magic and Rituals"),
+    ("5A29000000000006", "Exploration and Creatures"),
+    ("5A29000000000007", "Building and Settlements"),
+    ("5A29000000000008", "Tools, Combat and Equipment"),
+    ("5A29000000000009", "Collections and Endgame"),
+]
+
+TIER_POOLS = {
+    1: [
+        (16, "minecraft:coal", 24.0),
+        (8, "minecraft:iron_ingot", 20.0),
+        (12, "minecraft:copper_ingot", 20.0),
+        (16, "minecraft:redstone", 16.0),
+        (8, "minecraft:bread", 12.0),
+        (32, "minecraft:torch", 8.0),
+    ],
+    2: [
+        (16, "minecraft:iron_ingot", 22.0),
+        (8, "minecraft:gold_ingot", 18.0),
+        (32, "minecraft:redstone", 18.0),
+        (16, "minecraft:lapis_lazuli", 14.0),
+        (4, "minecraft:emerald", 12.0),
+        (4, "minecraft:ender_pearl", 10.0),
+        (8, "minecraft:experience_bottle", 6.0),
+    ],
+    3: [
+        (3, "minecraft:diamond", 20.0),
+        (8, "minecraft:emerald", 18.0),
+        (6, "minecraft:blaze_rod", 16.0),
+        (8, "minecraft:ender_pearl", 14.0),
+        (16, "minecraft:golden_carrot", 12.0),
+        (16, "minecraft:experience_bottle", 12.0),
+        (1, "minecraft:netherite_scrap", 8.0),
+    ],
+    4: [
+        (8, "minecraft:diamond", 20.0),
+        (2, "minecraft:emerald_block", 16.0),
+        (32, "minecraft:experience_bottle", 16.0),
+        (2, "minecraft:netherite_scrap", 14.0),
+        (32, "minecraft:golden_carrot", 12.0),
+        (16, "minecraft:ender_pearl", 10.0),
+        (1, "minecraft:totem_of_undying", 6.0),
+        (1, "minecraft:enchanted_golden_apple", 2.0),
+    ],
+}
+
+
+def deterministic_long(seed: str) -> int:
+    value = int.from_bytes(hashlib.sha256(seed.encode("utf-8")).digest()[:8], "big") & ((1 << 63) - 1)
+    return value or 1
+
+
+def deterministic_hex(seed: str) -> str:
+    return f"{deterministic_long(seed):016X}"
+
+
+def hid(seed: str) -> str:
+    return deterministic_hex(seed)
+
+
+def find_balanced(text: str, start: int, opench: str, closech: str) -> int:
+    depth = 0
+    in_string = False
+    escaped = False
+    for i in range(start, len(text)):
+        c = text[i]
+        if in_string:
+            if escaped:
+                escaped = False
+            elif c == "\\":
+                escaped = True
+            elif c == '"':
+                in_string = False
+        else:
+            if c == '"':
+                in_string = True
+            elif c == opench:
+                depth += 1
+            elif c == closech:
+                depth -= 1
+                if depth == 0:
+                    return i
+    raise RuntimeError(f"Unbalanced {opench}{closech} structure")
+
+
+def named_array(text: str, name: str, start_at: int = 0) -> tuple[int, int] | None:
+    m = re.search(rf"(?m)^\s*{re.escape(name)}:\s*\[", text[start_at:])
+    if not m:
+        return None
+    pos = start_at + m.start()
+    arr = text.find("[", pos)
+    return arr, find_balanced(text, arr, "[", "]")
+
+
+def top_level_objects(text: str, arr_start: int, arr_end: int) -> list[tuple[int, int]]:
+    out: list[tuple[int, int]] = []
+    depth = 0
+    in_string = False
+    escaped = False
+    start: int | None = None
+    for i in range(arr_start + 1, arr_end):
+        c = text[i]
+        if in_string:
+            if escaped:
+                escaped = False
+            elif c == "\\":
+                escaped = True
+            elif c == '"':
+                in_string = False
+        else:
+            if c == '"':
+                in_string = True
+            elif c == "{":
+                if depth == 0:
+                    start = i
+                depth += 1
+            elif c == "}":
+                depth -= 1
+                if depth == 0 and start is not None:
+                    out.append((start, i + 1))
+                    start = None
+    return out
+
+
+def quest_positions(text: str) -> list[tuple[int, int]]:
+    arr = named_array(text, "quests")
+    if not arr:
+        raise RuntimeError("Chapter has no quests array")
+    return top_level_objects(text, *arr)
+
+
+def child_blocks(parent: str, name: str) -> list[str]:
+    arr = named_array(parent, name)
+    if not arr:
+        return []
+    return [parent[s:e] for s, e in top_level_objects(parent, *arr)]
+
+
+def block_type(block: str) -> str | None:
+    m = re.search(r'(?m)^\s*type:\s*"([^"]+)"\s*,?\s*$', block)
+    return m.group(1) if m else None
+
+
+def quest_id(block: str) -> str:
+    m = re.search(r'(?m)^\s*id:\s*"([0-9A-F]{16})"\s*,?\s*$', block)
+    if not m:
+        raise RuntimeError("Quest block is missing a 16-character id")
+    return m.group(1)
+
