@@ -30,18 +30,19 @@ fi
 test "$(awk -F '\t' '$4 == "jei" && $1 == "6075247" && $2 == "jei-1.20.1-forge-15.20.0.106.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected matching JEI 15.20.0.106 on server" >&2; exit 1; }
 
 test "$(jq '[.files[] | select(.projectID == 1115989 or .fileID == 6942239)] | length' "$manifest")" = "0" || { echo "Official More Hitboxes entry must be absent from client manifest" >&2; exit 1; }
-client_mh="$repo_dir/client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.1.jar"
-server_mh="$repo_dir/server/mods/morehitboxes-forge-1.20.1-1.9.2.1.jar"
+client_mh="$repo_dir/client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.2.jar"
+server_mh="$repo_dir/server/mods/morehitboxes-forge-1.20.1-1.9.2.2.jar"
 test -f "$client_mh" && test -f "$server_mh" || { echo "Patched More Hitboxes jar missing" >&2; exit 1; }
 printf '%s  %s
-' 'd7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5' "$client_mh" | sha512sum --check - >/dev/null
+' '11d56077d1ee93798f8925a550a99155a790a51f620a661c527076cfb3deed508ea1b2580ca2e5d7dd2c1064906907dcc2d6bc519b940e447cf714ffa3acd699' "$client_mh" | sha512sum --check - >/dev/null
 printf '%s  %s
-' 'd7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5' "$server_mh" | sha512sum --check - >/dev/null
+' '11d56077d1ee93798f8925a550a99155a790a51f620a661c527076cfb3deed508ea1b2580ca2e5d7dd2c1064906907dcc2d6bc519b940e447cf714ffa3acd699' "$server_mh" | sha512sum --check - >/dev/null
 cmp -s "$client_mh" "$server_mh" || { echo "Client/server More Hitboxes patch differs" >&2; exit 1; }
-test "$(awk -F '\t' '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.1.jar" && $3 == "d7dce29e3e791cd27af0d217d699583112d07b5d5f8700f9852a353013a554934fa5bbf1bb1d4d64f452ac6942e37315ba70081d700bf60e022836fe32354cb5" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
+test "$(awk -F '\t' '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.2.jar" && $3 == "11d56077d1ee93798f8925a550a99155a790a51f620a661c527076cfb3deed508ea1b2580ca2e5d7dd2c1064906907dcc2d6bc519b940e447cf714ffa3acd699" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
 grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Old More Hitboxes cleanup missing" >&2; exit 1; }
-if grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.1.jar' "$repo_dir/server/_crafty/remove-mods.txt"; then
-  echo "Patched More Hitboxes is scheduled for deletion" >&2
+grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.1.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Prior More Hitboxes patch cleanup missing" >&2; exit 1; }
+if grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.2.jar' "$repo_dir/server/_crafty/remove-mods.txt"; then
+  echo "Current More Hitboxes v2 patch is scheduled for deletion" >&2
   exit 1
 fi
 jq -e '.more_hitboxes_perf_patch_0_1_9_22.enabled == true' "$validation" >/dev/null
@@ -89,7 +90,7 @@ test -f "$overlay" || { echo "Crafty update overlay missing" >&2; exit 1; }
 unzip -tq "$overlay"
 test "$(unzip -Z1 "$overlay" | grep -Fxc '_crafty/server-mods.tsv')" = "1" || { echo "Crafty update overlay missing server-mods.tsv" >&2; exit 1; }
 test "$(unzip -Z1 "$overlay" | grep -Fxc '_crafty/remove-mods.txt')" = "1" || { echo "Crafty update overlay missing remove-mods.txt" >&2; exit 1; }
-test "$(unzip -Z1 "$overlay" | grep -Fxc 'mods/morehitboxes-forge-1.20.1-1.9.2.1.jar')" = "1" || { echo "Crafty update overlay missing patched jar" >&2; exit 1; }
+test "$(unzip -Z1 "$overlay" | grep -Fxc 'mods/morehitboxes-forge-1.20.1-1.9.2.2.jar')" = "1" || { echo "Crafty update overlay missing patched jar" >&2; exit 1; }
 
 
 test "$(unzip -Z1 "$overlay" | grep -Fxc 'config/ftbquests/quests/chapters/getting_started.snbt')" = "1" || { echo "Crafty update overlay missing synced quests" >&2; exit 1; }

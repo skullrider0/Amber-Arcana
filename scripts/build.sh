@@ -3,7 +3,7 @@ set -euo pipefail
 
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 dist_dir="$repo_dir/dist"
-patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
+patch_jar="morehitboxes-forge-1.20.1-1.9.2.2.jar"
 validation="$repo_dir/server/pack-information/validation.json"
 
 # Do not replay historical release migrations over canonical 0.1.9-42 data.
