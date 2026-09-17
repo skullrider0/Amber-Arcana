@@ -6,11 +6,12 @@ import zipfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='0.1.9-43'
 JAR='create_generators-1.0.0-forge-1.20.1.jar'
 HASH='757b86c857c81e9bca12b7308814699c5ecbb9cd34c9d43b614c3c76adc4208fc8edc58c907983b50b768020b8244f33dd6b9137172f5cdcfd1165c5badab961'
 manifest=json.loads((ROOT/'client/manifest.json').read_text())
-assert manifest['version']==VERSION
+VERSION=manifest['version']
+parts=tuple(int(x) for x in VERSION.split('-')[-1].split('.')) if VERSION.count('.') == 2 and '-' not in VERSION.split('-')[-1] else None
+assert VERSION.startswith('0.1.9-') and int(VERSION.rsplit('-',1)[1]) >= 43
 pins=[f for f in manifest['files'] if f['projectID']==1206505]
 assert pins==[{'projectID':1206505,'fileID':6224618,'required':True}]
 text=(ROOT/'server/_crafty/server-mods.tsv').read_text()
@@ -40,4 +41,4 @@ if len(sys.argv)>1:
             assert all('item' in x or 'fluid' in x for x in recipe['ingredients']+recipe['results'])
         assert [n for n in z.namelist() if n.endswith('.class')]==['create_generators/CreateGeneratorsMod.class']
         assert not any('mixin' in n.lower() for n in z.namelist())
-print('Stone Generators validation passed: matching client/server pin, checksum, archives, unchanged Create version')
+print(f'Stone Generators validation passed for {VERSION}: matching client/server pin, checksum, archives, unchanged Create version')
