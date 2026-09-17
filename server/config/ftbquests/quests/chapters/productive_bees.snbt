@@ -2399,9 +2399,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: [
-				"7A50D797B79D88A3"
-			]
+			dependencies: []
 			description: [
 				"Convert Crimson Bee using minecraft:brown_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."

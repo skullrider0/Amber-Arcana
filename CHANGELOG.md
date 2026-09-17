@@ -1,3 +1,9 @@
+## 0.1.9-44
+
+- Repair circular FTB Quests dependency paths that caused recursive `isExcludedByOtherQuestline` crashes.
+- Preserve all quest IDs and player/team quest progress; only cycle-closing dependency edges are removed.
+- Add a build-time directed-cycle validator so cyclic quest graphs cannot be packaged again.
+
 ## 0.1.9-43
 
 - Add Create: Easy Stone Generators 1.0.0 (Forge 1.20.1) to both sides, with SHA-512-pinned server download.

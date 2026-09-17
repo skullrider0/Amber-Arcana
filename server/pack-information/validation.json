@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-43",
+  "pack_version": "0.1.9-44",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1502,5 +1502,24 @@
     "server_update_required": true,
     "runtime_tested": false,
     "bee_integration_preserved": true
+  },
+  "quest_cycle_hotfix_0_1_9_44": {
+    "ftb_quests_version": "2001.4.14",
+    "repair_strategy": "remove only dependency edges that participate in directed cycles; prefer cross-chapter/backwards edges",
+    "removed_dependency_edges": [
+      {
+        "quest_id": "6005351D64A165C3",
+        "quest_title": "Brown Shroom Bee",
+        "quest_chapter": "productive_bees.snbt",
+        "removed_dependency_id": "7A50D797B79D88A3",
+        "removed_dependency_title": "Crimson Bee",
+        "removed_dependency_chapter": "productive_bees.snbt"
+      }
+    ],
+    "removed_edge_count": 1,
+    "quest_ids_preserved": true,
+    "world_data_modified": false,
+    "client_server_quest_files_identical": true,
+    "acyclic_validator": "scripts/validate-quest-graph.py"
   }
 }
