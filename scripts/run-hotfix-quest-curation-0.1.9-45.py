@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +35,14 @@ def allowed(stem: str, item: str) -> bool:
 aa45.allowed = allowed
 
 aa45.main()
+
+# Keep both historical build-summary version fields aligned with the manifest.
+# Several compatibility validators inspect pack_version inside release archives.
+summary_path = ROOT / "server/_crafty/build-summary.json"
+summary = json.loads(summary_path.read_text())
+summary["version"] = aa45.VERSION
+summary["pack_version"] = aa45.VERSION
+summary_path.write_text(json.dumps(summary, indent=2) + "\n")
 
 # The historical validator still expected the deliberately generated AA35 filler
 # nodes and the previous release number. Update only those current-release gates;
