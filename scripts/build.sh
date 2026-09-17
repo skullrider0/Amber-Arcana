@@ -49,20 +49,26 @@ python3 "$repo_dir/scripts/hotfix-curseforge-downloads-0.1.9-40.py"
 # 0.1.9-41 restores recipe-conflict selection now that the pack is back on JEI,
 # extends that selector into AE2 and Refined Storage, and adds Spartan Weaponry.
 python3 "$repo_dir/scripts/hotfix-recipe-conflicts-spartan-0.1.9-41.py"
-
 fi
 
-python3 "$repo_dir/scripts/hotfix-bee-integrations-0.1.9-42.py"
-python3 "$repo_dir/scripts/hotfix-stone-generators-0.1.9-43.py"
+# Historical release transforms are one-shot migrations. Canonical current
+# sources carry validation markers, so rebuilding a release must not replay them.
+if ! grep -Fq '"bee_integrations_0_1_9_42"' "$validation"; then
+  python3 "$repo_dir/scripts/hotfix-bee-integrations-0.1.9-42.py"
+fi
 
-# Repair the historical dependency cycle first; 0.1.9-45 then becomes the final
-# version-setting quest transform for this release.
-python3 "$repo_dir/scripts/hotfix-quest-cycles-0.1.9-44.py"
+if ! grep -Fq '"stone_generators_0_1_9_43"' "$validation"; then
+  python3 "$repo_dir/scripts/hotfix-stone-generators-0.1.9-43.py"
+fi
 
-# 0.1.9-45 removes the generic AA35 filler chains and re-themes chapter reward
-# tables. This pass preserves every non-filler quest ID and synchronizes the
-# client/server quest sources.
-python3 "$repo_dir/scripts/run-hotfix-quest-curation-0.1.9-45.py"
+if ! grep -Fq '"quest_cycle_hotfix_0_1_9_44"' "$validation"; then
+  python3 "$repo_dir/scripts/hotfix-quest-cycles-0.1.9-44.py"
+fi
+
+if ! grep -Fq '"quest_curation_0_1_9_45"' "$validation"; then
+  python3 "$repo_dir/scripts/run-hotfix-quest-curation-0.1.9-45.py"
+fi
+
 python3 "$repo_dir/scripts/validate-quest-themes.py"
 python3 "$repo_dir/scripts/validate-quest-graph.py"
 
