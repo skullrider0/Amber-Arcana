@@ -38,51 +38,6 @@ aether-1.20.1-1.5.2-neoforge.jar
 everycomp-1.20-2.9.26-forge.jar
 twilightforest-1.20.1-4.3.2508-universal.jar
 
-# Replaced by Amber MoreHitboxes 1.9.2.1 performance beta.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
-
-# Replaced by Amber More Hitboxes 1.9.2.1 performance patch.
+# Replaced by Amber More Hitboxes 1.9.2.2 performance patch.
 morehitboxes-forge-1.20.1-1.9.2.jar
+morehitboxes-forge-1.20.1-1.9.2.1.jar

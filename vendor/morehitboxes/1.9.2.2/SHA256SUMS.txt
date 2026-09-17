@@ -1,0 +1,1 @@
+0852fa82a4e9d361ad41b576d902fda0823c05e621439ff3a026dd07a69edbb7  vendor/morehitboxes/1.9.2.2/morehitboxes-forge-1.20.1-1.9.2.2.jar

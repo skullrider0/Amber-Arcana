@@ -34,12 +34,24 @@ jobs:
             26|28) ;;
             *) echo "Expected canonical quest source with 26 pre-0.1.9-38 chapters or 28 post-0.1.9-38 chapters; found $client_chapters" >&2; exit 1 ;;
           esac
-          jar='morehitboxes-forge-1.20.1-1.9.2.1.jar'
-          source="vendor/morehitboxes/1.9.2.1/$jar"
+
+          jar='morehitboxes-forge-1.20.1-1.9.2.2.jar'
+          source="vendor/morehitboxes/1.9.2.2/$jar"
           test -f "$source"
           mkdir -p client/overrides/mods server/mods
+          rm -f \
+            client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.jar \
+            client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.1.jar \
+            server/mods/morehitboxes-forge-1.20.1-1.9.2.jar \
+            server/mods/morehitboxes-forge-1.20.1-1.9.2.1.jar
           cp "$source" "client/overrides/mods/$jar"
           cp "$source" "server/mods/$jar"
+
+          ! grep -Fq 'morehitboxes' server/_crafty/server-mods.tsv
+          if awk -F '\t' '$1 == "0" {print; bad=1} END {exit bad ? 0 : 1}' server/_crafty/server-mods.tsv; then
+            echo "server-mods.tsv contains an invalid CurseForge fileID=0 row" >&2
+            exit 1
+          fi
 
       - name: Build client and server distributions
         run: bash scripts/build.sh

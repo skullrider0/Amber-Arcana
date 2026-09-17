@@ -17,7 +17,11 @@ assert pins==[{'projectID':1206505,'fileID':6224618,'required':True}]
 text=(ROOT/'server/_crafty/server-mods.tsv').read_text()
 rows=[l.split('\t') for l in text.splitlines() if l and not l.startswith('#')]
 assert [r for r in rows if r[5]=='1206505']==[['6224618',JAR,HASH,'create-stone-generators','Create: Easy Stone Generators','1206505']]
-assert len(rows)==271
+# 0.1.9-46 bundles the patched More Hitboxes JAR locally instead of listing it
+# as a fake CurseForge fileID=0 row, so the managed download count is now 270.
+assert len(rows)==270
+assert all(r[0] != '0' for r in rows)
+assert not any(r[1].startswith('morehitboxes-forge-1.20.1-') for r in rows)
 assert len(manifest['files'])==291
 assert any(r[1]=='create-1.20.1-6.0.8.jar' and r[5]=='328085' for r in rows)
 assert JAR not in (ROOT/'server/_crafty/remove-mods.txt').read_text()
