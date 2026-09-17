@@ -12,13 +12,21 @@ if spec is None or spec.loader is None:
 aa45 = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(aa45)
 
-# Some exploration/general chapters intentionally use vanilla evidence items
-# (spyglass, brush, minecart, food, etc.) even though their reward tables were
-# previously polluted by the old Create-first fallback. Vanilla supplies are a
-# safe themed fallback; unrelated mod namespaces remain forbidden.
+# Some exploration/general chapters intentionally use vanilla evidence/support
+# items (spyglass, brush, minecart, food, etc.) even though their reward tables
+# were previously polluted by the old Create-first fallback. Vanilla supplies are
+# allowed, but generic diamond/emerald currency is still rejected.
 _base_allowed = aa45.allowed
+GENERIC_CURRENCY = {
+    "minecraft:diamond",
+    "minecraft:diamond_block",
+    "minecraft:emerald",
+    "minecraft:emerald_block",
+}
 
 def allowed(stem: str, item: str) -> bool:
+    if item in GENERIC_CURRENCY:
+        return False
     if aa45.namespace(item) == "minecraft":
         return True
     return _base_allowed(stem, item)
