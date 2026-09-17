@@ -53,13 +53,17 @@ python3 "$repo_dir/scripts/hotfix-recipe-conflicts-spartan-0.1.9-41.py"
 fi
 
 python3 "$repo_dir/scripts/hotfix-bee-integrations-0.1.9-42.py"
-
 python3 "$repo_dir/scripts/hotfix-stone-generators-0.1.9-43.py"
 
-# 0.1.9-44 repairs any directed quest dependency cycles before packaging. FTB
-# Quests recursively checks incomplete dependencies while deciding whether a
-# branch is excluded; a cycle can therefore recurse until the server crashes.
+# Repair the historical dependency cycle first; 0.1.9-45 then becomes the final
+# version-setting quest transform for this release.
 python3 "$repo_dir/scripts/hotfix-quest-cycles-0.1.9-44.py"
+
+# 0.1.9-45 removes the generic AA35 filler chains and re-themes chapter reward
+# tables. This pass preserves every non-filler quest ID and synchronizes the
+# client/server quest sources.
+python3 "$repo_dir/scripts/run-hotfix-quest-curation-0.1.9-45.py"
+python3 "$repo_dir/scripts/validate-quest-themes.py"
 python3 "$repo_dir/scripts/validate-quest-graph.py"
 
 bash "$repo_dir/scripts/build-launcher.sh"
