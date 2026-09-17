@@ -1,6 +1,6 @@
-a7efa2972adea8f8ede8ae4f0092ca6f2ab59ee3a735b99e05e57461cbdcf267  Amber-and-Arcana-0.1.9-43-Client.zip
-75815dd51f7fa1184646f866e3e8128bd9fc7b67594d259829939c1426c03c00  Amber-and-Arcana-0.1.9-43-Server.zip
-d165caa2bfe4334891dfc32ac724c746422c52f67f66695abad35b7887a2cd9c  Amber-and-Arcana-0.1.9-43-Crafty-Update-Overlay.zip
-d165caa2bfe4334891dfc32ac724c746422c52f67f66695abad35b7887a2cd9c  Amber-and-Arcana-0.1.9-43-Crafty-JEI-Overlay.zip
-083b5f06c1b8efd734a5272b167fee627085686fcb0bb9210ade617c942918ac  Amber-and-Arcana-0.1.9-43-Crafty-Quest-Overlay.zip
-749c8066678be575115ecb71e61d0a5b7791174969136076973e336b4159732e  Amber-and-Arcana-0.1.9-43-Crafty-Quest-Spawn-Balance-Overlay.zip
+2874ff9d9c822636c584acd819b24d29e2d354e5f8e7ad670fd12bcca677249d  Amber-and-Arcana-0.1.9-43-Client.zip
+840bdf655d43ccfb3e2f48789773a13e0c639c99cf74c97795ebddafba96ea45  Amber-and-Arcana-0.1.9-43-Server.zip
+954fe1645f96623bdea8a560f2bae5715b884925be485d3b37efc22e01d43480  Amber-and-Arcana-0.1.9-43-Crafty-Update-Overlay.zip
+954fe1645f96623bdea8a560f2bae5715b884925be485d3b37efc22e01d43480  Amber-and-Arcana-0.1.9-43-Crafty-JEI-Overlay.zip
+509fda5537b6c6fb1d2aa2ff3d675d19ba321bd1e508f1f28b8af37010c71e94  Amber-and-Arcana-0.1.9-43-Crafty-Quest-Overlay.zip
+eeaa7a18a83a4760bf1d2115c59382ed5530f25e6a920c7740244f4692abb6a2  Amber-and-Arcana-0.1.9-43-Crafty-Quest-Spawn-Balance-Overlay.zip
