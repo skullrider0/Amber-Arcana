@@ -3,6 +3,8 @@ name: Build and validate pack
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -39,10 +41,6 @@ jobs:
           cp "$source" "client/overrides/mods/$jar"
           cp "$source" "server/mods/$jar"
 
-      # The repository now stores the canonical current pack source. Historical
-      # release transformers are intentionally not replayed here: newer quest
-      # releases substantially deepen the old chapters, and re-running old
-      # migrations over current files can destroy the modern quest graph.
       - name: Build client and server distributions
         run: bash scripts/build.sh
 
@@ -50,6 +48,7 @@ jobs:
         run: bash scripts/validate.sh
 
       - name: Publish rebuilt distributions to main
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
