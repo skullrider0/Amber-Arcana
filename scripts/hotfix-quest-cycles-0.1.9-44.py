@@ -23,7 +23,8 @@ CHANGELOG = ROOT / "CHANGELOG.md"
 # quest-level indentation so task/reward IDs are never mistaken for quest IDs.
 ID_RE = re.compile(r'^\t\t\tid:\s*"([0-9A-Fa-f]{16})"\s*,?\s*$', re.M)
 TITLE_RE = re.compile(r'^\t\t\ttitle:\s*"([^"]*)"\s*,?\s*$', re.M)
-DEPS_RE = re.compile(r'^\t\t\tdependencies:\s*\[(.*?)\]\s*,?\s*$', re.M)
+# Dependencies can be emitted either on one line or across several lines.
+DEPS_RE = re.compile(r'^\t\t\tdependencies:\s*\[(.*?)\]', re.M | re.S)
 HEX_RE = re.compile(r'"([0-9A-Fa-f]{16})"')
 
 
@@ -143,11 +144,7 @@ def remove_dependency(quest: Quest, dep: str) -> None:
         if dep not in deps:
             raise RuntimeError(f"Dependency {dep} not present on quest {quest.qid}")
         deps.remove(dep)
-        original = mdeps.group(0)
-        trailing_comma = original.rstrip().endswith(",")
         replacement = '\t\t\tdependencies: [' + ' '.join(f'"{d}"' for d in deps) + ']'
-        if trailing_comma:
-            replacement += ','
         new_block = block[:mdeps.start()] + replacement + block[mdeps.end():]
         quest.path.write_text(text.replace(block, new_block, 1))
         return
