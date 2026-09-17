@@ -33,7 +33,8 @@ for path in chapter_files:
         errors.append(f"{path.name}: client/server quest source differs")
 
 # Only per-chapter tier tables and finale wheels are theme-constrained. Shared or
-# special-purpose tables are left to their dedicated validators.
+# special-purpose tables are left to their dedicated validators. Vanilla support
+# items are permitted; unrelated mod namespaces are not.
 checked = 0
 for path in sorted(TABLES.glob("modroll_*_tier_*.snbt")) + sorted(TABLES.glob("wheel_*.snbt")):
     name = path.stem
@@ -50,6 +51,8 @@ for path in sorted(TABLES.glob("modroll_*_tier_*.snbt")) + sorted(TABLES.glob("w
         continue
     checked += 1
     for _count, item, _weight in entries:
+        if aa45.namespace(item) == "minecraft":
+            continue
         if not aa45.allowed(stem, item):
             errors.append(f"{path.name}: unrelated reward {item} is outside theme {sorted(aa45.THEMES[stem])}")
 
