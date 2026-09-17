@@ -18,10 +18,13 @@ VALIDATE_SH = ROOT / "scripts/validate.sh"
 README = ROOT / "README.md"
 CHANGELOG = ROOT / "CHANGELOG.md"
 
-ID_RE = re.compile(r'^\t\t\tid:\s*"([0-9A-F]{16})"\s*$', re.M)
-TITLE_RE = re.compile(r'^\t\t\ttitle:\s*"([^"]*)"\s*$', re.M)
-DEPS_RE = re.compile(r'^\t\t\tdependencies:\s*\[(.*?)\]\s*$', re.M)
-HEX_RE = re.compile(r'"([0-9A-F]{16})"')
+# FTB Quests' SNBT writer legitimately emits both `id: "..."` and
+# `id: "...",`. Accept the optional trailing comma while keeping the exact
+# quest-level indentation so task/reward IDs are never mistaken for quest IDs.
+ID_RE = re.compile(r'^\t\t\tid:\s*"([0-9A-Fa-f]{16})"\s*,?\s*$', re.M)
+TITLE_RE = re.compile(r'^\t\t\ttitle:\s*"([^"]*)"\s*,?\s*$', re.M)
+DEPS_RE = re.compile(r'^\t\t\tdependencies:\s*\[(.*?)\]\s*,?\s*$', re.M)
+HEX_RE = re.compile(r'"([0-9A-Fa-f]{16})"')
 
 
 @dataclass(frozen=True)
@@ -65,12 +68,12 @@ def load_graph() -> dict[str, Quest]:
             mid = ID_RE.search(block)
             if not mid:
                 continue
-            qid = mid.group(1)
+            qid = mid.group(1).upper()
             if qid in quests:
                 raise RuntimeError(f"Duplicate quest id {qid}")
             mtitle = TITLE_RE.search(block)
             mdeps = DEPS_RE.search(block)
-            deps = tuple(HEX_RE.findall(mdeps.group(1))) if mdeps else ()
+            deps = tuple(x.upper() for x in HEX_RE.findall(mdeps.group(1))) if mdeps else ()
             quests[qid] = Quest(qid, mtitle.group(1) if mtitle else qid, path.name, path, deps)
     return quests
 
@@ -110,16 +113,20 @@ def remove_dependency(quest: Quest, dep: str) -> None:
     text = quest.path.read_text()
     for block in split_quest_blocks(text):
         mid = ID_RE.search(block)
-        if not mid or mid.group(1) != quest.qid:
+        if not mid or mid.group(1).upper() != quest.qid:
             continue
         mdeps = DEPS_RE.search(block)
         if not mdeps:
             raise RuntimeError(f"Quest {quest.qid} has no dependency line")
-        deps = HEX_RE.findall(mdeps.group(1))
+        deps = [x.upper() for x in HEX_RE.findall(mdeps.group(1))]
         if dep not in deps:
             raise RuntimeError(f"Dependency {dep} not present on quest {quest.qid}")
         deps.remove(dep)
+        original = mdeps.group(0)
+        trailing_comma = original.rstrip().endswith(",")
         replacement = '\t\t\tdependencies: [' + ' '.join(f'"{d}"' for d in deps) + ']'
+        if trailing_comma:
+            replacement += ','
         new_block = block[:mdeps.start()] + replacement + block[mdeps.end():]
         quest.path.write_text(text.replace(block, new_block, 1))
         return
