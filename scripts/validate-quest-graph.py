@@ -11,8 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 CLIENT = ROOT / "client/overrides/config/ftbquests/quests/chapters"
 SERVER = ROOT / "server/config/ftbquests/quests/chapters"
 
-ID_RE = re.compile(r'^\t\t\tid:\s*"([0-9A-Fa-f]{16})"\s*$', re.M)
-TITLE_RE = re.compile(r'^\t\t\ttitle:\s*"([^"]*)"\s*$', re.M)
+# FTB Quests' SNBT writer legitimately emits both `id: "..."` and
+# `id: "...",`. Keep the indentation constraint so nested task/reward IDs are
+# not mistaken for quest IDs, but accept the optional trailing comma.
+ID_RE = re.compile(r'^\t\t\tid:\s*"([0-9A-Fa-f]{16})"\s*,?\s*$', re.M)
+TITLE_RE = re.compile(r'^\t\t\ttitle:\s*"([^"]*)"\s*,?\s*$', re.M)
 DEPS_RE = re.compile(r'^\t\t\tdependencies:\s*\[(.*?)\]', re.M | re.S)
 HEX_RE = re.compile(r'"([0-9A-Fa-f]{16})"')
 
