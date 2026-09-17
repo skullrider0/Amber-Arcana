@@ -37,27 +37,48 @@ class Quest:
 
 
 def split_quest_blocks(text: str) -> list[str]:
-    lines = text.splitlines(keepends=True)
-    in_quests = False
-    current: list[str] | None = None
+    """Extract top-level quest objects by SNBT nesting, not indentation."""
+    marker = re.search(r'\bquests\s*:\s*\[', text)
+    if not marker:
+        return []
+    i = marker.end()
+    square = 1
+    curly = 0
+    start: int | None = None
+    quote = False
+    escape = False
     blocks: list[str] = []
-    for raw in lines:
-        line = raw.rstrip("\r\n")
-        if not in_quests:
-            if line.strip() == "quests: [":
-                in_quests = True
+    while i < len(text) and square > 0:
+        ch = text[i]
+        if quote:
+            if escape:
+                escape = False
+            elif ch == '\\':
+                escape = True
+            elif ch == '"':
+                quote = False
+            i += 1
             continue
-        if current is None:
-            if re.match(r'^\t\t\{\s*$', line):
-                current = [raw]
-                continue
-            if re.match(r'^\t\],?\s*$', line):
-                break
-            continue
-        current.append(raw)
-        if re.match(r'^\t\t\},?\s*$', line):
-            blocks.append("".join(current))
-            current = None
+        if ch == '"':
+            quote = True
+        elif ch == '[':
+            square += 1
+        elif ch == ']':
+            square -= 1
+        elif ch == '{':
+            if square == 1 and curly == 0:
+                start = i
+            curly += 1
+        elif ch == '}':
+            curly -= 1
+            if curly < 0:
+                raise RuntimeError("unbalanced quest braces")
+            if curly == 0 and start is not None:
+                blocks.append(text[start:i + 1])
+                start = None
+        i += 1
+    if square != 0 or curly != 0 or start is not None:
+        raise RuntimeError("unterminated quests list/object")
     return blocks
 
 
