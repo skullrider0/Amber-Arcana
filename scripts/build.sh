@@ -56,6 +56,12 @@ python3 "$repo_dir/scripts/hotfix-bee-integrations-0.1.9-42.py"
 
 python3 "$repo_dir/scripts/hotfix-stone-generators-0.1.9-43.py"
 
+# 0.1.9-44 repairs any directed quest dependency cycles before packaging. FTB
+# Quests recursively checks incomplete dependencies while deciding whether a
+# branch is excluded; a cycle can therefore recurse until the server crashes.
+python3 "$repo_dir/scripts/hotfix-quest-cycles-0.1.9-44.py"
+python3 "$repo_dir/scripts/validate-quest-graph.py"
+
 bash "$repo_dir/scripts/build-launcher.sh"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
