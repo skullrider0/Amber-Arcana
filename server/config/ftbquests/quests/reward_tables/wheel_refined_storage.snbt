@@ -15,8 +15,6 @@
 		{ item: "refinedstorage:pattern_grid", weight: 7.00f }
 		{ item: "refinedstorage:64k_storage_disk", weight: 3.00f }
 		{ count: 2, item: "refinedstorage:crafter", weight: 9.00f }
-		{ item: "refinedstorage:pattern_grid", weight: 8.00f }
-		{ item: "refinedstorage:64k_storage_disk", weight: 7.00f }
 		{ item: "refinedstorage:network_transmitter", weight: 4.00f }
 		{ item: "refinedstorage:network_receiver", weight: 4.00f }
 	]

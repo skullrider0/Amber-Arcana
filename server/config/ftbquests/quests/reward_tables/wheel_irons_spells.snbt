@@ -10,13 +10,9 @@
 		{ item: "irons_spellbooks:diamond_spell_book", weight: 1.50f }
 		{ count: 4, item: "irons_spellbooks:mithril_ingot", weight: 12.00f }
 		{ count: 3, item: "irons_spellbooks:upgrade_orb", weight: 10.00f }
-		{ item: "irons_spellbooks:diamond_spell_book", weight: 5.00f }
-		{ item: "irons_spellbooks:arcane_anvil", weight: 6.00f }
 		{ item: "irons_spellbooks:netherite_spell_book", weight: 0.75f }
 		{ count: 8, item: "irons_spellbooks:mithril_ingot", weight: 12.00f }
 		{ count: 4, item: "irons_spellbooks:upgrade_orb", weight: 12.00f }
-		{ item: "irons_spellbooks:diamond_spell_book", weight: 7.00f }
-		{ item: "irons_spellbooks:netherite_spell_book", weight: 0.35f }
 		{ count: 16, item: "irons_spellbooks:arcane_ingot", weight: 10.00f }
 	]
 	title: "Wheel of Fortune — Iron Spells and Wizardry"

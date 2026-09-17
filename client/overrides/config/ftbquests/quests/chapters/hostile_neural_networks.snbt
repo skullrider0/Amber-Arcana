@@ -13,6 +13,7 @@
 			description: ["Build a Deep Learner, the tool used to train mob Data Models."]
 			icon: "hostilenetworks:deep_learner"
 			id: "4FCE30FEC8982135"
+			dependencies: []
 			rewards: [
 				{
 					id: "108147E77A0F2E61"
@@ -167,7 +168,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["400557FC8B9FB30A" "0EBD9BDCE0FCD1A1"]
+			dependencies: ["400557FC8B9FB30A", "0EBD9BDCE0FCD1A1"]
 			description: ["Generate an Overworld Prediction from a working simulation."]
 			icon: "hostilenetworks:overworld_prediction"
 			id: "3CD71E762A18ADAC"
@@ -199,7 +200,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["400557FC8B9FB30A" "0EBD9BDCE0FCD1A1"]
+			dependencies: ["400557FC8B9FB30A", "0EBD9BDCE0FCD1A1"]
 			description: ["Generate a Nether Prediction and broaden the kinds of loot your network can synthesize."]
 			icon: "hostilenetworks:nether_prediction"
 			id: "381659E89358ABF7"
@@ -231,7 +232,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["400557FC8B9FB30A" "0EBD9BDCE0FCD1A1"]
+			dependencies: ["400557FC8B9FB30A", "0EBD9BDCE0FCD1A1"]
 			description: ["Generate an End Prediction and prove the chamber can support higher-value models."]
 			icon: "hostilenetworks:end_prediction"
 			id: "5F1EA4FE2CA3D52D"
@@ -263,7 +264,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["3CD71E762A18ADAC" "381659E89358ABF7" "5F1EA4FE2CA3D52D"]
+			dependencies: ["3CD71E762A18ADAC", "381659E89358ABF7", "5F1EA4FE2CA3D52D"]
 			description: ["Build a Loot Fabricator and turn predictions into the mob drops you actually need."]
 			icon: "hostilenetworks:loot_fabricator"
 			id: "00D817F2873C84CB"

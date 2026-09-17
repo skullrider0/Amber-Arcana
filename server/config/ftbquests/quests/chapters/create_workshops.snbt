@@ -54,62 +54,6 @@
 			]
 		}
 		{
-			dependencies: ["7F5A949E389973B0"]
-			description: [
-				"Turn this Create milestone into a working workshop station with sensible input and output handling."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "create:wrench"
-			id: "189720AF195A5648"
-			rewards: [
-				{
-					id: "4801F3D05435D80E"
-					table_id: 1618880879207947504L
-					title: "Create Workshops Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "1A6166BBEEFD46D4"
-					title: "Confirm: Build: A shared workshop"
-					type: "checkmark"
-				}
-			]
-			title: "Build: A shared workshop"
-			x: -6.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["189720AF195A5648"]
-			description: [
-				"Make the process repeat reliably with belts, funnels, chutes, or another appropriate Create transport method."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "create:wrench"
-			id: "5C7B5222E36E1458"
-			rewards: [
-				{
-					id: "3524373D20CFC920"
-					table_id: 1618880879207947504L
-					title: "Create Workshops Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "5196B3C6E51DD398"
-					title: "Confirm: Automate: A shared workshop"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: A shared workshop"
-			x: -4.5d
-			y: -1.75d
-		}
-		{
 			icon: "create:andesite_casing"
 			id: "790286CC030F3B89",
 			subtitle: "Requires Workshop casings; then confirm the milestone."
@@ -154,63 +98,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["5C7B5222E36E1458"]
-		}
-		{
-			dependencies: ["790286CC030F3B89"]
-			description: [
-				"Turn this Create milestone into a working workshop station with sensible input and output handling."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "create:andesite_casing"
-			id: "318B0CBB8745AFE2"
-			rewards: [
-				{
-					id: "314D0B9080513BB3"
-					table_id: 5810496629928189331L
-					title: "Create Workshops Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "3F346CEBDDDB16D7"
-					title: "Confirm: Build: Casings and conveniences"
-					type: "checkmark"
-				}
-			]
-			title: "Build: Casings and conveniences"
-			x: -1.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["318B0CBB8745AFE2"]
-			description: [
-				"Make the process repeat reliably with belts, funnels, chutes, or another appropriate Create transport method."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "create:andesite_casing"
-			id: "666FD9EAE48C97A4"
-			rewards: [
-				{
-					id: "701D599DCE42C6F8"
-					table_id: 5810496629928189331L
-					title: "Create Workshops Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "373ABC4800245B2C"
-					title: "Confirm: Automate: Casings and conveniences"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: Casings and conveniences"
-			x: 1.0d
-			y: -1.75d
+			dependencies: ["7F5A949E389973B0"]
 		}
 		{
 			icon: "minecraft:string"
@@ -257,63 +145,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["666FD9EAE48C97A4"]
-		}
-		{
-			dependencies: ["7D97DFC1BF45C254"]
-			description: [
-				"Turn this Create milestone into a working workshop station with sensible input and output handling."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:string"
-			id: "1ABA7155D0E0B854"
-			rewards: [
-				{
-					id: "34C5DB770CE4F8B9"
-					table_id: 5810496629928189331L
-					title: "Create Workshops Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "4628C9038A33B442"
-					title: "Confirm: Build: A renewable supply"
-					type: "checkmark"
-				}
-			]
-			title: "Build: A renewable supply"
-			x: 4.5d
-			y: -1.75d
-		}
-		{
-			dependencies: ["1ABA7155D0E0B854"]
-			description: [
-				"Make the process repeat reliably with belts, funnels, chutes, or another appropriate Create transport method."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:string"
-			id: "33D8F1B46CB7A0B4"
-			rewards: [
-				{
-					id: "7C2219989FFB2299"
-					table_id: 6565388913077191251L
-					title: "Create Workshops Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2A746A176FFB8229"
-					title: "Confirm: Automate: A renewable supply"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: A renewable supply"
-			x: 6.0d
-			y: -1.75d
+			dependencies: ["790286CC030F3B89"]
 		}
 		{
 			icon: "minecraft:diamond_pickaxe"
@@ -359,63 +191,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["33D8F1B46CB7A0B4"]
-		}
-		{
-			dependencies: ["73AF015A40ECDE9A"]
-			description: [
-				"Turn this Create milestone into a working workshop station with sensible input and output handling."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:diamond_pickaxe"
-			id: "333134227239BB72"
-			rewards: [
-				{
-					id: "488A63E29FFF6CC2"
-					table_id: 6565388913077191251L
-					title: "Create Workshops Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "21FA8C6AF3DEC020"
-					title: "Confirm: Build: Bulk work with care"
-					type: "checkmark"
-				}
-			]
-			title: "Build: Bulk work with care"
-			x: 4.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["333134227239BB72"]
-			description: [
-				"Make the process repeat reliably with belts, funnels, chutes, or another appropriate Create transport method."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:diamond_pickaxe"
-			id: "40CD22EFC6374005"
-			rewards: [
-				{
-					id: "604EF83A43E8DB22"
-					table_id: 6565388913077191251L
-					title: "Create Workshops Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2404F3CAFC46D015"
-					title: "Confirm: Automate: Bulk work with care"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: Bulk work with care"
-			x: 2.5d
-			y: 1.75d
+			dependencies: ["7D97DFC1BF45C254"]
 		}
 		{
 			icon: "create:brass_casing"
@@ -456,97 +232,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["40CD22EFC6374005"]
-		}
-		{
-			dependencies: ["7B876F79028477C7"]
-			description: [
-				"Turn this Create milestone into a working workshop station with sensible input and output handling."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "create:brass_casing"
-			id: "675C98F0738930E0"
-			rewards: [
-				{
-					id: "2DB44314F04E68E3"
-					table_id: 4733229007896915232L
-					title: "Create Workshops Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "638A38F3BC58E495"
-					title: "Confirm: Build: Power at scale"
-					type: "checkmark"
-				}
-			]
-			title: "Build: Power at scale"
-			x: -1.0d
-			y: 1.75d
-		}
-		{
-			dependencies: ["675C98F0738930E0"]
-			description: [
-				"Make the process repeat reliably with belts, funnels, chutes, or another appropriate Create transport method."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "create:brass_casing"
-			id: "29AF859CA08B7B34"
-			rewards: [
-				{
-					id: "099D84D9A988F271"
-					table_id: 4733229007896915232L
-					title: "Create Workshops Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "59DF734FE5773519"
-					title: "Confirm: Automate: Power at scale"
-					type: "checkmark"
-				}
-			]
-			title: "Automate: Power at scale"
-			x: -2.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["29AF859CA08B7B34"]
-			description: [
-				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
-				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
-			]
-			icon: "create:wrench"
-			id: "2336D2A437055838"
-			rewards: [
-				{
-					id: "45BE1BB9E29F5720"
-					table_id: 4733229007896915232L
-					title: "Create Workshops Tier 4 Roll"
-					type: "loot"
-				}
-				{
-					id: "7D62039E1C0E18B3"
-					table_id: 6997274803455198468L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			]
-			subtitle: "Complete every branch before claiming the chapter finale."
-			tasks: [
-				{
-					id: "78BF780FBD44E424"
-					title: "Confirm chapter mastery: Create Workshops"
-					type: "checkmark"
-				}
-			]
-			title: "Create Workshops Mastery"
-			x: -4.5d
-			y: 1.75d
+			dependencies: ["73AF015A40ECDE9A"]
 		}
 	],
 	quest_links: []

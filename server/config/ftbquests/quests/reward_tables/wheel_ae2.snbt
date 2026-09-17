@@ -17,9 +17,7 @@
 		{ item: "ae2:crafting_storage_4k", weight: 4.00f }
 		{ count: 2, item: "ae2:pattern_provider", weight: 9.00f }
 		{ count: 2, item: "ae2:molecular_assembler", weight: 9.00f }
-		{ item: "ae2:item_storage_cell_64k", weight: 6.00f }
 		{ item: "ae2:crafting_storage_16k", weight: 5.00f }
-		{ item: "ae2:controller", weight: 5.00f }
 		{ item: "ae2:quantum_ring", weight: 1.00f }
 		{ item: "ae2:quantum_link", weight: 0.35f }
 	]

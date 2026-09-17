@@ -55,62 +55,6 @@
 			]
 		}
 		{
-			dependencies: ["70C7ABF21CA802F5"]
-			description: [
-				"Turn this settlement milestone into an actual completed structure or service area rather than a pile of materials."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:oak_planks"
-			id: "664B80FE7E04C648"
-			rewards: [
-				{
-					id: "31E2415A86782A96"
-					table_id: 2102205047588045513L
-					title: "Claims and Colonies Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "5804F1A2CF2337A9"
-					title: "Confirm: Build: A place to call home"
-					type: "checkmark"
-				}
-			]
-			title: "Build: A place to call home"
-			x: -6.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["664B80FE7E04C648"]
-			description: [
-				"Assign or support the workers, villagers, colonists, or residents needed to make the new area useful."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:oak_planks"
-			id: "3D9B2ED1418B4E0C"
-			rewards: [
-				{
-					id: "385171828AFFEE53"
-					table_id: 2102205047588045513L
-					title: "Claims and Colonies Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "7A0FF015ED305118"
-					title: "Confirm: Staff: A place to call home"
-					type: "checkmark"
-				}
-			]
-			title: "Staff: A place to call home"
-			x: -4.5d
-			y: -1.75d
-		}
-		{
 			icon: "minecraft:map"
 			id: "7AF3658FEB97583B",
 			subtitle: "Requires Settlement claim map; then confirm the milestone."
@@ -154,63 +98,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["3D9B2ED1418B4E0C"]
-		}
-		{
-			dependencies: ["7AF3658FEB97583B"]
-			description: [
-				"Turn this settlement milestone into an actual completed structure or service area rather than a pile of materials."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:map"
-			id: "7FBF7A33C847DB84"
-			rewards: [
-				{
-					id: "69DBB870A2DBDE90"
-					table_id: 7873154793243079245L
-					title: "Claims and Colonies Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "316C63EE48D1CC70"
-					title: "Confirm: Build: Claim together"
-					type: "checkmark"
-				}
-			]
-			title: "Build: Claim together"
-			x: -1.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["7FBF7A33C847DB84"]
-			description: [
-				"Assign or support the workers, villagers, colonists, or residents needed to make the new area useful."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:map"
-			id: "302DA9139A9D7981"
-			rewards: [
-				{
-					id: "4CA4936C26AC5389"
-					table_id: 7873154793243079245L
-					title: "Claims and Colonies Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "720407BD381C513A"
-					title: "Confirm: Staff: Claim together"
-					type: "checkmark"
-				}
-			]
-			title: "Staff: Claim together"
-			x: 1.0d
-			y: -1.75d
+			dependencies: ["70C7ABF21CA802F5"]
 		}
 		{
 			icon: "minecraft:crafting_table"
@@ -251,63 +139,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["302DA9139A9D7981"]
-		}
-		{
-			dependencies: ["7B1372B7801FD7F7"]
-			description: [
-				"Turn this settlement milestone into an actual completed structure or service area rather than a pile of materials."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:crafting_table"
-			id: "53A57238060BD7BF"
-			rewards: [
-				{
-					id: "358478EB8773CF1C"
-					table_id: 7873154793243079245L
-					title: "Claims and Colonies Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "0600BD53E76BC3F6"
-					title: "Confirm: Build: The first builders"
-					type: "checkmark"
-				}
-			]
-			title: "Build: The first builders"
-			x: 4.5d
-			y: -1.75d
-		}
-		{
-			dependencies: ["53A57238060BD7BF"]
-			description: [
-				"Assign or support the workers, villagers, colonists, or residents needed to make the new area useful."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:crafting_table"
-			id: "7D16553D6F20DA90"
-			rewards: [
-				{
-					id: "7DF8924D20618729"
-					table_id: 6058436575497866350L
-					title: "Claims and Colonies Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "6F5E744FE313CF37"
-					title: "Confirm: Staff: The first builders"
-					type: "checkmark"
-				}
-			]
-			title: "Staff: The first builders"
-			x: 6.0d
-			y: -1.75d
+			dependencies: ["7AF3658FEB97583B"]
 		}
 		{
 			icon: "minecraft:chest"
@@ -354,63 +186,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["7D16553D6F20DA90"]
-		}
-		{
-			dependencies: ["7FDBD04CDCC2AC42"]
-			description: [
-				"Turn this settlement milestone into an actual completed structure or service area rather than a pile of materials."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:chest"
-			id: "125C33D1EEC0BEF8"
-			rewards: [
-				{
-					id: "510A744F3AFA4D1D"
-					table_id: 6058436575497866350L
-					title: "Claims and Colonies Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "28E4BBEB8F1FC358"
-					title: "Confirm: Build: From warehouse to workshop"
-					type: "checkmark"
-				}
-			]
-			title: "Build: From warehouse to workshop"
-			x: 4.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["125C33D1EEC0BEF8"]
-			description: [
-				"Assign or support the workers, villagers, colonists, or residents needed to make the new area useful."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:chest"
-			id: "100048B26DCBC5C5"
-			rewards: [
-				{
-					id: "7FDEDE60EBDAA835"
-					table_id: 6058436575497866350L
-					title: "Claims and Colonies Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "25DDF04B47765CD7"
-					title: "Confirm: Staff: From warehouse to workshop"
-					type: "checkmark"
-				}
-			]
-			title: "Staff: From warehouse to workshop"
-			x: 2.5d
-			y: 1.75d
+			dependencies: ["7B1372B7801FD7F7"]
 		}
 		{
 			icon: "minecraft:bread"
@@ -451,97 +227,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["100048B26DCBC5C5"]
-		}
-		{
-			dependencies: ["7E43AF9888FA9F2E"]
-			description: [
-				"Turn this settlement milestone into an actual completed structure or service area rather than a pile of materials."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:bread"
-			id: "43B8DA574E5214FF"
-			rewards: [
-				{
-					id: "7E6BE34DB2F8F1DE"
-					table_id: 467443591320423481L
-					title: "Claims and Colonies Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "595D5971943B6685"
-					title: "Confirm: Build: A town that feeds itself"
-					type: "checkmark"
-				}
-			]
-			title: "Build: A town that feeds itself"
-			x: -1.0d
-			y: 1.75d
-		}
-		{
-			dependencies: ["43B8DA574E5214FF"]
-			description: [
-				"Assign or support the workers, villagers, colonists, or residents needed to make the new area useful."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:bread"
-			id: "3C2E896515D43508"
-			rewards: [
-				{
-					id: "7418045FEA154574"
-					table_id: 467443591320423481L
-					title: "Claims and Colonies Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2F17F245B9EE6A4A"
-					title: "Confirm: Staff: A town that feeds itself"
-					type: "checkmark"
-				}
-			]
-			title: "Staff: A town that feeds itself"
-			x: -2.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["3C2E896515D43508"]
-			description: [
-				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
-				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
-			]
-			icon: "minecraft:oak_planks"
-			id: "56FBDF3A52DA7DD1"
-			rewards: [
-				{
-					id: "7CC465C96DCC41E2"
-					table_id: 467443591320423481L
-					title: "Claims and Colonies Tier 4 Roll"
-					type: "loot"
-				}
-				{
-					id: "726BABBFF70244AA"
-					table_id: 3724678849471961329L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			]
-			subtitle: "Complete every branch before claiming the chapter finale."
-			tasks: [
-				{
-					id: "3FD6014A18BC75B9"
-					title: "Confirm chapter mastery: Claims and Colonies"
-					type: "checkmark"
-				}
-			]
-			title: "Claims and Colonies Mastery"
-			x: -4.5d
-			y: 1.75d
+			dependencies: ["7FDBD04CDCC2AC42"]
 		}
 	],
 	quest_links: []

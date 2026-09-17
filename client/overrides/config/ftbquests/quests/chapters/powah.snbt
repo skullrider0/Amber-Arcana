@@ -330,7 +330,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["29E4600857EAA4A7" "21D2D444E7ED7292"]
+			dependencies: ["29E4600857EAA4A7", "21D2D444E7ED7292"]
 			description: ["Build a Spirited Reactor and support a serious factory load."]
 			icon: "powah:reactor_spirited"
 			id: "1A3A6F25CB72DC15"
@@ -362,7 +362,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["440EEFD11CFF000F" "1A3A6F25CB72DC15"]
+			dependencies: ["440EEFD11CFF000F", "1A3A6F25CB72DC15"]
 			description: ["Reach Nitro generation with your own progression, not just a lucky reward roll."]
 			icon: "powah:thermo_generator_nitro"
 			id: "185DDE299B4735C4"

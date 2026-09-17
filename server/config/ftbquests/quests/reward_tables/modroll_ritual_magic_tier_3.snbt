@@ -4,26 +4,14 @@
 	loot_size: 3
 	order_index: 395
 	rewards: [
-		{ item: "botania:mana_pool", weight: 14.00f }
 		{ item: "bloodmagic:altar", weight: 14.00f }
-		{ item: "botania:mana_pool", weight: 5.00f }
-		{ item: "bloodmagic:altar", weight: 5.00f }
-		{ count: 2, item: "botania:mana_pool", weight: 4.45f }
 		{ count: 2, item: "bloodmagic:altar", weight: 4.45f }
-		{ count: 3, item: "botania:mana_pool", weight: 3.90f }
 		{ count: 3, item: "bloodmagic:altar", weight: 3.90f }
-		{ count: 3, item: "botania:mana_pool", weight: 3.35f }
-		{ count: 3, item: "bloodmagic:altar", weight: 3.35f }
-		{ item: "botania:mana_pool", weight: 2.80f }
-		{ item: "bloodmagic:altar", weight: 2.80f }
-		{ count: 2, item: "botania:mana_pool", weight: 2.25f }
-		{ count: 2, item: "bloodmagic:altar", weight: 2.25f }
-		{ count: 3, item: "botania:mana_pool", weight: 1.70f }
-		{ count: 3, item: "bloodmagic:altar", weight: 1.70f }
-		{ count: 3, item: "botania:mana_pool", weight: 1.15f }
-		{ count: 3, item: "bloodmagic:altar", weight: 1.15f }
-		{ item: "botania:mana_pool", weight: 0.60f }
-		{ item: "bloodmagic:altar", weight: 0.60f }
+		{ item: "minecraft:lapis_lazuli", weight: 8.00f }
+		{ item: "minecraft:book", weight: 8.00f }
+		{ item: "minecraft:amethyst_shard", weight: 8.00f }
+		{ item: "minecraft:glowstone_dust", weight: 8.00f }
+		{ item: "minecraft:cauldron", weight: 8.00f }
 	]
 	title: "Rituals and Witchcraft — Tier 3 Roll"
 	use_title: true

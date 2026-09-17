@@ -16,16 +16,6 @@
 		{ item: "create:belt_connector", weight: 7.00f }
 		{ item: "create:depot", weight: 7.00f }
 		{ count: 8, item: "create:gearshift", weight: 11.00f }
-		{ item: "create:mechanical_press", weight: 5.00f }
-		{ item: "create:speedometer", weight: 5.00f }
-		{ item: "create:stressometer", weight: 5.00f }
-		{ item: "create:water_wheel", weight: 5.00f }
-		{ item: "create:basin", weight: 5.00f }
-		{ item: "create:encased_fan", weight: 5.00f }
-		{ item: "create:mechanical_mixer", weight: 5.00f }
-		{ item: "create:millstone", weight: 5.00f }
-		{ item: "create:belt_connector", weight: 5.00f }
-		{ item: "create:depot", weight: 5.00f }
 		{ count: 16, item: "create:gearshift", weight: 9.65f }
 		{ count: 2, item: "create:mechanical_press", weight: 4.45f }
 	]

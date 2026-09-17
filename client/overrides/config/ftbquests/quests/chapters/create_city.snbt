@@ -55,62 +55,6 @@
 			]
 		}
 		{
-			dependencies: ["761378307EDFBEE1"]
-			description: [
-				"Give this Create build a deliberate place in the city with room for maintenance and future expansion."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:rail"
-			id: "6E77FE69CECE2786"
-			rewards: [
-				{
-					id: "5B57E731F1424813"
-					table_id: 5225078345886391365L
-					title: "The Mechanical City Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2665CA73D8EA8F2E"
-					title: "Confirm: Plan: A station with character"
-					type: "checkmark"
-				}
-			]
-			title: "Plan: A station with character"
-			x: -6.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["6E77FE69CECE2786"]
-			description: [
-				"Link this milestone into the city's item, fluid, rotational-power, or railway infrastructure."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:rail"
-			id: "24C114EF9B908B95"
-			rewards: [
-				{
-					id: "1BCCA30579DF1FB2"
-					table_id: 5225078345886391365L
-					title: "The Mechanical City Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "4CEEC85AC076C153"
-					title: "Confirm: Connect: A station with character"
-					type: "checkmark"
-				}
-			]
-			title: "Connect: A station with character"
-			x: -4.5d
-			y: -1.75d
-		}
-		{
 			icon: "minecraft:bricks"
 			id: "70339CEBB0BD2F57",
 			subtitle: "Requires Industrial chimney materials; then confirm the milestone."
@@ -155,63 +99,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["24C114EF9B908B95"]
-		}
-		{
-			dependencies: ["70339CEBB0BD2F57"]
-			description: [
-				"Give this Create build a deliberate place in the city with room for maintenance and future expansion."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:bricks"
-			id: "11BA9E8BB2351DDF"
-			rewards: [
-				{
-					id: "7EC90875D330DD2C"
-					table_id: 1827004927183153090L
-					title: "The Mechanical City Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "5982099B5C899A6F"
-					title: "Confirm: Plan: Smoke on the skyline"
-					type: "checkmark"
-				}
-			]
-			title: "Plan: Smoke on the skyline"
-			x: -1.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["11BA9E8BB2351DDF"]
-			description: [
-				"Link this milestone into the city's item, fluid, rotational-power, or railway infrastructure."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:bricks"
-			id: "411AC99CD79A79B5"
-			rewards: [
-				{
-					id: "73C0089740102F5A"
-					table_id: 1827004927183153090L
-					title: "The Mechanical City Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "4EF88478CAA4821B"
-					title: "Confirm: Connect: Smoke on the skyline"
-					type: "checkmark"
-				}
-			]
-			title: "Connect: Smoke on the skyline"
-			x: 1.0d
-			y: -1.75d
+			dependencies: ["761378307EDFBEE1"]
 		}
 		{
 			icon: "minecraft:iron_ingot"
@@ -252,63 +140,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["411AC99CD79A79B5"]
-		}
-		{
-			dependencies: ["7841A29AC08B5763"]
-			description: [
-				"Give this Create build a deliberate place in the city with room for maintenance and future expansion."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:iron_ingot"
-			id: "179DBF2FCE0BDB2D"
-			rewards: [
-				{
-					id: "53B6087CFF80C391"
-					table_id: 1827004927183153090L
-					title: "The Mechanical City Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "0F3A7C6E7B77FC83"
-					title: "Confirm: Plan: Going up"
-					type: "checkmark"
-				}
-			]
-			title: "Plan: Going up"
-			x: 4.5d
-			y: -1.75d
-		}
-		{
-			dependencies: ["179DBF2FCE0BDB2D"]
-			description: [
-				"Link this milestone into the city's item, fluid, rotational-power, or railway infrastructure."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:iron_ingot"
-			id: "4D3D2CB0E0C12EA9"
-			rewards: [
-				{
-					id: "22E80D8E99905EFC"
-					table_id: 7376566359862761005L
-					title: "The Mechanical City Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2B9D975BADA5846B"
-					title: "Confirm: Connect: Going up"
-					type: "checkmark"
-				}
-			]
-			title: "Connect: Going up"
-			x: 6.0d
-			y: -1.75d
+			dependencies: ["70339CEBB0BD2F57"]
 		}
 		{
 			icon: "minecraft:note_block"
@@ -355,63 +187,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["4D3D2CB0E0C12EA9"]
-		}
-		{
-			dependencies: ["79E392E17A92926E"]
-			description: [
-				"Give this Create build a deliberate place in the city with room for maintenance and future expansion."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:note_block"
-			id: "0C156D4292CADADF"
-			rewards: [
-				{
-					id: "41549E7B50C5E387"
-					table_id: 7376566359862761005L
-					title: "The Mechanical City Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "57217AC85EB41BB0"
-					title: "Confirm: Plan: Music hall"
-					type: "checkmark"
-				}
-			]
-			title: "Plan: Music hall"
-			x: 4.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["0C156D4292CADADF"]
-			description: [
-				"Link this milestone into the city's item, fluid, rotational-power, or railway infrastructure."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:note_block"
-			id: "133EDA9B5A3AB540"
-			rewards: [
-				{
-					id: "126B1D62E2E5160F"
-					table_id: 7376566359862761005L
-					title: "The Mechanical City Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "1C9EE1A4D495E331"
-					title: "Confirm: Connect: Music hall"
-					type: "checkmark"
-				}
-			]
-			title: "Connect: Music hall"
-			x: 2.5d
-			y: 1.75d
+			dependencies: ["7841A29AC08B5763"]
 		}
 		{
 			icon: "minecraft:oak_sign"
@@ -452,97 +228,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["133EDA9B5A3AB540"]
-		}
-		{
-			dependencies: ["721E611D8E8141A3"]
-			description: [
-				"Give this Create build a deliberate place in the city with room for maintenance and future expansion."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:oak_sign"
-			id: "060E690FA8E5383C"
-			rewards: [
-				{
-					id: "3FDB74B63E326EAA"
-					table_id: 1985230044277951708L
-					title: "The Mechanical City Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "3F849A7A3076575A"
-					title: "Confirm: Plan: The finished district"
-					type: "checkmark"
-				}
-			]
-			title: "Plan: The finished district"
-			x: -1.0d
-			y: 1.75d
-		}
-		{
-			dependencies: ["060E690FA8E5383C"]
-			description: [
-				"Link this milestone into the city's item, fluid, rotational-power, or railway infrastructure."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:oak_sign"
-			id: "0126261416CA9BF0"
-			rewards: [
-				{
-					id: "4D865393E7C0DDDA"
-					table_id: 1985230044277951708L
-					title: "The Mechanical City Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "3A6FD4D5C50D6FB8"
-					title: "Confirm: Connect: The finished district"
-					type: "checkmark"
-				}
-			]
-			title: "Connect: The finished district"
-			x: -2.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["0126261416CA9BF0"]
-			description: [
-				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
-				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
-			]
-			icon: "minecraft:rail"
-			id: "28D1303D2A0EA30A"
-			rewards: [
-				{
-					id: "27352BB1D5B90FD0"
-					table_id: 1985230044277951708L
-					title: "The Mechanical City Tier 4 Roll"
-					type: "loot"
-				}
-				{
-					id: "356E400DFB1B8C4F"
-					table_id: 3516302596911888613L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			]
-			subtitle: "Complete every branch before claiming the chapter finale."
-			tasks: [
-				{
-					id: "4B46DF856C6F0125"
-					title: "Confirm chapter mastery: The Mechanical City"
-					type: "checkmark"
-				}
-			]
-			title: "The Mechanical City Mastery"
-			x: -4.5d
-			y: 1.75d
+			dependencies: ["79E392E17A92926E"]
 		}
 	],
 	quest_links: []

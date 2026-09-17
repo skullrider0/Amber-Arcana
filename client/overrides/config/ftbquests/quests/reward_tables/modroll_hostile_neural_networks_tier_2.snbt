@@ -7,6 +7,7 @@
 		{ count: 16, item: "hostilenetworks:prediction_matrix", weight: 16.00f }
 		{ count: 4, item: "hostilenetworks:overworld_prediction", weight: 10.00f }
 		{ item: "hostilenetworks:sim_chamber", weight: 2.50f }
+		{ item: "hostilenetworks:deep_learner", weight: 8.00f }
 	]
 	title: "Hostile Neural Networks — Tier 2 Roll"
 	use_title: true

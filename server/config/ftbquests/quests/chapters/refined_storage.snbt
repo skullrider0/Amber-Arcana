@@ -298,7 +298,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["2E6792C5D494F3C0" "6F10E04E6E520C5C"]
+			dependencies: ["2E6792C5D494F3C0", "6F10E04E6E520C5C"]
 			description: ["Encode processing and crafting patterns instead of crafting every intermediate by hand."]
 			icon: "refinedstorage:pattern_grid"
 			id: "42F75EA8D2175084"
@@ -394,7 +394,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["5E709105C261166A" "0FFE4556CAF47C98"]
+			dependencies: ["5E709105C261166A", "0FFE4556CAF47C98"]
 			description: ["Complete storage, machine I/O, autocrafting, and remote networking with a Network Receiver."]
 			icon: "refinedstorage:network_receiver"
 			id: "6045E2950FEFB97C"

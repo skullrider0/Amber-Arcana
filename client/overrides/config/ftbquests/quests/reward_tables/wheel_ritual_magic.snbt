@@ -4,14 +4,14 @@
 	loot_size: 5
 	order_index: 122
 	rewards: [
-		{ item: "botania:mana_pool", weight: 6.00f }
 		{ item: "bloodmagic:altar", weight: 6.00f }
-		{ count: 2, item: "botania:mana_pool", weight: 3.34f }
 		{ count: 2, item: "bloodmagic:altar", weight: 3.34f }
-		{ count: 3, item: "botania:mana_pool", weight: 2.92f }
 		{ count: 3, item: "bloodmagic:altar", weight: 2.92f }
-		{ count: 4, item: "botania:mana_pool", weight: 0.80f }
 		{ count: 4, item: "bloodmagic:altar", weight: 0.80f }
+		{ item: "minecraft:lapis_lazuli", weight: 8.00f }
+		{ item: "minecraft:book", weight: 8.00f }
+		{ item: "minecraft:amethyst_shard", weight: 8.00f }
+		{ item: "minecraft:glowstone_dust", weight: 8.00f }
 	]
 	title: "Wheel of Fortune — Rituals and Witchcraft"
 	use_title: true

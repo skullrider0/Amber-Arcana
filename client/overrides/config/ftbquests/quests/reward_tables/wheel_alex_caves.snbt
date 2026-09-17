@@ -4,30 +4,14 @@
 	loot_size: 5
 	order_index: 101
 	rewards: [
-		{ item: "create:goggles", weight: 6.00f }
-		{ item: "create:large_cogwheel", weight: 6.00f }
-		{ item: "create:shaft", weight: 6.00f }
-		{ item: "create:wrench", weight: 6.00f }
-		{ item: "create:andesite_alloy", weight: 9.00f }
-		{ item: "create:clutch", weight: 6.00f }
-		{ item: "create:gearbox", weight: 9.00f }
-		{ item: "create:gearshift", weight: 9.00f }
-		{ item: "create:mechanical_press", weight: 6.00f }
-		{ item: "create:speedometer", weight: 6.00f }
-		{ item: "create:stressometer", weight: 6.00f }
-		{ item: "create:water_wheel", weight: 6.00f }
-		{ item: "create:basin", weight: 5.25f }
-		{ item: "create:encased_fan", weight: 5.25f }
-		{ item: "create:mechanical_mixer", weight: 5.25f }
-		{ item: "create:millstone", weight: 5.25f }
-		{ item: "create:belt_connector", weight: 5.25f }
-		{ item: "create:depot", weight: 5.25f }
-		{ count: 8, item: "create:gearshift", weight: 9.00f }
-		{ count: 16, item: "create:gearshift", weight: 9.00f }
-		{ count: 2, item: "create:mechanical_press", weight: 3.34f }
-		{ count: 2, item: "create:goggles", weight: 0.80f }
-		{ count: 2, item: "create:large_cogwheel", weight: 0.80f }
-		{ count: 2, item: "create:shaft", weight: 0.80f }
+		{ item: "minecraft:golden_carrot", weight: 8.00f }
+		{ item: "minecraft:spyglass", weight: 8.00f }
+		{ item: "minecraft:water_bucket", weight: 8.00f }
+		{ item: "minecraft:glass", weight: 8.00f }
+		{ item: "minecraft:ender_pearl", weight: 8.00f }
+		{ item: "minecraft:minecart", weight: 8.00f }
+		{ item: "minecraft:brush", weight: 8.00f }
+		{ item: "minecraft:amethyst_shard", weight: 8.00f }
 	]
 	title: "Wheel of Fortune — Alex Caves"
 	use_title: true

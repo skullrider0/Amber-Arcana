@@ -1,3 +1,8 @@
+## 0.1.9-45
+- Removed generated AA35 filler milestone chains and rewired real quest dependencies.
+- Removed Create-first generic reward fallback; reward tables are now constrained by explicit chapter themes.
+- Preserved all non-filler quest IDs and synchronized client/server quest data.
+
 ## 0.1.9-44
 
 - Repair circular FTB Quests dependency paths that caused recursive `isExcludedByOtherQuestline` crashes.

@@ -7,19 +7,11 @@
 		{ item: "tconstruct:crafting_station", weight: 16.00f }
 		{ item: "tconstruct:seared_melter", weight: 16.00f }
 		{ item: "tconstruct:tinkers_anvil", weight: 16.00f }
-		{ item: "tconstruct:crafting_station", weight: 5.00f }
-		{ item: "tconstruct:seared_melter", weight: 5.00f }
-		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
 		{ count: 2, item: "tconstruct:crafting_station", weight: 4.45f }
 		{ count: 2, item: "tconstruct:seared_melter", weight: 4.45f }
 		{ count: 2, item: "tconstruct:tinkers_anvil", weight: 4.45f }
-		{ count: 2, item: "tconstruct:crafting_station", weight: 3.90f }
-		{ count: 2, item: "tconstruct:seared_melter", weight: 3.90f }
-		{ count: 2, item: "tconstruct:tinkers_anvil", weight: 3.90f }
-		{ count: 2, item: "tconstruct:crafting_station", weight: 3.35f }
-		{ count: 2, item: "tconstruct:seared_melter", weight: 3.35f }
-		{ count: 2, item: "tconstruct:tinkers_anvil", weight: 3.35f }
-		{ item: "tconstruct:crafting_station", weight: 2.80f }
+		{ item: "minecraft:redstone", weight: 8.00f }
+		{ item: "minecraft:quartz", weight: 8.00f }
 	]
 	title: "Tinkers Construct — Tier 2 Roll"
 	use_title: true

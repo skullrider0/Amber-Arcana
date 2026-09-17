@@ -13,6 +13,7 @@
 			description: ["Refine Draconium and begin Draconic Evolution's core material ladder."]
 			icon: "draconicevolution:draconium_ingot"
 			id: "728840F2BE233CA7"
+			dependencies: []
 			rewards: [
 				{
 					id: "2542D08F2A55B23C"
@@ -265,7 +266,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["78F6247B16DC0276" "781B7CC8D747FD26"]
+			dependencies: ["78F6247B16DC0276", "781B7CC8D747FD26"]
 			description: ["Upgrade the fusion system again so awakened recipes are repeatable rather than one-off crafts."]
 			icon: "draconicevolution:awakened_crafting_injector"
 			id: "3AA2702B71B775F8"
@@ -361,7 +362,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["3AA2702B71B775F8" "78564D8AD17C11FA"]
+			dependencies: ["3AA2702B71B775F8", "78564D8AD17C11FA"]
 			description: ["Reach Chaotic components through your own progression rather than relying on a reward jackpot."]
 			icon: "draconicevolution:chaotic_core"
 			id: "3F0EDFA8103184AE"
@@ -457,7 +458,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["178915C1B4D834F5" "7DCEB4A49B9F72D6"]
+			dependencies: ["178915C1B4D834F5", "7DCEB4A49B9F72D6"]
 			description: ["Complete the fusion, energy-storage, chaotic, and reactor branches and confirm the endgame Draconic workshop is operational."]
 			icon: "draconicevolution:awakened_core"
 			id: "7EE2113CA8FFD2A2"

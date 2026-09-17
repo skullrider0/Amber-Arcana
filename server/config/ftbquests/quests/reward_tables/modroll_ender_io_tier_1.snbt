@@ -7,6 +7,7 @@
 		{ count: 12, item: "enderio:grains_of_infinity", weight: 18.00f }
 		{ item: "enderio:alloy_smelter", weight: 5.00f }
 		{ item: "enderio:sag_mill", weight: 5.00f }
+		{ item: "enderio:grains_of_infinity", weight: 8.00f }
 	]
 	title: "Ender IO Connections — Tier 1 Roll"
 	use_title: true

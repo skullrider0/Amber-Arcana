@@ -10,12 +10,8 @@
 		{ item: "create:large_cogwheel", weight: 16.00f }
 		{ item: "create:shaft", weight: 16.00f }
 		{ item: "create:wrench", weight: 16.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 5.00f }
-		{ item: "create:shaft", weight: 5.00f }
-		{ item: "create:wrench", weight: 5.00f }
+		{ item: "minecraft:iron_ingot", weight: 8.00f }
+		{ item: "minecraft:wheat", weight: 8.00f }
 	]
 	title: "Food and Seasons — Tier 1 Roll"
 	use_title: true

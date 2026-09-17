@@ -20,10 +20,6 @@
 		{ item: "create:encased_fan", weight: 7.00f }
 		{ item: "create:mechanical_mixer", weight: 7.00f }
 		{ item: "create:millstone", weight: 7.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 5.00f }
-		{ item: "create:shaft", weight: 5.00f }
-		{ item: "create:wrench", weight: 5.00f }
 	]
 	title: "Firearms and Artillery — Tier 3 Roll"
 	use_title: true

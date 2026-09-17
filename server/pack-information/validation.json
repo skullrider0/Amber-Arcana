@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-44",
+  "pack_version": "0.1.9-45",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1506,20 +1506,21 @@
   "quest_cycle_hotfix_0_1_9_44": {
     "ftb_quests_version": "2001.4.14",
     "repair_strategy": "remove only dependency edges that participate in directed cycles; prefer cross-chapter/backwards edges",
-    "removed_dependency_edges": [
-      {
-        "quest_id": "6005351D64A165C3",
-        "quest_title": "Brown Shroom Bee",
-        "quest_chapter": "productive_bees.snbt",
-        "removed_dependency_id": "7A50D797B79D88A3",
-        "removed_dependency_title": "Crimson Bee",
-        "removed_dependency_chapter": "productive_bees.snbt"
-      }
-    ],
-    "removed_edge_count": 1,
+    "removed_dependency_edges": [],
+    "removed_edge_count": 0,
     "quest_ids_preserved": true,
     "world_data_modified": false,
     "client_server_quest_files_identical": true,
     "acyclic_validator": "scripts/validate-quest-graph.py"
+  },
+  "quest_curation_0_1_9_45": {
+    "aa35_filler_quests_removed": 170,
+    "remaining_quests": 334,
+    "reward_tables_rethemed": 89,
+    "unrelated_reward_entries_removed": 1080,
+    "explicit_chapter_reward_themes": 28,
+    "create_generic_fallback_removed": true,
+    "client_server_quest_files_identical": true,
+    "historical_non_filler_quest_ids_preserved": true
   }
 }

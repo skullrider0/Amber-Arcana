@@ -266,7 +266,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["5EAF458D93D049F9" "26E091D092556FB0"]
+			dependencies: ["5EAF458D93D049F9", "26E091D092556FB0"]
 			description: ["Enter the full chemical ore-processing chain with the Chemical Dissolution Chamber."]
 			icon: "mekanism:chemical_dissolution_chamber"
 			id: "44EA9A10C307DAE7"
@@ -394,7 +394,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["4A4EFCC143C10893" "7629A6E7C160C1D0"]
+			dependencies: ["4A4EFCC143C10893", "7629A6E7C160C1D0"]
 			description: ["Complete both advanced processing and atomic technology, then build the Antiprotonic Nucleosynthesizer."]
 			icon: "mekanism:antiprotonic_nucleosynthesizer"
 			id: "3A3D9EA4421B3E5F"

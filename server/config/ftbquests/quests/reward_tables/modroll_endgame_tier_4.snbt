@@ -4,30 +4,11 @@
 	loot_size: 4
 	order_index: 360
 	rewards: [
-		{ item: "create:gearshift", weight: 14.00f }
-		{ item: "create:mechanical_press", weight: 14.00f }
-		{ item: "create:speedometer", weight: 14.00f }
-		{ item: "create:stressometer", weight: 14.00f }
-		{ item: "create:water_wheel", weight: 14.00f }
-		{ item: "create:basin", weight: 14.00f }
-		{ item: "create:encased_fan", weight: 14.00f }
-		{ item: "create:mechanical_mixer", weight: 0.60f }
-		{ item: "create:millstone", weight: 0.60f }
-		{ item: "create:andesite_casing", weight: 14.00f }
-		{ item: "create:cogwheel", weight: 14.00f }
-		{ item: "create:belt_connector", weight: 7.00f }
-		{ item: "create:depot", weight: 7.00f }
-		{ count: 8, item: "create:gearshift", weight: 11.00f }
-		{ item: "create:mechanical_press", weight: 5.00f }
-		{ item: "create:speedometer", weight: 5.00f }
-		{ item: "create:stressometer", weight: 5.00f }
-		{ item: "create:water_wheel", weight: 5.00f }
-		{ item: "create:basin", weight: 5.00f }
-		{ item: "create:encased_fan", weight: 5.00f }
-		{ item: "create:mechanical_mixer", weight: 5.00f }
-		{ item: "create:millstone", weight: 5.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
+		{ item: "minecraft:iron_ingot", weight: 8.00f }
+		{ item: "minecraft:hay_block", weight: 8.00f }
+		{ item: "minecraft:lantern", weight: 8.00f }
+		{ item: "minecraft:powered_rail", weight: 8.00f }
+		{ item: "minecraft:netherite_chestplate", weight: 8.00f }
 	]
 	title: "A World Worth Building — Tier 4 Roll"
 	use_title: true

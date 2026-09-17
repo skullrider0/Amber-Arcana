@@ -18,8 +18,6 @@
 		{ item: "create:speedometer", weight: 9.00f }
 		{ item: "create:stressometer", weight: 9.00f }
 		{ item: "create:water_wheel", weight: 9.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
 	]
 	title: "Food and Seasons — Tier 2 Roll"
 	use_title: true

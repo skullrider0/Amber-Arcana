@@ -4,18 +4,13 @@
 	loot_size: 1
 	order_index: 393
 	rewards: [
-		{ item: "botania:mana_pool", weight: 16.00f }
 		{ item: "bloodmagic:altar", weight: 16.00f }
-		{ item: "botania:mana_pool", weight: 5.00f }
-		{ item: "bloodmagic:altar", weight: 5.00f }
-		{ item: "botania:mana_pool", weight: 4.45f }
-		{ item: "bloodmagic:altar", weight: 4.45f }
-		{ item: "botania:mana_pool", weight: 3.90f }
-		{ item: "bloodmagic:altar", weight: 3.90f }
-		{ item: "botania:mana_pool", weight: 3.35f }
-		{ item: "bloodmagic:altar", weight: 3.35f }
-		{ item: "botania:mana_pool", weight: 2.80f }
-		{ item: "bloodmagic:altar", weight: 2.80f }
+		{ item: "minecraft:lapis_lazuli", weight: 8.00f }
+		{ item: "minecraft:book", weight: 8.00f }
+		{ item: "minecraft:amethyst_shard", weight: 8.00f }
+		{ item: "minecraft:glowstone_dust", weight: 8.00f }
+		{ item: "minecraft:cauldron", weight: 8.00f }
+		{ item: "minecraft:golden_apple", weight: 8.00f }
 	]
 	title: "Rituals and Witchcraft — Tier 1 Roll"
 	use_title: true

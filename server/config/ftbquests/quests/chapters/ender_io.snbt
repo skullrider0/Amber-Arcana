@@ -106,7 +106,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["299C0567C1D6EB9D" "0B055F7EA958BC55"]
+			dependencies: ["299C0567C1D6EB9D", "0B055F7EA958BC55"]
 			description: ["Build an Ender IO conduit backbone that carries at least one useful factory resource."]
 			icon: "enderio:sag_mill"
 			id: "39851932267D3839"
@@ -358,7 +358,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["1D4D429181162FBC" "7502D490CA700914"]
+			dependencies: ["1D4D429181162FBC", "7502D490CA700914"]
 			description: ["Connect important factory areas with Travel Anchors and finish the infrastructure branch."]
 			icon: "enderio:travel_anchor"
 			id: "751747D22A26009A"

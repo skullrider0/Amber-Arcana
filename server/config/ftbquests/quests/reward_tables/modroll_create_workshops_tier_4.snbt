@@ -26,7 +26,6 @@
 		{ item: "create:track_signal", weight: 7.00f }
 		{ item: "create:schedule", weight: 0.60f }
 		{ item: "create:brass_casing", weight: 0.60f }
-		{ item: "create:threshold_switch", weight: 5.00f }
 		{ count: 8, item: "create:brass_ingot", weight: 11.00f }
 	]
 	title: "Create Workshops — Tier 4 Roll"

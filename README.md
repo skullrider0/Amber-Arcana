@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-44-Client.zip) · [Download Crafty Server 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-44-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-44-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Client.zip) · [Download Crafty Server 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-44 |
+| Pack | 0.1.9-45 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -156,3 +156,7 @@ Adds [Create: Easy Stone Generators 1.0.0 for Forge 1.20.1](https://www.cursefor
 
 ### 0.1.9-44 quest-cycle repair
 Repairs circular FTB Quests dependency paths that could recurse through `TeamData.isExcludedByOtherQuestline()` until the dedicated server crashed. Quest IDs and world/player data are preserved. The build now validates the complete dependency graph as acyclic before packaging.
+
+
+### 0.1.9-45 quest curation
+Removes the generated AA35 filler chains (for example Prepare/Build/Connect copies of the same milestone), reconnects the meaningful quests directly, and replaces the old Create-first generic reward fallback with explicit per-chapter reward themes. Build validation now rejects leftover AA35 filler markers and unrelated reward namespaces. Existing non-filler quest IDs and world/player data are preserved.

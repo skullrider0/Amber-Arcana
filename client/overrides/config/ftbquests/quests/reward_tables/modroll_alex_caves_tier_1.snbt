@@ -4,18 +4,14 @@
 	loot_size: 1
 	order_index: 305
 	rewards: [
-		{ item: "create:andesite_casing", weight: 16.00f }
-		{ item: "create:cogwheel", weight: 16.00f }
-		{ item: "create:goggles", weight: 16.00f }
-		{ item: "create:large_cogwheel", weight: 16.00f }
-		{ item: "create:shaft", weight: 16.00f }
-		{ item: "create:wrench", weight: 16.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 5.00f }
-		{ item: "create:shaft", weight: 5.00f }
-		{ item: "create:wrench", weight: 5.00f }
+		{ item: "minecraft:golden_carrot", weight: 8.00f }
+		{ item: "minecraft:spyglass", weight: 8.00f }
+		{ item: "minecraft:water_bucket", weight: 8.00f }
+		{ item: "minecraft:glass", weight: 8.00f }
+		{ item: "minecraft:ender_pearl", weight: 8.00f }
+		{ item: "minecraft:minecart", weight: 8.00f }
+		{ item: "minecraft:brush", weight: 8.00f }
+		{ item: "minecraft:amethyst_shard", weight: 8.00f }
 	]
 	title: "Alex Caves — Tier 1 Roll"
 	use_title: true

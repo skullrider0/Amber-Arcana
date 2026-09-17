@@ -15,7 +15,6 @@
 		{ count: 2, item: "draconicevolution:energy_pylon", weight: 5.00f }
 		{ count: 6, item: "draconicevolution:awakened_draconium_ingot", weight: 12.00f }
 		{ count: 2, item: "draconicevolution:awakened_core", weight: 10.00f }
-		{ count: 2, item: "draconicevolution:energy_pylon", weight: 8.00f }
 		{ item: "draconicevolution:chaotic_core", weight: 0.40f }
 		{ item: "draconicevolution:chaotic_crafting_injector", weight: 0.30f }
 		{ item: "draconicevolution:reactor_core", weight: 0.20f }

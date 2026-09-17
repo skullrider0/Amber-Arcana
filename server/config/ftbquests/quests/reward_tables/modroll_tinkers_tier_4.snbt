@@ -7,27 +7,12 @@
 		{ item: "tconstruct:seared_melter", weight: 14.00f }
 		{ item: "tconstruct:crafting_station", weight: 0.60f }
 		{ item: "tconstruct:tinkers_anvil", weight: 14.00f }
-		{ item: "tconstruct:seared_melter", weight: 5.00f }
-		{ item: "tconstruct:crafting_station", weight: 5.00f }
-		{ item: "tconstruct:tinkers_anvil", weight: 5.00f }
 		{ count: 2, item: "tconstruct:seared_melter", weight: 4.45f }
 		{ count: 2, item: "tconstruct:crafting_station", weight: 4.45f }
 		{ count: 2, item: "tconstruct:tinkers_anvil", weight: 4.45f }
 		{ count: 3, item: "tconstruct:seared_melter", weight: 3.90f }
 		{ count: 3, item: "tconstruct:crafting_station", weight: 3.90f }
 		{ count: 3, item: "tconstruct:tinkers_anvil", weight: 3.90f }
-		{ count: 3, item: "tconstruct:seared_melter", weight: 3.35f }
-		{ count: 3, item: "tconstruct:crafting_station", weight: 3.35f }
-		{ count: 3, item: "tconstruct:tinkers_anvil", weight: 3.35f }
-		{ item: "tconstruct:seared_melter", weight: 2.80f }
-		{ item: "tconstruct:crafting_station", weight: 2.80f }
-		{ item: "tconstruct:tinkers_anvil", weight: 2.80f }
-		{ count: 2, item: "tconstruct:seared_melter", weight: 2.25f }
-		{ count: 2, item: "tconstruct:crafting_station", weight: 2.25f }
-		{ count: 2, item: "tconstruct:tinkers_anvil", weight: 2.25f }
-		{ count: 3, item: "tconstruct:seared_melter", weight: 1.70f }
-		{ count: 3, item: "tconstruct:crafting_station", weight: 1.70f }
-		{ count: 3, item: "tconstruct:tinkers_anvil", weight: 1.70f }
 	]
 	title: "Tinkers Construct — Tier 4 Roll"
 	use_title: true

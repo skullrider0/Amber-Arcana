@@ -12,11 +12,6 @@
 		{ item: "enderio:slice_and_splice", weight: 9.00f }
 		{ item: "enderio:soul_binder", weight: 9.00f }
 		{ item: "enderio:enchanter", weight: 8.00f }
-		{ item: "enderio:vacuum_chest", weight: 7.00f }
-		{ item: "enderio:impulse_hopper", weight: 7.00f }
-		{ item: "enderio:slice_and_splice", weight: 10.00f }
-		{ item: "enderio:soul_binder", weight: 10.00f }
-		{ item: "enderio:enchanter", weight: 9.00f }
 		{ count: 2, item: "enderio:travel_anchor", weight: 6.00f }
 		{ item: "enderio:powered_spawner", weight: 0.65f }
 	]

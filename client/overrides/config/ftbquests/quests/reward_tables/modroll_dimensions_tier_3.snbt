@@ -4,26 +4,12 @@
 	loot_size: 3
 	order_index: 347
 	rewards: [
-		{ item: "create:goggles", weight: 14.00f }
-		{ item: "create:large_cogwheel", weight: 14.00f }
-		{ item: "create:shaft", weight: 14.00f }
-		{ item: "create:wrench", weight: 14.00f }
-		{ item: "create:andesite_alloy", weight: 14.00f }
-		{ item: "create:clutch", weight: 14.00f }
-		{ item: "create:gearbox", weight: 14.00f }
-		{ item: "create:gearshift", weight: 14.00f }
-		{ item: "create:mechanical_press", weight: 14.00f }
-		{ item: "create:speedometer", weight: 14.00f }
-		{ item: "create:stressometer", weight: 14.00f }
-		{ item: "create:water_wheel", weight: 14.00f }
-		{ item: "create:basin", weight: 7.00f }
-		{ item: "create:encased_fan", weight: 7.00f }
-		{ item: "create:mechanical_mixer", weight: 7.00f }
-		{ item: "create:millstone", weight: 7.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 5.00f }
-		{ item: "create:shaft", weight: 5.00f }
-		{ item: "create:wrench", weight: 5.00f }
+		{ item: "minecraft:golden_carrot", weight: 8.00f }
+		{ item: "minecraft:blaze_rod", weight: 8.00f }
+		{ item: "minecraft:echo_shard", weight: 8.00f }
+		{ item: "minecraft:ender_pearl", weight: 8.00f }
+		{ item: "minecraft:honeycomb", weight: 8.00f }
+		{ item: "minecraft:netherite_ingot", weight: 8.00f }
 	]
 	title: "Beyond the Overworld — Tier 3 Roll"
 	use_title: true

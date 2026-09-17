@@ -55,62 +55,6 @@
 			]
 		}
 		{
-			dependencies: ["4422161D0412164C"]
-			description: [
-				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:hay_block"
-			id: "3F50BD9BA18E7C70"
-			rewards: [
-				{
-					id: "2D12F5CC41E03B91"
-					table_id: 4125809826683960267L
-					title: "A World Worth Building Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "110031C20F4070EC"
-					title: "Confirm: Prepare: Seasonal estate"
-					type: "checkmark"
-				}
-			]
-			title: "Prepare: Seasonal estate"
-			x: -6.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["3F50BD9BA18E7C70"]
-			description: [
-				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:hay_block"
-			id: "27A91091FEFBA711"
-			rewards: [
-				{
-					id: "104E06F0B1A8A065"
-					table_id: 4125809826683960267L
-					title: "A World Worth Building Tier 1 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "1348693E55F44007"
-					title: "Confirm: Conquer: Seasonal estate"
-					type: "checkmark"
-				}
-			]
-			title: "Conquer: Seasonal estate"
-			x: -4.5d
-			y: -1.75d
-		}
-		{
 			icon: "minecraft:powered_rail"
 			id: "5112E3596ADFFB90",
 			subtitle: "Requires Civilization transport link; then confirm the milestone."
@@ -155,63 +99,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["27A91091FEFBA711"]
-		}
-		{
-			dependencies: ["5112E3596ADFFB90"]
-			description: [
-				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:powered_rail"
-			id: "28A67009BD924142"
-			rewards: [
-				{
-					id: "5D2B9DFCAC5B08C1"
-					table_id: 4573498009506683053L
-					title: "A World Worth Building Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "6006721363493659"
-					title: "Confirm: Prepare: Connected civilization"
-					type: "checkmark"
-				}
-			]
-			title: "Prepare: Connected civilization"
-			x: -1.0d
-			y: -1.75d
-		}
-		{
-			dependencies: ["28A67009BD924142"]
-			description: [
-				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:powered_rail"
-			id: "0499FA63742C43C6"
-			rewards: [
-				{
-					id: "2E562D4EDDBDE0A4"
-					table_id: 4573498009506683053L
-					title: "A World Worth Building Tier 2 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "4F160C0CE2FDF1BE"
-					title: "Confirm: Conquer: Connected civilization"
-					type: "checkmark"
-				}
-			]
-			title: "Conquer: Connected civilization"
-			x: 1.0d
-			y: -1.75d
+			dependencies: ["4422161D0412164C"]
 		}
 		{
 			icon: "minecraft:netherite_chestplate"
@@ -251,63 +139,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["0499FA63742C43C6"]
-		}
-		{
-			dependencies: ["2632742BFA82EB75"]
-			description: [
-				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:netherite_chestplate"
-			id: "78FF2B6ECD708F35"
-			rewards: [
-				{
-					id: "40FE5ACA0E2D8E6B"
-					table_id: 7249124095568325970L
-					title: "A World Worth Building Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "22E61BC19C3B6A63"
-					title: "Confirm: Prepare: Adventure ready"
-					type: "checkmark"
-				}
-			]
-			title: "Prepare: Adventure ready"
-			x: 4.5d
-			y: -1.75d
-		}
-		{
-			dependencies: ["78FF2B6ECD708F35"]
-			description: [
-				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:netherite_chestplate"
-			id: "0DDC7245E6CD27F4"
-			rewards: [
-				{
-					id: "2B9123AAFC59B990"
-					table_id: 7249124095568325970L
-					title: "A World Worth Building Tier 3 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "6511AAFF8665A44B"
-					title: "Confirm: Conquer: Adventure ready"
-					type: "checkmark"
-				}
-			]
-			title: "Conquer: Adventure ready"
-			x: 6.0d
-			y: -1.75d
+			dependencies: ["5112E3596ADFFB90"]
 		}
 		{
 			icon: "minecraft:emerald_block"
@@ -348,97 +180,7 @@
 					type: "checkmark"
 				}
 			],
-			dependencies: ["0DDC7245E6CD27F4"]
-		}
-		{
-			dependencies: ["1C5E1BCE0A87E013"]
-			description: [
-				"Assemble the infrastructure, equipment, and renewable supplies needed to attempt this endgame milestone repeatedly."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:emerald_block"
-			id: "7132A74DC7040308"
-			rewards: [
-				{
-					id: "0F78173B46B6207A"
-					table_id: 6545486884237050352L
-					title: "A World Worth Building Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "2389B970656C7846"
-					title: "Confirm: Prepare: The grand opening"
-					type: "checkmark"
-				}
-			]
-			title: "Prepare: The grand opening"
-			x: 4.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["7132A74DC7040308"]
-			description: [
-				"Complete the milestone in normal play and bring the resulting resources back into your main progression."
-				"Complete this hands-on milestone before advancing. AA35 deep progression milestone"
-			]
-			icon: "minecraft:emerald_block"
-			id: "240F2E0D8C37E2AC"
-			rewards: [
-				{
-					id: "1FB5F39DB7CE2063"
-					table_id: 6545486884237050352L
-					title: "A World Worth Building Tier 4 Roll"
-					type: "loot"
-				}
-			]
-			subtitle: "Hands-on progression milestone; confirm it after actually completing the described mechanic."
-			tasks: [
-				{
-					id: "1AEC9C38209CBD8E"
-					title: "Confirm: Conquer: The grand opening"
-					type: "checkmark"
-				}
-			]
-			title: "Conquer: The grand opening"
-			x: 2.5d
-			y: 1.75d
-		}
-		{
-			dependencies: ["240F2E0D8C37E2AC"]
-			description: [
-				"Finish every progression branch in this chapter, then verify the systems work together as a complete build."
-				"This is the true chapter finale and carries the Wheel of Fortune reward. AA35 deep progression milestone"
-			]
-			icon: "minecraft:hay_block"
-			id: "792C4FB4A27E5D45"
-			rewards: [
-				{
-					id: "256FD4CD10B4E604"
-					table_id: 6545486884237050352L
-					title: "A World Worth Building Tier 4 Roll"
-					type: "loot"
-				}
-				{
-					id: "5289AD830FE95666"
-					table_id: 5967421395539988631L
-					title: "Spin the Wheel of Fortune"
-					type: "loot"
-				}
-			]
-			subtitle: "Complete every branch before claiming the chapter finale."
-			tasks: [
-				{
-					id: "718B595CCB67B4C5"
-					title: "Confirm chapter mastery: A World Worth Building"
-					type: "checkmark"
-				}
-			]
-			title: "A World Worth Building Mastery"
-			x: 1.0d
-			y: 1.75d
+			dependencies: ["2632742BFA82EB75"]
 		}
 	],
 	quest_links: []

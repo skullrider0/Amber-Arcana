@@ -18,8 +18,6 @@
 		{ count: 5, item: "powah:crystal_spirited", weight: 12.00f }
 		{ count: 2, item: "powah:crystal_nitro", weight: 3.00f }
 		{ item: "powah:thermo_generator_spirited", weight: 8.00f }
-		{ item: "powah:energy_cell_spirited", weight: 8.00f }
-		{ item: "powah:reactor_spirited", weight: 6.00f }
 		{ item: "powah:thermo_generator_nitro", weight: 0.25f }
 		{ item: "powah:energy_cell_nitro", weight: 0.35f }
 		{ item: "powah:reactor_nitro", weight: 0.20f }

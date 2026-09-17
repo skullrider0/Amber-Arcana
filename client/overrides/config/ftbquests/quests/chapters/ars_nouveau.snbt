@@ -170,7 +170,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["7D3DBDF83E769F1C" "4B6DB13056E0CBC2"]
+			dependencies: ["7D3DBDF83E769F1C", "4B6DB13056E0CBC2"]
 			description: ["Upgrade to the Apprentice Spell Book and broaden your useful spell library."]
 			icon: "ars_nouveau:apprentice_spell_book"
 			id: "47E1A5F440070C39"
@@ -362,7 +362,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["47E1A5F440070C39" "20F0CC18A7856D84"]
+			dependencies: ["47E1A5F440070C39", "20F0CC18A7856D84"]
 			description: ["Reach the Archmage Spell Book and prove your Source infrastructure can support late-game magic."]
 			icon: "ars_nouveau:archmage_spell_book"
 			id: "6539A7CBB80F50F0"
@@ -394,7 +394,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["430A285ED8F49AC3" "6539A7CBB80F50F0"]
+			dependencies: ["430A285ED8F49AC3", "6539A7CBB80F50F0"]
 			description: ["Finish both the automation and high-tier spellcasting branches, then confirm the Ars workshop is fully operational."]
 			icon: "ars_nouveau:archmage_spell_book"
 			id: "12C2C4846879A818"

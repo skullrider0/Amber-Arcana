@@ -170,7 +170,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["3EDF4CAF2B04D895" "017F83F1867628E2"]
+			dependencies: ["3EDF4CAF2B04D895", "017F83F1867628E2"]
 			description: ["Build an Arcane Anvil and use it as the center of your upgrade workshop."]
 			icon: "irons_spellbooks:arcane_anvil"
 			id: "1CEDEE246BE2D2BF"
@@ -326,7 +326,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["18F75D70F9DD8AF8" "3FB1D4CC4A95EA20"]
+			dependencies: ["18F75D70F9DD8AF8", "3FB1D4CC4A95EA20"]
 			description: ["Reach a Netherite Spell Book and build a genuinely late-game spell loadout."]
 			icon: "irons_spellbooks:netherite_spell_book"
 			id: "24A9320752D0796A"

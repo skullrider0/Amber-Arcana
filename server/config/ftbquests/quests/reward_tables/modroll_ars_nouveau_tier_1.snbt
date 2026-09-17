@@ -7,6 +7,7 @@
 		{ count: 8, item: "ars_nouveau:source_gem", weight: 18.00f }
 		{ item: "ars_nouveau:novice_spell_book", weight: 5.00f }
 		{ item: "ars_nouveau:imbuement_chamber", weight: 5.00f }
+		{ item: "ars_nouveau:source_jar", weight: 8.00f }
 	]
 	title: "Ars Nouveau — Tier 1 Roll"
 	use_title: true

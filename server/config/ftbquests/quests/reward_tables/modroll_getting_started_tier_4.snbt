@@ -4,30 +4,14 @@
 	loot_size: 4
 	order_index: 372
 	rewards: [
-		{ item: "create:andesite_casing", weight: 14.00f }
-		{ item: "create:cogwheel", weight: 14.00f }
-		{ item: "create:goggles", weight: 14.00f }
-		{ item: "create:large_cogwheel", weight: 0.60f }
-		{ item: "create:shaft", weight: 0.60f }
 		{ item: "sophisticatedbackpacks:backpack", weight: 14.00f }
-		{ item: "create:andesite_casing", weight: 5.00f }
-		{ item: "create:cogwheel", weight: 5.00f }
-		{ item: "create:goggles", weight: 5.00f }
-		{ item: "create:large_cogwheel", weight: 5.00f }
-		{ item: "create:shaft", weight: 5.00f }
-		{ item: "sophisticatedbackpacks:backpack", weight: 5.00f }
-		{ count: 2, item: "create:andesite_casing", weight: 4.45f }
-		{ count: 2, item: "create:cogwheel", weight: 4.45f }
-		{ count: 2, item: "create:goggles", weight: 4.45f }
-		{ count: 2, item: "create:large_cogwheel", weight: 4.45f }
-		{ count: 2, item: "create:shaft", weight: 4.45f }
 		{ count: 2, item: "sophisticatedbackpacks:backpack", weight: 4.45f }
-		{ count: 3, item: "create:andesite_casing", weight: 3.90f }
-		{ count: 3, item: "create:cogwheel", weight: 3.90f }
-		{ count: 3, item: "create:goggles", weight: 3.90f }
-		{ count: 3, item: "create:large_cogwheel", weight: 3.90f }
-		{ count: 3, item: "create:shaft", weight: 3.90f }
 		{ count: 3, item: "sophisticatedbackpacks:backpack", weight: 3.90f }
+		{ item: "minecraft:torch", weight: 8.00f }
+		{ item: "minecraft:bread", weight: 8.00f }
+		{ item: "minecraft:crafting_table", weight: 8.00f }
+		{ item: "minecraft:white_bed", weight: 8.00f }
+		{ item: "minecraft:iron_ingot", weight: 8.00f }
 	]
 	title: "Getting Started — Tier 4 Roll"
 	use_title: true

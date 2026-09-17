@@ -10,9 +10,7 @@
 	quest_links: []
 	quests: [
 		{
-			dependencies: [
-				"5DF5A47BBDCD9172"
-			]
+			dependencies: ["5DF5A47BBDCD9172"]
 			description: [
 				"Make Andesite Alloy, the foundation material for early Create machines."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -42,9 +40,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"608BC3FA0634EC69"
-			]
+			dependencies: ["608BC3FA0634EC69"]
 			description: [
 				"Craft Engineer's Goggles and a Wrench so you can inspect stress and reconfigure machines."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -80,9 +76,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: [
-				"608BC3FA0634EC69"
-			]
+			dependencies: ["608BC3FA0634EC69"]
 			description: [
 				"Make Andesite Casing. Many first-tier kinetic machines build on this casing."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -112,9 +106,7 @@
 			y: -2.25d
 		}
 		{
-			dependencies: [
-				"608BC3FA0634EC69"
-			]
+			dependencies: ["608BC3FA0634EC69"]
 			description: [
 				"Build shafts and both cogwheel sizes so rotation can be routed and geared."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -156,10 +148,7 @@
 			y: 0.25d
 		}
 		{
-			dependencies: [
-				"610EA78EE7E7870A"
-				"2FBD653159D95FCE"
-			]
+			dependencies: ["610EA78EE7E7870A", "2FBD653159D95FCE"]
 			description: [
 				"Add direction control, disconnects, and gauges before expanding the workshop."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -213,10 +202,7 @@
 			y: -0.25d
 		}
 		{
-			dependencies: [
-				"3A29EDDDBF83025C"
-				"610EA78EE7E7870A"
-			]
+			dependencies: ["3A29EDDDBF83025C", "610EA78EE7E7870A"]
 			description: [
 				"Build renewable rotational power and prove it by running a Mechanical Press."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -263,9 +249,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"1ED63F4805934997"
-			]
+			dependencies: ["1ED63F4805934997"]
 			description: [
 				"Add a Millstone for early crushing and material preparation."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -295,9 +279,7 @@
 			y: 0.75d
 		}
 		{
-			dependencies: [
-				"1ED63F4805934997"
-			]
+			dependencies: ["1ED63F4805934997"]
 			description: [
 				"Build a Mechanical Mixer over a Basin. This setup later becomes essential for heated alloy recipes."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -333,9 +315,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"1ED63F4805934997"
-			]
+			dependencies: ["1ED63F4805934997"]
 			description: [
 				"Build an Encased Fan and learn washing, smoking, blasting, and bulk processing."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -365,10 +345,7 @@
 			y: -3.25d
 		}
 		{
-			dependencies: [
-				"1ED63F4805934997"
-				"595195FF6989BEE6"
-			]
+			dependencies: ["1ED63F4805934997", "595195FF6989BEE6"]
 			description: [
 				"Build a belt, depot, and funnel line so items can move through multiple machines automatically."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -428,10 +405,7 @@
 			y: -2.5d
 		}
 		{
-			dependencies: [
-				"1ED63F4805934997"
-				"3A29EDDDBF83025C"
-			]
+			dependencies: ["1ED63F4805934997", "3A29EDDDBF83025C"]
 			description: [
 				"Add Mechanical Saws and Drills for automated cutting, mining, and contraption work."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -467,10 +441,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"3A29EDDDBF83025C"
-				"1ED63F4805934997"
-			]
+			dependencies: ["3A29EDDDBF83025C", "1ED63F4805934997"]
 			description: [
 				"Build fluid pipes and a Mechanical Pump. Fluids become a second automation network alongside belts."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -506,9 +477,7 @@
 			y: 3.25d
 		}
 		{
-			dependencies: [
-				"00D86AC29BA3ACE1"
-			]
+			dependencies: ["00D86AC29BA3ACE1"]
 			description: [
 				"Build Fluid Tanks and Copper Casing for reliable fluid buffering and later steam systems."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -551,10 +520,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"1072269CE5C9CEC2"
-				"49A0DF8BF8B13288"
-			]
+			dependencies: ["1072269CE5C9CEC2", "49A0DF8BF8B13288"]
 			description: [
 				"Use an Item Drain and Spout to move fluids between items, tanks, and production lines."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -597,9 +563,7 @@
 			y: -1.25d
 		}
 		{
-			dependencies: [
-				"1072269CE5C9CEC2"
-			]
+			dependencies: ["1072269CE5C9CEC2"]
 			description: [
 				"Build a Hose Pulley for large-scale fluid intake and bottomless-source setups."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -636,10 +600,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"4FFE8F8DE3727308"
-				"610EA78EE7E7870A"
-			]
+			dependencies: ["4FFE8F8DE3727308", "610EA78EE7E7870A"]
 			description: [
 				"Build pistons, bearings, and Super Glue so structures can become controlled contraptions."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -688,9 +649,7 @@
 			y: -1.25d
 		}
 		{
-			dependencies: [
-				"1A4FD9AEBC1D9757"
-			]
+			dependencies: ["1A4FD9AEBC1D9757"]
 			description: [
 				"Add Rope Pulleys and Gantries for elevators, traversing platforms, and precise linear motion."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -739,10 +698,7 @@
 			y: -2.5d
 		}
 		{
-			dependencies: [
-				"6981B2DD5FA8DE25"
-				"49A0DF8BF8B13288"
-			]
+			dependencies: ["6981B2DD5FA8DE25", "49A0DF8BF8B13288"]
 			description: [
 				"Give moving contraptions safe item transfer, docking detection, and onboard controls."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -791,9 +747,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"1ED63F4805934997"
-			]
+			dependencies: ["1ED63F4805934997"]
 			description: [
 				"Produce Polished Rose Quartz and Electron Tubes to open the redstone and brass-era control tier."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -829,9 +783,7 @@
 			y: -0.75d
 		}
 		{
-			dependencies: [
-				"770C779E7B0F237E"
-			]
+			dependencies: ["770C779E7B0F237E"]
 			description: [
 				"Capture a Blaze in an empty burner and place it beneath the Basin for heated mixing."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -868,10 +820,7 @@
 			y: 0.25d
 		}
 		{
-			dependencies: [
-				"770C779E7B0F237E"
-				"3F2D4E15AD18B1D9"
-			]
+			dependencies: ["770C779E7B0F237E", "3F2D4E15AD18B1D9"]
 			description: [
 				"Heat a Basin and mix Copper with Zinc to make Brass, unlocking advanced automation."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -908,9 +857,7 @@
 			y: 0.25d
 		}
 		{
-			dependencies: [
-				"218CB2C4A4033742"
-			]
+			dependencies: ["218CB2C4A4033742"]
 			description: [
 				"Make Brass Casing for advanced logistics and automation machines."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -947,11 +894,7 @@
 			y: -0.25d
 		}
 		{
-			dependencies: [
-				"34BBF086E9BF3249"
-				"0BD9FD8ABD2A9892"
-				"49A0DF8BF8B13288"
-			]
+			dependencies: ["34BBF086E9BF3249", "0BD9FD8ABD2A9892", "49A0DF8BF8B13288"]
 			description: [
 				"Build Brass Funnels, Brass Tunnels, and Smart Chutes for filtered routing and controlled extraction."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1000,11 +943,7 @@
 			y: -2.5d
 		}
 		{
-			dependencies: [
-				"34BBF086E9BF3249"
-				"0BD9FD8ABD2A9892"
-				"49A0DF8BF8B13288"
-			]
+			dependencies: ["34BBF086E9BF3249", "0BD9FD8ABD2A9892", "49A0DF8BF8B13288"]
 			description: [
 				"Build a Deployer. It applies items during sequenced assembly."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1041,11 +980,7 @@
 			y: -1.25d
 		}
 		{
-			dependencies: [
-				"3D2FFBF87CC326AB"
-				"49A0DF8BF8B13288"
-				"1ED63F4805934997"
-			]
+			dependencies: ["3D2FFBF87CC326AB", "49A0DF8BF8B13288", "1ED63F4805934997"]
 			description: [
 				"Complete a sequenced assembly loop and produce a Precision Mechanism."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1093,10 +1028,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"2B415B8CDDC3ACFF"
-				"12CE2A569C691122"
-			]
+			dependencies: ["2B415B8CDDC3ACFF", "12CE2A569C691122"]
 			description: [
 				"Build a Mechanical Arm for programmable routing between depots, belts, and inventories."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1133,10 +1065,7 @@
 			y: -2.5d
 		}
 		{
-			dependencies: [
-				"2B415B8CDDC3ACFF"
-				"0BD9FD8ABD2A9892"
-			]
+			dependencies: ["2B415B8CDDC3ACFF", "0BD9FD8ABD2A9892"]
 			description: [
 				"Build Mechanical Crafters for recipes larger than the vanilla 3x3 crafting grid."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1173,9 +1102,7 @@
 			y: 0.25d
 		}
 		{
-			dependencies: [
-				"361E63B76C700DAB"
-			]
+			dependencies: ["361E63B76C700DAB"]
 			description: [
 				"Use Mechanical Crafters to make Crushing Wheels and unlock heavy crushing recipes."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1212,10 +1139,7 @@
 			y: -0.25d
 		}
 		{
-			dependencies: [
-				"1C9DEF3B834DD4FA"
-				"1ED63F4805934997"
-			]
+			dependencies: ["1C9DEF3B834DD4FA", "1ED63F4805934997"]
 			description: [
 				"Refine obsidian into Sturdy Sheets, a gateway material for railway infrastructure."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1252,10 +1176,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"0BD9FD8ABD2A9892"
-				"34BBF086E9BF3249"
-			]
+			dependencies: ["0BD9FD8ABD2A9892", "34BBF086E9BF3249"]
 			description: [
 				"Add wireless redstone links and inventory sensors so the factory can react to its own state."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1304,10 +1225,7 @@
 			y: 0.25d
 		}
 		{
-			dependencies: [
-				"7CFD5CC7EA5F966A"
-				"12CE2A569C691122"
-			]
+			dependencies: ["7CFD5CC7EA5F966A", "12CE2A569C691122"]
 			description: [
 				"Package inventory requests and route addressed packages through a Frogport."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1350,9 +1268,7 @@
 			y: -0.25d
 		}
 		{
-			dependencies: [
-				"466CBEE02DF382A0"
-			]
+			dependencies: ["466CBEE02DF382A0"]
 			description: [
 				"Add a Re-Packager so multi-package orders can be recombined before delivery."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1389,10 +1305,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"756FF78F1E96E06C"
-				"20AE3680C462C12B"
-			]
+			dependencies: ["756FF78F1E96E06C", "20AE3680C462C12B"]
 			description: [
 				"Build a Stock Link, Stock Ticker, and Factory Gauge to turn storage into a requestable logistics network."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1441,9 +1354,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"2B415B8CDDC3ACFF"
-			]
+			dependencies: ["2B415B8CDDC3ACFF"]
 			description: [
 				"Capture a build with the Schematic and Quill, then let a Schematicannon reproduce it from supplied materials."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1486,11 +1397,7 @@
 			y: -1.25d
 		}
 		{
-			dependencies: [
-				"1072269CE5C9CEC2"
-				"3F2D4E15AD18B1D9"
-				"34BBF086E9BF3249"
-			]
+			dependencies: ["1072269CE5C9CEC2", "3F2D4E15AD18B1D9", "34BBF086E9BF3249"]
 			description: [
 				"Build a stable Steam Engine with continuous water, controllable heat, and an emergency disconnect."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1538,10 +1445,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"0DB51B42E51225C2"
-				"34BBF086E9BF3249"
-			]
+			dependencies: ["0DB51B42E51225C2", "34BBF086E9BF3249"]
 			description: [
 				"Make Railway Casing, the advanced casing tier used by train infrastructure."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1578,9 +1482,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"539D5F23C0D545BB"
-			]
+			dependencies: ["539D5F23C0D545BB"]
 			description: [
 				"Craft Create Train Track and lay a usable route with room for stations and signaling."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1617,10 +1519,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"133516C48E9E7B2D"
-				"2B415B8CDDC3ACFF"
-			]
+			dependencies: ["133516C48E9E7B2D", "2B415B8CDDC3ACFF"]
 			description: [
 				"Build a Track Station and assemble a train on the route."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1668,9 +1567,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"42BD2E092F753492"
-			]
+			dependencies: ["42BD2E092F753492"]
 			description: [
 				"Add Track Signals and Track Observers so multiple trains can share a network safely."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1713,9 +1610,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"7646A43C2BA83B44"
-			]
+			dependencies: ["7646A43C2BA83B44"]
 			description: [
 				"Create a Train Schedule and complete an automatic trip between stations."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."
@@ -1752,15 +1647,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"798F3CA8756AA484"
-				"6D024877BCAF46C6"
-				"6A19120000000401"
-				"3FEDFBEBCD18E0E9"
-				"1C9DEF3B834DD4FA"
-				"69DB67E9CDE38925"
-				"3341B0A25D5F455B"
-			]
+			dependencies: ["798F3CA8756AA484", "6D024877BCAF46C6", "6A19120000000401", "3FEDFBEBCD18E0E9", "1C9DEF3B834DD4FA", "69DB67E9CDE38925", "3341B0A25D5F455B"]
 			description: [
 				"Bring power, processing, fluids, contraptions, logistics, and rail automation into one maintainable factory."
 				"Progression is inventory-detected; dependencies show the setup that should be completed first."

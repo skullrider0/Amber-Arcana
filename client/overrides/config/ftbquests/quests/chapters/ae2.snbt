@@ -138,7 +138,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["202AB678B4860D69" "7FC05BEDC5D8D1FB"]
+			dependencies: ["202AB678B4860D69", "7FC05BEDC5D8D1FB"]
 			description: ["Build an ME Drive so storage becomes a real network instead of a collection of chests."]
 			icon: "ae2:drive"
 			id: "2B5CC0DDAF0E909D"
@@ -234,7 +234,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["1969A1CDFECB4BFD" "1AC5F82BEC89B53C"]
+			dependencies: ["1969A1CDFECB4BFD", "1AC5F82BEC89B53C"]
 			description: ["Graduate to an ME Controller and organize channel usage before the network grows out of control."]
 			icon: "ae2:controller"
 			id: "1A5EA4CA70B9FA82"
@@ -330,7 +330,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["0B542AC7B25BACFF" "721582683E5BC188"]
+			dependencies: ["0B542AC7B25BACFF", "721582683E5BC188"]
 			description: ["Build crafting CPU storage and successfully request a non-trivial autocrafting job."]
 			icon: "ae2:crafting_storage_4k"
 			id: "0145AF8FF59E9D92"

@@ -15,6 +15,7 @@
 				"Concrete equipment tasks complete automatically when the item is in your inventory."
 			]
 			id: "177F72880C5107F2"
+			dependencies: []
 			rewards: [
 			{
 				id: "0BA21C6FB2E10463"
@@ -35,9 +36,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"177F72880C5107F2"
-			]
+			dependencies: ["177F72880C5107F2"]
 			description: [
 				"Build an Advanced Beehive. This is the core home for productive bees and accepts upgrades."
 				"Concrete equipment tasks complete automatically when the item is in your inventory."
@@ -63,9 +62,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"7D5007A61260310D"
-			]
+			dependencies: ["7D5007A61260310D"]
 			description: [
 				"Add an Expansion Box to increase your Advanced Beehive capacity and unlock upgrade slots."
 				"Concrete equipment tasks complete automatically when the item is in your inventory."
@@ -91,9 +88,7 @@
 			y: -2.75d
 		}
 		{
-			dependencies: [
-				"7A36EC5466FE7041"
-			]
+			dependencies: ["7A36EC5466FE7041"]
 			description: [
 				"Craft a Feeder so enclosed bees can reach the flowering block or item they need."
 				"Concrete equipment tasks complete automatically when the item is in your inventory."
@@ -119,9 +114,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"2DA0552EBC0005C5"
-			]
+			dependencies: ["2DA0552EBC0005C5"]
 			description: [
 				"Craft a Centrifuge to process combs into their useful resources."
 				"Concrete equipment tasks complete automatically when the item is in your inventory."
@@ -147,9 +140,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"65998F28033FF463"
-			]
+			dependencies: ["65998F28033FF463"]
 			description: [
 				"Craft a Breeding Chamber for controlled bee breeding. The family tree below follows Productive Bees' real 12.6.0 recipes."
 				"Concrete equipment tasks complete automatically when the item is in your inventory."
@@ -175,9 +166,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -219,9 +208,7 @@
 			y: -3.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -263,9 +250,7 @@
 			y: -2.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -307,9 +292,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -345,9 +328,7 @@
 			y: 0.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -389,9 +370,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -427,9 +406,7 @@
 			y: 2.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -465,9 +442,7 @@
 			y: 4.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -510,9 +485,7 @@
 			y: -4.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -547,9 +520,7 @@
 			y: -6.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -584,9 +555,7 @@
 			y: -7.5d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -621,9 +590,7 @@
 			y: -8.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -659,9 +626,7 @@
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -696,9 +661,7 @@
 			y: 6.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -740,9 +703,7 @@
 			y: 8.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -777,9 +738,7 @@
 			y: -3.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -814,9 +773,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -851,9 +808,7 @@
 			y: -0.5d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -889,9 +844,7 @@
 			y: 0.75d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -927,9 +880,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -972,9 +923,7 @@
 			y: 3.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -1009,9 +958,7 @@
 			y: 9.25d
 		}
 		{
-			dependencies: [
-				"7FBA14E9A2FB1F75"
-			]
+			dependencies: ["7FBA14E9A2FB1F75"]
 			description: [
 				"This is a base/source bee for the generated progression tree. Find or obtain it in-world, capture it with a Bee Cage. Carrying the filled cage completes this milestone automatically."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -1046,10 +993,7 @@
 			y: 4.25d
 		}
 		{
-			dependencies: [
-				"3F92C3512B5F97C9"
-				"6B4B00FC275F861A"
-			]
+			dependencies: ["3F92C3512B5F97C9", "6B4B00FC275F861A"]
 			description: [
 				"Breed Crystalline Bee + Ender Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1092,10 +1036,7 @@
 			y: 7.25d
 		}
 		{
-			dependencies: [
-				"4B65854B2BD10531"
-				"2F1424762A8F0C36"
-			]
+			dependencies: ["4B65854B2BD10531", "2F1424762A8F0C36"]
 			description: [
 				"Breed Magmatic Bee + Leafcutter Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1138,9 +1079,7 @@
 			y: 8.25d
 		}
 		{
-			dependencies: [
-				"2026DA9C41DA710B"
-			]
+			dependencies: ["2026DA9C41DA710B"]
 			description: [
 				"Convert Honey Bee using minecraft:hopper."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -1182,9 +1121,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"2026DA9C41DA710B"
-			]
+			dependencies: ["2026DA9C41DA710B"]
 			description: [
 				"Convert Honey Bee using minecraft:tnt."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -1226,9 +1163,7 @@
 			y: 1.25d
 		}
 		{
-			dependencies: [
-				"526C5450E8F4AE8D"
-			]
+			dependencies: ["526C5450E8F4AE8D"]
 			description: [
 				"Convert Sweat Bee using #productivebees:flowers/frozen."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1271,10 +1206,7 @@
 			y: 6.5d
 		}
 		{
-			dependencies: [
-				"056ECF6A08C8E603"
-				"5EAFBDDE7721A637"
-			]
+			dependencies: ["056ECF6A08C8E603", "5EAFBDDE7721A637"]
 			description: [
 				"Breed Yellow Black Carpenter Bee + Green Carpenter Bee."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -1316,10 +1248,7 @@
 			y: -5.0d
 		}
 		{
-			dependencies: [
-				"4B65854B2BD10531"
-				"526C5450E8F4AE8D"
-			]
+			dependencies: ["4B65854B2BD10531", "526C5450E8F4AE8D"]
 			description: [
 				"Breed Magmatic Bee + Sweat Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1362,10 +1291,7 @@
 			y: -3.75d
 		}
 		{
-			dependencies: [
-				"4CF19695DD0E4EC7"
-				"619BAE9DB0A556B7"
-			]
+			dependencies: ["4CF19695DD0E4EC7", "619BAE9DB0A556B7"]
 			description: [
 				"Breed Sugarbag Bee + Neon Cuckoo Bee."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -1408,10 +1334,7 @@
 			y: 3.5d
 		}
 		{
-			dependencies: [
-				"42D92091C18D2331"
-				"43C95F5483367362"
-			]
+			dependencies: ["42D92091C18D2331", "43C95F5483367362"]
 			description: [
 				"Breed Chocolate Mining Bee + Digger Bee."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -1453,9 +1376,7 @@
 			y: -8.25d
 		}
 		{
-			dependencies: [
-				"43C95F5483367362"
-			]
+			dependencies: ["43C95F5483367362"]
 			description: [
 				"Convert Digger Bee using minecraft:sculk."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1498,10 +1419,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"0C1F68F3B6546B65"
-				"57E2378B69F198BD"
-			]
+			dependencies: ["0C1F68F3B6546B65", "57E2378B69F198BD"]
 			description: [
 				"Breed Reed Bee + Resin Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1544,9 +1462,7 @@
 			y: -6.5d
 		}
 		{
-			dependencies: [
-				"7DACCF0A2D1DD744"
-			]
+			dependencies: ["7DACCF0A2D1DD744"]
 			description: [
 				"Convert Skeletal Bee using minecraft:wither_rose."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1589,10 +1505,7 @@
 			y: 4.75d
 		}
 		{
-			dependencies: [
-				"4B65854B2BD10531"
-				"342FFAE8F9B9FA3C"
-			]
+			dependencies: ["4B65854B2BD10531", "342FFAE8F9B9FA3C"]
 			description: [
 				"Breed Magmatic Bee + Nomad Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1635,10 +1548,7 @@
 			y: 9.75d
 		}
 		{
-			dependencies: [
-				"1152510412441866"
-				"42D92091C18D2331"
-			]
+			dependencies: ["1152510412441866", "42D92091C18D2331"]
 			description: [
 				"Breed Glowing Bee + Chocolate Mining Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1681,9 +1591,7 @@
 			y: -9.75d
 		}
 		{
-			dependencies: [
-				"2F1424762A8F0C36"
-			]
+			dependencies: ["2F1424762A8F0C36"]
 			description: [
 				"Convert Leafcutter Bee using minecraft:water_bucket."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1726,9 +1634,7 @@
 			y: 2.5d
 		}
 		{
-			dependencies: [
-				"3F92C3512B5F97C9"
-			]
+			dependencies: ["3F92C3512B5F97C9"]
 			description: [
 				"Convert Crystalline Bee using mysticalagriculture:prosperity_block."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1771,9 +1677,7 @@
 			y: -7.0d
 		}
 		{
-			dependencies: [
-				"7D87C5B260AED842"
-			]
+			dependencies: ["7D87C5B260AED842"]
 			description: [
 				"Convert Ghostly Bee using mysticalagriculture:soulium_dagger."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1816,10 +1720,7 @@
 			y: -2.75d
 		}
 		{
-			dependencies: [
-				"3F92C3512B5F97C9"
-				"7CA5218E42FB8DAC"
-			]
+			dependencies: ["3F92C3512B5F97C9", "7CA5218E42FB8DAC"]
 			description: [
 				"Breed Crystalline Bee + Ashy Mining Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1862,10 +1763,7 @@
 			y: -4.25d
 		}
 		{
-			dependencies: [
-				"3F92C3512B5F97C9"
-				"4EBCEFE4F7B23BEB"
-			]
+			dependencies: ["3F92C3512B5F97C9", "4EBCEFE4F7B23BEB"]
 			description: [
 				"Breed Crystalline Bee + Mason Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1908,10 +1806,7 @@
 			y: -1.25d
 		}
 		{
-			dependencies: [
-				"3F92C3512B5F97C9"
-				"7CA5218E42FB8DAC"
-			]
+			dependencies: ["3F92C3512B5F97C9", "7CA5218E42FB8DAC"]
 			description: [
 				"Breed Crystalline Bee + Ashy Mining Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1954,9 +1849,7 @@
 			y: -5.75d
 		}
 		{
-			dependencies: [
-				"2F7CCBFCEADB3B24"
-			]
+			dependencies: ["2F7CCBFCEADB3B24"]
 			description: [
 				"Convert Spacial Bee using ae2:fluix_pearl."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -1999,9 +1892,7 @@
 			y: 1.75d
 		}
 		{
-			dependencies: [
-				"46276164CC949922"
-			]
+			dependencies: ["46276164CC949922"]
 			description: [
 				"Convert Collector Bee using minecraft:shulker_shell."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -2043,10 +1934,7 @@
 			y: -7.5d
 		}
 		{
-			dependencies: [
-				"61D328AAF1784864"
-				"526C5450E8F4AE8D"
-			]
+			dependencies: ["61D328AAF1784864", "526C5450E8F4AE8D"]
 			description: [
 				"Breed Lumber Bee + Sweat Bee."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -2088,10 +1976,7 @@
 			y: -6.0d
 		}
 		{
-			dependencies: [
-				"6A4DBBE176DFF28D"
-				"79202CE48FE50A0F"
-			]
+			dependencies: ["6A4DBBE176DFF28D", "79202CE48FE50A0F"]
 			description: [
 				"Breed Redstone Bee + Blue Banded Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2134,9 +2019,7 @@
 			y: -0.75d
 		}
 		{
-			dependencies: [
-				"6EABC7F1250D5E58"
-			]
+			dependencies: ["6EABC7F1250D5E58"]
 			description: [
 				"Convert Coal Bee using #forge:storage_blocks/graphite."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2179,10 +2062,7 @@
 			y: -4.5d
 		}
 		{
-			dependencies: [
-				"3F92C3512B5F97C9"
-				"5B25A50D02B325FB"
-			]
+			dependencies: ["3F92C3512B5F97C9", "5B25A50D02B325FB"]
 			description: [
 				"Breed Crystalline Bee + Iron Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2225,9 +2105,7 @@
 			y: -2.25d
 		}
 		{
-			dependencies: [
-				"6005351D64A165C3"
-			]
+			dependencies: ["6005351D64A165C3"]
 			description: [
 				"Convert Brown Shroom Bee using minecraft:crimson_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2263,10 +2141,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"0ADDABA00FCB2397"
-				"7DACCF0A2D1DD744"
-			]
+			dependencies: ["0ADDABA00FCB2397", "7DACCF0A2D1DD744"]
 			description: [
 				"Breed Lapis Bee + Skeletal Bee."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -2308,10 +2183,7 @@
 			y: 1.75d
 		}
 		{
-			dependencies: [
-				"61D328AAF1784864"
-				"20FD547357EEC025"
-			]
+			dependencies: ["61D328AAF1784864", "20FD547357EEC025"]
 			description: [
 				"Breed Lumber Bee + Rancher Bee."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -2353,10 +2225,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"6B4B00FC275F861A"
-				"0ADDABA00FCB2397"
-			]
+			dependencies: ["6B4B00FC275F861A", "0ADDABA00FCB2397"]
 			description: [
 				"Breed Ender Bee + Lapis Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2435,9 +2304,7 @@
 			y: -0.5d
 		}
 		{
-			dependencies: [
-				"10417A69C94B12D1"
-			]
+			dependencies: ["10417A69C94B12D1"]
 			description: [
 				"Convert Diamond Bee using byg:emeraldite_shards."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2480,10 +2347,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: [
-				"10BB1EC86492BD2C"
-				"20FD547357EEC025"
-			]
+			dependencies: ["10BB1EC86492BD2C", "20FD547357EEC025"]
 			description: [
 				"Breed Farmer Bee + Rancher Bee."
 				"Completion is automatic: capture this exact bee species in a Bee Cage and carry the filled cage."
@@ -2525,9 +2389,7 @@
 			y: 1.75d
 		}
 		{
-			dependencies: [
-				"10417A69C94B12D1"
-			]
+			dependencies: ["10417A69C94B12D1"]
 			description: [
 				"Convert Diamond Bee using forbidden_arcanus:arcane_crystal_block."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2570,9 +2432,7 @@
 			y: -2.25d
 		}
 		{
-			dependencies: [
-				"10417A69C94B12D1"
-			]
+			dependencies: ["10417A69C94B12D1"]
 			description: [
 				"Convert Diamond Bee using #productivebees:flowers/amethyst."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2615,10 +2475,7 @@
 			y: -3.5d
 		}
 		{
-			dependencies: [
-				"10417A69C94B12D1"
-				"6FA41BD276303A81"
-			]
+			dependencies: ["10417A69C94B12D1", "6FA41BD276303A81"]
 			description: [
 				"Breed Diamond Bee + Slimy Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2661,9 +2518,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"10417A69C94B12D1"
-			]
+			dependencies: ["10417A69C94B12D1"]
 			description: [
 				"Convert Diamond Bee using minecraft:netherite_block."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2706,9 +2561,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"6005351D64A165C3"
-			]
+			dependencies: ["6005351D64A165C3"]
 			description: [
 				"Convert Brown Shroom Bee using minecraft:red_mushroom. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2744,9 +2597,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"6005351D64A165C3"
-			]
+			dependencies: ["6005351D64A165C3"]
 			description: [
 				"Convert Brown Shroom Bee using minecraft:warped_fungus. JEI may show 2 additional valid route(s); this tree uses one canonical path so dependencies stay readable."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2782,10 +2633,7 @@
 			y: 1.25d
 		}
 		{
-			dependencies: [
-				"10417A69C94B12D1"
-				"385F958EB4D439D5"
-			]
+			dependencies: ["10417A69C94B12D1", "385F958EB4D439D5"]
 			description: [
 				"Breed Diamond Bee + Emeraldite Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2828,10 +2676,7 @@
 			y: -2.25d
 		}
 		{
-			dependencies: [
-				"0F0AD7FA64DE14FD"
-				"0ADDABA00FCB2397"
-			]
+			dependencies: ["0F0AD7FA64DE14FD", "0ADDABA00FCB2397"]
 			description: [
 				"Breed Emerald Bee + Lapis Bee."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2874,9 +2719,7 @@
 			y: 1.75d
 		}
 		{
-			dependencies: [
-				"422B95C6EEDD698F"
-			]
+			dependencies: ["422B95C6EEDD698F"]
 			description: [
 				"Convert Arcane Crystal Bee using forbidden_arcanus:rune_block."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2919,9 +2762,7 @@
 			y: -3.5d
 		}
 		{
-			dependencies: [
-				"3DA90B121030AB0B"
-			]
+			dependencies: ["3DA90B121030AB0B"]
 			description: [
 				"Convert Netherite Bee using irons_spellbooks:arcane_debris."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -2964,9 +2805,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"0B72FC5108C640D1"
-			]
+			dependencies: ["0B72FC5108C640D1"]
 			description: [
 				"Convert Experience Bee using create_enchantment_industry:hyper_experience_bottle."
 				"Completion is automatic: carry at least one honeycomb produced by this exact bee species."
@@ -3009,9 +2848,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"4C1A01600E6D076E"
-			]
+			dependencies: ["4C1A01600E6D076E"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3042,9 +2879,7 @@
 			y: -2.25d
 		}
 		{
-			dependencies: [
-				"53DA80858B647296"
-			]
+			dependencies: ["53DA80858B647296"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3075,21 +2910,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"6EABC7F1250D5E58"
-				"73CEFBEB7DE11263"
-				"68DF5E1FE7D5D74E"
-				"33C0B0E43C5157AD"
-				"0B72FC5108C640D1"
-				"598838C461F36E3C"
-				"17E3628FA4A7579C"
-				"5C4F94615076E2BE"
-				"5835CABC8B4D9350"
-				"2AA140944E68B69E"
-				"32E8B8380F6A69A4"
-				"4B7E7A6AB520F1E9"
-				"32CC500F17E90473"
-			]
+			dependencies: ["6EABC7F1250D5E58", "73CEFBEB7DE11263", "68DF5E1FE7D5D74E", "33C0B0E43C5157AD", "0B72FC5108C640D1", "598838C461F36E3C", "17E3628FA4A7579C", "5C4F94615076E2BE", "5835CABC8B4D9350", "2AA140944E68B69E", "32E8B8380F6A69A4", "4B7E7A6AB520F1E9", "32CC500F17E90473"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3120,9 +2941,7 @@
 			y: 1.75d
 		}
 		{
-			dependencies: [
-				"70DBBB3F39EB6189"
-			]
+			dependencies: ["70DBBB3F39EB6189"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3153,10 +2972,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"166F1D90A3E1E911"
-				"6A4DBBE176DFF28D"
-			]
+			dependencies: ["166F1D90A3E1E911", "6A4DBBE176DFF28D"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3187,9 +3003,7 @@
 			y: 7.75d
 		}
 		{
-			dependencies: [
-				"242DC0DA7AABB905"
-			]
+			dependencies: ["242DC0DA7AABB905"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3220,9 +3034,7 @@
 			y: -8.75d
 		}
 		{
-			dependencies: [
-				"454BFDDE6E5E9090"
-			]
+			dependencies: ["454BFDDE6E5E9090"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3253,10 +3065,7 @@
 			y: -3.25d
 		}
 		{
-			dependencies: [
-				"6F69F3F342134A25"
-				"0F0AD7FA64DE14FD"
-			]
+			dependencies: ["6F69F3F342134A25", "0F0AD7FA64DE14FD"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3287,9 +3096,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: [
-				"495688E68D4EBCB5"
-			]
+			dependencies: ["495688E68D4EBCB5"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3320,10 +3127,7 @@
 			y: -0.75d
 		}
 		{
-			dependencies: [
-				"7E48BBB3F52FDFF6"
-				"0EF7F9A2AF075CEF"
-			]
+			dependencies: ["7E48BBB3F52FDFF6", "0EF7F9A2AF075CEF"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3354,12 +3158,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"3EAAD348EE5C2975"
-				"5BBC7594632E8376"
-				"5B25A50D02B325FB"
-				"3DA90B121030AB0B"
-			]
+			dependencies: ["3EAAD348EE5C2975", "5BBC7594632E8376", "5B25A50D02B325FB", "3DA90B121030AB0B"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3390,9 +3189,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"2745BE8D68940BD5"
-			]
+			dependencies: ["2745BE8D68940BD5"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3423,9 +3220,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"107CBC2547D8C777"
-			]
+			dependencies: ["107CBC2547D8C777"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3456,10 +3251,7 @@
 			y: -3.5d
 		}
 		{
-			dependencies: [
-				"2A90A750D426D213"
-				"3916A827D38BB1F7"
-			]
+			dependencies: ["2A90A750D426D213", "3916A827D38BB1F7"]
 			description: [
 				"Complete the terminal bee milestones in this branch, then confirm the branch completion."
 			]
@@ -3483,22 +3275,7 @@
 			y: -0.5d
 		}
 		{
-			dependencies: [
-				"1CD9850780E859D2"
-				"03D67F8CC8B4F889"
-				"521728AFA7EB9216"
-				"159211CC66567AF8"
-				"4BA61A7C921610DB"
-				"1943C9A98641A97B"
-				"3886604EB0795A78"
-				"1D2D7FBF10821713"
-				"1DB4154922943330"
-				"0BDCE8132846C188"
-				"31921B707200EE76"
-				"5EED8C3E56DB4622"
-				"66F5756DD0AAB009"
-				"04F30F3834A0ED83"
-			]
+			dependencies: ["1CD9850780E859D2", "03D67F8CC8B4F889", "521728AFA7EB9216", "159211CC66567AF8", "4BA61A7C921610DB", "1943C9A98641A97B", "3886604EB0795A78", "1D2D7FBF10821713", "1DB4154922943330", "0BDCE8132846C188", "31921B707200EE76", "5EED8C3E56DB4622", "66F5756DD0AAB009", "04F30F3834A0ED83"]
 			description: [
 				"Finish every generated bee branch and confirm this milestone."
 				"Your finale includes a server-authoritative weighted Wheel of Fortune bonus roll."
@@ -3529,9 +3306,7 @@
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"5B25A50D02B325FB"
-			]
+			dependencies: ["5B25A50D02B325FB"]
 			description: ["Convert a Iron Bee with Just Dire Things Goo Block Tier 1. Pollinate the Ferricore Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "47E44A8F18917EDA"
 			rewards: [{ id: "4BA20CEAC532C407", type: "loot", table_id: 218928896428061217L, title: "Productive Bees Tier 1 Roll" }]
@@ -3549,9 +3324,7 @@
 			y: 12.75d
 		}
 		{
-			dependencies: [
-				"5BBC7594632E8376"
-			]
+			dependencies: ["5BBC7594632E8376"]
 			description: ["Convert a Gold Bee with Just Dire Things Goo Block Tier 2. Pollinate the Blazegold Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "2F06F75CB0A570CF"
 			rewards: [{ id: "0C099AFE902A4E43", type: "loot", table_id: 1670262659890598805L, title: "Productive Bees Tier 2 Roll" }]
@@ -3569,9 +3342,7 @@
 			y: 12.75d
 		}
 		{
-			dependencies: [
-				"10417A69C94B12D1"
-			]
+			dependencies: ["10417A69C94B12D1"]
 			description: ["Convert a Diamond Bee with Just Dire Things Goo Block Tier 3. Pollinate the Celestigem Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "220A994D1B14600B"
 			rewards: [{ id: "5138373189299542", type: "loot", table_id: 552062804773480542L, title: "Productive Bees Tier 3 Roll" }]
@@ -3589,9 +3360,7 @@
 			y: 12.75d
 		}
 		{
-			dependencies: [
-				"3DA90B121030AB0B"
-			]
+			dependencies: ["3DA90B121030AB0B"]
 			description: ["Convert a Netherite Bee with Just Dire Things Goo Block Tier 4. Pollinate the Eclipse Alloy Block, then centrifuge its typed comb." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "53E937448B3357A0"
 			rewards: [{ id: "3935903A43820B5E", type: "loot", table_id: 5161076012058801558L, title: "Productive Bees Tier 4 Roll" }]
@@ -3609,10 +3378,7 @@
 			y: 12.75d
 		}
 		{
-			dependencies: [
-				"220A994D1B14600B"
-				"53E937448B3357A0"
-			]
+			dependencies: ["220A994D1B14600B", "53E937448B3357A0"]
 			description: ["Craft the Time Crystal Bee spawn egg in JEI using Celestigem, Eclipse Alloy, Sculk and Draconic bee eggs, Time Crystal Blocks and a Time Fluid Bucket. Pollinate a Time Crystal Block." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "3CA10B6DC618FB53"
 			rewards: [{ id: "1824C722A641F5B3", type: "loot", table_id: 5161076012058801558L, title: "Productive Bees Tier 4 Roll" }]
@@ -3630,9 +3396,7 @@
 			y: 12.75d
 		}
 		{
-			dependencies: [
-				"7D5007A61260310D"
-			]
+			dependencies: ["7D5007A61260310D"]
 			description: ["Attract a Draconic Bee into an Obsidian Nest in the End with Dragon Breath. Use an advanced hive or Dragon Egg Hive to obtain its comb. JEI shows the nest attraction recipe." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "4BE950EB0334DB1A"
 			rewards: [{ id: "2A25CFA9515082E3", type: "loot", table_id: 1670262659890598805L, title: "Productive Bees Tier 2 Roll" }]
@@ -3650,9 +3414,7 @@
 			y: 14.75d
 		}
 		{
-			dependencies: [
-				"4BE950EB0334DB1A"
-			]
+			dependencies: ["4BE950EB0334DB1A"]
 			description: ["Use Draconic Evolution Fusion Crafting to upgrade the previous bee spawn egg. Search the typed spawn egg in JEI: these are fusion recipes, not bee breeding recipes. Pollinate Draconium Blocks." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "004AF7A09DB0C41C"
 			rewards: [{ id: "4CA8F658FED716D4", type: "loot", table_id: 1670262659890598805L, title: "Productive Bees Tier 2 Roll" }]
@@ -3670,9 +3432,7 @@
 			y: 14.75d
 		}
 		{
-			dependencies: [
-				"004AF7A09DB0C41C"
-			]
+			dependencies: ["004AF7A09DB0C41C"]
 			description: ["Use Draconic Evolution Fusion Crafting to upgrade the previous bee spawn egg. Search the typed spawn egg in JEI: these are fusion recipes, not bee breeding recipes. Pollinate Awakened Draconium Blocks." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "582AE3D2DFB1C911"
 			rewards: [{ id: "6FED62E1E6F86846", type: "loot", table_id: 552062804773480542L, title: "Productive Bees Tier 3 Roll" }]
@@ -3690,9 +3450,7 @@
 			y: 14.75d
 		}
 		{
-			dependencies: [
-				"582AE3D2DFB1C911"
-			]
+			dependencies: ["582AE3D2DFB1C911"]
 			description: ["Use Draconic Evolution Fusion Crafting to upgrade the previous bee spawn egg. Search the typed spawn egg in JEI: these are fusion recipes, not bee breeding recipes. Supply a Chaos Shard as the flowering item." "Carry this species' honeycomb to complete automatically. Existing bee progress is preserved."]
 			id: "701BBAF009D08482"
 			rewards: [{ id: "4026A6D40A188502", type: "loot", table_id: 5161076012058801558L, title: "Productive Bees Tier 4 Roll" }]
