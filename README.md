@@ -4,19 +4,21 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Client.zip) · [Download Crafty Server 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-46](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Client.zip) · [Download Crafty Server 0.1.9-46](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-45 |
+| Pack | 0.1.9-46 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
 | Client manifest entries | 291 + 1 local patched JAR |
 | Server managed mod entries | 271 |
 | Quests | 504 across 28 chapters |
+
+Release 0.1.9-46 ships More Hitboxes 1.9.2.2 as an identical local JAR on client and server. The Crafty downloader manifest contains no More Hitboxes row, fixing the `Unexpected CurseForge file ID: 0` startup failure while preserving the Fossils dependency.
 
 Release 0.1.9-25 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
 
@@ -38,17 +40,17 @@ The More Hitboxes patch changes only the expensive global `Level` entity-query b
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-44-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
+Import `dist/Amber-and-Arcana-0.1.9-46-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
 
 ### Fresh Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-44-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-46-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a complete server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 
 ### Existing Crafty server
 
-Stop the server and extract `dist/Amber-and-Arcana-0.1.9-44-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
+Stop the server and extract `dist/Amber-and-Arcana-0.1.9-46-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
 
 For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-44.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
 

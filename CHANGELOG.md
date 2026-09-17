@@ -1,3 +1,9 @@
+## 0.1.9-46
+- Upgrade the bundled Amber More Hitboxes performance patch to 1.9.2.2 on both client and server.
+- Remove More Hitboxes from `server/_crafty/server-mods.tsv`; the patched JAR is local and must not be treated as CurseForge file ID 0.
+- Preserve the Fossils dependency and official client mixin/refmap while removing the Spark-identified global typed entity-query hotspot.
+- Publish matching client/server ZIPs and a world-safe Crafty update overlay. Runtime Fossils hitbox and Spark re-test is still required.
+
 ## 0.1.9-45
 - Removed generated AA35 filler milestone chains and rewired real quest dependencies.
 - Removed Create-first generic reward fallback; reward tables are now constrained by explicit chapter themes.
