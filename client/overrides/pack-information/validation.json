@@ -1,5 +1,5 @@
 {
-  "mod_files": 282,
+  "mod_files": 283,
   "shader_files": 1,
   "chapters": 25,
   "manual_quests": 106,
@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-46",
+  "pack_version": "0.1.9-47",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -193,6 +193,19 @@
     "create_vampirism_blood_feeding_enabled": false,
     "client_update_required": true,
     "server_update_required": true,
+    "world_data_touched": false
+  },
+  "vampirism_tinker_dependency_fix_0_1_9_47": {
+    "missing_dependency_fixed": true,
+    "dependency_mod_id": "tcondiadema",
+    "required_by": "vampirismtinker",
+    "minimum_version": "1.5",
+    "project_id": 1218668,
+    "file_id": 6862342,
+    "filename": "Tinkers Domain-1.9fix.jar",
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
     "world_data_touched": false
   }
 }

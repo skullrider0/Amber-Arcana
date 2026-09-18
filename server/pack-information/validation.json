@@ -1,5 +1,5 @@
 {
-  "mod_files": 282,
+  "mod_files": 283,
   "shader_files": 1,
   "chapters": 28,
   "manual_quests": 495,
@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-46",
+  "pack_version": "0.1.9-47",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1570,6 +1570,19 @@
     "create_vampirism_blood_feeding_enabled": false,
     "client_update_required": true,
     "server_update_required": true,
+    "world_data_touched": false
+  },
+  "vampirism_tinker_dependency_fix_0_1_9_47": {
+    "missing_dependency_fixed": true,
+    "dependency_mod_id": "tcondiadema",
+    "required_by": "vampirismtinker",
+    "minimum_version": "1.5",
+    "project_id": 1218668,
+    "file_id": 6862342,
+    "filename": "Tinkers Domain-1.9fix.jar",
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
     "world_data_touched": false
   }
 }

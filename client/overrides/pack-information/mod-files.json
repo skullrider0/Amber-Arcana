@@ -4563,6 +4563,22 @@
     ]
   },
   {
+    "slug": "tcondiadema",
+    "name": "Tinker's Domain",
+    "projectID": 1218668,
+    "fileID": 6862342,
+    "filename": "Tinkers Domain-1.9fix.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/tcondiadema/files/6862342",
+    "sha512": "",
+    "mods": [
+      {
+        "id": "tcondiadema",
+        "version": "1.9"
+      }
+    ],
+    "bundled_mods": []
+  },
+  {
     "slug": "tinkers-construct",
     "name": "Tinkers' Construct",
     "projectID": 74072,

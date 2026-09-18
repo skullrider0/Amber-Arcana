@@ -4,18 +4,18 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-46](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Client.zip) · [Download Crafty Server 0.1.9-46](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-47](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-47-Client.zip) · [Download Crafty Server 0.1.9-47](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-47-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-47-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-46 |
+| Pack | 0.1.9-47 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
-| Client manifest entries | 297 + 1 local patched JAR |
-| Server managed mod entries | 277 |
+| Client manifest entries | 298 + 1 local patched JAR |
+| Server managed mod entries | 278 |
 | Quests | 334 across 28 chapters |
 
 Release 0.1.9-25 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
@@ -164,3 +164,7 @@ Removes the generated AA35 filler chains (for example Prepare/Build/Connect copi
 
 ### 0.1.9-46 Vampirism expansion
 Adds seven Forge 1.20.1 Vampirism addons without changing FTB Quest progression: Vampirism Iron's Spells Compatibility, Vampire's Delight, Vampiric Ageing, Werewolves, Vampirism Tinker, Create Vampirism, and Vampirism Umbrella Curios Support. Iron Chests is removed from client/server packaging and existing Crafty installs delete ironchest-1.20.1-14.4.4.jar on the next launcher start. Create Vampirism's WIP Blood Feeding feature is not enabled.
+
+
+### 0.1.9-47 Vampirism Tinker dependency fix
+Adds Tinker's Domain (tcondiadema) 1.9fix, required by Vampirism Tinker 1.6. No quests or world/player data are changed.

@@ -72,6 +72,14 @@
 
 # Changelog
 
+## 0.1.9-47 — Vampirism Tinker dependency fix
+
+- Add Tinker's Domain / tcondiadema (CurseForge 1218668:6862342, Tinkers Domain-1.9fix.jar).
+- Fix dedicated-server startup: Vampirism Tinker 1.6 requires tcondiadema 1.5 or newer.
+- Add the dependency to both client and Crafty managed server lists.
+- Preserve the seven Vampirism addons, Iron Chests removal, More Hitboxes/performance fixes, and existing quests.
+- No world/player data is included in the update overlay.
+
 ## 0.1.9-46 — Vampirism addon expansion and Iron Chests removal
 
 - Add Vampirism Iron's Spells Compatibility 0.0.9 (1350048:8525675).
