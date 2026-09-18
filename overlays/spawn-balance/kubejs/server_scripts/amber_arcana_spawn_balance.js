@@ -4,7 +4,12 @@
 // Goals:
 // - Reduce normal mob spawn attempts by 50%.
 // - Reduce Vampirism natural spawn attempts by an additional 50%.
-//   Net vampire acceptance rate ~= 25% of current behavior.
+//   Net vampire acceptance rate ~= 25% of unpatched behavior.
+// - Reduce Ice & Fire natural spawn attempts by an additional 70%.
+//   Net Ice & Fire acceptance rate ~= 15% of unpatched behavior.
+//   This explicitly includes iceandfire:pixie.
+// - Reduce Untamed Wilds natural spawn attempts by an additional 50%.
+//   Net Untamed Wilds acceptance rate ~= 25% of unpatched behavior.
 // - Completely disable Mekanism Additions baby mobs.
 // - Leave mob spawners, breeding, commands, summons, and existing mobs alone.
 //
@@ -51,11 +56,26 @@ EntityEvents.checkSpawn(event => {
     return
   }
 
-  // Second layer: halve Vampirism again.
-  // Combined with the global layer, ~25% of current vampire spawn attempts pass.
+  // Ice & Fire: remove another 70% of attempts that survived the global layer.
+  // 50% global pass rate * 30% Ice & Fire pass rate = ~15% of unpatched throughput.
+  // iceandfire:pixie is intentionally included here.
+  if (id.startsWith('iceandfire:') && Math.random() < 0.70) {
+    event.cancel()
+    return
+  }
+
+  // Untamed Wilds: halve surviving natural spawns again.
+  // Combined with the global layer, ~25% of unpatched attempts pass.
+  if (id.startsWith('untamedwilds:') && Math.random() < 0.50) {
+    event.cancel()
+    return
+  }
+
+  // Vampirism: halve surviving natural spawns again.
+  // Combined with the global layer, ~25% of unpatched attempts pass.
   if (id.startsWith('vampirism:') && Math.random() < 0.50) {
     event.cancel()
   }
 })
 
-console.info('[Amber & Arcana] Spawn balance patch loaded: global natural spawns -50%, Vampirism additional -50%, Mekanism babies disabled.')
+console.info('[Amber & Arcana] Spawn balance patch loaded: global -50%, Ice & Fire additional -70% (pixies included), Untamed Wilds additional -50%, Vampirism additional -50%, Mekanism babies disabled.')
