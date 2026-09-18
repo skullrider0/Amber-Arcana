@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-49](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-49-Client.zip) · [Download Crafty Server 0.1.9-49](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-49-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-49-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-50](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-50-Client.zip) · [Download Crafty Server 0.1.9-50](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-50-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-50-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-49 |
+| Pack | 0.1.9-50 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -176,3 +176,6 @@ Removes Vampirism Tinker 1.6 because it crashes Forge dedicated servers by loadi
 
 ### 0.1.9-49 performance mod cleanup
 Removes Mowzie's Mobs and Untamed Wilds from client and server after the latest Spark performance pass. Existing Crafty installs delete mowziesmobs-1.8.2.jar and untamedwilds-1.20.1-4.0.4.jar on the next launcher start. Quest progression and world/player data are unchanged.
+
+### 0.1.9-50 More Hitboxes query-cache performance patch
+Upgrades Amber's local More Hitboxes patch to 1.9.2.2. The Forge typed-entity-query hook now snapshots only More Hitboxes-owned multipart pieces once per level tick instead of rescanning every Forge PartEntity on every query. This keeps Fossils multipart hitboxes while preventing unrelated multipart mobs such as Ice & Fire dragons from multiplying normal mob-AI query cost. Client mixins/refmap remain based on the official More Hitboxes 1.9.2 JAR. World/player data and quest progression are unchanged.

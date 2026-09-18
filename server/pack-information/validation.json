@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-49",
+  "pack_version": "0.1.9-50",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1611,5 +1611,20 @@
     "server_update_required": true,
     "quest_progression_changed": false,
     "world_data_touched": false
+  },
+  "more_hitboxes_query_cache_0_1_9_50": {
+    "enabled": true,
+    "upstream_morehitboxes_version": "1.9.2",
+    "amber_patch_version": "1.9.2.2",
+    "jar": "morehitboxes-forge-1.20.1-1.9.2.2.jar",
+    "sha512": "6af428fb3b2db530c163f34550f3dd6868c75f666b73d26c19a0ede247fa20272f5434b16f2003e713c2f65360f61bc56d1d42d2f14d44754ee2e1a50ed9dc91",
+    "optimization": "Cache the MoreHitboxes-only Forge PartEntity subset once per level tick before typed entity queries",
+    "unrelated_part_entities_excluded_from_hot_loop": true,
+    "fossils_dependency_preserved": true,
+    "client_mixin_and_refmap_preserved_from_official_1_9_2": true,
+    "client_update_required": true,
+    "server_update_required": true,
+    "world_data_touched": false,
+    "runtime_spark_retest_required": true
   }
 }

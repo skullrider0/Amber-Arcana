@@ -1,3 +1,14 @@
+## 0.1.9-50 — More Hitboxes query-cache performance patch
+
+- Upgrade the local More Hitboxes patch from 1.9.2.1 to 1.9.2.2.
+- Cache only More Hitboxes-owned Forge multipart pieces once per level tick for typed entity queries.
+- Stop unrelated Forge PartEntity collections, including Ice & Fire multipart entities, from being rescanned by every More Hitboxes typed query.
+- Preserve Fossils and Archeology Revival's required More Hitboxes dependency and multipart hit behavior.
+- Preserve the official More Hitboxes 1.9.2 client MinecraftMixin and refmap.
+- Preserve the existing unchanged-position multipart update optimization.
+- Add stale-JAR cleanup for 1.9.2.1 on existing Crafty servers.
+- No quest, world, or player data changes.
+
 ## 0.1.9-45
 - Removed generated AA35 filler milestone chains and rewired real quest dependencies.
 - Removed Create-first generic reward fallback; reward tables are now constrained by explicit chapter themes.
