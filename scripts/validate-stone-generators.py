@@ -17,8 +17,9 @@ assert pins==[{'projectID':1206505,'fileID':6224618,'required':True}]
 text=(ROOT/'server/_crafty/server-mods.tsv').read_text()
 rows=[l.split('\t') for l in text.splitlines() if l and not l.startswith('#')]
 assert [r for r in rows if r[5]=='1206505']==[['6224618',JAR,HASH,'create-stone-generators','Create: Easy Stone Generators','1206505']]
-assert len(rows)==271
-assert len(manifest['files'])==291
+summary=json.loads((ROOT/'server/_crafty/build-summary.json').read_text())
+assert len(rows)==summary['server_mod_downloads']
+assert len(manifest['files'])==summary['manifest_entries']
 assert any(r[1]=='create-1.20.1-6.0.8.jar' and r[5]=='328085' for r in rows)
 assert JAR not in (ROOT/'server/_crafty/remove-mods.txt').read_text()
 with zipfile.ZipFile(ROOT/f'dist/Amber-and-Arcana-{VERSION}-Client.zip') as z:
