@@ -78,6 +78,9 @@ python3 "$repo_dir/scripts/hotfix-vampirism-tinker-dependency-0.1.9-47.py"
 # 0.1.9-48 removes Vampirism Tinker 1.6 from the pack.
 python3 "$repo_dir/scripts/hotfix-vampirism-tinker-server-fix-0.1.9-48.py"
 
+# 0.1.9-49 removes Mowzie\'s Mobs and Untamed Wilds after Spark profiling.
+python3 "$repo_dir/scripts/hotfix-performance-mod-cleanup-0.1.9-49.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 
