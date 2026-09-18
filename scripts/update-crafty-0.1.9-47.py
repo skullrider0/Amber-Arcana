@@ -30,25 +30,25 @@ def ensure_stopped(root, proc=Path('/proc')):
             continue
         try:
             raw=(p/'cmdline').read_bytes()
-            executable=raw.split(b'\0',1)[0].decode(errors='replace')
-            if not Path(executable).name.startswith('java'):
-                continue
-            cmd=raw.replace(b'\0',b' ').decode(errors='replace')
+        except (FileNotFoundError, PermissionError):
+            continue
+        executable=raw.split(b'\0',1)[0].decode(errors='replace')
+        if not Path(executable).name.startswith('java'):
+            continue
+        cmd=raw.replace(b'\0',b' ').decode(errors='replace')
+        try:
             cwd=(p/'cwd').resolve(strict=True)
         except FileNotFoundError:
             continue
         except PermissionError:
             # Some Docker/Unraid procfs configurations deny /proc/<pid>/cwd
-            # even to UID 0 inside the container. We already have cmdline;
-            # if it explicitly references this server, still block the update.
-            try:
-                cmd = raw.replace(b'\\0', b' ').decode(errors='replace')
-            except Exception:
-                continue
-            if 'java' in cmd.lower() and (str(root) in cmd or 'AmberArcana-Crafty-Launcher.jar' in cmd):
+            # even to UID 0 inside the container. If cmdline explicitly names
+            # this server or launcher, still treat it as running; otherwise
+            # skip that protected, unrelated Java process.
+            if str(root) in cmd or 'AmberArcana-Crafty-Launcher.jar' in cmd:
                 raise RuntimeError(f'Server Java process {p.name} is still running. Stop Amber & Arcana in Crafty first.')
             continue
-        if 'java' in cmd.lower() and (cwd == root or root in cwd.parents or str(root) in cmd):
+        if cwd == root or root in cwd.parents or str(root) in cmd:
             raise RuntimeError(f'Server Java process {p.name} is still running. Stop Amber & Arcana in Crafty first.')
 
 
