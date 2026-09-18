@@ -35,7 +35,7 @@ jobs:
             *) echo "Expected canonical quest source with 26 pre-0.1.9-38 chapters or 28 post-0.1.9-38 chapters; found $client_chapters" >&2; exit 1 ;;
           esac
           jar='morehitboxes-forge-1.20.1-1.9.2.1.jar'
-          source="vendor/morehitboxes/1.9.2.1/$jar"
+          source="vendor/morehitboxes/1.9.2.2/$jar"
           test -f "$source"
           mkdir -p client/overrides/mods server/mods
           cp "$source" "client/overrides/mods/$jar"
