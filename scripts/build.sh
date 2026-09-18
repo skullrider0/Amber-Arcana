@@ -72,6 +72,9 @@ python3 "$repo_dir/scripts/validate-quest-graph.py"
 # changing FTB Quest progression. Existing worlds are never packaged here.
 python3 "$repo_dir/scripts/hotfix-vampirism-expansion-0.1.9-46.py"
 
+# 0.1.9-47 adds Tinker's Domain, the required tcondiadema dependency for Vampirism Tinker 1.6.
+python3 "$repo_dir/scripts/hotfix-vampirism-tinker-dependency-0.1.9-47.py"
+
 bash "$repo_dir/scripts/build-launcher.sh"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
