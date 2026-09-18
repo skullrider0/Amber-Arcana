@@ -67,3 +67,6 @@ vampirismtinker-1.6.jar
 # Removed in Amber & Arcana 0.1.9-49 for server performance.
 mowziesmobs-1.8.2.jar
 untamedwilds-1.20.1-4.0.4.jar
+
+# Replaced by Amber MoreHitboxes 1.9.2.3 spatial performance beta.
+morehitboxes-forge-1.20.1-1.9.2.2.jar
