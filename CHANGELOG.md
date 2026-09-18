@@ -72,6 +72,14 @@
 
 # Changelog
 
+## 0.1.9-49 — Performance mod cleanup
+
+- Remove Mowzie's Mobs from client and server.
+- Remove Untamed Wilds from client and server.
+- Add stale-JAR cleanup for mowziesmobs-1.8.2.jar and untamedwilds-1.20.1-4.0.4.jar on existing Crafty installs.
+- Preserve the More Hitboxes Fossils compatibility patch and all existing quest progression.
+- No world/player data is included in the update overlay.
+
 ## 0.1.9-48 — Vampirism Tinker dedicated-server compatibility fix
 
 - Remove Vampirism Tinker 1.6 from client and server.
