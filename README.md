@@ -50,7 +50,7 @@ Back up an existing world before replacing a complete server package. Removed co
 
 Stop the server and extract `dist/Amber-and-Arcana-0.1.9-44-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
 
-For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-44.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
+For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-49.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
 
 ## Quest runtime status — 2026-09-15
 
@@ -147,7 +147,7 @@ Adds Polymorph plus AE2/Refined Storage integrations so conflicting recipes can 
 
 
 ### 0.1.9-42 bee integrations
-Adds five Just Dire Things resource bees and nine bee quests. The full update overlay now includes KubeJS data/assets and release metadata, required for existing servers to receive recipes. See [bee integration notes](docs/bee-integrations-0.1.9-42.md) and [the stopped-server updater](scripts/update-crafty-0.1.9-44.py). Cobblegen Galore and Tiny Soldiers have no compatible 1.20.1 Forge release and are not added.
+Adds five Just Dire Things resource bees and nine bee quests. The full update overlay now includes KubeJS data/assets and release metadata, required for existing servers to receive recipes. See [bee integration notes](docs/bee-integrations-0.1.9-42.md) and [the stopped-server updater](scripts/update-crafty-0.1.9-49.py). Cobblegen Galore and Tiny Soldiers have no compatible 1.20.1 Forge release and are not added.
 
 
 ### 0.1.9-43 stone generators
