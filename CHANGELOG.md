@@ -72,6 +72,15 @@
 
 # Changelog
 
+## 0.1.9-48 — Vampirism Tinker dedicated-server compatibility fix
+
+- Remove Vampirism Tinker 1.6 from client and server.
+- Remove Tinker's Domain / tcondiadema, which was only required by Vampirism Tinker.
+- Add stale-JAR cleanup for vampirismtinker-1.6.jar and Tinkers Domain-1.9fix.jar on existing Crafty installs.
+- Keep the other six Vampirism addons from 0.1.9-46.
+- Preserve Iron Chests removal, More Hitboxes/performance fixes, spawn balancing, and all existing quest progression.
+- No world/player data is included in the update overlay.
+
 ## 0.1.9-47 — Vampirism Tinker dependency fix
 
 - Add Tinker's Domain / tcondiadema (CurseForge 1218668:6862342, Tinkers Domain-1.9fix.jar).

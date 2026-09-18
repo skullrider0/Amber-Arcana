@@ -4563,22 +4563,6 @@
     ]
   },
   {
-    "slug": "tcondiadema",
-    "name": "Tinker's Domain",
-    "projectID": 1218668,
-    "fileID": 6862342,
-    "filename": "Tinkers Domain-1.9fix.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/tcondiadema/files/6862342",
-    "sha512": "",
-    "mods": [
-      {
-        "id": "tcondiadema",
-        "version": "1.9"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
     "slug": "tinkers-construct",
     "name": "Tinkers' Construct",
     "projectID": 74072,
@@ -4723,17 +4707,6 @@
     "fileID": 8525675,
     "filename": "vampire_spells_addon-forge-1.20.1-0.0.9.jar",
     "source": "https://www.curseforge.com/minecraft/mc-mods/vampirism-irons-spells-compatibility/files/8525675",
-    "sha512": "",
-    "mods": [],
-    "bundled_mods": []
-  },
-  {
-    "slug": "vampirism-tinker",
-    "name": "Vampirism Tinker",
-    "projectID": 1314650,
-    "fileID": 6814093,
-    "filename": "vampirismtinker-1.6.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/vampirism-tinker/files/6814093",
     "sha512": "",
     "mods": [],
     "bundled_mods": []

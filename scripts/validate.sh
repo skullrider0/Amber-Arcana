@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-47" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-47" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-48" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-48" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -99,7 +99,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-47 static validation passed"
+echo "Amber & Arcana 0.1.9-48 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -426,18 +426,20 @@ test "$(jq '[.files[] | select(.projectID == 906331 and .fileID == 6125994)] | l
 test "$(awk -F '\t' '$1 == "6125994" && $2 == "vampiricageing-1.20.1-1.3.26.jar" && $4 == "vampiric-ageing-a-vampirism-addon" && $6 == "906331" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-46 server pin: Vampiric Ageing" >&2; exit 1; }
 test "$(jq '[.files[] | select(.projectID == 417851 and .fileID == 6722563)] | length' "$manifest")" = "1" || { echo "Missing 0.1.9-46 client pin: Werewolves - Become a Beast!" >&2; exit 1; }
 test "$(awk -F '\t' '$1 == "6722563" && $2 == "Werewolves-1.20.1-2.0.2.7.jar" && $4 == "werewolves-become-a-beast" && $6 == "417851" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-46 server pin: Werewolves - Become a Beast!" >&2; exit 1; }
-test "$(jq '[.files[] | select(.projectID == 1314650 and .fileID == 6814093)] | length' "$manifest")" = "1" || { echo "Missing 0.1.9-46 client pin: Vampirism Tinker" >&2; exit 1; }
-test "$(awk -F '\t' '$1 == "6814093" && $2 == "vampirismtinker-1.6.jar" && $4 == "vampirism-tinker" && $6 == "1314650" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-46 server pin: Vampirism Tinker" >&2; exit 1; }
 test "$(jq '[.files[] | select(.projectID == 1238539 and .fileID == 6775688)] | length' "$manifest")" = "1" || { echo "Missing 0.1.9-46 client pin: Create Vampirism" >&2; exit 1; }
 test "$(awk -F '\t' '$1 == "6775688" && $2 == "create_vampirism-1.20.1_0.5.0.jar" && $4 == "create-vampirism" && $6 == "1238539" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-46 server pin: Create Vampirism" >&2; exit 1; }
 test "$(jq '[.files[] | select(.projectID == 1565325 and .fileID == 8219863)] | length' "$manifest")" = "1" || { echo "Missing 0.1.9-46 client pin: Vampirism Umbrella Curios Support" >&2; exit 1; }
 test "$(awk -F '\t' '$1 == "8219863" && $2 == "RIP_vampirismcurioscompat-1.0.0.jar" && $4 == "vampirism-umbrella-curios-support" && $6 == "1565325" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-46 server pin: Vampirism Umbrella Curios Support" >&2; exit 1; }
 if rg -F $'	iron-chests	' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null; then echo "Iron Chests remains in server mod list" >&2; exit 1; fi
 jq -e '.vampirism_expansion_0_1_9_46.addons_added == 7 and .vampirism_expansion_0_1_9_46.iron_chests_removed == true and .vampirism_expansion_0_1_9_46.quest_progression_changed == false and .vampirism_expansion_0_1_9_46.create_vampirism_blood_feeding_enabled == false and .vampirism_expansion_0_1_9_46.world_data_touched == false' "$validation" >/dev/null
-test "$(jq '.files | length' "$manifest")" = "298" || { echo "Expected 298 client manifest entries" >&2; exit 1; }
-test "$(awk -F '\t' '!/^#/ && NF {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "278" || { echo "Expected 278 server mod rows" >&2; exit 1; }
+test "$(jq '.files | length' "$manifest")" = "296" || { echo "Expected 296 client manifest entries" >&2; exit 1; }
+test "$(awk -F '\t' '!/^#/ && NF {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "276" || { echo "Expected 276 server mod rows" >&2; exit 1; }
 
 # 0.1.9-47 Vampirism Tinker dependency checks
-test "$(jq '[.files[] | select(.projectID == 1218668 and .fileID == 6862342)] | length' "$manifest")" = "1" || { echo "Missing 0.1.9-47 Tinker Domain client pin" >&2; exit 1; }
-test "$(awk -F '	' '$1 == "6862342" && $2 == "Tinkers Domain-1.9fix.jar" && $4 == "tcondiadema" && $6 == "1218668" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-47 Tinker Domain server pin" >&2; exit 1; }
-jq -e '.vampirism_tinker_dependency_fix_0_1_9_47.missing_dependency_fixed == true and .vampirism_tinker_dependency_fix_0_1_9_47.dependency_mod_id == "tcondiadema" and .vampirism_tinker_dependency_fix_0_1_9_47.minimum_version == "1.5" and .vampirism_tinker_dependency_fix_0_1_9_47.quest_progression_changed == false and .vampirism_tinker_dependency_fix_0_1_9_47.world_data_touched == false' "$validation" >/dev/null
+
+# 0.1.9-48 Vampirism Tinker dedicated-server fix
+test "$(jq '[.files[] | select(.projectID == 1314650 or .fileID == 6814093 or .projectID == 1218668 or .fileID == 6862342)] | length' "$manifest")" = "0" || { echo "Dedicated-server-incompatible Vampirism Tinker or its orphan dependency remains in client manifest" >&2; exit 1; }
+if rg -F $'	vampirism-tinker	|	tcondiadema	' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null; then echo "Vampirism Tinker or Tinker Domain remains in server mod list" >&2; exit 1; fi
+grep -Fxq 'vampirismtinker-1.6.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Vampirism Tinker stale-jar cleanup missing" >&2; exit 1; }
+grep -Fxq 'Tinkers Domain-1.9fix.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Tinker Domain stale-jar cleanup missing" >&2; exit 1; }
+jq -e '.vampirism_tinker_dedicated_server_fix_0_1_9_48.vampirism_tinker_removed == true and .vampirism_tinker_dedicated_server_fix_0_1_9_48.tinkers_domain_removed == true and .vampirism_tinker_dedicated_server_fix_0_1_9_48.active_vampirism_addons_from_0_1_9_46 == 6 and .vampirism_tinker_dedicated_server_fix_0_1_9_48.quest_progression_changed == false and .vampirism_tinker_dedicated_server_fix_0_1_9_48.world_data_touched == false' "$validation" >/dev/null

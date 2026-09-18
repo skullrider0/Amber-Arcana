@@ -4,18 +4,18 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-47](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-47-Client.zip) · [Download Crafty Server 0.1.9-47](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-47-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-47-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-48](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-48-Client.zip) · [Download Crafty Server 0.1.9-48](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-48-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-48-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-47 |
+| Pack | 0.1.9-48 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
-| Client manifest entries | 298 + 1 local patched JAR |
-| Server managed mod entries | 278 |
+| Client manifest entries | 296 + 1 local patched JAR |
+| Server managed mod entries | 276 |
 | Quests | 334 across 28 chapters |
 
 Release 0.1.9-25 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
@@ -168,3 +168,7 @@ Adds seven Forge 1.20.1 Vampirism addons without changing FTB Quest progression:
 
 ### 0.1.9-47 Vampirism Tinker dependency fix
 Adds Tinker's Domain (tcondiadema) 1.9fix, required by Vampirism Tinker 1.6. No quests or world/player data are changed.
+
+
+### 0.1.9-48 dedicated-server compatibility fix
+Removes Vampirism Tinker 1.6 because it crashes Forge dedicated servers by loading the client-only ClientDiademaRegister class during mod construction. Tinker's Domain is removed with it because it was added only as Vampirism Tinker's dependency. The other six Vampirism addons remain. Quests and world/player data are unchanged.

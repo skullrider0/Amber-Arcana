@@ -1,11 +1,11 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-47",
+  "pack_version": "0.1.9-48",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 298,
+  "manifest_entries": 296,
   "mod_metadata_entries": 298,
-  "server_mod_downloads": 278,
+  "server_mod_downloads": 276,
   "excluded_mod_jars": 19,
   "excluded_shader_entries": 1,
   "compatibility_fix": "More Hitboxes retained; Colorwheel excluded because it requires Oculus on dedicated server.",
@@ -1567,7 +1567,7 @@
     "client_server_quest_files_identical": true,
     "acyclic_validator": "scripts/validate-quest-graph.py"
   },
-  "version": "0.1.9-47",
+  "version": "0.1.9-48",
   "vampirism_expansion_0_1_9_46": {
     "addons_added": 7,
     "addon_pins": [
@@ -1625,6 +1625,16 @@
     "project_id": 1218668,
     "file_id": 6862342,
     "filename": "Tinkers Domain-1.9fix.jar",
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
+    "world_data_touched": false
+  },
+  "vampirism_tinker_dedicated_server_fix_0_1_9_48": {
+    "reason": "Vampirism Tinker 1.6 loads ClientDiademaRegister on DEDICATED_SERVER and crashes Forge during mod construction",
+    "vampirism_tinker_removed": true,
+    "tinkers_domain_removed": true,
+    "active_vampirism_addons_from_0_1_9_46": 6,
     "client_update_required": true,
     "server_update_required": true,
     "quest_progression_changed": false,
