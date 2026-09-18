@@ -66,6 +66,10 @@ python3 "$repo_dir/scripts/run-hotfix-quest-curation-0.1.9-45.py"
 python3 "$repo_dir/scripts/validate-quest-themes.py"
 python3 "$repo_dir/scripts/validate-quest-graph.py"
 
+# 0.1.9-46 expands Vampirism integrations and removes Iron Chests without
+# changing FTB Quest progression. Existing worlds are never packaged here.
+python3 "$repo_dir/scripts/hotfix-vampirism-expansion-0.1.9-46.py"
+
 bash "$repo_dir/scripts/build-launcher.sh"
 
 version="$(jq -r '.version' "$repo_dir/client/manifest.json")"
