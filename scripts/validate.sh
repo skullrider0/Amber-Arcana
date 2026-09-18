@@ -39,7 +39,7 @@ printf '%s  %s
 printf '%s  %s
 ' '${mh_sha512}' "$server_mh" | sha512sum --check - >/dev/null
 cmp -s "$client_mh" "$server_mh" || { echo "Client/server More Hitboxes patch differs" >&2; exit 1; }
-test "$(awk -F '\t' '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.2.jar" && $3 == "${mh_sha512}" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
+test "$(awk -F '\t' -v sha="$mh_sha512" '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.2.jar" && $3 == sha {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
 grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Stock More Hitboxes cleanup missing" >&2; exit 1; }
 grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.1.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Old Amber More Hitboxes patch cleanup missing" >&2; exit 1; }
 if grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.2.jar' "$repo_dir/server/_crafty/remove-mods.txt"; then
