@@ -193,6 +193,7 @@ jobs:
           git add server/_crafty/server-mods.tsv server/_crafty/remove-mods.txt vendor/morehitboxes
           if ! git diff --cached --quiet; then
             git commit -m 'Persist MoreHitboxes 1.9.2.2 query-cache beta [skip ci]'
+            git pull --rebase origin agent/AA-008-morehitboxes-query-cache
             git push origin HEAD:agent/AA-008-morehitboxes-query-cache
           fi
 
