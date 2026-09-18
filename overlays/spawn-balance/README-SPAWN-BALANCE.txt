@@ -4,34 +4,41 @@ AMBER & ARCANA - CRAFTY SPAWN BALANCE PATCH
 Target:
 Minecraft 1.20.1
 Forge 47.4.10
-Amber & Arcana 0.1.9-25 quest overlay + spawn-balance bundle
+Amber & Arcana
 Crafty server UUID: b6356e28-2508-4bad-8869-133860f04f83
 
 WHAT THIS DOES
 --------------
-1. Includes the finalized Amber & Arcana 0.1.9-25 quest system.
-2. Cuts normal mob spawn attempts by 50% across the pack.
+1. Keeps the existing Amber & Arcana quest/spawn-balance overlay behavior.
+2. Cuts normal natural mob spawn attempts by 50% across the pack.
 3. Cuts Vampirism natural spawn attempts by another 50%.
-   Combined result: about 25% of the current vampire spawn throughput.
-4. Completely blocks these Mekanism Additions baby mobs:
+   Combined result: about 25% of unpatched vampire spawn throughput.
+4. Cuts Ice & Fire natural spawn attempts by another 70%.
+   Combined result: about 15% of unpatched Ice & Fire natural spawn throughput.
+   This explicitly includes iceandfire:pixie.
+5. Cuts Untamed Wilds natural spawn attempts by another 50%.
+   Combined result: about 25% of unpatched Untamed Wilds natural spawn throughput.
+6. Untamed Wilds ocean generation rarity is also raised from 96 to 192
+   (about half as many new ocean feature placement opportunities as before).
+7. Completely blocks these Mekanism Additions baby mobs:
    - baby creeper
    - baby enderman
    - baby skeleton
    - baby stray
    - baby wither skeleton
-5. Does NOT modify MoreHitboxes.
-6. Does NOT delete existing mobs.
+8. Does NOT modify MoreHitboxes.
+9. Does NOT delete existing mobs.
 
 INSTALL IN CRAFTY
 -----------------
 1. STOP Amber & Arcana.
 2. Make a backup/snapshot first.
-3. Extract this ZIP into the Crafty server root:
+3. Extract the current Crafty spawn-balance/update overlay into the Crafty server root:
    /crafty/servers/b6356e28-2508-4bad-8869-133860f04f83
 4. Start the server normally.
 
 After extraction these paths should exist:
-- config/ftbquests/quests/
+- config/untamedwilds-common.toml
 - kubejs/server_scripts/amber_arcana_spawn_balance.js
 
 VERIFY
@@ -48,5 +55,6 @@ spark profiler start --only-ticks-over 50 --timeout 60
 NOTES
 -----
 - Existing mobs are not mass-killed. Overpopulation should fall as normal despawning occurs.
-- If the world is still too crowded after existing mobs despawn, the global 50% value can be increased to 60-70% reduction in a follow-up patch.
-- If vampires become too rare, the second Vampirism 50% layer can be reduced independently.
+- Spawners, breeding, commands and summons are intentionally left alone.
+- Pixies are covered by the Ice & Fire 70% mod-specific natural-spawn reduction.
+- Untamed Wilds receives both a live natural-spawn reduction and a new-chunk ocean generation reduction.
