@@ -1,5 +1,5 @@
 {
-  "mod_files": 281,
+  "mod_files": 294,
   "shader_files": 1,
   "chapters": 25,
   "manual_quests": 106,
@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-48",
+  "pack_version": "0.1.9-49",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -213,6 +213,23 @@
     "vampirism_tinker_removed": true,
     "tinkers_domain_removed": true,
     "active_vampirism_addons_from_0_1_9_46": 6,
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
+    "world_data_touched": false
+  },
+  "performance_mod_cleanup_0_1_9_49": {
+    "reason": "server performance cleanup after Spark profiling",
+    "mowzies_mobs_removed": true,
+    "untamed_wilds_removed": true,
+    "removed_projects": [
+      250498,
+      457252
+    ],
+    "removed_files": [
+      4779746,
+      7815705
+    ],
     "client_update_required": true,
     "server_update_required": true,
     "quest_progression_changed": false,
