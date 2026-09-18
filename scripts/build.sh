@@ -62,7 +62,9 @@ python3 "$repo_dir/scripts/hotfix-quest-cycles-0.1.9-44.py"
 # 0.1.9-45 removes the generic AA35 filler chains and re-themes chapter reward
 # tables. This pass preserves every non-filler quest ID and synchronizes the
 # client/server quest sources.
-python3 "$repo_dir/scripts/run-hotfix-quest-curation-0.1.9-45.py"
+if ! grep -Fq '"quest_curation_0_1_9_45"' "$validation"; then
+  python3 "$repo_dir/scripts/run-hotfix-quest-curation-0.1.9-45.py"
+fi
 python3 "$repo_dir/scripts/validate-quest-themes.py"
 python3 "$repo_dir/scripts/validate-quest-graph.py"
 
