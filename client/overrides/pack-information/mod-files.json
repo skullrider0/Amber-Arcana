@@ -1522,6 +1522,17 @@
     "bundled_mods": []
   },
   {
+    "slug": "create-vampirism",
+    "name": "Create Vampirism",
+    "projectID": 1238539,
+    "fileID": 6775688,
+    "filename": "create_vampirism-1.20.1_0.5.0.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/create-vampirism/files/6775688",
+    "sha512": "",
+    "mods": [],
+    "bundled_mods": []
+  },
+  {
     "slug": "create-alexs-caves-compat",
     "name": "Create: Alex's Caves Compat",
     "projectID": 1274783,
@@ -2726,22 +2737,6 @@
     ]
   },
   {
-    "slug": "iron-chests",
-    "name": "Iron Chests",
-    "projectID": 228756,
-    "fileID": 4614852,
-    "filename": "ironchest-1.20.1-14.4.4.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/iron-chests/files/4614852",
-    "sha512": "5d41daa11bbc5c98c98faf6641993a47bce92c56204cec745686396e4f912b67abbc29f9fefcc5fd89422c37c3b34c191bfcc6479b28d7a07886cd279c0d6d99",
-    "mods": [
-      {
-        "id": "ironchest",
-        "version": "1.20.1-14.4.4"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
     "slug": "iron-furnaces",
     "name": "Iron Furnaces",
     "projectID": 237664,
@@ -2817,6 +2812,21 @@
       {
         "id": "justdirethings",
         "version": "1.1.7"
+      }
+    ],
+    "bundled_mods": []
+  },
+  {
+    "slug": "jei",
+    "name": "Just Enough Items (JEI)",
+    "projectID": 238222,
+    "fileID": 6075247,
+    "filename": "jei-1.20.1-forge-15.20.0.106.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/jei/files/8879628",
+    "mods": [
+      {
+        "id": "jei",
+        "version": "15.59.0.211"
       }
     ],
     "bundled_mods": []
@@ -3374,22 +3384,6 @@
     "bundled_mods": []
   },
   {
-    "slug": "mouse-tweaks",
-    "name": "Mouse Tweaks",
-    "projectID": 60089,
-    "fileID": 5338457,
-    "filename": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks/files/5338457",
-    "sha512": "a3bb0272c0a1a3be9250dfee030bb8f86217fa6a32bd534be8c940fdd8c466c800c2df85874877983ced36ecfc28c8ced6c0d42107c1ab621385b4be9a7c65eb",
-    "mods": [
-      {
-        "id": "mousetweaks",
-        "version": "2.25.1"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
     "slug": "more-hitboxes",
     "name": "More Hitboxes (Amber performance patch)",
     "projectID": 0,
@@ -3414,6 +3408,22 @@
         "displayTest": "IGNORE_SERVER_VERSION"
       }
     ]
+  },
+  {
+    "slug": "mouse-tweaks",
+    "name": "Mouse Tweaks",
+    "projectID": 60089,
+    "fileID": 5338457,
+    "filename": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks/files/5338457",
+    "sha512": "a3bb0272c0a1a3be9250dfee030bb8f86217fa6a32bd534be8c940fdd8c466c800c2df85874877983ced36ecfc28c8ced6c0d42107c1ab621385b4be9a7c65eb",
+    "mods": [
+      {
+        "id": "mousetweaks",
+        "version": "2.25.1"
+      }
+    ],
+    "bundled_mods": []
   },
   {
     "slug": "mowzies-mobs",
@@ -4103,21 +4113,6 @@
     "bundled_mods": []
   },
   {
-    "slug": "jei",
-    "name": "Just Enough Items (JEI)",
-    "projectID": 238222,
-    "fileID": 6075247,
-    "filename": "jei-1.20.1-forge-15.20.0.106.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/jei/files/8879628",
-    "mods": [
-      {
-        "id": "jei",
-        "version": "15.59.0.211"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
     "slug": "rs-requestify",
     "name": "RS Requestify",
     "projectID": 307788,
@@ -4648,6 +4643,28 @@
     "bundled_mods": []
   },
   {
+    "slug": "vampires-delight",
+    "name": "Vampire's Delight",
+    "projectID": 939092,
+    "fileID": 8200186,
+    "filename": "VampiresDelight-1.20.1-0.1.13c.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/vampires-delight/files/8200186",
+    "sha512": "",
+    "mods": [],
+    "bundled_mods": []
+  },
+  {
+    "slug": "vampiric-ageing-a-vampirism-addon",
+    "name": "Vampiric Ageing",
+    "projectID": 906331,
+    "fileID": 6125994,
+    "filename": "vampiricageing-1.20.1-1.3.26.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/vampiric-ageing-a-vampirism-addon/files/6125994",
+    "sha512": "",
+    "mods": [],
+    "bundled_mods": []
+  },
+  {
     "slug": "vampirism",
     "name": "Vampirism",
     "projectID": 233029,
@@ -4684,6 +4701,39 @@
     "bundled_mods": []
   },
   {
+    "slug": "vampirism-irons-spells-compatibility",
+    "name": "Vampirism Iron's Spells Compatibility",
+    "projectID": 1350048,
+    "fileID": 8525675,
+    "filename": "vampire_spells_addon-forge-1.20.1-0.0.9.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/vampirism-irons-spells-compatibility/files/8525675",
+    "sha512": "",
+    "mods": [],
+    "bundled_mods": []
+  },
+  {
+    "slug": "vampirism-tinker",
+    "name": "Vampirism Tinker",
+    "projectID": 1314650,
+    "fileID": 6814093,
+    "filename": "vampirismtinker-1.6.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/vampirism-tinker/files/6814093",
+    "sha512": "",
+    "mods": [],
+    "bundled_mods": []
+  },
+  {
+    "slug": "vampirism-umbrella-curios-support",
+    "name": "Vampirism Umbrella Curios Support",
+    "projectID": 1565325,
+    "fileID": 8219863,
+    "filename": "RIP_vampirismcurioscompat-1.0.0.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/vampirism-umbrella-curios-support/files/8219863",
+    "sha512": "",
+    "mods": [],
+    "bundled_mods": []
+  },
+  {
     "slug": "waystones",
     "name": "Waystones",
     "projectID": 245755,
@@ -4697,6 +4747,17 @@
         "version": "14.1.21"
       }
     ],
+    "bundled_mods": []
+  },
+  {
+    "slug": "werewolves-become-a-beast",
+    "name": "Werewolves - Become a Beast!",
+    "projectID": 417851,
+    "fileID": 6722563,
+    "filename": "Werewolves-1.20.1-2.0.2.7.jar",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/werewolves-become-a-beast/files/6722563",
+    "sha512": "",
+    "mods": [],
     "bundled_mods": []
   },
   {

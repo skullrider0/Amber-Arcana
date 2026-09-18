@@ -1,0 +1,22 @@
+Amber & Arcana 0.1.9-46 — Vampirism expansion
+
+Added (client + server):
+- Vampirism Iron's Spells Compatibility — project 1350048, file 8525675 — vampire_spells_addon-forge-1.20.1-0.0.9.jar
+- Vampire's Delight — project 939092, file 8200186 — VampiresDelight-1.20.1-0.1.13c.jar
+- Vampiric Ageing — project 906331, file 6125994 — vampiricageing-1.20.1-1.3.26.jar
+- Werewolves - Become a Beast! — project 417851, file 6722563 — Werewolves-1.20.1-2.0.2.7.jar
+- Vampirism Tinker — project 1314650, file 6814093 — vampirismtinker-1.6.jar
+- Create Vampirism — project 1238539, file 6775688 — create_vampirism-1.20.1_0.5.0.jar
+- Vampirism Umbrella Curios Support — project 1565325, file 8219863 — RIP_vampirismcurioscompat-1.0.0.jar
+
+Removed:
+- Iron Chests — project 228756, file 4614852
+- Existing Crafty installs remove stale ironchest-1.20.1-14.4.4.jar on next launcher start.
+
+Quest policy:
+- No FTB Quest progression was added or changed.
+
+Create Vampirism:
+- WIP Blood Feeding is intentionally not enabled.
+
+Existing More Hitboxes/performance fixes remain in place.

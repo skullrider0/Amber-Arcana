@@ -4,19 +4,19 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Client.zip) · [Download Crafty Server 0.1.9-44](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-45-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-46](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Client.zip) · [Download Crafty Server 0.1.9-46](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-46-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-45 |
+| Pack | 0.1.9-46 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
-| Client manifest entries | 291 + 1 local patched JAR |
-| Server managed mod entries | 271 |
-| Quests | 504 across 28 chapters |
+| Client manifest entries | 297 + 1 local patched JAR |
+| Server managed mod entries | 277 |
+| Quests | 334 across 28 chapters |
 
 Release 0.1.9-25 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
 
@@ -160,3 +160,7 @@ Repairs circular FTB Quests dependency paths that could recurse through `TeamDat
 
 ### 0.1.9-45 quest curation
 Removes the generated AA35 filler chains (for example Prepare/Build/Connect copies of the same milestone), reconnects the meaningful quests directly, and replaces the old Create-first generic reward fallback with explicit per-chapter reward themes. Build validation now rejects leftover AA35 filler markers and unrelated reward namespaces. Existing non-filler quest IDs and world/player data are preserved.
+
+
+### 0.1.9-46 Vampirism expansion
+Adds seven Forge 1.20.1 Vampirism addons without changing FTB Quest progression: Vampirism Iron's Spells Compatibility, Vampire's Delight, Vampiric Ageing, Werewolves, Vampirism Tinker, Create Vampirism, and Vampirism Umbrella Curios Support. Iron Chests is removed from client/server packaging and existing Crafty installs delete ironchest-1.20.1-14.4.4.jar on the next launcher start. Create Vampirism's WIP Blood Feeding feature is not enabled.

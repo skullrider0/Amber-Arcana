@@ -1,5 +1,5 @@
 {
-  "mod_files": 276,
+  "mod_files": 282,
   "shader_files": 1,
   "chapters": 28,
   "manual_quests": 495,
@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-45",
+  "pack_version": "0.1.9-46",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1522,5 +1522,54 @@
     "create_generic_fallback_removed": true,
     "client_server_quest_files_identical": true,
     "historical_non_filler_quest_ids_preserved": true
+  },
+  "vampirism_expansion_0_1_9_46": {
+    "addons_added": 7,
+    "addon_pins": [
+      {
+        "project_id": 1350048,
+        "file_id": 8525675,
+        "filename": "vampire_spells_addon-forge-1.20.1-0.0.9.jar"
+      },
+      {
+        "project_id": 939092,
+        "file_id": 8200186,
+        "filename": "VampiresDelight-1.20.1-0.1.13c.jar"
+      },
+      {
+        "project_id": 906331,
+        "file_id": 6125994,
+        "filename": "vampiricageing-1.20.1-1.3.26.jar"
+      },
+      {
+        "project_id": 417851,
+        "file_id": 6722563,
+        "filename": "Werewolves-1.20.1-2.0.2.7.jar"
+      },
+      {
+        "project_id": 1314650,
+        "file_id": 6814093,
+        "filename": "vampirismtinker-1.6.jar"
+      },
+      {
+        "project_id": 1238539,
+        "file_id": 6775688,
+        "filename": "create_vampirism-1.20.1_0.5.0.jar"
+      },
+      {
+        "project_id": 1565325,
+        "file_id": 8219863,
+        "filename": "RIP_vampirismcurioscompat-1.0.0.jar"
+      }
+    ],
+    "iron_chests_removed": true,
+    "iron_chests_project_id": 228756,
+    "iron_chests_file_id": 4614852,
+    "iron_chests_stale_jar_cleanup": true,
+    "quest_progression_changed": false,
+    "create_vampirism_blood_feeding_enabled": false,
+    "client_update_required": true,
+    "server_update_required": true,
+    "world_data_touched": false
   }
 }

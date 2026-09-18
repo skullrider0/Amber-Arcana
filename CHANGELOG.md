@@ -72,6 +72,20 @@
 
 # Changelog
 
+## 0.1.9-46 — Vampirism addon expansion and Iron Chests removal
+
+- Add Vampirism Iron's Spells Compatibility 0.0.9 (1350048:8525675).
+- Add Vampire's Delight 0.1.13c (939092:8200186).
+- Add Vampiric Ageing 1.3.26 (906331:6125994).
+- Add Werewolves - Become a Beast! 2.0.2.7 (417851:6722563).
+- Add Vampirism Tinker 1.6 (1314650:6814093).
+- Add Create Vampirism 0.5.0 (1238539:6775688).
+- Add Vampirism Umbrella Curios Support 1.0.0 (1565325:8219863).
+- Remove Iron Chests (228756:4614852) and clean up ironchest-1.20.1-14.4.4.jar on existing Crafty installs.
+- Do not add or change Vampirism/Werewolf FTB Quest progression.
+- Leave Create Vampirism Blood Feeding disabled/default-off.
+- Preserve the local More Hitboxes performance patch and existing spawn/performance fixes.
+
 ## 0.1.9-35 — Deep progression for compact chapters
 
 - Expand all 24 formerly compact chapters into multi-step mechanics progression trees while preserving their historical quest IDs.
