@@ -63,3 +63,6 @@ morehitboxes-forge-1.20.1-1.9.2.jar
 ironchest-1.20.1-14.4.4.jar
 Tinkers Domain-1.9fix.jar
 vampirismtinker-1.6.jar
+# Removed in Amber & Arcana 0.1.9-49 for server performance.
+mowziesmobs-1.8.2.jar
+untamedwilds-1.20.1-4.0.4.jar
