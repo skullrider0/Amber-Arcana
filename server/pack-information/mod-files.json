@@ -3426,22 +3426,6 @@
     "bundled_mods": []
   },
   {
-    "slug": "mowzies-mobs",
-    "name": "Mowzie's Mobs",
-    "projectID": 250498,
-    "fileID": 7815705,
-    "filename": "mowziesmobs-1.8.2.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs/files/7815705",
-    "sha512": "c1c5f7b8cba4dbbe57f8eb7150bea94a72076ef4ae923adf7fe1147eef703e4fedc7914a12d51fb4152faccaad94c4053ce3ff21cca8905bf2da17de61db43b0",
-    "mods": [
-      {
-        "id": "mowziesmobs",
-        "version": "1.8.2"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
     "slug": "multi-piston",
     "name": "Multi-Piston",
     "projectID": 303278,
@@ -4590,22 +4574,6 @@
       {
         "id": "titanium",
         "version": "3.8.34"
-      }
-    ],
-    "bundled_mods": []
-  },
-  {
-    "slug": "untamedwilds",
-    "name": "Untamed Wilds",
-    "projectID": 457252,
-    "fileID": 4779746,
-    "filename": "untamedwilds-1.20.1-4.0.4.jar",
-    "source": "https://www.curseforge.com/minecraft/mc-mods/untamedwilds/files/4779746",
-    "sha512": "ece20e25ae64ef1752076a489a6693753f404e6543b3c5e3bf629e8a9bc6be9f120b23ec0ab95a21f0175b190dd285e9943e43a9afe5c11b99850e7bae77bd50",
-    "mods": [
-      {
-        "id": "untamedwilds",
-        "version": "4.0.4"
       }
     ],
     "bundled_mods": []
