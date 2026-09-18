@@ -3,7 +3,7 @@ set -euo pipefail
 
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 dist_dir="$repo_dir/dist"
-patch_jar="morehitboxes-forge-1.20.1-1.9.2.1.jar"
+patch_jar="morehitboxes-forge-1.20.1-1.9.2.2.jar"
 validation="$repo_dir/server/pack-information/validation.json"
 
 # Do not replay historical release migrations over canonical 0.1.9-42 data.
@@ -76,7 +76,7 @@ python3 "$repo_dir/scripts/hotfix-vampirism-expansion-0.1.9-46.py"
 python3 "$repo_dir/scripts/hotfix-vampirism-tinker-dependency-0.1.9-47.py"
 
 # 0.1.9-48 removes Vampirism Tinker 1.6 from the pack.
-python3 "$repo_dir/scripts/hotfix-vampirism-tinker-server-fix-0.1.9-48.py"
+python3 "$repo_dir/scripts/hotfix-vampirism-tinker-server-fix-0.1.9-48.py"\n\n# 0.1.9-49 removes unrelated Forge multipart entities from More Hitboxes typed-query hot loops.\npython3 "$repo_dir/scripts/hotfix-morehitboxes-query-cache-0.1.9-49.py"
 
 # 0.1.9-49 removes Mowzie\'s Mobs and Untamed Wilds after Spark profiling.
 python3 "$repo_dir/scripts/hotfix-performance-mod-cleanup-0.1.9-49.py"
