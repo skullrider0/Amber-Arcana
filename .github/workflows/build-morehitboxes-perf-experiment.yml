@@ -132,13 +132,14 @@ jobs:
                   out.append(line)
                   continue
               fields = line.split('\t')
-              if len(fields) == 5 and (fields[3] == 'more-hitboxes' or fields[1].startswith('morehitboxes-forge-1.20.1-')):
+              if len(fields) >= 5 and (fields[3] == 'more-hitboxes' or fields[1].startswith('morehitboxes-forge-1.20.1-')):
                   out.append('\t'.join([
                       '0',
                       'morehitboxes-forge-1.20.1-1.9.2.3.jar',
                       sha512,
                       'more-hitboxes',
-                      'More Hitboxes (Amber spatial performance beta)'
+                      'More Hitboxes (Amber spatial performance beta)',
+                      fields[5] if len(fields) > 5 else '0'
                   ]))
                   found += 1
               else:
@@ -148,10 +149,16 @@ jobs:
           tsv.write_text('\n'.join(out) + '\n', encoding='utf-8')
 
           remove = Path('server/_crafty/remove-mods.txt')
-          old = 'morehitboxes-forge-1.20.1-1.9.2.jar'
+          olds = [
+              'morehitboxes-forge-1.20.1-1.9.2.jar',
+              'morehitboxes-forge-1.20.1-1.9.2.1.jar',
+              'morehitboxes-forge-1.20.1-1.9.2.2.jar',
+          ]
           text = remove.read_text(encoding='utf-8')
-          if old not in text.splitlines():
-              text = text.rstrip() + '\n\n# Replaced by Amber MoreHitboxes 1.9.2.3 spatial performance beta.\n' + old + '\n'
+          lines = text.splitlines()
+          missing = [old for old in olds if old not in lines]
+          if missing:
+              text = text.rstrip() + '\n\n# Replaced by Amber MoreHitboxes 1.9.2.3 spatial performance beta.\n' + '\n'.join(missing) + '\n'
               remove.write_text(text, encoding='utf-8')
           PY
 
