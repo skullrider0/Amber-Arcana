@@ -37,8 +37,17 @@ def ensure_stopped(root, proc=Path('/proc')):
             cwd=(p/'cwd').resolve(strict=True)
         except FileNotFoundError:
             continue
-        except PermissionError as exc:
-            raise RuntimeError('Cannot inspect processes. Run updater through docker exec as root.') from exc
+        except PermissionError:
+            # Some Docker/Unraid procfs configurations deny /proc/<pid>/cwd
+            # even to UID 0 inside the container. We already have cmdline;
+            # if it explicitly references this server, still block the update.
+            try:
+                cmd = raw.replace(b'\\0', b' ').decode(errors='replace')
+            except Exception:
+                continue
+            if 'java' in cmd.lower() and (str(root) in cmd or 'AmberArcana-Crafty-Launcher.jar' in cmd):
+                raise RuntimeError(f'Server Java process {p.name} is still running. Stop Amber & Arcana in Crafty first.')
+            continue
         if 'java' in cmd.lower() and (cwd == root or root in cwd.parents or str(root) in cmd):
             raise RuntimeError(f'Server Java process {p.name} is still running. Stop Amber & Arcana in Crafty first.')
 
