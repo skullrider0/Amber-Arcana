@@ -35,9 +35,9 @@ client_mh="$repo_dir/client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.2.jar
 server_mh="$repo_dir/server/mods/morehitboxes-forge-1.20.1-1.9.2.2.jar"
 test -f "$client_mh" && test -f "$server_mh" || { echo "Patched More Hitboxes jar missing" >&2; exit 1; }
 printf '%s  %s
-' '${mh_sha512}' "$client_mh" | sha512sum --check - >/dev/null
+' "$mh_sha512" "$client_mh" | sha512sum --check - >/dev/null
 printf '%s  %s
-' '${mh_sha512}' "$server_mh" | sha512sum --check - >/dev/null
+' "$mh_sha512" "$server_mh" | sha512sum --check - >/dev/null
 cmp -s "$client_mh" "$server_mh" || { echo "Client/server More Hitboxes patch differs" >&2; exit 1; }
 test "$(awk -F '\t' -v sha="$mh_sha512" '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.2.jar" && $3 == sha {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
 grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Stock More Hitboxes cleanup missing" >&2; exit 1; }
