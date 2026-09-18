@@ -63,3 +63,4 @@ morehitboxes-forge-1.20.1-1.9.2.jar
 ironchest-1.20.1-14.4.4.jar
 Tinkers Domain-1.9fix.jar
 vampirismtinker-1.6.jar
+morehitboxes-forge-1.20.1-1.9.2.1.jar
