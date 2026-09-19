@@ -30,24 +30,24 @@ fi
 test "$(awk -F '\t' '$4 == "jei" && $1 == "6075247" && $2 == "jei-1.20.1-forge-15.20.0.106.jar" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected matching JEI 15.20.0.106 on server" >&2; exit 1; }
 
 test "$(jq '[.files[] | select(.projectID == 1115989 or .fileID == 6942239)] | length' "$manifest")" = "0" || { echo "Official More Hitboxes entry must be absent from client manifest" >&2; exit 1; }
-mh_sha512="$(awk 'NR==1 {print $1}' "$repo_dir/vendor/morehitboxes/1.9.2.2/SHA512SUMS.txt")"
-client_mh="$repo_dir/client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.2.jar"
-server_mh="$repo_dir/server/mods/morehitboxes-forge-1.20.1-1.9.2.2.jar"
+mh_sha512="$(awk 'NR==1 {print $1}' "$repo_dir/vendor/morehitboxes/1.9.2.3/SHA512SUMS.txt")"
+client_mh="$repo_dir/client/overrides/mods/morehitboxes-forge-1.20.1-1.9.2.3.jar"
+server_mh="$repo_dir/server/mods/morehitboxes-forge-1.20.1-1.9.2.3.jar"
 test -f "$client_mh" && test -f "$server_mh" || { echo "Patched More Hitboxes jar missing" >&2; exit 1; }
 printf '%s  %s
 ' "$mh_sha512" "$client_mh" | sha512sum --check - >/dev/null
 printf '%s  %s
 ' "$mh_sha512" "$server_mh" | sha512sum --check - >/dev/null
 cmp -s "$client_mh" "$server_mh" || { echo "Client/server More Hitboxes patch differs" >&2; exit 1; }
-test "$(awk -F '\t' -v sha="$mh_sha512" '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.2.jar" && $3 == sha {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
+test "$(awk -F '\t' -v sha="$mh_sha512" '$4 == "more-hitboxes" && $1 == "0" && $2 == "morehitboxes-forge-1.20.1-1.9.2.3.jar" && $3 == sha {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Expected local More Hitboxes patch pin" >&2; exit 1; }
 grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Stock More Hitboxes cleanup missing" >&2; exit 1; }
 grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.1.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Old Amber More Hitboxes patch cleanup missing" >&2; exit 1; }
-if grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.2.jar' "$repo_dir/server/_crafty/remove-mods.txt"; then
+if grep -Fxq 'morehitboxes-forge-1.20.1-1.9.2.3.jar' "$repo_dir/server/_crafty/remove-mods.txt"; then
   echo "Patched More Hitboxes is scheduled for deletion" >&2
   exit 1
 fi
 jq -e '.more_hitboxes_perf_patch_0_1_9_22.enabled == true' "$validation" >/dev/null
-jq -e '.more_hitboxes_query_cache_0_1_9_50.enabled == true and .more_hitboxes_query_cache_0_1_9_50.amber_patch_version == "1.9.2.2" and .more_hitboxes_query_cache_0_1_9_50.unrelated_part_entities_excluded_from_hot_loop == true and .more_hitboxes_query_cache_0_1_9_50.fossils_dependency_preserved == true and .more_hitboxes_query_cache_0_1_9_50.world_data_touched == false and .more_hitboxes_query_cache_0_1_9_50.runtime_spark_retest_required == true' "$validation" >/dev/null
+jq -e '.more_hitboxes_spatial_cache_0_1_9_51.enabled == true and .more_hitboxes_spatial_cache_0_1_9_51.amber_patch_version == "1.9.2.3" and .more_hitboxes_spatial_cache_0_1_9_51.fossils_dependency_preserved == true and .more_hitboxes_spatial_cache_0_1_9_51.client_boot_tested == true and .more_hitboxes_spatial_cache_0_1_9_51.world_data_touched == false and .more_hitboxes_spatial_cache_0_1_9_51.runtime_spark_retest_required == true' "$validation" >/dev/null
 
 grep -Fxq 'twilightforest-1.20.1-4.3.2508-universal.jar' "$repo_dir/server/_crafty/remove-mods.txt" || { echo "Twilight Forest stale-jar cleanup missing" >&2; exit 1; }
 
@@ -92,7 +92,7 @@ test -f "$overlay" || { echo "Crafty update overlay missing" >&2; exit 1; }
 unzip -tq "$overlay"
 test "$(unzip -Z1 "$overlay" | grep -Fxc '_crafty/server-mods.tsv')" = "1" || { echo "Crafty update overlay missing server-mods.tsv" >&2; exit 1; }
 test "$(unzip -Z1 "$overlay" | grep -Fxc '_crafty/remove-mods.txt')" = "1" || { echo "Crafty update overlay missing remove-mods.txt" >&2; exit 1; }
-test "$(unzip -Z1 "$overlay" | grep -Fxc 'mods/morehitboxes-forge-1.20.1-1.9.2.2.jar')" = "1" || { echo "Crafty update overlay missing patched jar" >&2; exit 1; }
+test "$(unzip -Z1 "$overlay" | grep -Fxc 'mods/morehitboxes-forge-1.20.1-1.9.2.3.jar')" = "1" || { echo "Crafty update overlay missing patched jar" >&2; exit 1; }
 test "$(unzip -Z1 "$overlay" | grep -Fxc 'mods/morehitboxes-forge-1.20.1-1.9.2.1.jar')" = "0" || { echo "Crafty update overlay still contains old More Hitboxes patch jar" >&2; exit 1; }
 
 
