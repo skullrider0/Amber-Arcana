@@ -189,6 +189,49 @@ jobs:
           cp out/morehitboxes-forge-1.20.1-1.9.2.3.jar crafty-overlay/mods/
           (cd crafty-overlay && zip -qr ../out/Amber-and-Arcana-MoreHitboxes-1.9.2.3-Crafty-Overlay.zip .)
 
+      - name: Build isolated client boot-test package
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='dist/Amber-and-Arcana-0.1.9-50-Client.zip'
+          TEST='out/Amber-and-Arcana-0.1.9-50-MoreHitboxes-1.9.2.3-TEST-Client.zip'
+          WORK='client-boot-test'
+
+          test -f "$BASE"
+          rm -rf "$WORK"
+          mkdir -p "$WORK"
+          unzip -q "$BASE" -d "$WORK"
+
+          find "$WORK" -type f -name 'morehitboxes-forge-1.20.1-*.jar' -print -delete
+          mkdir -p "$WORK/overrides/mods"
+          cp out/morehitboxes-forge-1.20.1-1.9.2.3.jar "$WORK/overrides/mods/"
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          manifest = Path('client-boot-test/manifest.json')
+          data = json.loads(manifest.read_text(encoding='utf-8'))
+          data['name'] = 'Amber & Arcana 0.1.9-50 — MoreHitboxes 1.9.2.3 Boot Test'
+          data['version'] = '0.1.9-50-mh-1.9.2.3-test'
+          manifest.write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
+          PY
+
+          (cd "$WORK" && zip -qr "../$TEST" .)
+
+          COUNT="$(unzip -l "$TEST" | grep -c 'morehitboxes-forge-1.20.1-.*\.jar')"
+          test "$COUNT" = 1
+          unzip -l "$TEST" | grep 'overrides/mods/morehitboxes-forge-1.20.1-1.9.2.3.jar'
+          ! unzip -l "$TEST" | grep -q 'morehitboxes-forge-1.20.1-1.9.2.2.jar'
+          sha256sum "$TEST" | tee out/CLIENT-TEST-SHA256SUMS.txt
+
+      - name: Upload client boot-test ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: amber-arcana-0.1.9-50-morehitboxes-1.9.2.3-client-test
+          path: out/Amber-and-Arcana-0.1.9-50-MoreHitboxes-1.9.2.3-TEST-Client.zip
+          if-no-files-found: error
+
       - name: Commit tested beta inputs back to experiment branch
         shell: bash
         run: |
