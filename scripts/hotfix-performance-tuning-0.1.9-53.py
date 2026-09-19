@@ -84,35 +84,35 @@ mob-spawning:
   categories:
     - category: 'MONSTER'
       mobcap: 30
-      spawn-interval: 2
+      spawn-interval: 1
 
     - category: 'CREATURE'
       mobcap: 10
-      spawn-interval: 400
+      spawn-interval: 100
 
     - category: 'AMBIENT'
       mobcap: 15
-      spawn-interval: 20
+      spawn-interval: 1
 
     - category: 'AXOLOTLS'
       mobcap: 5
-      spawn-interval: 20
+      spawn-interval: 1
 
     - category: 'UNDERGROUND_WATER_CREATURE'
       mobcap: 5
-      spawn-interval: 20
+      spawn-interval: 1
 
     - category: 'WATER_CREATURE'
       mobcap: 5
-      spawn-interval: 20
+      spawn-interval: 1
 
     - category: 'WATER_AMBIENT'
       mobcap: 20
-      spawn-interval: 20
+      spawn-interval: 1
 
     - category: 'VAMPIRISM_HUNTER'
       mobcap: 15
-      spawn-interval: 2
+      spawn-interval: 1
 
     - category: 'VAMPIRISM_VAMPIRE'
       mobcap: 10
@@ -120,11 +120,11 @@ mob-spawning:
 
     - category: 'WEREWOLVES_WEREWOLF'
       mobcap: 8
-      spawn-interval: 2
+      spawn-interval: 1
 
     - category: 'RATS'
       mobcap: 25
-      spawn-interval: 2
+      spawn-interval: 1
 
 commands:
   status-enabled: true
@@ -268,7 +268,7 @@ MOBTIM_CUSTOM = """
 \tmobWanderingPercentChance = 100
 \tmobWanderingDelay = 160
 \tmobWanderingReducedRateMultiplier = 8
-\tmobEnemyTargetingReducedRatePercentChance = 5
+\tmobEnemyTargetingReducedRatePercentChance = 10
 \tplayerProximityReducedRateRangeCutoff = 12
 \tplayerProximityReducedRatePlayerScanRate = 60
 """
@@ -376,7 +376,7 @@ def patch_release_metadata() -> None:
         "servercore_dynamic_simulation_distance": {"max": 6, "min": 4},
         "servercore_activation_range_enabled": False,
         "mobtimizations_wander_delay_ticks": 160,
-        "mobtimizations_far_target_chance_percent": 5,
+        "mobtimizations_far_target_chance_percent": 10,
         "mobtimizations_far_wander_multiplier": 8,
         "client_update_required": True,
         "server_update_required": True,
@@ -428,7 +428,7 @@ Caps ServerCore's MONSTER category at 30 and VAMPIRISM_VAMPIRE at 10, with Vampi
 - Enable ServerCore reduce-sync-loads, ticking-chunk cache and fast biome lookups; keep duplicate-fluid-tick cancellation off for compatibility.
 - Enable dynamic performance control at a 35 MSPT target, adjusting chunk-tick distance 6→4 and simulation distance 6→4 while keeping mobcap percentage fixed at 100% and view distance fixed at 8.
 - Enable villager breeding/lobotomization safeguards and more aggressive XP/item merging.
-- Tune Mobtimizations: 160-tick wander delay, 8x far wander multiplier, 5% far target-search chance, 60-tick player proximity scans.
+- Tune Mobtimizations: 160-tick wander delay, 8x far wander multiplier, 10% far target-search chance, 60-tick player proximity scans.
 - Keep ServerCore Entity Activation Range disabled to avoid breaking modded entity behavior.
 - Include ServerCore, Mobtimizations, ModernFix, Spark and spawn-balance configuration in the stopped-server Crafty overlay.
 - No world/player or quest data changes; run a new 4-player Spark profile after deployment.
@@ -456,7 +456,7 @@ for base in "$repo_dir/client/overrides/config" "$repo_dir/server/config"; do
   grep -A2 "category: 'VAMPIRISM_VAMPIRE'" "$base/servercore/config.yml" | grep -q 'mobcap: 10'
   grep -q 'target-mspt: 35' "$base/servercore/config.yml"
   grep -q 'mobWanderingDelay = 160' "$base/mobtimizations/features-customization.toml"
-  grep -q 'mobEnemyTargetingReducedRatePercentChance = 5' "$base/mobtimizations/features-customization.toml"
+  grep -q 'mobEnemyTargetingReducedRatePercentChance = 10' "$base/mobtimizations/features-customization.toml"
 done
 cmp -s "$repo_dir/client/overrides/config/servercore/config.yml" "$repo_dir/server/config/servercore/config.yml"
 cmp -s "$repo_dir/client/overrides/config/servercore/optimizations.yml" "$repo_dir/server/config/servercore/optimizations.yml"
