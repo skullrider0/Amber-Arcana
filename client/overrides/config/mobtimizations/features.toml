@@ -1,0 +1,10 @@
+# Amber & Arcana Mobtimizations feature configuration.
+[general]
+	optimizationZombieVillageRaid = true
+	optimizationMobEnemyTargeting = true
+	optimizationMobWandering = true
+	optimizationMobRepathfinding = true
+	optimizationZombieSearchAndDestroyTurtleEgg = true
+	optimizationMonsterHazardAvoidingPathfollowing = true
+	mod_ArmorSetBonuses_fixServerEffectImmunityCheckingOnNonPlayers = true
+	playerProximityReducedRate = true

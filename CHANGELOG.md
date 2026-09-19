@@ -1,3 +1,15 @@
+## 0.1.9-53 — AI population and optimization tuning
+
+- Set ServerCore MONSTER mobcap to 30 and VAMPIRISM_VAMPIRE mobcap to 10.
+- Keep Vampire Barons exempt and set other Vampirism natural-spawn acceptance to 30%.
+- Enable ServerCore reduce-sync-loads, ticking-chunk cache and fast biome lookups; keep duplicate-fluid-tick cancellation off for compatibility.
+- Enable dynamic performance control at a 35 MSPT target, adjusting chunk-tick distance 6→4 and simulation distance 6→4 while keeping mobcap percentage fixed at 100% and view distance fixed at 8.
+- Enable villager breeding/lobotomization safeguards and more aggressive XP/item merging.
+- Tune Mobtimizations: 160-tick wander delay, 8x far wander multiplier, 5% far target-search chance, 60-tick player proximity scans.
+- Keep ServerCore Entity Activation Range disabled to avoid breaking modded entity behavior.
+- Include ServerCore, Mobtimizations, ModernFix, Spark and spawn-balance configuration in the stopped-server Crafty overlay.
+- No world/player or quest data changes; run a new 4-player Spark profile after deployment.
+
 ## 0.1.9-52 — Mob AI optimization
 
 - Add Mobtimizations 1.0.1 for Forge 1.20.1 (CurseForge 974401:7594372) to client and server.

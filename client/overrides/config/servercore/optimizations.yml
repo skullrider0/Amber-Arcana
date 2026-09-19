@@ -1,0 +1,8 @@
+# Amber & Arcana tuned ServerCore 1.5.2 optimizations.
+# These require a full server restart.
+reduce-sync-loads: true
+cache-ticking-chunks: true
+fast-biome-lookups: true
+# Keep this off for broad mod compatibility; duplicate fluid ticks can be
+# gameplay-significant in heavily modded fluid/fire setups.
+cancel-duplicate-fluid-ticks: false

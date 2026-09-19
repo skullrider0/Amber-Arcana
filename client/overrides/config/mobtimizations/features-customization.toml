@@ -1,0 +1,11 @@
+# Amber & Arcana Mobtimizations tuning.
+# Nearby combat remains responsive; far-away AI searches run less often.
+[general]
+	zombieVillageRaidPercentChance = 20
+	zombieSearchAndDestroyTurtleEggPercentChance = 0
+	mobWanderingPercentChance = 100
+	mobWanderingDelay = 160
+	mobWanderingReducedRateMultiplier = 8
+	mobEnemyTargetingReducedRatePercentChance = 5
+	playerProximityReducedRateRangeCutoff = 12
+	playerProximityReducedRatePlayerScanRate = 60

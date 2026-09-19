@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-52](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-52-Client.zip) · [Download Crafty Server 0.1.9-52](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-52-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-52-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-53](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-53-Client.zip) · [Download Crafty Server 0.1.9-53](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-53-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-53-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-52 |
+| Pack | 0.1.9-53 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -185,3 +185,6 @@ Promotes the client-boot-tested More Hitboxes 1.9.2.3 patch. Typed entity querie
 
 ### 0.1.9-52 Mob AI optimization
 Adds Mobtimizations 1.0.1 and its CoroUtil 1.3.7 dependency to both client and dedicated server. This targets repeated entity AI/pathfinding/target-search work identified in Spark profiles while preserving the More Hitboxes 1.9.2.3 spatial-query patch. No world/player or quest data is changed; a post-deployment Spark comparison is recommended.
+
+### 0.1.9-53 AI population and optimization tuning
+Caps ServerCore's MONSTER category at 30 and VAMPIRISM_VAMPIRE at 10, with Vampire Barons exempt from Amber's 30% natural-spawn thinning. Enables ServerCore's safe chunk/spawn optimizations, dynamic chunk-tick/simulation reduction around a 35 MSPT target while keeping mobcap percentage at 100% and view distance at 8, villager lobotomization, wider item/XP merging, and tuned Mobtimizations far-away AI rates. Entity Activation Range remains disabled for mod compatibility. No world/player or quest data is changed.

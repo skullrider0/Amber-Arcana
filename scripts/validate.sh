@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-52" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-52" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-53" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-53" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -103,7 +103,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-52 static validation passed"
+echo "Amber & Arcana 0.1.9-53 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -461,3 +461,23 @@ test "$(jq '[.files[] | select(.projectID == 237749 and .fileID == 5096038)] | l
 test "$(awk -F '	' '$1 == "7594372" && $2 == "mobtimizations-forge-1.20.1-1.0.1.jar" && $4 == "mobtimizations" && $6 == "974401" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing Mobtimizations server pin" >&2; exit 1; }
 test "$(awk -F '	' '$1 == "5096038" && $2 == "coroutil-forge-1.20.1-1.3.7.jar" && $4 == "coroutil" && $6 == "237749" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing CoroUtil server pin" >&2; exit 1; }
 jq -e '.mobtimizations_0_1_9_52.enabled == true and .mobtimizations_0_1_9_52.world_data_touched == false and .mobtimizations_0_1_9_52.runtime_spark_retest_required == true' "$validation" >/dev/null
+
+# 0.1.9-53 AI population/performance config checks
+for base in "$repo_dir/client/overrides/config" "$repo_dir/server/config"; do
+  test -f "$base/servercore/config.yml"
+  test -f "$base/servercore/optimizations.yml"
+  test -f "$base/mobtimizations/features.toml"
+  test -f "$base/mobtimizations/features-customization.toml"
+  grep -A2 "category: 'MONSTER'" "$base/servercore/config.yml" | grep -q 'mobcap: 30'
+  grep -A2 "category: 'VAMPIRISM_VAMPIRE'" "$base/servercore/config.yml" | grep -q 'mobcap: 10'
+  grep -q 'target-mspt: 35' "$base/servercore/config.yml"
+  grep -q 'mobWanderingDelay = 160' "$base/mobtimizations/features-customization.toml"
+  grep -q 'mobEnemyTargetingReducedRatePercentChance = 5' "$base/mobtimizations/features-customization.toml"
+done
+cmp -s "$repo_dir/client/overrides/config/servercore/config.yml" "$repo_dir/server/config/servercore/config.yml"
+cmp -s "$repo_dir/client/overrides/config/servercore/optimizations.yml" "$repo_dir/server/config/servercore/optimizations.yml"
+cmp -s "$repo_dir/client/overrides/config/mobtimizations/features.toml" "$repo_dir/server/config/mobtimizations/features.toml"
+cmp -s "$repo_dir/client/overrides/config/mobtimizations/features-customization.toml" "$repo_dir/server/config/mobtimizations/features-customization.toml"
+grep -q "id === 'vampirism:vampire_baron'" "$repo_dir/server/kubejs/server_scripts/amber_arcana_spawn_balance.js"
+grep -q "Math.random() < 0.70" "$repo_dir/server/kubejs/server_scripts/amber_arcana_spawn_balance.js"
+jq -e '.performance_tuning_0_1_9_53.monster_mobcap == 30 and .performance_tuning_0_1_9_53.vampirism_vampire_mobcap == 10 and .performance_tuning_0_1_9_53.servercore_activation_range_enabled == false and .performance_tuning_0_1_9_53.world_data_touched == false' "$validation" >/dev/null

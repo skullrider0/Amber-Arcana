@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-52",
+  "pack_version": "0.1.9-53",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1659,6 +1659,34 @@
       "version": "1.3.7",
       "required_by": "mobtimizations"
     },
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
+    "world_data_touched": false,
+    "runtime_spark_retest_required": true
+  },
+  "performance_tuning_0_1_9_53": {
+    "enabled": true,
+    "reason": "4-player Spark profiles showed entity AI saturation from monster and Vampirism populations",
+    "monster_mobcap": 30,
+    "vampirism_vampire_mobcap": 10,
+    "vampirism_natural_spawn_acceptance_percent": 30,
+    "vampire_baron_spawn_thinning_exempt": true,
+    "servercore_dynamic_target_mspt": 35,
+    "servercore_dynamic_mobcap_percentage_fixed": 100,
+    "servercore_dynamic_view_distance_fixed": 8,
+    "servercore_dynamic_chunk_tick_distance": {
+      "max": 6,
+      "min": 4
+    },
+    "servercore_dynamic_simulation_distance": {
+      "max": 6,
+      "min": 4
+    },
+    "servercore_activation_range_enabled": false,
+    "mobtimizations_wander_delay_ticks": 160,
+    "mobtimizations_far_target_chance_percent": 5,
+    "mobtimizations_far_wander_multiplier": 8,
     "client_update_required": true,
     "server_update_required": true,
     "quest_progression_changed": false,
