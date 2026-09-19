@@ -1,3 +1,11 @@
+## 0.1.9-52 — Mob AI optimization
+
+- Add Mobtimizations 1.0.1 for Forge 1.20.1 (CurseForge 974401:7594372) to client and server.
+- Add required CoroUtil 1.3.7 (CurseForge 237749:5096038) to client and server.
+- Target repeated entity AI, pathfinding, avoidance, and target-search overhead seen in Spark profiles.
+- Preserve the Amber More Hitboxes 1.9.2.3 spatial-query patch.
+- No quest, world, or player-data changes; run a fresh Spark profile after deployment.
+
 ## 0.1.9-51 — More Hitboxes spatial-query performance patch
 
 - Promote the boot-tested Amber More Hitboxes patch to 1.9.2.3.

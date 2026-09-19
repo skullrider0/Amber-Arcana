@@ -1,5 +1,5 @@
 {
-  "mod_files": 279,
+  "mod_files": 281,
   "shader_files": 1,
   "chapters": 28,
   "manual_quests": 495,
@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-51",
+  "pack_version": "0.1.9-52",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1640,6 +1640,28 @@
     "client_boot_test_result": "Reached Minecraft main menu on Forge 47.4.10",
     "client_update_required": true,
     "server_update_required": true,
+    "world_data_touched": false,
+    "runtime_spark_retest_required": true
+  },
+  "mobtimizations_0_1_9_52": {
+    "enabled": true,
+    "reason": "Reduce entity AI/pathfinding and targeting overhead identified by Spark profiling",
+    "mobtimizations": {
+      "project_id": 974401,
+      "file_id": 7594372,
+      "filename": "mobtimizations-forge-1.20.1-1.0.1.jar",
+      "version": "1.0.1"
+    },
+    "coroutil": {
+      "project_id": 237749,
+      "file_id": 5096038,
+      "filename": "coroutil-forge-1.20.1-1.3.7.jar",
+      "version": "1.3.7",
+      "required_by": "mobtimizations"
+    },
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
     "world_data_touched": false,
     "runtime_spark_retest_required": true
   }

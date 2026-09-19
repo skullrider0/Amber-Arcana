@@ -4,18 +4,18 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-51](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-51-Client.zip) · [Download Crafty Server 0.1.9-51](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-51-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-51-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-52](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-52-Client.zip) · [Download Crafty Server 0.1.9-52](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-52-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-52-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-51 |
+| Pack | 0.1.9-52 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
-| Client manifest entries | 294 + 1 local patched JAR |
-| Server managed mod entries | 274 |
+| Client manifest entries | 296 + 1 local patched JAR |
+| Server managed mod entries | 276 |
 | Quests | 334 across 28 chapters |
 
 Release 0.1.9-25 keeps JEI 15.20.0.106 on client and server and replaces stock More Hitboxes 1.9.2 with the Amber `1.9.2.1` performance patch required by Fossils and Archeology Revival 9.3.4.0.
@@ -182,3 +182,6 @@ Upgrades Amber's local More Hitboxes patch to 1.9.2.2. The Forge typed-entity-qu
 
 ### 0.1.9-51 More Hitboxes spatial-query performance patch
 Promotes the client-boot-tested More Hitboxes 1.9.2.3 patch. Typed entity queries now use a per-tick spatial chunk-bucket index instead of walking the full level-wide MoreHitboxes multipart set for every AI query. Fossils and Archeology Revival compatibility is preserved, as are the official More Hitboxes 1.9.2 client mixin/refmap. The client test build reached the Minecraft main menu on Forge 47.4.10. World/player data and quest progression are unchanged; a post-deployment Spark comparison is still required.
+
+### 0.1.9-52 Mob AI optimization
+Adds Mobtimizations 1.0.1 and its CoroUtil 1.3.7 dependency to both client and dedicated server. This targets repeated entity AI/pathfinding/target-search work identified in Spark profiles while preserving the More Hitboxes 1.9.2.3 spatial-query patch. No world/player or quest data is changed; a post-deployment Spark comparison is recommended.
