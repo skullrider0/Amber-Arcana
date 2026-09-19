@@ -88,7 +88,7 @@ mob-spawning:
 
     - category: 'CREATURE'
       mobcap: 10
-      spawn-interval: 100
+      spawn-interval: 400
 
     - category: 'AMBIENT'
       mobcap: 15
@@ -116,7 +116,7 @@ mob-spawning:
 
     - category: 'VAMPIRISM_VAMPIRE'
       mobcap: 10
-      spawn-interval: 4
+      spawn-interval: 1
 
     - category: 'WEREWOLVES_WEREWOLF'
       mobcap: 8
@@ -421,6 +421,7 @@ Caps ServerCore's MONSTER category at 30 and VAMPIRISM_VAMPIRE at 10, with Vampi
 
     path = ROOT / "CHANGELOG.md"
     text = path.read_text(encoding="utf-8")
+    text = text.replace("5% far target-search chance", "10% far target-search chance")
     if "## 0.1.9-53" not in text:
         entry = """## 0.1.9-53 — AI population and optimization tuning
 
@@ -445,6 +446,7 @@ def patch_validator() -> None:
     text = text.replace('.version == "0.1.9-52"', '.version == "0.1.9-53"', 1)
     text = text.replace('.pack_version == "0.1.9-52"', '.pack_version == "0.1.9-53"', 1)
     text = text.replace('Amber & Arcana 0.1.9-52 static validation passed', 'Amber & Arcana 0.1.9-53 static validation passed', 1)
+    text = text.replace("mobEnemyTargetingReducedRatePercentChance = 5", "mobEnemyTargetingReducedRatePercentChance = 10")
 
     block = r'''
 # 0.1.9-53 AI population/performance config checks
