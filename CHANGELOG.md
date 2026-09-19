@@ -1,3 +1,13 @@
+## 0.1.9-51 — More Hitboxes spatial-query performance patch
+
+- Promote the boot-tested Amber More Hitboxes patch to 1.9.2.3.
+- Replace the level-wide typed-query multipart scan with a once-per-tick spatial chunk-bucket index.
+- Preserve Fossils and Archeology Revival's required More Hitboxes dependency and multipart hit behavior.
+- Preserve the official More Hitboxes 1.9.2 client MinecraftMixin and refmap.
+- Remove stale 1.9.2, 1.9.2.1 and 1.9.2.2 local patch JARs during Crafty updates.
+- Client boot test passed on Minecraft 1.20.1 / Forge 47.4.10.
+- No quest, world, or player-data changes; runtime Spark comparison remains required.
+
 ## 0.1.9-50 — More Hitboxes query-cache performance patch
 
 - Upgrade the local More Hitboxes patch from 1.9.2.1 to 1.9.2.2.

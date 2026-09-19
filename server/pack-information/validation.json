@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-50",
+  "pack_version": "0.1.9-51",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1622,6 +1622,22 @@
     "unrelated_part_entities_excluded_from_hot_loop": true,
     "fossils_dependency_preserved": true,
     "client_mixin_and_refmap_preserved_from_official_1_9_2": true,
+    "client_update_required": true,
+    "server_update_required": true,
+    "world_data_touched": false,
+    "runtime_spark_retest_required": true
+  },
+  "more_hitboxes_spatial_cache_0_1_9_51": {
+    "enabled": true,
+    "upstream_morehitboxes_version": "1.9.2",
+    "amber_patch_version": "1.9.2.3",
+    "jar": "morehitboxes-forge-1.20.1-1.9.2.3.jar",
+    "sha512": "cc00a22593cb4c12bf9c16479629697fe1024949334143a4f904bab793faf9f3e72dda2a1daa556d8cf5c52dc72c603c1ba454d01458139736155e58a3041677",
+    "optimization": "Spatially index MoreHitboxes multipart entities once per level tick and query only overlapping chunk buckets",
+    "fossils_dependency_preserved": true,
+    "client_mixin_and_refmap_preserved_from_official_1_9_2": true,
+    "client_boot_tested": true,
+    "client_boot_test_result": "Reached Minecraft main menu on Forge 47.4.10",
     "client_update_required": true,
     "server_update_required": true,
     "world_data_touched": false,

@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-50](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-50-Client.zip) · [Download Crafty Server 0.1.9-50](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-50-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-50-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-51](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-51-Client.zip) · [Download Crafty Server 0.1.9-51](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-51-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-51-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-50 |
+| Pack | 0.1.9-51 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -179,3 +179,6 @@ Removes Mowzie's Mobs and Untamed Wilds from client and server after the latest 
 
 ### 0.1.9-50 More Hitboxes query-cache performance patch
 Upgrades Amber's local More Hitboxes patch to 1.9.2.2. The Forge typed-entity-query hook now snapshots only More Hitboxes-owned multipart pieces once per level tick instead of rescanning every Forge PartEntity on every query. This keeps Fossils multipart hitboxes while preventing unrelated multipart mobs such as Ice & Fire dragons from multiplying normal mob-AI query cost. Client mixins/refmap remain based on the official More Hitboxes 1.9.2 JAR. World/player data and quest progression are unchanged.
+
+### 0.1.9-51 More Hitboxes spatial-query performance patch
+Promotes the client-boot-tested More Hitboxes 1.9.2.3 patch. Typed entity queries now use a per-tick spatial chunk-bucket index instead of walking the full level-wide MoreHitboxes multipart set for every AI query. Fossils and Archeology Revival compatibility is preserved, as are the official More Hitboxes 1.9.2 client mixin/refmap. The client test build reached the Minecraft main menu on Forge 47.4.10. World/player data and quest progression are unchanged; a post-deployment Spark comparison is still required.
