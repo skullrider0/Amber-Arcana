@@ -329,9 +329,10 @@ def patch_spawn_balance() -> None:
     return
   }
 """
-    if old_global not in text:
-        raise SystemExit("Expected spawn-balance global block not found")
-    text = text.replace(old_global, new_global)
+    if "if (id === 'vampirism:vampire_baron')" not in text:
+        if old_global not in text:
+            raise SystemExit("Expected spawn-balance global block not found")
+        text = text.replace(old_global, new_global)
 
     old_vamp = """  // Vampirism: halve surviving natural spawns again.
   // Combined with the global layer, ~25% of unpatched attempts pass.
