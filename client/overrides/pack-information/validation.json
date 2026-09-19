@@ -308,7 +308,7 @@
     },
     "servercore_activation_range_enabled": false,
     "mobtimizations_wander_delay_ticks": 160,
-    "mobtimizations_far_target_chance_percent": 5,
+    "mobtimizations_far_target_chance_percent": 10,
     "mobtimizations_far_wander_multiplier": 8,
     "client_update_required": true,
     "server_update_required": true,

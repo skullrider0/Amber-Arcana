@@ -6,6 +6,6 @@
 	mobWanderingPercentChance = 100
 	mobWanderingDelay = 160
 	mobWanderingReducedRateMultiplier = 8
-	mobEnemyTargetingReducedRatePercentChance = 5
+	mobEnemyTargetingReducedRatePercentChance = 10
 	playerProximityReducedRateRangeCutoff = 12
 	playerProximityReducedRatePlayerScanRate = 60

@@ -472,7 +472,7 @@ for base in "$repo_dir/client/overrides/config" "$repo_dir/server/config"; do
   grep -A2 "category: 'VAMPIRISM_VAMPIRE'" "$base/servercore/config.yml" | grep -q 'mobcap: 10'
   grep -q 'target-mspt: 35' "$base/servercore/config.yml"
   grep -q 'mobWanderingDelay = 160' "$base/mobtimizations/features-customization.toml"
-  grep -q 'mobEnemyTargetingReducedRatePercentChance = 5' "$base/mobtimizations/features-customization.toml"
+  grep -q 'mobEnemyTargetingReducedRatePercentChance = 10' "$base/mobtimizations/features-customization.toml"
 done
 cmp -s "$repo_dir/client/overrides/config/servercore/config.yml" "$repo_dir/server/config/servercore/config.yml"
 cmp -s "$repo_dir/client/overrides/config/servercore/optimizations.yml" "$repo_dir/server/config/servercore/optimizations.yml"
