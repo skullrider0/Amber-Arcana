@@ -87,6 +87,9 @@ python3 "$repo_dir/scripts/hotfix-morehitboxes-query-cache-0.1.9-50.py"
 # 0.1.9-51 promotes the boot-tested spatial MoreHitboxes query index.
 python3 "$repo_dir/scripts/hotfix-morehitboxes-spatial-cache-0.1.9-51.py"
 
+# 0.1.9-52 adds Mobtimizations and required CoroUtil to both sides after Spark profiling.
+python3 "$repo_dir/scripts/hotfix-mobtimizations-0.1.9-52.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 
