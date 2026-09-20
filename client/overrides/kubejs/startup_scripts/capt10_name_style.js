@@ -50,3 +50,31 @@ ForgeEvents.onEvent(
     }
   }
 )
+
+
+// FTB Essentials maintains its own client-side tab-name cache and can overwrite
+// Forge's normal tab-list display name after login. Reapply only Capt10's tab
+// entry periodically; this does not touch any other player's FTB/Vampirism data.
+const $Minecraft = Java.loadClass('net.minecraft.client.Minecraft')
+let amberArcanaCapt10TabTicks = 0
+
+ForgeEvents.onEvent('net.minecraftforge.event.TickEvent$ClientTickEvent', event => {
+  amberArcanaCapt10TabTicks++
+  if ((amberArcanaCapt10TabTicks % 40) !== 0) {
+    return
+  }
+
+  const connection = $Minecraft.getInstance().getConnection()
+  if (connection == null) {
+    return
+  }
+
+  const online = connection.getOnlinePlayers().toArray()
+  for (let i = 0; i < online.length; i++) {
+    const info = online[i]
+    if (String(info.getProfile().getName()) === CAPT10_TARGET_NAME) {
+      info.setTabListDisplayName(amberArcanaCapt10StyledName())
+      break
+    }
+  }
+})
