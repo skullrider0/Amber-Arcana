@@ -1,3 +1,4 @@
+console.info('[AmberArcana] Capt10 name style script loaded: server/kubejs/startup_scripts/capt10_name_style.js')
 // Amber & Arcana - Capt10_america display-name override
 // Keeps Vampirism faction coloring enabled for everyone else.
 // This uses explicit per-character styles so Vampirism's later faction color
