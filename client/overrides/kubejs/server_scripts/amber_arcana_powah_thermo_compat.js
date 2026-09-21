@@ -1,9 +1,9 @@
 // Amber & Arcana - Powah Thermo Generator cross-mod compatibility
 // Minecraft 1.20.1 / Forge / Powah 5.0.11
 //
-// Dragon's Breath is intentionally a modest enhanced coolant.
-// Blazing Blood is a stronger heat source than magma, but below Powah's
-// Blazing Crystal Block, keeping the cross-mod combo useful without being extreme.
+// Custom Amber & Arcana thermo balance:
+// - Create: Dragons Plus Dragon's Breath coolant: -20 C
+// - Tinkers' Construct Blazing Blood heat source: 3500
 
 const $PowahAPI = Java.loadClass('owmii.powah.api.PowahAPI')
 const $ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
@@ -22,24 +22,21 @@ function aaBlock(id) {
 }
 
 // Create: Dragons Plus - Liquid Dragon's Breath
-// Powah coolant temperature: -5 C.
-// Powah 5.0.9+ uses coolant temperature in Thermo Generator generation,
-// making this a modest upgrade over water without creating a huge multiplier.
+// Registered as a high-end Thermo Generator coolant at -20 C.
 const dragonBreath = aaFluid('create_dragons_plus:dragon_breath')
 if (dragonBreath != null) {
-  $PowahAPI.registerCoolant(dragonBreath, -5)
-  console.info("[Amber & Arcana] Powah compat: create_dragons_plus:dragon_breath registered as Thermo Generator coolant (-5 C).")
+  $PowahAPI.registerCoolant(dragonBreath, -20)
+  console.info("[Amber & Arcana] Powah compat: create_dragons_plus:dragon_breath registered as Thermo Generator coolant (-20 C).")
 } else {
   console.warn("[Amber & Arcana] Powah compat: create_dragons_plus:dragon_breath was not found; coolant registration skipped.")
 }
 
 // Tinkers' Construct - Blazing Blood
-// Heat 1500: hotter than the usual magma-block class of heat source,
-// but intentionally below Powah's high-end Blazing Crystal Block.
+// Registered as a very high-temperature Thermo Generator heat source at 3500.
 const blazingBlood = aaBlock('tconstruct:blazing_blood')
 if (blazingBlood != null) {
-  $PowahAPI.registerHeatSource(blazingBlood, 1500)
-  console.info("[Amber & Arcana] Powah compat: tconstruct:blazing_blood registered as Thermo Generator heat source (1500).")
+  $PowahAPI.registerHeatSource(blazingBlood, 3500)
+  console.info("[Amber & Arcana] Powah compat: tconstruct:blazing_blood registered as Thermo Generator heat source (3500).")
 } else {
   console.warn("[Amber & Arcana] Powah compat: tconstruct:blazing_blood block was not found; heat-source registration skipped.")
 }
