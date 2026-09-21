@@ -1,3 +1,12 @@
+## 0.1.9-54 — Powah Thermo compatibility
+
+- Register Create: Central Kitchen `create_central_kitchen:dragon_breath` as Powah Thermo coolant -20.
+- Register Tinkers' Construct placed Blazing Blood block `tconstruct:blazing_blood_fluid` as Powah Thermo heat source 3500.
+- Defer the registrations to `StartupEvents.postInit` so Forge's modded fluid/block registries are populated.
+- Add a client-only JEI display recipe for `tconstruct:blazing_blood` at 3500 without mutating Powah's internal heat-source map.
+- Include the Powah startup compatibility script in the world-safe Crafty update overlay.
+- Client and server both need the matching update; no world/player or quest data is changed.
+
 ## 0.1.9-53 — AI population and optimization tuning
 
 - Set ServerCore MONSTER mobcap to 30 and VAMPIRISM_VAMPIRE mobcap to 10.

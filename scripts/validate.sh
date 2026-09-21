@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-53" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-53" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-54" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-54" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -103,7 +103,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-53 static validation passed"
+echo "Amber & Arcana 0.1.9-54 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -481,3 +481,23 @@ cmp -s "$repo_dir/client/overrides/config/mobtimizations/features-customization.
 grep -q "id === 'vampirism:vampire_baron'" "$repo_dir/server/kubejs/server_scripts/amber_arcana_spawn_balance.js"
 grep -q "Math.random() < 0.70" "$repo_dir/server/kubejs/server_scripts/amber_arcana_spawn_balance.js"
 jq -e '.performance_tuning_0_1_9_53.monster_mobcap == 30 and .performance_tuning_0_1_9_53.vampirism_vampire_mobcap == 10 and .performance_tuning_0_1_9_53.servercore_activation_range_enabled == false and .performance_tuning_0_1_9_53.world_data_touched == false' "$validation" >/dev/null
+
+# 0.1.9-54 Powah Thermo compatibility checks
+client_powah="$repo_dir/client/overrides/kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js"
+server_powah="$repo_dir/server/kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js"
+client_powah_jei="$repo_dir/client/overrides/kubejs/client_scripts/amber_arcana_powah_jei_compat.js"
+test -f "$client_powah" && test -f "$server_powah" && test -f "$client_powah_jei" || { echo "Powah compatibility scripts missing" >&2; exit 1; }
+cmp -s "$client_powah" "$server_powah" || { echo "Client/server Powah startup scripts differ" >&2; exit 1; }
+grep -Fq "StartupEvents.postInit" "$client_powah" || { echo "Powah compatibility is not post-init" >&2; exit 1; }
+grep -Fq "create_central_kitchen', 'dragon_breath" "$client_powah" || { echo "Central Kitchen Dragon Breath coolant ID missing" >&2; exit 1; }
+grep -Fq "tconstruct', 'blazing_blood_fluid" "$client_powah" || { echo "Blazing Blood block heat-source ID missing" >&2; exit 1; }
+grep -Fq "registerCoolant(dragonBreathId, -20)" "$client_powah" || { echo "Dragon Breath -20 coolant value missing" >&2; exit 1; }
+grep -Fq "registerHeatSource(blazingBloodBlockId, 3500)" "$client_powah" || { echo "Blazing Blood 3500 heat value missing" >&2; exit 1; }
+grep -Fq "HeatSourceCategory\$Recipe" "$client_powah_jei" || { echo "Safe Powah JEI recipe injection missing" >&2; exit 1; }
+grep -Fq "tconstruct', 'blazing_blood" "$client_powah_jei" || { echo "Blazing Blood JEI fluid ID missing" >&2; exit 1; }
+jq -e '.powah_thermo_compat_0_1_9_54.enabled == true and .powah_thermo_compat_0_1_9_54.coolant_value == -20 and .powah_thermo_compat_0_1_9_54.heat_value == 3500 and .powah_thermo_compat_0_1_9_54.client_jei_direct_recipe_injection == true and .powah_thermo_compat_0_1_9_54.world_data_touched == false' "$validation" >/dev/null
+
+test "$(unzip -Z1 "$update_overlay" | grep -Fxc 'kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js')" = "1" || { echo "Crafty update overlay missing Powah startup compatibility" >&2; exit 1; }
+test "$(unzip -Z1 "$repo_dir/dist/Amber-and-Arcana-${version}-Client.zip" | grep -Fxc 'overrides/kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js')" = "1" || { echo "Client ZIP missing Powah startup compatibility" >&2; exit 1; }
+test "$(unzip -Z1 "$repo_dir/dist/Amber-and-Arcana-${version}-Client.zip" | grep -Fxc 'overrides/kubejs/client_scripts/amber_arcana_powah_jei_compat.js')" = "1" || { echo "Client ZIP missing Powah JEI compatibility" >&2; exit 1; }
+test "$(unzip -Z1 "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip" | grep -Fxc 'kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js')" = "1" || { echo "Server ZIP missing Powah startup compatibility" >&2; exit 1; }

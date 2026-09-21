@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-53",
+  "pack_version": "0.1.9-54",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -315,5 +315,20 @@
     "quest_progression_changed": false,
     "world_data_touched": false,
     "runtime_spark_retest_required": true
+  },
+  "powah_thermo_compat_0_1_9_54": {
+    "enabled": true,
+    "powah_version": "5.0.11",
+    "coolant_fluid": "create_central_kitchen:dragon_breath",
+    "coolant_value": -20,
+    "heat_source_block": "tconstruct:blazing_blood_fluid",
+    "heat_value": 3500,
+    "jei_display_fluid": "tconstruct:blazing_blood",
+    "startup_event": "StartupEvents.postInit",
+    "client_jei_direct_recipe_injection": true,
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
+    "world_data_touched": false
   }
 }

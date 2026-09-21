@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-53",
+  "pack_version": "0.1.9-54",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 296,
@@ -1567,7 +1567,7 @@
     "client_server_quest_files_identical": true,
     "acyclic_validator": "scripts/validate-quest-graph.py"
   },
-  "version": "0.1.9-53",
+  "version": "0.1.9-54",
   "vampirism_expansion_0_1_9_46": {
     "addons_added": 7,
     "addon_pins": [
@@ -1737,5 +1737,20 @@
     "quest_progression_changed": false,
     "world_data_touched": false,
     "runtime_spark_retest_required": true
+  },
+  "powah_thermo_compat_0_1_9_54": {
+    "enabled": true,
+    "powah_version": "5.0.11",
+    "coolant_fluid": "create_central_kitchen:dragon_breath",
+    "coolant_value": -20,
+    "heat_source_block": "tconstruct:blazing_blood_fluid",
+    "heat_value": 3500,
+    "jei_display_fluid": "tconstruct:blazing_blood",
+    "startup_event": "StartupEvents.postInit",
+    "client_jei_direct_recipe_injection": true,
+    "client_update_required": true,
+    "server_update_required": true,
+    "quest_progression_changed": false,
+    "world_data_touched": false
   }
 }
