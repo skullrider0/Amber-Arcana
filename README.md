@@ -197,3 +197,6 @@ Based on the 2026-09-21 server log, ServerCore now reacts sooner to sustained ch
 
 ### 0.1.9-55 Powah Thermo compatibility
 Adds Create: Central Kitchen Dragon's Breath as a Powah Thermo Generator coolant at -20 and Tinkers' Construct Blazing Blood as a placed heat source at 3500. Registrations run at KubeJS post-init so modded registries are populated first. A separate client-only JEI recipe injection displays Blazing Blood without altering Powah's internal heat-source map. The Crafty update overlay now includes the required KubeJS startup script. No world, player, or quest data is changed.
+
+### 0.1.9-55 Powah Thermo compatibility
+Adds Create: Central Kitchen Dragon's Breath as a Powah Thermo Generator coolant at -20 and Tinkers' Construct Blazing Blood as a placed heat source at 3500. Registrations run at KubeJS post-init so modded registries are populated first. A separate client-only JEI recipe injection displays Blazing Blood without altering Powah's internal heat-source map. The Crafty update overlay now includes the required KubeJS startup script. No world, player, or quest data is changed.
