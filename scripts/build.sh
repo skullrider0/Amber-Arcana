@@ -93,6 +93,10 @@ python3 "$repo_dir/scripts/hotfix-mobtimizations-0.1.9-52.py"
 # 0.1.9-53 tunes ServerCore/Mobtimizations and lowers monster/Vampirism mobcaps after 4-player Spark profiling.
 python3 "$repo_dir/scripts/hotfix-performance-tuning-0.1.9-53.py"
 
+# 0.1.9-54 adds Powah Thermo Generator compatibility for Central Kitchen
+# Dragon's Breath and Tinkers' Blazing Blood, including the client JEI display fix.
+python3 "$repo_dir/scripts/hotfix-powah-thermo-compat-0.1.9-54.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 
@@ -124,7 +128,7 @@ rm -f "$update_overlay" "$legacy_overlay" "$quest_overlay" "$quest_spawn_overlay
   cd "$repo_dir/server"
   test -f "mods/$patch_jar" || { echo "Missing patched More Hitboxes jar: server/mods/$patch_jar" >&2; exit 1; }
   test -f "AmberArcana-Crafty-Launcher.jar" || { echo "Missing rebuilt Crafty launcher" >&2; exit 1; }
-  zip -qr "$update_overlay" AmberArcana-Crafty-Launcher.jar _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests config/servercore config/mobtimizations config/modernfix-mixins.properties config/spark kubejs/data kubejs/assets kubejs/server_scripts/amber_arcana_spawn_balance.js _crafty/build-summary.json pack-information/validation.json
+  zip -qr "$update_overlay" AmberArcana-Crafty-Launcher.jar _crafty/server-mods.tsv _crafty/remove-mods.txt "mods/$patch_jar" config/ftbquests/quests config/servercore config/mobtimizations config/modernfix-mixins.properties config/spark kubejs/data kubejs/assets kubejs/server_scripts/amber_arcana_spawn_balance.js kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js _crafty/build-summary.json pack-information/validation.json
 )
 cp "$update_overlay" "$legacy_overlay"
 
