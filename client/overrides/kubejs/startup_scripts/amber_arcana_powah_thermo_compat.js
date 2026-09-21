@@ -17,6 +17,7 @@ const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltIn
 StartupEvents.postInit(event => {
   const dragonBreathId = new $ResourceLocation('create_central_kitchen', 'dragon_breath')
   const blazingBloodBlockId = new $ResourceLocation('tconstruct', 'blazing_blood_fluid')
+  const blazingBloodFluidId = new $ResourceLocation('tconstruct', 'blazing_blood')
 
   // Create: Central Kitchen - Liquid Dragon's Breath
   // Powah 5.0.11 cooling ratio at -20 = (1 + abs(-20)) / 2 = 10.5x.
@@ -30,6 +31,19 @@ StartupEvents.postInit(event => {
   // Tinkers' Construct - Blazing Blood placed-fluid block.
   if ($BuiltInRegistries.BLOCK.containsKey(blazingBloodBlockId)) {
     $PowahAPI.registerHeatSource(blazingBloodBlockId, 3500)
+
+    // Powah 5.0.11's JEI heat-source page only discovers liquid heat sources
+    // from HEAT_SOURCES entries keyed by the fluid registry ID. The placed
+    // Tinkers liquid block has no BlockItem, so it is otherwise invisible in JEI.
+    // Keep the block registration above for actual Thermo Generator behavior,
+    // and mirror the same value under the fluid ID for JEI display.
+    if ($BuiltInRegistries.FLUID.containsKey(blazingBloodFluidId)) {
+      $PowahAPI.HEAT_SOURCES.put(blazingBloodFluidId, 3500)
+      console.info("[Amber & Arcana] Powah compat POST-INIT: tconstruct:blazing_blood mirrored into Powah heat-source map for JEI (3500).")
+    } else {
+      console.warn("[Amber & Arcana] Powah compat POST-INIT: tconstruct:blazing_blood fluid is missing; JEI heat-source entry was not added.")
+    }
+
     console.info("[Amber & Arcana] Powah compat POST-INIT: tconstruct:blazing_blood_fluid registered as Thermo heat source (3500).")
   } else {
     console.warn("[Amber & Arcana] Powah compat POST-INIT: tconstruct:blazing_blood_fluid is still missing from the block registry.")
