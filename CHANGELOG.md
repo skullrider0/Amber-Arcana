@@ -1,3 +1,13 @@
+## 0.1.9-55 — Chunk-load performance tuning
+
+- Lower ServerCore's dynamic target from 35 to 30 MSPT so load shedding starts before tick debt becomes severe.
+- Allow chunk-tick and simulation distances to fall from 6 to 3 under sustained load, with faster adjustment intervals.
+- Allow view distance to fall from 8 to 6 only while overloaded; it returns toward 8 after recovery.
+- Extend autosaves from 5 to 10 minutes to reduce save pressure during exploration.
+- Keep MONSTER 30, VAMPIRISM_VAMPIRE 10, spawner behavior, quests, and MoreHitboxes 1.9.2.3 unchanged.
+- Keep Mowzie's Mobs and Untamed Wilds removed; their log warnings are stale world data being discarded as chunks load.
+- No world or player data is included or modified.
+
 ## 0.1.9-54 — Powah Thermo compatibility
 
 - Register Create: Central Kitchen `create_central_kitchen:dragon_breath` as Powah Thermo coolant -20.

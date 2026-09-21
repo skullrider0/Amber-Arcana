@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-54",
+  "pack_version": "0.1.9-55",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -328,6 +328,34 @@
     "client_jei_direct_recipe_injection": true,
     "client_update_required": true,
     "server_update_required": true,
+    "quest_progression_changed": false,
+    "world_data_touched": false
+  },
+  "chunk_load_performance_0_1_9_55": {
+    "enabled": true,
+    "source_log": "2026-09-21-5.log.gz",
+    "sustained_tick_debt_seconds_max": 19.233,
+    "cause_class": "distant chunk loading and legacy removed-mod world data",
+    "target_mspt": 30,
+    "chunk_tick_distance": {
+      "max": 6,
+      "min": 3,
+      "interval_seconds": 10
+    },
+    "simulation_distance": {
+      "max": 6,
+      "min": 3,
+      "interval_seconds": 15
+    },
+    "view_distance": {
+      "max": 8,
+      "min": 6,
+      "interval_seconds": 30
+    },
+    "autosave_interval_seconds": 600,
+    "removed_mods_restored": false,
+    "more_hitboxes_patch_preserved": true,
+    "mobcaps_changed": false,
     "quest_progression_changed": false,
     "world_data_touched": false
   }

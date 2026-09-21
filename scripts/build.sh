@@ -97,6 +97,9 @@ python3 "$repo_dir/scripts/hotfix-performance-tuning-0.1.9-53.py"
 # Dragon's Breath and Tinkers' Blazing Blood, including the client JEI display fix.
 python3 "$repo_dir/scripts/hotfix-powah-thermo-compat-0.1.9-54.py"
 
+# 0.1.9-55 reacts sooner to the sustained chunk-load stalls in the 2026-09-21 log.
+python3 "$repo_dir/scripts/hotfix-chunk-load-performance-0.1.9-55.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 

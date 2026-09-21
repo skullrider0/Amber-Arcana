@@ -4,7 +4,7 @@
 
 features:
   prevent-moving-into-unloaded-chunks: true
-  autosave-interval-seconds: 300
+  autosave-interval-seconds: 600
   xp-merge-fraction: 8
   xp-merge-radius: 3.0
   item-merge-radius: 2.0
@@ -14,7 +14,7 @@ features:
 
 dynamic:
   enabled: true
-  target-mspt: 35
+  target-mspt: 30
   dynamic-settings:
     # Keep the requested mob caps fixed; do not stack a dynamic percentage on top.
     - setting: 'MOBCAP_PERCENTAGE'
@@ -26,22 +26,22 @@ dynamic:
     # Reduce active chunk work before touching simulation distance.
     - setting: 'CHUNK_TICK_DISTANCE'
       max: 6
-      min: 4
+      min: 3
       increment: 1
-      interval: 15
+      interval: 10
 
     - setting: 'SIMULATION_DISTANCE'
       max: 6
-      min: 4
+      min: 3
       increment: 1
-      interval: 30
+      interval: 15
 
-    # Keep the visible server view distance fixed at the existing 8 chunks.
+    # Preserve an 8-chunk maximum, but shed distant chunk delivery under sustained load.
     - setting: 'VIEW_DISTANCE'
       max: 8
-      min: 8
+      min: 6
       increment: 1
-      interval: 300
+      interval: 30
 
 breeding-cap:
   enabled: true

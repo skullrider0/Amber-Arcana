@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-54" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-54" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-55" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-55" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -103,7 +103,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-54 static validation passed"
+echo "Amber & Arcana 0.1.9-55 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -470,7 +470,7 @@ for base in "$repo_dir/client/overrides/config" "$repo_dir/server/config"; do
   test -f "$base/mobtimizations/features-customization.toml"
   grep -A2 "category: 'MONSTER'" "$base/servercore/config.yml" | grep -q 'mobcap: 30'
   grep -A2 "category: 'VAMPIRISM_VAMPIRE'" "$base/servercore/config.yml" | grep -q 'mobcap: 10'
-  grep -q 'target-mspt: 35' "$base/servercore/config.yml"
+  grep -q 'target-mspt: 30' "$base/servercore/config.yml"
   grep -q 'mobWanderingDelay = 160' "$base/mobtimizations/features-customization.toml"
   grep -q 'mobEnemyTargetingReducedRatePercentChance = 10' "$base/mobtimizations/features-customization.toml"
 done
@@ -501,3 +501,13 @@ test "$(unzip -Z1 "$update_overlay" | grep -Fxc 'kubejs/startup_scripts/amber_ar
 test "$(unzip -Z1 "$repo_dir/dist/Amber-and-Arcana-${version}-Client.zip" | grep -Fxc 'overrides/kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js')" = "1" || { echo "Client ZIP missing Powah startup compatibility" >&2; exit 1; }
 test "$(unzip -Z1 "$repo_dir/dist/Amber-and-Arcana-${version}-Client.zip" | grep -Fxc 'overrides/kubejs/client_scripts/amber_arcana_powah_jei_compat.js')" = "1" || { echo "Client ZIP missing Powah JEI compatibility" >&2; exit 1; }
 test "$(unzip -Z1 "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip" | grep -Fxc 'kubejs/startup_scripts/amber_arcana_powah_thermo_compat.js')" = "1" || { echo "Server ZIP missing Powah startup compatibility" >&2; exit 1; }
+
+
+# 0.1.9-55 chunk-load performance checks
+client_sc="$repo_dir/client/overrides/config/servercore/config.yml"
+server_sc="$repo_dir/server/config/servercore/config.yml"
+cmp -s "$client_sc" "$server_sc" || { echo "Client/server ServerCore configs differ" >&2; exit 1; }
+grep -Fq 'target-mspt: 30' "$server_sc" || { echo "30 MSPT target missing" >&2; exit 1; }
+test "$(grep -c 'min: 3' "$server_sc")" -ge 2 || { echo "Dynamic chunk/simulation minimums missing" >&2; exit 1; }
+grep -Fq 'autosave-interval-seconds: 600' "$server_sc" || { echo "Autosave tuning missing" >&2; exit 1; }
+jq -e '.chunk_load_performance_0_1_9_55.enabled == true and .chunk_load_performance_0_1_9_55.more_hitboxes_patch_preserved == true and .chunk_load_performance_0_1_9_55.mobcaps_changed == false and .chunk_load_performance_0_1_9_55.world_data_touched == false' "$validation" >/dev/null
