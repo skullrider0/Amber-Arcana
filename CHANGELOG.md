@@ -1,3 +1,12 @@
+## 0.1.9-57 — Startup data repairs, pass two
+
+- Correct registered ServerCore category names for Rats, Vampirism, and Werewolves.
+- Repair all six malformed NTGL T45 equipment definitions.
+- Repair the Buddycards and Reborn Storage Patchouli book descriptors.
+- Disable one malformed Create/Alex's Caves compatibility recipe.
+- Neutralize 36 unparseable upstream loot tables that already produced no loot.
+- No world or player data is included or modified.
+
 ## 0.1.9-56 — Startup data repairs
 
 - Disable 14 malformed upstream recipes before their broken serializers run.

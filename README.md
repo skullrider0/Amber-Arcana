@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-56](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-56-Client.zip) · [Download Crafty Server 0.1.9-56](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-56-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-56-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-57](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-57-Client.zip) · [Download Crafty Server 0.1.9-57](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-57-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-57-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-56 |
+| Pack | 0.1.9-57 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -38,17 +38,17 @@ The More Hitboxes patch changes only the expensive global `Level` entity-query b
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-56-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
+Import `dist/Amber-and-Arcana-0.1.9-57-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
 
 ### Fresh Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-56-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-57-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a complete server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 
 ### Existing Crafty server
 
-Stop the server and extract `dist/Amber-and-Arcana-0.1.9-56-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
+Stop the server and extract `dist/Amber-and-Arcana-0.1.9-57-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
 
 For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-49.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
 
@@ -197,3 +197,6 @@ Based on the 2026-09-21 server log, ServerCore now reacts sooner to sustained ch
 
 ### 0.1.9-56 startup data repairs
 Disables 14 malformed upstream recipes and replaces four invalid advancements with inert, valid definitions. The fixes are mirrored on client and server. Modded ServerCore mob-cap entries remain enabled; its early registration warning is retained rather than silently dropping the configured rat, vampire, and werewolf caps. No world or player data is changed.
+
+### 0.1.9-57 startup data repairs, pass two
+Repairs four registered ServerCore category names, six NTGL T45 definitions, and two Patchouli book descriptors. Disables one malformed compatibility recipe and replaces currently unparseable upstream loot tables with valid empty tables, matching their previous effective behavior while removing reload error spam. No world or player data is changed.

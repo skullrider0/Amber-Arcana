@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-56",
+  "pack_version": "0.1.9-57",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1742,6 +1742,14 @@
     "disabled_malformed_recipes": 14,
     "replaced_invalid_advancements": 4,
     "servercore_modded_caps_preserved": true,
+    "world_data_touched": false
+  },
+  "startup_data_repairs_0_1_9_57": {
+    "enabled": true,
+    "empty_broken_loot_tables": 36,
+    "ntgl_t45_definitions_repaired": 6,
+    "patchouli_books_repaired": 2,
+    "servercore_registered_categories_repaired": 4,
     "world_data_touched": false
   }
 }

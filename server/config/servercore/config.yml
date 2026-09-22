@@ -99,19 +99,19 @@ mob-spawning:
       mobcap: 20
       spawn-interval: 1
 
-    - category: 'VAMPIRISM_HUNTER'
+    - category: 'vampirism_hunter'
       mobcap: 15
       spawn-interval: 1
 
-    - category: 'VAMPIRISM_VAMPIRE'
+    - category: 'vampirism_vampire'
       mobcap: 10
       spawn-interval: 1
 
-    - category: 'WEREWOLVES_WEREWOLF'
+    - category: 'werewolves_werewolf'
       mobcap: 8
       spawn-interval: 1
 
-    - category: 'RATS'
+    - category: 'RATS_RATS'
       mobcap: 25
       spawn-interval: 1
 

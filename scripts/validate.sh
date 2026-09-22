@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-56" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-56" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-57" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-57" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -83,7 +83,7 @@ jq -e '.quest_completion_0_1_9_24.quests_checked == 106 and .quest_completion_0_
 client_compat="$repo_dir/client/overrides/kubejs/data"
 server_compat="$repo_dir/server/kubejs/data"
 diff -qr "$client_compat" "$server_compat" >/dev/null || { echo "Client/server compatibility data differs" >&2; exit 1; }
-test "$(find "$client_compat" -path '*/recipes/*.json' -type f | wc -l)" = "65" || { echo "Expected 65 recipe compatibility files" >&2; exit 1; }
+test "$(find "$client_compat" -path '*/recipes/*.json' -type f | wc -l)" = "66" || { echo "Expected 66 recipe compatibility files" >&2; exit 1; }
 test "$(find "$client_compat" -path '*/tags/*.json' -type f | wc -l)" = "4" || { echo "Expected 4 repaired tag files" >&2; exit 1; }
 find "$client_compat" -name '*.json' -type f -print0 | xargs -0 -n1 jq -e . >/dev/null
 
@@ -103,7 +103,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-56 static validation passed"
+echo "Amber & Arcana 0.1.9-57 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -469,7 +469,7 @@ for base in "$repo_dir/client/overrides/config" "$repo_dir/server/config"; do
   test -f "$base/mobtimizations/features.toml"
   test -f "$base/mobtimizations/features-customization.toml"
   grep -A2 "category: 'MONSTER'" "$base/servercore/config.yml" | grep -q 'mobcap: 30'
-  grep -A2 "category: 'VAMPIRISM_VAMPIRE'" "$base/servercore/config.yml" | grep -q 'mobcap: 10'
+  grep -A2 "category: 'vampirism_vampire'" "$base/servercore/config.yml" | grep -q 'mobcap: 10'
   grep -q 'target-mspt: 30' "$base/servercore/config.yml"
   grep -q 'mobWanderingDelay = 160' "$base/mobtimizations/features-customization.toml"
   grep -q 'mobEnemyTargetingReducedRatePercentChance = 10' "$base/mobtimizations/features-customization.toml"
@@ -520,3 +520,13 @@ diff -qr "$client_data" "$server_data" >/dev/null || { echo "Client/server KubeJ
 test "$(find "$server_data" -type f -path '*/recipes/*.json' -exec grep -l 'forge:false' {} + | wc -l)" -ge 14 || { echo "Malformed recipe overrides missing" >&2; exit 1; }
 test "$(find "$server_data" -type f -path '*/advancements/*.json' -exec grep -l 'minecraft:impossible' {} + | wc -l)" -ge 4 || { echo "Invalid advancement overrides missing" >&2; exit 1; }
 jq -e '.startup_data_repairs_0_1_9_56.enabled == true and .startup_data_repairs_0_1_9_56.disabled_malformed_recipes == 14 and .startup_data_repairs_0_1_9_56.replaced_invalid_advancements == 4 and .startup_data_repairs_0_1_9_56.world_data_touched == false' "$validation" >/dev/null
+
+
+# 0.1.9-57 second startup data repair checks
+grep -Fq "category: 'RATS_RATS'" "$server_sc" || { echo "Registered Rats category missing" >&2; exit 1; }
+grep -Fq "category: 'vampirism_hunter'" "$server_sc" || { echo "Registered hunter category missing" >&2; exit 1; }
+test "$(find "$server_data/ntgl/cc/equipment/t45" -type f -name '*.json' | wc -l)" = "6" || { echo "NTGL T45 repairs incomplete" >&2; exit 1; }
+find "$server_data/ntgl/cc/equipment/t45" -type f -name '*.json' -print0 | xargs -0 -n1 jq -e '.id | startswith("ntgl:t45_")' >/dev/null
+jq -e '.use_resource_pack == true' "$server_data/buddycards/patchouli_books/buddycards_rules/book.json" >/dev/null
+jq -e '.use_resource_pack == true' "$server_data/rebornstorage/patchouli_books/rs_book/book.json" >/dev/null
+jq -e '.startup_data_repairs_0_1_9_57.enabled == true and .startup_data_repairs_0_1_9_57.empty_broken_loot_tables == 36 and .startup_data_repairs_0_1_9_57.ntgl_t45_definitions_repaired == 6 and .startup_data_repairs_0_1_9_57.world_data_touched == false' "$validation" >/dev/null

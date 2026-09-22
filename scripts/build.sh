@@ -103,6 +103,9 @@ python3 "$repo_dir/scripts/hotfix-chunk-load-performance-0.1.9-55.py"
 # 0.1.9-56 disables malformed upstream data entries reported during startup.
 python3 "$repo_dir/scripts/hotfix-startup-data-errors-0.1.9-56.py"
 
+# 0.1.9-57 repairs the next actionable startup-log batch.
+python3 "$repo_dir/scripts/hotfix-startup-data-errors-0.1.9-57.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 
