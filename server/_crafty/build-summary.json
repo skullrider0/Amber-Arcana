@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-55",
+  "pack_version": "0.1.9-56",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 296,
@@ -1567,7 +1567,7 @@
     "client_server_quest_files_identical": true,
     "acyclic_validator": "scripts/validate-quest-graph.py"
   },
-  "version": "0.1.9-55",
+  "version": "0.1.9-56",
   "vampirism_expansion_0_1_9_46": {
     "addons_added": 7,
     "addon_pins": [
@@ -1779,6 +1779,14 @@
     "more_hitboxes_patch_preserved": true,
     "mobcaps_changed": false,
     "quest_progression_changed": false,
+    "world_data_touched": false
+  },
+  "startup_data_repairs_0_1_9_56": {
+    "enabled": true,
+    "source_log": "2026-09-21 startup log",
+    "disabled_malformed_recipes": 14,
+    "replaced_invalid_advancements": 4,
+    "servercore_modded_caps_preserved": true,
     "world_data_touched": false
   }
 }

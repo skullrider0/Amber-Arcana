@@ -100,6 +100,9 @@ python3 "$repo_dir/scripts/hotfix-powah-thermo-compat-0.1.9-54.py"
 # 0.1.9-55 reacts sooner to the sustained chunk-load stalls in the 2026-09-21 log.
 python3 "$repo_dir/scripts/hotfix-chunk-load-performance-0.1.9-55.py"
 
+# 0.1.9-56 disables malformed upstream data entries reported during startup.
+python3 "$repo_dir/scripts/hotfix-startup-data-errors-0.1.9-56.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 

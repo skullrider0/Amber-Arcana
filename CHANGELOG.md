@@ -1,3 +1,11 @@
+## 0.1.9-56 — Startup data repairs
+
+- Disable 14 malformed upstream recipes before their broken serializers run.
+- Replace four invalid advancements with inert definitions that preserve their resource IDs.
+- Preserve the configured rat, vampire, and werewolf ServerCore caps despite its harmless early-registration warning.
+- Preserve Crafty ownership when the stopped-server updater runs as root.
+- No world or player data is included or modified.
+
 ## 0.1.9-55 — Chunk-load performance tuning
 
 - Lower ServerCore's dynamic target from 35 to 30 MSPT so load shedding starts before tick debt becomes severe.

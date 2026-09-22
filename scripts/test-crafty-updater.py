@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import ANY, call, patch
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -28,6 +28,20 @@ class UpdaterTests(unittest.TestCase):
         self.assertEqual((self.root/'world/level.dat').read_bytes(),b'WORLD SENTINEL')
         data=json.loads((self.root/'kubejs/data/productivebees/productivebees/justdirethings/ferricore.json').read_text())
         self.assertEqual(data['flowerBlock'],'justdirethings:ferricore_block')
+    def test_root_install_uses_world_owner_for_files_and_backup(self):
+        real_stat=Path.stat
+        def fake_stat(path,*args,**kwargs):
+            result=real_stat(path,*args,**kwargs)
+            if path == self.root/'world':
+                fields=list(result);fields[4]=12345;fields[5]=12346
+                return u.os.stat_result(fields)
+            return result
+        with patch.object(Path,'stat',fake_stat), patch.object(u.os,'geteuid',return_value=0), patch.object(u.os,'chown') as chown:
+            u.install(self.blob,self.root)
+        self.assertIn(call(self.root/'_amber_updates',12345,12346),chown.call_args_list)
+        installed=self.root/'_crafty/server-mods.tsv'
+        self.assertIn(call(ANY,12345,12346),chown.call_args_list)
+        self.assertTrue(installed.is_file())
     def test_active_java_refused(self):
         proc=Path(self.tmp.name)/'proc';p=proc/'123';p.mkdir(parents=True)
         (p/'cmdline').write_bytes(b'java\0-jar\0AmberArcana-Crafty-Launcher.jar\0')

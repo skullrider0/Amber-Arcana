@@ -1,0 +1,7 @@
+{
+  "criteria": {
+    "disabled_invalid_upstream_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -89,11 +89,21 @@ def install(blob, root):
         metadata=json.loads(archive.read('_crafty/build-summary.json'))
         if metadata['pack_version'] != VERSION:
             raise RuntimeError('Release metadata does not match updater')
-        owner=(root/'_crafty/server-mods.tsv').stat()
+        # The updater is normally launched through ``docker exec --user 0``.
+        # Files inside the update overlay therefore cannot be used as the
+        # ownership reference: a previous update may already have made them
+        # root-owned.  The world directory is deliberately never touched by an
+        # update and remains owned by the account Crafty uses to launch Java.
+        owner_source = root / 'world'
+        if not owner_source.is_dir():
+            owner_source = root / 'server.properties'
+        owner=owner_source.stat()
         backup_base=root/'_amber_updates'
         if backup_base.is_symlink():
             raise RuntimeError('Backup directory must not be a symlink')
         backup_base.mkdir(exist_ok=True)
+        if os.geteuid()==0:
+            os.chown(backup_base,owner.st_uid,owner.st_gid)
         backup=Path(tempfile.mkdtemp(prefix=VERSION+'-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S')+'-',dir=backup_base))
         records=[]
         for entry in members:

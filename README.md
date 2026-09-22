@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-55](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-55-Client.zip) · [Download Crafty Server 0.1.9-55](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-55-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-55-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-56](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-56-Client.zip) · [Download Crafty Server 0.1.9-56](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-56-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-56-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-55 |
+| Pack | 0.1.9-56 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -38,17 +38,17 @@ The More Hitboxes patch changes only the expensive global `Level` entity-query b
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-55-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
+Import `dist/Amber-and-Arcana-0.1.9-56-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
 
 ### Fresh Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-55-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-56-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a complete server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 
 ### Existing Crafty server
 
-Stop the server and extract `dist/Amber-and-Arcana-0.1.9-55-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
+Stop the server and extract `dist/Amber-and-Arcana-0.1.9-56-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
 
 For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-49.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
 
@@ -189,14 +189,11 @@ Adds Mobtimizations 1.0.1 and its CoroUtil 1.3.7 dependency to both client and d
 ### 0.1.9-53 AI population and optimization tuning
 Caps ServerCore's MONSTER category at 30 and VAMPIRISM_VAMPIRE at 10, with Vampire Barons exempt from Amber's 30% natural-spawn thinning. Enables ServerCore's safe chunk/spawn optimizations, dynamic chunk-tick/simulation reduction around a 35 MSPT target while keeping mobcap percentage at 100% and view distance at 8, villager lobotomization, wider item/XP merging, and tuned Mobtimizations far-away AI rates. Entity Activation Range remains disabled for mod compatibility. No world/player or quest data is changed.
 
-### 0.1.9-55 Powah Thermo compatibility
+### 0.1.9-54 Powah Thermo compatibility
 Adds Create: Central Kitchen Dragon's Breath as a Powah Thermo Generator coolant at -20 and Tinkers' Construct Blazing Blood as a placed heat source at 3500. Registrations run at KubeJS post-init so modded registries are populated first. A separate client-only JEI recipe injection displays Blazing Blood without altering Powah's internal heat-source map. The Crafty update overlay now includes the required KubeJS startup script. No world, player, or quest data is changed.
 
 ### 0.1.9-55 chunk-load performance tuning
 Based on the 2026-09-21 server log, ServerCore now reacts sooner to sustained chunk-loading pressure: target 30 MSPT; chunk-tick and simulation distance 6→3; view distance 8→6 only while overloaded; autosaves every 10 minutes. Mob caps, spawners, quests, and the client-safe MoreHitboxes patch are unchanged. Missing Untamed Wilds entities and Mowzie's structure references are legacy data being discarded after their intentional 0.1.9-49 removal; those performance-heavy mods remain removed. No world/player data is changed by this release.
 
-### 0.1.9-55 Powah Thermo compatibility
-Adds Create: Central Kitchen Dragon's Breath as a Powah Thermo Generator coolant at -20 and Tinkers' Construct Blazing Blood as a placed heat source at 3500. Registrations run at KubeJS post-init so modded registries are populated first. A separate client-only JEI recipe injection displays Blazing Blood without altering Powah's internal heat-source map. The Crafty update overlay now includes the required KubeJS startup script. No world, player, or quest data is changed.
-
-### 0.1.9-55 Powah Thermo compatibility
-Adds Create: Central Kitchen Dragon's Breath as a Powah Thermo Generator coolant at -20 and Tinkers' Construct Blazing Blood as a placed heat source at 3500. Registrations run at KubeJS post-init so modded registries are populated first. A separate client-only JEI recipe injection displays Blazing Blood without altering Powah's internal heat-source map. The Crafty update overlay now includes the required KubeJS startup script. No world, player, or quest data is changed.
+### 0.1.9-56 startup data repairs
+Disables 14 malformed upstream recipes and replaces four invalid advancements with inert, valid definitions. The fixes are mirrored on client and server. Modded ServerCore mob-cap entries remain enabled; its early registration warning is retained rather than silently dropping the configured rat, vampire, and werewolf caps. No world or player data is changed.
