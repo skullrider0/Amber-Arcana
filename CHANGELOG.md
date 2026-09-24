@@ -1,3 +1,10 @@
+## 0.1.9-59 — Powah Nitro recipe correction
+
+- Remove the conflicting Nitro Crystal Block Energizing recipe from 0.1.9-58.
+- Preserve Powah's standard recipe yielding 16 Nitro Crystals from its original inputs.
+- Retain the non-conflicting Blazing, Niotic, and Spirited bulk block recipes.
+- Client and server receive identical recipe data; no world or player data is changed.
+
 ## 0.1.9-58 — Powah bulk crystal-block recipes
 
 - Add Energizing Orb batch recipes for Blazing, Niotic, Spirited, and Nitro crystal blocks.

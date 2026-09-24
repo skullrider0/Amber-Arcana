@@ -109,6 +109,9 @@ python3 "$repo_dir/scripts/hotfix-startup-data-errors-0.1.9-57.py"
 # 0.1.9-58 adds direct Energizing Orb recipes for Powah crystal blocks.
 python3 "$repo_dir/scripts/hotfix-powah-block-recipes-0.1.9-58.py"
 
+# 0.1.9-59 removes the conflicting, lower-value Nitro block recipe.
+python3 "$repo_dir/scripts/hotfix-powah-nitro-recipe-fix-0.1.9-59.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 

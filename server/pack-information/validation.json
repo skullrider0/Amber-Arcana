@@ -22,7 +22,7 @@
     "Just Dire Things [Forge] 1.1.7",
     "DecoCraft 3.0.4 (Forge 1.20.1)"
   ],
-  "pack_version": "0.1.9-58",
+  "pack_version": "0.1.9-59",
   "packet_session_fix_0_1_9_5": {
     "packet_fixer_server": true,
     "packet_fixer_file_id": 6195870,
@@ -1757,6 +1757,13 @@
     "energizing_recipes_added": 4,
     "blazing_bulk_input": "botania:blaze_block",
     "client_server_recipe_data_identical": true,
+    "world_data_touched": false
+  },
+  "powah_nitro_recipe_fix_0_1_9_59": {
+    "enabled": true,
+    "conflicting_nitro_block_recipe_removed": true,
+    "powah_default_nitro_output_preserved": 16,
+    "remaining_bulk_block_recipes": 3,
     "world_data_touched": false
   }
 }

@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-58" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-58" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-59" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-59" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -83,7 +83,7 @@ jq -e '.quest_completion_0_1_9_24.quests_checked == 106 and .quest_completion_0_
 client_compat="$repo_dir/client/overrides/kubejs/data"
 server_compat="$repo_dir/server/kubejs/data"
 diff -qr "$client_compat" "$server_compat" >/dev/null || { echo "Client/server compatibility data differs" >&2; exit 1; }
-test "$(find "$client_compat" -path '*/recipes/*.json' -type f | wc -l)" = "70" || { echo "Expected 70 recipe compatibility files" >&2; exit 1; }
+test "$(find "$client_compat" -path '*/recipes/*.json' -type f | wc -l)" = "69" || { echo "Expected 69 recipe compatibility files" >&2; exit 1; }
 test "$(find "$client_compat" -path '*/tags/*.json' -type f | wc -l)" = "4" || { echo "Expected 4 repaired tag files" >&2; exit 1; }
 find "$client_compat" -name '*.json' -type f -print0 | xargs -0 -n1 jq -e . >/dev/null
 
@@ -103,7 +103,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-58 static validation passed"
+echo "Amber & Arcana 0.1.9-59 static validation passed"
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -537,6 +537,11 @@ powah_recipes="$server_data/amber_arcana/recipes/powah/energizing"
 jq -e '.ingredients == [{"item":"botania:blaze_block"}] and .energy == 810000 and .result.item == "powah:blazing_crystal_block"' "$powah_recipes/blazing_crystal_block_bulk.json" >/dev/null
 jq -e '.ingredients == [{"item":"minecraft:diamond_block"}] and .energy == 2700000 and .result.item == "powah:niotic_crystal_block"' "$powah_recipes/niotic_crystal_block_bulk.json" >/dev/null
 jq -e '.ingredients == [{"item":"minecraft:emerald_block"}] and .energy == 9000000 and .result.item == "powah:spirited_crystal_block"' "$powah_recipes/spirited_crystal_block_bulk.json" >/dev/null
-jq -e '.energy == 20000000 and .result.item == "powah:nitro_crystal_block"' "$powah_recipes/nitro_crystal_block_bulk.json" >/dev/null
 jq -e '.powah_block_recipes_0_1_9_58.enabled == true and .powah_block_recipes_0_1_9_58.energizing_recipes_added == 4 and .powah_block_recipes_0_1_9_58.blazing_bulk_input == "botania:blaze_block" and .powah_block_recipes_0_1_9_58.world_data_touched == false' "$validation" >/dev/null
-test "$(unzip -Z1 "$overlay" | grep -Ec '^kubejs/data/amber_arcana/recipes/powah/energizing/.+\.json$')" = "4" || { echo "Crafty update overlay missing Powah block recipes" >&2; exit 1; }
+test "$(unzip -Z1 "$overlay" | grep -Ec '^kubejs/data/amber_arcana/recipes/powah/energizing/.+\.json$')" = "3" || { echo "Crafty update overlay missing Powah block recipes" >&2; exit 1; }
+
+
+# 0.1.9-59 Powah Nitro recipe correction checks
+test ! -e "$client_data/amber_arcana/recipes/powah/energizing/nitro_crystal_block_bulk.json" || { echo "Conflicting client Nitro block recipe remains" >&2; exit 1; }
+test ! -e "$server_data/amber_arcana/recipes/powah/energizing/nitro_crystal_block_bulk.json" || { echo "Conflicting server Nitro block recipe remains" >&2; exit 1; }
+jq -e '.powah_nitro_recipe_fix_0_1_9_59.conflicting_nitro_block_recipe_removed == true and .powah_nitro_recipe_fix_0_1_9_59.powah_default_nitro_output_preserved == 16 and .powah_nitro_recipe_fix_0_1_9_59.world_data_touched == false' "$validation" >/dev/null

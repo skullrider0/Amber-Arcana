@@ -1,6 +1,6 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-58",
+  "pack_version": "0.1.9-59",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
   "manifest_entries": 296,
@@ -1567,7 +1567,7 @@
     "client_server_quest_files_identical": true,
     "acyclic_validator": "scripts/validate-quest-graph.py"
   },
-  "version": "0.1.9-58",
+  "version": "0.1.9-59",
   "vampirism_expansion_0_1_9_46": {
     "addons_added": 7,
     "addon_pins": [
@@ -1802,6 +1802,13 @@
     "energizing_recipes_added": 4,
     "blazing_bulk_input": "botania:blaze_block",
     "client_server_recipe_data_identical": true,
+    "world_data_touched": false
+  },
+  "powah_nitro_recipe_fix_0_1_9_59": {
+    "enabled": true,
+    "conflicting_nitro_block_recipe_removed": true,
+    "powah_default_nitro_output_preserved": 16,
+    "remaining_bulk_block_recipes": 3,
     "world_data_touched": false
   }
 }
