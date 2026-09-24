@@ -4,13 +4,13 @@ Amber & Arcana is a Forge 1.20.1 modpack maintained as matching client and Craft
 
 ## Direct downloads
 
-[Download Client 0.1.9-59](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-59-Client.zip) · [Download Crafty Server 0.1.9-59](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-59-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-59-Crafty-Update-Overlay.zip)
+[Download Client 0.1.9-60](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-60-Client.zip) · [Download Crafty Server 0.1.9-60](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-60-Server.zip) · [Update existing Crafty server](https://github.com/skullrider0/Amber-Arcana/raw/refs/heads/main/dist/Amber-and-Arcana-0.1.9-60-Crafty-Update-Overlay.zip)
 
 ## Current release
 
 | Component | Version |
 | --- | --- |
-| Pack | 0.1.9-59 |
+| Pack | 0.1.9-60 |
 | Minecraft | 1.20.1 |
 | Forge | 47.4.10 |
 | Java | 17 |
@@ -38,19 +38,19 @@ The More Hitboxes patch changes only the expensive global `Level` entity-query b
 
 ### Client
 
-Import `dist/Amber-and-Arcana-0.1.9-59-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
+Import `dist/Amber-and-Arcana-0.1.9-60-Client.zip` into CurseForge/Prism. Allocate about 10 GB RAM and use Java 17. The patched More Hitboxes JAR is included under the pack overrides, so do not add the stock More Hitboxes 1.9.2 JAR alongside it.
 
 ### Fresh Crafty server
 
-Create a fresh server from `dist/Amber-and-Arcana-0.1.9-59-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
+Create a fresh server from `dist/Amber-and-Arcana-0.1.9-60-Server.zip`. The included launcher downloads normal managed server mods, accepts the bundled local More Hitboxes patch by exact SHA-512, removes the replaced stock 1.9.2 JAR, chooses Java 17, and starts Forge with the configured memory limits.
 
 Back up an existing world before replacing a complete server package. Removed content mods can leave missing blocks, items, or dimensions in an existing world.
 
 ### Existing Crafty server
 
-Stop the server and extract `dist/Amber-and-Arcana-0.1.9-59-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
+Stop the server and extract `dist/Amber-and-Arcana-0.1.9-60-Crafty-Update-Overlay.zip` into the existing server root with overwrite enabled. The full update overlay includes the current Crafty launcher, managed mod lists, the pinned More Hitboxes patch, synchronized quests, KubeJS data/assets and release metadata. It contains no world or player data. Start through `AmberArcana-Crafty-Launcher.jar` afterward so newly required mods are downloaded. Quest-only overlays do not install recipe fixes.
 
-For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-59.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
+For a checksummed update with a backup of replaced files, use [the stopped-server updater](scripts/update-crafty-0.1.9-60.py) as described in [the bee integration notes](docs/bee-integrations-0.1.9-42.md).
 
 ## Quest runtime status — 2026-09-15
 
@@ -147,7 +147,7 @@ Adds Polymorph plus AE2/Refined Storage integrations so conflicting recipes can 
 
 
 ### 0.1.9-42 bee integrations
-Adds five Just Dire Things resource bees and nine bee quests. The full update overlay now includes KubeJS data/assets and release metadata, required for existing servers to receive recipes. See [bee integration notes](docs/bee-integrations-0.1.9-42.md) and [the stopped-server updater](scripts/update-crafty-0.1.9-59.py). Cobblegen Galore and Tiny Soldiers have no compatible 1.20.1 Forge release and are not added.
+Adds five Just Dire Things resource bees and nine bee quests. The full update overlay now includes KubeJS data/assets and release metadata, required for existing servers to receive recipes. See [bee integration notes](docs/bee-integrations-0.1.9-42.md) and [the stopped-server updater](scripts/update-crafty-0.1.9-60.py). Cobblegen Galore and Tiny Soldiers have no compatible 1.20.1 Forge release and are not added.
 
 
 ### 0.1.9-43 stone generators
@@ -189,6 +189,12 @@ Adds Mobtimizations 1.0.1 and its CoroUtil 1.3.7 dependency to both client and d
 ### 0.1.9-53 AI population and optimization tuning
 Caps ServerCore's MONSTER category at 30 and VAMPIRISM_VAMPIRE at 10, with Vampire Barons exempt from Amber's 30% natural-spawn thinning. Enables ServerCore's safe chunk/spawn optimizations, dynamic chunk-tick/simulation reduction around a 35 MSPT target while keeping mobcap percentage at 100% and view distance at 8, villager lobotomization, wider item/XP merging, and tuned Mobtimizations far-away AI rates. Entity Activation Range remains disabled for mod compatibility. No world/player or quest data is changed.
 
+### 0.1.9-60 Powah bulk crystal-block recipes
+Adds direct Energizing Orb recipes for Blazing, Niotic, Spirited, and Nitro crystal blocks. The Blazing recipe uses Botania's Blaze Mesh (`botania:blaze_block`). Client and server recipe data are identical; no world or player data is changed.
+
+### 0.1.9-60 Powah Nitro recipe correction
+Removes the custom Nitro Crystal Block Energizing recipe because it duplicated Powah's standard inputs while returning only nine crystals' worth instead of the standard sixteen. Powah's original 16 Nitro Crystal output remains intact. The non-conflicting Blazing, Niotic, and Spirited block recipes remain.
+
 ### 0.1.9-54 Powah Thermo compatibility
 Adds Create: Central Kitchen Dragon's Breath as a Powah Thermo Generator coolant at -20 and Tinkers' Construct Blazing Blood as a placed heat source at 3500. Registrations run at KubeJS post-init so modded registries are populated first. A separate client-only JEI recipe injection displays Blazing Blood without altering Powah's internal heat-source map. The Crafty update overlay now includes the required KubeJS startup script. No world, player, or quest data is changed.
 
@@ -201,8 +207,8 @@ Disables 14 malformed upstream recipes and replaces four invalid advancements wi
 ### 0.1.9-57 startup data repairs, pass two
 Repairs four registered ServerCore category names, six NTGL T45 definitions, and two Patchouli book descriptors. Disables one malformed compatibility recipe and replaces currently unparseable upstream loot tables with valid empty tables, matching their previous effective behavior while removing reload error spam. No world or player data is changed.
 
-### 0.1.9-59 Powah bulk crystal-block recipes
+### 0.1.9-60 Powah bulk crystal-block recipes
 Adds direct Energizing Orb recipes for Blazing, Niotic, Spirited, and Nitro crystal blocks. The Blazing recipe uses Botania's Blaze Mesh (`botania:blaze_block`). Client and server recipe data are identical; no world or player data is changed.
 
-### 0.1.9-59 Powah Nitro recipe correction
-Removes the custom Nitro Crystal Block Energizing recipe because it duplicated Powah's standard inputs while returning only nine crystals' worth instead of the standard sixteen. Powah's original 16 Nitro Crystal output remains intact. The non-conflicting Blazing, Niotic, and Spirited block recipes remain.
+### 0.1.9-60 Powah Energized Steel block recipe
+Adds a bulk Energizing Orb recipe converting one Iron Block and one Gold Block into two Energized Steel Blocks for 90,000 FE, exactly matching nine normal Energized Steel crafts.

@@ -112,6 +112,9 @@ python3 "$repo_dir/scripts/hotfix-powah-block-recipes-0.1.9-58.py"
 # 0.1.9-59 removes the conflicting, lower-value Nitro block recipe.
 python3 "$repo_dir/scripts/hotfix-powah-nitro-recipe-fix-0.1.9-59.py"
 
+# 0.1.9-60 adds the material-equivalent Energized Steel block batch recipe.
+python3 "$repo_dir/scripts/hotfix-powah-energized-steel-block-0.1.9-60.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 

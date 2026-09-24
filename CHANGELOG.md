@@ -1,3 +1,10 @@
+## 0.1.9-60 — Powah Energized Steel block recipe
+
+- Add `1 Iron Block + 1 Gold Block -> 2 Energized Steel Blocks` in the Energizing Orb.
+- Use 90,000 FE, exactly nine times Powah's standard 10,000 FE recipe.
+- Keep Powah's original Nitro recipe yielding 16 Nitro Crystals.
+- Client and server receive identical recipe data; no world or player data is changed.
+
 ## 0.1.9-59 — Powah Nitro recipe correction
 
 - Remove the conflicting Nitro Crystal Block Energizing recipe from 0.1.9-58.

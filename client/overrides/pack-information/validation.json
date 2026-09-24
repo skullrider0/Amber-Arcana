@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-59",
+  "pack_version": "0.1.9-60",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -387,6 +387,15 @@
     "conflicting_nitro_block_recipe_removed": true,
     "powah_default_nitro_output_preserved": 16,
     "remaining_bulk_block_recipes": 3,
+    "world_data_touched": false
+  },
+  "powah_energized_steel_block_0_1_9_60": {
+    "enabled": true,
+    "iron_blocks": 1,
+    "gold_blocks": 1,
+    "energized_steel_blocks": 2,
+    "energy": 90000,
+    "equivalent_single_crafts": 9,
     "world_data_touched": false
   }
 }
