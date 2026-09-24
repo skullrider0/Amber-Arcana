@@ -1,0 +1,12 @@
+{
+  "type": "powah:energizing",
+  "ingredients": [
+    {
+      "item": "minecraft:emerald_block"
+    }
+  ],
+  "energy": 9000000,
+  "result": {
+    "item": "powah:spirited_crystal_block"
+  }
+}

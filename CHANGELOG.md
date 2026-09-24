@@ -1,3 +1,12 @@
+## 0.1.9-58 — Powah bulk crystal-block recipes
+
+- Add Energizing Orb batch recipes for Blazing, Niotic, Spirited, and Nitro crystal blocks.
+- Preserve Powah's existing reversible `9 crystals <-> 1 block` crafting recipes.
+- Use Botania's Blaze Mesh as the one-item bulk input for a Blazing Crystal Block.
+- Scale Blazing, Niotic, and Spirited energy costs to nine single-crystal crafts.
+- Keep the Nitro convenience recipe at the standard 20M FE input cost while yielding one block instead of sixteen loose crystals.
+- Client and server receive identical recipe data; no world or player data is changed.
+
 ## 0.1.9-57 — Startup data repairs, pass two
 
 - Correct registered ServerCore category names for Rats, Vampirism, and Werewolves.

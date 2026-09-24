@@ -106,6 +106,9 @@ python3 "$repo_dir/scripts/hotfix-startup-data-errors-0.1.9-56.py"
 # 0.1.9-57 repairs the next actionable startup-log batch.
 python3 "$repo_dir/scripts/hotfix-startup-data-errors-0.1.9-57.py"
 
+# 0.1.9-58 adds direct Energizing Orb recipes for Powah crystal blocks.
+python3 "$repo_dir/scripts/hotfix-powah-block-recipes-0.1.9-58.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 
