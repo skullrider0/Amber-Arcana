@@ -205,6 +205,12 @@ Adds a bulk Energizing Orb recipe converting one Iron Block and one Gold Block i
 
 Adds Extreme Sound Muffler 3.50 for Forge 1.20.1 to the client only. Use its in-game recent-sounds list near a running Vampirism Blood Grinder to mute the grinder sound. Each player chooses their own sound settings.
 
+### 0.1.9-60 Powah bulk crystal-block recipes
+Adds direct Energizing Orb recipes for Blazing, Niotic, Spirited, and Nitro crystal blocks. The Blazing recipe uses Botania's Blaze Mesh (`botania:blaze_block`). Client and server recipe data are identical; no world or player data is changed.
+
+### 0.1.9-60 Powah Nitro recipe correction
+Removes the custom Nitro Crystal Block Energizing recipe because it duplicated Powah's standard inputs while returning only nine crystals' worth instead of the standard sixteen. Powah's original 16 Nitro Crystal output remains intact. The non-conflicting Blazing, Niotic, and Spirited block recipes remain.
+
 ### 0.1.9-54 Powah Thermo compatibility
 Adds Create: Central Kitchen Dragon's Breath as a Powah Thermo Generator coolant at -20 and Tinkers' Construct Blazing Blood as a placed heat source at 3500. Registrations run at KubeJS post-init so modded registries are populated first. A separate client-only JEI recipe injection displays Blazing Blood without altering Powah's internal heat-source map. The Crafty update overlay now includes the required KubeJS startup script. No world, player, or quest data is changed.
 
