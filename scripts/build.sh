@@ -115,6 +115,9 @@ python3 "$repo_dir/scripts/hotfix-powah-nitro-recipe-fix-0.1.9-59.py"
 # 0.1.9-60 adds the material-equivalent Energized Steel block batch recipe.
 python3 "$repo_dir/scripts/hotfix-powah-energized-steel-block-0.1.9-60.py"
 
+# 0.1.9-61 adds a client-only sound muffler for Vampirism Blood Grinders.
+python3 "$repo_dir/scripts/hotfix-client-sound-muffler-0.1.9-61.py"
+
 
 bash "$repo_dir/scripts/build-launcher.sh"
 

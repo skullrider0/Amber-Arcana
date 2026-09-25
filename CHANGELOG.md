@@ -1,3 +1,9 @@
+## 0.1.9-61 — Client sound muffler
+
+- Add Extreme Sound Muffler 3.50 (CurseForge 363363:7452801) to the client manifest only.
+- Keep the server mod list and world data unchanged.
+- Configure Vampirism Blood Grinder sound from the client sound muffler menu after launch.
+
 ## 0.1.9-60 — Powah Energized Steel block recipe
 
 - Add `1 Iron Block + 1 Gold Block -> 2 Energized Steel Blocks` in the Energizing Orb.

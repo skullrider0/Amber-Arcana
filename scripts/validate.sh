@@ -11,8 +11,8 @@ for required in "$manifest" "$summary" "$validation" "$repo_dir/server/_crafty/s
 done
 
 version="$(jq -r '.version' "$manifest")"
-jq -e '.version == "0.1.9-60" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
-jq -e '.pack_version == "0.1.9-60" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
+jq -e '.version == "0.1.9-61" and .minecraft.version == "1.20.1" and .minecraft.modLoaders[0].id == "forge-47.4.10"' "$manifest" >/dev/null
+jq -e '.pack_version == "0.1.9-61" and .recipe_viewer_0_1_9_15.rei_removed == true and .recipe_viewer_0_1_9_15.polymorph_removed == true and .recipe_tag_compat_0_1_9_14.disabled_recipe_ids == 36 and .recipe_tag_compat_0_1_9_14.repaired_tag_files == 4 and .content_cleanup_0_1_9_17.twilight_forest_removed == true and .content_cleanup_0_1_9_17.eternal_steak_chest_loot_blocked == true and .jei_dependency_fix_0_1_9_18.file_id == 6075247' "$validation" >/dev/null
 
 manifest_count="$(jq '.files | length' "$manifest")"
 recorded_count="$(jq '.manifest_entries' "$summary")"
@@ -103,7 +103,7 @@ unzip -tq "$repo_dir/dist/Amber-and-Arcana-${version}-Server.zip"
 ( cd "$repo_dir/dist" && sha256sum -c SHA256SUMS.txt )
 python3 "$repo_dir/scripts/validate-viewer.py"
 
-echo "Amber & Arcana 0.1.9-60 static validation passed"
+
 
 # 0.1.9-26 weighted Wheel of Fortune checks
 jq -e '.wheel_of_fortune_0_1_9_26.chapters_checked == 25 and .wheel_of_fortune_0_1_9_26.finale_loot_rewards == 25 and .wheel_of_fortune_0_1_9_26.generated_wheel_tables == 25 and .wheel_of_fortune_0_1_9_26.total_reward_tables == 30 and .wheel_of_fortune_0_1_9_26.modded_item_entries >= 25 and .wheel_of_fortune_0_1_9_26.client_server_quest_files_identical == true' "$validation" >/dev/null
@@ -436,7 +436,7 @@ test "$(jq '[.files[] | select(.projectID == 1565325 and .fileID == 8219863)] | 
 test "$(awk -F '\t' '$1 == "8219863" && $2 == "RIP_vampirismcurioscompat-1.0.0.jar" && $4 == "vampirism-umbrella-curios-support" && $6 == "1565325" {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "1" || { echo "Missing 0.1.9-46 server pin: Vampirism Umbrella Curios Support" >&2; exit 1; }
 if rg -F $'	iron-chests	' "$repo_dir/server/_crafty/server-mods.tsv" >/dev/null; then echo "Iron Chests remains in server mod list" >&2; exit 1; fi
 jq -e '.vampirism_expansion_0_1_9_46.addons_added == 7 and .vampirism_expansion_0_1_9_46.iron_chests_removed == true and .vampirism_expansion_0_1_9_46.quest_progression_changed == false and .vampirism_expansion_0_1_9_46.create_vampirism_blood_feeding_enabled == false and .vampirism_expansion_0_1_9_46.world_data_touched == false' "$validation" >/dev/null
-test "$(jq '.files | length' "$manifest")" = "296" || { echo "Expected 296 client manifest entries" >&2; exit 1; }
+test "$(jq '.files | length' "$manifest")" = "297" || { echo "Expected 297 client manifest entries" >&2; exit 1; }
 test "$(awk -F '\t' '!/^#/ && NF {n++} END {print n+0}' "$repo_dir/server/_crafty/server-mods.tsv")" = "276" || { echo "Expected 276 server mod rows" >&2; exit 1; }
 
 # 0.1.9-47 Vampirism Tinker dependency checks
@@ -550,3 +550,11 @@ jq -e '.powah_nitro_recipe_fix_0_1_9_59.conflicting_nitro_block_recipe_removed =
 # 0.1.9-60 Powah Energized Steel block recipe checks
 jq -e '.ingredients == [{"item":"minecraft:iron_block"},{"item":"minecraft:gold_block"}] and .energy == 90000 and .result == {"item":"powah:energized_steel_block","count":2}' "$powah_recipes/energized_steel_block_bulk.json" >/dev/null
 jq -e '.powah_energized_steel_block_0_1_9_60.enabled == true and .powah_energized_steel_block_0_1_9_60.energized_steel_blocks == 2 and .powah_energized_steel_block_0_1_9_60.energy == 90000 and .powah_energized_steel_block_0_1_9_60.world_data_touched == false' "$validation" >/dev/null
+
+# 0.1.9-61 client-only sound muffler pin
+test "$(jq '[.files[] | select(.projectID == 363363 and .fileID == 7452801 and .required == true)] | length' "$manifest")" = "1" || { echo "Missing Extreme Sound Muffler client pin" >&2; exit 1; }
+test "$(jq '.files | length' "$manifest")" = "297" || { echo "Expected 297 client manifest entries" >&2; exit 1; }
+! rg -i 'extremesoundmuffler|extreme-sound-muffler|7452801' "$repo_dir/server/_crafty/server-mods.tsv" || { echo "Client-only sound muffler in server list" >&2; exit 1; }
+jq -e '.client_sound_muffler_0_1_9_61.client_only == true and .client_sound_muffler_0_1_9_61.file_id == 7452801 and .client_sound_muffler_0_1_9_61.server_mod_list_changed == false' "$validation" >/dev/null
+
+echo "Amber & Arcana 0.1.9-61 static validation passed"

@@ -18,7 +18,7 @@
     "runtime_tested": false,
     "measured_savings_mib": null
   },
-  "pack_version": "0.1.9-60",
+  "pack_version": "0.1.9-61",
   "optimization_0_1_9": {
     "gameplay_manifest_entries_unchanged": false,
     "spark_background_profiler": false,
@@ -396,6 +396,14 @@
     "energized_steel_blocks": 2,
     "energy": 90000,
     "equivalent_single_crafts": 9,
+    "world_data_touched": false
+  },
+  "client_sound_muffler_0_1_9_61": {
+    "mod": "Extreme Sound Muffler 3.50 / Forge 1.20.1",
+    "project_id": 363363,
+    "file_id": 7452801,
+    "client_only": true,
+    "server_mod_list_changed": false,
     "world_data_touched": false
   }
 }
