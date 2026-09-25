@@ -1,10 +1,10 @@
 {
   "pack_name": "Amber & Arcana",
-  "pack_version": "0.1.9-60",
+  "pack_version": "0.1.9-61",
   "minecraft": "1.20.1",
   "loader": "forge-47.4.10",
-  "manifest_entries": 296,
-  "mod_metadata_entries": 296,
+  "manifest_entries": 297,
+  "mod_metadata_entries": 297,
   "server_mod_downloads": 276,
   "excluded_mod_jars": 19,
   "excluded_shader_entries": 1,
@@ -1567,7 +1567,7 @@
     "client_server_quest_files_identical": true,
     "acyclic_validator": "scripts/validate-quest-graph.py"
   },
-  "version": "0.1.9-60",
+  "version": "0.1.9-61",
   "vampirism_expansion_0_1_9_46": {
     "addons_added": 7,
     "addon_pins": [
@@ -1818,6 +1818,14 @@
     "energized_steel_blocks": 2,
     "energy": 90000,
     "equivalent_single_crafts": 9,
+    "world_data_touched": false
+  },
+  "client_sound_muffler_0_1_9_61": {
+    "mod": "Extreme Sound Muffler 3.50 / Forge 1.20.1",
+    "project_id": 363363,
+    "file_id": 7452801,
+    "client_only": true,
+    "server_mod_list_changed": false,
     "world_data_touched": false
   }
 }
